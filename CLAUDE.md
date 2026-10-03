@@ -60,6 +60,10 @@ Guidance for Claude (and humans) working in this repository.
   SSURGO soil estimates (Soil Data Access, live) and key references
   (`merge/references.py` → `web/data/geology/references.json`). Faults and
   shear zones come from the SGMC structure layer (`harvest/sgmc.py`).
+- Water monitoring layer: USGS Water Data OGC API (api.waterdata.usgs.gov,
+  live from the browser, CORS ok) via `web/usgs-water.js`; stations load for
+  the area on screen (no fetch above 150 square degrees); clicking a station
+  opens an SVG chart (`web/water-chart.js`, `web/water-ui.js`).
 - Document extraction (`extract/`, `harvest/pdfs.py`): Claude reads every
   catalog source with legal open full text; code does the rest. No-LLM
   plumbing downloads PDFs, pulls page text (OCR for scans), and builds packets
