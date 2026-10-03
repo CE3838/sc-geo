@@ -64,8 +64,9 @@ Guidance for Claude (and humans) working in this repository.
 | `config/` | Pilot area, `sources.json` (data sources and URLs), other settings |
 | `harvest/` | Resumable jobs that discover and download public sources |
 | `extract/` | Parsers and prompts that pull values out of sources |
-| `model/` | Data model, including provenance (`StoredValue`) |
+| `model/` | Data model: provenance (`StoredValue`), ages and unit names (`units.py`), shapefile/projection reader (`gisio.py`) |
 | `data/` | Small public derived data only: `catalog/`, `lexicon/` (no PDFs, no internal data) |
+| `merge/` | Merge all GIS sources into one surficial and one bedrock layer with confidence (`python -m merge.build`) |
 | `review/` | Tools for human review of extracted and inferred values |
 | `web/` | Static MapLibre GL JS viewer, deployed to GitHub Pages |
 | `web/cad/` | In-browser CAD readers (LandXML, DXF, DGN v7, KML, KMZ) and layer state |
@@ -82,4 +83,5 @@ node scripts/check_imagery.mjs      # confirm NAIP imagery servers respond
 python -m harvest.sgmc              # download SC geology into web/data/geology (needs network)
 python -m harvest.catalog           # rebuild data/catalog (needs network; resumable)
 python -m harvest.geolex            # rebuild data/lexicon (needs network; resumable)
+python -m merge.build               # download, normalize and merge GIS sources into web/data/geology (needs shapely)
 ```

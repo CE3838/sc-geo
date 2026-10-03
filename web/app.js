@@ -3,6 +3,7 @@ import {
   cadEnabled, formatCoords, hiDpiUrl, shouldFallBack, streetViewUrl,
 } from './geo.js';
 import { setupGeology } from './geology-ui.js';
+import { setupMergedGeology } from './merged-ui.js';
 import { setupLayerPanel } from './layers.js';
 
 const BACKGROUND = '#1b1f23';
@@ -77,7 +78,7 @@ function useImagery(index) {
     attribution: src.attribution,
   });
   // Above the cached imagery; below geology, the mask, outline and CAD layers.
-  const above = map.getLayer('geology-fill') ? 'geology-fill' : 'mask';
+  const above = ['merged-bedrock-fill', 'geology-fill', 'mask'].find((id) => map.getLayer(id));
   map.addLayer({ id: 'naip', type: 'raster', source: 'naip', minzoom: DETAIL_MINZOOM, paint: RASTER_PAINT }, above);
   sourceIndex = index;
   stats = { errors: 0, loaded: 0 };
@@ -104,7 +105,16 @@ map.on('error', (e) => {
 map.addControl(new maplibregl.NavigationControl(), 'top-right');
 map.addControl(new maplibregl.ScaleControl({ unit: 'imperial' }), 'bottom-left');
 
-const geology = setupGeology(map, document.getElementById('panels'));
+// Merged geology if the build produced it; otherwise the SGMC layer.
+const panels = document.getElementById('panels');
+let geology = { unitAt: () => null, describe: () => null };
+setupMergedGeology(map, panels)
+  .then((g) => { geology = g; window.scGeo.geology = g; })
+  .catch((err) => {
+    console.warn('Merged geology not available, using SGMC:', err.message);
+    geology = setupGeology(map, panels);
+    window.scGeo.geology = geology;
+  });
 const cad = cadEnabled(window.location.search) ? setupLayerPanel(map) : null;
 // Handle for debugging and the viewer smoke test (scripts/viewer_smoke.mjs).
 window.scGeo = { map, cad, geology };

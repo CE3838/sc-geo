@@ -5,7 +5,7 @@ name: External services check
 # outage elsewhere does not block unrelated changes.
 on:
   pull_request:
-    paths: ["web/**", "scripts/**", "harvest/**", "config/**", ".github/workflows/imagery-check.yml"]
+    paths: ["web/**", "scripts/**", "harvest/**", "config/**", "merge/**", "model/**", ".github/workflows/imagery-check.yml"]
   schedule:
     - cron: "17 13 * * 1"
   workflow_dispatch:
@@ -26,7 +26,7 @@ jobs:
 
   viewer:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -39,6 +39,17 @@ jobs:
         env:
           CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
         run: python -m harvest.sgmc
+      - uses: actions/cache@v4
+        with:
+          path: .cache/normalized
+          key: normalized-${{ hashFiles('merge/**', 'model/**', 'data/catalog/sc_catalog.json') }}
+          restore-keys: normalized-
+      - name: Build merged geology
+        env:
+          CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
+        run: |
+          pip install "shapely>=2"
+          python -m merge.build
       - run: npm install --no-save playwright@1.56.1
       - run: npx playwright install --with-deps chromium
       - run: node scripts/viewer_smoke.mjs
