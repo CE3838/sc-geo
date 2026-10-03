@@ -63,3 +63,9 @@ def test_records_covering_a_point_are_ranked_by_scale_then_recency():
     hits = references.covering(recs, -79.9, 32.9)
     assert [r["id"] for r in hits] == ["ngmdb:10009", "ngmdb:2"]
     assert references.covering(recs, -78.0, 32.0) == []
+
+
+def test_a_footprint_larger_than_the_state_ranks_as_unknown_scale():
+    wide = {"id": "ngmdb:9", "citation": "J, 1956", "year": 1956, "scale": 26670, "bbox": [-95, 27.5, -73.8, 44]}
+    recs = references.build(CATALOG)["records"] + [wide]
+    assert [r["id"] for r in references.covering(recs, -79.9, 32.9)] == ["ngmdb:10009", "ngmdb:2", "ngmdb:9"]
