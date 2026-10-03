@@ -52,6 +52,14 @@ def test_length_ft(text, expected):
         assert (a is None and b is None) or math.isclose(a, b, rel_tol=1e-6)
 
 
+def test_length_several_values_give_their_span():
+    r = p.length_ft("24 ft thick in the type section; maximum observed thickness of 74 ft")
+    assert (r["min_ft"], r["max_ft"]) == (24.0, 74.0)
+    assert r["values_ft"] == [24.0, 74.0]
+    r = p.length_ft("0.5 m to 2 ft")
+    assert r["min_ft"] == pytest.approx(0.5 / 0.3048) and r["max_ft"] == 2.0
+
+
 def test_length_needs_unit_or_default():
     assert p.length_ft("12") is None
     assert p.length_ft("12", default_unit="m")["max_ft"] == pytest.approx(12 / 0.3048)

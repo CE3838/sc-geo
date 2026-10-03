@@ -14,11 +14,16 @@ raw results (everything under `.cache/` stays local); never print the
 git checkout -b extract/$(date -u +%Y-%m-%d)
 python -m pytest -q tests/test_extract_*.py      # tools work before you start
 which pdftotext pdfinfo                          # poppler-utils is required
-which ocrmypdf tesseract || true                 # OCR is optional; scanned pages are skipped without it
+which ocrmypdf tesseract || true                 # OCR: needed for scanned maps and reports
 ```
 
 If `pdftotext` is missing, install poppler-utils (`sudo apt-get install -y
-poppler-utils`); if apt is not available, stop and report it.
+poppler-utils`); if apt is not available, stop and report it. Also install OCR
+when you can (`sudo apt-get install -y tesseract-ocr ocrmypdf`): a document
+with a scanned file (an NGMDB map sheet, a plate without a text layer) is held
+back until it can be OCRed, because reading only its text part would mark it
+done with the map missing. `next_batch` reports such documents as
+`skip ... needs OCR`.
 
 ## 1. Pick the documents
 

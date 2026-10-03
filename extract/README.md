@@ -69,7 +69,7 @@ The model never assigns confidence. `ingest.confidence` computes it as
 
 | Factor | Value |
 | --- | --- |
-| S, source | Maps with a scale: `merge.score.scale_weight` (1:24,000 or larger 0.95; 1:62,500 0.9; 1:100,000 0.85; 1:250,000 0.7; 1:500,000 0.55; 1:1,000,000 0.45; smaller 0.35). Other documents: 0.85 for agencies, state surveys and journals listed in `config/extract.json` `trusted_publishers`, else 0.7. Drafts at most 0.6 |
+| S, source | Map-unit values (`units`) read from a map sheet (an NGMDB scan, or a file whose name contains plate, sheet or map) of a record with a scale: `merge.score.scale_weight` (1:24,000 or larger 0.95; 1:62,500 0.9; 1:100,000 0.85; 1:250,000 0.7; 1:500,000 0.55; 1:1,000,000 0.45; smaller 0.35), because map-unit descriptions are generalized to the map's scale. Everything else (report text, observations, structures, groundwater, references): 0.85 for agencies, state surveys and journals listed in `config/extract.json` `trusted_publishers`, else 0.7; a boring log is not less reliable because the report's index map is small-scale. Drafts at most 0.6 |
 | M, text method | 1.0 for the PDF text layer; 0.9 for OCR text |
 | Q, quote match | `exact` 1.0; `ocr` 0.95; `fuzzy` 0.85 |
 | V, second pass | `agree` 1.0; not checked 0.85; `unclear` 0.7; `disagree` 0.4 (and queued for review) |

@@ -41,6 +41,14 @@ def test_queue_order_and_merged_excluded():
     assert tiers["ngmdb:3"] != 0  # statewide map is not 'about' Charleston
 
 
+def test_geology_first_within_a_tier():
+    stormwater = {**rec("ngmdb:30", [-80.0, 32.80, -79.99, 32.81]), "title": "Characterization of stormwater"}
+    geomap = {**rec("ngmdb:31", [-80.0, 32.75, -79.75, 33.0]), "title": "Geologic map of the Ladson quadrangle"}
+    themed = {**rec("ngmdb:32", [-80.0, 32.75, -79.70, 33.0]), "title": "Something", "themes": ["surficial"]}
+    ids = [r["id"] for r in pdfs.queue([stormwater, geomap, themed], PILOT)]
+    assert ids == ["ngmdb:31", "ngmdb:32", "ngmdb:30"]
+
+
 def test_coastal_plain_test():
     assert pdfs.in_coastal_plain([-80.0, 32.7, -79.9, 32.8])
     assert not pdfs.in_coastal_plain([-82.5, 34.75, -82.25, 35.0])
@@ -96,9 +104,28 @@ def test_publisher_links_from_ngmdb_page():
 def test_resolve_prefers_text_reports_over_scans():
     f = FakeFetcher({"https://ngmdb.usgs.gov/Prodesc/": NGMDB_PAGE,
                      "https://pubs.usgs.gov/pubs-services/publication/b1537C": PUBS_B1537C})
-    r = pdfs.resolve(CHS, f, email=None)
+    r = pdfs.resolve({**CHS, "kind": "publication"}, f, email=None)
     assert [c["url"] for c in r["candidates"]] == ["https://pubs.usgs.gov/bul/1537c/report.pdf"]
     assert r["candidates"][0]["via"] == "pubs_usgs"
+
+
+def test_map_without_pubs_plates_also_gets_scans():
+    gq = rec("ngmdb:528", CHS["bbox"], kind="map")
+    f = FakeFetcher({"https://ngmdb.usgs.gov/Prodesc/": NGMDB_PAGE,
+                     "https://pubs.usgs.gov/pubs-services/publication/b1537C": PUBS_B1537C})
+    r = pdfs.resolve(gq, f, email=None)
+    assert [c["via"] for c in r["candidates"]] == ["pubs_usgs", "ngmdb_scan", "ngmdb_scan"]
+    plates = {"indexId": "b1537C", "links": PUBS_B1537C["links"] + [
+        {"type": {"text": "Plate"}, "url": "https://pubs.usgs.gov/bul/1537c/plate1.pdf"}]}
+    f = FakeFetcher({"https://ngmdb.usgs.gov/Prodesc/": NGMDB_PAGE,
+                     "https://pubs.usgs.gov/pubs-services/publication/b1537C": plates})
+    r = pdfs.resolve(gq, f, email=None)
+    assert [c["via"] for c in r["candidates"]] == ["pubs_usgs", "pubs_usgs"]
+    # A report (not a map) never gets scans when it has text.
+    r = pdfs.resolve({**gq, "kind": "publication"},
+                     FakeFetcher({"https://ngmdb.usgs.gov/Prodesc/": NGMDB_PAGE,
+                                  "https://pubs.usgs.gov/pubs-services/publication/b1537C": PUBS_B1537C}))
+    assert [c["via"] for c in r["candidates"]] == ["pubs_usgs"]
 
 
 def test_resolve_falls_back_to_ngmdb_scans():
@@ -205,6 +232,20 @@ def test_run_downloads_text_checkpoints_and_resumes(tmp_path, pdf_bytes, monkeyp
     assert len(f.calls) == n_calls
 
 
+@pytest.mark.skipif(not shutil.which("pdftotext"), reason="poppler-utils not installed")
+def test_document_with_an_unread_scan_waits_for_ocr(tmp_path, pdf_bytes):
+    scan = make_pdf(tmp_path / "scan.pdf", [[]]).read_bytes()  # a sheet with no text layer
+    chs = rec("ngmdb:1", CHS["bbox"], pdf=["https://pubs.usgs.gov/a.pdf", "https://pubs.usgs.gov/plate.pdf"])
+    paths = _setup(tmp_path, [chs])
+    f = FakeFetcher({"https://pubs.usgs.gov/a.pdf": pdf_bytes, "https://pubs.usgs.gov/plate.pdf": scan,
+                     "https://ngmdb.usgs.gov/Prodesc/": "<html></html>",
+                     "https://pubs.usgs.gov/pubs-services/publication/?": {"records": []}})
+    status = pdfs.run(fetcher=f, ocr=None, log=lambda *a: None, **paths)
+    assert status["by_status"] == {"needs_ocr": 1}
+    ck = json.loads((paths["checkpoint_dir"] / "ngmdb_1.json").read_text())
+    assert ck["unread_files"] == 1 and "OCR" in ck["reason"]
+
+
 def test_run_rejects_non_pdf_downloads(tmp_path):
     chs = rec("ngmdb:1", CHS["bbox"], pdf=["https://pubs.usgs.gov/a.pdf"])
     paths = _setup(tmp_path, [chs])
@@ -227,6 +268,19 @@ def test_resolve_only_limit_and_time_budget(tmp_path):
     assert s["processed_this_run"] == 0
     s = pdfs.run(fetcher=f, ocr=None, log=lambda *a: None, resolve_only=True, **paths)
     assert s["processed_this_run"] == 3 and s["by_status"] == {"needs_access": 5}
+
+
+def test_stale_resolver_version_is_resolved_again(tmp_path):
+    paths = _setup(tmp_path, [rec("ngmdb:21", CHS["bbox"], publisher="Some Society")])
+    ck = paths["checkpoint_dir"] / "ngmdb_21.json"
+    ck.parent.mkdir(parents=True)
+    ck.write_text(json.dumps({"id": "ngmdb:21", "status": "needs_access", "candidates": [], "checked": ["catalog"]}))
+    f = FakeFetcher({"https://ngmdb.usgs.gov/Prodesc/": "<html></html>"})
+    s = pdfs.run(fetcher=f, ocr=None, log=lambda *a: None, resolve_only=True, **paths)
+    assert s["processed_this_run"] == 1
+    assert json.loads(ck.read_text())["resolver_version"] == pdfs.RESOLVER_VERSION
+    s = pdfs.run(fetcher=f, ocr=None, log=lambda *a: None, resolve_only=True, **paths)
+    assert s["processed_this_run"] == 0
 
 
 def test_needs_access_keeps_entries_from_earlier_runs(tmp_path):

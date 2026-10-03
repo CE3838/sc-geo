@@ -12,7 +12,8 @@ def rec(rid, bbox):
             "availability": {"pdf": [], "doi": None, "scgs_ftp": [], "gems_download": None}}
 
 
-CAT = [rec("ngmdb:1", [-80.0, 32.75, -79.75, 33.0]), rec("ngmdb:2", [-80.1, 32.75, -79.85, 33.0]),
+CAT = [rec("ngmdb:5", [-80.0, 32.80, -79.95, 32.85]),  # scanned map waiting for OCR
+       rec("ngmdb:1", [-80.0, 32.75, -79.75, 33.0]), rec("ngmdb:2", [-80.1, 32.75, -79.85, 33.0]),
        rec("ngmdb:3", [-80.2, 32.75, -79.95, 33.0]), rec("ngmdb:4", [-82.5, 34.75, -82.25, 35.0])]
 
 
@@ -20,6 +21,8 @@ def fake_process(rec, fetcher, ckpt_dir, cache_dir, email, ocr="auto", resolve_o
     sid = pdfs.safe_id(rec["id"])
     if rec["id"] == "ngmdb:2":
         ck = {"id": rec["id"], "status": "needs_access", "candidates": []}
+    elif rec["id"] == "ngmdb:5":
+        ck = {"id": rec["id"], "status": "needs_ocr", "candidates": [{"url": "u", "via": "ngmdb_scan"}]}
     else:
         text = {"source_id": rec["id"], "files": [{"url": "u", "pages": 1, "first_page": 1}],
                 "pages": [{"page": 1, "file": 0, "file_page": 1, "method": "pdf_text",
@@ -40,7 +43,7 @@ def test_next_batch_builds_missing_packets_in_priority_order(tmp_path, monkeypat
     batch = next_batch.next_batch(n=2, catalog=CAT, pilot_bbox=PILOT, cache_dir=tmp_path / ".cache",
                                   checkpoint_dir=tmp_path / ".checkpoints" / "pdfs", extracted_dir=extracted,
                                   review_dir=tmp_path / "data" / "review", log=lambda *a: None)
-    assert [b["id"] for b in batch] == ["ngmdb:1", "ngmdb:4"]  # 2 needs access, 3 done
+    assert [b["id"] for b in batch] == ["ngmdb:1", "ngmdb:4"]  # 5 needs OCR, 2 needs access, 3 done
     first = batch[0]
     assert first["packets"][0]["path"].endswith("ngmdb_1/packet-01.md")
     assert (tmp_path / ".cache" / "packets" / "ngmdb_1" / "packet-01.md").exists()

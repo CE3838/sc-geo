@@ -81,7 +81,13 @@ def length_ft(text, default_unit: str | None = None) -> dict | None:
         lo_unit = m.group(2) or unit
         lo, hi = _f(m.group(1)) * _unit_factor(lo_unit), _f(m.group(3)) * _unit_factor(unit)
     else:
-        m = _SINGLE.search(s)
+        found = list(_SINGLE.finditer(s))
+        if len(found) > 1:
+            # Several separate lengths ('24 ft in the type section; maximum 74 ft'): their span.
+            vals = [_f(x.group(1)) * _unit_factor(x.group(2)) for x in found]
+            return {"min_ft": min(vals), "max_ft": max(vals), "values_ft": vals,
+                    "unit": found[0].group(2).lower().rstrip("."), "approximate": approx}
+        m = found[0] if found else None
         if m:
             unit = m.group(2)
             lo = hi = _f(m.group(1)) * _unit_factor(unit)
