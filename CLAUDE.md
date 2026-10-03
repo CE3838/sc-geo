@@ -6,7 +6,8 @@ Guidance for Claude (and humans) working in this repository.
 
 1. **Provenance on every stored value.** Every stored value carries a
    `source_id`, `page`, `extraction_method`, and `confidence`. Use
-   `model.provenance.StoredValue`; do not store bare values.
+   `model.provenance.StoredValue`; do not store bare values. Sources without
+   pages (GIS datasets) give a `locator` (such as a feature ID) instead.
 2. **Flag inferences.** Any value that was inferred rather than read directly
    from a source is stored with `inferred=True`.
 3. **No full-text PDFs or internal data in this repo.** Never commit source
@@ -35,6 +36,11 @@ Guidance for Claude (and humans) working in this repository.
   are also listed by name only; ask consultants for DXF or LandXML instead.
 - Every imported CAD file keeps its layers. In the viewer's layer panel each
   layer can be toggled on and off or deleted.
+- Geology base layer: USGS State Geologic Map Compilation (SGMC), SC units
+  from two 1:500,000 source maps (Piedmont/Blue Ridge and Coastal Plain).
+  `harvest/sgmc.py` downloads it during deploy into `web/data/geology/`
+  (generated, not committed). Age and rock-type color classes are derived and
+  flagged inferred.
 - The CAD layer panel is hidden for now; add `?cad` to the viewer URL to
   show it.
 - CAD files are parsed in the browser (`web/cad/`) and never uploaded. DXF,
@@ -46,7 +52,7 @@ Guidance for Claude (and humans) working in this repository.
 
 | Path | Purpose |
 | --- | --- |
-| `config/` | Pilot area, source lists, and other settings |
+| `config/` | Pilot area, `sources.json` (data sources and URLs), other settings |
 | `harvest/` | Resumable jobs that discover and download public sources |
 | `extract/` | Parsers and prompts that pull values out of sources |
 | `model/` | Data model, including provenance (`StoredValue`) |
@@ -64,4 +70,5 @@ python -m pytest            # Python tests
 node --test "tests/web/*.test.mjs"  # web tests
 python -m http.server -d web 8000   # serve the viewer locally
 node scripts/check_imagery.mjs      # confirm NAIP imagery servers respond
+python -m harvest.sgmc              # download SC geology into web/data/geology (needs network)
 ```
