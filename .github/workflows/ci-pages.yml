@@ -35,6 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     permissions:
+      contents: write  # publish the data package release
       pages: write
       id-token: write
     environment:
@@ -74,6 +75,23 @@ jobs:
           else
             echo "::warning::No geology data; deploying without it"
           fi
+      - name: Pack the public data package
+        id: package
+        if: hashFiles('web/data/geology/merged-surficial.geojson') != ''
+        run: python -m merge.package --out sc-geo-data.zip
+      # The desktop app (private repo) bundles the newest data-* release.
+      - name: Publish the data package release
+        if: steps.package.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.package.outputs.tag }}
+        run: |
+          gh release create "$TAG" sc-geo-data.zip --target "$GITHUB_SHA" --latest \
+            --title "Public data $TAG" \
+            --notes "Merged surficial and bedrock geology, SGMC, source catalog, Geolex lexicon and the SC outline, built from ${GITHUB_SHA}. manifest.json lists each file with its SHA-256."
+          # Keep the 10 newest data packages.
+          gh release list --limit 100 --json tagName --jq '.[].tagName' | grep '^data-' | sort -r | tail -n +11 |
+            while read -r old; do gh release delete "$old" --yes --cleanup-tag; done
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
