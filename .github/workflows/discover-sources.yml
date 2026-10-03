@@ -1,0 +1,30 @@
+name: Source inventory
+
+# Lists what the public SC geology sources hold (files, layers, fields,
+# record counts). Runs when the inventory script changes, or on demand.
+on:
+  push:
+    paths: ["scripts/discover_sources.py", "scripts/inspect_gdb.sh", ".github/workflows/discover-sources.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python scripts/discover_sources.py > inventory.json
+      - run: cat inventory.json
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq gdal-bin > /dev/null
+      - name: Inspect Charleston surficial geodatabase (Weems and others, 2022)
+        run: scripts/inspect_gdb.sh "https://www.sciencebase.gov/catalog/file/get/620d314ed34e6c7e83ba9a2d?f=__disk__73%2F2a%2Fed%2F732aed6a237cd06612133c81863c74cebccb815f"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: source-inventory
+          path: inventory.json

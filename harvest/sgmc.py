@@ -129,10 +129,11 @@ def _join(props: dict, *keys: str) -> str | None:
     return ", ".join(vals) or None
 
 
-def _normalize(feature: dict, oid_field: str) -> dict:
+def _normalize(feature: dict, oid_field: str, units: dict[str, dict] | None = None) -> dict:
     p = feature["properties"]
     oid = _get(p, oid_field)
     unit_link = _get(p, "UNIT_LINK")
+    unit = (units or {}).get(unit_link, {})
     lith = _get(p, "GENERALIZED_LITH", "GENERALIZE")
     is_water = (lith or "").strip().lower() == "water"
     record = {
@@ -144,8 +145,13 @@ def _normalize(feature: dict, oid_field: str) -> dict:
         "major": _join(p, "MAJOR1", "MAJOR2", "MAJOR3"),
         "minor": _join(p, "MINOR1", "MINOR2", "MINOR3", "MINOR4", "MINOR5"),
         "lith": lith,
-        "ref_id": _get(p, "REF_ID"),
+        "ref_id": _get(p, "REF_ID") or _get(unit, "REF_ID"),
         "ngmdb": _get(p, "NGMDB1"),
+        # From the SGMC Units table, when available.
+        "province": _get(unit, "PROVINCE"),
+        "unit_age": _get(unit, "UNIT_AGE"),
+        "description": _get(unit, "UNITDESC"),
+        "strat_unit": _get(unit, "STRAT_UNIT"),
     }
     # Attributes read directly from SGMC.
     read = StoredValue(
@@ -227,8 +233,22 @@ def _harvest_from(url, state, ckpt_root, fetch, headers, log):
     return features, oid_field, count, ckpt
 
 
+def _units_table(url: str, state: str, fetch: Fetch, headers: dict) -> dict[str, dict]:
+    rows, offset = [], 0
+    while True:
+        j = fetch(f"{url}/query", {"where": f"STATE='{state}'", "outFields": "*", "resultOffset": str(offset),
+                                   "resultRecordCount": "1000", "f": "json"}, headers)
+        feats = j.get("features", [])
+        rows += [f["attributes"] for f in feats]
+        if not j.get("exceededTransferLimit") or not feats:
+            break
+        offset += len(feats)
+    return {r["UNIT_LINK"]: r for r in rows if r.get("UNIT_LINK")}
+
+
 def run(urls: list[str], state: str, out_dir: Path, checkpoint_dir: Path,
-        fetch: Fetch = http_fetch, log: Callable[..., None] = print) -> dict:
+        fetch: Fetch = http_fetch, log: Callable[..., None] = print,
+        units_tables: dict[str, str] | None = None) -> dict:
     headers = _contact_headers()
     last_error: Exception | None = None
     for url in urls:
@@ -242,10 +262,15 @@ def run(urls: list[str], state: str, out_dir: Path, checkpoint_dir: Path,
     else:
         raise last_error or RuntimeError("no feature service URLs given")
 
-    features = [_normalize(f, oid_field) for f in raw if f.get("geometry")]
+    units: dict[str, dict] = {}
+    if (units_tables or {}).get(url):
+        units = _units_table(units_tables[url], state, fetch, headers)
+        log(f"{len(units)} units from {units_tables[url]}")
+    features = [_normalize(f, oid_field, units) for f in raw if f.get("geometry")]
     references: dict[str, str] = {}
     for f in raw:
-        ref_id = _get(f["properties"], "REF_ID")
+        unit = units.get(_get(f["properties"], "UNIT_LINK"), {})
+        ref_id = _get(f["properties"], "REF_ID") or _get(unit, "REF_ID")
         ref = _get(f["properties"], "REFERENCE")
         if ref_id and ref:
             references.setdefault(ref_id, ref)
@@ -279,7 +304,8 @@ def main() -> None:
     parser.add_argument("--checkpoints", type=Path, default=ROOT / ".checkpoints" / "sgmc")
     args = parser.parse_args()
     sources = json.loads((ROOT / "config" / "sources.json").read_text())
-    run(sources[SOURCE_ID]["feature_services"], args.state, args.out, args.checkpoints)
+    src = sources[SOURCE_ID]
+    run(src["feature_services"], args.state, args.out, args.checkpoints, units_tables=src.get("units_tables"))
 
 
 if __name__ == "__main__":

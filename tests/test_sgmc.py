@@ -208,3 +208,42 @@ def test_contact_email_goes_in_user_agent_but_never_in_logs(tmp_path, monkeypatc
     assert logged and not any("secret-person" in line for line in logged)
     _, meta = load(tmp_path)
     assert "secret-person" not in json.dumps(meta)
+
+
+UNITS = [
+    {"STATE": "SC", "UNIT_LINK": "SCQw;1", "REF_ID": "SC002", "PROVINCE": "Coastal Plain",
+     "UNIT_AGE": "Pleistocene", "UNITDESC": "Clayey sand and clay, back-barrier", "STRAT_UNIT": "Wando Formation"},
+    {"STATE": "SC", "UNIT_LINK": "SCCgw;4", "REF_ID": "SC001", "PROVINCE": "Central Piedmont",
+     "UNIT_AGE": "Late Paleozoic", "UNITDESC": "Granite", "STRAT_UNIT": ""},
+]
+
+
+class OfficialServer(FakeServer):
+    """Like the official USGS service: no REF_ID on polygons, a Units table instead."""
+
+    def __init__(self):
+        strip = lambda f: {**f, "properties": {k: v for k, v in f["properties"].items() if k != "REF_ID"}}
+        super().__init__(features=[strip(WANDO), strip(WINNSBORO)])
+
+    def __call__(self, url, params, headers):
+        if url == UNITS_URL + "/query":
+            assert params["where"] == "STATE='SC'"
+            return {"features": [{"attributes": u} for u in UNITS]}
+        return super().__call__(url, params, headers)
+
+
+UNITS_URL = "https://example.test/arcgis/rest/services/SGMC/FeatureServer/7"
+
+
+def test_units_table_join_adds_description_province_and_ref_id(tmp_path):
+    sgmc.run(urls=[URL], state="SC", out_dir=tmp_path / "out", checkpoint_dir=tmp_path / "ckpt",
+             fetch=OfficialServer(), log=lambda *_: None, units_tables={URL: UNITS_URL})
+    data, meta = load(tmp_path)
+    wando, granite = (f["properties"] for f in data["features"])
+    assert wando["ref_id"] == "SC002" and wando["source_id"] == "usgs-sgmc:SC002"
+    assert wando["province"] == "Coastal Plain"
+    assert wando["unit_age"] == "Pleistocene"
+    assert wando["description"] == "Clayey sand and clay, back-barrier"
+    assert wando["strat_unit"] == "Wando Formation"
+    assert "strat_unit" not in granite  # empty values are dropped
+    assert meta["references"]["SC001"].startswith("Preliminary Geologic Map")
