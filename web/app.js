@@ -1,14 +1,58 @@
-import { NAIP_SOURCES, SC_BOUNDS, formatCoords, shouldFallBack, streetViewUrl } from './geo.js';
+import {
+  DETAIL_MINZOOM, IMAGERY_BOUNDS, MAX_BOUNDS, NAIP_SOURCES, SC_BOUNDS,
+  cadEnabled, formatCoords, hiDpiUrl, shouldFallBack, streetViewUrl,
+} from './geo.js';
 import { setupLayerPanel } from './layers.js';
+
+const BACKGROUND = '#1b1f23';
+// A touch more contrast; NAIP tends to look flat on screen.
+const RASTER_PAINT = { 'raster-contrast': 0.1, 'raster-fade-duration': 150 };
+const OVERVIEW = NAIP_SOURCES.find((s) => s.id === 'usgs-imagery-basemap');
 
 const map = new maplibregl.Map({
   container: 'map',
   bounds: SC_BOUNDS,
   fitBoundsOptions: { padding: 20 },
-  style: { version: 8, sources: {}, layers: [] },
+  maxBounds: MAX_BOUNDS,
+  minZoom: 5,
+  style: {
+    version: 8,
+    sources: {
+      overview: {
+        type: 'raster',
+        tiles: [OVERVIEW.url],
+        tileSize: 256,
+        maxzoom: 16,
+        bounds: IMAGERY_BOUNDS.flat(),
+        attribution: OVERVIEW.attribution,
+      },
+      region: { type: 'geojson', data: 'data/sc-region.geojson' },
+    },
+    layers: [
+      { id: 'background', type: 'background', paint: { 'background-color': BACKGROUND } },
+      // Cached imagery: fast at state scale, and shown under NAIP while it loads.
+      { id: 'overview', type: 'raster', source: 'overview', maxzoom: DETAIL_MINZOOM + 2, paint: RASTER_PAINT },
+      // Neighboring states are hidden so South Carolina stands alone.
+      {
+        id: 'mask', type: 'fill', source: 'region',
+        filter: ['==', ['get', 'role'], 'mask'],
+        paint: { 'fill-color': BACKGROUND, 'fill-antialias': false },
+      },
+      {
+        id: 'sc-outline-casing', type: 'line', source: 'region',
+        filter: ['==', ['get', 'role'], 'state'],
+        paint: { 'line-color': '#000', 'line-width': 4, 'line-opacity': 0.4 },
+      },
+      {
+        id: 'sc-outline', type: 'line', source: 'region',
+        filter: ['==', ['get', 'role'], 'state'],
+        paint: { 'line-color': '#fff', 'line-width': 1.5 },
+      },
+    ],
+  },
 });
 
-// Load NAIP from the first server; fall back to the next if it keeps failing.
+// Live NAIP from DETAIL_MINZOOM up; fall back to the next server if it keeps failing.
 let sourceIndex = 0;
 let stats = { errors: 0, loaded: 0 };
 
@@ -18,12 +62,13 @@ function useImagery(index) {
   if (map.getSource('naip')) map.removeSource('naip');
   map.addSource('naip', {
     type: 'raster',
-    tiles: [src.url],
+    tiles: [hiDpiUrl(src.url, window.devicePixelRatio)],
     tileSize: 256,
+    bounds: IMAGERY_BOUNDS.flat(),
     attribution: src.attribution,
   });
-  // Keep imagery underneath any CAD layers.
-  map.addLayer({ id: 'naip', type: 'raster', source: 'naip' }, map.getStyle().layers[0]?.id);
+  // Above the cached imagery, below the mask, outline and any CAD layers.
+  map.addLayer({ id: 'naip', type: 'raster', source: 'naip', minzoom: DETAIL_MINZOOM, paint: RASTER_PAINT }, 'mask');
   sourceIndex = index;
   stats = { errors: 0, loaded: 0 };
 }
@@ -49,7 +94,7 @@ map.on('error', (e) => {
 map.addControl(new maplibregl.NavigationControl(), 'top-right');
 map.addControl(new maplibregl.ScaleControl({ unit: 'imperial' }), 'bottom-left');
 
-const cad = setupLayerPanel(map);
+const cad = cadEnabled(window.location.search) ? setupLayerPanel(map) : null;
 // Handle for debugging and the viewer smoke test (scripts/viewer_smoke.mjs).
 window.scGeo = { map, cad };
 const popup = new maplibregl.Popup({ closeOnClick: false, maxWidth: '280px' });
@@ -90,7 +135,7 @@ map.on('click', (e) => {
     window.open(streetViewUrl(lng, lat), '_blank', 'noopener');
   });
 
-  const [hit] = cad.featuresAt(e.point);
+  const [hit] = cad ? cad.featuresAt(e.point) : [];
   if (hit) content.append(featureInfo(hit));
   content.append(coords, button);
   popup.setLngLat(e.lngLat).setDOMContent(content).addTo(map);

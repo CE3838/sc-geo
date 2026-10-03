@@ -66,3 +66,12 @@ test('shouldFallBack only after repeated errors with no loaded tiles', () => {
   assert.equal(shouldFallBack({ errors: 3, loaded: 0 }), true);
   assert.equal(shouldFallBack({ errors: 10, loaded: 1 }), false);
 });
+
+import { cadEnabled } from '../../web/geo.js';
+
+test('cadEnabled is off by default and on with ?cad', () => {
+  assert.equal(cadEnabled(''), false);
+  assert.equal(cadEnabled('?foo=1'), false);
+  assert.equal(cadEnabled('?cad'), true);
+  assert.equal(cadEnabled('?x=1&cad=1'), true);
+});

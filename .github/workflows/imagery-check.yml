@@ -35,9 +35,11 @@ jobs:
       - run: npm install --no-save playwright@1.56.1
       - run: npx playwright install --with-deps chromium
       - run: node scripts/viewer_smoke.mjs
+        env:
+          SMOKE_LOG_SCREENSHOTS: "1"
       - if: always()
         uses: actions/upload-artifact@v4
         with:
           name: viewer-smoke
-          path: viewer-smoke.png
+          path: viewer-*.png
           if-no-files-found: ignore
