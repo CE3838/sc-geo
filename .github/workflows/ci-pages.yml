@@ -79,22 +79,33 @@ jobs:
         id: package
         if: hashFiles('web/data/geology/merged-surficial.geojson') != ''
         run: python -m merge.package --out sc-geo-data.zip
-      # The desktop app (private repo) bundles the newest data-* release.
-      - name: Publish the data package release
-        if: steps.package.outcome == 'success'
-        env:
-          GH_TOKEN: ${{ github.token }}
-          TAG: ${{ steps.package.outputs.tag }}
-        run: |
-          gh release create "$TAG" sc-geo-data.zip --target "$GITHUB_SHA" --latest \
-            --title "Public data $TAG" \
-            --notes "Merged surficial and bedrock geology, SGMC, source catalog, Geolex lexicon and the SC outline, built from ${GITHUB_SHA}. manifest.json lists each file with its SHA-256."
-          # Keep the 10 newest data packages.
-          gh release list --limit 100 --json tagName --jq '.[].tagName' | grep '^data-' | sort -r | tail -n +11 |
-            while read -r old; do gh release delete "$old" --yes --cleanup-tag; done
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: web
       - id: deployment
         uses: actions/deploy-pages@v4
+      # The desktop app (private repo) bundles the newest data-* release.
+      # Runs after the site deploys, so a GitHub outage here never blocks the
+      # site. The release stays a draft until its asset is uploaded, so a
+      # half-finished release is never "latest".
+      - name: Publish the data package release
+        if: steps.package.outcome == 'success'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.package.outputs.tag }}
+        run: |
+          gh release view "$TAG" >/dev/null 2>&1 || gh release create "$TAG" --draft --target "$GITHUB_SHA" \
+            --title "Public data $TAG" \
+            --notes "Merged surficial and bedrock geology, SGMC, source catalog, Geolex lexicon and the SC outline, built from ${GITHUB_SHA}. manifest.json lists each file with its SHA-256."
+          for attempt in 1 2 3 4; do
+            gh release upload "$TAG" sc-geo-data.zip --clobber && break
+            [ "$attempt" = 4 ] && { echo "::error::Upload failed 4 times"; exit 1; }
+            echo "Upload failed (attempt $attempt); retrying in $((attempt * 30)) s"
+            sleep $((attempt * 30))
+          done
+          gh release edit "$TAG" --draft=false --latest
+          # Keep the 10 newest data packages (drafts left by failed runs included).
+          gh release list --limit 100 --json tagName --jq '.[].tagName' | grep '^data-' | sort -r | tail -n +11 |
+            while read -r old; do gh release delete "$old" --yes --cleanup-tag || true; done
