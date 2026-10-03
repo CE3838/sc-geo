@@ -84,9 +84,14 @@ export function shouldFallBack({ errors, loaded }, threshold = 3) {
   return loaded === 0 && errors >= threshold;
 }
 
-// The CAD layer panel is hidden for now; add ?cad to the URL to show it.
-export function cadEnabled(search) {
-  return new URLSearchParams(search).has('cad');
+// First content an add-on offers for a click (window.scGeo.popupItems), or
+// null. Later items are not asked once one answers.
+export function firstPopupItem(items, event) {
+  for (const fn of items) {
+    const node = fn(event);
+    if (node) return node;
+  }
+  return null;
 }
 
 // Ask an ArcGIS exportImage service for 512px images on high-density screens
