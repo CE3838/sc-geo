@@ -125,7 +125,32 @@ HOLDINGS = """<script type="text/javascript">var holdings = {"publication":10034
 </script>"""
 
 
-def test_resolve_offers_browse_images_from_allowed_providers_only():
+@pytest.fixture
+def images_on(monkeypatch):
+    """The source ships switched off (NGMDB's robots.txt disallows /img*); these tests turn it on."""
+    monkeypatch.setitem(pdfs.CONFIG["ngmdb_images"], "enabled", True)
+
+
+def test_browse_images_ship_switched_off():
+    assert pdfs.CONFIG["ngmdb_images"]["enabled"] is False
+
+
+def test_no_browse_images_while_switched_off():
+    rec = {"id": "ngmdb:100343", "title": "Geologic Map of the Rockville Quadrangle", "publisher":
+           "South Carolina Geological Survey", "kind": "map", "availability": {"pdf": [], "doi": None, "scgs_ftp": []},
+           "ngmdb_url": "https://ngmdb.usgs.gov/Prodesc/proddesc_100343.htm"}
+
+    class F:
+        def text(self, url):
+            return HOLDINGS
+
+        def json(self, url):
+            return {"message": {"items": []}}
+
+    assert pdfs.resolve(rec, F(), email=None)["candidates"] == []
+
+
+def test_resolve_offers_browse_images_from_allowed_providers_only(images_on):
     rec = {"id": "ngmdb:100343", "title": "Geologic Map of the Rockville Quadrangle", "publisher":
            "South Carolina Geological Survey", "kind": "map", "availability": {"pdf": [], "doi": None, "scgs_ftp": []},
            "ngmdb_url": "https://ngmdb.usgs.gov/Prodesc/proddesc_100343.htm"}
@@ -143,7 +168,7 @@ def test_resolve_offers_browse_images_from_allowed_providers_only():
         "https://ngmdb.usgs.gov/img2/100000_100999/100343_1"]
 
 
-def test_images_only_for_records_published_by_allowed_publishers():
+def test_images_only_for_records_published_by_allowed_publishers(images_on):
     """A USGS-supplied scan of an AAPG map is still AAPG's map."""
     rec = {"id": "ngmdb:9", "title": "Some AAPG map", "publisher": "American Association of Petroleum Geologists",
            "kind": "map", "availability": {"pdf": [], "doi": None, "scgs_ftp": []},
@@ -165,7 +190,7 @@ def test_images_are_only_a_fallback():
 
 
 @needs_poppler
-def test_run_moves_image_records_out_of_needs_access(tmp_path):
+def test_run_moves_image_records_out_of_needs_access(tmp_path, images_on):
     rec = {"id": "ngmdb:100343", "title": "Rockville", "authors": "A", "year": 2006, "publisher":
            "South Carolina Geological Survey", "series": "OFR-202", "series_key": None, "scale": 24000, "themes": [],
            "quadrangles": [], "bbox": [-80.25, 32.5, -80.125, 32.625], "citation": "C", "keywords": [],
