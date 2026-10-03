@@ -29,7 +29,14 @@
   },
   "scdnr-ftp": {
     "title": "SCDNR Geological Survey GIS downloads (FTP)",
-    "url": "https://www.dnr.sc.gov/geology/digital-data.html"
+    "url": "https://www.dnr.sc.gov/geology/digital-data.html",
+    "notes": "1:24,000 quadrangle shapefiles (one *_poly.zip and one *_line.zip per quadrangle) at ftp://ftpdata.dnr.sc.gov/gisdata/glc/. merge/scgs.py reads the polygon zips."
+  },
+  "scgs-aiken-key": {
+    "title": "SCGS informal attribute key for the Aiken-area GIS data (Label, Unit_Name)",
+    "url": "https://www.dnr.sc.gov/geology/pdfs/digitaldownloads/Sum_Output.xlsx",
+    "publisher": "South Carolina Department of Natural Resources, Geological Survey",
+    "notes": "Copied to data/lexicon/scgs_aiken_key.json (53 labels, each with its spreadsheet row)."
   },
   "usgs-geolex": {
     "title": "USGS Geolex, national geologic names lexicon",
