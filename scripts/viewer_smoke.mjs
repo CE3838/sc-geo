@@ -1,5 +1,7 @@
-// End-to-end check of the viewer with real MapLibre in Chromium: the SC
-// focus, imagery, merged geology and its popup, and the add-on popup hook.
+// End-to-end check of the viewer with real MapLibre in Chromium: the layout
+// (header, Layers and Map units panels, status bar), the SC focus, imagery,
+// merged geology, faults, the click callout (State Plane, elevation), the
+// property card (confidence, references, soil) and the add-on popup hook.
 // Fails on any page error.
 // Needs network access (MapLibre from unpkg). Usage: node scripts/viewer_smoke.mjs
 import { spawn } from 'node:child_process';
@@ -32,6 +34,38 @@ try {
   await page.goto(`http://localhost:${PORT}/`);
   await page.waitForFunction(() => window.scGeo?.map.loaded(), null, { timeout: 30000 });
 
+  // Block bodies that return nothing: jumpTo() returns the map, and
+  // Playwright would try to serialize the whole MapLibre object into Node.
+  // Move the map and wait until it has drawn the new view (areTilesLoaded()
+  // can still be true from the old view right after a jump). Returns nothing,
+  // so Playwright never copies the map object into Node.
+  const jumpTo = (view) => page.evaluate((v) => new Promise((resolve) => {
+    const { map } = window.scGeo;
+    const done = () => { clearTimeout(timer); resolve(); };
+    const timer = setTimeout(() => { map.off('idle', done); resolve(); }, 20000);
+    map.once('idle', done);
+    map.jumpTo(v);
+  }), view);
+  // Screen point (page coordinates) of a lon/lat.
+  const screenPoint = (lngLat) => page.evaluate((ll) => {
+    const p = window.scGeo.map.project(ll);
+    const r = window.scGeo.map.getContainer().getBoundingClientRect();
+    return { x: p.x + r.left, y: p.y + r.top };
+  }, lngLat);
+
+  // Layout: header, Layers and Map units panels, status bar.
+  const layout = await page.evaluate(() => ({
+    title: document.querySelector('.app-title')?.textContent,
+    sections: [...document.querySelectorAll('.side-section h2')].map((h) => h.textContent),
+    status: document.querySelector('.status-bar')?.textContent ?? '',
+  }));
+  check(layout.title === 'SC Geo Viewer', `header shows the app name (${layout.title})`);
+  check(layout.sections.join() === 'Layers,Map units', `left panel has Layers and Map units (${layout.sections})`);
+  await page.mouse.move(700, 400);
+  const status = await page.locator('.status-bar').textContent();
+  check(/N [\d,]+ ft · E [\d,]+ ft/.test(status) && /° N, .*° W/.test(status) && /1:[\d,]+/.test(status),
+    `status bar shows State Plane feet, lat/lon and scale (${status.replace(/\s+/g, ' ').trim()})`);
+
   // Imagery and the South Carolina focus.
   const settle = () => page.waitForFunction(() => window.scGeo.map.areTilesLoaded(), null, { timeout: 60000 });
   await settle();
@@ -56,13 +90,26 @@ try {
       surficial: count('merged-surficial-fill'),
       bedrock: count('merged-bedrock-fill'),
       legend: [...document.querySelectorAll('.geo-legend li')].map((li) => li.textContent),
+      layers: [...document.querySelectorAll('.layer-row label')].map((l) => l.textContent),
     };
   });
   console.log(JSON.stringify(geo));
   check(geo.surficial > 50, `merged surficial units render (${geo.surficial})`);
   check(geo.bedrock > 50, `merged bedrock units render (${geo.bedrock})`);
   check(geo.legend.length >= 5, `legend lists classes (${geo.legend.join(', ')})`);
-  await page.evaluate(() => window.scGeo.map.jumpTo({ center: [-79.96, 32.86], zoom: 12 }));
+  check(['Surficial geology', 'Bedrock geology', 'Faults and shear zones', 'Aerial imagery'].every((n) =>
+    geo.layers.some((l) => l.startsWith(n))), `Layers panel lists each layer (${geo.layers.join(', ')})`);
+
+  // Faults (harvest/sgmc.py output) in the Piedmont.
+  await page.waitForFunction(() => window.scGeo.map.getLayer('faults-certain'), null, { timeout: 30000 });
+  await jumpTo({ center: [-81.4, 34.6], zoom: 8 });
+  await settle();
+  const faultCount = await page.evaluate(() => window.scGeo.map.queryRenderedFeatures(
+    { layers: ['faults-certain', 'faults-approximate', 'faults-concealed'] }).length);
+  check(faultCount > 10, `SGMC faults and shear zones render (${faultCount})`);
+  await snapshot(page, 'faults');
+
+  await jumpTo({ center: [-79.96, 32.86], zoom: 12 });
   await settle();
   const here = await page.evaluate(() => {
     const { map, geology } = window.scGeo;
@@ -73,32 +120,88 @@ try {
   check(Boolean(here && here.source), 'a merged unit is found in North Charleston');
   check(Boolean(here && /confidence/.test(here.text)), 'popup explains confidence and source');
   await snapshot(page, 'merged-charleston');
+
+  // Click callout: coordinates, State Plane, elevation (USGS 3DEP), actions.
+  const pt = await screenPoint([-79.96, 32.86]);
+  await page.mouse.click(pt.x, pt.y);
+  await page.waitForSelector('.maplibregl-popup .callout', { timeout: 5000 });
+  await page.waitForFunction(() => !/Loading/.test(document.querySelector('.callout-elev')?.textContent ?? ''), null,
+    { timeout: 20000 }).catch(() => {});
+  const callout = await page.locator('.maplibregl-popup .callout').textContent();
+  console.log(callout);
+  check(/Clicked point/.test(callout) && /N [\d,]+ ft · E [\d,]+ ft/.test(callout), 'callout shows the point in State Plane feet');
+  check(/ft \(NAVD88\)|Elevation unavailable/.test(callout), 'callout shows ground elevation or says it is unavailable');
+  if (!/NAVD88/.test(callout)) console.log('NOTE elevation service did not answer');
+  check(await page.locator('.callout button', { hasText: 'Card' }).count() === 1
+    && await page.locator('.callout button', { hasText: 'Open Street View' }).count() === 1, 'callout offers Card and Street View');
+  await snapshot(page, 'callout');
+
+  // Property card: unit, confidence with its reasons, references, soil.
+  await page.locator('.callout button', { hasText: 'Card' }).click();
+  await page.waitForSelector('#card:not([hidden]) .card-title', { timeout: 5000 });
+  await page.waitForFunction(() => document.querySelectorAll('.card-refs li').length > 1, null, { timeout: 20000 }).catch(() => {});
+  await page.waitForFunction(() => !/Loading soil/.test(document.querySelector('.card-soil')?.textContent ?? ''), null,
+    { timeout: 30000 }).catch(() => {});
+  const cardInfo = await page.evaluate(() => ({
+    title: document.querySelector('.card-title')?.textContent,
+    badge: document.querySelector('.card-conf .badge')?.textContent ?? '',
+    why: document.querySelectorAll('.card-why tr').length,
+    rows: document.querySelectorAll('.card-props tr').length,
+    refs: document.querySelectorAll('.card-refs li').length,
+    soil: document.querySelector('.card-soil')?.textContent ?? '',
+  }));
+  console.log(JSON.stringify(cardInfo));
+  check(Boolean(cardInfo.title), `property card names the unit (${cardInfo.title})`);
+  check(/^\d\.\d\d · (High|Medium|Low)$/.test(cardInfo.badge) && cardInfo.why >= 4,
+    `card shows a confidence badge and why (${cardInfo.badge})`);
+  check(cardInfo.rows >= 2, `card lists cited properties (${cardInfo.rows})`);
+  check(cardInfo.refs >= 2, `card lists key references (${cardInfo.refs})`);
+  check(/NRCS SSURGO|Soil data unavailable|No soil map unit/.test(cardInfo.soil), 'card shows soil or says it is unavailable');
+  if (!/NRCS SSURGO via Soil Data Access/.test(cardInfo.soil)) console.log('NOTE soil service did not answer');
+  await snapshot(page, 'card');
+  await page.locator('.card-close').click();
+  check(await page.locator('#card').isHidden(), 'card closes');
+
   await page.locator('#geo-mode').selectOption('confidence');
   await settle();
   await snapshot(page, 'merged-confidence');
-  await page.evaluate(() => window.scGeo.map.jumpTo({ center: [-80.9, 33.6], zoom: 6.6 }));
+  await jumpTo({ center: [-80.9, 33.6], zoom: 6.6 });
   await page.locator('#geo-mode').selectOption('age');
   await settle();
   await snapshot(page, 'merged-state');
-  await page.evaluate(() => window.scGeo.map.jumpTo({ center: [-79.93, 32.78], zoom: 16 }));
+  await jumpTo({ center: [-79.93, 32.78], zoom: 16 });
   await settle();
   const naip = await page.evaluate(() => window.scGeo.map.isSourceLoaded('naip'));
   check(naip, 'live NAIP loads at street scale over Charleston');
   await snapshot(page, 'charleston-z16');
 
   // Add-ons (the desktop app) put their own content in the click popup.
-  await page.evaluate(() => window.scGeo.popupItems.push(() => {
-    const div = document.createElement('div');
-    div.className = 'smoke-item';
-    div.textContent = 'add-on item';
-    return div;
-  }));
+  await page.evaluate(() => {
+    window.scGeo.popupItems.push(() => {
+      const div = document.createElement('div');
+      div.className = 'smoke-item';
+      div.textContent = 'add-on item';
+      return div;
+    });
+  });
   await page.mouse.click(600, 400);
   await page.waitForSelector('.maplibregl-popup .smoke-item', { timeout: 5000 });
   check(true, 'add-on popup item shows on click');
+  check(await page.locator('.maplibregl-popup .feature-info').count() === 0, 'add-on item takes the place of the geology summary');
   check(await page.locator('#cad-file-input').count() === 0, 'no CAD import on the public site');
   check(errors.length === 0, `no page errors ${JSON.stringify(errors)}`);
   await snapshot(page, 'popup');
+
+  // Phone width: the panels become a drawer and the status bar stays.
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.waitForTimeout(500);
+  check(await page.locator('#panels-toggle').isVisible(), 'phone width: Layers button in the header');
+  await page.locator('#panels-toggle').click();
+  await page.waitForTimeout(400);
+  const drawer = await page.evaluate(() => document.getElementById('panels').getBoundingClientRect().left);
+  check(drawer >= -1, `phone width: Layers drawer opens (${drawer})`);
+  check(await page.locator('.status-bar').isVisible(), 'phone width: status bar visible');
+  await snapshot(page, 'phone');
   await browser.close();
 } catch (err) {
   console.log(`FAIL ${err.message}`);

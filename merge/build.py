@@ -9,7 +9,10 @@
    confidence and alternatives (merge/overlay.py, needs shapely).
 
 Writes web/data/geology/merged-{surficial,bedrock}.geojson and
-merged-sources.json (every source considered, used or skipped, and why).
+merged-sources.json (every source considered, used or skipped, and why),
+plus references.json (merge/references.py: catalog records with their
+footprints, for the viewer's property card; written even with
+--normalize-only since it needs neither downloads nor shapely).
 
     python -m merge.build [--normalize-only]
 """
@@ -28,7 +31,7 @@ from pathlib import Path
 from typing import Callable
 
 from harvest.sgmc import _contact_headers
-from merge import classes, sources
+from merge import classes, references, sources
 from model import gisio
 from model.units import Lexicon
 
@@ -154,6 +157,8 @@ def run(normalize_only: bool = False, log: Callable[..., None] = print) -> dict:
     else:
         report.append({"id": "usgs-sgmc", "status": "skipped", "reason": "run python -m harvest.sgmc first"})
     features += sgmc
+    refs = references.write(catalog, OUT / "references.json")
+    log(f"{refs.name}: {refs.stat().st_size // 1000} kB")
     summary = {"built_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
                "sources": report, "input_polygons": len(features)}
     if not normalize_only:

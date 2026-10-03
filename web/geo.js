@@ -20,6 +20,30 @@ export function formatCoords(lng, lat) {
   return `${Math.abs(lat).toFixed(6)}° ${ns}, ${Math.abs(lng).toFixed(6)}° ${ew}`;
 }
 
+// Run `fn` once the map's style is ready for sources and layers. MapLibre's
+// 'load' event waits for the first render after every tile has settled, so
+// it can be missed when tiles fail (an imagery outage); 'style.load' is not.
+// isStyleLoaded() is also false while any source is loading, so a late
+// caller would wait for a 'style.load' that already happened; the style's
+// own flag (set just before 'style.load' fires) says whether it has.
+export function onStyleReady(map, fn) {
+  if (map.style?._loaded || map.isStyleLoaded()) fn();
+  else map.once('style.load', () => fn());
+}
+
+// Map scale as 1:N at a zoom and latitude, taking a CSS pixel as
+// 0.0254 / 96 m (96 dpi). MapLibre zoom 0 spans the equator in 512 px.
+const EQUATOR_M = 40075016.686;
+export function scaleDenominator(zoom, lat) {
+  const metersPerPixel = (EQUATOR_M * Math.cos((lat * Math.PI) / 180)) / (512 * 2 ** zoom);
+  return metersPerPixel / (0.0254 / 96);
+}
+
+export function formatScale(denominator) {
+  if (!Number.isFinite(denominator) || denominator <= 0) return '';
+  return `1:${Number(denominator.toPrecision(2)).toLocaleString('en-US')}`;
+}
+
 // Google Maps URL that opens Street View at the nearest panorama.
 export function streetViewUrl(lng, lat) {
   if (!Number.isFinite(lng) || !Number.isFinite(lat)) {
