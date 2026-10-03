@@ -73,8 +73,16 @@ def write(catalog: list[dict], path: Path = OUT) -> Path:
     return path
 
 
+# A footprint wider or taller than South Carolina (about 4.8 by 3.2 degrees)
+# is a regional work; its scale says nothing about detail at a point, so it
+# ranks as if its scale were unknown. Same rule as web/card.js keyReferences.
+MAX_SPAN = (5.0, 3.5)
+
+
 def rank_key(r: dict) -> tuple:
-    return (r.get("scale") or 10**12, -(r.get("year") or 0))
+    w, s, e, n = r["bbox"]
+    local = e - w <= MAX_SPAN[0] and n - s <= MAX_SPAN[1]
+    return ((r.get("scale") if local else None) or 10**12, -(r.get("year") or 0))
 
 
 def covering(records: list[dict], lng: float, lat: float) -> list[dict]:
