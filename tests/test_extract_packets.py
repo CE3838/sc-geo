@@ -42,6 +42,16 @@ def test_triage_kinds():
     assert body["kind"] == "content" and body["keep"] and body["score"] > refs["score"]
 
 
+def test_triage_is_fast_on_wide_layout_lines():
+    """-layout map sheets have lines with thousands of spaces; no regex may backtrack on them."""
+    import time
+
+    page = "\n".join(["Qw" + " " * 5000 + "Wando Formation" + " " * 3000] * 20)
+    start = time.monotonic()
+    triage.classify(page, 1, 1)
+    assert time.monotonic() - start < 1.0
+
+
 def test_triage_title_page_kept():
     t = triage.classify("Geology of the Charleston Quadrangle\nBy R.E. Weems\n1993", 1, 50)
     assert t["kind"] == "title" and t["keep"]

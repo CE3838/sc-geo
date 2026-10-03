@@ -67,7 +67,7 @@ def length_ft(text, default_unit: str | None = None) -> dict | None:
             return None
         v = float(text) * _unit_factor(default_unit)
         return {"min_ft": v, "max_ft": v, "unit": default_unit, "approximate": False}
-    s = str(text or "")
+    s = re.sub(r"\s+", " ", str(text or ""))[:1000]  # a single value; bounded so no regex can stall
     approx = bool(re.search(r"\b(about|approximately|approx\.?|roughly|ca\.)\b|~", s, re.I))
     m = _FT_IN.search(s)
     if m:
