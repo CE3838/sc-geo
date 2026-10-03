@@ -75,3 +75,7 @@ def test_gis_values_use_a_locator_instead_of_a_page():
 def test_missing_page_needs_a_locator(locator):
     with pytest.raises(ValueError):
         make(page=None, locator=locator)
+
+
+def test_catalog_import_method_exists():
+    assert ExtractionMethod("catalog_import") is ExtractionMethod.CATALOG_IMPORT

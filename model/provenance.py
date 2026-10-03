@@ -21,6 +21,7 @@ class ExtractionMethod(str, Enum):
     LLM = "llm"
     CAD_IMPORT = "cad_import"
     GIS_IMPORT = "gis_import"
+    CATALOG_IMPORT = "catalog_import"
     INFERENCE = "inference"
 
 
