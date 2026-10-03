@@ -5,8 +5,32 @@
     "data_release": "https://doi.org/10.5066/F7WH2N65",
     "license": "Public domain (U.S. Government work)",
     "feature_services": [
-      "https://energy.usgs.gov/arcgis/rest/services/Hosted/State_Geological_Map_Compilation/FeatureServer/0",
+      "https://services.arcgis.com/v01gqwM5QqNysAAi/arcgis/rest/services/SB_5888bf4fe4b05ccb964bab9d_USGS_SGMC_feature/FeatureServer/3",
       "https://services2.arcgis.com/FiaPA4ga0iQKduv3/ArcGIS/rest/services/State_Geologic_Map_Compilation_%e2%80%93_Geology/FeatureServer/0"
-    ]
+    ],
+    "units_tables": {
+      "https://services.arcgis.com/v01gqwM5QqNysAAi/arcgis/rest/services/SB_5888bf4fe4b05ccb964bab9d_USGS_SGMC_feature/FeatureServer/3": "https://services.arcgis.com/v01gqwM5QqNysAAi/arcgis/rest/services/SB_5888bf4fe4b05ccb964bab9d_USGS_SGMC_feature/FeatureServer/7"
+    },
+    "notes": "The first service is the official copy published by USGS ScienceBase for the data release. The second is an ArcGIS Online copy (publisher unverified), used only if the first fails. The 2026 GeMS update (https://doi.org/10.5066/P1A3DQZK) revised other states, not South Carolina."
+  },
+  "ngmdb-catalog": {
+    "title": "USGS National Geologic Map Database catalog",
+    "url": "https://ngmdb.usgs.gov/ngm-bin/ngm_compsearch.pl",
+    "api": "https://ngmdb.usgs.gov/ngm-bin/ngm_search_json.pl",
+    "license": "Public domain (U.S. Government work)"
+  },
+  "scgs-24k-index": {
+    "title": "South Carolina Geological Survey 24K Scale Geologic Map Coverage",
+    "url": "https://services.arcgis.com/acgZYxoN5Oj8pDLa/arcgis/rest/services/24K_Quads/FeatureServer",
+    "publisher": "South Carolina Department of Natural Resources, Geological Survey"
+  },
+  "scdnr-ftp": {
+    "title": "SCDNR Geological Survey GIS downloads (FTP)",
+    "url": "https://www.dnr.sc.gov/geology/digital-data.html"
+  },
+  "usgs-geolex": {
+    "title": "USGS Geolex, national geologic names lexicon",
+    "url": "https://ngmdb.usgs.gov/Geolex/search",
+    "license": "Public domain (U.S. Government work)"
   }
 }
