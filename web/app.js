@@ -1,4 +1,5 @@
 import { NAIP_SOURCES, SC_BOUNDS, formatCoords, shouldFallBack, streetViewUrl } from './geo.js';
+import { setupLayerPanel } from './layers.js';
 
 const map = new maplibregl.Map({
   container: 'map',
@@ -21,7 +22,8 @@ function useImagery(index) {
     tileSize: 256,
     attribution: src.attribution,
   });
-  map.addLayer({ id: 'naip', type: 'raster', source: 'naip' });
+  // Keep imagery underneath any CAD layers.
+  map.addLayer({ id: 'naip', type: 'raster', source: 'naip' }, map.getStyle().layers[0]?.id);
   sourceIndex = index;
   stats = { errors: 0, loaded: 0 };
 }
@@ -47,7 +49,29 @@ map.on('error', (e) => {
 map.addControl(new maplibregl.NavigationControl(), 'top-right');
 map.addControl(new maplibregl.ScaleControl({ unit: 'imperial' }), 'bottom-left');
 
-const popup = new maplibregl.Popup({ closeOnClick: false, maxWidth: '260px' });
+const cad = setupLayerPanel(map);
+// Handle for debugging and the viewer smoke test (scripts/viewer_smoke.mjs).
+window.scGeo = { map, cad };
+const popup = new maplibregl.Popup({ closeOnClick: false, maxWidth: '280px' });
+
+const FEATURE_FIELDS = ['text', 'name', 'description', 'code', 'entity', 'type', 'level', 'block'];
+
+function featureInfo(feature) {
+  const box = document.createElement('div');
+  box.className = 'feature-info';
+  const title = document.createElement('div');
+  title.className = 'feature-layer';
+  title.textContent = feature.properties.layer ?? 'CAD feature';
+  box.append(title);
+  for (const key of FEATURE_FIELDS) {
+    const value = feature.properties[key];
+    if (value === undefined || value === '' || String(value) === title.textContent) continue;
+    const row = document.createElement('div');
+    row.textContent = `${key}: ${value}`;
+    box.append(row);
+  }
+  return box;
+}
 
 map.on('click', (e) => {
   const { lng, lat } = e.lngLat;
@@ -66,6 +90,8 @@ map.on('click', (e) => {
     window.open(streetViewUrl(lng, lat), '_blank', 'noopener');
   });
 
+  const [hit] = cad.featuresAt(e.point);
+  if (hit) content.append(featureInfo(hit));
   content.append(coords, button);
   popup.setLngLat(e.lngLat).setDOMContent(content).addTo(map);
 });
