@@ -45,7 +45,7 @@ WEB_COPY = ROOT / "web" / "data" / "parcel_registry.json"
 CHECKPOINTS = ROOT / ".checkpoints" / "parcel_registry"
 
 # The public viewer's origin: CORS answers are checked for it.
-ORIGIN = "https://wyatt0119-tech.github.io"
+ORIGIN = "https://ce3838.github.io"
 ITEM_URL = "https://www.arcgis.com/sharing/rest/content/items/"
 STATUSES = ("ok", "no public service", "blocked", "needs check")
 
@@ -71,7 +71,7 @@ class Unreachable(OSError):
 
 
 def _headers() -> dict[str, str]:
-    agent = "sc-geo-parcel-registry/0.1 (+https://github.com/wyatt0119-tech/sc-geo"
+    agent = "sc-geo-parcel-registry/0.1 (+https://github.com/CE3838/sc-geo"
     email = os.environ.get("CONTACT_EMAIL", "").strip()
     return {"User-Agent": f"{agent}; {email})" if email else f"{agent})", "Origin": ORIGIN}
 

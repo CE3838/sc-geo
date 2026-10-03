@@ -16,7 +16,7 @@ import sys
 import urllib.parse
 import urllib.request
 
-UA = {"User-Agent": "sc-geo-inventory/0.1 (+https://github.com/wyatt0119-tech/sc-geo)"}
+UA = {"User-Agent": "sc-geo-inventory/0.1 (+https://github.com/CE3838/sc-geo)"}
 
 SCIENCEBASE_ITEMS = {
     "sgmc-gems-2026": "67129b25d34eb6a152fc7795",

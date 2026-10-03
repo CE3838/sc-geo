@@ -83,7 +83,7 @@ def lith_class(generalized: str | None) -> str:
 
 
 def _contact_headers() -> dict[str, str]:
-    agent = "sc-geo-harvest/0.1 (+https://github.com/wyatt0119-tech/sc-geo"
+    agent = "sc-geo-harvest/0.1 (+https://github.com/CE3838/sc-geo"
     email = os.environ.get("CONTACT_EMAIL", "").strip()
     return {"User-Agent": f"{agent}; {email})" if email else f"{agent})"}
 
