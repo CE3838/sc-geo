@@ -1,7 +1,8 @@
 // End-to-end check of the viewer with real MapLibre in Chromium: the layout
 // (header, Layers and Map units panels, status bar), the SC focus, imagery,
 // merged geology, faults, the click callout (State Plane, elevation), the
-// property card (confidence, references, soil) and the add-on popup hook.
+// property card (confidence, references, soil), USGS water stations and
+// their chart, and the add-on popup hook.
 // Fails on any page error.
 // Needs network access (MapLibre from unpkg). Usage: node scripts/viewer_smoke.mjs
 import { spawn } from 'node:child_process';
@@ -159,7 +160,7 @@ try {
   check(/NRCS SSURGO|Soil data unavailable|No soil map unit/.test(cardInfo.soil), 'card shows soil or says it is unavailable');
   if (!/NRCS SSURGO via Soil Data Access/.test(cardInfo.soil)) console.log('NOTE soil service did not answer');
   await snapshot(page, 'card');
-  await page.locator('.card-close').click();
+  await page.getByRole('button', { name: 'Close card' }).click();
   check(await page.locator('#card').isHidden(), 'card closes');
 
   await page.locator('#geo-mode').selectOption('confidence');
@@ -174,6 +175,62 @@ try {
   const naip = await page.evaluate(() => window.scGeo.map.isSourceLoaded('naip'));
   check(naip, 'live NAIP loads at street scale over Charleston');
   await snapshot(page, 'charleston-z16');
+
+  // USGS water monitoring stations (web/water-ui.js), live from USGS Water
+  // Data; a service outage is a clean "service unavailable", not a failure.
+  {
+    const waterNote = () => page.evaluate(() =>
+      document.getElementById('layer-water')?.closest('.layer-row').querySelector('.layer-note').textContent ?? '');
+    const waitWater = () => page.waitForFunction(() => {
+      const n = document.getElementById('layer-water')?.closest('.layer-row').querySelector('.layer-note').textContent;
+      return n && !/loading/.test(n);
+    }, null, { timeout: 60000 }).catch(() => {});
+    const stations = () => page.evaluate(() => {
+      const { map } = window.scGeo;
+      const r = map.getContainer().getBoundingClientRect();
+      return map.queryRenderedFeatures({ layers: ['water-stations'] }).map((f) => {
+        const p = map.project(f.geometry.coordinates);
+        return { id: f.properties.id, type: f.properties.type, x: p.x + r.left, y: p.y + r.top };
+      });
+    });
+    check(await page.locator('#layer-water').count() === 1, 'Layers panel lists Water monitoring (USGS)');
+    let unavailable = false;
+    for (const [name, center] of [['Columbia', [-81.03, 34.0]], ['Charleston', [-79.95, 32.85]]]) {
+      await jumpTo({ center, zoom: 10.5 });
+      await page.waitForTimeout(600); // the layer loads 400 ms after the map stops
+      await waitWater();
+      const note = await waterNote();
+      const found = await stations();
+      unavailable ||= /unavailable/.test(note);
+      check(found.length > 0 || /unavailable/.test(note),
+        `water stations around ${name}: ${found.length} (${[...new Set(found.map((s) => s.type))].join(', ')})${note ? `, note "${note.trim()}"` : ''}`);
+    }
+    if (unavailable) console.log('NOTE USGS Water Data did not answer');
+    const target = (await stations()).find((s) => s.x > 420 && s.y > 120);
+    if (target) {
+      await page.mouse.click(target.x, target.y);
+      await page.waitForSelector('.water-panel:not([hidden]) :is(.wc, .water-unavailable, .water-empty)', { timeout: 30000 });
+      const chart = await page.evaluate(() => ({
+        title: document.querySelector('.water-panel .card-title')?.textContent,
+        svg: Boolean(document.querySelector('.water-panel .wc path.wc-line')),
+        link: document.querySelector('.water-panel .water-link')?.href ?? '',
+        cite: document.querySelector('.water-panel .water-cite')?.textContent ?? '',
+        text: document.querySelector('.water-panel .water-chart')?.textContent ?? '',
+        callout: document.querySelectorAll('.maplibregl-popup').length,
+      }));
+      console.log(JSON.stringify(chart));
+      check(Boolean(chart.title), `clicking a station opens its chart panel (${chart.title} ${target.id})`);
+      check(chart.svg ? /USGS Water Data.*retrieved/.test(chart.cite) : /unavailable|No (daily values|readings)/.test(chart.text),
+        `chart drawn with a USGS Water Data citation, or says why not (${chart.svg ? 'chart' : chart.text})`);
+      check(chart.link === `https://waterdata.usgs.gov/monitoring-location/${target.id}/`, 'chart links to the station page');
+      check(chart.callout === 0, 'a station click opens the chart instead of the callout');
+      await snapshot(page, 'water-chart');
+      await page.locator('.water-panel .card-close').click();
+      check(await page.locator('.water-panel').isHidden(), 'water chart closes');
+    } else {
+      check(unavailable, 'a station to click (or the service is unavailable)');
+    }
+  }
 
   // Add-ons (the desktop app) put their own content in the click popup.
   await page.evaluate(() => {
