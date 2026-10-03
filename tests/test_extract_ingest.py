@@ -127,6 +127,14 @@ RESULT = {
 }
 
 
+def _index(tmp_path, packets):
+    d = tmp_path / ".cache" / "packets" / "ngmdb_10009"
+    d.mkdir(parents=True, exist_ok=True)
+    (d / "index.json").write_text(json.dumps({
+        "source_id": "ngmdb:10009", "blocks": [b for bl in packets.values() for b in bl],
+        "packets": [{"file": f"{k}.md", "blocks": bl, "pages": [int(x) for x in bl]} for k, bl in packets.items()]}))
+
+
 @pytest.fixture
 def env(tmp_path):
     text_dir = tmp_path / ".cache" / "text"
@@ -134,8 +142,10 @@ def env(tmp_path):
     (text_dir / "ngmdb_10009.json").write_text(json.dumps(TEXT))
     res = tmp_path / "result.json"
     res.write_text(json.dumps(RESULT))
+    _index(tmp_path, {"packet-01": ["1", "2", "3"]})
     lex = Lexicon([{"name": "Wando", "status": "current", "replaced_by": None, "age": "late Pleistocene"}])
-    return dict(text_dir=text_dir, out_dir=tmp_path / "data" / "extracted", review_dir=tmp_path / "data" / "review",
+    return dict(text_dir=text_dir, packets_dir=tmp_path / ".cache" / "packets",
+                out_dir=tmp_path / "data" / "extracted", review_dir=tmp_path / "data" / "review",
                 catalog={r["id"]: r for r in (RECORD, PUB)}, lexicon=lex, done_dir=tmp_path / ".checkpoints" / "extract"
                 ), res
 
@@ -305,6 +315,7 @@ def test_page_out_of_range_is_review_not_crash(env, tmp_path):
 
 def test_two_results_for_one_document_are_combined(env, tmp_path):
     e, res = env
+    _index(tmp_path, {"packet-01": ["1", "2"], "packet-02": ["3"]})
     part2 = tmp_path / "part2.json"
     part2.write_text(json.dumps({**RESULT, "packets": ["packet-02"], "units": [], "observations": [],
                                  "structures": [], "references": [

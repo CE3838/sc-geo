@@ -1,7 +1,7 @@
 # Verification instructions (second pass)
 
 You are checking values that another reading pass extracted from one
-document. Work independently: do not look at the rest of the first pass's
+packet of a document. Work independently: do not look at the rest of the first pass's
 result, only at the values listed for you, and re-read the cited pages
 yourself.
 
@@ -9,11 +9,11 @@ yourself.
 
 1. The verify plan, printed by
 
-       python -m extract.ingest .cache/results/<id>.json --plan-verify > .cache/results/<id>.plan.json
+       python -m extract.ingest .cache/results/<id>.<packet>.json --plan-verify > .cache/results/<id>.<packet>.plan.json
 
    It lists every value read from a table plus a random 10% of the others:
    `path`, `value`, `page`, `quote`.
-2. The packet files for the document (`.cache/packets/<id>/packet-NN.md`).
+2. The packet file the values were read from (`.cache/packets/<id>/packet-NN.md`).
 
 ## What to do
 
@@ -33,7 +33,7 @@ clearly supported by the page.
 
 ## Output
 
-Write `.cache/results/<id>.verify.json`:
+Write `.cache/results/<id>.<packet>.verify.json`:
 
 ```json
 {
@@ -50,7 +50,7 @@ Write `.cache/results/<id>.verify.json`:
 
 Include every path from the plan, in the same order. Then run
 
-    python -m extract.ingest .cache/results/<id>.json --verify .cache/results/<id>.verify.json
+    python -m extract.ingest .cache/results/<id>.<packet>.json --verify .cache/results/<id>.<packet>.verify.json
 
 Disagreements lower the value's confidence and go to `data/review/queue.json`
 for a person to settle; they are not silently corrected.

@@ -47,6 +47,55 @@ def test_next_batch_builds_missing_packets_in_priority_order(tmp_path, monkeypat
     first = batch[0]
     assert first["packets"][0]["path"].endswith("ngmdb_1/packet-01.md")
     assert (tmp_path / ".cache" / "packets" / "ngmdb_1" / "packet-01.md").exists()
-    assert first["result_path"].endswith(".cache/results/ngmdb_1.json")
+    assert first["packets"][0]["result_path"].endswith(".cache/results/ngmdb_1.packet-01.json")
     assert first["estimated_tokens"] > 0
     assert not list((tmp_path / "data").rglob("packet-*"))
+
+
+def three_packet_text(cache_dir, sid):
+    page = ("Wando Formation, clayey sand, as much as 30 ft thick. " * 40).strip()
+    text = {"source_id": sid, "files": [{"url": "u", "pages": 3, "first_page": 1}],
+            "pages": [{"page": n, "file": 0, "file_page": n, "method": "pdf_text", "text": page, "raw": ""}
+                      for n in (1, 2, 3)]}
+    (cache_dir / "text").mkdir(parents=True, exist_ok=True)
+    (cache_dir / "text" / f"{pdfs.safe_id(sid)}.json").write_text(json.dumps(text))
+
+
+def _batch(tmp_path, **kw):
+    return next_batch.next_batch(catalog=CAT, pilot_bbox=PILOT, cache_dir=tmp_path / ".cache",
+                                 checkpoint_dir=tmp_path / ".checkpoints" / "pdfs",
+                                 extracted_dir=tmp_path / "data" / "extracted", review_dir=tmp_path / "data" / "review",
+                                 log=lambda *a: None, packet_max_tokens=1500, **kw)
+
+
+def test_started_documents_come_first_with_only_their_remaining_packets(tmp_path, monkeypatch):
+    monkeypatch.setattr(next_batch.pdfs, "process", fake_process)
+    three_packet_text(tmp_path / ".cache", "ngmdb:4")  # lowest priority in the queue
+    extracted = tmp_path / "data" / "extracted"
+    extracted.mkdir(parents=True)
+    (extracted / "ngmdb_4.json").write_text(json.dumps({"source_id": "ngmdb:4", "complete": False,
+                                                        "blocks_done": ["1"]}))
+    batch = _batch(tmp_path, n=2)
+    assert batch[0]["id"] == "ngmdb:4" and batch[0]["started"] is True
+    assert [p["blocks"] for p in batch[0]["packets"]] == [["2"], ["3"]]
+    assert batch[1]["id"] == "ngmdb:1"
+
+
+def test_token_budget_hands_out_part_of_a_document(tmp_path, monkeypatch):
+    monkeypatch.setattr(next_batch.pdfs, "process", fake_process)
+    three_packet_text(tmp_path / ".cache", "ngmdb:5")
+    ck = tmp_path / ".checkpoints" / "pdfs"
+    ck.mkdir(parents=True)
+    (ck / "ngmdb_5.json").write_text(json.dumps({"id": "ngmdb:5", "status": "text"}))
+    per_packet = _batch(tmp_path, n=1, ids=["ngmdb:5"])[0]["packets"][0]["estimated_tokens"]
+    batch = _batch(tmp_path, n=5, max_tokens=int(per_packet * 2.5), ids=["ngmdb:5"])
+    assert len(batch) == 1 and len(batch[0]["packets"]) == 2 and batch[0]["remaining_after"] == 1
+
+
+def test_complete_and_legacy_files_are_done(tmp_path, monkeypatch):
+    monkeypatch.setattr(next_batch.pdfs, "process", fake_process)
+    extracted = tmp_path / "data" / "extracted"
+    extracted.mkdir(parents=True)
+    (extracted / "ngmdb_1.json").write_text(json.dumps({"source_id": "ngmdb:1", "complete": True}))
+    (extracted / "ngmdb_3.json").write_text(json.dumps({"source_id": "ngmdb:3"}))  # before per-packet ingest
+    assert [b["id"] for b in _batch(tmp_path, n=5)] == ["ngmdb:4"]

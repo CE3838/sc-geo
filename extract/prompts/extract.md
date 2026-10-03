@@ -22,8 +22,21 @@ side by side on the same line; read each column in turn.
 
 ## Output
 
-Write ONE JSON file per document (or one per packet for very long documents,
-all with the same `source_id`) that matches `extract/schema.json`:
+Write ONE JSON file per packet, at the `write:` path `next_batch` printed for
+it (`.cache/results/<id>.<packet>.json`), listing that packet in `packets`.
+Long documents are read packet by packet, possibly over several sessions;
+our code merges the packet results into one record for the document and
+marks it done when every packet has been ingested. So:
+
+- Record what the pages of YOUR packet say. Do not try to recall or repeat
+  values from other packets (a value that appears again in your packet, such
+  as a unit described on both sides of a packet boundary, may be recorded;
+  exact duplicates are dropped automatically).
+- A unit, boring or table that continues from the previous packet: record the
+  part on your pages and say in `notes` that it continues.
+- A page split into parts (`part 2 of 3`) is still cited by its page number.
+
+Each file matches `extract/schema.json`:
 
 ```json
 {

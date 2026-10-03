@@ -35,7 +35,7 @@ import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
 
-from extract import patterns, schema
+from extract import packets, patterns, schema
 from extract.packets import safe_id
 from merge.score import scale_weight
 from model.provenance import ExtractionMethod, StoredValue
@@ -47,6 +47,7 @@ TEXT_DIR = ROOT / ".cache" / "text"
 OUT_DIR = ROOT / "data" / "extracted"
 REVIEW_DIR = ROOT / "data" / "review"
 DONE_DIR = ROOT / ".checkpoints" / "extract"
+PACKETS_DIR = ROOT / ".cache" / "packets"
 
 
 class IngestError(Exception):
@@ -291,7 +292,8 @@ def _now() -> str:
 
 def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: Path = TEXT_DIR,
            out_dir: Path = OUT_DIR, review_dir: Path = REVIEW_DIR, catalog: dict | None = None,
-           lexicon: Lexicon | None = None, done_dir: Path = DONE_DIR, cfg: dict = CONFIG) -> dict:
+           lexicon: Lexicon | None = None, done_dir: Path = DONE_DIR, cfg: dict = CONFIG,
+           packets_dir: Path = PACKETS_DIR) -> dict:
     results = [_load_json(p, "result") for p in result_paths]
     for p, r in zip(result_paths, results):
         errs = schema.validate(r)
@@ -312,6 +314,15 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
         raise IngestError(f"no cached text for {sid} at {text_path}; run python -m extract.next_batch --id {sid}")
     doc = _load_json(text_path, "text")
     pages = {p["page"]: p for p in doc["pages"]}
+    index_path = Path(packets_dir) / safe_id(sid) / "index.json"
+    index = _load_json(index_path, "packet index") if index_path.exists() else None
+    if result.get("packets"):
+        if index is None or "blocks" not in index:
+            raise IngestError(f"no packet index for {sid} at {index_path}; run python -m extract.next_batch --id {sid}")
+        packet_blocks = {p["file"].removesuffix(".md"): p["blocks"] for p in index["packets"]}
+        unknown = [n for n in result["packets"] if n not in packet_blocks]
+        if unknown:
+            raise IngestError(f"{sid} has no {', '.join(unknown)} in {index_path} (packets: {sorted(packet_blocks)})")
     sheets = map_sheet_pages(doc)
 
     verdicts: dict[str, dict] = {}
@@ -371,36 +382,126 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
         counts["stored"] += 1
 
     ctx = {"values": stored}
+    new_sections = {key: _store(result[key], key, ctx) or [] for key in SECTIONS}
+
+    # Which part of the document this result covers (packet blocks, see extract/packets.py).
+    all_blocks = index["blocks"] if index else [str(n) for n in sorted(pages)]
+    if result.get("packets") and index:
+        covered = [b for name in result["packets"] for b in packet_blocks[name]]
+    else:
+        covered = list(all_blocks)
+    whole_pages = {packets.block_page(b) for b in covered if not packets.is_part(b)}
+    new_keys = {_vkey(f, v) for f, v in _walk_values(new_sections)}
+
+    out_dir, review_dir = Path(out_dir), Path(review_dir)
+    out_path = out_dir / f"{safe_id(sid)}.json"
+    prev = _load_json(out_path, "extracted file") if out_path.exists() else {}
+
+    def stale(field: str, val: dict) -> bool:
+        """An earlier value re-read now: on a whole page this result covers, or the same quote."""
+        return val.get("page") in whole_pages or _vkey(field, val) in new_keys
+
+    merged = {}
+    for key in SECTIONS:
+        kept = [r for r in (_prune(r, stale) for r in prev.get(key, [])) if r is not None]
+        have = {_vkey(f, v) for f, v in _walk_values(kept)}
+        fresh = [r for r in (_prune(r, lambda f, v: _vkey(f, v) in have) for r in new_sections[key]) if r is not None]
+        merged[key] = kept + fresh
+
+    done = [b for b in all_blocks if b in set(prev.get("blocks_done") or []) | set(covered)]
+    complete = set(all_blocks) <= set(done)
+    history = (prev.get("ingests") or [])[-49:] + [{"at": _now(), "packets": result.get("packets", []),
+                                                     "reader": result.get("reader"), **counts,
+                                                     "review_items": len(review)}]
     out = {
         "source_id": sid,
         **{k: rec.get(k) for k in ("title", "citation", "year", "scale", "publisher", "kind")},
         "schema_version": result["schema_version"],
-        "extracted_at": _now(),
+        "extracted_at": prev.get("extracted_at") or _now(),
+        "updated_at": _now(),
         "reader": result.get("reader"),
-        "packets": result.get("packets", []),
-        "notes": result.get("notes"),
+        "packets": list(dict.fromkeys((prev.get("packets") or []) + result.get("packets", []))),
+        "blocks_done": done,
+        "blocks_total": len(all_blocks),
+        "complete": complete,
+        "notes": "\n".join(n for n in (prev.get("notes"), result.get("notes")) if n) or None,
         "files": [{k: f.get(k) for k in ("url", "via", "sha256", "pages", "first_page")} for f in doc.get("files", [])],
-        "summary": counts | {"review_items": len(review)},
+        "summary": _totals(merged),
+        "ingests": history,
+        **merged,
     }
-    for key in ("units", "observations", "structures", "groundwater", "references"):
-        out[key] = _store(result[key], key, ctx) or []
-
-    out_dir, review_dir = Path(out_dir), Path(review_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
-    (out_dir / f"{safe_id(sid)}.json").write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n")
+    out_path.write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n")
 
     qpath = review_dir / "queue.json"
     old = (_load_json(qpath, "review queue") if qpath.exists() else {}).get("items", [])
-    items = [i for i in old if i.get("source_id") != sid] + review
+    items = [i for i in old if not (i.get("source_id") == sid and
+                                    (i.get("page") not in pages or i.get("page") in whole_pages or
+                                     (i.get("page"), normalize(i.get("quote") or "")) in
+                                     {(k[1], k[2]) for k in new_keys}))] + review
     review_dir.mkdir(parents=True, exist_ok=True)
     qpath.write_text(json.dumps({"about": "Extracted values that need a human look (see review/README.md).",
                                  "count": len(items), "items": items}, indent=1, ensure_ascii=False) + "\n")
 
-    done_dir = Path(done_dir)
-    done_dir.mkdir(parents=True, exist_ok=True)
-    (done_dir / f"{safe_id(sid)}.json").write_text(json.dumps({"id": sid, "done_at": _now(),
-                                                               "summary": out["summary"]}, indent=1))
-    return out["summary"]
+    if complete:
+        done_dir = Path(done_dir)
+        done_dir.mkdir(parents=True, exist_ok=True)
+        (done_dir / f"{safe_id(sid)}.json").write_text(json.dumps({"id": sid, "done_at": _now(),
+                                                                   "summary": out["summary"]}, indent=1))
+    return counts | {"review_items": len(review), "complete": complete, "blocks_done": len(done),
+                     "blocks_total": len(all_blocks)}
+
+
+SECTIONS = ("units", "observations", "structures", "groundwater", "references")
+
+
+def _is_stored(x) -> bool:
+    return isinstance(x, dict) and "source_id" in x and "quote" in x and "page" in x
+
+
+def _walk_values(node, field: str = ""):
+    """(field name, stored value) for every stored value under node."""
+    if _is_stored(node):
+        yield field, node
+    elif isinstance(node, dict):
+        for k, v in node.items():
+            yield from _walk_values(v, k)
+    elif isinstance(node, list):
+        for v in node:
+            yield from _walk_values(v, field)
+
+
+def _vkey(field: str, val: dict) -> tuple:
+    return (field, val.get("page"), normalize(val.get("quote") or ""))
+
+
+def _prune(node, drop):
+    """Copy of a stored record without the values drop(field, value) rejects; None when no value is left."""
+    def walk(n, field):
+        if _is_stored(n):
+            return None if drop(field, n) else n
+        if isinstance(n, dict):
+            out = {}
+            for k, v in n.items():
+                if isinstance(v, (dict, list)):
+                    w = walk(v, k)
+                    if w not in (None, [], {}):
+                        out[k] = w
+                else:
+                    out[k] = v
+            return out if any(isinstance(v, (dict, list)) for v in out.values()) else None
+        if isinstance(n, list):
+            items = [walk(x, field) for x in n]
+            return [x for x in items if x not in (None, [], {})]
+        return n
+    return walk(node, "")
+
+
+def _totals(sections: dict) -> dict:
+    vals = [v for _, v in _walk_values(sections)]
+    tally = lambda key: {k: sum(v.get(key) == k for v in vals) for k in {v.get(key) for v in vals} if k}
+    return {"stored": len(vals), "quote_match": tally("quote_match"), "verification": tally("verification"),
+            "inferred": sum(bool(v.get("inferred")) for v in vals)}
 
 
 def main(argv: list[str] | None = None) -> int:
