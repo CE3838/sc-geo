@@ -46,6 +46,10 @@ def test_priority_prefers_finer_scale_then_newer_then_certain():
     (unit(geomaterial=None, lith="Igneous, intrusive"), "bedrock"),
     (unit(geomaterial="Granitic rock", lith=None), "bedrock"),
     (unit(geomaterial="Metamorphic rock", lith=None), "bedrock"),
+    # GeMS GeoMaterial terms that say 'sedimentary' are rock, not sediment (I-2175 schists).
+    (unit(geomaterial="Schist and gneiss, of sedimentary-rock origin", lith=None, age="Late Proterozoic"), "bedrock"),
+    (unit(geomaterial="Sedimentary rock", lith=None, age="Late Cretaceous"), "bedrock"),
+    (unit(geomaterial="Unconsolidated sediment (inferred from unit name)", age="Cretaceous"), "surficial"),
     (unit(geomaterial=None, lith=None, age="Carboniferous"), "bedrock"),
     (unit(geomaterial=None, lith=None, age="Pleistocene"), "surficial"),
 ])
