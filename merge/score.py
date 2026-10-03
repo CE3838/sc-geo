@@ -68,8 +68,19 @@ def research_support(u: dict, lex: Lexicon) -> bool:
     return overlap is None or overlap > 0
 
 
+def is_water(u: dict) -> bool:
+    """Water polygons differ between maps by shoreline drawing, not by interpretation."""
+    low = lambda k: (u.get(k) or "").strip().lower()
+    return (low("name") in ("water", "bodies of water") or low("map_unit") == "water"
+            or low("geomaterial").startswith("water") or low("lith") == "water")
+
+
 def confidence(winner: dict, others: list[tuple[dict, float]], lex: Lexicon) -> dict:
-    """Confidence for the winning unit; `others` are (unit, share of the area they cover)."""
+    """Confidence for the winning unit; `others` are (unit, share of the area they cover).
+
+    Water is left out on both sides, and a map counts once however many of
+    its polygons lie under the winner."""
+    others = [(u, w) for u, w in others if not is_water(u)] if not is_water(winner) else []
     base = scale_weight(winner.get("scale")) * identity_weight(winner.get("identity_confidence"))
     weight = sum(w for _, w in others)
     agreement = (sum(lex.agreement(_cmp(winner), _cmp(u)) * w for u, w in others) / weight) if weight > 0 else None
@@ -81,7 +92,7 @@ def confidence(winner: dict, others: list[tuple[dict, float]], lex: Lexicon) -> 
         "value": round(min(1.0, value), 3),
         "base": round(base, 3),
         "agreement": None if agreement is None else round(agreement, 3),
-        "sources": 1 + len(others),
+        "sources": 1 + len({u.get("source") for u, _ in others}),
         "research_support": supported,
     }
 
@@ -90,6 +101,8 @@ def alternatives(winner: dict, others: list[tuple[dict, float]], lex: Lexicon) -
     """Other maps' interpretations that do not fully agree with the winner."""
     out = []
     for u, w in others:
+        if is_water(u) or is_water(winner):
+            continue
         a = lex.agreement(_cmp(winner), _cmp(u))
         if a < 1.0:
             out.append({"source": u.get("source"), "name": u.get("name"), "age": u.get("age"),

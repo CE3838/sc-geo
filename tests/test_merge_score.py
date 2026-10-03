@@ -81,3 +81,20 @@ def test_alternatives_list_disagreeing_sources_only():
     assert [a["source"] for a in alts] == ["b"]
     assert alts[0]["name"] == "Penholoway Formation"
     assert alts[0]["overlap"] == pytest.approx(0.4)
+
+
+def test_water_is_left_out_of_agreement_and_alternatives():
+    winner = unit()
+    water = unit(source="sgmc", scale=500000, name="water", age=None, geomaterial=None, lith="Water")
+    agree = unit(source="sgmc", scale=500000, name="Wando Fm.")
+    c = score.confidence(winner, [(water, 0.5), (agree, 0.5)], LEX)
+    assert c["agreement"] == 1.0 and c["sources"] == 2
+    assert score.alternatives(winner, [(water, 0.5)], LEX) == []
+
+
+def test_one_map_counts_once_even_with_several_parts():
+    winner = unit()
+    a = unit(source="usgs-sgmc", scale=500000, name="Wando Fm.")
+    b = unit(source="usgs-sgmc", scale=500000, name="Penholoway Formation")
+    c = score.confidence(winner, [(a, 0.5), (b, 0.5)], LEX)
+    assert c["sources"] == 2 and c["agreement"] == 0.5

@@ -148,7 +148,8 @@ def _sgmc_age(p: dict) -> str | None:
 def sgmc_feature(geometry: dict, p: dict) -> dict:
     """One polygon from harvest/sgmc.py output in the merge schema."""
     props = {
-        "source": p.get("source_id") or "usgs-sgmc",
+        # One map, whatever its source-map IDs; those stay in source_id.
+        "source": "usgs-sgmc",
         "source_title": SGMC_SOURCE["title"],
         "citation": SGMC_SOURCE["citation"],
         "scale": SGMC_SOURCE["scale"],
