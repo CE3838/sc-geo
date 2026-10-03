@@ -58,6 +58,12 @@ def test_age_overlap():
     ("Silver Bluff beds", "silver bluff", "beds"),
     ("Penholoway Formation", "penholoway", "formation"),
     ("Beach sands", None, None),
+    ("Barrier-island sand facies", None, None),
+    ("Beach and barrier-island sands", None, None),
+    ("Fossiliferous shelf-sand facies", None, None),
+    ("Mud flat deposits", None, None),
+    ("Freshwater marsh and swamp deposits", None, None),
+    ("Wando Formation, barrier-island sand facies", "wando", "formation"),
     ("Moved earth", None, None),
     ("water", None, None),
 ])
