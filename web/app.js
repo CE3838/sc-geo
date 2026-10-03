@@ -2,6 +2,7 @@ import {
   DETAIL_MINZOOM, IMAGERY_BOUNDS, MAX_BOUNDS, NAIP_SOURCES, SC_BOUNDS,
   cadEnabled, formatCoords, hiDpiUrl, shouldFallBack, streetViewUrl,
 } from './geo.js';
+import { setupGeology } from './geology-ui.js';
 import { setupLayerPanel } from './layers.js';
 
 const BACKGROUND = '#1b1f23';
@@ -75,8 +76,9 @@ function useImagery(index) {
     bounds: IMAGERY_BOUNDS.flat(),
     attribution: src.attribution,
   });
-  // Above the cached imagery, below the mask, outline and any CAD layers.
-  map.addLayer({ id: 'naip', type: 'raster', source: 'naip', minzoom: DETAIL_MINZOOM, paint: RASTER_PAINT }, 'mask');
+  // Above the cached imagery; below geology, the mask, outline and CAD layers.
+  const above = map.getLayer('geology-fill') ? 'geology-fill' : 'mask';
+  map.addLayer({ id: 'naip', type: 'raster', source: 'naip', minzoom: DETAIL_MINZOOM, paint: RASTER_PAINT }, above);
   sourceIndex = index;
   stats = { errors: 0, loaded: 0 };
 }
@@ -102,9 +104,10 @@ map.on('error', (e) => {
 map.addControl(new maplibregl.NavigationControl(), 'top-right');
 map.addControl(new maplibregl.ScaleControl({ unit: 'imperial' }), 'bottom-left');
 
+const geology = setupGeology(map, document.getElementById('panels'));
 const cad = cadEnabled(window.location.search) ? setupLayerPanel(map) : null;
 // Handle for debugging and the viewer smoke test (scripts/viewer_smoke.mjs).
-window.scGeo = { map, cad };
+window.scGeo = { map, cad, geology };
 const popup = new maplibregl.Popup({ closeOnClick: false, maxWidth: '280px' });
 
 const FEATURE_FIELDS = ['text', 'name', 'description', 'code', 'entity', 'type', 'level', 'block'];
@@ -144,7 +147,9 @@ map.on('click', (e) => {
   });
 
   const [hit] = cad ? cad.featuresAt(e.point) : [];
+  const unit = hit ? null : geology.unitAt(e.point);
   if (hit) content.append(featureInfo(hit));
+  else if (unit) content.append(geology.describe(unit));
   content.append(coords, button);
   popup.setLngLat(e.lngLat).setDOMContent(content).addTo(map);
 });

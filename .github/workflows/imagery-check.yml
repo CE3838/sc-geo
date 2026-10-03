@@ -1,11 +1,11 @@
 name: External services check
 
-# Checks that depend on outside services: the NAIP imagery servers and the
-# viewer running with MapLibre from unpkg. Kept separate from CI so an
+# Checks that depend on outside services: the NAIP imagery servers, the USGS
+# SGMC geology service, and the viewer running with MapLibre from unpkg. Kept separate from CI so an
 # outage elsewhere does not block unrelated changes.
 on:
   pull_request:
-    paths: ["web/**", "scripts/**", ".github/workflows/imagery-check.yml"]
+    paths: ["web/**", "scripts/**", "harvest/**", "config/**", ".github/workflows/imagery-check.yml"]
   schedule:
     - cron: "17 13 * * 1"
   workflow_dispatch:
@@ -32,6 +32,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Harvest SGMC geology
+        env:
+          CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
+        run: python -m harvest.sgmc
       - run: npm install --no-save playwright@1.56.1
       - run: npx playwright install --with-deps chromium
       - run: node scripts/viewer_smoke.mjs

@@ -25,6 +25,7 @@ def test_valid_value_defaults_to_not_inferred():
         "extraction_method": "pdf_text",
         "confidence": 0.9,
         "inferred": False,
+        "locator": None,
     }
 
 
@@ -61,3 +62,16 @@ def test_inference_method_requires_inferred_flag():
 def test_round_trip():
     v = make(inferred=True, extraction_method=ExtractionMethod.LLM)
     assert StoredValue.from_dict(v.to_dict()) == v
+
+
+def test_gis_values_use_a_locator_instead_of_a_page():
+    v = make(page=None, locator="OBJECTID=12", extraction_method=ExtractionMethod.GIS_IMPORT)
+    assert v.to_dict()["page"] is None
+    assert v.to_dict()["locator"] == "OBJECTID=12"
+    assert StoredValue.from_dict(v.to_dict()) == v
+
+
+@pytest.mark.parametrize("locator", [None, "", "  "])
+def test_missing_page_needs_a_locator(locator):
+    with pytest.raises(ValueError):
+        make(page=None, locator=locator)

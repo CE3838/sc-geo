@@ -103,7 +103,7 @@ export function setupLayerPanel(map) {
   const panel = el('aside', { class: 'layer-panel', 'aria-label': 'CAD layers' },
     el('div', { class: 'cad-header' }, el('h2', {}, 'CAD layers'), toggle),
     body);
-  document.body.append(panel);
+  (document.getElementById('panels') ?? document.body).append(panel);
   // Start collapsed on phones so the map stays visible.
   if (window.matchMedia('(max-width: 600px)').matches) toggle.click();
 
