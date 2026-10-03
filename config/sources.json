@@ -35,5 +35,20 @@
     "title": "USGS Geolex, national geologic names lexicon",
     "url": "https://ngmdb.usgs.gov/Geolex/search",
     "license": "Public domain (U.S. Government work)"
+  },
+  "scdot-roads": {
+    "title": "SCDOT road inventory: Statewide_Highways (state highway system) and OTHER_ROADS (county, city and private roads)",
+    "publisher": "South Carolina Department of Transportation (ArcGIS Online organization VaY7cY9pvUYUP1Lf)",
+    "feature_services": [
+      "https://services1.arcgis.com/VaY7cY9pvUYUP1Lf/arcgis/rest/services/Statewide_Highways/FeatureServer/0",
+      "https://services1.arcgis.com/VaY7cY9pvUYUP1Lf/arcgis/rest/services/OTHER_ROADS/FeatureServer/0"
+    ],
+    "license": "Public items published by SCDOT; no license is stated on the items. Shown live with attribution to SCDOT and not copied.",
+    "notes": "Read live by the viewer (web/roads.js) for the area on screen: ROUTE_TYPE and ROUTE_NUMB give interstate, US and SC route numbers; STREET_NAM gives names. CORS allows any origin. The public-domain alternative, U.S. Census TIGERweb (Transportation MapServer), could not be reached from the build environment to verify it."
+  },
+  "county-parcels": {
+    "title": "County parcel services (property lines and tax map parcel IDs)",
+    "registry": "config/parcel_registry.json",
+    "license": "Each county's own terms; parcels are queried live and never copied (several counties restrict redistribution)."
   }
 }

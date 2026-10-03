@@ -60,6 +60,9 @@ body { display: flex; flex-direction: column; overflow: hidden; color: var(--tex
 .fault-key { list-style: none; margin: 4px 0 2px 23px; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 2px 8px; font-size: 12px; color: var(--muted); }
 .fault-key li { display: flex; align-items: center; gap: 4px; }
 .fault-sample { flex: none; }
+.parcel-status { list-style: none; margin: 2px 0 2px 23px; padding: 0; font-size: 12px; color: var(--muted); line-height: 1.35; }
+.parcel-status:empty, .parcel-status[hidden] { display: none; }
+.parcel-status a { color: var(--accent); }
 
 .geo-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
 .geo-row label { flex: none; width: 108px; color: var(--muted); }
@@ -93,7 +96,9 @@ body { display: flex; flex-direction: column; overflow: hidden; color: var(--tex
 .maplibregl-popup-content { padding: 10px 12px 10px; border-radius: 6px; box-shadow: 0 3px 14px rgba(0,0,0,.35); }
 .callout-title { font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 18px 6px 0; }
 .callout-sub { color: var(--muted); margin: 1px 0 4px; }
-.callout-fault { margin-bottom: 6px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+.callout-fault, .callout-road, .callout-parcel { margin-bottom: 6px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+.callout-parcel .callout-coords { margin: 3px 0 4px; }
+.callout-parcel a { color: var(--accent); }
 .callout-coords { display: grid; grid-template-columns: auto 1fr; gap: 1px 10px; margin: 6px 0 8px; font-variant-numeric: tabular-nums; }
 .callout-coords dt { color: var(--muted); }
 .callout-coords dd { margin: 0; }
