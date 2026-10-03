@@ -15,7 +15,22 @@ _KEYWORDS = re.compile(
     r"strike|dip|aquifer|well|boring|auger|core|depth|thick|feet|ft\b|meters?|pleistocene|holocene|miocene|"
     r"eocene|oligocene|pliocene|cretaceous|paleozoic|contact|bed\b|beds\b|munsell|uscs|spt|water level",
     re.I)
-_LEADER = re.compile(r"(\.{3,}|\s{3,}|…+)\s*[ivxlc\d]+\s*$", re.I)
+_PAGE_NO = re.compile(r"[ivxlc\d]+$", re.I)
+
+
+def _has_leader(line: str) -> bool:
+    """A contents line: text, dot leaders or a wide gap, then a page number.
+
+    Written without nested whitespace quantifiers: -layout lines can hold thousands
+    of spaces, and a regex like (\\s{3,})\\s* backtracks cubically on them.
+    """
+    s = line.rstrip()
+    m = _PAGE_NO.search(s)
+    if not m or m.start() == 0:
+        return False
+    before = s[: m.start()]
+    gap = len(before) - len(before.rstrip())
+    return gap >= 3 or before.rstrip().endswith(("...", "…", ". ."))
 _INDEX_LINE = re.compile(r"^\s*[A-Z][^,]{1,60},\s*\d+(?:\s*[-,]\s*\d+)*\s*$")
 _REF_LINE = re.compile(r"^\s*[A-Z][A-Za-z'’\-]+,\s+(?:[A-Z]\.\s*){1,3}.*\b(1[89]\d\d|20\d\d)[a-z]?\b")
 _REF_HEAD = re.compile(r"^\s*(references?(\s+cited)?|selected references|literature cited|bibliography|"
@@ -39,7 +54,7 @@ def classify(text: str, page: int, n_pages: int, method: str = "pdf_text", min_c
     n = max(len(lines), 1)
     score = round(1000 * (len(_KEYWORDS.findall(body)) + 0.2 * len(re.findall(r"\d", body))) / max(chars, 1), 2)
 
-    leaders = sum(bool(_LEADER.search(l)) for l in lines) / n
+    leaders = sum(_has_leader(l) for l in lines) / n
     if re.search(r"\b(contents|illustrations|figures|tables|plates)\b", head) and leaders >= 0.4:
         return {"kind": "toc", "keep": False, "score": score}
     if re.search(r"^\s*index\s*$", head, re.M) and sum(bool(_INDEX_LINE.match(l)) for l in lines) / n >= 0.4:
