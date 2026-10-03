@@ -1,0 +1,1864 @@
+{
+ "source_id": "ngmdb:21620",
+ "title": "The Fishburne Formation (Lower Eocene), a newly defined subsurface unit in the South Carolina coastal plain",
+ "citation": "Gohn, G.S. Hazel, J.E., Bybell, L.M., and Edwards, L.E., 1983, The Fishburne Formation (Lower Eocene), a newly defined subsurface unit in the South Carolina coastal plain: U.S. Geological Survey Bulletin 1537-C, map scale 1:875,000.",
+ "year": 1983,
+ "scale": 875000,
+ "publisher": "U.S. Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-10-03T20:18:49+00:00",
+ "reader": "Claude Opus 5.5 (claude-opus-5-5), trial reading in the build session, 2026-10-03",
+ "packets": [
+  "packet-01"
+ ],
+ "notes": "Depths are below kelly bushing as measured from geophysical logs (page 11 footnote: for CC1 subtract 5 ft to get core depths of Gohn and others, 1977). Microfossil species lists (pages 12, 14) are not recorded as values. Figures 1-5 (pages 8, 13, 15, 17, 20) are mostly unreadable as text; page 17 (figure 4) has no text. References: only those about South Carolina or the Atlantic Coastal Plain stratigraphy are recorded; general paleontology and zonation references (Bukry, Costa and Downie, Enright, Hardenbol and Berggren, Hazel 1969, Loeblich and Tappan, Martini, Olsson, Owens and Minard, Stainforth and others, Gibson and others) are skipped.",
+ "files": [
+  {
+   "url": "https://pubs.usgs.gov/bul/1537c/report.pdf",
+   "via": "pubs_usgs",
+   "sha256": "efd5191756c6328f32c3bd1f4726ecffdc792a1042fcc30b901967d333ce4220",
+   "pages": 24,
+   "first_page": 1
+  }
+ ],
+ "summary": {
+  "values": 105,
+  "stored": 105,
+  "exact": 105,
+  "ocr": 0,
+  "fuzzy": 0,
+  "quote_not_found": 0,
+  "wrong_page": 0,
+  "agree": 19,
+  "disagree": 0,
+  "unclear": 0,
+  "review_items": 0
+ },
+ "units": [
+  {
+   "name": {
+    "value": "Fishburne Formation",
+    "source_id": "ngmdb:21620",
+    "page": 7,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Fishburne Formation is herein defined as the glauconitic, clayey",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Fishburne",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:21620",
+    "page": 7,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "The Fishburne Formation is herein defined",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "rank taken from the unit name"
+   },
+   "age": {
+    "value": "early Eocene",
+    "source_id": "ngmdb:21620",
+    "page": 7,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "an early Eocene age for the Fishburne Formation in its type section",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 47.8,
+     "older_ma": 56.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "glauconitic, clayey, finely crystalline limestone",
+    "source_id": "ngmdb:21620",
+    "page": 7,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "glauconitic, clayey, finely crystalline limestone",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "nodular, glauconitic, clayey limestone, which shows only minor variation in lithology; typically greenish gray to pale olive in color (dry), little evidence of stratification",
+    "source_id": "ngmdb:21620",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "the Fishburne Formation consists of nodular, glauconitic, clayey limestone, which shows only minor variation in lithology",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "thickness": {
+    "value": "24 ft thick in the type section in CC1; maximum observed thickness of 74 ft in the Fripp Island water well",
+    "source_id": "ngmdb:21620",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "is 24 ft thick in the type section in CC1 and reaches a maximum observed thickness of 74 ft",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 24.0,
+     "max_ft": 74.0,
+     "values_ft": [
+      24.0,
+      74.0
+     ],
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "contacts": {
+    "value": "sharp contact between coarse-grained, bryozoan-mollusk limestone of the Santee Limestone and underlying finer grained, clayey limestone of the Fishburne",
+    "source_id": "ngmdb:21620",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "there is a sharp contact between coarse-grained, bryozoan-mollusk limestone of the Santee Limestone and underlying finer grained, clayey limestone of the Fishburne",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "upper contact; the basal contact is described on the same page as sharp but irregular"
+   },
+   "depositional_environment": {
+    "value": "deposition at inner-sublittoral depths in a warm-temperate or warmer climate",
+    "source_id": "ngmdb:21620",
+    "page": 14,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "suggests deposition at inner-sublittoral depths in a warm-temperate or warmer climate",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "from the ostracode assemblage"
+   },
+   "fossils": {
+    "value": "Calcareous nannofossils, ostracodes, dinoflagellates, foraminifers, and pollen",
+    "source_id": "ngmdb:21620",
+    "page": 7,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Calcareous nannofossils, ostracodes, dinoflagellates, foraminifers, and pollen",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "name": {
+    "value": "Santee Limestone",
+    "source_id": "ngmdb:21620",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Middle Eocene limestone above the Fishburne is typically assigned to the Santee Limestone",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Santee",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Middle Eocene",
+    "source_id": "ngmdb:21620",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Middle Eocene limestone above the Fishburne",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 37.71,
+     "older_ma": 47.8,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "two members: an upper Cross Member consisting of finely crystalline limestone and a lower Moultrie Member consisting of megafossiliferous limestone",
+    "source_id": "ngmdb:21620",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "an upper Cross Member consisting of finely crystalline limestone and a lower Moultrie Member consisting of megafossiliferous limestone",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "stratigraphy of Ward and others (1979)"
+   }
+  },
+  {
+   "name": {
+    "value": "Cross Member",
+    "source_id": "ngmdb:21620",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "an upper Cross Member consisting of finely crystalline limestone",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Cross",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Member",
+    "source_id": "ngmdb:21620",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "an upper Cross Member",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "lithology": {
+    "value": "finely crystalline limestone",
+    "source_id": "ngmdb:21620",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cross Member consisting of finely crystalline limestone",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Moultrie Member",
+    "source_id": "ngmdb:21620",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "a lower Moultrie Member consisting of megafossiliferous limestone",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Moultrie",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Member",
+    "source_id": "ngmdb:21620",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "a lower Moultrie Member",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "lithology": {
+    "value": "megafossiliferous limestone",
+    "source_id": "ngmdb:21620",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Moultrie Member consisting of megafossiliferous limestone",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "name": {
+    "value": "Black Mingo Formation",
+    "source_id": "ngmdb:21620",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the entire Paleocene section below the Fishburne Formation is herein assigned to the Black Mingo Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Black Mingo",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Paleocene",
+    "source_id": "ngmdb:21620",
+    "page": 7,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "above the Paleocene Black Mingo Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 56.0,
+     "older_ma": 66.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "contacts": {
+    "value": "basal contact of the Fishburne is sharp but irregular above the megafossiliferous, highly porous, quartzose limestone in the top of the underlying Paleocene section",
+    "source_id": "ngmdb:21620",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The basal contact of the Fishburne is also sharp but irregular",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Beaufort(?) Formation",
+    "source_id": "ngmdb:21620",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "sediments assigned to the Beaufort(?) Formation are now known to be lithologically",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Beaufort",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "description": {
+    "value": "now known to be lithologically and biostratigraphically equivalent to outcropping sediments of the lower part of the Black Mingo Formation; included in the Black Mingo Formation in this report",
+    "source_id": "ngmdb:21620",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "are now known to be lithologically and biostratigraphically equivalent to outcropping sediments of the lower part of the Black Mingo Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Cooper Formation",
+    "source_id": "ngmdb:21620",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Harleyville, Parkers Ferry, and Ashley Members of the Cooper Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Cooper",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "upper Eocene and upper Oligocene",
+    "source_id": "ngmdb:21620",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "upper Eocene and upper Oligocene sediments in Dorchester and Charleston Counties are assigned to the Harleyville, Parkers Ferry, and Ashley",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 23.03,
+     "older_ma": 37.71,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Harleyville, Parkers Ferry, and Ashley Members",
+    "source_id": "ngmdb:21620",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Harleyville, Parkers Ferry, and Ashley Members of the Cooper Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Ocala Limestone",
+    "source_id": "ngmdb:21620",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "upper Eocene limestone in Beaufort County is assigned to the Ocala Limestone",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "Ocala",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "upper Eocene",
+    "source_id": "ngmdb:21620",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "upper Eocene limestone in Beaufort County is assigned to the Ocala Limestone",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 37.71,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  }
+ ],
+ "observations": [
+  {
+   "kind": "core",
+   "label": {
+    "value": "U.S. Geological Survey Clubhouse Crossroads No. 1 (CC1)",
+    "source_id": "ngmdb:21620",
+    "page": 7,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "U.S. Geological Survey Clubhouse Crossroads No. 1, Dorchester County",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Dorchester County",
+    "source_id": "ngmdb:21620",
+    "page": 7,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Clubhouse Crossroads No. 1, Dorchester County",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "total_depth": {
+    "value": "2,599",
+    "source_id": "ngmdb:21620",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Clubhouse   do   2,599   Core",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "ft",
+    "table": true,
+    "normalized": {
+     "min_ft": 2599.0,
+     "max_ft": 2599.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "416 ft",
+      "source_id": "ngmdb:21620",
+      "page": 11,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "of 416 and 440 ft in CC1 is designated",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 416.0,
+       "max_ft": 416.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "440 ft",
+      "source_id": "ngmdb:21620",
+      "page": 11,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "of 416 and 440 ft in CC1 is designated",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 440.0,
+       "max_ft": 440.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Fishburne Formation",
+      "source_id": "ngmdb:21620",
+      "page": 11,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "the type section for the Fishburne Formation",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "note": "type section; depths below kelly bushing",
+      "normalized": {
+       "canonical": "Fishburne",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "nodular, glauconitic, clayey limestone",
+      "source_id": "ngmdb:21620",
+      "page": 11,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "consists of nodular, glauconitic, clayey limestone",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    }
+   ]
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "Stal 3",
+    "source_id": "ngmdb:21620",
+    "page": 15,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "hole, Stal 3, in southern Dorchester County",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "southern Dorchester County",
+    "source_id": "ngmdb:21620",
+    "page": 15,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "hole, Stal 3, in southern Dorchester County",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "total_depth": {
+    "value": "484",
+    "source_id": "ngmdb:21620",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Stal 3*   do   484   Cuttings",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "ft",
+    "table": true,
+    "normalized": {
+     "min_ft": 484.0,
+     "max_ft": 484.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "326 ft",
+      "source_id": "ngmdb:21620",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "cuttings between depths of 326 ft and about 390 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 326.0,
+       "max_ft": 326.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "about 390 ft",
+      "source_id": "ngmdb:21620",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "cuttings between depths of 326 ft and about 390 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 390.0,
+       "max_ft": 390.0,
+       "unit": "ft",
+       "approximate": true
+      }
+     },
+     "unit": {
+      "value": "Fishburne Formation",
+      "source_id": "ngmdb:21620",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.578,
+      "inferred": true,
+      "locator": null,
+      "quote": "The Fishburne Formation also was encountered in another drill",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "note": "the interval is assigned to the Fishburne by the paragraph that names Stal 3",
+      "normalized": {
+       "canonical": "Fishburne",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "microfossiliferous, glauconitic fine-grained limestone",
+      "source_id": "ngmdb:21620",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "consist of microfossiliferous, glauconitic fine-grained limestone",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    }
+   ]
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "Stal 1",
+    "source_id": "ngmdb:21620",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Fishburne Formation cannot be recognized in logs or cuttings from Stal 1",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "total_depth": {
+    "value": "526",
+    "source_id": "ngmdb:21620",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Stall*   Dorchester   526   Cuttings",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "ft",
+    "table": true,
+    "note": "the table's text layer reads 'Stall'",
+    "normalized": {
+     "min_ft": 526.0,
+     "max_ft": 526.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "bottom": {
+      "value": "345 ft",
+      "source_id": "ngmdb:21620",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "at a depth of 345 ft, nonglauconitic,",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 345.0,
+       "max_ft": 345.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Cross Member of the Santee Limestone",
+      "source_id": "ngmdb:21620",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "fine-grained limestone of the Cross Member of the Santee Limestone",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Cross",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "nonglauconitic, fine-grained limestone; appears to directly overlie quartz sand with an early Sabinian (late Paleocene) ostracode fauna",
+      "source_id": "ngmdb:21620",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "appears to directly overlie quartz sand that contains an early Sabinian (late Paleocene) ostracode fauna",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "Charleston Medical Center (drill hole no. 4)",
+    "source_id": "ngmdb:21620",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Charleston   Charleston   2,078   Gamma and electric logs",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "location": {
+    "value": "Charleston City",
+    "source_id": "ngmdb:21620",
+    "page": 18,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "drill hole no. 4 in Charleston City",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "total_depth": {
+    "value": "2,078",
+    "source_id": "ngmdb:21620",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Charleston   Charleston   2,078",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "ft",
+    "table": true,
+    "normalized": {
+     "min_ft": 2078.0,
+     "max_ft": 2078.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Fishburne Formation",
+      "source_id": "ngmdb:21620",
+      "page": 18,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "a thin section of Fishburne sediments (less than 10 ft) is interpreted from the logs for drill hole no. 4",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Fishburne",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "thin section of Fishburne sediments (less than 10 ft), interpreted from logs",
+      "source_id": "ngmdb:21620",
+      "page": 18,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "a thin section of Fishburne sediments (less than 10 ft)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "Kiawah Island water well",
+    "source_id": "ngmdb:21620",
+    "page": 18,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "In the Kiawah Island well, the gamma log has a high-value signa",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "total_depth": {
+    "value": "2,287",
+    "source_id": "ngmdb:21620",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Kiawah Island   do   2,287",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "ft",
+    "table": true,
+    "normalized": {
+     "min_ft": 2287.0,
+     "max_ft": 2287.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "530 ft",
+      "source_id": "ngmdb:21620",
+      "page": 18,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "the Kiawah section from 530 to 576 ft is assigned to that formation",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 530.0,
+       "max_ft": 530.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "576 ft",
+      "source_id": "ngmdb:21620",
+      "page": 18,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "the Kiawah section from 530 to 576 ft is assigned to that formation",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 576.0,
+       "max_ft": 576.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Fishburne Formation",
+      "source_id": "ngmdb:21620",
+      "page": 18,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "the Kiawah section from 530 to 576 ft is assigned to that formation",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Fishburne",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "interpreted as beds of glauconitic fine-grained limestone similar to the type section; no fossil data",
+      "source_id": "ngmdb:21620",
+      "page": 18,
+      "extraction_method": "llm",
+      "confidence": 0.578,
+      "inferred": true,
+      "locator": null,
+      "quote": "These data are interpreted to represent beds of glauconitic fine-grained limestone similar to those of the",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    },
+    {
+     "top": {
+      "value": "532 ft",
+      "source_id": "ngmdb:21620",
+      "page": 18,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "the interval between 532 and 565 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 532.0,
+       "max_ft": 532.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "565 ft",
+      "source_id": "ngmdb:21620",
+      "page": 18,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "the interval between 532 and 565 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 565.0,
+       "max_ft": 565.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "fine black sand",
+      "source_id": "ngmdb:21620",
+      "page": 18,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "is described as \"fine black sand.\"",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "note": "driller's log"
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "Edisto Beach water well",
+    "source_id": "ngmdb:21620",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "The gamma log for the Edisto Beach well went to a depth of 653 ft",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "total_depth": {
+    "value": "970 ft",
+    "source_id": "ngmdb:21620",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "total depth of hole is 970 ft",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 970.0,
+     "max_ft": 970.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "626 ft",
+      "source_id": "ngmdb:21620",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "the upper part of the Fishburne Formation between depths of 626 ft and the bottom of the log",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 626.0,
+       "max_ft": 626.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "653 ft",
+      "source_id": "ngmdb:21620",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.578,
+      "inferred": true,
+      "locator": null,
+      "quote": "the Edisto Beach well went to a depth of 653 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "note": "bottom of the gamma log; the unit continues below",
+      "normalized": {
+       "min_ft": 653.0,
+       "max_ft": 653.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Fishburne Formation",
+      "source_id": "ngmdb:21620",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "at least the upper part of the Fishburne Formation",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Fishburne",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "Parris Island No. 2",
+    "source_id": "ngmdb:21620",
+    "page": 19,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "in the Parris Island No. 2 well",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "total_depth": {
+    "value": "3,454",
+    "source_id": "ngmdb:21620",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Parris Island   do   3,454",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "ft",
+    "table": true,
+    "normalized": {
+     "min_ft": 3454.0,
+     "max_ft": 3454.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "895 ft",
+      "source_id": "ngmdb:21620",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "the Fishburne Formation is interpreted to occur between depths of 895 and 958 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 895.0,
+       "max_ft": 895.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "958 ft",
+      "source_id": "ngmdb:21620",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "the Fishburne Formation is interpreted to occur between depths of 895 and 958 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 958.0,
+       "max_ft": 958.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Fishburne Formation",
+      "source_id": "ngmdb:21620",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "the Fishburne Formation is interpreted to occur between depths of 895 and 958 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "normalized": {
+       "canonical": "Fishburne",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "950 ft",
+      "source_id": "ngmdb:21620",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "a glauconite bed at the base of the Fishburne (950-958 ft)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 950.0,
+       "max_ft": 950.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "958 ft",
+      "source_id": "ngmdb:21620",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "a glauconite bed at the base of the Fishburne (950-958 ft)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 958.0,
+       "max_ft": 958.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "glauconite bed at the base of the Fishburne",
+      "source_id": "ngmdb:21620",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "a glauconite bed at the base of the Fishburne (950-958 ft)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "Fripp Island water well",
+    "source_id": "ngmdb:21620",
+    "page": 19,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "In the Fripp Island water well (fig. 5), a 74-ft-thick section",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Beaufort",
+    "source_id": "ngmdb:21620",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fripp Island   Beaufort   3,168",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "county column"
+   },
+   "total_depth": {
+    "value": "3,168",
+    "source_id": "ngmdb:21620",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fripp Island   Beaufort   3,168",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "ft",
+    "table": true,
+    "normalized": {
+     "min_ft": 3168.0,
+     "max_ft": 3168.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "797 ft",
+      "source_id": "ngmdb:21620",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Phosphatic and glauconitic limestone in cuttings between 797 and 816 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 797.0,
+       "max_ft": 797.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "816 ft",
+      "source_id": "ngmdb:21620",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Phosphatic and glauconitic limestone in cuttings between 797 and 816 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 816.0,
+       "max_ft": 816.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Santee Limestone",
+      "source_id": "ngmdb:21620",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "high gamma values in the basal beds of the overlying Santee Lime",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Santee",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "Phosphatic and glauconitic limestone",
+      "source_id": "ngmdb:21620",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Phosphatic and glauconitic limestone in cuttings",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    },
+    {
+     "top": {
+      "value": "816 ft",
+      "source_id": "ngmdb:21620",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "between 816 and 858 ft, consists of medium-grained, well-sorted quartz sand",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 816.0,
+       "max_ft": 816.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "858 ft",
+      "source_id": "ngmdb:21620",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "between 816 and 858 ft, consists of medium-grained, well-sorted quartz sand",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 858.0,
+       "max_ft": 858.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Fishburne Formation (upper half, provisionally assigned)",
+      "source_id": "ngmdb:21620",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "is also provisionally assigned to the Fishburne Forma",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Fishburne",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "medium-grained, well-sorted quartz sand containing some macrofossil fragments",
+      "source_id": "ngmdb:21620",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "medium-grained, well-sorted quartz sand containing some macrofossil fragments",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    },
+    {
+     "top": {
+      "value": "858 ft",
+      "source_id": "ngmdb:21620",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Between depths of 858 and 890 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 858.0,
+       "max_ft": 858.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "890 ft",
+      "source_id": "ngmdb:21620",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Between depths of 858 and 890 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 890.0,
+       "max_ft": 890.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Fishburne Formation",
+      "source_id": "ngmdb:21620",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.578,
+      "inferred": true,
+      "locator": null,
+      "quote": "the characteristic \"necked\" electric log pattern and high gamma",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "note": "lower half of the formation in this well",
+      "normalized": {
+       "canonical": "Fishburne",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "moderately glauconitic, silty and clayey, microfossiliferous fine-grained limestone",
+      "source_id": "ngmdb:21620",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "moderately glauconitic, silty and clayey, microfossiliferous fine-grained lime",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    },
+    {
+     "top": {
+      "value": "890 ft",
+      "source_id": "ngmdb:21620",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Common phosphate and glauconite in the cuttings from 890 to 900 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 890.0,
+       "max_ft": 890.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "900 ft",
+      "source_id": "ngmdb:21620",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Common phosphate and glauconite in the cuttings from 890 to 900 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 900.0,
+       "max_ft": 900.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "Common phosphate and glauconite (basal gamma peak at 890 ft)",
+      "source_id": "ngmdb:21620",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "represent the basal gamma peak at 890 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree"
+     }
+    }
+   ]
+  }
+ ],
+ "structures": [],
+ "groundwater": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Baum, G. R., Collins, J. S., Jones, R. M., Madlinger, B. A., and Powell, R. J., 1980, Correlation of the Eocene strata of the Carolinas: South Carolina Geology, v. 24, no. 1, p. 19-27.",
+    "source_id": "ngmdb:21620",
+    "page": 21,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Baum, G. R., Collins, J. S., Jones, R. M., Madlinger, B. A., and Powell, R. J., 1980,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "text layer reads 'Carolines'"
+   }
+  },
+  {
+   "citation": {
+    "value": "Counts, H. B., and Donsky, Ellis, 1963, Salt-water encroachment, geology, and ground-water resources of Savannah area, Georgia and South Carolina: U.S. Geological Survey Water-Supply Paper 1611, 100 p.",
+    "source_id": "ngmdb:21620",
+    "page": 21,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Counts, H. B., and Donsky, Ellis, 1963, Salt-water encroachment, geology, and ground",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Frederiksen, N. O., 1980, Paleogene sporomorphs from South Carolina and quantitative correlations with the Gulf Coast: Palynology, v. 4, p. 125-179.",
+    "source_id": "ngmdb:21620",
+    "page": 21,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Frederiksen, N. O., 1980, Paleogene sporomorphs from South Carolina and quantita",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Frederiksen, N. O., and Christopher, R. A., 1978, Taxonomy and biostratigraphy of Late Cretaceous and Paleogene triatriate pollen from South Carolina: Palynology, v. 2, p. 113-145.",
+    "source_id": "ngmdb:21620",
+    "page": 21,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Frederiksen, N. O., and Christopher, R. A., 1978, Taxonomy and biostratigraphy of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Gohn, G. S., Bybell, L. M., Smith, C. C., and Owens, J. P., 1978, Preliminary stratigraphic cross sections of Atlantic Coastal Plain sediments of the Southeastern United States Cenozoic sediments along the South Carolina coastal margin: U.S. Geological Survey Miscellaneous Field Studies Map MF-1015-B, 2 sheets.",
+    "source_id": "ngmdb:21620",
+    "page": 21,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gohn, G. S., Bybell, L. M., Smith, C. C., and Owens, J. P., 1978, Preliminary strati",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Gohn, G. S., Higgins, B. B., Smith, C. C., and Owens, J. P., 1977, Lithostratigraphy of the deep corehole (Clubhouse Crossroads corehole 1) near Charleston, South Carolina, in Rankin, D. W., ed., Studies related to the Charleston, South Carolina, earthquake of 1886 A preliminary report: U.S. Geological Survey Professional Paper 1028, p. 59-70.",
+    "source_id": "ngmdb:21620",
+    "page": 21,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gohn, G. S., Higgins, B. B., Smith, C. C., and Owens, J. P., 1977, Lithostratigraphy of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "entry continues on page 22"
+   }
+  },
+  {
+   "citation": {
+    "value": "Hazel, J. E., Bybell, L. M., Christopher, R. A., Frederiksen, N. O., May, F. E., McLean, D. M., Poore, R. Z., Smith, C. C., Sohl, N. F., Valentine, P. C., and Witmer, R. J., 1977, Biostratigraphy of the deep corehole (Clubhouse Crossroads corehole 1) near Charleston, South Carolina, in Rankin, D. W., ed., Studies related to the Charleston, South Carolina, earthquake of 1886 A preliminary report: U.S. Geological Survey Professional Paper 1028, p. 71-89.",
+    "source_id": "ngmdb:21620",
+    "page": 22,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "1977, Biostratigraphy of the deep corehole (Clubhouse Crossroads corehole 1) near",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Maher, J. C., and Applin, E. R., 1971, Stratigraphy, in Maher, J. C., Geologic framework and petroleum potential of the Atlantic Coastal Plain and Continental Shelf: U.S. Geological Survey Professional Paper 659, p. 26-56.",
+    "source_id": "ngmdb:21620",
+    "page": 22,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Maher, J. C., and Applin, E. R., 1971, Stratigraphy, in Maher, J. C., Geologic frame",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "McLean, J. D., 1960, Stratigraphy of the Parris Island area, South Carolina: McLean Paleontological Laboratory Report 4 [n.p.].",
+    "source_id": "ngmdb:21620",
+    "page": 22,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "McLean, J. D., 1960, Stratigraphy of the Parris Island area, South Carolina: McLean",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Siple, G. E., 1969, Salt-water encroachment of Tertiary limestone along coastal South Carolina: South Carolina Division of Geology Notes, v. 13, no. 2, p. 51-65.",
+    "source_id": "ngmdb:21620",
+    "page": 22,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Siple, G. E., 1969, Salt-water encroachment of Tertiary limestone along coastal South",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Van Nieuwenhuise, D. S., 1978, Stratigraphy and ostracode biostratigraphy of the Black Mingo Formation, South Carolina: Columbia, University of South Carolina, unpublished Ph.D. dissertation, 108 p.",
+    "source_id": "ngmdb:21620",
+    "page": 22,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Van Nieuwenhuise, D. S., 1978, Stratigraphy and ostracode biostratigraphy of the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Ward, L. W., Blackwelder, B. W., Gohn, G. S., and Poore, R. Z., 1979, Stratigraphic revision of Eocene, Oligocene, and lower Miocene formations of South Carolina: South Carolina Geologic Notes, v. 23, no. 1, p. 2-32.",
+    "source_id": "ngmdb:21620",
+    "page": 22,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Ward, L. W., Blackwelder, B. W., Gohn, G. S., and Poore, R. Z., 1979, Stratigraphic",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Zupan, A. J., and Abbott, W. H., 1976, Comparative geology of onshore and offshore South Carolina, in Hathaway, J. C., and others, eds., Preliminary summary of the 1976 Atlantic margin coring project of the U.S. Geological Survey: U.S. Geological Survey Open-File Report 76-844, p. 206-214.",
+    "source_id": "ngmdb:21620",
+    "page": 22,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Zupan, A. J., and Abbott, W. H., 1976, Comparative geology of onshore and offshore",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ]
+}
