@@ -1,6 +1,37 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { formatCoords, streetViewUrl, SC_BOUNDS } from '../../web/geo.js';
+import { formatCoords, formatScale, onStyleReady, scaleDenominator, streetViewUrl, SC_BOUNDS } from '../../web/geo.js';
+
+test('onStyleReady runs now if the style is loaded, else on style.load (not load)', () => {
+  const calls = [];
+  const fake = (loaded) => ({ handlers: {}, isStyleLoaded: () => loaded,
+    once(type, h) { this.handlers[type] = h; } });
+  const ready = fake(true);
+  onStyleReady(ready, () => calls.push('now'));
+  assert.deepEqual(calls, ['now']);
+  const later = fake(false);
+  onStyleReady(later, () => calls.push('later'));
+  assert.deepEqual(Object.keys(later.handlers), ['style.load']);
+  later.handlers['style.load']();
+  assert.deepEqual(calls, ['now', 'later']);
+  // Style loaded but a source still loading: isStyleLoaded() is false, yet it must run now.
+  const busy = { ...fake(false), style: { _loaded: true } };
+  onStyleReady(busy, () => calls.push('busy'));
+  assert.deepEqual(calls, ['now', 'later', 'busy']);
+});
+
+test('scaleDenominator: ground meters per CSS pixel over 0.2646 mm (96 dpi)', () => {
+  // Zoom 0 at the equator: 40,075,016.686 m over 512 px.
+  const z0 = (40075016.686 / 512) / (0.0254 / 96);
+  assert.ok(Math.abs(scaleDenominator(0, 0) - z0) < 1e-6);
+  assert.ok(Math.abs(scaleDenominator(1, 60) - z0 / 4) < 1e-6);
+});
+
+test('formatScale rounds to two significant digits', () => {
+  assert.equal(formatScale(60671.3), '1:61,000');
+  assert.equal(formatScale(1234), '1:1,200');
+  assert.equal(formatScale(Number.NaN), '');
+});
 
 test('formatCoords uses 6 decimals with hemisphere letters', () => {
   assert.equal(formatCoords(-79.9311, 32.7765), '32.776500° N, 79.931100° W');
