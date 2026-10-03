@@ -1,34 +1,27 @@
 // Merged geology: one surficial and one bedrock layer built from every
-// available map (merge/build.py). Panel: layer toggles, color by age /
-// material / confidence, opacity, legend. Popup: unit, age, confidence,
-// sources and other maps' interpretations.
+// available map (merge/build.py). Layers panel: a row per layer, color by
+// age / material / confidence, opacity. Map units panel: legend and how the
+// layers were merged. Click: a short description, and the property card
+// model (card.js).
 import {
   confidenceColor, confidenceText, CONFIDENCE_STOPS, legendFor, matchColor, parseAlternatives, scaleText, sourceLink,
 } from './merged.js';
 import { safeHttpsUrl, shortCitation } from './geology.js';
+import { mergedCard } from './card.js';
+import { el } from './dom.js';
+import { onStyleReady } from './geo.js';
 
 const BASE = 'data/geology/';
 const LAYERS = [
-  { id: 'surficial', label: 'Surficial geology', visible: true },
-  { id: 'bedrock', label: 'Bedrock geology', visible: true },
+  { id: 'surficial', label: 'Surficial geology', visible: true, order: 10 },
+  { id: 'bedrock', label: 'Bedrock geology', visible: true, order: 20 },
 ];
-
-function el(tag, attrs = {}, ...kids) {
-  const node = document.createElement(tag);
-  for (const [k, v] of Object.entries(attrs)) {
-    if (k === 'class') node.className = v;
-    else if (k.startsWith('on')) node.addEventListener(k.slice(2), v);
-    else if (v === true) node.setAttribute(k, '');
-    else if (v !== false && v != null) node.setAttribute(k, v);
-  }
-  node.append(...kids.filter((k) => k != null && k !== false));
-  return node;
-}
 
 const getJson = (name) => fetch(BASE + name).then((r) => (r.ok ? r.json() : Promise.reject(new Error(`${name}: HTTP ${r.status}`))));
 
 // Resolves to the controller, or rejects if the merged files are missing.
-export async function setupMergedGeology(map, container) {
+// `ui` is the sidebar (sidebar.js).
+export async function setupMergedGeology(map, ui) {
   const [legend, units, summary, ...data] = await Promise.all([
     getJson('merged-legend.json'), getJson('merged-units.json'), getJson('merged-sources.json'),
     ...LAYERS.map((l) => getJson(`merged-${l.id}.geojson`)),
@@ -40,49 +33,36 @@ export async function setupMergedGeology(map, container) {
   const colorFor = (mode) => (mode === 'confidence' ? confidenceColor()
     : mode === 'material' ? matchColor('material_class', legend.material) : matchColor('age_class', legend.age));
 
-  const ready = map.isStyleLoaded() ? Promise.resolve() : new Promise((r) => map.once('load', r));
-  await ready;
+  await new Promise((r) => onStyleReady(map, r));
   // Bedrock first so surficial units draw on top of it.
   for (const l of [...LAYERS].reverse()) {
     map.addSource(`merged-${l.id}`, { type: 'geojson', data: data[LAYERS.indexOf(l)],
-      attribution: 'Geology: merged from USGS, SCGS and other maps (see Geology panel)' });
+      attribution: 'Geology: merged from USGS, SCGS and other maps (see Map units)' });
     map.addLayer({ id: `merged-${l.id}-fill`, type: 'fill', source: `merged-${l.id}`,
       paint: { 'fill-color': colorFor(state.mode), 'fill-opacity': state.opacity } }, 'mask');
     map.addLayer({ id: `merged-${l.id}-line`, type: 'line', source: `merged-${l.id}`, minzoom: 9,
       paint: { 'line-color': '#222', 'line-opacity': 0.4, 'line-width': 0.5 } }, 'mask');
   }
 
-  const legendList = el('ul', { class: 'geo-legend', 'aria-label': 'Legend' });
-  const toggles = LAYERS.map((l) => {
-    const box = el('input', { type: 'checkbox', id: `geo-${l.id}`, checked: l.visible,
-      onchange: () => { state.visible[l.id] = box.checked; apply(); } });
-    return el('div', { class: 'geo-row' }, box, el('label', { for: `geo-${l.id}` }, l.label,
-      el('span', { class: 'geo-count' }, ` (${features[l.id].length.toLocaleString()})`)));
-  });
+  for (const l of LAYERS) {
+    ui.addLayer({ id: `geo-${l.id}`, label: l.label, order: l.order, checked: l.visible, count: features[l.id].length,
+      onChange: (on) => { state.visible[l.id] = on; apply(); } });
+  }
   const modeSelect = el('select', { id: 'geo-mode', onchange: () => { state.mode = modeSelect.value; apply(); } },
     el('option', { value: 'age' }, 'Age'), el('option', { value: 'material' }, 'Material'),
     el('option', { value: 'confidence' }, 'Confidence'));
   const opacity = el('input', { type: 'range', id: 'geo-opacity', min: '0', max: '100', value: String(state.opacity * 100),
     oninput: () => { state.opacity = Number(opacity.value) / 100; apply(); } });
+  ui.addControls(
+    el('div', { class: 'geo-row' }, el('label', { for: 'geo-mode' }, 'Color geology by'), modeSelect),
+    el('div', { class: 'geo-row' }, el('label', { for: 'geo-opacity' }, 'Opacity'), opacity));
+
+  const legendList = el('ul', { class: 'geo-legend', 'aria-label': 'Legend' });
   const used = (summary.sources ?? []).filter((s) => s.status === 'used');
-  const sourceNote = el('p', { class: 'geo-source' },
+  ui.units.append(legendList, el('p', { class: 'geo-source' },
     `Merged from ${used.length} maps (${used.filter((s) => s.scale && s.scale <= 24000).length} at 1:24,000). `
     + 'Where maps overlap the most detailed and recent map is shown; confidence reflects map scale, '
-    + 'how many maps agree, and whether the unit is a recognized Geolex unit.');
-  const body = el('div', { class: 'panel-body', id: 'geo-body' }, ...toggles,
-    el('div', { class: 'geo-row' }, el('label', { for: 'geo-mode' }, 'Color by'), modeSelect),
-    el('div', { class: 'geo-row' }, el('label', { for: 'geo-opacity' }, 'Opacity'), opacity),
-    legendList, sourceNote);
-  const collapse = el('button', { type: 'button', class: 'panel-collapse', 'aria-expanded': 'true', 'aria-controls': 'geo-body',
-    onclick: () => {
-      const open = collapse.getAttribute('aria-expanded') !== 'true';
-      collapse.setAttribute('aria-expanded', String(open));
-      body.hidden = !open;
-      collapse.textContent = open ? 'Hide' : 'Show';
-    } }, 'Hide');
-  container.append(el('section', { class: 'panel', 'aria-label': 'Geology' },
-    el('div', { class: 'panel-header' }, el('h2', {}, 'Geology'), collapse), body));
-  if (window.matchMedia('(max-width: 600px)').matches) collapse.click();
+    + 'how many maps agree, and whether the unit is a recognized Geolex unit. Colors are derived classes.'));
 
   function apply() {
     for (const l of LAYERS) {
@@ -95,19 +75,27 @@ export async function setupMergedGeology(map, container) {
     const shown = LAYERS.filter((l) => state.visible[l.id]).flatMap((l) => features[l.id]);
     let entries;
     if (state.mode === 'confidence') {
-      entries = CONFIDENCE_STOPS.map(([v, color]) => ({ id: `${Math.round(v * 100)}%`, color }));
+      entries = CONFIDENCE_STOPS.map(([v, color]) => ({ id: `${v.toFixed(1)} confidence`, color }));
     } else {
       const [prop, classes] = state.mode === 'material' ? ['material_class', legend.material] : ['age_class', legend.age];
       entries = legendFor(shown, prop, classes);
     }
-    legendList.replaceChildren(...entries.map((e) => el('li', {}, el('span', { class: 'geo-swatch', style: `background:${e.color}` }), e.id)));
+    legendList.replaceChildren(...entries.map((e) => el('li', {},
+      el('span', { class: 'geo-swatch', style: `background:${e.color}` }), e.id,
+      e.count != null && el('span', { class: 'geo-count' }, ` ${e.count}`))));
   }
   apply();
 
   return {
+    kind: 'merged',
     unitAt(point) {
       const layers = LAYERS.filter((l) => state.visible[l.id]).map((l) => `merged-${l.id}-fill`);
       return layers.length ? map.queryRenderedFeatures(point, { layers })[0] ?? null : null;
+    },
+    // Property card model for a clicked feature (card.js).
+    card(feature, lng, lat, records = []) {
+      const p = feature.properties;
+      return mergedCard({ props: p, unit: units[p.unit], sources, records, lng, lat });
     },
     describe(feature) {
       const p = feature.properties;
