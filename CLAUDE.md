@@ -41,6 +41,15 @@ Guidance for Claude (and humans) working in this repository.
   `harvest/sgmc.py` downloads it during deploy into `web/data/geology/`
   (generated, not committed). Age and rock-type color classes are derived and
   flagged inferred.
+- Source catalog: `data/catalog/sc_catalog.json` lists every SC geology map,
+  report and paper (NGMDB, SCGS 1:24k index, SCDNR FTP), merged by
+  publication number with provenance. Unit names: `data/lexicon/geolex_sc.json`
+  (USGS Geolex). `model/units.py` turns age text into Ma ranges (ICS chart) and
+  matches unit names across maps.
+- Goal: merge all sources into one GeMS-aligned result. Where maps overlap,
+  the most detailed and recent map wins; confidence comes from scale, the
+  mapper's identity confidence, agreement among other maps and published
+  research. Disagreeing sources are kept as alternatives with citations.
 - The CAD layer panel is hidden for now; add `?cad` to the viewer URL to
   show it.
 - CAD files are parsed in the browser (`web/cad/`) and never uploaded. DXF,
@@ -56,7 +65,7 @@ Guidance for Claude (and humans) working in this repository.
 | `harvest/` | Resumable jobs that discover and download public sources |
 | `extract/` | Parsers and prompts that pull values out of sources |
 | `model/` | Data model, including provenance (`StoredValue`) |
-| `data/` | Small public derived data only (no PDFs, no internal data) |
+| `data/` | Small public derived data only: `catalog/`, `lexicon/` (no PDFs, no internal data) |
 | `review/` | Tools for human review of extracted and inferred values |
 | `web/` | Static MapLibre GL JS viewer, deployed to GitHub Pages |
 | `web/cad/` | In-browser CAD readers (LandXML, DXF, DGN v7, KML, KMZ) and layer state |
@@ -71,4 +80,6 @@ node --test "tests/web/*.test.mjs"  # web tests
 python -m http.server -d web 8000   # serve the viewer locally
 node scripts/check_imagery.mjs      # confirm NAIP imagery servers respond
 python -m harvest.sgmc              # download SC geology into web/data/geology (needs network)
+python -m harvest.catalog           # rebuild data/catalog (needs network; resumable)
+python -m harvest.geolex            # rebuild data/lexicon (needs network; resumable)
 ```
