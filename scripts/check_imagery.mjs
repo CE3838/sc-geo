@@ -1,12 +1,12 @@
 // Fetch one NAIP tile over downtown Charleston from each imagery server and
 // report whether it returns an image. Exits 1 if any server fails.
-import { NAIP_SOURCES, fillBbox, mercatorBbox } from '../web/geo.js';
+import { NAIP_SOURCES, fillTile, tileForLngLat } from '../web/geo.js';
 
-const CHARLESTON = [-79.94, 32.77, -79.92, 32.79];
+const CHARLESTON = tileForLngLat(-79.93, 32.78, 16);
 
 let failed = 0;
 for (const src of NAIP_SOURCES) {
-  const url = fillBbox(src.url, mercatorBbox(CHARLESTON));
+  const url = fillTile(src.url, CHARLESTON);
   try {
     const res = await fetch(url, { signal: AbortSignal.timeout(30000) });
     const type = res.headers.get('content-type') ?? '';
