@@ -58,8 +58,22 @@ def ocr_engine() -> str | None:
     return None
 
 
+def native_dpi(path: Path, n: int) -> int | None:
+    """Highest resolution (ppi) of the images on page n, so OCR renders scans at their own resolution."""
+    try:
+        out = _run(["pdfimages", "-list", "-f", str(n), "-l", str(n), str(path)], timeout=120)
+    except (RuntimeError, OSError, subprocess.SubprocessError):
+        return None
+    ppis = []
+    for line in out.splitlines()[2:]:
+        cols = line.split()
+        if len(cols) >= 14 and cols[12].isdigit():
+            ppis.append(int(cols[12]))
+    return max(ppis) if ppis else None
+
+
 def ocr_pages(path: Path, page_numbers: list[int], language: str = "eng", timeout: int = 900,
-              dpi: int = 300) -> dict[int, tuple[str, str]]:
+              dpi: int = 300, max_pixels: int = 20000) -> dict[int, tuple[str, str]]:
     """{page: (layout text, reading-order text)} for the given 1-based pages."""
     engine = ocr_engine()
     if engine is None or not page_numbers:
@@ -76,7 +90,9 @@ def ocr_pages(path: Path, page_numbers: list[int], language: str = "eng", timeou
             return out
         for n in page_numbers:
             stem = Path(tmp) / f"p{n}"
-            subprocess.run(["pdftoppm", "-r", str(dpi), "-scale-to", "10000", "-f", str(n), "-l", str(n), "-png",
+            native = native_dpi(path, n)
+            render = min(max(native, 150), 400) if native else dpi
+            subprocess.run(["pdftoppm", "-r", str(render), "-scale-to", str(max_pixels), "-f", str(n), "-l", str(n), "-png",
                             "-singlefile", str(path), str(stem)], capture_output=True, timeout=timeout, check=True)
             txt = _run(["tesseract", f"{stem}.png", "-", "-l", language, "--psm", "3"], timeout=timeout)
             out[n] = (txt, txt)

@@ -126,6 +126,39 @@ def unit_feature(geometry: dict, attrs: dict, units: dict[str, dict], source: di
     return _finish(geometry, props)
 
 
+def plain_feature(geometry: dict, unit: dict, source: dict, sv: StoredValue, identity_confidence: str | None = None,
+                  inferred_fields: list[str] | None = None, name_locator: str | None = None) -> dict:
+    """One polygon from a non-GeMS map (merge/scgs.py) in the merge schema.
+
+    `sv` is the map unit as read (source and feature locator); `inferred_fields` lists
+    what was inferred rather than read (age, position, map_unit); `name_locator` is
+    where the unit name was read when it came from a separate key table."""
+    props = {
+        "source": source["id"],
+        "source_title": source.get("title"),
+        "citation": source.get("citation"),
+        "scale": source.get("scale"),
+        "year": source.get("year"),
+        "map_unit": unit["map_unit"],
+        "name": unit.get("name"),
+        "full_name": unit.get("full_name"),
+        "formation": unit.get("formation"),
+        "unit_name": unit.get("unit_name") or unit["map_unit"],
+        "age": unit.get("age"),
+        "geomaterial": unit.get("geomaterial"),
+        "lith": None,
+        "description": unit.get("description"),
+        "identity_confidence": identity_confidence,
+        "source_id": sv.source_id,
+        "locator": sv.locator,
+        "extraction_method": sv.extraction_method.value,
+        "confidence": sv.confidence,
+        "inferred_fields": list(inferred_fields or []),
+        "name_source": name_locator,
+    }
+    return _finish(geometry, props)
+
+
 SGMC_SOURCE = {
     "title": "State Geologic Map Compilation (SGMC), South Carolina",
     "citation": "Horton, J.D., San Juan, C.A., and Stoeser, D.B., 2017, The State Geologic Map Compilation (SGMC) "

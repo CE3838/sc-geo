@@ -122,6 +122,29 @@ def test_write_packets_only_under_cache(tmp_path):
     assert index["estimated_tokens"] > 0
 
 
+def test_packets_list_stable_block_ids():
+    """Blocks identify what a packet holds independently of packet numbering."""
+    long_page = ("Sand, clayey, gray. " * 400).strip()
+    out = packets.build(_doc([long_page] * 5), RECORD, max_tokens=5000, chars_per_token=4)
+    assert [b for p in out for b in p["blocks"]] == ["1", "2", "3", "4", "5"]
+    split = packets.build(_doc([("Clay and sand. " * 3000).strip()]), RECORD, max_tokens=4000, chars_per_token=4)
+    ids = [b for p in split for b in p["blocks"]]
+    assert ids[0] == f"1.1/{len(ids)}" and ids[-1] == f"1.{len(ids)}/{len(ids)}"
+
+
+def test_index_records_blocks(tmp_path):
+    out = packets.build(_doc([CONTENT, CONTENT]), RECORD)
+    packets.write(out, RECORD, tmp_path)
+    index = json.loads((tmp_path / "ngmdb_10009" / "index.json").read_text())
+    assert index["packets"][0]["blocks"] == ["1", "2"]
+    assert index["blocks"] == ["1", "2"]
+
+
+def test_block_pages():
+    assert packets.block_page("12") == 12 and packets.block_page("13.2/3") == 13
+    assert packets.is_part("13.2/3") and not packets.is_part("12")
+
+
 def test_safe_id():
     assert packets.safe_id("ngmdb:10009") == "ngmdb_10009"
     assert packets.safe_id("scgs-draft:ab/c d") == "scgs-draft_ab_c_d"

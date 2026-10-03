@@ -1,7 +1,9 @@
 name: Harvest full text
 
 # The no-model half of document extraction: find legal open full text for
-# every catalog record that is not merged GIS, download it, read page text,
+# every catalog record that is not merged GIS (catalog links, USGS Publications
+# Warehouse, Crossref DOI lookup + Unpaywall/OpenAlex/open Crossref links using
+# the CONTACT_EMAIL secret, NGMDB scans and browse images), download it, read page text,
 # OCR scanned pages, and triage pages. Resumable: page text and checkpoints
 # are kept in the Actions cache between runs, so each run continues where the
 # last stopped. PDFs are deleted once read, to stay under the 10 GB cache
@@ -48,6 +50,7 @@ jobs:
         with:
           path: |
             .cache/text
+            .cache/api
             .checkpoints/pdfs
           key: fulltext-${{ github.run_id }}
           restore-keys: fulltext-
@@ -81,5 +84,6 @@ jobs:
         with:
           path: |
             .cache/text
+            .cache/api
             .checkpoints/pdfs
           key: fulltext-${{ github.run_id }}
