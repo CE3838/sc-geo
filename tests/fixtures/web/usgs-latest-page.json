@@ -1,0 +1,105 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "properties": {
+    "monitoring_location_id": "USGS-021720677",
+    "parameter_code": "63160",
+    "time": "2026-10-03T19:45:00+00:00",
+    "value": "3.46",
+    "unit_of_measure": "ft",
+    "approval_status": "Provisional",
+    "qualifier": null
+   },
+   "id": "1a13caf0-7e7a-4f9c-b0dc-40d03bf24572",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.9628644787644,
+     32.8904522816671
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "monitoring_location_id": "USGS-021720698",
+    "parameter_code": "00060",
+    "time": "2026-10-03T20:15:00+00:00",
+    "value": "40400",
+    "unit_of_measure": "ft^3/s",
+    "approval_status": "Provisional",
+    "qualifier": null
+   },
+   "id": "1a20d586-2ebe-4061-950d-c8b478484dc1",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.8961963068426,
+     32.8590638088736
+    ]
+   }
+  },
+  {
+   "type": "Feature",
+   "properties": {
+    "monitoring_location_id": "USGS-021720698",
+    "parameter_code": "63160",
+    "time": "2026-10-03T20:15:00+00:00",
+    "value": "2.57",
+    "unit_of_measure": "ft",
+    "approval_status": "Provisional",
+    "qualifier": null
+   },
+   "id": "21c034ad-4f12-4c86-9aa9-9631026b70fc",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.8961963068426,
+     32.8590638088736
+    ]
+   }
+  }
+ ],
+ "numberReturned": 3,
+ "links": [
+  {
+   "rel": "next",
+   "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/latest-continuous/items?cursor=MjFjMDM0YWQtNGYxMi00Yzg2LTlhYTktOTYzMTAyNmI3MGZj&bbox=-80.0,32.75,-79.85,32.9&parameter_code=00065,63160,62614,62615,62619,62620,72279,72019,62610,62611,00060&time=P30D&limit=3&properties=monitoring_location_id,parameter_code,time,value,unit_of_measure,approval_status,qualifier&f=json",
+   "type": "application/geo+json",
+   "title": "Items (next)"
+  },
+  {
+   "type": "application/geo+json",
+   "rel": "self",
+   "title": "This document as GeoJSON",
+   "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/latest-continuous/items?f=json&bbox=-80.0,32.75,-79.85,32.9&parameter_code=00065,63160,62614,62615,62619,62620,72279,72019,62610,62611,00060&time=P30D&limit=3&properties=monitoring_location_id,parameter_code,time,value,unit_of_measure,approval_status,qualifier"
+  },
+  {
+   "rel": "alternate",
+   "type": "application/ld+json",
+   "title": "This document as RDF (JSON-LD)",
+   "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/latest-continuous/items?f=jsonld&bbox=-80.0,32.75,-79.85,32.9&parameter_code=00065,63160,62614,62615,62619,62620,72279,72019,62610,62611,00060&time=P30D&limit=3&properties=monitoring_location_id,parameter_code,time,value,unit_of_measure,approval_status,qualifier"
+  },
+  {
+   "type": "text/html",
+   "rel": "alternate",
+   "title": "This document as HTML",
+   "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/latest-continuous/items?f=html&bbox=-80.0,32.75,-79.85,32.9&parameter_code=00065,63160,62614,62615,62619,62620,72279,72019,62610,62611,00060&time=P30D&limit=3&properties=monitoring_location_id,parameter_code,time,value,unit_of_measure,approval_status,qualifier"
+  },
+  {
+   "type": "text/csv; charset=utf-8",
+   "rel": "alternate",
+   "title": "This document as CSV",
+   "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/latest-continuous/items?f=csv&bbox=-80.0,32.75,-79.85,32.9&parameter_code=00065,63160,62614,62615,62619,62620,72279,72019,62610,62611,00060&time=P30D&limit=3&properties=monitoring_location_id,parameter_code,time,value,unit_of_measure,approval_status,qualifier"
+  },
+  {
+   "type": "application/json",
+   "title": "Latest continuous",
+   "rel": "collection",
+   "href": "https://api.waterdata.usgs.gov/ogcapi/v1/collections/latest-continuous"
+  }
+ ],
+ "timeStamp": "2026-10-03T20:52:00.801778Z"
+}
