@@ -131,6 +131,24 @@ def test_result_without_packets_covers_the_whole_document(env):
     assert out()["complete"] is True
 
 
+def test_values_from_browse_images_carry_the_image_url_as_locator(tmp_path):
+    text = tmp_path / "text"
+    text.mkdir()
+    img = "https://ngmdb.usgs.gov/img2/100000_100999/100343_1"
+    (text / "ngmdb_5.json").write_text(json.dumps({"source_id": "ngmdb:5", "files": [
+        {"url": img, "via": "ngmdb_image", "pages": 1, "first_page": 1}],
+        "pages": [{"page": 1, "file": 0, "file_page": 1, "method": "ocr", "text": PAGES[1], "raw": PAGES[1]}]}))
+    out = tmp_path / "out"
+    r = tmp_path / "r.json"
+    res = result([], [WANDO])
+    del res["packets"]
+    r.write_text(json.dumps(res))
+    ingest.ingest([r], text_dir=text, packets_dir=tmp_path / "none", out_dir=out, review_dir=tmp_path / "rev",
+                  done_dir=tmp_path / "done", catalog={"ngmdb:5": RECORD}, lexicon=Lexicon([]))
+    name = json.loads((out / "ngmdb_5.json").read_text())["units"][0]["name"]
+    assert name["locator"] == img and name["page"] == 1 and name["text_method"] == "ocr"
+
+
 def test_missing_packet_index_needs_next_batch(env, tmp_path):
     run, _, kw = env
     (kw["packets_dir"] / "ngmdb_5" / "index.json").unlink()

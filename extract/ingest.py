@@ -154,8 +154,17 @@ def map_sheet_pages(doc: dict) -> set[int]:
     out: set[int] = set()
     for f in doc.get("files", []):
         name = (f.get("url") or "").rsplit("/", 1)[-1].lower()
-        if f.get("via") == "ngmdb_scan" or re.search(r"plate|sheet|map", name):
+        if f.get("via") in ("ngmdb_scan", "ngmdb_image") or re.search(r"plate|sheet|map", name):
             out |= set(range(f["first_page"], f["first_page"] + f["pages"]))
+    return out
+
+
+def image_locators(doc: dict) -> dict[int, str]:
+    """{page: image URL} for pages OCRed from NGMDB browse images; the URL is the value's locator."""
+    out = {}
+    for f in doc.get("files", []):
+        if f.get("via") == "ngmdb_image":
+            out.update({n: f["url"] for n in range(f["first_page"], f["first_page"] + f["pages"])})
     return out
 
 
@@ -324,6 +333,7 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
         if unknown:
             raise IngestError(f"{sid} has no {', '.join(unknown)} in {index_path} (packets: {sorted(packet_blocks)})")
     sheets = map_sheet_pages(doc)
+    locators = image_locators(doc)
 
     verdicts: dict[str, dict] = {}
     if verify_path:
@@ -369,7 +379,7 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
         sv = StoredValue(value=val["value"], source_id=sid, page=val["page"], extraction_method=ExtractionMethod.LLM,
                          confidence=confidence(rec, pg.get("method", "pdf_text"), match, verdict, val["inferred"], cfg,
                                                     section=path.split("[", 1)[0], map_sheet=val["page"] in sheets),
-                         inferred=bool(val["inferred"]))
+                         inferred=bool(val["inferred"]), locator=locators.get(val["page"]))
         entry = sv.to_dict() | {"quote": val["quote"], "quote_match": match, "text_method": pg.get("method"),
                                 "verification": verdict}
         for k in ("units", "table", "note"):

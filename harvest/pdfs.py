@@ -44,6 +44,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Callable
 
+from harvest import ngmdb_images, openaccess
 from harvest.sgmc import _contact_headers
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -52,8 +53,8 @@ PUBS_API = "https://pubs.usgs.gov/pubs-services/publication/"
 UNPAYWALL = "https://api.unpaywall.org/v2/"
 CONFIG: dict = json.loads((ROOT / "config" / "extract.json").read_text())
 DONE = {"text", "needs_access"}
-RESOLVER_VERSION = 2  # bump when resolve() finds new kinds of sources; unread records are resolved again
-VIA_ORDER = ["catalog_pdf", "pubs_usgs", "publisher_pdf", "unpaywall", "pubs_index", "ngmdb_scan", "scgs_ftp"]
+RESOLVER_VERSION = 5  # bump when resolve() finds new kinds of sources; unread records are resolved again
+VIA_ORDER = ["catalog_pdf", "pubs_usgs", "publisher_pdf", "unpaywall", "openalex", "crossref_oa", "pubs_index", "ngmdb_scan", "ngmdb_image", "scgs_ftp"]
 
 
 def safe_id(source_id: str) -> str:
@@ -174,6 +175,12 @@ class HttpFetcher:
         def go():
             with self._open(url, self.cfg["timeout_seconds"]) as r:
                 return r.read().decode("utf-8", "replace")
+        return self._retry(go, url)
+
+    def bytes(self, url: str) -> bytes:
+        def go():
+            with self._open(url, self.cfg["timeout_seconds"]) as r:
+                return r.read()
         return self._retry(go, url)
 
     def json(self, url: str):
@@ -301,7 +308,7 @@ def _doi(rec: dict) -> str | None:
 
 
 def resolve(rec: dict, fetcher, email: str | None = None, log: Callable[..., None] = lambda *a: None,
-            cfg: dict = CONFIG) -> dict:
+            cfg: dict = CONFIG, api_cache: Path | None = None) -> dict:
     """Candidate full-text URLs for one record and which sources were checked."""
     cands: list[dict] = []
     checked: list[str] = ["catalog"]
@@ -351,19 +358,35 @@ def resolve(rec: dict, fetcher, email: str | None = None, log: Callable[..., Non
                 for c in _index_page_pdfs(url, fetcher, log):
                     add(c)
 
+    api_cache = api_cache if api_cache is not None else openaccess.CACHE
     if doi and not doi.lower().startswith("10.3133/"):
-        if email:
-            checked.append("unpaywall")
-            try:
-                d = fetcher.json(f"{UNPAYWALL}{urllib.parse.quote(doi, safe='/()')}?email={urllib.parse.quote(email)}")
-                locs = [d.get("best_oa_location") or {}] + list(d.get("oa_locations") or [])
-                url = next((l.get("url_for_pdf") for l in locs if l and l.get("url_for_pdf")), None)
-                if d.get("is_oa") and url:
-                    add({"url": url, "via": "unpaywall"})
-            except (OSError, ValueError) as err:
-                log(f"  {rec['id']}: Unpaywall lookup failed: {type(err).__name__}")  # never the URL
-        else:
-            checked.append("unpaywall_skipped")
+        checked += ["unpaywall" if email else "unpaywall_skipped", "openalex"]
+        for c in openaccess.open_copies(doi, None, fetcher, email, api_cache, log):
+            add(c)
+
+    # Crossref: find (or confirm) a DOI for records still without open text, then
+    # look for legal open copies of it (or the USGS Publications Warehouse for 10.3133).
+    crossref = None
+    if not cands and cfg.get("crossref", {}).get("enabled", True) and rec.get("title"):
+        checked.append("crossref")
+        crossref = openaccess.lookup(rec, fetcher, email, api_cache)
+        found = crossref.get("doi") if crossref.get("status") == "match" else None
+        if found and doi:
+            crossref["confirms_catalog_doi"] = found.lower() == doi.lower()
+        if found and found.lower().startswith("10.3133/"):
+            pdfs, index_pages, n_plates = _pubs_pdfs(found.split("/", 1)[1], fetcher, log)
+            plates += n_plates
+            for c in pdfs:
+                add(c)
+            for url in ([] if pdfs else index_pages):
+                for c in _index_page_pdfs(url, fetcher, log):
+                    add(c)
+        elif found and (not doi or found.lower() != doi.lower()):
+            for v in ("unpaywall" if email else "unpaywall_skipped", "openalex"):
+                if v not in checked:
+                    checked.append(v)
+            for c in openaccess.open_copies(found, crossref, fetcher, email, api_cache, log):
+                add(c)
 
     # Scanned sheets only when nothing else was found, or for a map whose Warehouse
     # entry has a text Document (often just a cover) but no Plate.
@@ -372,11 +395,20 @@ def resolve(rec: dict, fetcher, email: str | None = None, log: Callable[..., Non
     if not cands or map_without_plates:
         for url in scans:
             add({"url": url, "via": "ngmdb_scan"})
+    images = cfg.get("ngmdb_images", {})
+    if not cands and images.get("enabled") and (rec.get("publisher") or "").strip() in images.get("publishers", []):
+        # Browse images (Zoomify tiles) of sheets with no PDF: OCRed into page text.
+        for url in ngmdb_images.browse_images(page, images.get("providers", [])):
+            add({"url": url, "via": "ngmdb_image"})
     if not cands:
         for url in rec.get("availability", {}).get("scgs_ftp", []):
             add({"url": url, "via": "scgs_ftp"})
     cands.sort(key=lambda c: VIA_ORDER.index(c["via"]))
-    return {"candidates": cands[: cfg["max_files_per_document"]], "checked": checked}
+    out = {"candidates": cands[: cfg["max_files_per_document"]], "checked": checked}
+    if crossref is not None:
+        out["crossref"] = {k: v for k, v in crossref.items() if k not in ("license", "link")} | (
+            {"license": [l["URL"] for l in crossref.get("license") or []]} if crossref.get("license") else {})
+    return out
 
 
 # --- processing ---------------------------------------------------------------
@@ -408,6 +440,14 @@ def download_files(rec: dict, cands: list[dict], fetcher, pdf_dir: Path, log) ->
     files, problems = [], []
     for i, c in enumerate(cands, 1):
         try:
+            if c["via"] == "ngmdb_image":
+                dest = pdf_dir / f"{i:02d}.pdf"
+                if not dest.exists():
+                    opts = CONFIG.get("ngmdb_images", {})
+                    ngmdb_images.build_pdf(c["url"], dest, fetcher, tier_offset=opts.get("tier_offset", 0),
+                                           workers=opts.get("tile_workers", 4))
+                files.append({"url": c["url"], "via": c["via"], "path": str(dest), "bytes": dest.stat().st_size})
+                continue
             if c["url"].lower().endswith(".zip"):
                 zpath = fetcher.download(c["url"], pdf_dir / f"{i:02d}.zip")
                 with zipfile.ZipFile(zpath) as zf:
@@ -473,7 +513,8 @@ def process(rec: dict, fetcher, ckpt_dir: Path, cache_dir: Path, email: str | No
     ck = _load(path) or {"id": rec["id"]}
     ck.update(tier=rec.get("_tier"), kind=rec.get("kind"))
     if _stale(ck, email):
-        r = resolve(rec, fetcher, email=email, log=log)
+        r = resolve(rec, fetcher, email=email, log=log, api_cache=Path(cache_dir) / "api")
+        ck.pop("crossref", None)
         ck.update(r, resolved_at=_now(), resolver_version=RESOLVER_VERSION)
         ck.pop("files", None)
         ck["status"] = "resolved" if r["candidates"] else "needs_access"
@@ -547,7 +588,8 @@ def write_needs_access(ordered: list[dict], cks: dict[str, dict], review_dir: Pa
         if ck.get("status") != "needs_access":
             continue
         out.append({**{k: rec.get(k) for k in _META}, "doi": (rec.get("availability") or {}).get("doi"),
-                    "tier": rec.get("_tier"), "checked": ck.get("checked", []), "reason": ck.get("reason")})
+                    "tier": rec.get("_tier"), "checked": ck.get("checked", []), "reason": ck.get("reason"),
+                    **({"crossref": ck["crossref"]} if ck.get("crossref") else {})})
     out += [old[k] for k in sorted(old)]
     review_dir.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps({

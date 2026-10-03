@@ -23,7 +23,10 @@ when you can (`sudo apt-get install -y tesseract-ocr ocrmypdf`): a document
 with a scanned file (an NGMDB map sheet, a plate without a text layer) is held
 back until it can be OCRed, because reading only its text part would mark it
 done with the map missing. `next_batch` reports such documents as
-`skip ... needs OCR`.
+`skip ... needs OCR`. SCGS quadrangle maps come as NGMDB browse images: each
+sheet is about 1,400-2,000 tile downloads (roughly 12 minutes) plus a few
+minutes of OCR, so `next_batch` can take a while on them. Values read from
+them carry the image URL as their locator.
 
 ## 1. Pick the packets
 
