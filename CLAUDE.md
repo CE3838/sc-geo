@@ -60,6 +60,16 @@ Guidance for Claude (and humans) working in this repository.
   SSURGO soil estimates (Soil Data Access, live) and key references
   (`merge/references.py` → `web/data/geology/references.json`). Faults and
   shear zones come from the SGMC structure layer (`harvest/sgmc.py`).
+- Document extraction (`extract/`, `harvest/pdfs.py`): Claude reads every
+  catalog source with legal open full text; code does the rest. No-LLM
+  plumbing downloads PDFs, pulls page text (OCR for scans), and builds packets
+  in `.cache/` (never committed). A Claude Code session follows
+  `extract/SESSION.md`: `python -m extract.next_batch`, read the packets with
+  `extract/prompts/extract.md`, write results per `extract/schema.json`, then
+  `python -m extract.ingest`, which checks every quote against the cited page
+  and stores values as StoredValue (`extraction_method` "llm"). Outputs:
+  `data/extracted/`, `data/review/queue.json` (unverified or conflicting
+  values), `data/review/needs_access.json` (no open full text).
 - Goal: merge all sources into one GeMS-aligned result. Where maps overlap,
   the most detailed and recent map wins; confidence comes from scale, the
   mapper's identity confidence, agreement among other maps and published
@@ -95,4 +105,7 @@ python -m harvest.catalog           # rebuild data/catalog (needs network; resum
 python -m harvest.geolex            # rebuild data/lexicon (needs network; resumable)
 python -m merge.build               # download, normalize and merge GIS sources into web/data/geology (needs shapely)
 python -m merge.package             # pack the public data package (sc-geo-data.zip)
+python -m harvest.pdfs --limit 5    # queue sources, download PDFs, page text (needs poppler; resumable)
+python -m extract.next_batch --n 5  # next documents for a reading session (see extract/SESSION.md)
+python -m extract.ingest RESULT.json  # verify quotes and store extracted values
 ```
