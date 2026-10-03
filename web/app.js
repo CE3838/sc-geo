@@ -6,6 +6,8 @@ import { setupGeology } from './geology-ui.js';
 import { setupMergedGeology } from './merged-ui.js';
 import { setupFaults } from './faults-ui.js';
 import { setupWater } from './water-ui.js';
+import { setupRoads } from './roads-ui.js';
+import { setupParcels } from './parcels-ui.js';
 import { createSidebar } from './sidebar.js';
 import { setupCard } from './card-ui.js';
 import { confidenceLevel } from './card.js';
@@ -36,6 +38,8 @@ const map = new maplibregl.Map({
   attributionControl: { compact: true },
   style: {
     version: 8,
+    // Noto Sans glyphs (SIL OFL) for road names and parcel IDs, served with the viewer.
+    glyphs: `${new URL('fonts/', window.location.href).href}{fontstack}/{range}.pbf`,
     sources: {
       overview: {
         type: 'raster',
@@ -146,7 +150,7 @@ sidebar.addLayer({
 map.addControl(new maplibregl.NavigationControl(), 'top-right');
 map.addControl(new maplibregl.ScaleControl({ unit: 'imperial' }), 'bottom-left');
 
-// --- geology and faults --------------------------------------------------------
+// --- geology, faults, roads and parcels ------------------------------------------
 
 // Merged geology if the build produced it; otherwise the SGMC layer.
 let geology = { unitAt: () => null, describe: () => null, card: () => null };
@@ -158,7 +162,10 @@ setupMergedGeology(map, sidebar)
     window.scGeo.geology = geology;
   });
 const faults = setupFaults(map, sidebar);
-// USGS water monitoring stations; a click on one opens its chart instead of the callout.
+const roads = setupRoads(map, sidebar);
+const parcels = setupParcels(map, sidebar);
+// USGS water monitoring stations (added after roads so they draw on top);
+// a click on one opens its chart instead of the callout.
 const water = setupWater(map, sidebar, { phone });
 
 // Catalog records with footprints (merge/references.py), loaded on first use.
@@ -240,12 +247,16 @@ map.on('click', (e) => {
   }
   const unit = geology.unitAt(e.point);
   const fault = faults.faultAt(e.point);
+  const parcel = parcels.parcelAt(e.point);
+  const road = roads.roadAt(e.point);
 
   const elevation = el('dd', { class: 'callout-elev' }, 'Loading…');
   const content = el('div', { class: 'click-popup callout' },
     el('div', { class: 'callout-title' }, 'Clicked point'),
     item ?? (unit && geologySummary(unit, lng, lat)),
     !item && fault && faults.describe(fault),
+    !item && parcel && parcels.describe(parcel),
+    !item && road && roads.describe(road),
     el('dl', { class: 'callout-coords' },
       el('dt', {}, 'Lat/lon'), el('dd', { class: 'coords' }, formatCoords(lng, lat)),
       el('dt', {}, 'State Plane'), el('dd', {}, formatStatePlane(lng, lat)),
