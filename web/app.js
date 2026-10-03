@@ -1,10 +1,9 @@
 import {
   DETAIL_MINZOOM, IMAGERY_BOUNDS, MAX_BOUNDS, NAIP_SOURCES, SC_BOUNDS,
-  cadEnabled, formatCoords, hiDpiUrl, shouldFallBack, streetViewUrl,
+  firstPopupItem, formatCoords, hiDpiUrl, shouldFallBack, streetViewUrl,
 } from './geo.js';
 import { setupGeology } from './geology-ui.js';
 import { setupMergedGeology } from './merged-ui.js';
-import { setupLayerPanel } from './layers.js';
 
 const BACKGROUND = '#1b1f23';
 // A touch more contrast; NAIP tends to look flat on screen.
@@ -77,7 +76,7 @@ function useImagery(index) {
     bounds: IMAGERY_BOUNDS.flat(),
     attribution: src.attribution,
   });
-  // Above the cached imagery; below geology, the mask, outline and CAD layers.
+  // Above the cached imagery; below geology, the mask, outline and add-on layers.
   const above = ['merged-bedrock-fill', 'geology-fill', 'mask'].find((id) => map.getLayer(id));
   map.addLayer({ id: 'naip', type: 'raster', source: 'naip', minzoom: DETAIL_MINZOOM, paint: RASTER_PAINT }, above);
   sourceIndex = index;
@@ -115,29 +114,11 @@ setupMergedGeology(map, panels)
     geology = setupGeology(map, panels);
     window.scGeo.geology = geology;
   });
-const cad = cadEnabled(window.location.search) ? setupLayerPanel(map) : null;
-// Handle for debugging and the viewer smoke test (scripts/viewer_smoke.mjs).
-window.scGeo = { map, cad, geology };
+// Handle for debugging, the viewer smoke test (scripts/viewer_smoke.mjs) and
+// add-ons. popupItems: functions (click event) => DOM node or null; the click
+// popup shows the first non-null item instead of the geology description.
+window.scGeo = { map, geology, popupItems: [] };
 const popup = new maplibregl.Popup({ closeOnClick: false, maxWidth: '280px' });
-
-const FEATURE_FIELDS = ['text', 'name', 'description', 'code', 'entity', 'type', 'level', 'block'];
-
-function featureInfo(feature) {
-  const box = document.createElement('div');
-  box.className = 'feature-info';
-  const title = document.createElement('div');
-  title.className = 'feature-layer';
-  title.textContent = feature.properties.layer ?? 'CAD feature';
-  box.append(title);
-  for (const key of FEATURE_FIELDS) {
-    const value = feature.properties[key];
-    if (value === undefined || value === '' || String(value) === title.textContent) continue;
-    const row = document.createElement('div');
-    row.textContent = `${key}: ${value}`;
-    box.append(row);
-  }
-  return box;
-}
 
 map.on('click', (e) => {
   const { lng, lat } = e.lngLat;
@@ -156,9 +137,9 @@ map.on('click', (e) => {
     window.open(streetViewUrl(lng, lat), '_blank', 'noopener');
   });
 
-  const [hit] = cad ? cad.featuresAt(e.point) : [];
-  const unit = hit ? null : geology.unitAt(e.point);
-  if (hit) content.append(featureInfo(hit));
+  const item = firstPopupItem(window.scGeo.popupItems, e);
+  const unit = item ? null : geology.unitAt(e.point);
+  if (item) content.append(item);
   else if (unit) content.append(geology.describe(unit));
   content.append(coords, button);
   popup.setLngLat(e.lngLat).setDOMContent(content).addTo(map);

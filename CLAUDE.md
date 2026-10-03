@@ -24,18 +24,26 @@ Guidance for Claude (and humans) working in this repository.
 
 - This is the public, open-source (Apache-2.0) core of a South Carolina
   geologic knowledge system.
-- Internal wells and borings live in the private repo `sc-geo-internal`. They
-  are loaded only in the user's browser and never pass through this repo, its
-  workflows, or GitHub Pages.
+- This repo and the GitHub Pages site present **public data only**. There is
+  no way to enter or load internal data here.
+- Internal features live only in the Windows desktop app in the private repo
+  `sc-geo-internal` (Tauri, internal use): internal wells and borings, and CAD
+  import. Their files are read on the user's PC and never pass through this
+  repo, its workflows, or GitHub Pages. The app reuses `web/` at build time and
+  adds its panels through `window.scGeo.popupItems` (see `web/app.js`).
+- Each deploy publishes the public data package (`python -m merge.package`:
+  merged geology, SGMC, catalog, lexicon, SC outline, with a SHA-256 manifest)
+  as a GitHub Release tagged `data-YYYYMMDD-HHMM`; the desktop app bundles the
+  newest one. Only `data-*` releases are published here.
 - The pilot area is **Charleston County** (see `config/pilot_area.json`).
 - The API contact email is stored in the Actions secret `CONTACT_EMAIL`. Read
   it from the environment when needed; **never print it in logs**.
-- There is **no OpenRoads license**. CAD imports come from consultants as
-  LandXML, DWG, DXF, DGN v7, KML, and KMZ. Native DGN v8 files cannot be read
-  and are listed by name only. DWG has no free browser reader, so DWG files
+- There is **no OpenRoads license**. CAD imports (desktop app only) come from
+  consultants as LandXML, DWG, DXF, DGN v7, KML, and KMZ. Native DGN v8 files
+  cannot be read and are listed by name only. DWG has no free browser reader, so DWG files
   are also listed by name only; ask consultants for DXF or LandXML instead.
-- Every imported CAD file keeps its layers. In the viewer's layer panel each
-  layer can be toggled on and off or deleted.
+- Every imported CAD file keeps its layers. In the desktop app's layer panel
+  each layer can be toggled on and off or deleted.
 - Geology base layer: USGS State Geologic Map Compilation (SGMC), SC units
   from two 1:500,000 source maps (Piedmont/Blue Ridge and Coastal Plain).
   `harvest/sgmc.py` downloads it during deploy into `web/data/geology/`
@@ -50,12 +58,9 @@ Guidance for Claude (and humans) working in this repository.
   the most detailed and recent map wins; confidence comes from scale, the
   mapper's identity confidence, agreement among other maps and published
   research. Disagreeing sources are kept as alternatives with citations.
-- The CAD layer panel is hidden for now; add `?cad` to the viewer URL to
-  show it.
-- CAD files are parsed in the browser (`web/cad/`) and never uploaded. DXF,
-  DGN v7 and LandXML coordinates are assumed to be SC State Plane (NAD83);
-  units come from the file when it says, otherwise international feet. The
-  panel's coordinate selector overrides this.
+- In the desktop app, DXF, DGN v7 and LandXML coordinates are assumed to be
+  SC State Plane (NAD83); units come from the file when it says, otherwise
+  international feet. The panel's coordinate selector overrides this.
 
 ## Layout
 
@@ -66,10 +71,9 @@ Guidance for Claude (and humans) working in this repository.
 | `extract/` | Parsers and prompts that pull values out of sources |
 | `model/` | Data model: provenance (`StoredValue`), ages and unit names (`units.py`), shapefile/projection reader (`gisio.py`) |
 | `data/` | Small public derived data only: `catalog/`, `lexicon/` (no PDFs, no internal data) |
-| `merge/` | Merge all GIS sources into one surficial and one bedrock layer with confidence (`python -m merge.build`) |
+| `merge/` | Merge all GIS sources into one surficial and one bedrock layer with confidence (`python -m merge.build`); pack the public data package (`python -m merge.package`) |
 | `review/` | Tools for human review of extracted and inferred values |
 | `web/` | Static MapLibre GL JS viewer, deployed to GitHub Pages |
-| `web/cad/` | In-browser CAD readers (LandXML, DXF, DGN v7, KML, KMZ) and layer state |
 | `scripts/` | Checks that need network access (`check_imagery.mjs`, `viewer_smoke.mjs`) |
 | `tests/` | Python tests (`pytest`), web tests (`tests/web`, `node --test`), fixtures |
 
@@ -84,4 +88,5 @@ python -m harvest.sgmc              # download SC geology into web/data/geology 
 python -m harvest.catalog           # rebuild data/catalog (needs network; resumable)
 python -m harvest.geolex            # rebuild data/lexicon (needs network; resumable)
 python -m merge.build               # download, normalize and merge GIS sources into web/data/geology (needs shapely)
+python -m merge.package             # pack the public data package (sc-geo-data.zip)
 ```
