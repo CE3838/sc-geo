@@ -57,6 +57,30 @@ try {
   check(region.outline > 0, 'South Carolina outline renders');
   check(['Georgia', 'North Carolina'].every((n) => region.mask.includes(n)), `neighbors masked (${[...new Set(region.mask)]})`);
   await snapshot(page, 'state');
+
+  // Geology layer (USGS SGMC), harvested before this script runs.
+  await page.waitForFunction(() => window.scGeo.map.getLayer('geology-fill'), null, { timeout: 30000 });
+  await settle();
+  const geo = await page.evaluate(() => {
+    const { map } = window.scGeo;
+    const units = map.queryRenderedFeatures({ layers: ['geology-fill'] });
+    const at = (lng, lat) => map.queryRenderedFeatures(map.project([lng, lat]), { layers: ['geology-fill'] })[0]?.properties;
+    return {
+      rendered: units.length,
+      legend: [...document.querySelectorAll('.geo-legend li')].map((li) => li.textContent),
+      columbia: at(-81.03, 34.0)?.name,
+      greenville: at(-82.4, 34.85)?.name,
+      charleston: at(-80.0, 32.85)?.name,
+    };
+  });
+  console.log(JSON.stringify(geo));
+  check(geo.rendered > 50, `geology units render (${geo.rendered})`);
+  check(geo.legend.length >= 5, `legend lists classes (${geo.legend.join(', ')})`);
+  check(Boolean(geo.columbia && geo.greenville && geo.charleston), 'units found at Columbia, Greenville and near Charleston');
+  await page.locator('#geo-mode').selectOption('lith');
+  await settle();
+  await snapshot(page, 'geology-rock-type');
+  await page.locator('#geo-mode').selectOption('age');
   await page.evaluate(() => window.scGeo.map.jumpTo({ center: [-79.93, 32.78], zoom: 16 }));
   await settle();
   const naip = await page.evaluate(() => window.scGeo.map.isSourceLoaded('naip'));
