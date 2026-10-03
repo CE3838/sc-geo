@@ -46,6 +46,7 @@ Guidance for Claude (and humans) working in this repository.
 | `data/` | Small public derived data only (no PDFs, no internal data) |
 | `review/` | Tools for human review of extracted and inferred values |
 | `web/` | Static MapLibre GL JS viewer, deployed to GitHub Pages |
+| `scripts/` | Maintenance scripts (e.g. `check_imagery.mjs`) |
 | `tests/` | Python tests (`pytest`) and web tests (`tests/web`, `node --test`) |
 
 ## Commands
@@ -54,4 +55,5 @@ Guidance for Claude (and humans) working in this repository.
 python -m pytest            # Python tests
 node --test "tests/web/*.test.mjs"  # web tests
 python -m http.server -d web 8000   # serve the viewer locally
+node scripts/check_imagery.mjs      # confirm NAIP imagery servers respond
 ```
