@@ -85,3 +85,13 @@ def test_split_tables_keeps_polygons_lean_and_tables_complete():
     assert u["unit_name"] == "Wando Formation, barrier-island sand facies" and u["description"] == "Sand."
     assert u["age_ma"] == [0.0117, 0.129] and u["canonical"] == "Wando"
     assert srcs["ngmdb:1"] == {"title": "Map A", "citation": "A, 2002", "scale": 24000, "year": 2002}
+
+
+def test_run_writes_the_reference_list(tmp_path, monkeypatch):
+    monkeypatch.setattr(build, "OUT", tmp_path)
+    monkeypatch.setattr(build, "normalize_all", lambda catalog, log=print: ([], []))
+    monkeypatch.setattr(build, "sgmc_features", lambda: [])
+    build.run(normalize_only=True, log=lambda *_: None)
+    data = json.loads((tmp_path / "references.json").read_text())
+    assert data["provenance"]["source_id"] == "sc-catalog"
+    assert any(r["id"] == "ngmdb:10009" and r["scale"] == 24000 for r in data["records"])
