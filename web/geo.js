@@ -73,3 +73,8 @@ export function fillTile(template, tile) {
 export function shouldFallBack({ errors, loaded }, threshold = 3) {
   return loaded === 0 && errors >= threshold;
 }
+
+// The CAD layer panel is hidden for now; add ?cad to the URL to show it.
+export function cadEnabled(search) {
+  return new URLSearchParams(search).has('cad');
+}

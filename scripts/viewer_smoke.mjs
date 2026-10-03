@@ -32,7 +32,7 @@ try {
   const page = await browser.newPage({ viewport: { width: 1200, height: 800 } });
   const errors = [];
   page.on('pageerror', (e) => errors.push(e.message));
-  await page.goto(`http://localhost:${PORT}/`);
+  await page.goto(`http://localhost:${PORT}/?cad`);
   await page.waitForFunction(() => window.scGeo?.map.loaded(), null, { timeout: 30000 });
 
   await page.setInputFiles('#cad-file-input', [
