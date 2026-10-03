@@ -35,6 +35,8 @@ Guidance for Claude (and humans) working in this repository.
   are also listed by name only; ask consultants for DXF or LandXML instead.
 - Every imported CAD file keeps its layers. In the viewer's layer panel each
   layer can be toggled on and off or deleted.
+- The CAD layer panel is hidden for now; add `?cad` to the viewer URL to
+  show it.
 - CAD files are parsed in the browser (`web/cad/`) and never uploaded. DXF,
   DGN v7 and LandXML coordinates are assumed to be SC State Plane (NAD83);
   units come from the file when it says, otherwise international feet. The
