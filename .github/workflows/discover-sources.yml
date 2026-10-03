@@ -1,0 +1,27 @@
+name: Source inventory
+
+# Lists what the public SC geology sources hold (files, layers, fields,
+# record counts). Runs when the inventory script changes, or on demand.
+on:
+  push:
+    paths: ["scripts/discover_sources.py", ".github/workflows/discover-sources.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python scripts/discover_sources.py > inventory.json
+      - run: cat inventory.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: source-inventory
+          path: inventory.json
