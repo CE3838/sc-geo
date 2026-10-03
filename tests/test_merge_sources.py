@@ -97,3 +97,11 @@ def test_shapefile_field_names_cut_to_ten_characters():
     p = sources.unit_feature(poly, {"MapUnit": "Qws", "IdentityCo": "questionable", "MapUnitPol": "MUP9"},
                              sources.gems_units(DMU), SOURCE)["properties"]
     assert p["identity_confidence"] == "questionable" and p["locator"] == "MapUnitPolys_ID=MUP9"
+
+
+def test_all_sgmc_polygons_are_one_source():
+    poly = {"type": "Polygon", "coordinates": [[[0, 0], [0, 1], [1, 1], [0, 0]]]}
+    a = sources.sgmc_feature(poly, {"name": "Wando Formation", "source_id": "usgs-sgmc:SC002, SC003"})["properties"]
+    b = sources.sgmc_feature(poly, {"name": "water", "source_id": "usgs-sgmc:unknown"})["properties"]
+    assert a["source"] == b["source"] == "usgs-sgmc"
+    assert a["source_id"] == "usgs-sgmc:SC002, SC003"

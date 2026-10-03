@@ -35,7 +35,7 @@ from model.units import Lexicon
 ROOT = Path(__file__).resolve().parent.parent
 CACHE = ROOT / ".cache"
 OUT = ROOT / "web" / "data" / "geology"
-NORMALIZE_VERSION = 3
+NORMALIZE_VERSION = 4
 
 EXTRA_SOURCES = [
     {
