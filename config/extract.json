@@ -13,8 +13,8 @@
     "enabled": true
   },
   "ngmdb_images": {
-    "_comment": "NGMDB browse images (Zoomify tiles) for sheets with no PDF, used only when nothing else was found, OCRed into page text. tier_offset 0 = full resolution (about 1,400-2,000 tiles per sheet); 1 = half (about a quarter of the requests). NGMDB's robots.txt disallows /img2/ for crawlers; see extract/README.md.",
-    "enabled": true,
+    "_comment": "NGMDB browse images (Zoomify tiles) for sheets with no PDF, used only when nothing else was found, OCRed into page text. tier_offset 0 = full resolution (about 1,400-2,000 tiles per sheet); 1 = half (about a quarter of the requests). NGMDB's robots.txt disallows /img1/, /img2/ and /img4/ for crawlers, so this is off until the owner decides (or NGMDB/SCGS grant bulk access); see extract/README.md.",
+    "enabled": false,
     "providers": ["South Carolina Geological Survey", "South Carolina Division of Geology", "U.S. Geological Survey"],
     "publishers": ["South Carolina Geological Survey", "South Carolina Division of Geology", "STATEMAP",
                    "South Carolina Department of Natural Resources", "U.S. Geological Survey", "USGS"],
