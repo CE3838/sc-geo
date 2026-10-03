@@ -573,7 +573,7 @@ _META = ("id", "title", "authors", "year", "publisher", "series", "series_key", 
          "ngmdb_url")
 
 
-def write_needs_access(ordered: list[dict], cks: dict[str, dict], review_dir: Path) -> int:
+def write_needs_access(ordered: list[dict], cks: dict[str, dict], review_dir: Path, drop: set[str] = frozenset()) -> int:
     review_dir = Path(review_dir)
     path = review_dir / "needs_access.json"
     old = {r["id"]: r for r in (_load(path) or {}).get("records", [])}
@@ -590,7 +590,7 @@ def write_needs_access(ordered: list[dict], cks: dict[str, dict], review_dir: Pa
         out.append({**{k: rec.get(k) for k in _META}, "doi": (rec.get("availability") or {}).get("doi"),
                     "tier": rec.get("_tier"), "checked": ck.get("checked", []), "reason": ck.get("reason"),
                     **({"crossref": ck["crossref"]} if ck.get("crossref") else {})})
-    out += [old[k] for k in sorted(old)]
+    out += [old[k] for k in sorted(old) if k not in drop]  # drop: records now merged as GIS
     review_dir.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps({
         "about": "Catalog records with no legal open full text found. Metadata only; for library access. "
@@ -676,7 +676,7 @@ def run(catalog_path: Path = ROOT / "data" / "catalog" / "sc_catalog.json",
             list(pool.map(one, work))
 
     cks = {r["id"]: ck for r in ordered if (ck := _load(checkpoint_dir / f"{safe_id(r['id'])}.json"))}
-    n_need = write_needs_access(ordered, cks, review_dir)
+    n_need = write_needs_access(ordered, cks, review_dir, drop=merged_ids(catalog))
     status = status_counts(ordered, cks) | {"processed_this_run": done, "needs_access_listed": n_need,
                                             "minutes": round((time.monotonic() - start) / 60, 1), "at": _now()}
     _save(checkpoint_dir / "status.json", status)

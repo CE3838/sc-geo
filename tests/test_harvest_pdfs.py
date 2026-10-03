@@ -294,6 +294,18 @@ def test_needs_access_keeps_entries_from_earlier_runs(tmp_path):
     assert ids == ["ngmdb:20", "ngmdb:99"]
 
 
+def test_needs_access_drops_records_that_are_now_merged(tmp_path):
+    merged = rec("ngmdb:21", CHS["bbox"], publisher="Some Society", gems_download="https://x/gems.zip")
+    paths = _setup(tmp_path, [rec("ngmdb:20", CHS["bbox"], publisher="Some Society"), merged])
+    review = paths["review_dir"]
+    review.mkdir(parents=True)
+    (review / "needs_access.json").write_text(json.dumps({"records": [{"id": "ngmdb:21", "title": "now merged"}]}))
+    f = FakeFetcher({"https://ngmdb.usgs.gov/Prodesc/": "<html></html>"})
+    pdfs.run(fetcher=f, ocr=None, log=lambda *a: None, resolve_only=True, **paths)
+    ids = [r["id"] for r in json.loads((review / "needs_access.json").read_text())["records"]]
+    assert ids == ["ngmdb:20"]
+
+
 @pytest.mark.skipif(not shutil.which("pdftotext"), reason="poppler-utils not installed")
 def test_drop_pdfs_after_text_keeps_cache_small(tmp_path, pdf_bytes):
     chs = rec("ngmdb:1", CHS["bbox"], pdf=["https://pubs.usgs.gov/a.pdf"])
