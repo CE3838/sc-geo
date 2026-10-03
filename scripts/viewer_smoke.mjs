@@ -19,6 +19,15 @@ const dxf = ['0', 'SECTION', '2', 'TABLES', '0', 'TABLE', '2', 'LAYER',
 const kml = `<kml><Document><name>Test KML</name><Placemark><name>Pin</name>
   <Point><coordinates>-79.93,32.78</coordinates></Point></Placemark></Document></kml>`;
 
+// With SMOKE_LOG_SCREENSHOTS=1, print small JPEG screenshots to the log as
+// base64 so they can be inspected without downloading artifacts.
+async function snapshot(page, name) {
+  await page.screenshot({ path: `viewer-${name}.png` });
+  if (process.env.SMOKE_LOG_SCREENSHOTS !== '1') return;
+  const jpeg = await page.screenshot({ type: 'jpeg', quality: 60, scale: 'css', clip: { x: 0, y: 0, width: 1200, height: 800 } });
+  console.log(`SCREENSHOT ${name} ${jpeg.toString('base64')}`);
+}
+
 const server = spawn('python3', ['-m', 'http.server', '-d', 'web', String(PORT)], { stdio: 'ignore' });
 let failed = false;
 const check = (ok, msg) => {
@@ -34,6 +43,25 @@ try {
   page.on('pageerror', (e) => errors.push(e.message));
   await page.goto(`http://localhost:${PORT}/?cad`);
   await page.waitForFunction(() => window.scGeo?.map.loaded(), null, { timeout: 30000 });
+
+  // Imagery and the South Carolina focus.
+  const settle = () => page.waitForFunction(() => window.scGeo.map.areTilesLoaded(), null, { timeout: 60000 });
+  await settle();
+  const region = await page.evaluate(() => {
+    const { map } = window.scGeo;
+    return {
+      outline: map.queryRenderedFeatures({ layers: ['sc-outline'] }).length,
+      mask: map.queryRenderedFeatures({ layers: ['mask'] }).map((f) => f.properties.name),
+    };
+  });
+  check(region.outline > 0, 'South Carolina outline renders');
+  check(['Georgia', 'North Carolina'].every((n) => region.mask.includes(n)), `neighbors masked (${[...new Set(region.mask)]})`);
+  await snapshot(page, 'state');
+  await page.evaluate(() => window.scGeo.map.jumpTo({ center: [-79.93, 32.78], zoom: 16 }));
+  await settle();
+  const naip = await page.evaluate(() => window.scGeo.map.isSourceLoaded('naip'));
+  check(naip, 'live NAIP loads at street scale over Charleston');
+  await snapshot(page, 'charleston-z16');
 
   await page.setInputFiles('#cad-file-input', [
     { name: 'plan.dxf', mimeType: 'application/dxf', buffer: Buffer.from(dxf) },
@@ -70,7 +98,7 @@ try {
   check(!('plan.dxf:ROW' in r), 'deleted layer is gone');
   check(r['pins.kml:Test KML'] > 0, 'other layers unaffected');
   check(errors.length === 0, `no page errors ${JSON.stringify(errors)}`);
-  await page.screenshot({ path: 'viewer-smoke.png' });
+  await snapshot(page, 'cad');
   await browser.close();
 } catch (err) {
   console.log(`FAIL ${err.message}`);
