@@ -43,6 +43,100 @@ Where things live:
 - `data/review/needs_access.json`: records with no open full text, metadata
   only, for library access (committed).
 
+## Where full text comes from
+
+`harvest/pdfs.py` tries, in order: PDF links in the catalog; the USGS
+Publications Warehouse; Unpaywall (`CONTACT_EMAIL`), OpenAlex and
+open-licensed Crossref links for catalog DOIs; then, for records still
+without text, a Crossref DOI lookup (`harvest/openaccess.py`), followed by
+the same open-access sources for the DOI it finds (or the Publications
+Warehouse for a USGS DOI); NGMDB PDF scans; NGMDB browse images
+(`harvest/ngmdb_images.py`); SCDNR FTP zips. Records still without open text
+go to `data/review/needs_access.json`, with the Crossref DOI and match score
+when there is one, for library access.
+
+**Crossref matching.** A Crossref hit counts only with title token-set ratio
+>= 0.9 (and the shorter title covering at least 75% of the longer one's
+words), year within 1, and the same first-author surname. Crossref records
+with no authors (common for USGS series) need a title ratio >= 0.97 and the
+same year (`author_check: "no authors in Crossref"`). Two different DOIs that
+both pass are recorded as `ambiguous` and neither is used. Every lookup keeps
+the score. Responses are cached in `.cache/api`, keyed by record or DOI and
+never by URL, so the contact email never reaches the disk. Requests are
+limited to 8 per second per service.
+
+### NGMDB browse images: terms and limits (checked 2026-10-03)
+
+Most SCGS 1:24,000 maps have no PDF on NGMDB but are shown as zoomable images
+(Zoomify tiles under `/img2/`). `harvest/ngmdb_images.py` downloads one
+image's full-resolution tiles (1,400-2,000 tiles, about 15 MB, roughly 12
+minutes at the configured pace) and assembles them, undecoded, into a
+one-page PDF that is OCRed like any scan. One image is one page; the image
+URL is the locator of every value read from it. Images and OCR text stay in
+`.cache`.
+
+What the sources say:
+
+- NGMDB has no terms-of-use page. Its `robots.txt` **disallows `/img1/`,
+  `/img2/`, `/img4/` and `/ngm-bin/` for all crawlers**. Only Twitterbot is
+  allowed `/img*`. `/ngm-bin/` also covers the PDF scan downloads
+  (`download.pl`) and the search API that `harvest/catalog.py` uses.
+- USGS's "Copyrights and Credits" page: USGS-authored material is public
+  domain, but some non-USGS images and graphics are used with permission and
+  are generally marked as copyrighted.
+- The SCGS sheets are SCGS publications (the product pages name the South
+  Carolina Geological Survey as provider, and SCGS sells printed copies). The
+  sheets seen so far carry no copyright notice. Rockville, for example, is
+  "produced in cooperation with the U.S. Geological Survey National
+  Cooperative Geologic Mapping Program".
+
+How the use is limited: images are a fallback only, used when a record has no
+other full text. The image's provider must be SCGS or USGS, and the record's
+publisher a South Carolina state agency or USGS (`config/extract.json`
+`ngmdb_images.providers` and `.publishers`); a USGS-supplied scan of an AAPG
+or journal map is not used. Downloads run with 2 tile workers and the
+harvester's pause between requests. Only facts with short quotes are stored;
+images and OCR text are never committed. `ngmdb_images.enabled` turns the
+source off, and `tier_offset: 1` cuts the requests to about a quarter, at
+half resolution. robots.txt is a crawler policy, not a license, but it is a
+clear signal: asking NGMDB (ngmdb@usgs.gov) or SCGS for bulk access to the
+SCGS map images would settle it. Decision (2026-10-03): the repository owner
+chose to use the images anyway, throttled: `enabled: true`, `tier_offset: 1`
+(half resolution), `tile_workers: 2`, with the harvester's pause between
+requests.
+
+### OCR text is not published from CI
+
+The weekly workflow OCRs scans in CI, but the OCR text stays in its Actions
+cache, which scheduled Claude Code sessions cannot reach. Publishing it would
+put full-text extracts on the internet under this repository: a workflow
+artifact of a public repository can be downloaded by anyone signed in to
+GitHub, and a release or branch is worse. That conflicts with CLAUDE.md
+rule 3. For the SCGS sheets it would also republish state-published maps as
+text. So sessions OCR for themselves: `SESSION.md` installs `tesseract-ocr`
+and `ocrmypdf` first, and `next_batch` downloads and OCRs on the fly. If the
+repository were private, a short-lived artifact would be acceptable; that is
+the owner's call.
+
+## Long documents: packet by packet
+
+Every document is read in full (only blank, contents, index and needs-OCR pages
+are left out). A long document is split into packets of about 40k tokens and
+may be read over several sessions:
+
+- Each packet lists stable block ids: `"12"` for a whole page, `"13.2/3"` for
+  part 2 of 3 of page 13. Block ids do not depend on packet numbering, so a
+  fresh session that rebuilds the packets still lines up with earlier work.
+- `next_batch` hands out packets within `--max-tokens`, documents already
+  started first, and only their unread packets.
+- A result names the packet(s) it covers. `ingest` merges it into
+  `data/extracted/<id>.json`: earlier values are kept, except values on the
+  pages being re-read (so re-ingesting a packet replaces it); values with the
+  same field, page and quote as one already stored are dropped. It records
+  `blocks_done` and sets `"complete": true` when every block is in; only then
+  is the document marked done. A result without `packets` covers the whole
+  document. Files written before this (no `complete` key) count as complete.
+
 ## Quote verification
 
 Every value must quote the page it cites. `ingest.find_quote` normalizes both

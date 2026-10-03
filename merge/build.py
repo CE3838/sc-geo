@@ -1,7 +1,12 @@
 """Build the merged geologic map of South Carolina.
 
-1. Pick GIS sources: every catalog record with a GeMS download, the USGS
-   Charleston-region surficial database, and SGMC (from harvest/sgmc.py).
+1. Pick GIS sources (source_list): every catalog record with a GeMS
+   download; else its SCGS FTP polygon shapefiles (merge/scgs.py); else its
+   GIS download; plus EXTRA_SOURCES (USGS Charleston-region and Greenville
+   1x2 degree GeMS databases, SCGS quadrangles the catalog did not link) and
+   SGMC (from harvest/sgmc.py). Maps that cannot be read here (file
+   geodatabase only, no public GIS, or coarser than 1:1,000,000) are listed
+   as skipped with the reason, without downloading them.
 2. Download each once into .cache/sources (resumable; never committed).
 3. Normalize each to the merge schema (merge/sources.py), cached in
    .cache/normalized.
@@ -23,7 +28,10 @@ import argparse
 import json
 import re
 import shutil
+import struct
 import time
+import urllib.error
+import urllib.parse
 import urllib.request
 import zipfile
 from datetime import datetime, timezone
@@ -31,7 +39,7 @@ from pathlib import Path
 from typing import Callable
 
 from harvest.sgmc import _contact_headers
-from merge import classes, references, sources
+from merge import classes, references, scgs, sources
 from model import gisio
 from model.units import Lexicon
 
@@ -40,12 +48,38 @@ CACHE = ROOT / ".cache"
 OUT = ROOT / "web" / "data" / "geology"
 NORMALIZE_VERSION = 4
 
+SCGS_FTP = "ftp://ftpdata.dnr.sc.gov/gisdata/glc/"
+# Every SCGS FTP quadrangle package is 1:24,000 (SCGS digital-data table); drafts have no catalog scale.
+SCGS_SCALE = 24000
+# Coarser maps add nothing: SGMC (1:500,000) covers all of South Carolina, so they would never
+# win anywhere and would only dilute agreement.
+MAX_SCALE = 1_000_000
+
 EXTRA_SOURCES = [
     {
         "id": "ngmdb:100396",
         "download": "https://www.sciencebase.gov/catalog/file/get/620d314ed34e6c7e83ba9a2d?f=__disk__dc%2F51%2Fec%2Fdc51ecc70aa588113f6906d77a7c950b47b0282c",
         "note": "USGS data release https://doi.org/10.5066/P9HB0RFE (open-access shapefiles)",
     },
+    {
+        "id": "ngmdb:13044",  # USGS I-2175, Greenville 1x2 degree quadrangle
+        "download": "https://www.sciencebase.gov/catalog/file/get/63fe0860d34e70052b9b6ec7?f=__disk__ac%2Fee%2F3e%2Facee3ef6099b3cdc522c6e1c66add848d329ec87",
+        "note": "USGS GeMS database https://www.sciencebase.gov/catalog/item/63fe0860d34e70052b9b6ec7 "
+                "(Greenville-MIS-2175-OpenAccess.zip: shapefiles and CSV tables)",
+    },
+    # SCGS quadrangles on the FTP site that the catalog did not link (file codes 'dale0', 'savan').
+    {"id": "ngmdb:77460", "kind": "shapefile", "downloads": [SCGS_FTP + "dale06glc_poly.zip"],
+     "note": "SCDNR FTP package (ACE Basin project, 2006)"},
+    {"id": "ngmdb:77446", "kind": "shapefile", "downloads": [SCGS_FTP + "savan07glc_poly.zip"],
+     "note": "SCDNR FTP package (Bluffton area project, 2007)"},
+    # GIS exists but cannot be read here, or is not public.
+    {"id": "ngmdb:108478", "download": "https://pubs.usgs.gov/sim/3424/metadata/sim3424.gdb.zip",
+     "skip": "file geodatabase only (sim3424.gdb.zip, no shapefile or GeMS open-access export); "
+             "reading it needs GDAL"},
+    {"id": "ngmdb:115932",
+     "skip": "no public GIS download: SCGS Map Compilation 01 (1:100,000), GIS available from SCGS on request"},
+    {"id": "ngmdb:115933",
+     "skip": "no public GIS download: SCGS Map Compilation 02 (1:100,000), GIS available from SCGS on request"},
 ]
 
 
@@ -61,30 +95,54 @@ def download(url: str, dest: Path, log: Callable[..., None] = print, tries: int 
     for attempt in range(tries):
         try:
             req = urllib.request.Request(url, headers=_contact_headers())
-            with urllib.request.urlopen(req, timeout=600) as r, open(tmp, "wb") as f:
+            with urllib.request.urlopen(req, timeout=120) as r, open(tmp, "wb") as f:
                 shutil.copyfileobj(r, f)
             if not zipfile.is_zipfile(tmp):
                 raise OSError("download is not a zip file")
             tmp.replace(dest)
             log(f"  downloaded {dest.name} ({dest.stat().st_size // 1_000_000} MB)")
             return dest
-        except OSError:
-            if attempt == tries - 1:
+        except OSError as err:
+            # A host that will not connect twice in a row is down: do not wait out every try.
+            if attempt == tries - 1 or (attempt >= 1 and _host_down(err)):
                 raise
             time.sleep(2 ** (attempt + 1))
     raise AssertionError("unreachable")
 
 
+def _shapefile_source(rec: dict, urls: list[str]) -> dict:
+    src = {**rec, "kind": "shapefile", "downloads": urls, "download": urls[0] if len(urls) == 1 else urls}
+    if not src.get("scale") and any(u.startswith(SCGS_FTP) for u in urls):
+        src.update(scale=SCGS_SCALE, scale_inferred=True)
+    return src
+
+
 def source_list(catalog: list[dict]) -> list[dict]:
+    """GIS maps to merge: GeMS packages, SCGS FTP shapefiles, other GIS downloads, and EXTRA_SOURCES.
+
+    Sources that cannot be used carry `skip` (the reason) and are reported, not downloaded."""
     by_id = {r["id"]: r for r in catalog}
     out = []
     for r in catalog:
-        if r["availability"].get("gems_download"):
-            out.append({**r, "download": r["availability"]["gems_download"]})
+        avail = r.get("availability", {})
+        polys = [u for u in avail.get("scgs_ftp") or [] if re.search(r"_poly\.zip$", u, re.I)]
+        if avail.get("gems_download"):
+            out.append({**r, "kind": "gems", "download": avail["gems_download"]})
+        elif polys:
+            out.append(_shapefile_source(r, polys))
+        elif avail.get("gis_download"):
+            out.append(_shapefile_source(r, [avail["gis_download"]]))
     for extra in EXTRA_SOURCES:
         rec = by_id.get(extra["id"], {"id": extra["id"]})
         if not any(s["id"] == extra["id"] for s in out):
-            out.append({**rec, **extra})
+            src = {**rec, "kind": "gems", **extra}
+            if src["kind"] == "shapefile":
+                src = _shapefile_source(src, extra["downloads"])
+            out.append(src)
+    for s in out:
+        if not s.get("skip") and (s.get("scale") or 0) > MAX_SCALE:
+            s["skip"] = (f"map scale 1:{s['scale']:,} is coarser than 1:{MAX_SCALE:,}; SGMC (1:500,000) covers all "
+                         f"of South Carolina, so this map would never win and would only dilute agreement")
     return out
 
 
@@ -111,30 +169,92 @@ def normalize_zip(zf: zipfile.ZipFile, rec: dict) -> list[dict]:
     return out
 
 
+def _host_down(err: Exception) -> bool:
+    """A connection failure (the host is unreachable), not an error about one file."""
+    if isinstance(err, urllib.error.HTTPError):
+        return False
+    if isinstance(err, urllib.error.URLError):
+        return isinstance(err.reason, OSError)
+    return isinstance(err, (TimeoutError, ConnectionError))
+
+
+def _skip_dead_hosts(fetch: Callable[[str, Path], Path]) -> Callable[[str, Path], Path]:
+    """After a host fails to connect, fail its other downloads at once, to stay in the time budget
+    (e.g. the SCDNR FTP host serves about 35 packages)."""
+    dead: set[str] = set()
+
+    def guarded(url: str, dest: Path) -> Path:
+        host = urllib.parse.urlparse(url).hostname
+        if host in dead:
+            raise OSError(f"{host} unreachable earlier in this run")
+        try:
+            return fetch(url, dest)
+        except OSError as err:
+            if _host_down(err):
+                dead.add(host)
+            raise
+
+    return guarded
+
+
+def normalize_shapefiles(rec: dict, cache: Path, fetch: Callable[[str, Path], Path],
+                         lex: Lexicon | None = None) -> tuple[list[dict], dict]:
+    """A plain-shapefile source (SCGS FTP packages): every polygon zip, then an extent check."""
+    feats, files = [], []
+    for url in rec["downloads"]:
+        name = _safe(url.rsplit("/", 1)[-1].split("?")[0])
+        path = fetch(url, cache / "sources" / f"{_safe(rec['id'])}__{name}")
+        with zipfile.ZipFile(path) as zf:
+            part, info = scgs.normalize_zip(zf, rec, lex)
+        feats += part
+        files.append({"url": url, **info})
+    if not feats:
+        raise ValueError("no map unit polygons")
+    ext = scgs.extent(feats)
+    if scgs.extent_check(ext, rec.get("bbox")) == "outside catalog bbox":
+        raise ValueError(f"extent {ext} is outside catalog bbox {rec.get('bbox')}: wrong projection?")
+    meta = {"format": "shapefile", "files": files}
+    if rec.get("scale_inferred"):
+        meta["notes"] = [f"scale 1:{rec['scale']:,} from the SCGS digital-data table (not in the catalog)"]
+    return feats, meta
+
+
 def normalize_all(catalog: list[dict], cache: Path = CACHE, log: Callable[..., None] = print,
-                  fetch: Callable[[str, Path], Path] | None = None) -> tuple[list[dict], list[dict]]:
-    fetch = fetch or (lambda url, dest: download(url, dest, log))
+                  fetch: Callable[[str, Path], Path] | None = None,
+                  lex: Lexicon | None = None) -> tuple[list[dict], list[dict]]:
+    fetch = _skip_dead_hosts(fetch or (lambda url, dest: download(url, dest, log)))
     features, report = [], []
     for rec in source_list(catalog):
         sid = rec["id"]
+        if rec.get("skip"):
+            report.append({**_meta(rec), "status": "skipped", "reason": rec["skip"], "download": rec.get("download")})
+            log(f"{sid}: skipped ({rec['skip']})")
+            continue
         norm = cache / "normalized" / f"{_safe(sid)}.v{NORMALIZE_VERSION}.geojson"
         try:
             if norm.exists():
-                feats = json.loads(norm.read_text())["features"]
+                data = json.loads(norm.read_text())
+                feats, meta = data["features"], data.get("meta", {})
             else:
-                path = fetch(rec["download"], cache / "sources" / f"{_safe(sid)}.zip")
-                with zipfile.ZipFile(path) as zf:
-                    feats = normalize_zip(zf, rec)
+                if rec.get("kind") == "shapefile":
+                    feats, meta = normalize_shapefiles(rec, cache, fetch, lex)
+                else:
+                    path = fetch(rec["download"], cache / "sources" / f"{_safe(sid)}.zip")
+                    with zipfile.ZipFile(path) as zf:
+                        feats = normalize_zip(zf, rec)
+                    meta = {"format": "GeMS shapefiles and CSV tables"}
                 norm.parent.mkdir(parents=True, exist_ok=True)
-                norm.write_text(json.dumps({"type": "FeatureCollection", "features": feats}))
+                norm.write_text(json.dumps({"type": "FeatureCollection", "features": feats, "meta": meta}))
             layers = {}
             for f in feats:
                 layers[f["properties"]["layer"]] = layers.get(f["properties"]["layer"], 0) + 1
+            ext = scgs.extent(feats)
             report.append({**_meta(rec), "status": "used", "polygons": len(feats), "layers": layers,
-                           "download": rec["download"]})
+                           "download": rec["download"], **meta, "extent": ext,
+                           "extent_check": scgs.extent_check(ext, rec.get("bbox"))})
             features += feats
             log(f"{sid}: {len(feats)} polygons {layers}")
-        except (OSError, ValueError, zipfile.BadZipFile, KeyError) as err:
+        except (OSError, ValueError, zipfile.BadZipFile, KeyError, IndexError, struct.error) as err:
             report.append({**_meta(rec), "status": "skipped", "reason": f"{type(err).__name__}: {err}",
                            "download": rec.get("download")})
             log(f"{sid}: skipped ({err})")
@@ -150,7 +270,7 @@ def sgmc_features(path: Path = OUT / "sgmc-sc.geojson") -> list[dict]:
 def run(normalize_only: bool = False, log: Callable[..., None] = print) -> dict:
     catalog = json.loads((ROOT / "data" / "catalog" / "sc_catalog.json").read_text())
     lex = Lexicon(json.loads((ROOT / "data" / "lexicon" / "geolex_sc.json").read_text()))
-    features, report = normalize_all(catalog, log=log)
+    features, report = normalize_all(catalog, log=log, lex=lex)
     sgmc = sgmc_features()
     if sgmc:
         report.append({"id": "usgs-sgmc", **sources.SGMC_SOURCE, "status": "used", "polygons": len(sgmc)})
@@ -187,7 +307,7 @@ def run(normalize_only: bool = False, log: Callable[..., None] = print) -> dict:
 POLY_FIELDS = ("source", "map_unit", "layer", "identity_confidence", "locator", "extraction_method", "confidence",
                "conf", "conf_base", "agreement", "n_sources", "research_support", "alternatives", "derived_inferred")
 UNIT_FIELDS = ("source", "map_unit", "name", "full_name", "formation", "unit_name", "canonical", "age", "age_ma",
-               "geomaterial", "lith", "description")
+               "geomaterial", "lith", "description", "inferred_fields", "name_source")
 SOURCE_FIELDS = ("title", "citation", "scale", "year")
 
 
