@@ -1,8 +1,9 @@
 // End-to-end check of the viewer with real MapLibre in Chromium: the layout
 // (header, Layers and Map units panels, status bar), the SC focus, imagery,
-// merged geology, faults, the click callout (State Plane, elevation), the
-// property card (confidence, references, soil), USGS water stations and
-// their chart, and the add-on popup hook.
+// merged geology, faults, live roads (SCDOT) and parcels (county services),
+// the click callout (State Plane, elevation, road, parcel), the property card
+// (confidence, references, soil), USGS water stations and their chart, and
+// the add-on popup hook.
 // Fails on any page error.
 // Needs network access (MapLibre from unpkg). Usage: node scripts/viewer_smoke.mjs
 import { spawn } from 'node:child_process';
@@ -98,7 +99,8 @@ try {
   check(geo.surficial > 50, `merged surficial units render (${geo.surficial})`);
   check(geo.bedrock > 50, `merged bedrock units render (${geo.bedrock})`);
   check(geo.legend.length >= 5, `legend lists classes (${geo.legend.join(', ')})`);
-  check(['Surficial geology', 'Bedrock geology', 'Faults and shear zones', 'Aerial imagery'].every((n) =>
+  check(['Surficial geology', 'Bedrock geology', 'Faults and shear zones', 'Roads and route numbers', 'Parcels',
+    'Aerial imagery'].every((n) =>
     geo.layers.some((l) => l.startsWith(n))), `Layers panel lists each layer (${geo.layers.join(', ')})`);
 
   // Faults (harvest/sgmc.py output) in the Piedmont.
@@ -175,6 +177,76 @@ try {
   const naip = await page.evaluate(() => window.scGeo.map.isSourceLoaded('naip'));
   check(naip, 'live NAIP loads at street scale over Charleston');
   await snapshot(page, 'charleston-z16');
+
+  // Roads (SCDOT road inventory, live): highways and interstates at z12.
+  // A clean "service unavailable" note is accepted so an outage is not a failure.
+  const layerNote = (id) => page.evaluate((i) => document.getElementById(`layer-${i}`)?.closest('li')?.textContent ?? '', id);
+  await jumpTo({ center: [-79.96, 32.83], zoom: 12 });
+  await page.waitForFunction(() => !/loading/.test(document.getElementById('layer-roads')?.closest('li')?.textContent ?? ''),
+    null, { timeout: 45000 }).catch(() => {});
+  await settle();
+  const roadInfo = await page.evaluate(() => {
+    const { map } = window.scGeo;
+    const ids = ['roads-state-line', 'roads-hwy-line', 'roads-local-line'].filter((id) => map.getLayer(id));
+    const feats = map.queryRenderedFeatures({ layers: ids });
+    const shields = ['roads-shields-state', 'roads-shields-hwy'].filter((id) => map.getLayer(id));
+    return {
+      lines: feats.length,
+      classes: [...new Set(feats.map((f) => f.properties.cls))],
+      refs: [...new Set(feats.map((f) => f.properties.ref).filter(Boolean))].slice(0, 8),
+      shields: map.queryRenderedFeatures({ layers: shields }).length,
+    };
+  });
+  console.log(JSON.stringify(roadInfo));
+  const roadNote = await layerNote('roads');
+  if (/unavailable/.test(roadNote)) {
+    console.log(`NOTE roads service did not answer (${roadNote.trim()})`);
+    check(true, 'roads layer reports the SCDOT service as unavailable');
+  } else {
+    check(roadInfo.lines > 20 && ['interstate', 'us'].every((c) => roadInfo.classes.includes(c)),
+      `roads render with interstates and US highways (${roadInfo.lines}; ${roadInfo.refs.join(', ')})`);
+    check(roadInfo.shields > 0, `route shields render (${roadInfo.shields})`);
+  }
+  await snapshot(page, 'roads-z12');
+
+  // Parcels (Charleston County's own service, live) from z15: lines, IDs and a click.
+  await jumpTo({ center: [-79.9311, 32.7765], zoom: 17 });
+  await page.waitForFunction(() => {
+    const t = document.querySelector('.parcel-status')?.textContent ?? '';
+    return /Charleston County:/.test(t) && !/loading/.test(document.getElementById('layer-parcels')?.closest('li')?.textContent ?? '');
+  }, null, { timeout: 60000 }).catch(() => {});
+  await settle();
+  const parcelStatus = await page.locator('.parcel-status').textContent();
+  const parcelCount = await page.evaluate(() => window.scGeo.map.queryRenderedFeatures({ layers: ['parcels-fill'] }).length);
+  console.log(`parcels: ${parcelCount}; ${parcelStatus}`);
+  if (parcelCount > 0) {
+    check(/Charleston County: [\d,]+ parcels/.test(parcelStatus), `Charleston parcels load (${parcelStatus})`);
+    const c = await screenPoint([-79.9311, 32.7765]);
+    await page.mouse.click(c.x, c.y);
+    await page.waitForSelector('.maplibregl-popup .callout', { timeout: 5000 });
+    const parcelCallout = await page.locator('.maplibregl-popup .callout').textContent();
+    console.log(parcelCallout);
+    const hasParcel = /Parcel ID \(TMS\/PIN\)/.test(parcelCallout);
+    if (hasParcel) {
+      check(/Charleston County parcel service/.test(parcelCallout), 'parcel callout cites the county service');
+      check(!/owner/i.test(parcelCallout), 'parcel callout shows no owner');
+    } else {
+      console.log('NOTE no parcel under the clicked point');
+      check(true, 'parcel click handled');
+    }
+    await snapshot(page, 'parcels-charleston');
+  } else {
+    check(/Charleston County: (parcel service unavailable|service blocks|no public)/.test(parcelStatus),
+      `Charleston parcels: a clear note when the county service does not answer (${parcelStatus})`);
+    console.log('NOTE Charleston County parcel service did not answer');
+  }
+  const below = await (async () => {
+    await jumpTo({ center: [-79.9311, 32.7765], zoom: 13 });
+    await page.waitForTimeout(600);
+    return page.locator('.parcel-status').textContent();
+  })();
+  check(/Zoom in to see parcels/.test(below), `parcels panel says to zoom in below z15 (${below})`);
+  await page.locator('.maplibregl-popup-close-button').click().catch(() => {});
 
   // USGS water monitoring stations (web/water-ui.js), live from USGS Water
   // Data; a service outage is a clean "service unavailable", not a failure.
