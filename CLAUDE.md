@@ -31,9 +31,14 @@ Guidance for Claude (and humans) working in this repository.
   it from the environment when needed; **never print it in logs**.
 - There is **no OpenRoads license**. CAD imports come from consultants as
   LandXML, DWG, DXF, DGN v7, KML, and KMZ. Native DGN v8 files cannot be read
-  and are listed by name only.
+  and are listed by name only. DWG has no free browser reader, so DWG files
+  are also listed by name only; ask consultants for DXF or LandXML instead.
 - Every imported CAD file keeps its layers. In the viewer's layer panel each
   layer can be toggled on and off or deleted.
+- CAD files are parsed in the browser (`web/cad/`) and never uploaded. DXF,
+  DGN v7 and LandXML coordinates are assumed to be SC State Plane (NAD83);
+  units come from the file when it says, otherwise international feet. The
+  panel's coordinate selector overrides this.
 
 ## Layout
 
@@ -46,8 +51,9 @@ Guidance for Claude (and humans) working in this repository.
 | `data/` | Small public derived data only (no PDFs, no internal data) |
 | `review/` | Tools for human review of extracted and inferred values |
 | `web/` | Static MapLibre GL JS viewer, deployed to GitHub Pages |
-| `scripts/` | Maintenance scripts (e.g. `check_imagery.mjs`) |
-| `tests/` | Python tests (`pytest`) and web tests (`tests/web`, `node --test`) |
+| `web/cad/` | In-browser CAD readers (LandXML, DXF, DGN v7, KML, KMZ) and layer state |
+| `scripts/` | Checks that need network access (`check_imagery.mjs`, `viewer_smoke.mjs`) |
+| `tests/` | Python tests (`pytest`), web tests (`tests/web`, `node --test`), fixtures |
 
 ## Commands
 

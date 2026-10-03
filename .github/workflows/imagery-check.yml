@@ -1,10 +1,11 @@
-name: Imagery check
+name: External services check
 
-# Confirms the NAIP imagery servers used by web/ return tiles. Kept separate
-# from CI so an outage at USGS or USDA does not block unrelated changes.
+# Checks that depend on outside services: the NAIP imagery servers and the
+# viewer running with MapLibre from unpkg. Kept separate from CI so an
+# outage elsewhere does not block unrelated changes.
 on:
   pull_request:
-    paths: ["web/**", "scripts/check_imagery.mjs", ".github/workflows/imagery-check.yml"]
+    paths: ["web/**", "scripts/**", ".github/workflows/imagery-check.yml"]
   schedule:
     - cron: "17 13 * * 1"
   workflow_dispatch:
@@ -22,3 +23,21 @@ jobs:
         with:
           node-version: "22"
       - run: node scripts/check_imagery.mjs
+
+  viewer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm install --no-save playwright@1.56.1
+      - run: npx playwright install --with-deps chromium
+      - run: node scripts/viewer_smoke.mjs
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: viewer-smoke
+          path: viewer-smoke.png
+          if-no-files-found: ignore
