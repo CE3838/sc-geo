@@ -33,7 +33,7 @@ jobs:
     needs: test
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     permissions:
       pages: write
       id-token: write
@@ -42,6 +42,29 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      # Keep the last good geology data so a USGS outage doesn't drop it.
+      - uses: actions/cache@v4
+        with:
+          path: |
+            web/data/geology
+            .checkpoints/sgmc
+          key: sgmc-${{ github.run_id }}
+          restore-keys: sgmc-
+      - name: Harvest SGMC geology
+        continue-on-error: true
+        env:
+          CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
+        run: python -m harvest.sgmc
+      - name: Check geology data
+        run: |
+          if [ -s web/data/geology/sgmc-sc.geojson ]; then
+            ls -l web/data/geology
+          else
+            echo "::warning::No geology data; deploying without it"
+          fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
