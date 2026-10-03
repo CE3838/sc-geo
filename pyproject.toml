@@ -1,0 +1,13 @@
+[project]
+name = "sc-geo"
+version = "0.1.0"
+description = "Public core of a South Carolina geologic knowledge system"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.11"
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
