@@ -39,10 +39,28 @@ WEB_PAGES = [
     "https://pubs.usgs.gov/of/2013/1030/",
 ]
 
+SAMPLE_ROWS = 3
+# Layers to dump in full (attributes only): small catalog tables.
+FULL_DUMPS = {
+    "scgs-24k-maps-table": "https://services.arcgis.com/acgZYxoN5Oj8pDLa/arcgis/rest/services/24K_Quads/FeatureServer/1",
+    "scgs-24k-quads-mapped": "https://services.arcgis.com/acgZYxoN5Oj8pDLa/arcgis/rest/services/24K_Quads/FeatureServer/0",
+}
+EXTRA_SERVICES = [
+    "https://services.arcgis.com/acgZYxoN5Oj8pDLa/arcgis/rest/services/GeologicRegionsAGOL/FeatureServer",
+    "https://services.arcgis.com/v01gqwM5QqNysAAi/arcgis/rest/services/SB_5888bf4fe4b05ccb964bab9d_USGS_SGMC_feature/FeatureServer",
+]
+SCIENCEBASE_SEARCHES = [
+    "Geologic Map Schema GeMS version State Geologic Map Compilation",
+    "South Carolina geologic map database",
+    "South Carolina surficial geology",
+]
+FTP_DIRS = ["ftp://ftpdata.dnr.sc.gov/gisdata/glc/"]
+
 seen_services: set[str] = set()
 
 
 def get(url: str, params: dict | None = None, raw: bool = False):
+    url = urllib.parse.quote(url, safe=":/?&=%#@+,;~")
     if params:
         url = f"{url}{'&' if '?' in url else '?'}{urllib.parse.urlencode(params)}"
     req = urllib.request.Request(url, headers=UA)
@@ -84,6 +102,9 @@ def layer(url: str) -> dict:
     if j.get("type") == "Feature Layer" or j.get("fields"):
         c = safe(get, f"{url}/query", {"where": "1=1", "returnCountOnly": "true", "f": "json"})
         out["count"] = c.get("count", c)
+        rows = safe(get, f"{url}/query", {"where": "1=1", "outFields": "*", "returnGeometry": "false",
+                                          "resultRecordCount": SAMPLE_ROWS, "f": "json"})
+        out["sample"] = [f.get("attributes") for f in rows.get("features", [])] if isinstance(rows, dict) else rows
     return out
 
 
@@ -150,12 +171,38 @@ def links(url: str) -> list[str]:
     return sorted(keep)
 
 
+def dump(url: str) -> list:
+    rows, offset = [], 0
+    while True:
+        j = get(f"{url}/query", {"where": "1=1", "outFields": "*", "returnGeometry": "false",
+                                 "resultOffset": offset, "resultRecordCount": 1000, "f": "json"})
+        feats = j.get("features", [])
+        rows += [f["attributes"] for f in feats]
+        if not j.get("exceededTransferLimit") or not feats:
+            return rows
+        offset += len(feats)
+
+
+def sb_search(q: str) -> list:
+    j = get("https://www.sciencebase.gov/catalog/items", {"q": q, "format": "json", "max": 25, "fields": "title"})
+    return [{"id": i["id"], "title": i.get("title")} for i in j.get("items", [])]
+
+
+def ftp_list(url: str) -> list:
+    with urllib.request.urlopen(url, timeout=60) as r:
+        return r.read().decode("latin-1").splitlines()
+
+
 def main() -> None:
     inv = {
         "sciencebase": {k: safe(sciencebase, v) for k, v in SCIENCEBASE_ITEMS.items()},
         "arcgis_items": {k: safe(arcgis_item, v) for k, v in ARCGIS_ITEMS.items()},
         "service_roots": {u: safe(folder, u) for u in SERVICE_ROOTS},
         "pages": {u: safe(links, u) for u in WEB_PAGES},
+        "extra_services": {u: safe(service, u) for u in EXTRA_SERVICES},
+        "full_dumps": {k: safe(dump, u) for k, u in FULL_DUMPS.items()},
+        "sciencebase_search": {q: safe(sb_search, q) for q in SCIENCEBASE_SEARCHES},
+        "ftp": {u: safe(ftp_list, u) for u in FTP_DIRS},
     }
     json.dump(inv, sys.stdout, indent=1)
 
