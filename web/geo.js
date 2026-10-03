@@ -4,6 +4,16 @@
 // South Carolina, [[west, south], [east, north]] in lon/lat.
 export const SC_BOUNDS = [[-83.36, 32.03], [-78.54, 35.22]];
 
+// Imagery is only requested inside this box (SC plus a strip of ocean).
+export const IMAGERY_BOUNDS = [[-83.4, 31.7], [-78.2, 35.25]];
+
+// How far the map can be panned.
+export const MAX_BOUNDS = [[-85.5, 30.5], [-76.5, 36.5]];
+
+// Below this zoom the fast cached imagery basemap is shown; from this zoom
+// up, live NAIP is drawn on top of it.
+export const DETAIL_MINZOOM = 12;
+
 export function formatCoords(lng, lat) {
   const ns = lat >= 0 ? 'N' : 'S';
   const ew = lng >= 0 ? 'E' : 'W';
@@ -77,4 +87,10 @@ export function shouldFallBack({ errors, loaded }, threshold = 3) {
 // The CAD layer panel is hidden for now; add ?cad to the URL to show it.
 export function cadEnabled(search) {
   return new URLSearchParams(search).has('cad');
+}
+
+// Ask an ArcGIS exportImage service for 512px images on high-density screens
+// so 256px map tiles stay sharp. Cached tile services are left unchanged.
+export function hiDpiUrl(url, pixelRatio) {
+  return pixelRatio > 1 ? url.replace('size=256,256', 'size=512,512') : url;
 }
