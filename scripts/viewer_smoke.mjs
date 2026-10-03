@@ -160,7 +160,7 @@ try {
   check(/NRCS SSURGO|Soil data unavailable|No soil map unit/.test(cardInfo.soil), 'card shows soil or says it is unavailable');
   if (!/NRCS SSURGO via Soil Data Access/.test(cardInfo.soil)) console.log('NOTE soil service did not answer');
   await snapshot(page, 'card');
-  await page.locator('.card-close').click();
+  await page.getByRole('button', { name: 'Close card' }).click();
   check(await page.locator('#card').isHidden(), 'card closes');
 
   await page.locator('#geo-mode').selectOption('confidence');
