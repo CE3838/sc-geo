@@ -134,16 +134,38 @@ def find_quote(quote: str, page: dict) -> str | None:
     if any(_contains(ocr_fold(h), qf) for h in hays):
         return "ocr"
     qs = re.sub(r"[^a-z0-9 ]+", "", qf)
-    if any(_fuzzy(re.sub(r"[^a-z0-9 ]+", "", ocr_fold(h)), qs) for h in hays):
-        return "fuzzy"
+    for h in hays:
+        # A loose match must still contain every number of the quote (up to OCR confusions).
+        if _numbers(q) <= _numbers(h) and _fuzzy(re.sub(r"[^a-z0-9 ]+", "", ocr_fold(h)), qs):
+            return "fuzzy"
     return None
+
+
+def _numbers(s: str) -> set[str]:
+    """Number tokens, OCR-folded, so '3O' on an OCR page still counts as '30'."""
+    return {ocr_fold(t) for t in re.findall(r"[0-9oil|]*\d[0-9oil|]*", s)}
 
 
 # --- confidence ----------------------------------------------------------------
 
-def source_weight(rec: dict, cfg: dict = CONFIG) -> float:
+def map_sheet_pages(doc: dict) -> set[int]:
+    """Pages that come from map sheets: NGMDB scans, or files named plate/sheet/map."""
+    out: set[int] = set()
+    for f in doc.get("files", []):
+        name = (f.get("url") or "").rsplit("/", 1)[-1].lower()
+        if f.get("via") == "ngmdb_scan" or re.search(r"plate|sheet|map", name):
+            out |= set(range(f["first_page"], f["first_page"] + f["pages"]))
+    return out
+
+
+def source_weight(rec: dict, section: str | None = None, cfg: dict = CONFIG, map_sheet: bool = False) -> float:
+    """S: map scale for map-unit descriptions read from a map sheet; otherwise the publisher's weight.
+
+    Unit descriptions on a map are generalized to its scale. Report text, a boring log,
+    a measured structure or a reference is not, whatever the scale of the report's maps.
+    """
     c = cfg["confidence"]
-    if rec.get("kind") == "map" and rec.get("scale"):
+    if section == "units" and map_sheet and rec.get("scale"):
         w = scale_weight(int(rec["scale"]))
     elif (rec.get("publisher") or "").strip() in cfg["trusted_publishers"]:
         w = c["agency_or_journal"]
@@ -154,9 +176,10 @@ def source_weight(rec: dict, cfg: dict = CONFIG) -> float:
     return w
 
 
-def confidence(rec: dict, method: str, match: str, verdict: str | None, inferred: bool, cfg: dict = CONFIG) -> float:
+def confidence(rec: dict, method: str, match: str, verdict: str | None, inferred: bool, cfg: dict = CONFIG,
+               section: str | None = None, map_sheet: bool = False) -> float:
     c = cfg["confidence"]
-    s = source_weight(rec, cfg)
+    s = source_weight(rec, section, cfg, map_sheet)
     m = c["ocr_factor"] if method == "ocr" else 1.0
     q = {"exact": 1.0, "ocr": 0.95, "fuzzy": c["fuzzy_quote_factor"]}[match]
     v = {"agree": c["verify_agree"], "disagree": c["verify_disagree"], "unclear": c["verify_unclear"],
@@ -289,6 +312,7 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
         raise IngestError(f"no cached text for {sid} at {text_path}; run python -m extract.next_batch --id {sid}")
     doc = _load_json(text_path, "text")
     pages = {p["page"]: p for p in doc["pages"]}
+    sheets = map_sheet_pages(doc)
 
     verdicts: dict[str, dict] = {}
     if verify_path:
@@ -332,7 +356,8 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
         if verdict in ("disagree", "unclear"):
             queue(path, val, f"verify_{verdict}", verify={k: v for k, v in check.items() if k != "path"})
         sv = StoredValue(value=val["value"], source_id=sid, page=val["page"], extraction_method=ExtractionMethod.LLM,
-                         confidence=confidence(rec, pg.get("method", "pdf_text"), match, verdict, val["inferred"], cfg),
+                         confidence=confidence(rec, pg.get("method", "pdf_text"), match, verdict, val["inferred"], cfg,
+                                                    section=path.split("[", 1)[0], map_sheet=val["page"] in sheets),
                          inferred=bool(val["inferred"]))
         entry = sv.to_dict() | {"quote": val["quote"], "quote_match": match, "text_method": pg.get("method"),
                                 "verification": verdict}

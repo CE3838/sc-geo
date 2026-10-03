@@ -83,8 +83,8 @@ def _blocks(doc: dict, budget: int) -> tuple[list[tuple[int, str]], dict]:
     return blocks, dict(skipped)
 
 
-def build(doc: dict, record: dict, max_tokens: int = 40000, chars_per_token: int = 4) -> list[dict]:
-    limit = max_tokens * chars_per_token
+def build(doc: dict, record: dict, max_tokens: int = 40000, chars_per_token: float = 2.5) -> list[dict]:
+    limit = int(max_tokens * chars_per_token)
     head_room = len(header(record, doc, 99, 99)) + 10
     blocks, skipped = _blocks(doc, limit - head_room)
     groups: list[list[tuple[int, str]]] = [[]]
@@ -102,7 +102,7 @@ def build(doc: dict, record: dict, max_tokens: int = 40000, chars_per_token: int
         text = header(record, doc, i, len(groups)) + "".join(t for _, t in g)
         out.append({"source_id": record["id"], "packet": f"packet-{i:02d}", "of": len(groups),
                     "pages": sorted({p for p, _ in g}), "skipped": skipped, "text": text,
-                    "estimated_tokens": len(text) // chars_per_token})
+                    "estimated_tokens": int(len(text) / chars_per_token)})
     return out
 
 

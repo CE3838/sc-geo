@@ -44,6 +44,21 @@ def test_find_quote_fuzzy_single_typo():
     assert ingest.find_quote("composed of fossilferous sandy limestone and calcareous clay", p) == "fuzzy"
 
 
+@pytest.mark.parametrize("quote", [
+    "is 42 ft thick in the type section in CC1 and reaches",   # digits swapped
+    "of 416 and 441 ft in CC1 is designated as the type",     # one digit changed
+])
+def test_fuzzy_never_accepts_changed_numbers(quote):
+    p = page("The Fishburne is 24 ft thick in the type section in CC1 and reaches 74 ft. "
+             "The interval between depths of 416 and 440 ft in CC1 is designated as the type section.")
+    assert ingest.find_quote(quote, p) is None
+
+
+def test_fuzzy_allows_ocr_digit_confusions():
+    p = page("The Fishburne is 24 ft thick in the type secton in CC1 and reaches 7O ft maximum.", method="ocr")
+    assert ingest.find_quote("is 24 ft thick in the type section in CC1 and reaches 70 ft", p) == "fuzzy"
+
+
 def test_find_quote_short_quote_needs_exact():
     p = page("Qwa  Wando", method="ocr")
     assert ingest.find_quote("Qwb", p) is None
@@ -184,13 +199,29 @@ def test_confidence_formula(env):
     assert out["units"][0]["name"]["confidence"] == round(0.95 * 0.85, 3)
     # inferred
     assert out["units"][0]["rank"]["confidence"] == round(0.95 * 0.85 * 0.8, 3)
-    # OCR page, matched through OCR confusions (1OYR vs 10YR)
+    # OCR page, matched through OCR confusions (1OYR vs 10YR). A boring log is not
+    # generalized by map scale: S is the publisher weight (USGS 0.85), not 0.95.
     mun = out["observations"][0]["intervals"][0]["munsell"]
     assert mun["quote_match"] == "ocr"
-    assert mun["confidence"] == round(0.95 * 0.9 * 0.95 * 0.85, 3)
+    assert mun["confidence"] == round(0.85 * 0.9 * 0.95 * 0.85, 3)
     assert ingest.source_weight(PUB) == 0.7
     assert ingest.source_weight({**PUB, "publisher": "U.S. Geological Survey"}) == 0.85
     assert ingest.source_weight({**PUB, "status": "draft"}) == 0.6
+    # Scale applies only to map-unit descriptions read from a map sheet.
+    small = {**RECORD, "scale": 875000}
+    assert ingest.source_weight(small, "units", map_sheet=True) == 0.45
+    assert ingest.source_weight(small, "units", map_sheet=False) == 0.85  # report text
+    assert ingest.source_weight(small, "observations", map_sheet=True) == 0.85
+    assert ingest.source_weight(RECORD, "units", map_sheet=True) == 0.95
+    assert ingest.source_weight(RECORD, "references", map_sheet=True) == 0.85
+
+
+def test_map_sheet_pages():
+    files = [{"url": "https://pubs.usgs.gov/of/1985/0274/plate-1.pdf", "via": "pubs_usgs", "pages": 1, "first_page": 1},
+             {"url": "https://pubs.usgs.gov/of/1985/0274/report.pdf", "via": "pubs_usgs", "pages": 3, "first_page": 2},
+             {"url": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=1_2_2", "via": "ngmdb_scan", "pages": 1,
+              "first_page": 5}]
+    assert ingest.map_sheet_pages({"files": files}) == {1, 5}
 
 
 def test_verify_agree_and_disagree(env, tmp_path):

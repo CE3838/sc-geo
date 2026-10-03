@@ -16,7 +16,8 @@
     "fallback_dpi": 300
   },
   "packet_max_tokens": 40000,
-  "chars_per_token": 4,
+  "_chars_per_token": "Measured on a USGS report packet (layout text, tables, OCR noise): about 2.0-2.2 characters per token, not 4. 2.5 keeps packets near the token budget.",
+  "chars_per_token": 2.5,
   "verify_sample_fraction": 0.1,
   "coastal_plain": {
     "_comment": "Approximate SC Fall Line (lon, lat), west to east. A record whose bounding-box centre lies south-east of this line is ordered as Coastal Plain.",

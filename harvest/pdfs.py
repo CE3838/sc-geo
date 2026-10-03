@@ -52,6 +52,7 @@ PUBS_API = "https://pubs.usgs.gov/pubs-services/publication/"
 UNPAYWALL = "https://api.unpaywall.org/v2/"
 CONFIG: dict = json.loads((ROOT / "config" / "extract.json").read_text())
 DONE = {"text", "needs_access"}
+RESOLVER_VERSION = 2  # bump when resolve() finds new kinds of sources; unread records are resolved again
 VIA_ORDER = ["catalog_pdf", "pubs_usgs", "publisher_pdf", "unpaywall", "pubs_index", "ngmdb_scan", "scgs_ftp"]
 
 
@@ -112,8 +113,17 @@ def tier(rec: dict, pilot_bbox, cfg: dict = CONFIG) -> int:
     return 1 if in_coastal_plain(b, cfg) else 2
 
 
+_GEOLOGY = re.compile(r"geolog|stratigra|aquifer|hydrogeolog|subsurface|fault|seismic|formation|corehole|"
+                      r"well|boring|sediment|quadrangle|phosphate|terrace|mineral", re.I)
+
+
+def relevance(rec: dict) -> int:
+    """0 for geologic maps and geology reports (NGMDB themes or title words), 1 otherwise."""
+    return 0 if rec.get("themes") or _GEOLOGY.search(rec.get("title") or "") else 1
+
+
 def queue(catalog: list[dict], pilot_bbox=None, cfg: dict = CONFIG) -> list[dict]:
-    """Records not merged, in processing order: tier, then smaller area, newer, id."""
+    """Records not merged, in processing order: tier, geology first, smaller area, newer, id."""
     if pilot_bbox is None:
         pilot_bbox = json.loads((ROOT / "config" / "pilot_area.json").read_text())["bbox"]
     skip = merged_ids(catalog)
@@ -122,7 +132,7 @@ def queue(catalog: list[dict], pilot_bbox=None, cfg: dict = CONFIG) -> list[dict
         if r["id"] in skip:
             continue
         out.append({**r, "_tier": tier(r, pilot_bbox, cfg)})
-    return sorted(out, key=lambda r: (r["_tier"], _area(r["bbox"]) if r.get("bbox") else 1e9,
+    return sorted(out, key=lambda r: (r["_tier"], relevance(r), _area(r["bbox"]) if r.get("bbox") else 1e9,
                                       -(int(r["year"]) if str(r.get("year") or "").isdigit() else 0), r["id"]))
 
 
@@ -236,21 +246,23 @@ def _is_usgs(rec: dict) -> bool:
     return (rec.get("publisher") or "").strip() in ("U.S. Geological Survey", "USGS")
 
 
-def _pubs_pdfs(index_id: str, fetcher, log) -> tuple[list[dict], list[str]]:
+def _pubs_pdfs(index_id: str, fetcher, log) -> tuple[list[dict], list[str], int]:
+    """(PDF candidates, index pages, number of Plate PDFs) for one Publications Warehouse record."""
     try:
         d = fetcher.json(PUBS_API + urllib.parse.quote(index_id))
     except (OSError, ValueError) as err:
         log(f"  pubs {index_id}: {type(err).__name__}: {redact(str(err))}")
-        return [], []
-    pdfs, index_pages = [], []
+        return [], [], 0
+    pdfs, index_pages, plates = [], [], 0
     for link in d.get("links", []):
         kind, url = (link.get("type") or {}).get("text", ""), link.get("url") or ""
         is_pdf = url.lower().endswith(".pdf") or ((link.get("linkFileType") or {}).get("text") == "pdf")
-        if kind in ("Document", "Plate", "Chapter", "Version History") and is_pdf and kind != "Version History":
+        if kind in ("Document", "Plate", "Chapter") and is_pdf:
             pdfs.append({"url": url, "via": "pubs_usgs"})
+            plates += kind == "Plate"
         elif kind == "Index Page" and "pubs.usgs.gov" in url:
             index_pages.append(url)
-    return pdfs, index_pages
+    return pdfs, index_pages, plates
 
 
 def _index_page_pdfs(url: str, fetcher, log) -> list[dict]:
@@ -328,8 +340,10 @@ def resolve(rec: dict, fetcher, email: str | None = None, log: Callable[..., Non
             index_ids.append(found)
     if _is_usgs(rec) or index_ids:
         checked.append("pubs_usgs")
+    plates = 0
     for iid in dict.fromkeys(index_ids):
-        pdfs, index_pages = _pubs_pdfs(iid, fetcher, log)
+        pdfs, index_pages, n_plates = _pubs_pdfs(iid, fetcher, log)
+        plates += n_plates
         for c in pdfs:
             add(c)
         if not pdfs:
@@ -351,7 +365,11 @@ def resolve(rec: dict, fetcher, email: str | None = None, log: Callable[..., Non
         else:
             checked.append("unpaywall_skipped")
 
-    if not cands:
+    # Scanned sheets only when nothing else was found, or for a map whose Warehouse
+    # entry has a text Document (often just a cover) but no Plate.
+    map_without_plates = (rec.get("kind") == "map" and not plates and cands
+                          and all(c["via"] == "pubs_usgs" for c in cands))
+    if not cands or map_without_plates:
         for url in scans:
             add({"url": url, "via": "ngmdb_scan"})
     if not cands:
@@ -430,7 +448,16 @@ def text_summary(doc: dict) -> dict:
             kept_chars += len(packets.compact(p["text"]))
     return {"pages": n, "pages_by_method": dict(Counter(p["method"] for p in doc["pages"])),
             "pages_by_kind": dict(kinds), "kept_chars": kept_chars,
-            "estimated_tokens": kept_chars // CONFIG["chars_per_token"]}
+            "estimated_tokens": int(kept_chars / CONFIG["chars_per_token"])}
+
+
+def _stale(ck: dict, email: str | None) -> bool:
+    """True when a record's sources should be looked up (again)."""
+    if "candidates" not in ck:
+        return True
+    if email and "unpaywall_skipped" in ck.get("checked", []):
+        return True
+    return ck.get("status") != "text" and ck.get("resolver_version") != RESOLVER_VERSION
 
 
 def process(rec: dict, fetcher, ckpt_dir: Path, cache_dir: Path, email: str | None, ocr="auto",
@@ -445,9 +472,10 @@ def process(rec: dict, fetcher, ckpt_dir: Path, cache_dir: Path, email: str | No
     path = Path(ckpt_dir) / f"{sid}.json"
     ck = _load(path) or {"id": rec["id"]}
     ck.update(tier=rec.get("_tier"), kind=rec.get("kind"))
-    if "candidates" not in ck or (email and "unpaywall_skipped" in ck.get("checked", [])):
+    if _stale(ck, email):
         r = resolve(rec, fetcher, email=email, log=log)
-        ck.update(r, resolved_at=_now())
+        ck.update(r, resolved_at=_now(), resolver_version=RESOLVER_VERSION)
+        ck.pop("files", None)
         ck["status"] = "resolved" if r["candidates"] else "needs_access"
         ck["reason"] = None if r["candidates"] else "no open full text found"
         _save(path, ck)
@@ -481,11 +509,16 @@ def process(rec: dict, fetcher, ckpt_dir: Path, cache_dir: Path, email: str | No
         doc["record"] = {k: rec.get(k) for k in ("id", "title", "citation", "year", "scale", "publisher", "kind")}
         _save(text_path, doc)
         summary = text_summary(doc)
-        unread = summary["pages_by_method"].get("none", 0)
-        ck.update(summary, text_at=_now(), text_path=str(text_path.relative_to(cache_dir.parent))
+        # A file with no text on any page is a scanned sheet or report: reading the
+        # rest without it would give an incomplete extraction, so wait for OCR.
+        unread = [f["url"] for i, f in enumerate(doc["files"])
+                  if all(p["method"] == "none" for p in doc["pages"] if p["file"] == i)]
+        ck.update(summary, unread_files=len(unread), text_at=_now(),
+                  text_path=str(text_path.relative_to(cache_dir.parent))
                   if cache_dir.parent in text_path.parents else str(text_path))
-        ck["status"] = "needs_ocr" if unread and unread == summary["pages"] else "text"
-        ck["reason"] = "every page lacks a text layer and no OCR engine was available" if ck["status"] == "needs_ocr" else None
+        ck["status"] = "needs_ocr" if unread else "text"
+        ck["reason"] = (f"{len(unread)} file(s) are scans without a text layer and no OCR engine was available"
+                        if unread else None)
         if drop_pdfs and ck["status"] == "text":
             shutil.rmtree(pdf_dir, ignore_errors=True)
             ck["pdfs_dropped"] = True
@@ -561,9 +594,7 @@ def run(catalog_path: Path = ROOT / "data" / "catalog" / "sc_catalog.json",
 
     def needs_work(rec: dict) -> bool:
         ck = _load(checkpoint_dir / f"{safe_id(rec['id'])}.json")
-        if not ck:
-            return True
-        if email and "unpaywall_skipped" in ck.get("checked", []):
+        if not ck or _stale(ck, email):
             return True
         st = ck.get("status")
         if resolve_only:

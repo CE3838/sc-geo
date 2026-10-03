@@ -20,7 +20,7 @@ import time
 from pathlib import Path
 from typing import Callable
 
-from extract import packets
+from extract import packets, pdftext
 from harvest import pdfs
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -54,6 +54,7 @@ def next_batch(n: int = 5, ids: list[str] | None = None, catalog: list[dict] | N
                cache_dir: Path = ROOT / ".cache", checkpoint_dir: Path = ROOT / ".checkpoints" / "pdfs",
                extracted_dir: Path = ROOT / "data" / "extracted", review_dir: Path = ROOT / "data" / "review",
                max_tokens: int | None = None, max_minutes: float | None = None, fetcher=None, ocr="auto",
+               allow_partial: bool = False,
                log: Callable[..., None] = print) -> list[dict]:
     if catalog is None:
         catalog = json.loads((ROOT / "data" / "catalog" / "sc_catalog.json").read_text())
@@ -72,11 +73,17 @@ def next_batch(n: int = 5, ids: list[str] | None = None, catalog: list[dict] | N
         sid = packets.safe_id(rec["id"])
         if (Path(extracted_dir) / f"{sid}.json").exists() or rec["id"] in blocked:
             continue
+        ck = pdfs._load(checkpoint_dir / f"{sid}.json") or {}
+        if ck.get("status") == "needs_ocr" and not allow_partial:
+            if ocr is None or pdftext.ocr_engine() is None:
+                log(f"skip {rec['id']}: needs OCR ({ck.get('reason')})")
+                continue
+            (cache_dir / "text" / f"{sid}.json").unlink(missing_ok=True)  # read again with OCR
         index = ensure_packets(rec, cache_dir)
         if index is None:
             ck = pdfs.process(rec, fetcher, checkpoint_dir, cache_dir, email, ocr=ocr,
                               log=lambda m: log(pdfs.redact(str(m), email or "")))
-            if ck.get("status") != "text":
+            if ck.get("status") != "text" and not (allow_partial and ck.get("status") == "needs_ocr"):
                 log(f"skip {rec['id']}: {ck.get('status')} ({ck.get('reason') or 'no text'})")
                 continue
             index = ensure_packets(rec, cache_dir)
@@ -103,8 +110,11 @@ def main() -> None:
     ap.add_argument("--max-tokens", type=int, help="stop adding documents past this many packet tokens")
     ap.add_argument("--max-minutes", type=float, default=30)
     ap.add_argument("--json", action="store_true")
+    ap.add_argument("--allow-partial", action="store_true",
+                    help="also serve documents whose scanned files still need OCR (their text parts only)")
     args = ap.parse_args()
-    batch = next_batch(n=args.n, ids=args.ids, max_tokens=args.max_tokens, max_minutes=args.max_minutes)
+    batch = next_batch(n=args.n, ids=args.ids, max_tokens=args.max_tokens, max_minutes=args.max_minutes,
+                       allow_partial=args.allow_partial)
     if args.json:
         print(json.dumps(batch, indent=1, ensure_ascii=False))
         return
