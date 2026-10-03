@@ -1,35 +1,22 @@
-// Geology layer: USGS SGMC map units under the state outline, with a small
-// panel (on/off, color by age or rock type, opacity, legend) and popup info.
+// Geology layer: USGS SGMC map units under the state outline, used when the
+// merged layers are not available. Layers panel: on/off, color by age or
+// rock type, opacity. Map units panel: legend and source. Click: a short
+// description and the property card model (card.js).
 import { colorExpression, formatAgeRange, legendEntries, mode, safeHttpsUrl, shortCitation } from './geology.js';
+import { sgmcCard } from './card.js';
+import { el } from './dom.js';
+import { onStyleReady } from './geo.js';
 
 const DATA_URL = 'data/geology/sgmc-sc.geojson';
 const META_URL = 'data/geology/sgmc-sc.meta.json';
 
-function el(tag, attrs = {}, ...kids) {
-  const node = document.createElement(tag);
-  for (const [k, v] of Object.entries(attrs)) {
-    if (k === 'class') node.className = v;
-    else if (k.startsWith('on')) node.addEventListener(k.slice(2), v);
-    else if (v === true) node.setAttribute(k, '');
-    else if (v !== false && v != null) node.setAttribute(k, v);
-  }
-  node.append(...kids.filter((k) => k != null && k !== false));
-  return node;
-}
-
-export function setupGeology(map, container) {
+// `ui` is the sidebar (sidebar.js).
+export function setupGeology(map, ui) {
   const state = { visible: true, mode: 'age', opacity: 0.55, features: [], meta: null };
 
-  const legend = el('ul', { class: 'geo-legend', 'aria-label': 'Legend' });
-  const status = el('p', { class: 'geo-status', role: 'status' }, 'Loading geology…');
-  const source = el('p', { class: 'geo-source' });
-  const toggle = el('input', {
-    type: 'checkbox', id: 'geo-visible', checked: true,
-    onchange: () => {
-      state.visible = toggle.checked;
-      apply();
-    },
-  });
+  const layer = ui.addLayer({ id: 'geo-visible', label: 'Geologic map units (SGMC)', order: 10,
+    onChange: (on) => { state.visible = on; apply(); } });
+  layer.setNote('Loading…');
   const modeSelect = el('select', {
     id: 'geo-mode',
     onchange: () => {
@@ -44,23 +31,12 @@ export function setupGeology(map, container) {
       apply();
     },
   });
-  const body = el('div', { class: 'panel-body', id: 'geo-body' },
-    el('div', { class: 'geo-row' }, toggle, el('label', { for: 'geo-visible' }, 'Geologic map units')),
-    el('div', { class: 'geo-row' }, el('label', { for: 'geo-mode' }, 'Color by'), modeSelect),
-    el('div', { class: 'geo-row' }, el('label', { for: 'geo-opacity' }, 'Opacity'), opacity),
-    status, legend, source);
-  const collapse = el('button', {
-    type: 'button', class: 'panel-collapse', 'aria-expanded': 'true', 'aria-controls': 'geo-body',
-    onclick: () => {
-      const open = collapse.getAttribute('aria-expanded') !== 'true';
-      collapse.setAttribute('aria-expanded', String(open));
-      body.hidden = !open;
-      collapse.textContent = open ? 'Hide' : 'Show';
-    },
-  }, 'Hide');
-  container.append(el('section', { class: 'panel', 'aria-label': 'Geology' },
-    el('div', { class: 'panel-header' }, el('h2', {}, 'Geology'), collapse), body));
-  if (window.matchMedia('(max-width: 600px)').matches) collapse.click();
+  ui.addControls(
+    el('div', { class: 'geo-row' }, el('label', { for: 'geo-mode' }, 'Color geology by'), modeSelect),
+    el('div', { class: 'geo-row' }, el('label', { for: 'geo-opacity' }, 'Opacity'), opacity));
+  const legend = el('ul', { class: 'geo-legend', 'aria-label': 'Legend' });
+  const source = el('p', { class: 'geo-source' });
+  ui.units.append(legend, source);
 
   function apply() {
     if (!map.getLayer('geology-fill')) return;
@@ -92,25 +68,28 @@ export function setupGeology(map, container) {
         id: 'geology-line', type: 'line', source: 'geology', minzoom: 8,
         paint: { 'line-color': '#222', 'line-opacity': 0.45, 'line-width': 0.6 },
       }, 'mask');
-      status.textContent = '';
+      layer.setNote('');
       const when = meta?.retrieved_at ? `, retrieved ${meta.retrieved_at.slice(0, 10)}` : '';
       source.textContent = `Source: USGS State Geologic Map Compilation (1:500,000 state maps)${when}. Colors are derived classes.`;
       apply();
     } catch (err) {
-      status.textContent = 'Geology data is not available in this build.';
-      toggle.disabled = true;
+      layer.disable('not in this build');
+      source.textContent = 'Geology data is not available in this build.';
       console.warn('Geology layer not loaded:', err);
     }
   }
 
-  if (map.isStyleLoaded()) load();
-  else map.once('load', load);
+  onStyleReady(map, load);
 
   return {
+    kind: 'sgmc',
     // Geology unit under a screen point, if the layer is on.
     unitAt(point) {
       if (!state.visible || !map.getLayer('geology-fill')) return null;
       return map.queryRenderedFeatures(point, { layers: ['geology-fill'] })[0] ?? null;
+    },
+    card(feature, lng, lat, records = []) {
+      return sgmcCard({ props: feature.properties, meta: state.meta, records, lng, lat });
     },
     describe(feature) {
       const p = feature.properties;

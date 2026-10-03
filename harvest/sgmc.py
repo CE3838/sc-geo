@@ -1,7 +1,10 @@
 """Harvest South Carolina units from the USGS State Geologic Map Compilation.
 
 Downloads the SGMC polygons for one state from an ArcGIS FeatureServer, page
-by page, and writes GeoJSON plus a metadata file for the web viewer.
+by page, and writes GeoJSON plus a metadata file for the web viewer. Then
+downloads the state's structure lines (faults, shear zones; the
+SGMC_Structure layer) the same way into sgmc-faults-<state>.geojson; a
+failure there is logged and leaves the polygons in place.
 
 The job is resumable: each page is saved under the checkpoint directory and
 skipped on the next run, so a failed run picks up where it stopped. The
@@ -230,7 +233,7 @@ def _harvest_from(url, state, ckpt_root, fetch, headers, log):
         features.extend(page["features"])
     if len(features) != count:
         raise RuntimeError(f"got {len(features)} features, expected {count}")
-    return features, oid_field, count, ckpt
+    return features, oid_field, count, ckpt, layer
 
 
 def _units_table(url: str, state: str, fetch: Fetch, headers: dict) -> dict[str, dict]:
@@ -253,7 +256,7 @@ def run(urls: list[str], state: str, out_dir: Path, checkpoint_dir: Path,
     last_error: Exception | None = None
     for url in urls:
         try:
-            raw, oid_field, count, ckpt = _harvest_from(url, state, Path(checkpoint_dir), fetch, headers, log)
+            raw, oid_field, count, ckpt, _ = _harvest_from(url, state, Path(checkpoint_dir), fetch, headers, log)
             break
         except (OSError, RuntimeError, KeyError, ValueError) as err:
             # Never echo headers here; they carry the contact email.
@@ -297,6 +300,116 @@ def run(urls: list[str], state: str, out_dir: Path, checkpoint_dir: Path,
     return meta
 
 
+# --- structure lines (faults, shear zones, folds) ----------------------------
+
+_CERTAINTY = [("concealed", "concealed"), ("approximat", "approximate"), ("inferred", "inferred"),
+              ("certain", "certain")]
+_KINDS = [("thrust", "thrust fault"), ("shear zone", "shear zone"), ("fault", "fault"),
+          ("anticline", "fold"), ("syncline", "fold"), ("monocline", "fold"), ("fold", "fold"),
+          ("contact", "contact"), ("dike", "dike"), ("sill", "dike"), ("vein", "dike")]
+
+
+def _first(text: str, table: list[tuple[str, str]]) -> str | None:
+    return next((value for term, value in table if term in text), None)
+
+
+def structure_class(description: str | None, rule: str | None) -> dict:
+    """Line kind, location certainty and whether it is queried, read from the
+    SGMC description and representation rule (e.g. 'Fault, unknown type,
+    approximate'). The description names the kind more precisely (SGMC draws
+    SC thrusts with the generic fault rule); the rule states the certainty.
+    Unstated certainty counts as 'certain', as drawn on the source map."""
+    desc, rule_l = (description or "").lower(), (rule or "").lower()
+    text = f"{desc} {rule_l}"
+    kind = _first(desc, _KINDS) or _first(rule_l, _KINDS) or "other"
+    certainty = _first(rule_l, _CERTAINTY) or _first(desc, _CERTAINTY) or "certain"
+    queried = "quer" in text or "?" in text or "questionable" in text
+    return {"kind": kind, "certainty": certainty, "queried": queried}
+
+
+def _rule_names(layer: dict) -> dict:
+    for f in layer.get("fields", []):
+        if f["name"].upper() == "RULEID" and (f.get("domain") or {}).get("codedValues"):
+            return {c["code"]: c["name"] for c in f["domain"]["codedValues"]}
+    return {}
+
+
+def _normalize_structure(feature: dict, oid_field: str, layer_name: str, rules: dict, refs: dict) -> dict:
+    p = feature["properties"]
+    oid = _get(p, oid_field)
+    description = _get(p, "DESCRIPTION")
+    rule = rules.get(_get(p, "RuleID"))
+    reference = _get(p, "REFERENCE")
+    ref = None
+    if reference:
+        ref = next((k for k, v in refs.items() if v == reference), None) or f"R{len(refs) + 1}"
+        refs[ref] = reference
+    read = StoredValue(
+        value={"description": description, "misc": _get(p, "MISC"), "rule": rule, "ref": ref,
+               "ngmdb": _get(p, "NGMDB1")},
+        source_id=f"{SOURCE_ID}:structure", page=None, locator=f"{layer_name} {oid_field}={oid}",
+        extraction_method=ExtractionMethod.GIS_IMPORT, confidence=1.0)
+    # Kind, certainty and queried are read out of free text: an inference.
+    derived = StoredValue(value=structure_class(description, rule), source_id=read.source_id, page=None,
+                          locator=read.locator, extraction_method=ExtractionMethod.INFERENCE,
+                          confidence=0.9, inferred=True)
+    props = {k: v for k, v in read.value.items() if v is not None}
+    props.update(derived.value)
+    props.update(source_id=read.source_id, locator=read.locator, extraction_method=read.extraction_method.value,
+                 confidence=read.confidence, classes_inferred=derived.inferred)
+    return {"type": "Feature", "geometry": feature["geometry"], "properties": props}
+
+
+def run_structure(urls: list[str], state: str, out_dir: Path, checkpoint_dir: Path,
+                  fetch: Fetch = http_fetch, log: Callable[..., None] = print) -> dict:
+    """Structure lines for one state into sgmc-faults-<state>.geojson (resumable, like run)."""
+    headers = _contact_headers()
+    last_error: Exception | None = None
+    for url in urls:
+        try:
+            raw, oid_field, count, ckpt, layer = _harvest_from(url, state, Path(checkpoint_dir), fetch, headers, log)
+            break
+        except (OSError, RuntimeError, KeyError, ValueError) as err:
+            # Never echo headers here; they carry the contact email.
+            log(f"{url} failed: {type(err).__name__}: {err}")
+            last_error = err
+    else:
+        raise last_error or RuntimeError("no structure service URLs given")
+    rules, refs = _rule_names(layer), {}
+    layer_name = layer.get("name") or "structure"
+    features = [_normalize_structure(f, oid_field, layer_name, rules, refs) for f in raw if f.get("geometry")]
+    meta = {
+        "source_id": SOURCE_ID,
+        "layer": layer_name,
+        "state": state,
+        "source_url": url,
+        "retrieved_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "count": count,
+        "references": refs,
+        "classes": {
+            "kind": "From DESCRIPTION, else the representation rule; inferred",
+            "certainty": "From the representation rule, else DESCRIPTION; unstated = certain; inferred",
+            "queried": "'queried', '?' or 'questionable' in either; inferred",
+        },
+    }
+    out = Path(out_dir) / f"sgmc-faults-{state.lower()}.geojson"
+    _write_json(out, {"type": "FeatureCollection", "meta": meta, "features": features})
+    shutil.rmtree(ckpt, ignore_errors=True)
+    log(f"wrote {len(features)} structure lines to {out}")
+    return meta
+
+
+def harvest_all(src: dict, state: str, out_dir: Path, checkpoint_dir: Path,
+                log: Callable[..., None] = print) -> None:
+    """Polygons (required), then structure lines (optional: a failure is logged)."""
+    run(src["feature_services"], state, out_dir, checkpoint_dir, log=log, units_tables=src.get("units_tables"))
+    if src.get("structure_services"):
+        try:
+            run_structure(src["structure_services"], state, out_dir, Path(checkpoint_dir) / "structure", log=log)
+        except (OSError, RuntimeError, KeyError, ValueError) as err:
+            log(f"faults not harvested: {type(err).__name__}: {err}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--state", default="SC")
@@ -304,8 +417,7 @@ def main() -> None:
     parser.add_argument("--checkpoints", type=Path, default=ROOT / ".checkpoints" / "sgmc")
     args = parser.parse_args()
     sources = json.loads((ROOT / "config" / "sources.json").read_text())
-    src = sources[SOURCE_ID]
-    run(src["feature_services"], args.state, args.out, args.checkpoints, units_tables=src.get("units_tables"))
+    harvest_all(sources[SOURCE_ID], args.state, args.out, args.checkpoints)
 
 
 if __name__ == "__main__":
