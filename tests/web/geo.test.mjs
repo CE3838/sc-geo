@@ -26,28 +26,39 @@ test('SC_BOUNDS contains Charleston', () => {
   assert.ok(w < -79.93 && -79.93 < e && s < 32.78 && 32.78 < n);
 });
 
-import { NAIP_SOURCES, fillBbox, mercatorBbox, shouldFallBack } from '../../web/geo.js';
+import { NAIP_SOURCES, fillTile, shouldFallBack, tileBbox3857, tileForLngLat } from '../../web/geo.js';
 
-test('NAIP_SOURCES are https templates with a bbox placeholder', () => {
+test('NAIP_SOURCES are https tile templates', () => {
   assert.ok(NAIP_SOURCES.length >= 2);
   for (const s of NAIP_SOURCES) {
     assert.match(s.url, /^https:\/\//);
-    assert.ok(s.url.includes('{bbox-epsg-3857}'), s.id);
+    const bbox = s.url.includes('{bbox-epsg-3857}');
+    const xyz = ['{z}', '{x}', '{y}'].every((p) => s.url.includes(p));
+    assert.ok(bbox || xyz, s.id);
     assert.ok(s.attribution);
   }
   assert.equal(new Set(NAIP_SOURCES.map((s) => s.id)).size, NAIP_SOURCES.length);
 });
 
-test('fillBbox substitutes the placeholder', () => {
-  assert.equal(fillBbox('a?bbox={bbox-epsg-3857}&x=1', [1, 2, 3, 4]), 'a?bbox=1,2,3,4&x=1');
+test('tileForLngLat matches the standard slippy-map scheme', () => {
+  assert.deepEqual(tileForLngLat(0, 0, 1), { x: 1, y: 1, z: 1 });
+  assert.deepEqual(tileForLngLat(-179.9, 85, 2), { x: 0, y: 0, z: 2 });
+  // Downtown Charleston at z16.
+  assert.deepEqual(tileForLngLat(-79.93, 32.78, 16), { x: 18217, y: 26445, z: 16 });
 });
 
-test('mercatorBbox projects lon/lat to EPSG:3857 meters', () => {
-  const [x0, y0, x1, y1] = mercatorBbox([-180, 0, 0, 0]);
-  assert.ok(Math.abs(x0 + 20037508.34) < 1);
-  for (const v of [x1, y0, y1]) assert.ok(Math.abs(v) < 1e-6);
-  const [, cy] = mercatorBbox([-79.93, 32.78, -79.92, 32.79]);
-  assert.ok(Math.abs(cy - 3866000) < 2000);
+test('tileBbox3857 gives the tile extent in Web Mercator meters', () => {
+  const [w, s, e, n] = tileBbox3857({ x: 0, y: 0, z: 1 });
+  const half = 20037508.342789244;
+  assert.ok(Math.abs(w + half) < 1e-6 && Math.abs(n - half) < 1e-6);
+  assert.ok(Math.abs(e) < 1e-6 && Math.abs(s) < 1e-6);
+});
+
+test('fillTile fills bbox and xyz placeholders', () => {
+  const t = { x: 1, y: 0, z: 1 };
+  assert.equal(fillTile('t/{z}/{y}/{x}', t), 't/1/0/1');
+  const [w, s, e, n] = fillTile('b={bbox-epsg-3857}', t).slice(2).split(',').map(Number);
+  assert.ok(Math.abs(w) < 1e-6 && Math.abs(s) < 1e-6 && e > 2e7 && n > 2e7);
 });
 
 test('shouldFallBack only after repeated errors with no loaded tiles', () => {
