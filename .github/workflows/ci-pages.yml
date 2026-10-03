@@ -25,7 +25,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - run: pip install "pytest>=8"
+      - run: pip install "pytest>=8" "shapely>=2"
       - run: python -m pytest
       - run: node --test "tests/web/*.test.mjs"
 
@@ -33,7 +33,7 @@ jobs:
     needs: test
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     permissions:
       pages: write
       id-token: write
@@ -51,6 +51,7 @@ jobs:
           path: |
             web/data/geology
             .checkpoints/sgmc
+            .cache/normalized
           key: sgmc-${{ github.run_id }}
           restore-keys: sgmc-
       - name: Harvest SGMC geology
@@ -58,10 +59,18 @@ jobs:
         env:
           CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
         run: python -m harvest.sgmc
+      - name: Build merged geology (all GIS sources)
+        continue-on-error: true
+        env:
+          CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
+        run: |
+          pip install "shapely>=2"
+          python -m merge.build
       - name: Check geology data
         run: |
           if [ -s web/data/geology/sgmc-sc.geojson ]; then
             ls -l web/data/geology
+            test -s web/data/geology/merged-surficial.geojson || echo "::warning::No merged geology; the viewer falls back to SGMC"
           else
             echo "::warning::No geology data; deploying without it"
           fi
