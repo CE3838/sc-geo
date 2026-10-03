@@ -1,0 +1,49 @@
+{
+  "_comment": "Settings for harvest/pdfs.py and extract/*. Secrets (CONTACT_EMAIL) come from the environment, never from here.",
+  "user_agent": "sc-geo-harvest/0.1 (+https://github.com/wyatt0119-tech/sc-geo)",
+  "workers": 4,
+  "request_pause_seconds": 0.25,
+  "timeout_seconds": 300,
+  "ftp_timeout_seconds": 30,
+  "max_pdf_mb": 200,
+  "max_files_per_document": 12,
+  "ngmdb_scan_formats": [2, 3],
+  "min_text_chars_per_page": 25,
+  "ocr": {
+    "enabled": true,
+    "language": "eng",
+    "tesseract_timeout_seconds": 900,
+    "fallback_dpi": 300
+  },
+  "packet_max_tokens": 40000,
+  "chars_per_token": 4,
+  "verify_sample_fraction": 0.1,
+  "coastal_plain": {
+    "_comment": "Approximate SC Fall Line (lon, lat), west to east. A record whose bounding-box centre lies south-east of this line is ordered as Coastal Plain.",
+    "fall_line": [[-82.05, 33.50], [-81.60, 33.65], [-81.03, 34.00], [-80.50, 34.30], [-79.88, 34.75]]
+  },
+  "pilot_overlap": {
+    "_comment": "A record is ordered with the pilot area when its bbox intersects the pilot bbox and either covers at most this many times the pilot area, or at least this share of the record lies inside the pilot bbox.",
+    "max_area_ratio": 4.0,
+    "min_share_inside": 0.25
+  },
+  "confidence": {
+    "agency_or_journal": 0.85,
+    "other_publisher": 0.7,
+    "draft": 0.6,
+    "ocr_factor": 0.9,
+    "fuzzy_quote_factor": 0.85,
+    "inferred_factor": 0.8,
+    "verify_agree": 1.0,
+    "verify_unchecked": 0.85,
+    "verify_unclear": 0.7,
+    "verify_disagree": 0.4
+  },
+  "trusted_publishers": [
+    "U.S. Geological Survey", "USGS", "South Carolina Geological Survey", "South Carolina Division of Geology",
+    "SCGS", "STATEMAP", "Geological Society of America", "American Association of Petroleum Geologists",
+    "Carolina Geological Society", "American Journal of Science", "North Carolina Geological Survey",
+    "Environmental Protection Division, Georgia Department of Natural Resources", "Geological Survey of Canada",
+    "South Carolina Department of Natural Resources", "South Carolina Water Resources Commission"
+  ]
+}
