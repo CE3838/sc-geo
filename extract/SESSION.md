@@ -25,61 +25,70 @@ back until it can be OCRed, because reading only its text part would mark it
 done with the map missing. `next_batch` reports such documents as
 `skip ... needs OCR`.
 
-## 1. Pick the documents
+## 1. Pick the packets
 
 ```sh
 python -m extract.next_batch --n 5 --max-tokens 250000
 ```
 
-This prints, in priority order (Charleston County first), up to 5 pending
-documents: the packet files to read and where to write each result. It
-downloads PDFs and builds text and packets as needed, which can take a few
-minutes. Documents with no open full text or only unreadable scans are
+This hands out packets, not just whole documents. Documents an earlier
+session started but did not finish come FIRST (marked `continue`), with only
+their unread packets; then new documents in priority order (Charleston County
+first). Packets are added until about 250k tokens. A long document may be
+handed out only in part (`N left after this`); the rest comes next session.
+It downloads, OCRs and builds packets as needed, which can take a few
+minutes. Documents with no open full text, or scans that still need OCR, are
 skipped and listed in the output.
 
-## 2. Read each document
+Finish documents you start: work through the packets in the order printed,
+and do not run `next_batch` again for new documents until every packet it gave
+you is ingested.
 
-For each document, in order:
+## 2. Read each packet
+
+For each packet, in order:
 
 1. Read `extract/prompts/extract.md` (once per session) and `extract/schema.json`.
-2. Read every packet file listed for the document, completely.
-3. Write the result JSON to the `write:` path shown
-   (`.cache/results/<id>.json`). For a document with several packets you may
-   write one file per packet (`<id>.p1.json`, `<id>.p2.json`, ...), all with
-   the same `source_id`.
+2. Read the packet file completely.
+3. Write the result JSON to its `write:` path
+   (`.cache/results/<id>.<packet>.json`), with `"packets": ["<packet>"]`.
 4. Check it:
 
    ```sh
    python -c "import json,sys; from extract import schema; \
-     errs = schema.validate(json.load(open(sys.argv[1]))); print('\n'.join(errs) or 'ok')" .cache/results/<id>.json
+     errs = schema.validate(json.load(open(sys.argv[1]))); print('\n'.join(errs) or 'ok')" .cache/results/<id>.<packet>.json
    ```
 
    Fix any schema errors.
 
 ## 3. Second pass (verify)
 
-For each document:
+For each packet result:
 
 ```sh
-python -m extract.ingest .cache/results/<id>.json --plan-verify > .cache/results/<id>.plan.json
+python -m extract.ingest .cache/results/<id>.<packet>.json --plan-verify > .cache/results/<id>.<packet>.plan.json
 ```
 
 Then follow `extract/prompts/verify.md`: re-read the cited pages for every
 value in the plan, independently of your first reading, and write
-`.cache/results/<id>.verify.json`.
+`.cache/results/<id>.<packet>.verify.json`.
 
 ## 4. Ingest
 
 ```sh
-python -m extract.ingest .cache/results/<id>.json --verify .cache/results/<id>.verify.json
+python -m extract.ingest .cache/results/<id>.<packet>.json --verify .cache/results/<id>.<packet>.verify.json
 ```
 
-(List every part file if you wrote several.) Ingest refuses results that do
-not match the schema; fix and rerun. It prints a summary: values, stored,
-quote matches, values not found, review items. If more than a quarter of the
+Ingest each packet as soon as it is verified, so the work is saved even if
+the session ends early. It merges the packet into `data/extracted/<id>.json`
+(values from earlier packets are kept; exact duplicates are dropped), records
+which packets are done (`blocks_done`), and sets `"complete": true` once every
+packet of the document is in. It refuses results that do not match the
+schema; fix and rerun. It prints a summary: values, stored, quote matches,
+values not found, review items, and `complete`. If more than a quarter of the
 values were not found on their pages, re-read the packet: you probably
 paraphrased instead of quoting, or cited the wrong page. Fix the result and
-ingest again (re-ingesting replaces the earlier output for that document).
+ingest it again (re-ingesting a packet replaces that packet's values).
 
 ## 5. Test and commit
 
@@ -87,7 +96,7 @@ ingest again (re-ingesting replaces the earlier output for that document).
 python -m pytest -q
 git status --short          # only data/extracted/ and data/review/ may change
 git add data/extracted data/review
-git commit -m "Extract <n> documents: <ids>"
+git commit -m "Extract <ids> (<n> packets; <ids still in progress>)"
 ```
 
 Never `git add` anything under `.cache/` or any `.pdf`, `.txt` or packet file.
@@ -95,13 +104,16 @@ Never `git add` anything under `.cache/` or any `.pdf`, `.txt` or packet file.
 ## 6. Open a pull request
 
 Push the branch and open a PR titled `Extracted values: <ids>`. In the body,
-for each document give: the citation, pages read, values stored, values
+for each document give: the citation, packets read (and whether the document
+is now complete or still in progress), values stored, values
 verified (agree/disagree/unclear), values sent to review, and anything odd
 (garbled OCR, skipped references). End the body with the attribution lines
 your session instructions give.
 
 ## Budget
 
-A packet is at most ~40k tokens. Stop starting new documents when the session
-is close to its limits; an unfinished document simply stays pending and is
-picked up next time (nothing is written to `data/` until ingest).
+A packet is at most ~40k tokens. Stop taking new packets when the session is
+close to its limits. Packets already ingested are saved in
+`data/extracted/<id>.json` (with `"complete": false`) and the next session
+continues the document from the first unread packet; a packet read but not
+ingested is simply read again next time.

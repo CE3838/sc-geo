@@ -43,6 +43,25 @@ Where things live:
 - `data/review/needs_access.json`: records with no open full text, metadata
   only, for library access (committed).
 
+## Long documents: packet by packet
+
+Every document is read in full (only blank, contents, index and needs-OCR pages
+are left out). A long document is split into packets of about 40k tokens and
+may be read over several sessions:
+
+- Each packet lists stable block ids: `"12"` for a whole page, `"13.2/3"` for
+  part 2 of 3 of page 13. Block ids do not depend on packet numbering, so a
+  fresh session that rebuilds the packets still lines up with earlier work.
+- `next_batch` hands out packets within `--max-tokens`, documents already
+  started first, and only their unread packets.
+- A result names the packet(s) it covers. `ingest` merges it into
+  `data/extracted/<id>.json`: earlier values are kept, except values on the
+  pages being re-read (so re-ingesting a packet replaces it); values with the
+  same field, page and quote as one already stored are dropped. It records
+  `blocks_done` and sets `"complete": true` when every block is in; only then
+  is the document marked done. A result without `packets` covers the whole
+  document. Files written before this (no `complete` key) count as complete.
+
 ## Quote verification
 
 Every value must quote the page it cites. `ingest.find_quote` normalizes both

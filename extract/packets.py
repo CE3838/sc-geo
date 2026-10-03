@@ -56,9 +56,19 @@ def header(record: dict, doc: dict, part: int | None = None, of: int | None = No
     return "\n".join(lines)
 
 
-def _blocks(doc: dict, budget: int) -> tuple[list[tuple[int, str]], dict]:
+def block_page(block: str) -> int:
+    """Page number of a block id: '12' (a whole page) or '13.2/3' (part 2 of 3 of page 13)."""
+    return int(str(block).split(".", 1)[0])
+
+
+def is_part(block: str) -> bool:
+    return "." in str(block)
+
+
+def _blocks(doc: dict, budget: int) -> tuple[list[tuple[int, str, str]], dict]:
+    """(page, block id, text) for every kept page or page part, and the skipped pages by kind."""
     n_pages = len(doc["pages"])
-    blocks: list[tuple[int, str]] = []
+    blocks: list[tuple[int, str, str]] = []
     skipped: dict[str, list[int]] = defaultdict(list)
     for p in doc["pages"]:
         t = triage.classify(p.get("text", ""), p["page"], n_pages, method=p.get("method", "pdf_text"))
@@ -69,7 +79,7 @@ def _blocks(doc: dict, budget: int) -> tuple[list[tuple[int, str]], dict]:
         method = p.get("method", "pdf_text")
         head = f"\n=== PAGE {p['page']} ({method}) ===\n"
         if len(head) + len(text) + 1 <= budget:
-            blocks.append((p["page"], head + text + "\n"))
+            blocks.append((p["page"], str(p["page"]), head + text + "\n"))
             continue
         room = budget - len(head) - 40
         pieces, rest = [], text
@@ -79,7 +89,8 @@ def _blocks(doc: dict, budget: int) -> tuple[list[tuple[int, str]], dict]:
             pieces.append(rest[:cut])
             rest = rest[cut:].lstrip("\n")
         for i, piece in enumerate(pieces, 1):
-            blocks.append((p["page"], f"\n=== PAGE {p['page']} ({method}, part {i} of {len(pieces)}) ===\n{piece}\n"))
+            blocks.append((p["page"], f"{p['page']}.{i}/{len(pieces)}",
+                           f"\n=== PAGE {p['page']} ({method}, part {i} of {len(pieces)}) ===\n{piece}\n"))
     return blocks, dict(skipped)
 
 
@@ -87,21 +98,22 @@ def build(doc: dict, record: dict, max_tokens: int = 40000, chars_per_token: flo
     limit = int(max_tokens * chars_per_token)
     head_room = len(header(record, doc, 99, 99)) + 10
     blocks, skipped = _blocks(doc, limit - head_room)
-    groups: list[list[tuple[int, str]]] = [[]]
+    groups: list[list[tuple[int, str, str]]] = [[]]
     size = 0
-    for page, text in blocks:
+    for page, block, text in blocks:
         if groups[-1] and size + len(text) > limit - head_room:
             groups.append([])
             size = 0
-        groups[-1].append((page, text))
+        groups[-1].append((page, block, text))
         size += len(text)
     if not groups[-1]:
         groups.pop()
     out = []
     for i, g in enumerate(groups, 1):
-        text = header(record, doc, i, len(groups)) + "".join(t for _, t in g)
+        text = header(record, doc, i, len(groups)) + "".join(t for _, _, t in g)
         out.append({"source_id": record["id"], "packet": f"packet-{i:02d}", "of": len(groups),
-                    "pages": sorted({p for p, _ in g}), "skipped": skipped, "text": text,
+                    "pages": sorted({p for p, _, _ in g}), "blocks": [b for _, b, _ in g],
+                    "skipped": skipped, "text": text,
                     "estimated_tokens": int(len(text) / chars_per_token)})
     return out
 
@@ -117,8 +129,9 @@ def write(packets: list[dict], record: dict, cache: Path = CACHE) -> list[Path]:
         path.write_text(p["text"])
         paths.append(path)
     index = {"source_id": record["id"], "citation": record.get("citation"), "title": record.get("title"),
-             "packets": [{"file": f"{p['packet']}.md", "pages": p["pages"], "estimated_tokens": p["estimated_tokens"]}
-                         for p in packets],
+             "packets": [{"file": f"{p['packet']}.md", "pages": p["pages"], "blocks": p["blocks"],
+                          "estimated_tokens": p["estimated_tokens"]} for p in packets],
+             "blocks": [b for p in packets for b in p["blocks"]],
              "skipped": packets[0]["skipped"] if packets else {},
              "estimated_tokens": sum(p["estimated_tokens"] for p in packets)}
     (d / "index.json").write_text(json.dumps(index, indent=1))
