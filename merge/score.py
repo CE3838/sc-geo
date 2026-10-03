@@ -16,7 +16,7 @@ import re
 from model.units import Lexicon, age_overlap, age_range
 
 _SCALE_STEPS = [(24000, 0.95), (62500, 0.9), (100000, 0.85), (250000, 0.7), (500000, 0.55), (1000000, 0.45)]
-_SURFICIAL = re.compile(r"sediment|made|human|water|unconsolidated|regolith|residu|alluvi|colluvi|eolian|marsh|peat|"
+_SURFICIAL = re.compile(r"sediment(?!ary)|made|human|water|unconsolidated|regolith|residu|alluvi|colluvi|eolian|marsh|peat|"
                         r"fill|sand|gravel|clay|mud|beach|dune", re.I)
 _BEDROCK = re.compile(r"rock|granit|metamorph|igneous|gneiss|schist|volcanic|plutonic|intrusive|mylonit", re.I)
 
@@ -44,7 +44,7 @@ def layer(u: dict) -> str:
     """'surficial' for sediments and other unconsolidated material, else 'bedrock' (inferred)."""
     gm = u.get("geomaterial") or ""
     if gm:
-        if _BEDROCK.search(gm) and not re.search(r"sediment", gm, re.I):
+        if _BEDROCK.search(gm) and not re.search(r"sediment(?!ary)", gm, re.I):
             return "bedrock"
         if _SURFICIAL.search(gm):
             return "surficial"
