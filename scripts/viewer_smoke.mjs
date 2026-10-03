@@ -36,7 +36,16 @@ try {
 
   // Block bodies that return nothing: jumpTo() returns the map, and
   // Playwright would try to serialize the whole MapLibre object into Node.
-  const jumpTo = (view) => page.evaluate((v) => { window.scGeo.map.jumpTo(v); }, view);
+  // Move the map and wait until it has drawn the new view (areTilesLoaded()
+  // can still be true from the old view right after a jump). Returns nothing,
+  // so Playwright never copies the map object into Node.
+  const jumpTo = (view) => page.evaluate((v) => new Promise((resolve) => {
+    const { map } = window.scGeo;
+    const done = () => { clearTimeout(timer); resolve(); };
+    const timer = setTimeout(() => { map.off('idle', done); resolve(); }, 20000);
+    map.once('idle', done);
+    map.jumpTo(v);
+  }), view);
   // Screen point (page coordinates) of a lon/lat.
   const screenPoint = (lngLat) => page.evaluate((ll) => {
     const p = window.scGeo.map.project(ll);
