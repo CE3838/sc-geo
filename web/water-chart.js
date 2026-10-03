@@ -73,7 +73,7 @@ const fmt = (v) => v.toFixed(1);
 // `invert` draws larger values lower (depth to water: deeper is down).
 export function chartModel(points, {
   width, height, t0, t1, invert = false, utc = false,
-  margin = { top: 10, right: 12, bottom: 24, left: 48 },
+  margin = { top: 18, right: 12, bottom: 24, left: 44 },
 } = {}) {
   const valid = points.filter((p) => p.v !== null && Number.isFinite(p.v));
   const base = { margin, width, height, inverted: invert };

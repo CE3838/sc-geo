@@ -25,7 +25,8 @@ export const WATER_PARAMS = {
   '62611': { label: 'Groundwater level above NAVD88', kind: 'level' },
   '00060': { label: 'Discharge', kind: 'discharge' },
 };
-export const PARAM_CODES = Object.keys(WATER_PARAMS);
+// In this order (Object.keys would put integer-like codes such as 62615 first).
+export const PARAM_CODES = ['00065', '63160', '62614', '62615', '62619', '62620', '72279', '72019', '62610', '62611', '00060'];
 
 // Which reading leads for each kind of station.
 export const PRIORITY = {
@@ -43,10 +44,10 @@ export const STATION_TYPES = {
 };
 
 export const STATUS_TEXT = {
-  current: 'Reading in the last 3 hours',
-  delayed: 'Last reading 3 hours to 3 days old',
-  stale: 'Last reading more than 3 days old',
-  issue: 'No value (equipment, ice, maintenance…)',
+  current: 'Reading within 3 h',
+  delayed: 'Last reading 3 h–3 days',
+  stale: 'Older than 3 days',
+  issue: 'No value (ice, equipment…)',
 };
 
 // Qualifier codes: the OGC API's words and the legacy service's short codes.

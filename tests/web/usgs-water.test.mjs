@@ -219,6 +219,12 @@ test('stationPageUrl links to the Water Data for the Nation page', () => {
   assert.throws(() => stationPageUrl('x/../y'), RangeError);
 });
 
+test('PARAM_CODES lists every parameter once, levels before discharge', () => {
+  assert.deepEqual([...PARAM_CODES].sort(), Object.keys(WATER_PARAMS).sort());
+  assert.equal(PARAM_CODES[0], '00065');
+  assert.equal(PARAM_CODES.at(-1), '00060');
+});
+
 test('every parameter has a label; depth to water is drawn with an inverted axis', () => {
   for (const code of PARAM_CODES) assert.ok(WATER_PARAMS[code].label, code);
   assert.equal(WATER_PARAMS['72019'].invert, true);
