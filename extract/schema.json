@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/CE3838/sc-geo/extract/schema.json",
+  "title": "One document's extraction, written by the reading model",
+  "description": "Every value is an object with the value as stated, the page it is on, a short verbatim quote from that page, and whether it was inferred. A field the source does not give is omitted or written as the string \"not stated\". The model never assigns confidence; sc-geo computes it at ingest.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "source_id", "units", "observations", "structures", "groundwater", "references"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "source_id": {"type": "string", "minLength": 1, "description": "Catalog id, e.g. ngmdb:10009"},
+    "packets": {"type": "array", "items": {"type": "string"}, "description": "Packet files read for this result"},
+    "reader": {"type": "string", "description": "Who read it (model and session), free text"},
+    "notes": {"type": "string", "maxLength": 2000, "description": "Anything the reader wants a reviewer to know"},
+    "units": {"type": "array", "items": {"$ref": "#/$defs/unit"}},
+    "observations": {"type": "array", "items": {"$ref": "#/$defs/observation"}},
+    "structures": {"type": "array", "items": {"$ref": "#/$defs/structure"}},
+    "groundwater": {"type": "array", "items": {"$ref": "#/$defs/groundwater"}},
+    "references": {"type": "array", "items": {"$ref": "#/$defs/reference"}}
+  },
+  "$defs": {
+    "value": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "page", "quote", "inferred"],
+      "properties": {
+        "value": {"type": ["string", "number", "boolean", "null"], "description": "As stated in the source, in the source's own words and units"},
+        "page": {"type": "integer", "minimum": 1, "description": "Page number as labelled in the packet (=== PAGE n ===)"},
+        "quote": {"type": "string", "minLength": 1, "maxLength": 400, "description": "Short verbatim text from that page that shows the value"},
+        "inferred": {"type": "boolean", "description": "true when the value was reasoned out rather than read directly"},
+        "units": {"type": "string", "maxLength": 40, "description": "Measurement units when stated separately from the value (e.g. a table header)"},
+        "table": {"type": "boolean", "description": "true when read from a table or log"},
+        "note": {"type": "string", "maxLength": 300}
+      }
+    },
+    "field": {"anyOf": [{"$ref": "#/$defs/value"}, {"const": "not stated"}]},
+    "unit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name"],
+      "properties": {
+        "map_symbol": {"$ref": "#/$defs/field"},
+        "name": {"$ref": "#/$defs/field"},
+        "rank": {"$ref": "#/$defs/field"},
+        "group": {"$ref": "#/$defs/field"},
+        "age": {"$ref": "#/$defs/field"},
+        "description": {"$ref": "#/$defs/field"},
+        "lithology": {"$ref": "#/$defs/field"},
+        "thickness": {"$ref": "#/$defs/field"},
+        "contacts": {"$ref": "#/$defs/field"},
+        "depositional_environment": {"$ref": "#/$defs/field"},
+        "fossils": {"$ref": "#/$defs/field"}
+      }
+    },
+    "interval": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "top": {"$ref": "#/$defs/field"},
+        "bottom": {"$ref": "#/$defs/field"},
+        "unit": {"$ref": "#/$defs/field"},
+        "description": {"$ref": "#/$defs/field"},
+        "uscs": {"$ref": "#/$defs/field"},
+        "munsell": {"$ref": "#/$defs/field"},
+        "spt_n": {"$ref": "#/$defs/field"},
+        "liquid_limit": {"$ref": "#/$defs/field"},
+        "plasticity_index": {"$ref": "#/$defs/field"},
+        "moisture_content": {"$ref": "#/$defs/field"}
+      }
+    },
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind"],
+      "properties": {
+        "kind": {"enum": ["boring", "well", "outcrop", "auger_hole", "core", "test_pit", "cpt", "other"]},
+        "label": {"$ref": "#/$defs/field"},
+        "location": {"$ref": "#/$defs/field"},
+        "elevation": {"$ref": "#/$defs/field"},
+        "total_depth": {"$ref": "#/$defs/field"},
+        "date": {"$ref": "#/$defs/field"},
+        "intervals": {"type": "array", "items": {"$ref": "#/$defs/interval"}},
+        "water_level": {"$ref": "#/$defs/field"},
+        "water_level_date": {"$ref": "#/$defs/field"}
+      }
+    },
+    "structure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind"],
+      "properties": {
+        "kind": {"enum": ["fault", "fold", "joint", "bedding", "foliation", "lineation", "lineament", "contact", "other"]},
+        "name": {"$ref": "#/$defs/field"},
+        "fault_type": {"$ref": "#/$defs/field"},
+        "sense": {"$ref": "#/$defs/field"},
+        "certainty": {"$ref": "#/$defs/field"},
+        "strike_dip": {"$ref": "#/$defs/field"},
+        "location": {"$ref": "#/$defs/field"},
+        "age": {"$ref": "#/$defs/field"},
+        "description": {"$ref": "#/$defs/field"}
+      }
+    },
+    "groundwater": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "aquifer": {"$ref": "#/$defs/field"},
+        "role": {"$ref": "#/$defs/field"},
+        "unit": {"$ref": "#/$defs/field"},
+        "head": {"$ref": "#/$defs/field"},
+        "location": {"$ref": "#/$defs/field"},
+        "date": {"$ref": "#/$defs/field"},
+        "transmissivity": {"$ref": "#/$defs/field"},
+        "hydraulic_conductivity": {"$ref": "#/$defs/field"},
+        "description": {"$ref": "#/$defs/field"}
+      }
+    },
+    "reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["citation"],
+      "properties": {"citation": {"$ref": "#/$defs/field"}}
+    }
+  }
+}
