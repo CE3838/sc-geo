@@ -1,4 +1,4 @@
-import { NAIP_SOURCES, SC_BOUNDS, formatCoords, shouldFallBack, streetViewUrl } from './geo.js';
+import { NAIP_SOURCES, SC_BOUNDS, cadEnabled, formatCoords, shouldFallBack, streetViewUrl } from './geo.js';
 import { setupLayerPanel } from './layers.js';
 
 const map = new maplibregl.Map({
@@ -49,7 +49,7 @@ map.on('error', (e) => {
 map.addControl(new maplibregl.NavigationControl(), 'top-right');
 map.addControl(new maplibregl.ScaleControl({ unit: 'imperial' }), 'bottom-left');
 
-const cad = setupLayerPanel(map);
+const cad = cadEnabled(window.location.search) ? setupLayerPanel(map) : null;
 // Handle for debugging and the viewer smoke test (scripts/viewer_smoke.mjs).
 window.scGeo = { map, cad };
 const popup = new maplibregl.Popup({ closeOnClick: false, maxWidth: '280px' });
@@ -90,7 +90,7 @@ map.on('click', (e) => {
     window.open(streetViewUrl(lng, lat), '_blank', 'noopener');
   });
 
-  const [hit] = cad.featuresAt(e.point);
+  const [hit] = cad ? cad.featuresAt(e.point) : [];
   if (hit) content.append(featureInfo(hit));
   content.append(coords, button);
   popup.setLngLat(e.lngLat).setDOMContent(content).addTo(map);
