@@ -100,7 +100,10 @@ images and OCR text are never committed. `ngmdb_images.enabled` turns the
 source off, and `tier_offset: 1` cuts the requests to about a quarter, at
 half resolution. robots.txt is a crawler policy, not a license, but it is a
 clear signal: asking NGMDB (ngmdb@usgs.gov) or SCGS for bulk access to the
-SCGS map images would settle it.
+SCGS map images would settle it. Decision (2026-10-03): the repository owner
+chose to use the images anyway, throttled: `enabled: true`, `tier_offset: 1`
+(half resolution), `tile_workers: 2`, with the harvester's pause between
+requests.
 
 ### OCR text is not published from CI
 
