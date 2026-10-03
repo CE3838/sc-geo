@@ -5,6 +5,7 @@ import {
 import { setupGeology } from './geology-ui.js';
 import { setupMergedGeology } from './merged-ui.js';
 import { setupFaults } from './faults-ui.js';
+import { setupWater } from './water-ui.js';
 import { createSidebar } from './sidebar.js';
 import { setupCard } from './card-ui.js';
 import { confidenceLevel } from './card.js';
@@ -157,6 +158,8 @@ setupMergedGeology(map, sidebar)
     window.scGeo.geology = geology;
   });
 const faults = setupFaults(map, sidebar);
+// USGS water monitoring stations; a click on one opens its chart instead of the callout.
+const water = setupWater(map, sidebar, { phone });
 
 // Catalog records with footprints (merge/references.py), loaded on first use.
 let references = null;
@@ -230,6 +233,11 @@ map.on('click', (e) => {
   if (phone.matches) setDrawer(false);
 
   const item = firstPopupItem(window.scGeo.popupItems, e);
+  if (!item && water.openAt(e)) {
+    popup.remove();
+    if (phone.matches) card.close();
+    return;
+  }
   const unit = geology.unitAt(e.point);
   const fault = faults.faultAt(e.point);
 

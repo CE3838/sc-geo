@@ -191,3 +191,55 @@ body { display: flex; flex-direction: column; overflow: hidden; color: var(--tex
   .status-bar { gap: 2px 12px; padding: 3px 10px; font-size: 11.5px; }
   .status-ll { display: none; }
 }
+
+/* Water monitoring (USGS): Layers key and the station chart panel (water-ui.js). */
+.water-key { margin: 4px 0 2px 23px; font-size: 12px; color: var(--muted); }
+.water-key ul { list-style: none; margin: 0 0 4px; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 2px 8px; }
+.water-key li { display: flex; align-items: center; gap: 5px; }
+.water-key .geo-cite { margin: 2px 0 0; }
+.water-sample { flex: none; }
+.water-dot { flex: none; width: 10px; height: 10px; border-radius: 50%; border: 1px solid rgba(0,0,0,.35); }
+.water-panel {
+  position: absolute; top: 10px; left: 10px; z-index: 3; width: 390px; max-width: calc(100% - 70px); max-height: calc(100% - 20px);
+  display: flex; flex-direction: column; background: var(--panel); border-radius: 8px; box-shadow: 0 4px 18px rgba(0,0,0,.4);
+  font-size: 13px; line-height: 1.45; overflow: hidden;
+}
+.water-panel[hidden] { display: none; }
+.water-body { flex: 1; overflow-y: auto; padding: 10px 14px 14px; }
+.water-latest th { width: 46%; }
+.water-tag {
+  display: inline-block; font-size: 10.5px; padding: 0 5px; border-radius: 3px; margin-right: 3px; white-space: nowrap;
+  background: #e8f0fe; color: #1f4f9a; border: 1px solid #c6d8f7;
+}
+.water-tag-warn { background: #fdecea; color: #8c1d18; border-color: #f4c7c3; }
+.water-controls { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 10px 0 4px; }
+.water-param { font: inherit; font-size: 12px; max-width: 100%; }
+.water-ranges { display: flex; gap: 0; margin-left: auto; }
+.water-range { font-size: 12px; padding: 2px 9px; border-radius: 0; margin-left: -1px; }
+.water-range:first-child { border-radius: 4px 0 0 4px; }
+.water-range:last-child { border-radius: 0 4px 4px 0; }
+.water-range.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+.water-readout { min-height: 1.4em; font-variant-numeric: tabular-nums; font-weight: 600; }
+.water-chart { min-height: 120px; }
+.water-chart .wc { display: block; width: 100%; height: auto; touch-action: none; font-family: inherit; }
+.wc-plot { fill: #fafbfc; }
+.wc-grid { stroke: #e3e7eb; stroke-width: 1; }
+.wc-axis { stroke: #8a949c; stroke-width: 1; }
+.wc-label { font-size: 10px; fill: var(--muted); font-variant-numeric: tabular-nums; }
+.wc-unit { font-size: 10px; fill: var(--muted); }
+.wc-line { fill: none; stroke: #1565c0; stroke-width: 1.6; stroke-linejoin: round; }
+.wc-max, .wc-min { fill: #fff; stroke-width: 1.5; }
+.wc-max { stroke: #b3261e; }
+.wc-min { stroke: #1e7d3a; }
+.wc-mark { font-size: 10px; font-weight: 600; fill: var(--text); paint-order: stroke; stroke: #fff; stroke-width: 3px; }
+.wc-cross { stroke: #5f6b76; stroke-dasharray: 3 2; }
+.wc-dot { fill: #1565c0; stroke: #fff; stroke-width: 1.5; }
+.water-chart-note { color: var(--muted); font-size: 12px; margin-top: 4px; }
+.water-cite { margin: 6px 0 8px; }
+.water-link { display: inline-block; text-decoration: none; }
+@media (max-width: 700px) {
+  .water-panel {
+    top: auto; left: 0; right: 0; bottom: 0; width: auto; max-width: none; max-height: 62%;
+    border-radius: 10px 10px 0 0; box-shadow: 0 -4px 16px rgba(0,0,0,.35); z-index: 4;
+  }
+}
