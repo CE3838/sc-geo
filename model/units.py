@@ -159,6 +159,10 @@ GENERIC = {
     "and", "or", "the", "of", "with", "minor", "interlayered", "porphyritic", "megacrystic", "equigranular",
     "metasedimentary", "metavolcanic", "volcanic", "sedimentary", "unconsolidated", "marine", "estuarine",
     "younger", "older", "lowland", "upland", "floodplain", "channel", "bay", "carolina", "bays", "plutonic",
+    "island", "islands", "facies", "shelf", "fossiliferous", "clayey", "pebbly", "coarse", "fine", "freshwater",
+    "saltmarsh", "salt", "mud", "flat", "flats", "ridge", "ridges", "molluscan", "conglomerate", "fringe", "spoil",
+    "phosphate", "artificial", "back", "lagoon", "inlet", "spit", "overwash", "washover", "nearshore", "offshore",
+    "upper", "basal", "silty", "sandy", "gravelly", "organic", "peat", "muddy",
 }
 
 
