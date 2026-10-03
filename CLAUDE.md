@@ -54,6 +54,12 @@ Guidance for Claude (and humans) working in this repository.
   publication number with provenance. Unit names: `data/lexicon/geolex_sc.json`
   (USGS Geolex). `model/units.py` turns age text into Ma ranges (ICS chart) and
   matches unit names across maps.
+- Viewer (matches the plan's mock-ups): header, Layers and Map units panel,
+  status bar in SC State Plane feet, click callout (elevation from USGS 3DEP
+  EPQS) and a property card: confidence and its "why", cited properties, NRCS
+  SSURGO soil estimates (Soil Data Access, live) and key references
+  (`merge/references.py` → `web/data/geology/references.json`). Faults and
+  shear zones come from the SGMC structure layer (`harvest/sgmc.py`).
 - Goal: merge all sources into one GeMS-aligned result. Where maps overlap,
   the most detailed and recent map wins; confidence comes from scale, the
   mapper's identity confidence, agreement among other maps and published
