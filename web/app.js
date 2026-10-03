@@ -7,6 +7,14 @@ import { setupLayerPanel } from './layers.js';
 const BACKGROUND = '#1b1f23';
 // A touch more contrast; NAIP tends to look flat on screen.
 const RASTER_PAINT = { 'raster-contrast': 0.1, 'raster-fade-duration': 150 };
+// The cached imagery is dark and dull at state scale: lift shadows and add
+// a little color there, easing back to neutral by street scale.
+const OVERVIEW_PAINT = {
+  ...RASTER_PAINT,
+  'raster-brightness-min': ['interpolate', ['linear'], ['zoom'], 6, 0.12, 13, 0],
+  'raster-saturation': ['interpolate', ['linear'], ['zoom'], 6, 0.25, 13, 0],
+  'raster-contrast': ['interpolate', ['linear'], ['zoom'], 6, 0.2, 13, 0.1],
+};
 const OVERVIEW = NAIP_SOURCES.find((s) => s.id === 'usgs-imagery-basemap');
 
 const map = new maplibregl.Map({
@@ -31,7 +39,7 @@ const map = new maplibregl.Map({
     layers: [
       { id: 'background', type: 'background', paint: { 'background-color': BACKGROUND } },
       // Cached imagery: fast at state scale, and shown under NAIP while it loads.
-      { id: 'overview', type: 'raster', source: 'overview', maxzoom: DETAIL_MINZOOM + 2, paint: RASTER_PAINT },
+      { id: 'overview', type: 'raster', source: 'overview', maxzoom: DETAIL_MINZOOM + 2, paint: OVERVIEW_PAINT },
       // Neighboring states are hidden so South Carolina stands alone.
       {
         id: 'mask', type: 'fill', source: 'region',
