@@ -1,0 +1,85 @@
+name: Harvest full text
+
+# The no-model half of document extraction: find legal open full text for
+# every catalog record that is not merged GIS, download it, read page text,
+# OCR scanned pages, and triage pages. Resumable: page text and checkpoints
+# are kept in the Actions cache between runs, so each run continues where the
+# last stopped. PDFs are deleted once read, to stay under the 10 GB cache
+# limit. Nothing here calls a language model; reading happens in
+# scheduled Claude Code sessions (extract/SESSION.md).
+#
+# Only a small status file (queue counts) and data/review/needs_access.json
+# (metadata only) are uploaded. PDFs and page text never leave the cache.
+on:
+  workflow_dispatch:
+    inputs:
+      minutes:
+        description: "Minutes to spend before stopping (60-300)"
+        default: "240"
+      limit:
+        description: "Max documents this run (blank for no limit)"
+        default: ""
+  schedule:
+    - cron: "17 6 * * 1"  # Mondays 06:17 UTC
+
+permissions:
+  contents: read
+
+concurrency:
+  group: extract-pdfs
+  cancel-in-progress: false
+
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330  # under the 6-hour job limit, with room to save the cache
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install poppler, tesseract and OCRmyPDF
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils tesseract-ocr tesseract-ocr-eng ocrmypdf > /dev/null
+          pdftotext -v 2>&1 | head -1
+          ocrmypdf --version
+      - uses: actions/cache/restore@v4
+        with:
+          path: |
+            .cache/text
+            .checkpoints/pdfs
+          key: fulltext-${{ github.run_id }}
+          restore-keys: fulltext-
+      - name: Harvest, read and OCR
+        env:
+          CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
+          MINUTES: ${{ github.event.inputs.minutes || '240' }}
+          LIMIT: ${{ github.event.inputs.limit }}
+        run: |
+          # Clamp the budget to 60-300 minutes.
+          m=$(( MINUTES < 60 ? 60 : (MINUTES > 300 ? 300 : MINUTES) ))
+          args="--max-minutes $m --workers 3 --drop-pdfs"
+          if [ -n "$LIMIT" ]; then args="$args --limit $LIMIT"; fi
+          python -m harvest.pdfs $args
+      - name: Status
+        if: always()
+        run: |
+          mkdir -p status
+          cp .checkpoints/pdfs/status.json status/ 2>/dev/null || echo '{}' > status/status.json
+          cp data/review/needs_access.json status/ 2>/dev/null || true
+          cat status/status.json
+          du -sh .cache/text 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fulltext-status
+          path: status/
+          retention-days: 30
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: |
+            .cache/text
+            .checkpoints/pdfs
+          key: fulltext-${{ github.run_id }}
