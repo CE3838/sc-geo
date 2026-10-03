@@ -1,0 +1,21 @@
+# Never commit source documents or internal data (see CLAUDE.md)
+*.pdf
+*.PDF
+internal/
+sc-geo-internal/
+data/raw/
+data/fulltext/
+
+# Job checkpoints and local state
+.checkpoints/
+*.checkpoint
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+
+# Node / OS
+node_modules/
+.DS_Store

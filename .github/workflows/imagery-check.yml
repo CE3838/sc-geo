@@ -1,0 +1,24 @@
+name: Imagery check
+
+# Confirms the NAIP imagery servers used by web/ return tiles. Kept separate
+# from CI so an outage at USGS or USDA does not block unrelated changes.
+on:
+  pull_request:
+    paths: ["web/**", "scripts/check_imagery.mjs", ".github/workflows/imagery-check.yml"]
+  schedule:
+    - cron: "17 13 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node scripts/check_imagery.mjs
