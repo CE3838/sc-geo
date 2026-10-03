@@ -127,15 +127,18 @@ HOLDINGS = """<script type="text/javascript">var holdings = {"publication":10034
 
 @pytest.fixture
 def images_on(monkeypatch):
-    """The source ships switched off (NGMDB's robots.txt disallows /img*); these tests turn it on."""
+    """Tests that exercise the source turn it on explicitly."""
     monkeypatch.setitem(pdfs.CONFIG["ngmdb_images"], "enabled", True)
 
 
-def test_browse_images_ship_switched_off():
-    assert pdfs.CONFIG["ngmdb_images"]["enabled"] is False
+def test_browse_images_ship_throttled():
+    # robots.txt disallows /img*; the owner chose to use it at half resolution with few workers.
+    cfg = pdfs.CONFIG["ngmdb_images"]
+    assert cfg["tier_offset"] >= 1 and cfg["tile_workers"] <= 2
 
 
-def test_no_browse_images_while_switched_off():
+def test_no_browse_images_while_switched_off(monkeypatch):
+    monkeypatch.setitem(pdfs.CONFIG["ngmdb_images"], "enabled", False)
     rec = {"id": "ngmdb:100343", "title": "Geologic Map of the Rockville Quadrangle", "publisher":
            "South Carolina Geological Survey", "kind": "map", "availability": {"pdf": [], "doi": None, "scgs_ftp": []},
            "ngmdb_url": "https://ngmdb.usgs.gov/Prodesc/proddesc_100343.htm"}
