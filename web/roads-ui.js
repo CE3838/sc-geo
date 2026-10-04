@@ -1,10 +1,10 @@
-// Roads layer: SCDOT road inventory read live for the area on screen
+// Roads layer: US Census Bureau TIGER roads read live for the area on screen
 // (roads.js), drawn above the geology with casings for aerial imagery,
 // route shields and street names, and a row in the Layers panel.
 import { LiveTiles, debounce, fetchAllPages, queryUrl, tileBounds } from './arcgis.js';
 import { LIVE_ON_AT_START } from './live.js';
 import {
-  ROAD_ATTRIBUTION, ROAD_CLICK_LAYER_IDS, ROAD_FIELDS, ROAD_TIERS, describeRoad, normalizeRoad, roadLayers,
+  ROAD_ATTRIBUTION, ROAD_CLICK_LAYER_IDS, ROAD_FIELDS, ROAD_ORDER_BY, ROAD_TIERS, describeRoad, normalizeRoad, roadLayers,
   shieldSpec, tiersForZoom,
 } from './roads.js';
 import { el } from './dom.js';
@@ -94,7 +94,7 @@ export function setupRoads(map, ui) {
     for (const layer of tier.layers) {
       const { features } = await fetchAllPages(fetchJson, (offset) => queryUrl(layer.url, {
         bbox, where: layer.where, outFields: ROAD_FIELDS, offset, count: PAGE,
-        maxAllowableOffset: tier.maxAllowableOffset, precision: tier.precision, orderBy: 'FID',
+        maxAllowableOffset: tier.maxAllowableOffset, precision: tier.precision, orderBy: ROAD_ORDER_BY,
       }), { pageSize: PAGE, maxPages: 5 });
       for (const f of features) if (f.geometry) out.push(normalizeRoad(f, layer.name));
     }
@@ -121,7 +121,7 @@ export function setupRoads(map, ui) {
       errors.push(...r.errors);
     }
     if (errors.length) console.warn('Roads not loaded for part of the view:', errors[0]);
-    row.setNote(errors.length ? ' SCDOT service unavailable' : '');
+    row.setNote(errors.length ? ' road service unavailable' : '');
   }
   const refresh = debounce(() => { update().catch((err) => console.warn('Roads:', err.message)); }, 250);
 

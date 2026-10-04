@@ -74,8 +74,9 @@ Guidance for Claude (and humans) working in this repository.
   SSURGO soil estimates (Soil Data Access, live) and key references
   (`merge/references.py` → `web/data/geology/references.json`). Faults and
   shear zones come from the SGMC structure layer (`harvest/sgmc.py`).
-- Roads: SCDOT road inventory (ArcGIS Online, live, attributed; nothing
-  copied), with route shields and street names (bundled Noto Sans glyphs in
+- Roads: US Census Bureau TIGER/Line roads (TIGERweb Transportation
+  MapServer, Primary/Secondary/Local Roads; public domain, live, attributed;
+  nothing copied), with route shields and street names (bundled Noto Sans glyphs in
   `web/fonts/`). Parcels: county services listed in `config/parcel_registry.json`
   (all 46 counties; `python -m harvest.parcel_registry` checks them), queried
   live from zoom 15; only parcel ID (TMS/PIN), acreage, address and record
