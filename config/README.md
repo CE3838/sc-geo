@@ -12,3 +12,7 @@ viewer queries these services live for the area on screen; parcel data is
 never copied into this repo. `python -m harvest.parcel_registry` re-checks
 each entry and writes the viewer's copy, `web/data/parcel_registry.json`
 (do not edit that copy by hand).
+
+`catalog_scope.json` limits catalog records that are one chapter or note of a
+multi-paper volume (whose PDF is the whole volume) to their own PDF pages;
+see `extract/scope.py`.

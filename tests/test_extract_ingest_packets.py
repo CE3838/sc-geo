@@ -149,6 +149,40 @@ def test_values_from_browse_images_carry_the_image_url_as_locator(tmp_path):
     assert name["locator"] == img and name["page"] == 1 and name["text_method"] == "ocr"
 
 
+SCOPES = {"ngmdb:5": {"pdf_pages": [3, 4], "note": "chapter on pages 3-4"}}
+SCOPED_INDEX = {"source_id": "ngmdb:5", "blocks": ["3", "4"], "scope": {"pages": [3, 4], **SCOPES["ngmdb:5"]},
+                "packets": [{"file": "packet-01.md", "pages": [3, 4], "blocks": ["3", "4"], "estimated_tokens": 30}]}
+
+
+def test_values_outside_the_records_scope_are_refused(env):
+    run, out, kw = env
+    (kw["packets_dir"] / "ngmdb_5" / "index.json").write_text(json.dumps(SCOPED_INDEX))
+    kw["scopes"] = SCOPES
+    with pytest.raises(ingest.IngestError, match="outside"):
+        run(result(["packet-01"], [ASHLEY, WANDO]), "p1")  # Wando is on page 1, another chapter
+    assert not (kw["out_dir"] / "ngmdb_5.json").exists()
+    run(result(["packet-01"], [ASHLEY], [AH1]), "p1")
+    doc = out()
+    assert doc["complete"] is True and doc["blocks_done"] == ["3", "4"] and doc["blocks_total"] == 2
+
+
+def test_scoped_record_without_packets_covers_only_its_pages(env):
+    run, out, kw = env
+    (kw["packets_dir"] / "ngmdb_5" / "index.json").unlink()
+    kw["scopes"] = SCOPES
+    r = result([], [ASHLEY])
+    del r["packets"]
+    run(r, "whole")
+    assert out()["blocks_done"] == ["3", "4"] and out()["complete"] is True
+
+
+def test_packet_index_built_before_the_scope_is_refused(env):
+    run, _, kw = env
+    kw["scopes"] = SCOPES  # index.json is the unscoped one from the fixture
+    with pytest.raises(ingest.IngestError, match="next_batch"):
+        run(result(["packet-02"], [ASHLEY]), "p2")
+
+
 def test_missing_packet_index_needs_next_batch(env, tmp_path):
     run, _, kw = env
     (kw["packets_dir"] / "ngmdb_5" / "index.json").unlink()

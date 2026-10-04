@@ -95,6 +95,9 @@ Guidance for Claude (and humans) working in this repository.
   and stores values as StoredValue (`extraction_method` "llm"). Outputs:
   `data/extracted/`, `data/review/queue.json` (unverified or conflicting
   values), `data/review/needs_access.json` (no open full text).
+  Records that are one chapter of a multi-paper volume PDF are limited to
+  their own pages by `config/catalog_scope.json` (`extract/scope.py`):
+  packets hold only those pages and ingest refuses values citing others.
 - Goal: merge all sources into one GeMS-aligned result. Where maps overlap,
   the most detailed and recent map wins; confidence comes from scale, the
   mapper's identity confidence, agreement among other maps and published
@@ -107,7 +110,7 @@ Guidance for Claude (and humans) working in this repository.
 
 | Path | Purpose |
 | --- | --- |
-| `config/` | Pilot area, `sources.json` (data sources and URLs), other settings |
+| `config/` | Pilot area, `sources.json` (data sources and URLs), `catalog_scope.json` (chapter page ranges), other settings |
 | `harvest/` | Resumable jobs that discover and download public sources |
 | `extract/` | Parsers and prompts that pull values out of sources |
 | `model/` | Data model: provenance (`StoredValue`), ages and unit names (`units.py`), shapefile/projection reader (`gisio.py`) |

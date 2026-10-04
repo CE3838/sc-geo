@@ -6,7 +6,9 @@ A packet starts with the catalog record (id, citation, year, scale,
 publisher) and then the kept pages, each headed `=== PAGE n (method) ===`
 where n is the page number the result JSON must cite. Pages triage marks as
 blank, table of contents, index or needing OCR are left out. A page too long
-for one packet is split into parts that keep its page number.
+for one packet is split into parts that keep its page number. A record that
+is one paper of a larger volume (config/catalog_scope.json, see
+extract/scope.py) gets only its own pages.
 
 Packets live ONLY in the gitignored .cache/packets (CLAUDE.md rule 3).
 """
@@ -18,6 +20,7 @@ import re
 from collections import defaultdict
 from pathlib import Path
 
+from extract import scope as scope_mod
 from extract import triage
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -35,7 +38,8 @@ def compact(text: str) -> str:
     return re.sub(r"\n{3,}", "\n\n", text).strip("\n")
 
 
-def header(record: dict, doc: dict, part: int | None = None, of: int | None = None) -> str:
+def header(record: dict, doc: dict, part: int | None = None, of: int | None = None,
+           pages: set[int] | None = None, scope_note: str | None = None) -> str:
     scale = record.get("scale")
     lines = [
         f"# Packet {part} of {of} for {record['id']}" if part else f"# Packet for {record['id']}",
@@ -49,6 +53,12 @@ def header(record: dict, doc: dict, part: int | None = None, of: int | None = No
         f"- Kind: {record.get('kind') or 'not stated'}",
         f"- Files: " + "; ".join(f"{f.get('url')} (pages {f['first_page']}-{f['first_page'] + f['pages'] - 1})"
                                  for f in doc.get("files", [])),
+    ]
+    if pages is not None:
+        lines += [f"- Scope: PDF pages {scope_mod.describe(sorted(pages))} only"
+                  + (f" ({scope_note})" if scope_note else "")
+                  + ". This record is one paper of a larger volume; the other papers are left out."]
+    lines += [
         "",
         "Cite pages by the number in each `=== PAGE n ===` line. Quote text exactly as it appears on that page.",
         "",
@@ -65,12 +75,14 @@ def is_part(block: str) -> bool:
     return "." in str(block)
 
 
-def _blocks(doc: dict, budget: int) -> tuple[list[tuple[int, str, str]], dict]:
-    """(page, block id, text) for every kept page or page part, and the skipped pages by kind."""
+def _blocks(doc: dict, budget: int, pages: set[int] | None = None) -> tuple[list[tuple[int, str, str]], dict]:
+    """(page, block id, text) for every kept page or page part (only `pages` when given), and the skipped pages by kind."""
     n_pages = len(doc["pages"])
     blocks: list[tuple[int, str, str]] = []
     skipped: dict[str, list[int]] = defaultdict(list)
     for p in doc["pages"]:
+        if pages is not None and p["page"] not in pages:
+            continue
         t = triage.classify(p.get("text", ""), p["page"], n_pages, method=p.get("method", "pdf_text"))
         if not t["keep"]:
             skipped[t["kind"]].append(p["page"])
@@ -94,10 +106,12 @@ def _blocks(doc: dict, budget: int) -> tuple[list[tuple[int, str, str]], dict]:
     return blocks, dict(skipped)
 
 
-def build(doc: dict, record: dict, max_tokens: int = 40000, chars_per_token: float = 2.5) -> list[dict]:
+def build(doc: dict, record: dict, max_tokens: int = 40000, chars_per_token: float = 2.5,
+          pages: set[int] | None = None, scope_note: str | None = None) -> list[dict]:
+    """Packets for a document; with `pages` (a record's scope, see extract/scope.py) only those pages."""
     limit = int(max_tokens * chars_per_token)
-    head_room = len(header(record, doc, 99, 99)) + 10
-    blocks, skipped = _blocks(doc, limit - head_room)
+    head_room = len(header(record, doc, 99, 99, pages, scope_note)) + 10
+    blocks, skipped = _blocks(doc, limit - head_room, pages)
     groups: list[list[tuple[int, str, str]]] = [[]]
     size = 0
     for page, block, text in blocks:
@@ -110,7 +124,7 @@ def build(doc: dict, record: dict, max_tokens: int = 40000, chars_per_token: flo
         groups.pop()
     out = []
     for i, g in enumerate(groups, 1):
-        text = header(record, doc, i, len(groups)) + "".join(t for _, _, t in g)
+        text = header(record, doc, i, len(groups), pages, scope_note) + "".join(t for _, _, t in g)
         out.append({"source_id": record["id"], "packet": f"packet-{i:02d}", "of": len(groups),
                     "pages": sorted({p for p, _, _ in g}), "blocks": [b for _, b, _ in g],
                     "skipped": skipped, "text": text,
@@ -118,7 +132,8 @@ def build(doc: dict, record: dict, max_tokens: int = 40000, chars_per_token: flo
     return out
 
 
-def write(packets: list[dict], record: dict, cache: Path = CACHE) -> list[Path]:
+def write(packets: list[dict], record: dict, cache: Path = CACHE, scope: dict | None = None) -> list[Path]:
+    """Write the packets and index.json; `scope` (extract/scope.for_record) is recorded so a change rebuilds."""
     d = Path(cache) / safe_id(record["id"])
     d.mkdir(parents=True, exist_ok=True)
     for old in d.glob("packet-*.md"):
@@ -133,6 +148,7 @@ def write(packets: list[dict], record: dict, cache: Path = CACHE) -> list[Path]:
                           "estimated_tokens": p["estimated_tokens"]} for p in packets],
              "blocks": [b for p in packets for b in p["blocks"]],
              "skipped": packets[0]["skipped"] if packets else {},
+             "scope": scope,
              "estimated_tokens": sum(p["estimated_tokens"] for p in packets)}
     (d / "index.json").write_text(json.dumps(index, indent=1))
     return paths

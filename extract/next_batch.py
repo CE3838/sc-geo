@@ -13,7 +13,9 @@ the budget.
 
 For each document it makes sure the page text exists (downloading and
 OCRing when the cache is empty, as in a fresh Claude Code session) and that
-packets exist in .cache/packets/<id>/. Prints, per packet, the file to read
+packets exist in .cache/packets/<id>/. A record listed in
+config/catalog_scope.json (one paper of a larger volume) gets packets of its
+own pages only; its packets are rebuilt when its scope changes. Prints, per packet, the file to read
 and the result path to write (.cache/results/<id>.<packet>.json).
 """
 
@@ -26,7 +28,7 @@ import time
 from pathlib import Path
 from typing import Callable
 
-from extract import packets, pdftext
+from extract import packets, pdftext, scope
 from harvest import pdfs
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -40,21 +42,32 @@ def _needs_access_ids(review_dir: Path) -> set[str]:
         return set()
 
 
-def ensure_packets(rec: dict, cache_dir: Path, max_tokens: int | None = None) -> dict | None:
+def ensure_packets(rec: dict, cache_dir: Path, max_tokens: int | None = None,
+                   scopes: dict | None = None) -> dict | None:
+    """The record's packet index, (re)building packets when missing, older than the text, or built for another scope."""
     sid = packets.safe_id(rec["id"])
     text_path = Path(cache_dir) / "text" / f"{sid}.json"
     pdir = Path(cache_dir) / "packets" / sid
     index = pdir / "index.json"
     if not text_path.exists():
         return None
-    stale = (not index.exists() or index.stat().st_mtime < text_path.stat().st_mtime
-             or "blocks" not in json.loads(index.read_text()))
+    scopes = scopes or {}
+    doc = None
+    stale = not index.exists() or index.stat().st_mtime < text_path.stat().st_mtime
+    if not stale:
+        old = json.loads(index.read_text())
+        stale = "blocks" not in old
+        if not stale and (rec["id"] in scopes or old.get("scope")):
+            doc = json.loads(text_path.read_text())
+            stale = old.get("scope") != scope.for_record(rec["id"], doc, scopes)
     if stale:
-        doc = json.loads(text_path.read_text())
-        built = packets.build(doc, rec, max_tokens or CONFIG["packet_max_tokens"], CONFIG["chars_per_token"])
+        doc = doc or json.loads(text_path.read_text())
+        sc = scope.for_record(rec["id"], doc, scopes)
+        built = packets.build(doc, rec, max_tokens or CONFIG["packet_max_tokens"], CONFIG["chars_per_token"],
+                              pages=set(sc["pages"]) if sc else None, scope_note=sc.get("note") if sc else None)
         if not built:
             return None
-        packets.write(built, rec, Path(cache_dir) / "packets")
+        packets.write(built, rec, Path(cache_dir) / "packets", scope=sc)
     return json.loads(index.read_text())
 
 
@@ -75,10 +88,11 @@ def next_batch(n: int = 5, ids: list[str] | None = None, catalog: list[dict] | N
                extracted_dir: Path = ROOT / "data" / "extracted", review_dir: Path = ROOT / "data" / "review",
                max_tokens: int | None = None, max_minutes: float | None = None, fetcher=None, ocr="auto",
                allow_partial: bool = False, packet_max_tokens: int | None = None,
-               log: Callable[..., None] = print) -> list[dict]:
+               scopes: dict | None = None, log: Callable[..., None] = print) -> list[dict]:
     if catalog is None:
         catalog = json.loads((ROOT / "data" / "catalog" / "sc_catalog.json").read_text())
     cache_dir, checkpoint_dir = Path(cache_dir), Path(checkpoint_dir)
+    scopes = scope.load() if scopes is None else scopes
     order = pdfs.queue(catalog, pilot_bbox)
     if ids:
         order = [r for r in order if r["id"] in ids]
@@ -104,14 +118,14 @@ def next_batch(n: int = 5, ids: list[str] | None = None, catalog: list[dict] | N
                 log(f"skip {rec['id']}: needs OCR ({ck.get('reason')})")
                 continue
             (cache_dir / "text" / f"{sid}.json").unlink(missing_ok=True)  # read again with OCR
-        index = ensure_packets(rec, cache_dir, packet_max_tokens)
+        index = ensure_packets(rec, cache_dir, packet_max_tokens, scopes)
         if index is None:
             ck = pdfs.process(rec, fetcher, checkpoint_dir, cache_dir, email, ocr=ocr,
                               log=lambda m: log(pdfs.redact(str(m), email or "")))
             if ck.get("status") != "text" and not (allow_partial and ck.get("status") == "needs_ocr"):
                 log(f"skip {rec['id']}: {ck.get('status')} ({ck.get('reason') or 'no text'})")
                 continue
-            index = ensure_packets(rec, cache_dir, packet_max_tokens)
+            index = ensure_packets(rec, cache_dir, packet_max_tokens, scopes)
             if index is None:
                 log(f"skip {rec['id']}: no readable pages")
                 continue
@@ -137,7 +151,7 @@ def next_batch(n: int = 5, ids: list[str] | None = None, catalog: list[dict] | N
                                  "blocks": p["blocks"], "estimated_tokens": p["estimated_tokens"],
                                  "result_path": str(cache_dir / "results" / f"{sid}.{name(p)}.json")}
                                 for p in chosen],
-                    "skipped_pages": index.get("skipped", {})})
+                    "skipped_pages": index.get("skipped", {}), "scope": index.get("scope")})
     return out
 
 
@@ -161,6 +175,8 @@ def main() -> None:
         print(f"\n[{i}] {b['id']} ({state}, tier {b['tier']}, {len(b['packets'])} of {b['packets_total']} packets, "
               f"~{b['estimated_tokens']:,} tokens; {b['remaining_after']} left after this)")
         print(f"    {b['citation'] or b['title']}")
+        if b.get("scope"):
+            print(f"    scope: PDF pages {scope.describe(b['scope']['pages'])} only ({b['scope'].get('note')})")
         for p in b["packets"]:
             print(f"    read:  {p['path']}  (pages {p['pages'][0]}-{p['pages'][-1]}, ~{p['estimated_tokens']:,} tokens)")
             print(f"    write: {p['result_path']}")
