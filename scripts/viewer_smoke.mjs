@@ -1,6 +1,6 @@
 // End-to-end check of the viewer with real MapLibre in Chromium: the layout
 // (header, Layers and Map units panels, status bar), the SC focus, imagery,
-// merged geology, faults, live roads (SCDOT) and parcels (county services),
+// merged geology, faults, live roads (Census TIGER) and parcels (county services),
 // the click callout (State Plane, elevation, road, parcel), the property card
 // (confidence, references, soil), USGS water stations and their chart, and
 // the add-on popup hook.
@@ -178,7 +178,7 @@ try {
   check(naip, 'live NAIP loads at street scale over Charleston');
   await snapshot(page, 'charleston-z16');
 
-  // Roads (SCDOT road inventory, live): highways and interstates at z12.
+  // Roads (US Census Bureau TIGER, live): highways and interstates at z12.
   // A clean "service unavailable" note is accepted so an outage is not a failure.
   const layerNote = (id) => page.evaluate((i) => document.getElementById(`layer-${i}`)?.closest('li')?.textContent ?? '', id);
   await jumpTo({ center: [-79.96, 32.83], zoom: 12 });
@@ -201,7 +201,7 @@ try {
   const roadNote = await layerNote('roads');
   if (/unavailable/.test(roadNote)) {
     console.log(`NOTE roads service did not answer (${roadNote.trim()})`);
-    check(true, 'roads layer reports the SCDOT service as unavailable');
+    check(true, 'roads layer reports the road service as unavailable');
   } else {
     check(roadInfo.lines > 20 && ['interstate', 'us'].every((c) => roadInfo.classes.includes(c)),
       `roads render with interstates and US highways (${roadInfo.lines}; ${roadInfo.refs.join(', ')})`);

@@ -43,15 +43,17 @@
     "url": "https://ngmdb.usgs.gov/Geolex/search",
     "license": "Public domain (U.S. Government work)"
   },
-  "scdot-roads": {
-    "title": "SCDOT road inventory: Statewide_Highways (state highway system) and OTHER_ROADS (county, city and private roads)",
-    "publisher": "South Carolina Department of Transportation (ArcGIS Online organization VaY7cY9pvUYUP1Lf)",
+  "census-tiger-roads": {
+    "title": "US Census Bureau TIGER/Line roads via TIGERweb Transportation: Primary Roads (layer 2), Secondary Roads (layer 6) and Local Roads (layer 8)",
+    "publisher": "US Census Bureau",
+    "map_service": "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Transportation/MapServer",
     "feature_services": [
-      "https://services1.arcgis.com/VaY7cY9pvUYUP1Lf/arcgis/rest/services/Statewide_Highways/FeatureServer/0",
-      "https://services1.arcgis.com/VaY7cY9pvUYUP1Lf/arcgis/rest/services/OTHER_ROADS/FeatureServer/0"
+      "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Transportation/MapServer/2",
+      "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Transportation/MapServer/6",
+      "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Transportation/MapServer/8"
     ],
-    "license": "Public items published by SCDOT; no license is stated on the items. Shown live with attribution to SCDOT and not copied.",
-    "notes": "Read live by the viewer (web/roads.js) for the area on screen: ROUTE_TYPE and ROUTE_NUMB give interstate, US and SC route numbers; STREET_NAM gives names. CORS allows any origin. The public-domain alternative, U.S. Census TIGERweb (Transportation MapServer), could not be reached from the build environment to verify it."
+    "license": "Public domain (U.S. Government work). Shown live with attribution (\"Roads: US Census Bureau TIGER/Line (live)\") and not copied.",
+    "notes": "Read live by the viewer (web/roads.js) for the area on screen. Fields: NAME (full name, e.g. 'I- 26', 'US Hwy 17', 'State Hwy 61'), RTTYP (I, U, S, C, M), MTFCC (S1100 primary, S1200 secondary, S1400 local, S1630 ramp) and OID (TIGER LINEARID, cited in the callout). Queries use an envelope, outFields, f=geojson, resultOffset/resultRecordCount and maxAllowableOffset; CORS echoes the requesting origin. Layer numbers can change with each TIGERweb vintage."
   },
   "county-parcels": {
     "title": "County parcel services (property lines and tax map parcel IDs)",
