@@ -47,6 +47,14 @@ Finish documents you start: work through the packets in the order printed,
 and do not run `next_batch` again for new documents until every packet it gave
 you is ingested.
 
+Some catalog records are one chapter or note of a multi-paper volume whose
+only PDF is the whole volume. `config/catalog_scope.json` lists their PDF
+pages (plus any extra pages, such as their references), and their packets
+hold only those pages; the packet header says `Scope: PDF pages ... only`.
+Read and cite only those pages: other authors' papers in the same PDF are not
+this record. `extract.ingest` refuses a result that cites a page outside the
+scope. When a scope changes, `next_batch` rebuilds that record's packets.
+
 ## 2. Read each packet
 
 For each packet, in order:
