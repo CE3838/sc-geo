@@ -8,10 +8,11 @@
  "kind": "publication",
  "schema_version": 1,
  "extracted_at": "2026-10-04T14:51:40+00:00",
- "updated_at": "2026-10-04T14:51:40+00:00",
+ "updated_at": "2026-10-04T14:52:15+00:00",
  "reader": "Claude, reading session 2026-10-04",
  "packets": [
-  "packet-01"
+  "packet-01",
+  "packet-02"
  ],
  "blocks_done": [
   "1",
@@ -42,11 +43,24 @@
   "27",
   "28",
   "29",
-  "30"
+  "30",
+  "31",
+  "32",
+  "33",
+  "34",
+  "35",
+  "36",
+  "37",
+  "38",
+  "39",
+  "40",
+  "41",
+  "43",
+  "44"
  ],
  "blocks_total": 42,
- "complete": false,
- "notes": "SWMU17 groundwater report. Site geology on p. 19 is quoted by the authors from Tetra Tech NUS (2006) and Borden and others (2008); recorded as informal lithologic units without formal names. Table 2 (p. 17) wells recorded with northing/easting, total depth and screen interval; the ground elevation is chosen as the lower of the two elevation columns (inferred). Not recorded: VOC concentrations (table 3), water-quality parameters (table 4), pH-adjustment test chronology (table 1), and water-table elevations on map figures 7-9 and 11 (labels not reliably paired with wells). The last part of p. 30 continues into the next packet.",
+ "complete": true,
+ "notes": "SWMU17 groundwater report. Site geology on p. 19 is quoted by the authors from Tetra Tech NUS (2006) and Borden and others (2008); recorded as informal lithologic units without formal names. Table 2 (p. 17) wells recorded with northing/easting, total depth and screen interval; the ground elevation is chosen as the lower of the two elevation columns (inferred). Not recorded: VOC concentrations (table 3), water-quality parameters (table 4), pH-adjustment test chronology (table 1), and water-table elevations on map figures 7-9 and 11 (labels not reliably paired with wells). The last part of p. 30 continues into the next packet.\nPages 31-36: discussion of the dechlorination stall, table 5 (molecular microbiology; not recorded), VOC trends (not recorded) and summary. Recorded the reported permeability reduction in the injection zone. Pages 39-41: Appendix 1 and 2 water levels (about 180 readings of depth to water and water level above NAVD 88; not recorded individually). The appendix 'Datum' column (e.g. 7.78 ft for 16MW-01S) matches the higher of the two elevation columns of table 2, which supports reading the lower table 2 value as ground elevation in packet-01. References (pp. 37-38): recorded the SC site reports and SWMU17/NWS Charleston papers; skipped general microbiology, chemistry and sampling-method references (Barcelona, Bradley, Cirpka, Cupples, Dennis, Fennell, He, Hendrickson, Holliger, Looney, McMahon, Sevee, Shanklin, Vroblesky 1996, Wiedemeier, Zhuang).",
  "files": [
   {
    "url": "https://pubs.usgs.gov/sir/2009/5239/pdf/sir2009-5239.pdf",
@@ -57,14 +71,14 @@
   }
  ],
  "summary": {
-  "stored": 176,
+  "stored": 185,
   "quote_match": {
-   "exact": 176
+   "exact": 185
   },
   "verification": {
-   "agree": 148
+   "agree": 149
   },
-  "inferred": 42
+  "inferred": 43
  },
  "ingests": [
   {
@@ -81,6 +95,24 @@
    "quote_not_found": 0,
    "wrong_page": 0,
    "agree": 148,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-10-04T14:52:15+00:00",
+   "packets": [
+    "packet-02"
+   ],
+   "reader": "Claude, reading session 2026-10-04",
+   "values": 9,
+   "stored": 9,
+   "exact": 9,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 1,
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
@@ -3505,7 +3537,140 @@
     "text_method": "pdf_text",
     "verification": null
    }
+  },
+  {
+   "aquifer": {
+    "value": "aquifer in the vegetable-oil injection zone, SWMU17",
+    "source_id": "ngmdb:96660",
+    "page": 35,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "some level of permeability reduction is present outside of the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "date": {
+    "value": "after the Phase-II injection in September 2006",
+    "source_id": "ngmdb:96660",
+    "page": 35,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Phase-II injection in September 2006 substantially",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": "2006-09"
+   },
+   "description": {
+    "value": "The Phase-II injection substantially decreased well yield in the injection zone; some level of permeability reduction is present outside of the monitoring wells in the aquifer matrix, so contaminant transport likely was around the injection zone rather than through it",
+    "source_id": "ngmdb:96660",
+    "page": 35,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "some level of permeability reduction is present outside of the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
   }
  ],
- "references": []
+ "references": [
+  {
+   "citation": {
+    "value": "Borden, A.M., Lieberman, M.T., Borden, R.C., and Tillotson, Jason, 2008, Impact of pH adjustment on enhanced reductive dechlorination of TCE: The Sixth International Conference, Remediation of Chlorinated and Recalcitrant Compounds, Monterey, CA, May 19-22, 2008, session E3, poster 99.",
+    "source_id": "ngmdb:96660",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Borden, A.M., Lieberman, M.T., Borden, R.C., and Tillot-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Lieberman, M.T., and Borden, R.C., in press, Edible oil emulsion for treatment of chlorinated solvent contaminated groundwater at SWMU17, Charleston Naval Weapons Station, Charleston, SC: Arlington, VA, Solutions-IES, Inc., Environmental Security Technology Certification Program (ESTCP), Project ER-0221, 136 p.",
+    "source_id": "ngmdb:96660",
+    "page": 38,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Lieberman, M.T., and Borden, R.C., in press, Edible oil",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Tetra Tech NUS, Inc., 2004, RCRA facility investigation documentation and data summary 2000-2003, for Old Southside Landfill-SWMU 16 and Old Southside Missile and Waste Oil Disposal Area-SWMU 17, Naval Weapons Station Charleston, Charleston, South Carolina: Consultant's report to Southern Division Naval Facilities Engineering Command, January 2004 [variously paged].",
+    "source_id": "ngmdb:96660",
+    "page": 38,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Tetra Tech NUS, Inc., 2004, RCRA facility investigation docu-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Tetra Tech NUS, Inc., 2006, RFI report SWMU 16-Old Southside Landfill and SWMU 17-Old Southside Missile and Waste Oil Disposal Area, Naval Weapons Station Charleston, South Carolina: Consultant's report to Naval Facilities Engineering Command, March 2006 [variously paged].",
+    "source_id": "ngmdb:96660",
+    "page": 38,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Tetra Tech NUS, Inc., 2006, RFI report SWMU 16—Old",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Vroblesky, D.A., and Casey, C.C., 2008, Case study 2-Tree coring as a guide to well placement, Solid Waste Management Unit 17, Naval Weapons Station Charleston, South Carolina, 2002, in Vroblesky, D.A., User's guide to the collection and analysis of tree cores to assess the distribution of subsurface volatile organic compound: U.S. Geological Survey Scientific Investigations Report 2008-5088, p. 32-33.",
+    "source_id": "ngmdb:96660",
+    "page": 38,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Vroblesky, D.A., and Casey, C.C., 2008, Case study 2—Tree",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Vroblesky, D.A., Casey, C.C., and Lowery, M.A., 2007, Influence of dissolved oxygen convection on well sampling: Ground Water Monitoring and Remediation, v. 27, no. 3, p. 49-58.",
+    "source_id": "ngmdb:96660",
+    "page": 38,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Vroblesky, D.A., Casey, C.C., and Lowery, M.A., 2007, Influ-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ]
 }
