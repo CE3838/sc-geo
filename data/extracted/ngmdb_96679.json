@@ -8,10 +8,11 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-04T10:04:38+00:00",
- "updated_at": "2026-10-04T10:04:38+00:00",
+ "updated_at": "2026-10-04T10:05:38+00:00",
  "reader": "Claude, reading session 2026-10-04",
  "packets": [
-  "packet-01"
+  "packet-01",
+  "packet-02"
  ],
  "blocks_done": [
   "1",
@@ -39,11 +40,43 @@
   "25",
   "26",
   "27",
-  "28"
+  "28",
+  "29",
+  "30",
+  "31",
+  "32",
+  "33",
+  "34",
+  "35",
+  "36",
+  "37",
+  "38",
+  "39",
+  "40",
+  "41",
+  "42",
+  "43",
+  "44",
+  "45",
+  "46",
+  "47",
+  "48",
+  "49",
+  "50",
+  "51",
+  "52",
+  "53",
+  "54",
+  "55",
+  "56",
+  "57",
+  "58",
+  "59",
+  "60"
  ],
  "blocks_total": 116,
  "complete": false,
- "notes": "Pages 1-28: front matter, abstract, introduction, geologic setting, structure, table 1 (well construction) and table 2 (current-meter tests). Observations limited to the South Carolina wells of table 1 (Georgia wells skipped) and the SC current-meter test (BFT-315). Figure 3/4 correlation charts are garbled by layout and not read. Location values are the table's latitude/longitude (NAD 83) as printed. References are in a later packet.",
+ "notes": "Pages 1-28: front matter, abstract, introduction, geologic setting, structure, table 1 (well construction) and table 2 (current-meter tests). Observations limited to the South Carolina wells of table 1 (Georgia wells skipped) and the SC current-meter test (BFT-315). Figure 3/4 correlation charts are garbled by layout and not read. Location values are the table's latitude/longitude (NAD 83) as printed. References are in a later packet.\nPages 29-60: Georgia test sites (Richmond Hill, Berwick, Rincon, Savannah No. 5, Pineora, Hunter Army Airfield), Piper diagrams, figure 19 chart, cross sections, Upper Floridan maps. Geophysical log figures, Piper diagrams and contour maps are not readable as text and were skipped. Georgia well-log zone depths were not recorded as observations; site transmissivities and confining-unit properties recorded as groundwater values. Table 3 (lower Brunswick wells, Chatham County, GA) not itemized beyond the Pooler value in text. Cedar Keys Formation is called lower Eocene on p. 52 but Paleocene on p. 17 (packet 1).",
  "files": [
   {
    "url": "https://pubs.usgs.gov/sir/2010/5158/pdf/sir2010-5158.pdf",
@@ -75,14 +108,14 @@
   }
  ],
  "summary": {
-  "stored": 179,
+  "stored": 262,
   "quote_match": {
-   "exact": 179
+   "exact": 262
   },
   "verification": {
-   "agree": 74
+   "agree": 83
   },
-  "inferred": 37
+  "inferred": 38
  },
  "ingests": [
   {
@@ -99,6 +132,24 @@
    "quote_not_found": 0,
    "wrong_page": 0,
    "agree": 74,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-10-04T10:05:38+00:00",
+   "packets": [
+    "packet-02"
+   ],
+   "reader": "Claude, reading session 2026-10-04",
+   "values": 83,
+   "stored": 83,
+   "exact": 83,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 9,
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
@@ -1435,6 +1486,483 @@
     "inferred": false,
     "locator": null,
     "quote": "the Parachucla, Marks Head, Coosawhatchie, and Ebenezer",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Oldsmar Formation",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "of the Oldsmar Formation (fig. 3), a chalky, glauconitic,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "oldsmar",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "lower Eocene",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "marked by relatively low-permeability lower Eocene rocks",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 47.8,
+     "older_ma": 56.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "a chalky, glauconitic, gypsiferous limestone and dolomite",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "gypsiferous limestone and dolomite. Farther to the north,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Cedar Keys Formation",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Eocene Cedar Keys Formation. The Cedar Keys Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "cedar keys",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "lithology": {
+    "value": "dolomitic limestone and dolomite with extensive interbedded anhydrite layers",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Formation are dolomitic limestone and dolomite with exten-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "lower Eocene",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "(1989) mapped the base of the system at the top of the lower",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "this page calls it lower Eocene; page 17 of the report assigns the Cedar Keys to Paleocene",
+    "normalized": {
+     "younger_ma": 47.8,
+     "older_ma": 56.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Fishburne Formation",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "marked by the lower Eocene Fishburne Formation and clastic",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "Fishburne",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "lower Eocene",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "marked by the lower Eocene Fishburne Formation and clastic",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 47.8,
+     "older_ma": 56.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "with clastic rocks of the Black Mingo Group marks the base of the aquifer system in the extreme northern part of the study area in South Carolina",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "study area in South Carolina, the base of the aquifer system is",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Barnwell Group",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "of one or more formations in the Barnwell Group (fig. 3). In the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Barnwell",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Group",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "of one or more formations in the Barnwell Group (fig. 3). In the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "lithology": {
+    "value": "fossiliferous, argillaceous, glauconitic, and calcareous clay",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "ous, argillaceous, glauconitic, and calcareous clay that are part",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "description": {
+    "value": "in the updip areas of South Carolina the calcareous clastic rocks at the top of the aquifer system",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the updip areas of South Carolina, the calcareous clastic rocks",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Santee Limestone",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Eocene Santee Limestone forms the top of the system, and the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Santee",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "middle Eocene",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "extreme updip part of the aquifer, the lower part of the middle",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 37.71,
+     "older_ma": 47.8,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "in the extreme updip part of the aquifer the lower part forms the top of the system",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Eocene Santee Limestone forms the top of the system, and the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Tiger Leap Formation",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Miocene Tiger Leap Formation.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "tiger leap",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Oligocene-Miocene",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "that study area and were identified as part of the Oligocene-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 5.333,
+     "older_ma": 33.9,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "sediments equivalent to the lower Brunswick aquifer",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "equivalent to the lower Brunswick aquifer are present in",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Suwannee Limestone",
+    "source_id": "ngmdb:96679",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Although the Suwannee Limestone is not very permeable",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "suwannee",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "description": {
+    "value": "not very permeable and not a primary source of water supply; in South Carolina it is the Oligocene-age equivalent of the less permeable Cooper Formation",
+    "source_id": "ngmdb:96679",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "aquifer. In South Carolina, the Suwannee Limestone is the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Cooper Formation",
+    "source_id": "ngmdb:96679",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Oligocene-age equivalent of the less permeable Cooper",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Cooper",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Oligocene",
+    "source_id": "ngmdb:96679",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Oligocene-age equivalent of the less permeable Cooper",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 23.03,
+     "older_ma": 33.9,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Parkers Ferry Formation",
+    "source_id": "ngmdb:96679",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "in Georgia and the Parkers Ferry Formation in South Carolina",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Parkers Ferry",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:96679",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "in Georgia and the Parkers Ferry Formation in South Carolina",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "upper Eocene",
+    "source_id": "ngmdb:96679",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "of rocks of upper Eocene age, including the Ocala Limestone",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 37.71,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Parkers Ferry/Harleyville Formations",
+    "source_id": "ngmdb:96679",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the shallower upper Eocene Parkers Ferry/Harleyville Forma-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Parkers Ferry",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "description": {
+    "value": "beneath Hilton Head Island the zone of reduced permeability is within these formations, several tens of feet up to 200 ft above the middle Eocene contact",
+    "source_id": "ngmdb:96679",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "tions and ranges from several tens of feet up to 200 ft above",
     "quote_match": "exact",
     "text_method": "pdf_text",
     "verification": null
@@ -2813,6 +3341,64 @@
     "text_method": "pdf_text",
     "verification": null
    }
+  },
+  {
+   "kind": "contact",
+   "name": {
+    "value": "top of the middle Eocene",
+    "source_id": "ngmdb:96679",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "tion of the middle Eocene structural surface generally strikes",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "strikes in an east-west direction and dips gently to the south at an average rate of about 7.5 ft/mi",
+    "source_id": "ngmdb:96679",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "in an east-west direction and dips gently to the south at an",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "kind": "other",
+   "name": {
+    "value": "Beaufort Arch",
+    "source_id": "ngmdb:96679",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Beaufort Arch. From Bulloch, Bryan, and Effingham Counties,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "top of the Upper Floridan aquifer markedly influenced by the Beaufort Arch; contours bend sharply southward around its western flank",
+    "source_id": "ngmdb:96679",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "of the Upper Floridan aquifer is markedly influenced by the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
   }
  ],
  "groundwater": [
@@ -3155,6 +3741,713 @@
     "inferred": false,
     "locator": null,
     "quote": "fine sand and clay of the Miocene unit. Locally, this confining",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Upper Floridan aquifer",
+    "source_id": "ngmdb:96679",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Floridan aquifer is now restricted to permeable sections of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Beaufort and parts of Jasper Counties, SC",
+    "source_id": "ngmdb:96679",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "area of Beaufort and parts of Jasper Counties, SC, the Upper",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "unit": {
+    "value": "Oligocene and late Eocene (Ocala) limestone",
+    "source_id": "ngmdb:96679",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Oligocene and late Eocene (Ocala) limestone. For example, on",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "oligocene and late eocene",
+     "in_geolex": false,
+     "inferred": true
+    }
+   }
+  },
+  {
+   "aquifer": {
+    "value": "middle confining unit",
+    "source_id": "ngmdb:96679",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "and is, herein, designated the middle confining unit.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "role": {
+    "value": "confining unit",
+    "source_id": "ngmdb:96679",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "and is, herein, designated the middle confining unit.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "now mapped in the upper 50 to 200 ft of the middle Eocene unit; in the Savannah area lies roughly between -400 to -600 ft NGVD 29",
+    "source_id": "ngmdb:96679",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "in the upper 50 to 200 ft of the middle Eocene unit and divides",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Lower Floridan aquifer",
+    "source_id": "ngmdb:96679",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "in figures 21–23, a substantial thickness (200–450 ft) of Lower",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "a substantial thickness (200-450 ft) now recognized to lie below the middle confining unit",
+    "source_id": "ngmdb:96679",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "in figures 21–23, a substantial thickness (200–450 ft) of Lower",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Floridan aquifer system",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "of the aquifer system in South Carolina, the limestone is thin,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "location": {
+    "value": "updip part of the aquifer system in South Carolina",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "of the aquifer system in South Carolina, the limestone is thin,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "limestone is thin, ranging from 20 to 80 ft in thickness; Upper Floridan aquifer absent and Lower Floridan aquifer is the productive part; updip limit along the southwestern edge of Colleton and northeastern edge of Allendale Counties, SC",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "ranging from 20 to 80 ft in thickness (Krause and Randolph,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "aquifer": {
+    "value": "upper and lower Brunswick aquifers",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "sections within the upper confining unit—the upper and lower",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "unit": {
+    "value": "Miocene unit",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "permeability clays, silt, and fine sand of the Miocene unit",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "miocene",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "description": {
+    "value": "poorly sorted fine-to-coarse phosphatic, slightly dolomitic sand",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Brunswick aquifers. The two aquifers consist of poorly sorted",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Upper Floridan aquifer",
+    "source_id": "ngmdb:96679",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "is within 10 to 20 ft of land surface and, in places, is exposed",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Port Royal Sound area of Beaufort County, SC",
+    "source_id": "ngmdb:96679",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "forming windows beneath the Port Royal Sound area of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "top within 10 to 20 ft of land surface and in places exposed, forming windows that provide preferential pathways for seawater",
+    "source_id": "ngmdb:96679",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "is within 10 to 20 ft of land surface and, in places, is exposed",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Upper Floridan aquifer",
+    "source_id": "ngmdb:96679",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Upper Floridan aquifer is reportedly absent (or nonpro-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Colleton County, SC",
+    "source_id": "ngmdb:96679",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "ductive) over much of Colleton County, SC (Hayes, 1979).",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "reportedly absent (or nonproductive) over much of Colleton County, SC",
+    "source_id": "ngmdb:96679",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "ductive) over much of Colleton County, SC (Hayes, 1979).",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Upper Floridan aquifer",
+    "source_id": "ngmdb:96679",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "of the Upper Floridan aquifer ranges from 900 ft2/d in",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "transmissivity": {
+    "value": "from 900 ft2/d in Hampton County, SC, to 250,000 ft2/d in Long County, GA",
+    "source_id": "ngmdb:96679",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "of the Upper Floridan aquifer ranges from 900 ft2/d in",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Upper Floridan aquifer",
+    "source_id": "ngmdb:96679",
+    "page": 33,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "transmissivity of the Upper Floridan aquifer was determined",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Harris Trail Road site (well 35P128), Richmond Hill, GA",
+    "source_id": "ngmdb:96679",
+    "page": 33,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "aquifer and the Lower Floridan aquifer at the Harris Trail",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "transmissivity": {
+    "value": "approximately 40,000 ft2/d",
+    "source_id": "ngmdb:96679",
+    "page": 33,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "to be approximately 40,000 ft2/d with a storage coefficient",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Lower Floridan aquifer",
+    "source_id": "ngmdb:96679",
+    "page": 33,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "of 3.4 × 10–4. The transmissivity of the Lower Floridan was",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Harris Trail Road site (well 35P128), Richmond Hill, GA",
+    "source_id": "ngmdb:96679",
+    "page": 33,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "aquifer and the Lower Floridan aquifer at the Harris Trail",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "transmissivity": {
+    "value": "approximately 10,000 ft2/d",
+    "source_id": "ngmdb:96679",
+    "page": 33,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "determined to be approximately 10,000 ft2/d.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "middle confining unit",
+    "source_id": "ngmdb:96679",
+    "page": 33,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "unit was estimated to be 6.4 × 10–3 ft/d.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Richmond Hill area, GA",
+    "source_id": "ngmdb:96679",
+    "page": 33,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "area was developed and calibrated based on the site hydro-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "hydraulic_conductivity": {
+    "value": "6.4 × 10–3 ft/d (modeled vertical)",
+    "source_id": "ngmdb:96679",
+    "page": 33,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "confining unit was estimated to be 6.4 × 10–3 ft/d.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "thickness of 188 ft for the confining unit",
+    "source_id": "ngmdb:96679",
+    "page": 33,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "of 3.4 × 10–5/d. Given a thickness of 188 ft for the confining",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Upper Floridan aquifer",
+    "source_id": "ngmdb:96679",
+    "page": 33,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Transmissivity of the Upper Floridan aquifer was 46,000 ft2/d",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Berwick Plantation (well 36Q330), Chatham County, GA",
+    "source_id": "ngmdb:96679",
+    "page": 33,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "A deep test well (36Q330) was drilled at Berwick",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "transmissivity": {
+    "value": "46,000 ft2/d",
+    "source_id": "ngmdb:96679",
+    "page": 33,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Transmissivity of the Upper Floridan aquifer was 46,000 ft2/d",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Lower Floridan aquifer",
+    "source_id": "ngmdb:96679",
+    "page": 33,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Lower Floridan aquifer was 8,200 ft2/d.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Berwick Plantation (well 36Q330), Chatham County, GA",
+    "source_id": "ngmdb:96679",
+    "page": 33,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "A deep test well (36Q330) was drilled at Berwick",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "transmissivity": {
+    "value": "8,200 ft2/d",
+    "source_id": "ngmdb:96679",
+    "page": 33,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Lower Floridan aquifer was 8,200 ft2/d.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Upper Floridan aquifer",
+    "source_id": "ngmdb:96679",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "sivity of the Upper Floridan aquifer was 14,500 ft2/d with a",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "City of Rincon test site (36S048), Effingham County, GA",
+    "source_id": "ngmdb:96679",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "City of Rincon Test Site",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "transmissivity": {
+    "value": "14,500 ft2/d",
+    "source_id": "ngmdb:96679",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "sivity of the Upper Floridan aquifer was 14,500 ft2/d with a",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Lower Floridan aquifer",
+    "source_id": "ngmdb:96679",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Lower Floridan aquifer was 2,470 ft2/d (Clarke and others,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "City of Rincon test site (36S048), Effingham County, GA",
+    "source_id": "ngmdb:96679",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "City of Rincon Test Site",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "transmissivity": {
+    "value": "2,470 ft2/d",
+    "source_id": "ngmdb:96679",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Lower Floridan aquifer was 2,470 ft2/d (Clarke and others,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "middle confining unit",
+    "source_id": "ngmdb:96679",
+    "page": 42,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "is about 160 ft thick with horizontal hydraulic conductivities",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Hunter Army Airfield (36Q392), Chatham County, GA",
+    "source_id": "ngmdb:96679",
+    "page": 42,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "in 2009 at Hunter Army Airfield in Chatham County, GA, to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "hydraulic_conductivity": {
+    "value": "0.16 to 3.1 ft/d (horizontal, packer slug tests)",
+    "source_id": "ngmdb:96679",
+    "page": 42,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "from the slug tests ranging from 0.16 to 3.1 ft/d (Williams,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "composed entirely of middle Eocene rocks, about 160 ft thick",
+    "source_id": "ngmdb:96679",
+    "page": 42,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "This unit, which is composed entirely of middle Eocene rocks,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "lower Brunswick aquifer",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "aquifer test run at 30 gal/min indicated a transmissivity of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Pooler, Chatham County, GA",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "completed a test well in the lower Brunswick aquifer at Pooler,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "transmissivity": {
+    "value": "about 200 ft2/d",
+    "source_id": "ngmdb:96679",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "about 200 ft2/d (table 3).",
     "quote_match": "exact",
     "text_method": "pdf_text",
     "verification": null
