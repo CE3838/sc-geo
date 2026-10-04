@@ -38,7 +38,16 @@ ROOT = Path(__file__).resolve().parent.parent
 NGMDB = "https://ngmdb.usgs.gov"
 SCGS_INDEX_URL = "https://services.arcgis.com/acgZYxoN5Oj8pDLa/arcgis/rest/services/24K_Quads/FeatureServer"
 SCDNR_DIGITAL_DATA = "https://www.dnr.sc.gov/geology/digital-data.html"
+EXCLUDE = ROOT / "config" / "catalog_exclude.json"
 THEMES = {"bedrock": "geolgenbed", "surficial": "geolgensur", "structural": "geolstruc", "engineering": "geoleng"}
+
+def excluded_ids(path: Path = EXCLUDE) -> set[str]:
+    """Catalog ids left out of the catalog on purpose (config/catalog_exclude.json), each with a reason."""
+    path = Path(path)
+    if not path.exists():
+        return set()
+    return {e["id"] for e in json.loads(path.read_text()).get("exclude", [])}
+
 
 # --- parsing ---------------------------------------------------------------
 
@@ -165,7 +174,8 @@ def _is_draft(row: dict) -> bool:
 
 def build_catalog(ngmdb_rows: Iterable[dict], themes: dict[str, set], pages: dict[int, dict],
                   scgs_index: Iterable[dict], scgs_gis: Iterable[dict], ftp_links: Iterable[str],
-                  retrieved_at: str) -> list[dict]:
+                  retrieved_at: str, exclude: Iterable[str] = ()) -> list[dict]:
+    exclude = set(exclude)
     records: dict[str, dict] = {}
     by_key: dict[str, dict] = {}
 
@@ -285,7 +295,8 @@ def build_catalog(ngmdb_rows: Iterable[dict], themes: dict[str, set], pages: dic
         rec.setdefault("status", "published")
         is_map = rec["themes"] or rec["quadrangles"] or re.search(r"\bmaps?\b", rec["title"], re.I)
         rec["kind"] = "map" if is_map else "publication"
-    return sorted(records.values(), key=lambda r: (r["kind"], r["id"]))
+    kept = (r for r in records.values() if r["id"] not in exclude)
+    return sorted(kept, key=lambda r: (r["kind"], r["id"]))
 
 
 def summarize(records: list[dict]) -> dict:
@@ -387,7 +398,7 @@ def run(out_dir: Path, checkpoint_dir: Path, log: Callable[..., None] = print) -
     scgs_gis = arcgis_rows(f"{SCGS_INDEX_URL}/1")
     ftp = sorted(set(re.findall(r"ftp://ftpdata\.dnr\.sc\.gov/[^\"'\s<>]+\.zip", _get(SCDNR_DIGITAL_DATA, raw=True))))
     log(f"SCGS index: {len(scgs_index)} quadrangles; GIS table: {len(scgs_gis)}; FTP files: {len(ftp)}")
-    records = build_catalog(rows, themes, pages, scgs_index, scgs_gis, ftp, retrieved_at)
+    records = build_catalog(rows, themes, pages, scgs_index, scgs_gis, ftp, retrieved_at, exclude=excluded_ids())
     summary = summarize(records) | {"retrieved_at": retrieved_at}
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
