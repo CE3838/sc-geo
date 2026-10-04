@@ -161,7 +161,10 @@ def test_normalize_all_reads_scgs_shapefiles_and_skips_without_downloading(tmp_p
     assert by_id["ngmdb:3"]["extent_check"] == "ok" and by_id["ngmdb:3"]["format"] == "shapefile"
     assert by_id["ngmdb:5"]["status"] == "skipped" and "8,000,000" in by_id["ngmdb:5"]["reason"]
     assert not any("DS-1150" in u for u, _ in calls)
-    assert (FTP + "rockv06glc_poly.zip", "ngmdb_3__rockv06glc_poly.zip") in calls
+    # Fetched through its first mirror (HTTPS), so FTP is never needed.
+    https = (FTP + "rockv06glc_poly.zip").replace("ftp://", "https://")
+    assert (https, "ngmdb_3__rockv06glc_poly.zip") in calls
+    assert (FTP + "rockv06glc_poly.zip", "ngmdb_3__rockv06glc_poly.zip") not in calls
     p = feats[0]["properties"]
     assert p["source"] == "ngmdb:3" and p["map_unit"] == "Qal" and p["layer"] == "surficial"
     # Cached: no download, same report details.
@@ -171,6 +174,30 @@ def test_normalize_all_reads_scgs_shapefiles_and_skips_without_downloading(tmp_p
     assert {r["id"]: r for r in report2}["ngmdb:3"]["files"] == by_id["ngmdb:3"]["files"]
 
 
+def test_scdnr_ftp_files_are_tried_over_https_and_http_first():
+    url = FTP + "rockv06glc_poly.zip"
+    assert build.mirrors(url) == [url.replace("ftp://", "https://"), url.replace("ftp://", "http://"), url]
+    other = "https://ngmdb.usgs.gov/x.zip"
+    assert build.mirrors(other) == [other]
+
+
+def test_first_working_mirror_wins(tmp_path):
+    import urllib.error
+
+    calls = []
+
+    def fetch(url, dest):
+        calls.append(url)
+        if url.startswith("https://ftpdata"):
+            raise urllib.error.HTTPError(url, 404, "Not Found", None, None)
+        dest.write_bytes(b"ok")
+        return dest
+
+    guarded = build._skip_dead_hosts(fetch)
+    guarded(FTP + "rockv06glc_poly.zip", tmp_path / "a.zip")
+    assert [u.split(":")[0] for u in calls] == ["https", "http"]  # FTP never needed
+
+
 def test_unreachable_host_is_not_retried_for_every_source(tmp_path):
     import urllib.error
 
@@ -178,16 +205,20 @@ def test_unreachable_host_is_not_retried_for_every_source(tmp_path):
 
     def fetch(url, dest):
         calls.append(url)
-        if url.startswith("ftp://"):
+        if "ftpdata" in url:
             raise urllib.error.URLError(TimeoutError("timed out"))
         raise urllib.error.HTTPError(url, 404, "Not Found", None, None)
 
     second = {**MORE[0], "id": "ngmdb:6", "availability": {"scgs_ftp": [FTP + "aiken08glc_poly.zip"]}}
+    third = {**MORE[0], "id": "ngmdb:9", "availability": {"scgs_ftp": [FTP + "bates09glc_poly.zip"]}}
     gems = [{**CATALOG[0], "id": f"ngmdb:{i}"} for i in (7, 8)]
-    _, report = build.normalize_all([MORE[0], second] + gems, cache=tmp_path, log=lambda *_: None, fetch=fetch)
+    _, report = build.normalize_all([MORE[0], second, third] + gems, cache=tmp_path, log=lambda *_: None,
+                                    fetch=fetch)
     by_id = {r["id"]: r for r in report}
-    assert [u for u in calls if u.startswith("ftp://")] == [FTP + "rockv06glc_poly.zip"]
-    assert "unreachable earlier in this run" in by_id["ngmdb:6"]["reason"]
+    # One slow file is not proof the host is down: a host is given up only after failing on two files.
+    tried = [u for u in calls if "ftpdata" in u]
+    assert {u.rsplit("/", 1)[1] for u in tried} == {"rockv06glc_poly.zip", "aiken08glc_poly.zip"}
+    assert "unreachable earlier in this run" in by_id["ngmdb:9"]["reason"]
     # An HTTP error is about one file, not the host: both GeMS sources were tried.
     assert sum("gems_download" in u for u in calls) == 2
 

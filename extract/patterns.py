@@ -57,7 +57,11 @@ _LOWER = re.compile(r"more than|greater than|>|at least|minimum|exceeds|over\b",
 
 
 def _unit_factor(u: str) -> float:
-    return _UNITS[u.lower().rstrip(".") if u.lower() not in ("in.",) else "in"]
+    """Feet per unit. A qualified unit ('feet bls', 'ft below land surface') counts as its first
+    word; an unknown unit raises KeyError."""
+    key = u.lower().strip()
+    key = key if key in _UNITS else (key.split()[0] if key.split() else key)
+    return _UNITS[key.rstrip(".") if key not in ("in.",) else "in"]
 
 
 def length_ft(text, default_unit: str | None = None) -> dict | None:
@@ -65,7 +69,10 @@ def length_ft(text, default_unit: str | None = None) -> dict | None:
     if isinstance(text, (int, float)) and not isinstance(text, bool):
         if not default_unit:
             return None
-        v = float(text) * _unit_factor(default_unit)
+        try:
+            v = float(text) * _unit_factor(default_unit)
+        except KeyError:
+            return None  # unknown unit: leave the value as reported, not normalized
         return {"min_ft": v, "max_ft": v, "unit": default_unit, "approximate": False}
     s = re.sub(r"\s+", " ", str(text or ""))[:1000]  # a single value; bounded so no regex can stall
     approx = bool(re.search(r"\b(about|approximately|approx\.?|roughly|ca\.)\b|~", s, re.I))
@@ -96,7 +103,10 @@ def length_ft(text, default_unit: str | None = None) -> dict | None:
             if not nums:
                 return None
             unit = default_unit
-            vals = [_f(n) * _unit_factor(default_unit) for n in nums[:2]]
+            try:
+                vals = [_f(n) * _unit_factor(default_unit) for n in nums[:2]]
+            except KeyError:
+                return None  # unknown unit: leave the value as reported, not normalized
             lo, hi = min(vals), max(vals)
         else:
             return None
