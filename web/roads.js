@@ -1,15 +1,26 @@
-// Roads with names and route numbers, read live from SCDOT's public road
-// inventory on ArcGIS Online for the area on screen (not copied here).
-// Statewide_Highways is the state highway system (interstates, US and SC
-// routes, state secondary "S-" roads, ramps); OTHER_ROADS holds county,
-// city and private roads. Both carry ROUTE_TYPE, ROUTE_NUMB and STREET_NAM.
+// Roads with names and route numbers, read live from the US Census Bureau's
+// TIGERweb service (TIGER/Line, public domain) for the area on screen; not
+// copied here. Primary Roads (MTFCC S1100), Secondary Roads (S1200) and Local
+// Roads (S1400 and smaller) each carry NAME (full street or route name),
+// RTTYP (route type: I, U, S, C, M) and OID (the TIGER LINEARID).
 // Pure helpers and layer specs; roads-ui.js puts them on the map.
 
-const ORG = 'https://services1.arcgis.com/VaY7cY9pvUYUP1Lf/arcgis/rest/services';
-export const SCDOT_HIGHWAYS = `${ORG}/Statewide_Highways/FeatureServer/0`;
-export const SCDOT_OTHER_ROADS = `${ORG}/OTHER_ROADS/FeatureServer/0`;
-export const ROAD_ATTRIBUTION = 'Roads: SC Department of Transportation road inventory';
-export const ROAD_FIELDS = ['FID', 'ROUTE_TYPE', 'ROUTE_NUMB', 'ROUTE_AUX', 'STREET_NAM', 'COUNTY_ID'];
+export const TIGER_TRANSPORTATION = 'https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/Transportation/MapServer';
+// Full-detail layers; the service also has generalized copies for small scales.
+export const TIGER_PRIMARY_ROADS = `${TIGER_TRANSPORTATION}/2`;
+export const TIGER_SECONDARY_ROADS = `${TIGER_TRANSPORTATION}/6`;
+export const TIGER_LOCAL_ROADS = `${TIGER_TRANSPORTATION}/8`;
+export const ROAD_ATTRIBUTION = 'Roads: US Census Bureau TIGER/Line (live)';
+export const ROAD_FIELDS = ['OBJECTID', 'OID', 'NAME', 'MTFCC', 'RTTYP'];
+export const ROAD_ORDER_BY = 'OBJECTID';
+
+const ROUTES = "RTTYP IN ('U','S')";
+// Local roads, ramps, service drives, alleys, private and 4WD roads; no walkways,
+// stairways, parking lots, trails or internal census features.
+const LOCAL_ROADS = "MTFCC IN ('S1400','S1500','S1630','S1640','S1730','S1740')";
+const PRIMARY = { name: 'Primary Roads', url: TIGER_PRIMARY_ROADS };
+const SECONDARY = { name: 'Secondary Roads', url: TIGER_SECONDARY_ROADS };
+const LOCAL = { name: 'Local Roads', url: TIGER_LOCAL_ROADS };
 
 // Detail by zoom: interstates at state scale, US and SC highways from z8,
 // every road (with names) from z13. Each tier is its own map source; its
@@ -18,20 +29,17 @@ export const ROAD_TIERS = [
   {
     id: 'interstate', source: 'roads-state', minzoom: 0, maxzoom: 13, tileZoom: 6, maxTiles: 30,
     maxAllowableOffset: 0.002, precision: 4,
-    layers: [{ name: 'Statewide_Highways', url: SCDOT_HIGHWAYS, where: "ROUTE_TYPE='I-'" }],
+    layers: [{ ...PRIMARY, where: "RTTYP='I'" }],
   },
   {
     id: 'highway', source: 'roads-hwy', minzoom: 8, maxzoom: 13, tileZoom: 9, maxTiles: 30,
     maxAllowableOffset: 0.0005, precision: 5,
-    layers: [{ name: 'Statewide_Highways', url: SCDOT_HIGHWAYS, where: "ROUTE_TYPE IN ('US','SC')" }],
+    layers: [{ ...PRIMARY, where: ROUTES }, { ...SECONDARY, where: ROUTES }],
   },
   {
     id: 'local', source: 'roads-local', minzoom: 13, maxzoom: 24, tileZoom: 13, maxTiles: 20,
     maxAllowableOffset: 0.00002, precision: 6,
-    layers: [
-      { name: 'Statewide_Highways', url: SCDOT_HIGHWAYS, where: '1=1' },
-      { name: 'OTHER_ROADS', url: SCDOT_OTHER_ROADS, where: '1=1' },
-    ],
+    layers: [{ ...PRIMARY, where: '1=1' }, { ...SECONDARY, where: '1=1' }, { ...LOCAL, where: LOCAL_ROADS }],
   },
 ];
 export const ROAD_SOURCES = ROAD_TIERS.map((t) => t.source);
@@ -53,7 +61,7 @@ function word(w) {
   return w[0] + w.slice(1).toLowerCase();
 }
 
-// "RIVERS AV" -> "Rivers Ave". Mixed-case names are kept as written.
+// "RIVERS AV" -> "Rivers Ave". Mixed-case names (TIGER's) are kept as written.
 export function streetName(raw) {
   const s = String(raw ?? '').trim().replace(/\s+/g, ' ');
   if (!s || /^(NO NAME|UNNAMED|UNKNOWN)$/i.test(s)) return null;
@@ -61,44 +69,47 @@ export function streetName(raw) {
   return s.split(' ').map((w) => w.split('-').map(word).join('-')).join(' ');
 }
 
-const AUX = { BUS: 'Bus', BU1: 'Bus', BU2: 'Bus', ALT: 'Alt', BYP: 'Byp', CON: 'Conn', CO1: 'Conn', CO2: 'Conn',
-  SPR: 'Spur', TRK: 'Truck' };
-const RAMPS = new Set(['R-', 'RS', 'CD']);
+const AUX = { BUS: 'Bus', BUSINESS: 'Bus', ALT: 'Alt', ALTERNATE: 'Alt', BYP: 'Byp', BYPASS: 'Byp', CON: 'Conn',
+  CONN: 'Conn', CONNECTOR: 'Conn', SPR: 'Spur', SPUR: 'Spur', TRK: 'Truck', TRUCK: 'Truck' };
+const ROUTE_NAME = {
+  I: [/^(?:I|Interstate)[\s-]*(\d+)\b\s*(.*)$/i, 'interstate', (n) => `I-${n}`],
+  U: [/^(?:US|U\.S\.)[\s-]*(?:Hwy|Highway|Rte|Route)?[\s-]*(\d+)\b\s*(.*)$/i, 'us', (n) => `US ${n}`],
+  S: [/^(?:State|SC|S\.C\.)[\s-]*(?:Hwy|Highway|Rte|Route)[\s-]*(\d+)\b\s*(.*)$/i, 'sc', (n) => `SC ${n}`],
+};
 
-// { cls, ref, name } for an SCDOT road segment.
+// { cls, ref } for a TIGER route name ("I- 26", "US Hwy 52 Spr", "State Hwy 61"), or null.
+export function routeRef(name, rttyp) {
+  const rule = ROUTE_NAME[String(rttyp ?? '').trim().toUpperCase()];
+  const m = rule && rule[0].exec(String(name ?? '').trim().replace(/\s+/g, ' '));
+  if (!m) return null;
+  const aux = AUX[(m[2].split(' ')[0] ?? '').toUpperCase().replace(/\.$/, '')];
+  return { cls: rule[1], ref: aux ? `${rule[2](Number(m[1]))} ${aux}` : rule[2](Number(m[1])) };
+}
+
+// MTFCC (feature class) for roads without a route number.
+const BY_MTFCC = { S1100: 'secondary', S1200: 'secondary', S1630: 'ramp', S1740: 'private', S1500: 'private' };
+
+// { cls, ref, name } for a TIGER road record.
 export function classifyRoad(p) {
-  const type = String(p.ROUTE_TYPE ?? '').trim();
-  const num = Number(p.ROUTE_NUMB);
-  const has = Number.isFinite(num) && num > 0;
-  const aux = AUX[String(p.ROUTE_AUX ?? '').trim().toUpperCase()];
-  let cls = 'local';
-  let ref = null;
-  if (type === 'I-' && has) { cls = 'interstate'; ref = `I-${num}`; }
-  else if (type === 'US' && has) { cls = 'us'; ref = `US ${num}`; }
-  else if (type === 'SC' && has) { cls = 'sc'; ref = `SC ${num}`; }
-  else if (type === 'S-') { cls = 'secondary'; ref = has ? (p.COUNTY_ID ? `S-${p.COUNTY_ID}-${num}` : `S-${num}`) : null; }
-  else if (type === 'D-') cls = 'secondary';
-  else if (RAMPS.has(type)) cls = 'ramp';
-  else if (type === 'PR') cls = 'private';
-  if (ref && aux && ['interstate', 'us', 'sc'].includes(cls)) ref = `${ref} ${aux}`;
-  let name = streetName(p.STREET_NAM);
-  // "INTERSTATE 26", "HIGHWAY 78": the route number again, not a name.
-  if (name && has && new RegExp(`^(interstate|highway|hwy|state highway|state road|us|sc)[ -]*${num}$`, 'i').test(name)) name = null;
-  return { cls, ref, name };
+  const route = routeRef(p.NAME, p.RTTYP);
+  if (route) return { ...route, name: null }; // the name only repeats the route number
+  const rttyp = String(p.RTTYP ?? '').trim().toUpperCase();
+  const cls = BY_MTFCC[p.MTFCC] ?? (['S', 'C'].includes(rttyp) ? 'secondary' : 'local');
+  return { cls, ref: null, name: streetName(p.NAME) };
 }
 
 const CLASS_LABEL = {
-  interstate: 'Interstate', us: 'U.S. highway', sc: 'S.C. highway', secondary: 'State secondary road',
+  interstate: 'Interstate', us: 'U.S. highway', sc: 'S.C. highway', secondary: 'Secondary road',
   ramp: 'Ramp', local: 'Local road', private: 'Private road',
 };
 const RANK = { interstate: 7, us: 6, sc: 5, ramp: 4, secondary: 3, local: 2, private: 1 };
 
 // GeoJSON feature from a service feature, with the small set of properties
-// the map uses. `layer` and `fid` locate the source record.
+// the map uses. `layer` (TIGERweb layer name) and `fid` (LINEARID) locate the record.
 export function normalizeRoad(feature, layer) {
   const p = feature.properties ?? {};
   const { cls, ref, name } = classifyRoad(p);
-  const fid = p.FID ?? p.OBJECTID ?? feature.id ?? null;
+  const fid = p.OID ?? p.OBJECTID ?? feature.id ?? null;
   return {
     type: 'Feature',
     properties: { cls, ref, name, rank: RANK[cls], layer, fid, key: `${layer}:${fid}` },
@@ -106,11 +117,13 @@ export function normalizeRoad(feature, layer) {
   };
 }
 
+const CITE = 'US Census Bureau TIGER/Line';
+
 export function describeRoad({ cls, ref, name, layer, fid }) {
   return {
     title: name ?? ref ?? 'Unnamed road',
     detail: [name ? ref : null, CLASS_LABEL[cls] ?? 'Road'].filter(Boolean).join(' · '),
-    source: layer ? `SCDOT road inventory (${layer}${fid != null ? ` FID ${fid}` : ''})` : 'SCDOT road inventory',
+    source: layer ? `${CITE}, TIGERweb ${layer}${fid != null ? ` (LINEARID ${fid})` : ''}` : CITE,
   };
 }
 
@@ -162,7 +175,7 @@ export function roadLayers() {
         paint: { 'line-color': COLOR, 'line-width': WIDTH(0) } },
     );
   }
-  // SCDOT segments are short (about one per block or mile), too short at
+  // TIGER segments are short (about one per block or mile), too short at
   // small scales to fit a shield along them, so those tiers place shields at
   // segment starts; collision padding, not spacing, keeps them apart.
   const shield = (id, source, minzoom, maxzoom, classes, padding, placement = 'point') => ({
