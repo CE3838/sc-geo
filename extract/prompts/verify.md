@@ -38,7 +38,7 @@ Write `.cache/results/<id>.<packet>.verify.json`:
 ```json
 {
   "source_id": "<catalog id>",
-  "reader": "<model name>, verify pass <date>",
+  "reader": "Claude, verify pass <date>",
   "checks": [
     {"path": "units[0].thickness", "verdict": "agree"},
     {"path": "observations[2].intervals[1].bottom", "verdict": "disagree",
