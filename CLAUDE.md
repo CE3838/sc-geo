@@ -24,6 +24,15 @@ Guidance for Claude (and humans) working in this repository.
    anything about internal or client work. The same applies to commit
    messages, PR titles and PR comments here. Detailed notes go only in the
    private repo or the chat.
+7. **Minimal traffic to every source.** Each site we query or download from
+   gets as few requests as possible: layers that query other servers live
+   start off (`web/live.js`), requests wait until the map stops, results are
+   cached, and harvest jobs are throttled, resumable and never re-download
+   what they have.
+8. **Follow each source's terms; cite everything; no warranty.** Keep every
+   attribution, citation and condition a source sets for reusing its data;
+   every value links back to its source and page. The viewer, the data
+   package and the README say the data is provided as is, without warranty.
 
 ## Project notes
 
