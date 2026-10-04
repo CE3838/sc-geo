@@ -6,7 +6,9 @@
 Steps (see extract/README.md for the confidence formula):
 
 1. Validate each result against extract/schema.json; refuse the whole
-   document on any schema error.
+   document on any schema error. For a record that is one paper of a larger
+   volume (config/catalog_scope.json), also refuse it when any value cites a
+   page outside the record's own pages.
 2. Check every value's quote against the cached text of the page it cites
    (.cache/text/<id>.json), tolerant of whitespace, hyphenation at line
    breaks, ligatures, curly quotes, case and common OCR confusions. A quote
@@ -35,7 +37,7 @@ import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
 
-from extract import packets, patterns, schema
+from extract import packets, patterns, schema, scope
 from extract.packets import safe_id
 from merge.score import scale_weight
 from model.provenance import ExtractionMethod, StoredValue
@@ -302,7 +304,7 @@ def _now() -> str:
 def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: Path = TEXT_DIR,
            out_dir: Path = OUT_DIR, review_dir: Path = REVIEW_DIR, catalog: dict | None = None,
            lexicon: Lexicon | None = None, done_dir: Path = DONE_DIR, cfg: dict = CONFIG,
-           packets_dir: Path = PACKETS_DIR) -> dict:
+           packets_dir: Path = PACKETS_DIR, scopes: dict | None = None) -> dict:
     results = [_load_json(p, "result") for p in result_paths]
     for p, r in zip(result_paths, results):
         errs = schema.validate(r)
@@ -325,6 +327,19 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
     pages = {p["page"]: p for p in doc["pages"]}
     index_path = Path(packets_dir) / safe_id(sid) / "index.json"
     index = _load_json(index_path, "packet index") if index_path.exists() else None
+    rec_scope = scope.for_record(sid, doc, scope.load() if scopes is None else scopes)
+    if rec_scope:
+        allowed = set(rec_scope["pages"])
+        outside = [f"{path} (page {val['page']})" for path, val in schema.iter_values(result)
+                   if val["page"] not in allowed]
+        if outside:
+            raise IngestError(f"{sid} is one paper of a larger volume (config/catalog_scope.json); its pages are "
+                              f"{scope.describe(rec_scope['pages'])}, but these values cite pages outside them:\n  "
+                              + "\n  ".join(outside[:40]))
+        if index is not None and index.get("scope") != rec_scope:
+            raise IngestError(f"the packet index for {sid} was built for another page scope; "
+                              f"run python -m extract.next_batch --id {sid} and read the rebuilt packets")
+        pages = {n: p for n, p in pages.items() if n in allowed}
     if result.get("packets"):
         if index is None or "blocks" not in index:
             raise IngestError(f"no packet index for {sid} at {index_path}; run python -m extract.next_batch --id {sid}")

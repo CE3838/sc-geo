@@ -101,6 +101,31 @@ def test_complete_and_legacy_files_are_done(tmp_path, monkeypatch):
     assert [b["id"] for b in _batch(tmp_path, n=5)] == ["ngmdb:4"]
 
 
+def test_scoped_record_gets_only_its_pages_and_is_rebuilt_when_the_scope_changes(tmp_path, monkeypatch):
+    monkeypatch.setattr(next_batch.pdfs, "process", fake_process)
+    three_packet_text(tmp_path / ".cache", "ngmdb:4")
+    batch = _batch(tmp_path, n=5, ids=["ngmdb:4"], scopes={"ngmdb:4": {"pdf_pages": [2, 3], "note": "ch"}})
+    assert [p["blocks"] for p in batch[0]["packets"]] == [["2"], ["3"]]
+    assert batch[0]["scope"]["pages"] == [2, 3]
+    index = tmp_path / ".cache" / "packets" / "ngmdb_4" / "index.json"
+    assert json.loads(index.read_text())["blocks"] == ["2", "3"]
+    batch = _batch(tmp_path, n=5, ids=["ngmdb:4"], scopes={"ngmdb:4": {"pdf_pages": [3, 3], "note": "ch"}})
+    assert [p["blocks"] for p in batch[0]["packets"]] == [["3"]]
+    batch = _batch(tmp_path, n=5, ids=["ngmdb:4"], scopes={})
+    assert [p["blocks"] for p in batch[0]["packets"]] == [["1"], ["2"], ["3"]]
+    assert batch[0]["scope"] is None
+
+
+def test_scoped_record_is_done_when_its_pages_are_done(tmp_path, monkeypatch):
+    monkeypatch.setattr(next_batch.pdfs, "process", fake_process)
+    three_packet_text(tmp_path / ".cache", "ngmdb:4")
+    extracted = tmp_path / "data" / "extracted"
+    extracted.mkdir(parents=True)
+    (extracted / "ngmdb_4.json").write_text(json.dumps({"source_id": "ngmdb:4", "complete": False,
+                                                        "blocks_done": ["2"]}))
+    assert _batch(tmp_path, n=5, ids=["ngmdb:4"], scopes={"ngmdb:4": {"pdf_pages": [2, 2], "note": "ch"}}) == []
+
+
 def test_excluded_records_are_never_handed_out(tmp_path, monkeypatch):
     monkeypatch.setattr(next_batch.pdfs, "process", fake_process)
     monkeypatch.setattr(next_batch.pdfs, "excluded_ids", lambda: {"ngmdb:1"})

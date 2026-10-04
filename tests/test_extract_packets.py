@@ -145,6 +145,24 @@ def test_block_pages():
     assert packets.is_part("13.2/3") and not packets.is_part("12")
 
 
+def test_scoped_build_keeps_only_the_records_pages():
+    """A chapter of a multi-paper volume: only its pages (and extra pages) go into the packets."""
+    doc = _doc([CONTENT] * 8)
+    out = packets.build(doc, RECORD, pages={3, 4, 5, 7}, scope_note="Chapter D only")
+    assert [n for p in out for n in p["pages"]] == [3, 4, 5, 7]
+    assert "=== PAGE 2" not in out[0]["text"] and "=== PAGE 6" not in out[0]["text"]
+    assert "Scope: PDF pages 3-5, 7" in out[0]["text"] and "Chapter D only" in out[0]["text"]
+
+
+def test_index_records_the_scope(tmp_path):
+    out = packets.build(_doc([CONTENT] * 3), RECORD, pages={2})
+    packets.write(out, RECORD, tmp_path, scope={"pages": [2]})
+    index = json.loads((tmp_path / "ngmdb_10009" / "index.json").read_text())
+    assert index["scope"] == {"pages": [2]} and index["blocks"] == ["2"]
+    packets.write(packets.build(_doc([CONTENT]), RECORD), RECORD, tmp_path)
+    assert json.loads((tmp_path / "ngmdb_10009" / "index.json").read_text())["scope"] is None
+
+
 def test_safe_id():
     assert packets.safe_id("ngmdb:10009") == "ngmdb_10009"
     assert packets.safe_id("scgs-draft:ab/c d") == "scgs-draft_ab_c_d"
