@@ -27,7 +27,10 @@ def _values(node):
 def test_extracted_values_have_provenance_and_short_quotes(path):
     doc = json.loads(path.read_text())
     values = list(_values({k: doc[k] for k in ("units", "observations", "structures", "groundwater", "references")}))
-    assert values, "an extracted file with no values should not be committed"
+    # A document that holds nothing to extract (a program summary, a surface-water study) is
+    # committed once, complete and with a note saying why, so it is not handed out again.
+    if not values:
+        assert doc.get("complete") and doc.get("notes"), "an empty extraction needs complete=true and notes"
     for v in values:
         sv = StoredValue.from_dict(v)
         assert sv.source_id == doc["source_id"]

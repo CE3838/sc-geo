@@ -185,3 +185,15 @@ def test_date():
     assert p.date("1985-06-12") == "1985-06-12"
     assert p.date("Sept. 1985") == "1985-09"
     assert p.date("spring") is None
+
+
+def test_length_unit_with_a_qualifier_is_read():
+    # Reports often qualify the unit ("feet bls", "ft below land surface"); the unit still counts.
+    assert p.length_ft(35, default_unit="feet bls")["max_ft"] == 35
+    assert p.length_ft("12", default_unit="ft below land surface")["min_ft"] == 12
+    assert p.length_ft(2, default_unit="m bgs")["max_ft"] == pytest.approx(2 / 0.3048)
+
+
+def test_unknown_length_unit_is_not_normalized_instead_of_crashing():
+    assert p.length_ft(3, default_unit="fathoms") is None
+    assert p.length_ft("3", default_unit="furlongs") is None
