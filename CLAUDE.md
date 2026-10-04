@@ -18,7 +18,12 @@ Guidance for Claude (and humans) working in this repository.
    jobs checkpoint their progress, skip work already done on restart, and stay
    under the 6-hour GitHub Actions job limit.
 5. **Tests first.** Write or update tests before changing a parser or a prompt.
-6. **Every pull request includes tests and a summary.**
+6. **Every pull request includes tests and a summary.** In this public repo the
+   summary is one neutral line (what area changed, "tests pass"): no project
+   decisions, data counts, source or site names, legal/terms discussion, or
+   anything about internal or client work. The same applies to commit
+   messages, PR titles and PR comments here. Detailed notes go only in the
+   private repo or the chat.
 
 ## Project notes
 
