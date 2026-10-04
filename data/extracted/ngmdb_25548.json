@@ -8,10 +8,11 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-04T10:04:08+00:00",
- "updated_at": "2026-10-04T10:04:08+00:00",
+ "updated_at": "2026-10-04T10:04:22+00:00",
  "reader": "Claude, reading session 2026-10-04",
  "packets": [
-  "packet-01"
+  "packet-01",
+  "packet-02"
  ],
  "blocks_done": [
   "1",
@@ -46,11 +47,43 @@
   "31",
   "32",
   "33",
-  "34"
+  "34",
+  "35",
+  "36",
+  "37",
+  "38",
+  "39",
+  "40",
+  "41",
+  "42",
+  "43",
+  "44",
+  "45",
+  "46",
+  "47",
+  "48",
+  "49",
+  "50",
+  "51",
+  "52",
+  "53",
+  "54",
+  "55",
+  "56",
+  "57",
+  "58",
+  "59",
+  "60",
+  "61",
+  "62",
+  "63",
+  "64",
+  "65",
+  "66"
  ],
  "blocks_total": 65,
- "complete": false,
- "notes": "Hydrologic report (USGS WSP 2411, Savannah GA / Hilton Head SC area); the whole PDF is this one report. No stratigraphic (formation) units are described, so hydrogeologic units are recorded under groundwater only. Thickness and depth statements are put in separate description entries because the groundwater schema has no thickness field. Table 8 water levels are given by model cell (row, column), not by well, and surface-water station flow and water-quality tables (tables 1-6) are not geologic; none of these were recorded. Figure 4 correlation chart text is too scrambled to pair ages with units.",
+ "complete": true,
+ "notes": "Hydrologic report (USGS WSP 2411, Savannah GA / Hilton Head SC area); the whole PDF is this one report. No stratigraphic (formation) units are described, so hydrogeologic units are recorded under groundwater only. Thickness and depth statements are put in separate description entries because the groundwater schema has no thickness field. Table 8 water levels are given by model cell (row, column), not by well, and surface-water station flow and water-quality tables (tables 1-6) are not geologic; none of these were recorded. Figure 4 correlation chart text is too scrambled to pair ages with units.\nPages 35-47 are model budgets, sensitivity, development-potential and alternatives text plus the reference list; pages 48-66 are the 19 plates (map text only, scrambled). Tables 9-14 are model results by model cell, not geologic data; not recorded. References: only those bearing on South Carolina or the regional Floridan aquifer system were recorded; Georgia-only, general method and regulation references were skipped. For Smith (1993) the author is shown by a dash in the list and is taken from the preceding entry (flagged inferred).",
  "files": [
   {
    "url": "https://pubs.usgs.gov/wsp/2411/report.pdf",
@@ -61,14 +94,14 @@
   }
  ],
  "summary": {
-  "stored": 51,
+  "stored": 91,
   "quote_match": {
-   "exact": 51
+   "exact": 91
   },
   "verification": {
-   "agree": 6
+   "agree": 10
   },
-  "inferred": 1
+  "inferred": 3
  },
  "ingests": [
   {
@@ -88,10 +121,104 @@
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
+  },
+  {
+   "at": "2026-10-04T10:04:22+00:00",
+   "packets": [
+    "packet-02"
+   ],
+   "reader": "Claude, reading session 2026-10-04",
+   "values": 40,
+   "stored": 40,
+   "exact": 40,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 4,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
   }
  ],
  "units": [],
- "observations": [],
+ "observations": [
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT315",
+    "source_id": "ngmdb:25548",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "in water from well BFT315 (fig. 5), which is complet",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Hilton Head Island",
+    "source_id": "ngmdb:25548",
+    "page": 38,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Chloride concentration in water from well BFT315, Hilton Head Island,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "lower part of the Upper Floridan aquifer",
+      "source_id": "ngmdb:25548",
+      "page": 37,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "ed in the lower part of the Upper Floridan aquifer,",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT1810",
+    "source_id": "ngmdb:25548",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "tions, including chloride) of water from well BFT1810,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Hilton Head Island",
+    "source_id": "ngmdb:25548",
+    "page": 38,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Specific conductance of water from well BFT1810, Hilton Head Island, 1987-90.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ],
  "structures": [],
  "groundwater": [
   {
@@ -803,7 +930,511 @@
     "text_method": "pdf_text",
     "verification": null
    }
+  },
+  {
+   "aquifer": {
+    "value": "Upper Floridan aquifer",
+    "source_id": "ngmdb:25548",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "ed in the lower part of the Upper Floridan aquifer,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "well BFT315, Hilton Head Island",
+    "source_id": "ngmdb:25548",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "in water from well BFT315 (fig. 5), which is complet",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "date": {
+    "value": "1978 to 1983",
+    "source_id": "ngmdb:25548",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "increased from about 100 mg/L in 1978 to about 600",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "chloride concentration increased from about 100 mg/L in 1978 to about 600 mg/L in 1983",
+    "source_id": "ngmdb:25548",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "increased from about 100 mg/L in 1978 to about 600",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Upper Floridan aquifer",
+    "source_id": "ngmdb:25548",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "ed in the lower part of the Upper Floridan aquifer,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "the text says BFT1810 is also on Hilton Head Island in the same discussion of the Upper Floridan aquifer; the aquifer is not named for this well"
+   },
+   "location": {
+    "value": "well BFT1810, also on Hilton Head Island",
+    "source_id": "ngmdb:25548",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "also on Hilton Head Island (fig. 5), increased from",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "date": {
+    "value": "1987-90",
+    "source_id": "ngmdb:25548",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "meter at 25°C (u,S/cm) during the period 1987-90",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "description": {
+    "value": "specific conductance increased from about 750 to more than 7,500 microsiemens per centimeter at 25°C, probably from seawater encroachment",
+    "source_id": "ngmdb:25548",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "about 750 to more than 7,500 microsiemens per centi",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Upper Floridan aquifer",
+    "source_id": "ngmdb:25548",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "croachment) is occurring at the north end of Hilton",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "north end of Hilton Head Island",
+    "source_id": "ngmdb:25548",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "croachment) is occurring at the north end of Hilton",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "Lateral migration of seawater (seawater encroachment) is occurring",
+    "source_id": "ngmdb:25548",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Lateral migration of seawater (seawater en",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Upper Floridan aquifer",
+    "source_id": "ngmdb:25548",
+    "page": 40,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Although the Upper Floridan aquifer may pinch",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "northeast of the Combahee River",
+    "source_id": "ngmdb:25548",
+    "page": 40,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "out northeast of the Combahee River (Krause and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "may pinch out northeast of the Combahee River; simulated there with low values of transmissivity",
+    "source_id": "ngmdb:25548",
+    "page": 40,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "out northeast of the Combahee River (Krause and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Upper Floridan aquifer",
+    "source_id": "ngmdb:25548",
+    "page": 40,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "tial in the area of Hilton Head Island is less than 1",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "area of Hilton Head Island (southern part of Beaufort County and all of Hilton Head Island)",
+    "source_id": "ngmdb:25548",
+    "page": 40,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "tial in the area of Hilton Head Island is less than 1",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "simulated ground-water-development potential is less than 1 Mgal/d",
+    "source_id": "ngmdb:25548",
+    "page": 40,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "tial in the area of Hilton Head Island is less than 1",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
   }
  ],
- "references": []
+ "references": [
+  {
+   "citation": {
+    "value": "Burt, R.A., Belval, D.L., Crouch, Michael, and Hughes, W.B., 1987, Geohydrologic data form Port Royal Sound, Beaufort County, South Carolina: U.S. Geological Survey, Open-File Report 86-497, 67 p.",
+    "source_id": "ngmdb:25548",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Burt, R.A., Belval, D.L., Crouch, Michael, and Hugh",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Bush, P.W., 1988, Simulation of saltwater movement in the Floridan aquifer system, Hilton Head Island, South Carolina: U.S. Geological Survey Water-Supply Paper 2331, 19 p.",
+    "source_id": "ngmdb:25548",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Bush, P.W., 1988, Simulation of saltwater movement",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Bush, P.W, and Johnston, R.H., 1988, Ground-water hydraulics, regional flow, and ground-water development of the Floridan aquifer system in Florida, and in parts of Georgia, South Carolina, and Alabama: U.S. Geological Survey Professional Paper 1403-C, 80 p.",
+    "source_id": "ngmdb:25548",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Bush, P.W, and Johnston, R.H., 1988, Ground-water",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Clarke, J.S., Hacke, C.M., and Peck, M.F., 1990, Geology and ground-water resources of the coastal area of Georgia: Georgia Geologic Survey Bulletin 113, 106 p.",
+    "source_id": "ngmdb:25548",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Clarke, J.S., Hacke, C.M., and Peck, M.F., 1990, Ge",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Counts, H.B., and Donsky, Ellis, 1963, Salt-water encroachment, geology, and ground-water resources of Savannah area, Georgia and South Carolina: U.S. Geological Survey Water-Supply Paper 1611, 100 p.",
+    "source_id": "ngmdb:25548",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Counts, H.B., and Donsky, Ellis, 1963, Salt-water",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Hassen, J.A., 1985, Ground-water conditions in the Ladies and St. Helena Islands area, South Carolina: South Carolina Water Resources Commission Report 147, 56 p.",
+    "source_id": "ngmdb:25548",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Hassen, J.A., 1985, Ground-water conditions in the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Hayes, L.R., 1979, The ground-water resources of Beaufort, Colleton, Hampton, and Jasper Counties, South Carolina: South Carolina Water Resources Commission Report 9, 91 p.",
+    "source_id": "ngmdb:25548",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Hayes, L.R., 1979, The ground-water resources of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Johnston, R.H., Krause, R.E., Meyer, F.W., Ryder, P.D., Tibbals, C.H., and Hunn, J.D., 1980, Estimated potentiometric surface for the Tertiary limestone aquifer system, southeastern United States, prior to development: U.S. Geological Survey Open-File Report 80-406, 1 sheet, scale 1:1,000,000.",
+    "source_id": "ngmdb:25548",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Johnston, R.H., Krause, R.E., Meyer, F.W., Ryder,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Krause, R.E., and Randolph, R.B., 1989, Hydrology of the Floridan aquifer system in southeast Georgia and adjacent parts of Florida and South Carolina: U.S. Geological Survey Professional Paper 1403-D, 65 p.",
+    "source_id": "ngmdb:25548",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Krause, R.E., and Randolph, R.B., 1989, Hydrology",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "McCollum, M.J., and Counts, H.B., 1964, Relation of salt-water encroachment to the major aquifer zones, Savannah area, Georgia and South Carolina: U.S. Geological Survey Water-Supply Paper 1613-D, 26 p.",
+    "source_id": "ngmdb:25548",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "McCollum, M.J., and Counts, H.B., 1964, Relation of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "McCready, R.W., 1989, Water use and future requirements Hilton Head Island and vicinity South Carolina: South Carolina Water Resources Commission Report 168, 54 p.",
+    "source_id": "ngmdb:25548",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "McCready, R.W., 1989, Water use and future require",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Miller, J.A., 1986, Hydrogeologic framework of the Floridan aquifer system in Florida and in parts of Georgia, South Carolina, and Alabama: U. S. Geological Survey Professional Paper 1403-B, 91 p.",
+    "source_id": "ngmdb:25548",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Miller, J.A., 1986, Hydrogeologic framework of the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Newcome, Roy, Jr., 1989, Ground-water resources of South Carolina's Coastal Plain-1988, an overview: South Carolina Water Resource Commission Report 167, 127 p.",
+    "source_id": "ngmdb:25548",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Newcome, Roy, Jr., 1989, Ground-water resources of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Randolph, R.B., Pernik, Maribeth, and Garza, Reggina, 1991, Water-supply potential of the Floridan aquifer system in coastal Georgia a digital model approach: Georgia Geologic Survey Bulletin 116, 30 p.",
+    "source_id": "ngmdb:25548",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Randolph, R.B., Pernik, Maribeth, and Garza, Reggi",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Smith, B.S., 1988, Ground-water flow and saltwater encroachment in the Upper Floridan aquifer, Beaufort and Jasper Counties, South Carolina: U.S. Geological Survey Water-Resources Investigations Report 87-4285, 61 p.",
+    "source_id": "ngmdb:25548",
+    "page": 47,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Smith, B.S., 1988, Ground-water flow and saltwater",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Smith, B.S., 1993, Saltwater movement in the Upper Floridan aquifer beneath Port Royal Sound, South Carolina: U.S. Geological Survey Open-File Report 91-483, 64 p.",
+    "source_id": "ngmdb:25548",
+    "page": 47,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "1993, Saltwater movement in the Upper Flori",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "author shown by a dash; taken from the preceding entry (Smith, B.S.)"
+   }
+  },
+  {
+   "citation": {
+    "value": "South Carolina Water Resources Commission, 1982, South Carolina Water Use Reporting and Coordinating Act: Columbia, February 1982, no. 282, sec. 49, chap. 4.",
+    "source_id": "ngmdb:25548",
+    "page": 47,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "South Carolina Water Resources Commission, 1982,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Spigner, B.C., and Ransom, Camille, in, 1979, Report on ground-water conditions in the Low Country area, South Carolina: South Carolina Water Resources Commission Report 132, 144 p.",
+    "source_id": "ngmdb:25548",
+    "page": 47,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Spigner, B.C., and Ransom, Camille, in, 1979, Report",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ]
 }
