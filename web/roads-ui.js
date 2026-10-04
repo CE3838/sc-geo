@@ -2,6 +2,7 @@
 // (roads.js), drawn above the geology with casings for aerial imagery,
 // route shields and street names, and a row in the Layers panel.
 import { LiveTiles, debounce, fetchAllPages, queryUrl, tileBounds } from './arcgis.js';
+import { LIVE_ON_AT_START } from './live.js';
 import {
   ROAD_ATTRIBUTION, ROAD_CLICK_LAYER_IDS, ROAD_FIELDS, ROAD_TIERS, describeRoad, normalizeRoad, roadLayers,
   shieldSpec, tiersForZoom,
@@ -77,9 +78,9 @@ function drawShield(spec, ratio = 2) {
 }
 
 export function setupRoads(map, ui) {
-  let on = true;
+  let on = LIVE_ON_AT_START.roads;
   let ready = false;
-  const row = ui.addLayer({ id: 'roads', label: 'Roads and route numbers', order: 40,
+  const row = ui.addLayer({ id: 'roads', label: 'Roads and route numbers', order: 40, checked: LIVE_ON_AT_START.roads,
     onChange: (checked) => {
       on = checked;
       for (const l of roadLayers()) if (map.getLayer(l.id)) map.setLayoutProperty(l.id, 'visibility', on ? 'visible' : 'none');
@@ -128,7 +129,10 @@ export function setupRoads(map, ui) {
     for (const t of ROAD_TIERS) map.addSource(t.source, { type: 'geojson', data: EMPTY, attribution: ROAD_ATTRIBUTION, tolerance: 0.5 });
     // Lines above the geology and under faults and the state outline; labels on top.
     const under = ['faults-shear-band', 'faults-casing', 'sc-outline-casing'].find((id) => map.getLayer(id));
-    for (const layer of roadLayers()) map.addLayer(layer, layer.type === 'line' ? under : undefined);
+    for (const layer of roadLayers()) {
+      map.addLayer(layer, layer.type === 'line' ? under : undefined);
+      map.setLayoutProperty(layer.id, 'visibility', on ? 'visible' : 'none');
+    }
     ready = true;
     refresh();
   });

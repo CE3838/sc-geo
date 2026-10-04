@@ -9,6 +9,7 @@ import {
 import { chartModel, formatValue, nearestIndex } from './water-chart.js';
 import { el, svg } from './dom.js';
 import { onStyleReady } from './geo.js';
+import { LIVE_ON_AT_START } from './live.js';
 
 const SOURCE = 'water-stations';
 const LAYER = 'water-stations';
@@ -61,7 +62,7 @@ function qualifierTags(r) {
 
 export function setupWater(map, ui, { phone = window.matchMedia('(max-width: 700px)') } = {}) {
   const client = createWaterClient();
-  let on = true;
+  let on = LIVE_ON_AT_START.water;
   let ready = false;
 
   // --- Layers panel row and key ----------------------------------------------------
@@ -72,7 +73,8 @@ export function setupWater(map, ui, { phone = window.matchMedia('(max-width: 700
       el('li', {}, el('span', { class: 'water-dot', style: `background:${STATUS_COLORS[k]}` }), label))),
     el('p', { class: 'geo-cite' }, 'Live from ', el('a', { href: 'https://api.waterdata.usgs.gov/', target: '_blank',
       rel: 'noopener noreferrer' }, 'USGS Water Data'), '. Click a station for its chart.'));
-  const row = ui.addLayer({ id: 'water', label: 'Water monitoring (USGS)', order: 60, detail: key,
+  key.hidden = !on;
+  const row = ui.addLayer({ id: 'water', label: 'Water monitoring (USGS)', order: 60, detail: key, checked: LIVE_ON_AT_START.water,
     onChange: (checked) => {
       on = checked;
       key.hidden = !checked;

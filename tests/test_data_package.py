@@ -66,3 +66,10 @@ def test_build_never_packages_pdfs(tmp_path):
     package.build(root, out, tag="data-20261003-0905", commit="")
     with zipfile.ZipFile(out) as zf:
         assert not [n for n in zf.namelist() if n.lower().endswith(".pdf")]
+
+
+def test_manifest_says_sources_are_cited_and_there_is_no_warranty(tmp_path):
+    root = _tree(tmp_path / "repo")
+    manifest = package.build(root, tmp_path / "p.zip", tag="data-20261003-0905", commit="")
+    assert "without warranty" in manifest["notes"]
+    assert "terms" in manifest["notes"]

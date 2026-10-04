@@ -3,6 +3,7 @@
 // with a row and a status note in the Layers panel. Counties without a
 // public service, or whose service fails or blocks browsers, get a note.
 import { LiveTiles, debounce, fetchAllPages, tileBounds } from './arcgis.js';
+import { LIVE_ON_AT_START } from './live.js';
 import {
   PARCEL_LAYER_IDS, PARCEL_MINZOOM, PARCEL_TILE_ZOOM, countiesForBounds, countyBoxes, describeParcel, normalizeParcel,
   parcelLayers, parcelPlan, parcelQueryUrl,
@@ -14,12 +15,13 @@ import { onStyleReady } from './geo.js';
 const EMPTY = { type: 'FeatureCollection', features: [] };
 
 export function setupParcels(map, ui) {
-  let on = true;
+  let on = LIVE_ON_AT_START.parcels;
   let ready = false;
   let boxes = [];
   let registry = new Map();
   const status = el('ul', { class: 'parcel-status', 'aria-live': 'polite' });
-  const row = ui.addLayer({ id: 'parcels', label: 'Parcels (property lines)', order: 45, detail: status,
+  status.hidden = !on;
+  const row = ui.addLayer({ id: 'parcels', label: 'Parcels (property lines)', order: 45, detail: status, checked: LIVE_ON_AT_START.parcels,
     onChange: (checked) => {
       on = checked;
       for (const id of PARCEL_LAYER_IDS) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', on ? 'visible' : 'none');
@@ -113,7 +115,10 @@ export function setupParcels(map, ui) {
       map.addSource('parcels', { type: 'geojson', data: EMPTY, attribution: 'Parcels: county GIS services (live)' });
       // Lines above the geology and under roads, faults and the state outline; IDs on top.
       const under = ['roads-state-casing', 'faults-shear-band', 'faults-casing', 'sc-outline-casing'].find((id) => map.getLayer(id));
-      for (const layer of parcelLayers('parcels')) map.addLayer(layer, layer.type === 'symbol' ? undefined : under);
+      for (const layer of parcelLayers('parcels')) {
+        map.addLayer(layer, layer.type === 'symbol' ? undefined : under);
+        map.setLayoutProperty(layer.id, 'visibility', on ? 'visible' : 'none');
+      }
       ready = true;
       update().catch((err) => console.warn('Parcels:', err.message));
     } catch (err) {

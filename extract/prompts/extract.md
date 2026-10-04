@@ -43,7 +43,7 @@ Each file matches `extract/schema.json`:
   "schema_version": 1,
   "source_id": "<catalog id from the packet header>",
   "packets": ["packet-01"],
-  "reader": "<model name>, scheduled Claude Code session <date>",
+  "reader": "Claude, scheduled Claude Code session <date>",
   "notes": "optional remarks for a reviewer",
   "units": [], "observations": [], "structures": [], "groundwater": [], "references": []
 }

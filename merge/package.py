@@ -57,7 +57,9 @@ def build(root: Path, out: Path, tag: str, commit: str) -> dict:
         "tag": tag,
         "commit": commit,
         "built": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "notes": "Public data only. Each geology record names its source; see data/geology/merged-sources.json.",
+        "notes": ("Public data only. Each geology record names its source; see data/geology/merged-sources.json. "
+                  "Each source keeps its own terms; cite it when reusing its data. "
+                  "Provided as is, without warranty of any kind."),
         "files": [],
     }
     with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as zf:
