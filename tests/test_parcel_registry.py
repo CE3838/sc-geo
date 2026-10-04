@@ -237,3 +237,11 @@ def test_charleston_pilot_entry():
 
 def test_web_copy_matches_the_registry():
     assert WEB == pr.web_registry(REGISTRY)
+
+
+def test_notes_point_only_to_county_services():
+    # Notes describe each county's own service; no pointers to statewide parcel copies.
+    for c in REGISTRY["counties"] + WEB["counties"]:
+        note = (c.get("note") or "").lower()
+        assert "statewide parcel" not in note, c["county"]
+        assert "a copy of this county" not in note, c["county"]

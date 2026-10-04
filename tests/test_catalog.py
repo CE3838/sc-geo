@@ -176,3 +176,38 @@ def test_kind_needs_a_map_title_theme_or_quadrangle():
     recs = by_id(catalog.build_catalog(rows, THEMES, PAGES, SCGS_INDEX, SCGS_GIS, FTP, "t"))
     assert recs["ngmdb:2"]["kind"] == "publication"
     assert recs["ngmdb:115922"]["kind"] == "map"
+
+
+# --- exclusions (config/catalog_exclude.json) ----------------------------------
+
+ROOT = Path(__file__).resolve().parent.parent
+
+
+def test_excluded_ids_reads_ids_and_reasons(tmp_path):
+    path = tmp_path / "exclude.json"
+    path.write_text(json.dumps({"exclude": [{"id": "ngmdb:1", "reason": "not geology"}]}))
+    assert catalog.excluded_ids(path) == {"ngmdb:1"}
+    assert catalog.excluded_ids(tmp_path / "missing.json") == set()
+
+
+def test_build_catalog_drops_excluded_ids():
+    recs = by_id(catalog.build_catalog(NGMDB_ROWS, THEMES, PAGES, SCGS_INDEX, SCGS_GIS, FTP, "t",
+                                       exclude={"ngmdb:1"}))
+    assert "ngmdb:1" not in recs
+    assert "ngmdb:77448" in recs
+
+
+def test_exclusion_list_is_well_formed():
+    data = json.loads((ROOT / "config" / "catalog_exclude.json").read_text())
+    ids = [e["id"] for e in data["exclude"]]
+    assert ids and len(ids) == len(set(ids))
+    for e in data["exclude"]:
+        assert e["reason"], e["id"]
+    assert catalog.excluded_ids() == set(ids)
+
+
+def test_committed_catalog_has_no_excluded_records():
+    records = json.loads((ROOT / "data" / "catalog" / "sc_catalog.json").read_text())
+    assert not {r["id"] for r in records} & catalog.excluded_ids()
+    summary = json.loads((ROOT / "data" / "catalog" / "summary.json").read_text())
+    assert summary["records"] == len(records)

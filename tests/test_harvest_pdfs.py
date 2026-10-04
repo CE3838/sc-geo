@@ -320,3 +320,10 @@ def test_drop_pdfs_after_text_keeps_cache_small(tmp_path, pdf_bytes):
     n = len(f.calls)
     pdfs.run(fetcher=f, ocr=None, log=lambda *a: None, drop_pdfs=True, **paths)
     assert len(f.calls) == n  # done documents are not downloaded again
+
+
+def test_queue_skips_excluded_ids(monkeypatch):
+    ids = [r["id"] for r in pdfs.queue([CHS, COASTAL], PILOT, exclude={"ngmdb:1"})]
+    assert ids == ["ngmdb:4"]
+    monkeypatch.setattr(pdfs, "excluded_ids", lambda: {"ngmdb:4"})
+    assert [r["id"] for r in pdfs.queue([CHS, COASTAL], PILOT)] == ["ngmdb:1"]
