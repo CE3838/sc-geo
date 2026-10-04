@@ -8,10 +8,11 @@
  "kind": "publication",
  "schema_version": 1,
  "extracted_at": "2026-10-04T14:53:32+00:00",
- "updated_at": "2026-10-04T14:53:32+00:00",
+ "updated_at": "2026-10-04T14:54:08+00:00",
  "reader": "Claude, reading session 2026-10-04",
  "packets": [
-  "packet-01"
+  "packet-01",
+  "packet-02"
  ],
  "blocks_done": [
   "1",
@@ -46,11 +47,29 @@
   "32",
   "33",
   "34",
-  "35"
+  "35",
+  "36",
+  "37",
+  "38",
+  "39",
+  "40",
+  "41",
+  "42",
+  "43",
+  "44",
+  "45",
+  "46",
+  "47",
+  "48",
+  "49",
+  "50",
+  "51",
+  "52",
+  "53"
  ],
  "blocks_total": 83,
  "complete": false,
- "notes": "Pages 1-35: report text (site history, methods, hydrology, contamination, summary), references, appendix 1 (well construction, pp. 26-27) and the first part of appendix 2 (monthly water levels, pp. 28-35; continues in the next packet). Each appendix 1 well is one observation (State Plane coordinates, ground elevation, installation date, screened interval in ft bgs; for 12PZ- wells without ground elevation the screen depths are below top of casing). Only the last water level in appendix 2 (8/28/2008) is recorded per well; earlier monthly levels and contaminant concentrations (figures 5-10) are not recorded. Table columns are paired by position and flagged inferred. General sampling-method references (Barcelona, Sevee, Shanklin, Vogel, Vroblesky 2007b) skipped.",
+ "notes": "Pages 1-35: report text (site history, methods, hydrology, contamination, summary), references, appendix 1 (well construction, pp. 26-27) and the first part of appendix 2 (monthly water levels, pp. 28-35; continues in the next packet). Each appendix 1 well is one observation (State Plane coordinates, ground elevation, installation date, screened interval in ft bgs; for 12PZ- wells without ground elevation the screen depths are below top of casing). Only the last water level in appendix 2 (8/28/2008) is recorded per well; earlier monthly levels and contaminant concentrations (figures 5-10) are not recorded. Table columns are paired by position and flagged inferred. General sampling-method references (Barcelona, Sevee, Shanklin, Vogel, Vroblesky 2007b) skipped.\nPages 36-53: end of appendix 2 (monthly water levels for wells 12MW-26S to 12PZ-04; only the 8/28/2008 level recorded, wells not measured that day skipped) and appendix 3 (organic-compound concentrations in groundwater and surface water, pp. 38-53, continuing in the next packet). Water-chemistry concentrations have no field in the extraction schema and were not recorded.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/sir/2009/5166/pdf/sir20095166.pdf",
@@ -61,14 +80,14 @@
   }
  ],
  "summary": {
-  "stored": 516,
+  "stored": 540,
   "quote_match": {
-   "exact": 516
+   "exact": 540
   },
   "verification": {
-   "agree": 486
+   "agree": 510
   },
-  "inferred": 386
+  "inferred": 394
  },
  "ingests": [
   {
@@ -85,6 +104,24 @@
    "quote_not_found": 0,
    "wrong_page": 0,
    "agree": 486,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-10-04T14:54:08+00:00",
+   "packets": [
+    "packet-02"
+   ],
+   "reader": "Claude, reading session 2026-10-04",
+   "values": 24,
+   "stored": 24,
+   "exact": 24,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 24,
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
@@ -9848,6 +9885,446 @@
     "quote_match": "exact",
     "text_method": "pdf_text",
     "verification": null
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "12MW-26S",
+    "source_id": "ngmdb:96656",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Date   12MW-26S 12MW-27D 12MW-27S 12MW-28D 12MW-28S 12MW-29S 12MW-30S 12PZ-01   12PZ-03D   12PZ-03S   12PZ-04",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "appendix 2 column header; well construction is in appendix 1 (previous packet)"
+   },
+   "water_level": {
+    "value": "1.56",
+    "source_id": "ngmdb:96656",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "8/28/2008   1.56   1.56   1.53   1.57   1.57   1.43   1.42   1.33   —   —   —",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet rel. NAVD 88",
+    "table": true,
+    "note": "column 1 of the 8/28/2008 row, paired with the well by header position",
+    "normalized": {
+     "min_ft": 1.56,
+     "max_ft": 1.56,
+     "unit": "feet rel. navd 88",
+     "approximate": false
+    }
+   },
+   "water_level_date": {
+    "value": "8/28/2008",
+    "source_id": "ngmdb:96656",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "8/28/2008   1.56   1.56   1.53   1.57   1.57   1.43   1.42   1.33   —   —   —",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": "2008-08-28"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "12MW-27D",
+    "source_id": "ngmdb:96656",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Date   12MW-26S 12MW-27D 12MW-27S 12MW-28D 12MW-28S 12MW-29S 12MW-30S 12PZ-01   12PZ-03D   12PZ-03S   12PZ-04",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "appendix 2 column header; well construction is in appendix 1 (previous packet)"
+   },
+   "water_level": {
+    "value": "1.56",
+    "source_id": "ngmdb:96656",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "8/28/2008   1.56   1.56   1.53   1.57   1.57   1.43   1.42   1.33   —   —   —",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet rel. NAVD 88",
+    "table": true,
+    "note": "column 2 of the 8/28/2008 row, paired with the well by header position",
+    "normalized": {
+     "min_ft": 1.56,
+     "max_ft": 1.56,
+     "unit": "feet rel. navd 88",
+     "approximate": false
+    }
+   },
+   "water_level_date": {
+    "value": "8/28/2008",
+    "source_id": "ngmdb:96656",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "8/28/2008   1.56   1.56   1.53   1.57   1.57   1.43   1.42   1.33   —   —   —",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": "2008-08-28"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "12MW-27S",
+    "source_id": "ngmdb:96656",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Date   12MW-26S 12MW-27D 12MW-27S 12MW-28D 12MW-28S 12MW-29S 12MW-30S 12PZ-01   12PZ-03D   12PZ-03S   12PZ-04",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "appendix 2 column header; well construction is in appendix 1 (previous packet)"
+   },
+   "water_level": {
+    "value": "1.53",
+    "source_id": "ngmdb:96656",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "8/28/2008   1.56   1.56   1.53   1.57   1.57   1.43   1.42   1.33   —   —   —",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet rel. NAVD 88",
+    "table": true,
+    "note": "column 3 of the 8/28/2008 row, paired with the well by header position",
+    "normalized": {
+     "min_ft": 1.53,
+     "max_ft": 1.53,
+     "unit": "feet rel. navd 88",
+     "approximate": false
+    }
+   },
+   "water_level_date": {
+    "value": "8/28/2008",
+    "source_id": "ngmdb:96656",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "8/28/2008   1.56   1.56   1.53   1.57   1.57   1.43   1.42   1.33   —   —   —",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": "2008-08-28"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "12MW-28D",
+    "source_id": "ngmdb:96656",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Date   12MW-26S 12MW-27D 12MW-27S 12MW-28D 12MW-28S 12MW-29S 12MW-30S 12PZ-01   12PZ-03D   12PZ-03S   12PZ-04",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "appendix 2 column header; well construction is in appendix 1 (previous packet)"
+   },
+   "water_level": {
+    "value": "1.57",
+    "source_id": "ngmdb:96656",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "8/28/2008   1.56   1.56   1.53   1.57   1.57   1.43   1.42   1.33   —   —   —",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet rel. NAVD 88",
+    "table": true,
+    "note": "column 4 of the 8/28/2008 row, paired with the well by header position",
+    "normalized": {
+     "min_ft": 1.57,
+     "max_ft": 1.57,
+     "unit": "feet rel. navd 88",
+     "approximate": false
+    }
+   },
+   "water_level_date": {
+    "value": "8/28/2008",
+    "source_id": "ngmdb:96656",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "8/28/2008   1.56   1.56   1.53   1.57   1.57   1.43   1.42   1.33   —   —   —",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": "2008-08-28"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "12MW-28S",
+    "source_id": "ngmdb:96656",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Date   12MW-26S 12MW-27D 12MW-27S 12MW-28D 12MW-28S 12MW-29S 12MW-30S 12PZ-01   12PZ-03D   12PZ-03S   12PZ-04",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "appendix 2 column header; well construction is in appendix 1 (previous packet)"
+   },
+   "water_level": {
+    "value": "1.57",
+    "source_id": "ngmdb:96656",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "8/28/2008   1.56   1.56   1.53   1.57   1.57   1.43   1.42   1.33   —   —   —",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet rel. NAVD 88",
+    "table": true,
+    "note": "column 5 of the 8/28/2008 row, paired with the well by header position",
+    "normalized": {
+     "min_ft": 1.57,
+     "max_ft": 1.57,
+     "unit": "feet rel. navd 88",
+     "approximate": false
+    }
+   },
+   "water_level_date": {
+    "value": "8/28/2008",
+    "source_id": "ngmdb:96656",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "8/28/2008   1.56   1.56   1.53   1.57   1.57   1.43   1.42   1.33   —   —   —",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": "2008-08-28"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "12MW-29S",
+    "source_id": "ngmdb:96656",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Date   12MW-26S 12MW-27D 12MW-27S 12MW-28D 12MW-28S 12MW-29S 12MW-30S 12PZ-01   12PZ-03D   12PZ-03S   12PZ-04",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "appendix 2 column header; well construction is in appendix 1 (previous packet)"
+   },
+   "water_level": {
+    "value": "1.43",
+    "source_id": "ngmdb:96656",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "8/28/2008   1.56   1.56   1.53   1.57   1.57   1.43   1.42   1.33   —   —   —",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet rel. NAVD 88",
+    "table": true,
+    "note": "column 6 of the 8/28/2008 row, paired with the well by header position",
+    "normalized": {
+     "min_ft": 1.43,
+     "max_ft": 1.43,
+     "unit": "feet rel. navd 88",
+     "approximate": false
+    }
+   },
+   "water_level_date": {
+    "value": "8/28/2008",
+    "source_id": "ngmdb:96656",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "8/28/2008   1.56   1.56   1.53   1.57   1.57   1.43   1.42   1.33   —   —   —",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": "2008-08-28"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "12MW-30S",
+    "source_id": "ngmdb:96656",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Date   12MW-26S 12MW-27D 12MW-27S 12MW-28D 12MW-28S 12MW-29S 12MW-30S 12PZ-01   12PZ-03D   12PZ-03S   12PZ-04",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "appendix 2 column header; well construction is in appendix 1 (previous packet)"
+   },
+   "water_level": {
+    "value": "1.42",
+    "source_id": "ngmdb:96656",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "8/28/2008   1.56   1.56   1.53   1.57   1.57   1.43   1.42   1.33   —   —   —",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet rel. NAVD 88",
+    "table": true,
+    "note": "column 7 of the 8/28/2008 row, paired with the well by header position",
+    "normalized": {
+     "min_ft": 1.42,
+     "max_ft": 1.42,
+     "unit": "feet rel. navd 88",
+     "approximate": false
+    }
+   },
+   "water_level_date": {
+    "value": "8/28/2008",
+    "source_id": "ngmdb:96656",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "8/28/2008   1.56   1.56   1.53   1.57   1.57   1.43   1.42   1.33   —   —   —",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": "2008-08-28"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "12PZ-01",
+    "source_id": "ngmdb:96656",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Date   12MW-26S 12MW-27D 12MW-27S 12MW-28D 12MW-28S 12MW-29S 12MW-30S 12PZ-01   12PZ-03D   12PZ-03S   12PZ-04",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "appendix 2 column header; well construction is in appendix 1 (previous packet)"
+   },
+   "water_level": {
+    "value": "1.33",
+    "source_id": "ngmdb:96656",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "8/28/2008   1.56   1.56   1.53   1.57   1.57   1.43   1.42   1.33   —   —   —",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet rel. NAVD 88",
+    "table": true,
+    "note": "column 8 of the 8/28/2008 row, paired with the well by header position",
+    "normalized": {
+     "min_ft": 1.33,
+     "max_ft": 1.33,
+     "unit": "feet rel. navd 88",
+     "approximate": false
+    }
+   },
+   "water_level_date": {
+    "value": "8/28/2008",
+    "source_id": "ngmdb:96656",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "8/28/2008   1.56   1.56   1.53   1.57   1.57   1.43   1.42   1.33   —   —   —",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": "2008-08-28"
    }
   }
  ],
