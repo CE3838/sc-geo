@@ -99,3 +99,13 @@ def test_complete_and_legacy_files_are_done(tmp_path, monkeypatch):
     (extracted / "ngmdb_1.json").write_text(json.dumps({"source_id": "ngmdb:1", "complete": True}))
     (extracted / "ngmdb_3.json").write_text(json.dumps({"source_id": "ngmdb:3"}))  # before per-packet ingest
     assert [b["id"] for b in _batch(tmp_path, n=5)] == ["ngmdb:4"]
+
+
+def test_excluded_records_are_never_handed_out(tmp_path, monkeypatch):
+    monkeypatch.setattr(next_batch.pdfs, "process", fake_process)
+    monkeypatch.setattr(next_batch.pdfs, "excluded_ids", lambda: {"ngmdb:1"})
+    batch = next_batch.next_batch(n=5, catalog=CAT, pilot_bbox=PILOT, cache_dir=tmp_path / ".cache",
+                                  checkpoint_dir=tmp_path / ".checkpoints" / "pdfs",
+                                  extracted_dir=tmp_path / "data" / "extracted",
+                                  review_dir=tmp_path / "data" / "review", log=lambda *a: None)
+    assert "ngmdb:1" not in [b["id"] for b in batch]

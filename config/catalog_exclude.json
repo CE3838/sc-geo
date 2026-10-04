@@ -1,0 +1,11 @@
+{
+  "about": "Catalog ids left out of data/catalog/sc_catalog.json on purpose. harvest/catalog.py drops them when it builds the catalog; harvest/pdfs.py and extract/next_batch.py never queue them.",
+  "exclude": [
+    {"id": "ngmdb:99619", "reason": "not geology (stormwater report)"},
+    {"id": "ngmdb:99620", "reason": "not geology (stormwater report)"},
+    {"id": "ngmdb:99621", "reason": "not geology (stormwater report)"},
+    {"id": "ngmdb:99893", "reason": "not geology (stormwater report)"},
+    {"id": "ngmdb:99894", "reason": "not geology (stormwater report)"},
+    {"id": "ngmdb:99895", "reason": "not geology (stormwater report)"}
+  ]
+}

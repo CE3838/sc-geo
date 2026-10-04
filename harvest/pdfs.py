@@ -45,6 +45,7 @@ from pathlib import Path
 from typing import Callable
 
 from harvest import ngmdb_images, openaccess
+from harvest.catalog import excluded_ids
 from harvest.sgmc import _contact_headers
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -123,11 +124,11 @@ def relevance(rec: dict) -> int:
     return 0 if rec.get("themes") or _GEOLOGY.search(rec.get("title") or "") else 1
 
 
-def queue(catalog: list[dict], pilot_bbox=None, cfg: dict = CONFIG) -> list[dict]:
-    """Records not merged, in processing order: tier, geology first, smaller area, newer, id."""
+def queue(catalog: list[dict], pilot_bbox=None, cfg: dict = CONFIG, exclude: set[str] | None = None) -> list[dict]:
+    """Records not merged or excluded, in processing order: tier, geology first, smaller area, newer, id."""
     if pilot_bbox is None:
         pilot_bbox = json.loads((ROOT / "config" / "pilot_area.json").read_text())["bbox"]
-    skip = merged_ids(catalog)
+    skip = merged_ids(catalog) | (excluded_ids() if exclude is None else set(exclude))
     out = []
     for r in catalog:
         if r["id"] in skip:
@@ -590,7 +591,7 @@ def write_needs_access(ordered: list[dict], cks: dict[str, dict], review_dir: Pa
         out.append({**{k: rec.get(k) for k in _META}, "doi": (rec.get("availability") or {}).get("doi"),
                     "tier": rec.get("_tier"), "checked": ck.get("checked", []), "reason": ck.get("reason"),
                     **({"crossref": ck["crossref"]} if ck.get("crossref") else {})})
-    out += [old[k] for k in sorted(old) if k not in drop]  # drop: records now merged as GIS
+    out += [old[k] for k in sorted(old) if k not in drop]  # drop: records now merged as GIS, or excluded
     review_dir.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps({
         "about": "Catalog records with no legal open full text found. Metadata only; for library access. "
@@ -676,7 +677,7 @@ def run(catalog_path: Path = ROOT / "data" / "catalog" / "sc_catalog.json",
             list(pool.map(one, work))
 
     cks = {r["id"]: ck for r in ordered if (ck := _load(checkpoint_dir / f"{safe_id(r['id'])}.json"))}
-    n_need = write_needs_access(ordered, cks, review_dir, drop=merged_ids(catalog))
+    n_need = write_needs_access(ordered, cks, review_dir, drop=merged_ids(catalog) | excluded_ids())
     status = status_counts(ordered, cks) | {"processed_this_run": done, "needs_access_listed": n_need,
                                             "minutes": round((time.monotonic() - start) / 60, 1), "at": _now()}
     _save(checkpoint_dir / "status.json", status)
