@@ -8,10 +8,11 @@
  "kind": "publication",
  "schema_version": 1,
  "extracted_at": "2026-10-04T10:05:21+00:00",
- "updated_at": "2026-10-04T10:05:21+00:00",
+ "updated_at": "2026-10-04T10:05:33+00:00",
  "reader": "Claude, reading session 2026-10-04",
  "packets": [
-  "packet-01"
+  "packet-01",
+  "packet-02"
  ],
  "blocks_done": [
   "1",
@@ -58,11 +59,18 @@
   "43",
   "44",
   "45",
-  "46"
+  "46",
+  "47",
+  "48",
+  "49",
+  "50",
+  "51",
+  "52",
+  "53"
  ],
  "blocks_total": 52,
- "complete": false,
- "notes": "Sediment-transport report for Lakes Marion and Moultrie; the whole PDF is this one report. The only geologic content is table 1 (page 9, taken from USDA 1973), which lists major formations/belts and ages by physiographic province of the Santee River basin. Each name is paired with its province column by position (flagged inferred); the province ages are given for the province as a whole, not per formation, so no per-unit ages were recorded. 'Bravard Belt' is kept as spelled in the source. Streamflow, suspended-sediment, particle-size and bed-material tables (tables 2-15) are gaging-station hydrology data, not geologic observations, and were not recorded. Figure 3 (page 40) is unreadable plot text.",
+ "complete": true,
+ "notes": "Sediment-transport report for Lakes Marion and Moultrie; the whole PDF is this one report. The only geologic content is table 1 (page 9, taken from USDA 1973), which lists major formations/belts and ages by physiographic province of the Santee River basin. Each name is paired with its province column by position (flagged inferred); the province ages are given for the province as a whole, not per formation, so no per-unit ages were recorded. 'Bravard Belt' is kept as spelled in the source. Streamflow, suspended-sediment, particle-size and bed-material tables (tables 2-15) are gaging-station hydrology data, not geologic observations, and were not recorded. Figure 3 (page 40) is unreadable plot text.\nPages 47-52 are comparison tables and text on streamflow and suspended sediment (no geologic units, observations or aquifers). Page 53 is the reference list: only the references bearing on South Carolina were recorded; general sediment and streamflow method references (Carswell, Colby, Colby and Hubbell, Guy, Guy and Norman, Porterfield, Rantz, Stevens, USGS 1966-68 national water-quality reports, USGS 1977 handbook) were skipped.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/wri/1988/4160/report.pdf",
@@ -73,12 +81,12 @@
   }
  ],
  "summary": {
-  "stored": 7,
+  "stored": 11,
   "quote_match": {
-   "exact": 7
+   "exact": 11
   },
   "verification": {
-   "agree": 7
+   "agree": 8
   },
   "inferred": 7
  },
@@ -97,6 +105,24 @@
    "quote_not_found": 0,
    "wrong_page": 0,
    "agree": 7,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-10-04T10:05:33+00:00",
+   "packets": [
+    "packet-02"
+   ],
+   "reader": "Claude, reading session 2026-10-04",
+   "values": 4,
+   "stored": 4,
+   "exact": 4,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 1,
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
@@ -251,5 +277,66 @@
  "observations": [],
  "structures": [],
  "groundwater": [],
- "references": []
+ "references": [
+  {
+   "citation": {
+    "value": "Overstreet, W.C., and Bell, H., 1965, The Crystalline Rocks of South Carolina: U.S. Geological Survey Bulletin 1183, 126 p.",
+    "source_id": "ngmdb:47067",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Overstreet, W.C., and Bell, H., 1965, The Crystalline Rocks of South Carolina:",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Patterson, G.G., 1983, Effect of the proposed Cooper River rediversion on sedimentation in Charleston Harbor, S.C.: U.S. Geological Survey Water-Resources Investigations Report 83-4198, 65 p.",
+    "source_id": "ngmdb:47067",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Patterson, G.G., 1983, Effect of the proposed Cooper River rediversion on",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "U.S. Department of Agriculture, 1973, Santee River basin water and land resources: Economic Research Service, Forest Service and Soil Conservation Service, Columbia, S.C.",
+    "source_id": "ngmdb:47067",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "U.S. Department of Agriculture, 1973, Santee River basin water and land",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "U.S. Geological Survey, 1966-68, 1983-85, Water Resources data for South Carolina (issued annually).",
+    "source_id": "ngmdb:47067",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "U.S. Geological Survey, 1966-68, 1983-85, Water Resources data for South",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ]
 }
