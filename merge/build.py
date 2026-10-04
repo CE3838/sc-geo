@@ -95,7 +95,7 @@ def download(url: str, dest: Path, log: Callable[..., None] = print, tries: int 
     for attempt in range(tries):
         try:
             req = urllib.request.Request(url, headers=_contact_headers())
-            with urllib.request.urlopen(req, timeout=120) as r, open(tmp, "wb") as f:
+            with urllib.request.urlopen(req, timeout=300) as r, open(tmp, "wb") as f:
                 shutil.copyfileobj(r, f)
             if not zipfile.is_zipfile(tmp):
                 raise OSError("download is not a zip file")
@@ -178,21 +178,45 @@ def _host_down(err: Exception) -> bool:
     return isinstance(err, (TimeoutError, ConnectionError))
 
 
+SCDNR_FTP_HOST = "ftpdata.dnr.sc.gov"
+# A host is given up for the rest of a run only after it fails to connect for this many different
+# files: one slow file timing out is not proof the host is down.
+HOST_STRIKES = 2
+
+
+def mirrors(url: str) -> list[str]:
+    """Download URLs to try in order. SCDNR's FTP files are tried over HTTPS and HTTP first,
+    because passive FTP from CI runners can hang."""
+    parts = urllib.parse.urlparse(url)
+    if parts.scheme == "ftp" and parts.hostname == SCDNR_FTP_HOST:
+        rest = url[len("ftp://"):]
+        return [f"https://{rest}", f"http://{rest}", url]
+    return [url]
+
+
 def _skip_dead_hosts(fetch: Callable[[str, Path], Path]) -> Callable[[str, Path], Path]:
-    """After a host fails to connect, fail its other downloads at once, to stay in the time budget
-    (e.g. the SCDNR FTP host serves about 35 packages)."""
-    dead: set[str] = set()
+    """Try each mirror of a URL; after a host (per scheme) fails to connect for HOST_STRIKES different
+    files, fail its other downloads at once to stay in the time budget (the SCDNR FTP host serves
+    about 35 packages)."""
+    strikes: dict[str, int] = {}
 
     def guarded(url: str, dest: Path) -> Path:
-        host = urllib.parse.urlparse(url).hostname
-        if host in dead:
-            raise OSError(f"{host} unreachable earlier in this run")
-        try:
-            return fetch(url, dest)
-        except OSError as err:
-            if _host_down(err):
-                dead.add(host)
-            raise
+        last: OSError | None = None
+        for candidate in mirrors(url):
+            parts = urllib.parse.urlparse(candidate)
+            key = f"{parts.scheme}://{parts.hostname}"
+            if strikes.get(key, 0) >= HOST_STRIKES:
+                last = OSError(f"{parts.hostname} unreachable earlier in this run")
+                continue
+            try:
+                result = fetch(candidate, dest)
+                strikes[key] = 0
+                return result
+            except OSError as err:
+                if _host_down(err):
+                    strikes[key] = strikes.get(key, 0) + 1
+                last = err
+        raise last if last else OSError(f"no download URL for {url}")
 
     return guarded
 
