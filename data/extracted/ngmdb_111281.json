@@ -8,10 +8,11 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-05T06:00:24+00:00",
- "updated_at": "2026-10-05T06:00:24+00:00",
+ "updated_at": "2026-10-05T06:02:05+00:00",
  "reader": "Claude, reading session 2026-10-05",
  "packets": [
-  "packet-01"
+  "packet-01",
+  "packet-02"
  ],
  "blocks_done": [
   "1",
@@ -46,11 +47,37 @@
   "31",
   "32",
   "33",
-  "34"
+  "34",
+  "35",
+  "36",
+  "37",
+  "38",
+  "39",
+  "40",
+  "41",
+  "42",
+  "43",
+  "44",
+  "45",
+  "46",
+  "47",
+  "48",
+  "49",
+  "50",
+  "51",
+  "52",
+  "53",
+  "54",
+  "55",
+  "56",
+  "57",
+  "58",
+  "59",
+  "60"
  ],
  "blocks_total": 59,
- "complete": false,
- "notes": "Study area is the lower Savannah River area of southeastern Georgia; map units are those of Lawton and others (1976) Georgia map. Chemistry, particle-size and Be-10 table rows not recorded individually. Figure 2 map text is garbled; only legend text used. Borrow-pit logs recorded only in part (selected horizons).",
+ "complete": true,
+ "notes": "Study area is the lower Savannah River area of southeastern Georgia; map units are those of Lawton and others (1976) Georgia map. Chemistry, particle-size and Be-10 table rows not recorded individually. Figure 2 map text is garbled; only legend text used. Borrow-pit logs recorded only in part (selected horizons).\nGeorgia study area (lower Savannah River area). Core logs (figs. 7, 8) are drafted columns; depths of individual layers cannot be tied reliably to descriptions in the text layer, so intervals give unit and description only. Particle-size and chemistry tables 9-17 not recorded. References: only those relevant to South Carolina or to the units described were recorded; general method references skipped.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/of/2021/1015/ofr20211015.pdf",
@@ -61,14 +88,14 @@
   }
  ],
  "summary": {
-  "stored": 105,
+  "stored": 175,
   "quote_match": {
-   "exact": 105
+   "exact": 175
   },
   "verification": {
-   "agree": 12
+   "agree": 19
   },
-  "inferred": 6
+  "inferred": 7
  },
  "ingests": [
   {
@@ -85,6 +112,24 @@
    "quote_not_found": 0,
    "wrong_page": 0,
    "agree": 12,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-10-05T06:02:05+00:00",
+   "packets": [
+    "packet-02"
+   ],
+   "reader": "Claude, reading session 2026-10-05",
+   "values": 70,
+   "stored": 70,
+   "exact": 70,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 7,
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
@@ -1003,6 +1048,466 @@
     "text_method": "pdf_text",
     "verification": null
    }
+  },
+  {
+   "name": {
+    "value": "Princess Anne Shoreline Complex",
+    "source_id": "ngmdb:111281",
+    "page": 35,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Princess Anne Shoreline Complex (Qpai and Qpam)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "princess anne shoreline",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "map_symbol": {
+    "value": "Qpai, Qpam",
+    "source_id": "ngmdb:111281",
+    "page": 35,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Princess Anne Shoreline Complex (Qpai and Qpam)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "probably is older than 200,000 years and was deposited during multiple periods of deposition in the middle and late Pleistocene",
+    "source_id": "ngmdb:111281",
+    "page": 35,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "probably is older than 200,000 years and was deposited",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 0.129,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "occur seaward of the main Pamlico barrier as a narrow flat plain and as detached islands",
+    "source_id": "ngmdb:111281",
+    "page": 35,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Qpam) occur seaward of the main Pamlico barrier as a narrow",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Silver Bluff Shoreline Complex",
+    "source_id": "ngmdb:111281",
+    "page": 35,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Silver Bluff Shoreline Complex (Qsbi and Qsbm)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "silver bluff shoreline",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "map_symbol": {
+    "value": "Qsbi, Qsbm",
+    "source_id": "ngmdb:111281",
+    "page": 35,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Silver Bluff Shoreline Complex (Qsbi and Qsbm)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "late Pleistocene",
+    "source_id": "ngmdb:111281",
+    "page": 47,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "U-series, OSL and 14C ages indicate Silver Bluff",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "continues 'Shoreline Complex deposition in the late Pleistocene.'",
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 0.129,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "barrier island deposits (Qsbi) compose the Wilmington and Skidaway Islands",
+    "source_id": "ngmdb:111281",
+    "page": 35,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "(Qsbi) compose the Wilmington and Skidaway Islands, which",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Holocene Shoreline Complex",
+    "source_id": "ngmdb:111281",
+    "page": 35,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Holocene Shoreline Complex (Qhi and Qhm)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "holocene shoreline",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "map_symbol": {
+    "value": "Qhi, Qhm",
+    "source_id": "ngmdb:111281",
+    "page": 35,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Holocene Shoreline Complex (Qhi and Qhm)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "age": {
+    "value": "late Pleistocene and Holocene",
+    "source_id": "ngmdb:111281",
+    "page": 47,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "OSL and 14C ages indicate Holocene Shoreline",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "continues 'Complex deposition in the late Pleistocene and Holocene.'",
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.129,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "fluvial marine and marine deposits (Qhm) surround Silver Bluff barrier island deposits (Qsbi) and extend up the major river valleys",
+    "source_id": "ngmdb:111281",
+    "page": 35,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "deposits (Qhm) surround Silver Bluff barrier island deposits",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Pamlico Shoreline Complex",
+    "source_id": "ngmdb:111281",
+    "page": 41,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "of >290 to about 200 ka for the Pamlico Shoreline Complex.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "pamlico shoreline",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": ">290 to about 200 ka",
+    "source_id": "ngmdb:111281",
+    "page": 41,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "of >290 to about 200 ka for the Pamlico Shoreline Complex.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "description": {
+    "value": "upper 5 m of Pamlico shoreline deposits consist of fine, rounded to subrounded, quartz barrier sand with very abundant Ophiomorpha",
+    "source_id": "ngmdb:111281",
+    "page": 41,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "upper 5 m of Pamlico shoreline deposits consist of fine,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Penholoway Shoreline Complex",
+    "source_id": "ngmdb:111281",
+    "page": 38,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Shoreline Complex",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "heading 'Chimney Road Core, Penholoway Shoreline Complex'",
+    "normalized": {
+     "canonical": "penholoway shoreline",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "minimum age of about 225 ka and an approximate age range of 360 to 260 ka",
+    "source_id": "ngmdb:111281",
+    "page": 38,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "age of about 225 ka and an approximate age range of 360 to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "deltaic sequence of fluvial-estuarine, estuarine, and near-shore-marine/estuarine sand, silt, and clay overlain by 1 to 3 m of eolian sand",
+    "source_id": "ngmdb:111281",
+    "page": 38,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "marine/estuarine sand, silt, and clay overlain by 1 to 3 m of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Raysor Formation",
+    "source_id": "ngmdb:111281",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "depoists of the Raysor Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Raysor",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Pliocene",
+    "source_id": "ngmdb:111281",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "depoists of the Raysor Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "label on fig. 7 reads 'Pliocene coastal depoists of the Raysor Formation'",
+    "normalized": {
+     "younger_ma": 2.58,
+     "older_ma": 5.333,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Foraminiferal, sandy, argillaceous, phosphatic calcarenitic limestone and calcareous sandstone",
+    "source_id": "ngmdb:111281",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "phosphatic calcarenitic limestone and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Coosawhatchie Formation",
+    "source_id": "ngmdb:111281",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Coosawhatchie Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Coosawhatchie",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Miocene",
+    "source_id": "ngmdb:111281",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Miocene coastal and inner",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 5.333,
+     "older_ma": 23.03,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "depositional_environment": {
+    "value": "Miocene coastal and inner continental shelf deposits",
+    "source_id": "ngmdb:111281",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "continental shelf deposits of the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "lithology": {
+    "value": "Sand, olive gray (5Y3/2) to light olive gray (5Y5/2), fine to coarse, pebbly lower part of section, poorly sorted, argillaceous, phosphatic, fining upward sequence, few shark teeth",
+    "source_id": "ngmdb:111281",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Sand, olive gray (5Y3/2) to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Satilla Formation",
+    "source_id": "ngmdb:111281",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "of the Satilla Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "Satilla",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:111281",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Pleistocene coastal deposits",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Sand, fine to medium, well sorted, argillaceous, slightly calcareous, phosphatic, some intervals are bioturbated, coarsens downsection with pebbly basal contact",
+    "source_id": "ngmdb:111281",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Sand, fine to medium, well sorted,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
   }
  ],
  "observations": [
@@ -1794,6 +2299,292 @@
      }
     }
    ]
+  },
+  {
+   "kind": "core",
+   "label": {
+    "value": "CHATHAM-1 CORE (CH-1; GGS 1164 or 535)",
+    "source_id": "ngmdb:111281",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Georgia Geological Survey core number GGS 1164 or 535",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "lat 31.9899º N., long 81.0476º W.",
+    "source_id": "ngmdb:111281",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Surface elevation 3.66 meters; lat 31.9899º N., long 81.0476º W.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "lat": 31.9899,
+     "lon": -81.0476,
+     "format": "decimal",
+     "hemisphere_inferred": true
+    }
+   },
+   "elevation": {
+    "value": "3.66 meters",
+    "source_id": "ngmdb:111281",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Surface elevation 3.66 meters; lat 31.9899º N., long 81.0476º W.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 12.007874015748031,
+     "max_ft": 12.007874015748031,
+     "unit": "meters",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Pleistocene coastal deposits of the Satilla Formation (Huddlestun, 1988); Pleistocene Princess Anne shoreline complex",
+      "source_id": "ngmdb:111281",
+      "page": 36,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Pleistocene Princess Anne",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     },
+     "description": {
+      "value": "Sand, fine to medium, well sorted, argillaceous, slightly calcareous, phosphatic, coarsens downsection with pebbly basal contact",
+      "source_id": "ngmdb:111281",
+      "page": 36,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "with pebbly basal contact.",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    },
+    {
+     "unit": {
+      "value": "Raysor Formation",
+      "source_id": "ngmdb:111281",
+      "page": 36,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "depoists of the Raysor Formation",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Raysor",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "phosphatic calcarenitic limestone and calcareous sandstone",
+      "source_id": "ngmdb:111281",
+      "page": 36,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "phosphatic calcarenitic limestone and",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    },
+    {
+     "unit": {
+      "value": "Coosawhatchie Formation",
+      "source_id": "ngmdb:111281",
+      "page": 36,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Coosawhatchie Formation",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Coosawhatchie",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "Sand, fine, moderate to well sorted, argillaceous, slightly calcareous, phosphatic, thin bedded, gray to olive gray",
+      "source_id": "ngmdb:111281",
+      "page": 36,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Sand, fine, moderate to well sorted,",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    }
+   ]
+  },
+  {
+   "kind": "core",
+   "label": {
+    "value": "CHATHAM-18 CORE (CH-18; GGS 3639)",
+    "source_id": "ngmdb:111281",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Georgia Geological Suvey core number GGS 3639",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "lat~31.986° N., long 81.019' W.",
+    "source_id": "ngmdb:111281",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "lat~31.986° N., long 81.019’ W.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "lat": 31.986,
+     "lon": -81.019,
+     "format": "decimal",
+     "hemisphere_inferred": true
+    }
+   },
+   "elevation": {
+    "value": "2.93 meters",
+    "source_id": "ngmdb:111281",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Surface elevation 2.93 meters",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "min_ft": 9.61286089238845,
+     "max_ft": 9.61286089238845,
+     "unit": "meters",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Pleistocene coastal deposits of the Satilla Formation (Huddlestun, 1988)",
+      "source_id": "ngmdb:111281",
+      "page": 37,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Satilla Formation (Huddlestun, 1988)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     },
+     "description": {
+      "value": "Sand, fine to very fine, argillaceous, mottled",
+      "source_id": "ngmdb:111281",
+      "page": 37,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Sand, fine to very fine,",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    },
+    {
+     "unit": {
+      "value": "Coosawhatchie Formation",
+      "source_id": "ngmdb:111281",
+      "page": 37,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Coosawhatchie",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Coosawhatchie",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "Sand, olive gray to light olive gray, fine to coarse, pebbly lower part of section, poorly sorted, argillaceous, phosphatic, few shark teeth",
+      "source_id": "ngmdb:111281",
+      "page": 37,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Sand, olive gray (5Y3/2) to",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     },
+     "munsell": {
+      "value": "5Y3/2 to 5Y5/2",
+      "source_id": "ngmdb:111281",
+      "page": 37,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "light olive gray (5Y5/2), fine",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "hue": "5Y",
+       "value": 3,
+       "chroma": 2,
+       "notation": "5Y 3/2"
+      }
+     }
+    }
+   ]
   }
  ],
  "structures": [
@@ -1847,5 +2638,381 @@
   }
  ],
  "groundwater": [],
- "references": []
+ "references": [
+  {
+   "citation": {
+    "value": "Blackwelder, B.W., and Ward, L.W., 1979, Stratigraphic revision of the Pliocene deposits of North and South Carolina: South Carolina Geological Survey Geologic Notes, v. 23, p. 33-43.",
+    "source_id": "ngmdb:111281",
+    "page": 49,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Blackwelder, B.W., and Ward, L.W., 1979, Stratigraphic revi-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Campbell, L., Campbell, S., Colquhoun, D., and Ernissee, J., 1975, Plio-Pleistocene faunas of the central Carolina Coastal Plain: South Carolina Geological Survey Geologic Notes, v. 19, p. 51-124.",
+    "source_id": "ngmdb:111281",
+    "page": 49,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Campbell, L., Campbell, S., Colquhoun, D., and Ernissee, J.,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Colquhoun, D.J., 1965, Terrace sediment complexes in central South Carolina: Atlantic Coastal Plain Geological Association Field Conference 1965, University of South Carolina, 62 p.",
+    "source_id": "ngmdb:111281",
+    "page": 50,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Colquhoun, D.J., 1965, Terrace sediment complexes in",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Colquhoun, D.J., 1988, The geology and physiography of the Orangeburg Scarp, in Neathery, T.L., ed., Geological Society of America Centennial field guide 6, p. 321-322.",
+    "source_id": "ngmdb:111281",
+    "page": 50,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Colquhoun, D.J., 1988, The geology and physiography of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Counts, H.B., and Donsky, E., 1963, Salt-water encroachment geology and ground-water resources of Savannah area Georgia and South Carolina: U.S. Geological Survey Water Supply Paper 1611, 100 p.",
+    "source_id": "ngmdb:111281",
+    "page": 50,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Counts, H.B., and Donsky, E., 1963, Salt-water encroach-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Cronin, T.M., Bybell, L.M., Poore, R.Z., Blackwelder, B.W., Liddicoat, J.C., and Hazel, J.E., 1984, Age and correlation of emerged Pliocene and Pleistocene deposits, U.S. Atlantic Coastal Plain: Palaeogeography, Palaeoclimatology, Palaeoecology, v. 47, p. 21-51.",
+    "source_id": "ngmdb:111281",
+    "page": 50,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cronin, T.M., Bybell, L.M., Poore, R.Z., Blackwelder, B.W.,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Doar, W.R., III, and Kendall, C.G.S.C., 2014, An analysis and comparison of observed Pleistocene South Carolina (USA) shoreline elevations with predicted elevations derived from Marine Oxygen Isotope Stages: Quaternary Research, v. 82, no. 1, p. 164-174.",
+    "source_id": "ngmdb:111281",
+    "page": 50,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Doar, W.R., III, and Kendall, C.G.S.C., 2014, An analysis and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "DuBar, J.R., 1971, Neogene stratigraphy of the lower Coastal Plain of the Carolinas: Atlantic Coastal Plain Geological Association, 12th Annual Field Conference, Myrtle Beach, S.C., 1971 Guidebook, 128 p.",
+    "source_id": "ngmdb:111281",
+    "page": 50,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "DuBar, J.R., 1971, Neogene stratigraphy of the lower Coastal",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "DuBar, J.R., Johnson, H.S., Jr., Thom, B., and Hatchell, W.O., 1974, Neogene stratigraphy and morphology, south flank of the Cape Fear Arch, North and South Carolina, in Oaks and DuBar, eds., Post-Miocene stratigraphy, central and southern Atlantic Coastal Plain, p. 139-173.",
+    "source_id": "ngmdb:111281",
+    "page": 50,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "DuBar, J.R., Johnson, H.S., Jr., Thom, B., and Hatchell, W.O.,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Harris, M.S., Gayes, P.T., Kindinger, J.L., Flocks, J.G., Krantz, D.E., and Donovan, P., 2005, Geomorphology and modern coastal development in response to an inherent geologic framework: An example from Charleston, South Carolina: Journal of Coastal Research, v. 21, no. 1.",
+    "source_id": "ngmdb:111281",
+    "page": 51,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Harris, M.S., Gayes, P.T., Kindinger, J.L., Flocks, J.G., Krantz,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Huddlestun, P.F., 1988, The Miocene through Holocene: A revision of the lithostratigraphic units of the Coastal Plain of Georgia: Georgia Geologic Survey Bulletin 104, 162 p.",
+    "source_id": "ngmdb:111281",
+    "page": 51,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Huddlestun, P.F., 1988, The Miocene through Holocene",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Lawton, D.E., and others, 1976, Geologic map of Georgia: Georgia Geological Survey, 1 sheet, 1:500,000 scale.",
+    "source_id": "ngmdb:111281",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "and Wilson, J.D., 1976, Geologic map of Georgia: Georgia",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Liddicoat, J.C., McCartan, L., Weems, R.E., and Lemon, E.M., Jr., 1981, Paleomagnetic investigation of Pliocene and Pleistocene sediments in the Charleston, South Carolina, area [abs]: Geological Society of America Abstracts with Programs, v. 13, no. 1, p. 28-29.",
+    "source_id": "ngmdb:111281",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Pleistocene sediments in the Charleston, South Carolina,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Markewich, H.W., Pavich, M.J., Mausbach, M.J., Stuckey, B.N., Johnson, R.G., and Gonzalez, V.M., 1986, Soil development and its relation to the ages of morphostratigraphic units in Horry County South Carolina: U.S. Geological Survey Bulletin 1589-B, 61 p.",
+    "source_id": "ngmdb:111281",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "units in Horry County South Carolina: U.S. Geological",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Markewich, H.W., Pavich, M.J., Schultz, A.P., Mahan, S.A., Aleman-Gonzalez, W.B., and Bierman, P.R., 2013, Geochronologic evidence for a possible MIS-11 emergent barrier/beach-ridge in southeastern Georgia, USA: Quaternary Science Reviews, v. 60, p. 49-75.",
+    "source_id": "ngmdb:111281",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Markewich, H.W., Pavich, M.J., Schultz, A.P., Mahan,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "McCartan, L., Lemon, E.M., and Weems, R.E., 1984, Geologic map of the area between Charleston and Orangeburg, South Carolina: U.S. Geological Survey Miscellaneous Investigations Series Map I-1472, 1:250,000 scale.",
+    "source_id": "ngmdb:111281",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "McCartan, L., Lemon, E.M., and Weems, R.E., 1984, Geologic",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "McCartan, L., Weems, R.E., and Lemon, E.M., Jr., 1990, Quaternary stratigraphy in the vicinity of Charleston, South Carolina, and its relationship to local seismicity and regional tectonism: U.S. Geological Survey Professional Paper 1367, p. A1-A39.",
+    "source_id": "ngmdb:111281",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "McCartan, L., Weems, R.E., and Lemon, E.M., Jr., 1990,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Owens, J.P., 1990, Geologic map of the Cape Fear region, Florence 1 degree by 2 degrees Quadrangle and northern half of the Georgetown 1 degree by 2 degrees Quadrangle, North Carolina and South Carolina: U.S. Geological Survey Map I-1948-A, 1:250,000 scale.",
+    "source_id": "ngmdb:111281",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Owens, J.P., 1990, Geologic map of the Cape Fear region,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Pooser, W.K., 1965, Biostratigraphy of Cenozoic ostracoda from South Carolina: University of Kansas Paleontological Contributions, Arthropoda, article 8, p. 1-80.",
+    "source_id": "ngmdb:111281",
+    "page": 54,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Pooser, W.K., 1965, Biostratigraphy of Cenozoic ostracoda",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Swezey, C.S., Schultz, A.P., Aleman-Gonzalez, W., Bernhardt, C.E., Doar, W.R., III, Garrity, C.P., Mahan, S.A., and McGeehin, J.P., 2013, Quaternary eolian dunes in the Savannah River valley, Jasper County, South Carolina, USA: Quaternary Research, v. 80, no. 2, p. 250-264.",
+    "source_id": "ngmdb:111281",
+    "page": 54,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Savannah River valley, Jasper County, South Carolina,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Swezey, C.S., Schultz, A.P., Doar, W.R., III, Garrity, C.P., Bernhardt, C.E., Crider, E.A., Edwards, L.E., and McGeehin, J.P., 2019, Geology of the Hardeeville NW Quadrangle and parts of the Brighton and Pineland Quadrangles, Jasper County, South Carolina: U.S. Geological Survey Scientific Investigations Map 3424, 1:24,000 scale.",
+    "source_id": "ngmdb:111281",
+    "page": 54,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Swezey, C.S., Schultz, A.P., Doar, W.R., III, Garrity, C.P.,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Szabo, B.J., 1985, Uranium-series dating of fossil corals from marine sediments of southeastern United States Atlantic Coastal Plain: Geological Society of America Bulletin, v. 96, no. 3, p. 398-406.",
+    "source_id": "ngmdb:111281",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Szabo, B.J., 1985, Uranium-series dating of fossil corals from",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Weems, R.E., Lemon, E.M., Jr., and Nelson, M.S., 1997, Geology of the Pringletown, Ridgeville, Summerville, and Summerville Northwest 7.5-minute quadrangles, Berkeley, Charleston, and Dorchester Counties, South Carolina: U.S. Geological Survey Miscellaneous Investigations Map I-2502, 1:24,000 scale.",
+    "source_id": "ngmdb:111281",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Weems, R.E., Lemon, E.M., Jr., and Nelson, M.S., 1997,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Wehmiller, J.F., Simmons, K.R., Cheng, H., Edwards, R.L., Martin-McNaughton, J., York, L.L., Krantz, D.E., and Shen, C.-C., 2004, Uranium series coral ages from the US Atlantic Coastal Plain: The 80 ka problem revisited: Quaternary International, v. 120, p. 3-14.",
+    "source_id": "ngmdb:111281",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Wehmiller, J.F., Simmons, K.R., Cheng, H., Edwards, R.L.,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Winker, C.D., and Howard, J.D., 1977, Correlation of tectonically deformed shorelines on the southern Atlantic Coastal Plain: Geology, v. 5, no. 2, p. 123-127.",
+    "source_id": "ngmdb:111281",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Winker, C.D., and Howard, J.D., 1977, Correlation of tec-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ]
 }
