@@ -1,0 +1,1480 @@
+{
+ "source_id": "ngmdb:115090",
+ "title": "Geologic Map of the Patrick Quadrangle, Chesterfield County, South Carolina",
+ "citation": "Fitzwater, B.A., Whittecar, G.R., and Swezey, C.S., 2020, Geologic Map of the Patrick Quadrangle, Chesterfield County, South Carolina: South Carolina Geological Survey Geologic Quadrangle Map 57, map scale 1:24,000.",
+ "year": 2020,
+ "scale": 24000,
+ "publisher": "South Carolina Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-10-05T05:58:24+00:00",
+ "updated_at": "2026-10-05T05:58:24+00:00",
+ "reader": "Claude, reading session 2026-10-05",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1"
+ ],
+ "blocks_total": 1,
+ "complete": true,
+ "notes": "OCR of map sheet. OSL table rows partly garbled (lab IDs 'OSJan'/'0SJan' read as 05Jan); OSL sample depths stored as interval tops with ages in notes. OSL ages show Pinehurst Formation spans 69 to 9 ka (Late Pleistocene to Holocene) per text. Middendorf originally dated early Upper Cretaceous (probably Turonian).",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+   "via": "ngmdb_image",
+   "sha256": "72b38e67e9c721df851d00cdd5159f74ff65d2bb4db3201a09817ef6ad243e84",
+   "pages": 1,
+   "first_page": 1
+  }
+ ],
+ "summary": {
+  "stored": 84,
+  "quote_match": {
+   "exact": 84
+  },
+  "verification": {
+   "agree": 21
+  },
+  "inferred": 4
+ },
+ "ingests": [
+  {
+   "at": "2026-10-05T05:58:24+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, reading session 2026-10-05",
+   "values": 84,
+   "stored": 84,
+   "exact": 84,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 21,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [
+  {
+   "map_symbol": {
+    "value": "Qal",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Floodplain and channel alluvium (Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "symbol from correlation chart; DMU symbol OCRed as 'Gal'"
+   },
+   "name": {
+    "value": "Floodplain and channel alluvium",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Floodplain and channel alluvium (Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Floodplain and channel alluvium (Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "0.3 to 3 m (1 to 10 ft)",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "A 0.3 to 3 m (1 to 10 ft) thick unit of light",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "min_ft": 0.9842519685039368,
+     "max_ft": 9.842519685039369,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "lithology": {
+    "value": "light brown, tan, gray, and black soil, rounded quartz gravel, sand, silt, clay, and peat",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "brown, tan, gray, and black soil, rounded quartz gravel, sand, silt, clay, and peat",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Qt",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Unit Qt is interpreted as",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "name": {
+    "value": "Terrace deposits",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Terrace deposits (Quaternary)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Quaternary",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Terrace deposits (Quaternary)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "0.3 to 3 m (1 to 10 ft); exceeds 2 m (6 ft) in places",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Terrace deposits (Quaternary) — A 0.3 to 3 m(1 to 10 fi) thick unit",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 0.9842519685039368,
+     "max_ft": 9.842519685039369,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "lithology": {
+    "value": "yellow, brown, light gray, and red soil throughout rounded to subrounded quartz pebbles, sand, silt, and clay",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "gray, and red soil throughout rounded to subrounded quartz pebbles, sand, silt, and clay",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "A series of terrace deposits is present up to 15 m (49 ft) above the modern floodplain; reworked iron concretions and clay clasts are common",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "A series of terrace deposits is present up to 0 -\n15 m (49 ft) above the modern floodplain",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "fluvial deposits",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Unit Qt is interpreted as\nfluvial deposits.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Qp",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Qp Pinehurst Formation (Quaternary)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "name": {
+    "value": "Pinehurst Formation",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Qp Pinehurst Formation (Quaternary)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Pinehurst",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Qp Pinehurst Formation (Quaternary)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Quaternary",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Qp Pinehurst Formation (Quaternary)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "0.3 to 10 m (1 to 33 ft)",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "A 0.3 to 10 m (1 to 33 fi) thick unit of yellow, tan,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 0.9842519685039368,
+     "max_ft": 32.80839895013123,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "lithology": {
+    "value": "yellow, tan, and white, moderately to well sorted fine to coarse sand, predominantly quartz with minor mica and opaque heavy minerals",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "and white, moderately to well sorted fine to coarse sand (sand grains are subangular to",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "eolian dunes and sand sheets",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Unit Qp is interpreted as eolian dunes and sand sheets.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "contacts": {
+    "value": "overlies an unconformity that caps the Middendorf Formation and older terrace deposits",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Pinehurst Formation\noverlies an unconformity that caps the Middendorf Formation and older terrace deposits",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Km",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Unit Km is interpreted",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "name": {
+    "value": "Middendorf Formation",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Middendorf Formation (Cretaceous), undifferentiated",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Middendorf",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Middendorf Formation (Cretaceous), undifferentiated",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Cretaceous (Turonian?)",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Cretaceous (Turonian?)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "note": "correlation chart",
+    "normalized": {
+     "younger_ma": 89.8,
+     "older_ma": 93.9,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "60 to 150 m (197 to 492 ft)",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "A 60 to 150 m (197 to 492",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 196.85039370078738,
+     "max_ft": 492.1259842519685,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "lithology": {
+    "value": "predominantly orange, white, purple, yellow, brown, and red poorly to moderately sorted fine to coarse sandstone (sand where poorly indurated), with kaolinitic clay beds",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "moderately sorted fine to coarse sandstone (sand, where poorly indurated) composed predominantly of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "fossils": {
+    "value": "fossils of conifer trees (mostly tree bark)",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "fossils of conifer trees (mostly\ntree bark)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "contacts": {
+    "value": "lies above an unconformity on metamorphic rocks of the Carolina terrane, inferred from Cheraw core (CTF-81)",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "The Middendorf Formation lies above an unconformity on metamorphic rocks of the\nCarolina terrane, inferred from Cheraw core (CTF-81",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "fluvial deposits",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "The Middendorf Formation is interpreted as fluvial deposits",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  }
+ ],
+ "observations": [
+  {
+   "kind": "other",
+   "label": {
+    "value": "OSL site 1 (Southeast of Sugarloaf Mountain)",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "SITE #1 = Southeast of Sugarloaf Mountain",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "location": {
+    "value": "34.58355, -80.10430",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "05Jan Pinehurst 1 34.58355 — -80.10430 125 42",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "lat": 34.58355,
+     "lon": -80.1043,
+     "format": "decimal",
+     "hemisphere_inferred": false
+    }
+   },
+   "elevation": {
+    "value": 125,
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "05Jan Pinehurst 1 34.58355 — -80.10430 125 42",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "units": "m",
+    "table": true,
+    "normalized": {
+     "min_ft": 410.1049868766404,
+     "max_ft": 410.1049868766404,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": 42,
+      "source_id": "ngmdb:115090",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.765,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+      "quote": "34.58355 — -80.10430 125 42 11 9.08",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "agree",
+      "units": "cm",
+      "table": true,
+      "note": "OSL sample 05Jan2013A depth; MAM age 9.08 ka",
+      "normalized": {
+       "min_ft": 1.3779527559055118,
+       "max_ft": 1.3779527559055118,
+       "unit": "cm",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Pinehurst sand",
+      "source_id": "ngmdb:115090",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.765,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+      "quote": "05Jan Pinehurst 1 34.58355 — -80.10430 125 42",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "canonical": "Pinehurst",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": 85,
+      "source_id": "ngmdb:115090",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.765,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+      "quote": "34.58355 — -80.10430 125 85 28 19.32",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "agree",
+      "units": "cm",
+      "table": true,
+      "note": "OSL sample 05Jan2013B depth; MAM age 19.32 ka",
+      "normalized": {
+       "min_ft": 2.788713910761155,
+       "max_ft": 2.788713910761155,
+       "unit": "cm",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Pinehurst sand",
+      "source_id": "ngmdb:115090",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.765,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+      "quote": "05Jan Pinehurst 1 34.58355 — -80.10430 125 85",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "canonical": "Pinehurst",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
+  },
+  {
+   "kind": "other",
+   "label": {
+    "value": "OSL site 2 (Isaac Road)",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "SITE #2 = Isaac Road",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "location": {
+    "value": "34.62072, -80.05958",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "34.62072 — -80.05958 76 210",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "lat": 34.62072,
+     "lon": -80.05958,
+     "format": "decimal",
+     "hemisphere_inferred": false
+    }
+   },
+   "elevation": {
+    "value": 76,
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "34.62072 — -80.05958 76 210",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "units": "m",
+    "table": true,
+    "normalized": {
+     "min_ft": 249.34383202099735,
+     "max_ft": 249.34383202099735,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": 210,
+      "source_id": "ngmdb:115090",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.765,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+      "quote": "34.62072 — -80.05958 76 210 31 39.80",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "agree",
+      "units": "cm",
+      "table": true,
+      "note": "OSL sample 05Jan2014A (OCR 'OSJan'); MAM age 39.80 ka",
+      "normalized": {
+       "min_ft": 6.889763779527559,
+       "max_ft": 6.889763779527559,
+       "unit": "cm",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Pinehurst sand",
+      "source_id": "ngmdb:115090",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.765,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+      "quote": "Pinehurst 2 34.62072 — -80.05958 76 210",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "canonical": "Pinehurst",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": 250,
+      "source_id": "ngmdb:115090",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.765,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+      "quote": "34.62072  -80.05958 76 250 24 62.60",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "agree",
+      "units": "cm",
+      "table": true,
+      "note": "OSL samples 05Jan2014B and C at 250 cm; MAM ages 62.60 and 53.70 ka",
+      "normalized": {
+       "min_ft": 8.202099737532809,
+       "max_ft": 8.202099737532809,
+       "unit": "cm",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Pinehurst sand",
+      "source_id": "ngmdb:115090",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.765,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+      "quote": "Pinehurst 2 34.62072  -80.05958 76 250",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "canonical": "Pinehurst",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
+  },
+  {
+   "kind": "outcrop",
+   "label": {
+    "value": "Photograph 1",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Photograph 1. Cretaceous Middendorf (Km) lithofacies 1",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "location": {
+    "value": "Latitude: 34.503072 North; Longitude: -80.063281 West",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Latitude:\n34.503072 North; Longitude: -80.063281 West",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "lat": 34.503072,
+     "lon": -80.063281,
+     "format": "decimal",
+     "hemisphere_inferred": false
+    }
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Middendorf Formation (Km) lithofacies 1",
+      "source_id": "ngmdb:115090",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.65,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+      "quote": "Photograph 1. Cretaceous Middendorf (Km) lithofacies 1",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": null,
+      "normalized": {
+       "canonical": "Middendorf",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "White, yellow, purple, orange, and red moderately to poorly sorted medium sand to coarse sand to pebbly sand",
+      "source_id": "ngmdb:115090",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.65,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+      "quote": "White, yellow, purple, orange, and\nred moderately to poorly sorted medium sand to coarse sand to pebbly sand",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": null
+     }
+    }
+   ]
+  },
+  {
+   "kind": "outcrop",
+   "label": {
+    "value": "Photograph 2",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Photograph 2. Cretaceous Middendorf (Km) lithofacies 1",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "location": {
+    "value": "Latitude: 34.564928 North; Longitude: -80.059531 West",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Latitude: 34.564928\n\nNorth; Longitude: -80.059531 West",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "lat": 34.564928,
+     "lon": -80.059531,
+     "format": "decimal",
+     "hemisphere_inferred": false
+    }
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Middendorf Formation (Km) lithofacies 1",
+      "source_id": "ngmdb:115090",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.65,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+      "quote": "Photograph 2. Cretaceous Middendorf (Km) lithofacies 1",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": null,
+      "normalized": {
+       "canonical": "Middendorf",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "White, tan, purple, and orange medium-to-coarse sand displaying cross-bedding with mm-thick kaolinitic clay",
+      "source_id": "ngmdb:115090",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.765,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+      "quote": "White, tan, purple, and orange medium-to-coarse sand displaying\ncross-bedding with mm-thick kaolinitic clay",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "agree"
+     }
+    }
+   ]
+  },
+  {
+   "kind": "outcrop",
+   "label": {
+    "value": "Photograph 3",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Photograph 3. Cretaceous Middendorf (Km) lithofacies 2",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "location": {
+    "value": "Latitude: 34.518397 North; Longitude: -80.035603 West",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Latitude: 34.518397 North;\n\nLongitude: -80.035603 West",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "lat": 34.518397,
+     "lon": -80.035603,
+     "format": "decimal",
+     "hemisphere_inferred": false
+    }
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Middendorf Formation (Km) lithofacies 2",
+      "source_id": "ngmdb:115090",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.65,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+      "quote": "Photograph 3. Cretaceous Middendorf (Km) lithofacies 2",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": null,
+      "normalized": {
+       "canonical": "Middendorf",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "Alternating beds of orange sand and gray clay (individual clay beds are < 1 m in total thickness)",
+      "source_id": "ngmdb:115090",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.65,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+      "quote": "Alternating beds of orange sand and\ngray clay (individual clay beds are < 1 m in total thickness)",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": null
+     }
+    }
+   ]
+  },
+  {
+   "kind": "outcrop",
+   "label": {
+    "value": "Photograph 4",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Photograph 4. Cretaceous Middendorf (Km) lithofacies 3",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "location": {
+    "value": "Latitude: 34.546458 North; Longitude: -80.039219 West",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Latitude: 34.546458 North; Longitude: -80.039219 West",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "lat": 34.546458,
+     "lon": -80.039219,
+     "format": "decimal",
+     "hemisphere_inferred": false
+    }
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Middendorf Formation (Km) lithofacies 3",
+      "source_id": "ngmdb:115090",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.65,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+      "quote": "Photograph 4. Cretaceous Middendorf (Km) lithofacies 3",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": null,
+      "normalized": {
+       "canonical": "Middendorf",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "clay bed infilling a channel-like depression within sands (lithofacies 1)",
+      "source_id": "ngmdb:115090",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.65,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+      "quote": "infilling a channel-like depression within sands (lithofacies 1)",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": null
+     }
+    }
+   ]
+  },
+  {
+   "kind": "outcrop",
+   "label": {
+    "value": "Photograph 5",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Photograph 5. Cretaceous Middendorf (Km) lithofacies 4",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "location": {
+    "value": "Latitude: 34.608539 North; Longitude: -80.104764 West",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.52,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Latitude: 34.608539 North;",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "longitude printed on a separate line of the OCR text",
+    "normalized": {
+     "lat": 34.608539,
+     "lon": -80.104764,
+     "format": "decimal",
+     "hemisphere_inferred": false
+    }
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Middendorf Formation (Km) lithofacies 4",
+      "source_id": "ngmdb:115090",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.65,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+      "quote": "Photograph 5. Cretaceous Middendorf (Km) lithofacies 4",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": null,
+      "normalized": {
+       "canonical": "Middendorf",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "White muddy sandstone with horizontal bedding",
+      "source_id": "ngmdb:115090",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.65,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+      "quote": "White muddy sandstone with\nhorizontal bedding",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": null
+     }
+    }
+   ]
+  },
+  {
+   "kind": "outcrop",
+   "label": {
+    "value": "Photograph 6",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Photograph 6. Cretaceous Middendorf (Km) lithofacies 5",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "location": {
+    "value": "Latitude: 34.588231 North; Longitude: -80.118967 West",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Latitude:\n34.588231 North; Longitude: -80.118967 West",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "lat": 34.588231,
+     "lon": -80.118967,
+     "format": "decimal",
+     "hemisphere_inferred": false
+    }
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Middendorf Formation (Km) lithofacies 5",
+      "source_id": "ngmdb:115090",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.65,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+      "quote": "Photograph 6. Cretaceous Middendorf (Km) lithofacies 5",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": null,
+      "normalized": {
+       "canonical": "Middendorf",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "Red, brown, and purple iron-cemented poorly sorted, medium to very coarse sandstone",
+      "source_id": "ngmdb:115090",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.65,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+      "quote": "Red, brown, and purple iron-ce-\nmented poorly sorted, medium to very coarse sandstone",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": null
+     }
+    }
+   ]
+  }
+ ],
+ "structures": [
+  {
+   "kind": "contact",
+   "name": {
+    "value": "Lithologic contact",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Lithologic contact — solid where visible, dashed where approximate.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "certainty": {
+    "value": "solid where visible, dashed where approximate",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "solid where visible, dashed where approximate",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "kind": "lineament",
+   "name": {
+    "value": "Big Black Creek-Juniper Creek Drainage Divide (east-facing escarpment)",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Big Black Creek-Juniper Creek Drainage Divide (east-facing escarpment)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "description": {
+    "value": "derived from the USGS Watershed Boundary Dataset (WBD)",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Watershed Boundary Dataset (WBD)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "groundwater": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Bartlett Jr., C.S., 1967, Geology of the Southern Pines Quadrangle (M.S. thesis): The University of North Carolina at Chapel Hill",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Bartlett Jr., C.S., 1967, Geology of the Southern Pines Quadrangle (M.S. thesis)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Berry, E.W., 1910, A Cretaceous Lycopodium: American Journal of Science, ser. 4, v. 30, p. 275-276.",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Berry, E.W., 1910, A Cretaceous Lycopodium: American Journal of Science, ser. 4,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Berry, E. W., 1914, The Upper Cretaceous and Eocene floras of South Carolina and Georgia: U.S. Geological Survey Professional Paper 84, 200p.",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Berry, E. W., 1914, The Upper Cretaceous and Eocene floras of South Carolina and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Conley, J. F., 1962, Geology and Mineral Resources of Moore County, North Carolina: North Carolina Division of Mineral Resources Bulletin 76, 40p.",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Conley, J. F., 1962, Geology and Mineral Resources of Moore County, North Caroli",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Fitzwater, B.A. 2016, Reevaluating the Geologic Formations of the Upper Coastal Plain in Chesterfield County, South Carolina [M.S. thesis]: Old Dominion University, Norfolk, Virginia, 130p.",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Fitzwater, B.A. 2016, Reevaluating the Geologic Formations of the Upper Coastal ",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Heron, S.D., Jr., 1958, The Stratigraphy of the Outcropping Basal Cretaceous Formations between the Neuse River, North Carolina, and Lynches River, South Carolina",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Heron, S.D., Jr., 1958, The Stratigraphy of the Outcropping Basal Cretaceous For",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "LeGrand, H.E., 1961, Summary of geology of Atlantic Coastal Plain: American Association of Petroleum Geologists (AAPG) Bulletin 45, p. 1557-1571.",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "LeGrand, H.E., 1961, Summary of geology of Atlantic Coastal Plain: American Asso",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Nystrom Jr., P.G., Willoughby, R.H., and Price, L.K., 1991, Cretaceous and Tertiary stratigraphy of the Upper Coastal Plain, South Carolina.",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Nystrom Jr., P.G., Willoughby, R.H., and Price, L.K., 1991, Cretaceous and Terti",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Shah, A.K., Bern, C.R., Van Gosen, B.S., Daniels, D.L., Benzel, W.M., Budahn, J.R., Ellefsen, K.J., Karst, A., and Davis, R., 2017, Rare earth mineral potential in the southeastern U.S. Coastal Plain",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Shah, A.K., Bern, C.R., Van Gosen, B.S., Daniels, D.L., Benzel, W.M., Budahn, J.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Swezey, C.S., Fitzwater, B.A., and Whittecar, G.R., 2016a, Geology and geomorphology of the Carolina Sandhills, Chesterfield County, South Carolina",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Swezey, C.S., Fitzwater, B.A., and Whittecar, G.R., 2016a, Geology and geomorpho",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Swezey, C.S., Fitzwater, B.A., and Whittecar, G.R., 2021, Geologic map of the Middendorf quadrangle, Chesterfield County, South Carolina",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Swezey, C.S., Fitzwater, B.A., and Whittecar, G.R., 2021, Geologic map of the Mi",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Swezey, C.S., Fitzwater, B.A., Whittecar, G.R., Mahan, S.A., Garrity, C.P., Aleman Gonzalez, W.B., and Dobbs, K.M., 2016b, The Carolina Sandhills",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Swezey, C.S., Fitzwater, B.A., Whittecar, G.R., Mahan, S.A., Garrity, C.P., Alem",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Swezey, C.S., 2020, Quaternary eolian dunes and sand sheets in inland locations of the Atlantic Coastal Plain Province",
+    "source_id": "ngmdb:115090",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/115000_115999/115090_1",
+    "quote": "Swezey, C.S., 2020, Quaternary eolian dunes and sand sheets in inland locations ",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ]
+}

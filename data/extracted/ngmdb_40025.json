@@ -1,0 +1,2003 @@
+{
+ "source_id": "ngmdb:40025",
+ "title": "Biostratigraphic data for the Cretaceous marine sediments in the USGS-St. George No. 1 core (DOR-211), Dorchester County, South Carolina",
+ "citation": "Self-Trail, Jean, and Gohn, Gregory, 1996, Biostratigraphic data for the Cretaceous marine sediments in the USGS-St. George No. 1 core (DOR-211), Dorchester County, South Carolina: U.S. Geological Survey Open-File Report OF-96-684, map scale 1:455,000.",
+ "year": 1996,
+ "scale": 455000,
+ "publisher": "U.S. Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-10-04T04:33:33+00:00",
+ "updated_at": "2026-10-04T04:33:33+00:00",
+ "reader": "Claude, reading session 2026-10-04",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10",
+  "11",
+  "12",
+  "13",
+  "14",
+  "15",
+  "16",
+  "17",
+  "18",
+  "19",
+  "20",
+  "21",
+  "22",
+  "23",
+  "24",
+  "25",
+  "26",
+  "27",
+  "28",
+  "29",
+  "30",
+  "31"
+ ],
+ "blocks_total": 31,
+ "complete": true,
+ "notes": "Biostratigraphic report on the St. George core (DOR-211). Intervals 522-1,322 ft follow this report's provisional stratigraphy (p. 5); intervals below 1,322 ft are Renken's earlier assignments (in Reid and others, 1986) quoted on p. 2. The report also cites Renken's older picks for the upper section (Black Creek 1,322-1,088 ft, Peedee 1,088-560 ft, Black Mingo 560-530 ft); not recorded as intervals because this report revises them. Nannofossil range charts (figs. 3-4) are garbled in the text layer and species lists/ostracode count tables were not recorded value by value. References: recorded Carolina-relevant ones; skipped general European, Gulf Coast and New Jersey zonation papers.",
+ "files": [
+  {
+   "url": "https://pubs.usgs.gov/of/1996/0684/report.pdf",
+   "via": "pubs_usgs",
+   "sha256": "651ecea4a4f5d4d66cf533842a7fa13f4f934cccf85bd30f65743e49039c11f3",
+   "pages": 31,
+   "first_page": 1
+  }
+ ],
+ "summary": {
+  "stored": 116,
+  "quote_match": {
+   "exact": 116
+  },
+  "verification": {},
+  "inferred": 11
+ },
+ "ingests": [
+  {
+   "at": "2026-10-04T04:33:33+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, reading session 2026-10-04",
+   "values": 116,
+   "stored": 116,
+   "exact": 116,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 0,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "Black Creek Group",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "to the. Black Creek Group; the section between",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Black Creek",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Group",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "to the. Black Creek Group; the section between",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "Rank taken from the unit name"
+   },
+   "age": {
+    "value": "late early Campanian to late Campanian",
+    "source_id": "ngmdb:40025",
+    "page": 13,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Group of the St. George core indicate late early",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "Continues on next line: 'Campanian to late Campanian ages.'",
+    "normalized": {
+     "younger_ma": 72.1,
+     "older_ma": 83.6,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "1,322 ft to 790 ft depth in the St. George core",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "section between 1,322 ft and 790 ft is assigned",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 1322.0,
+     "max_ft": 790.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "contacts": {
+    "value": "The Black Creek Group-Peedee Formation boundary is an unconformity of considerable magnitude",
+    "source_id": "ngmdb:40025",
+    "page": 14,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Formation boundary is an unconformity of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "Four formations of the Black Creek Group recognized in the Clubhouse Crossroads core (fine-grained, calcareous marine units) are provisionally recognized in the St. George core",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gohn (1992b) recognized four formations",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Cane Acre Formation",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "depth of 1,322 ft, the Cane Acre Formation,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Cane Acre",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "depth of 1,322 ft, the Cane Acre Formation,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "Rank taken from the unit name"
+   },
+   "group": {
+    "value": "Black Creek Group",
+    "source_id": "ngmdb:40025",
+    "page": 17,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Preliminary list of ostracodes from the Cane Acre Formation of the Black Creek Group",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "table": true
+   },
+   "age": {
+    "value": "lower Campanian Zone CC 19",
+    "source_id": "ngmdb:40025",
+    "page": 13,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "lower Campanian Zone CC 19 (Calculites",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 79.76666666666667,
+     "older_ma": 83.6,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "the basal Black Creek unit; 1,322 ft to 1,177 ft in the St. George core",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "which is the basal Black Creek unit, overlies",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "contacts": {
+    "value": "overlies noncalcareous, oxidized sediments assigned to the Middendorf Formation(?); an unconformity (mantled by a thin phosphate-pebble bed) at 1,177 ft is the contact with the overlying Coachman Formation(?)",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "unconformity (mantled by a thin phosphate-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "transition from a relatively deep-water (perhaps middle neritic) paleoenvironment to a nearshore (inner-neritic) paleoenvironment; shoaling upward",
+    "source_id": "ngmdb:40025",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "from a relatively deep-water (perhaps middle",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "fossils": {
+    "value": "Haplocytheridea plummeri assemblage (1,320-1,280 ft) and Haplocytheridea new species 1 assemblage (1,260-1,215 ft) ostracodes; calcareous nannofossil Zone CC 19",
+    "source_id": "ngmdb:40025",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Haplocytheridea plummeri assemblage, which",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Coachman Formation(?)",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Coachman Formation(?). The section between",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Coachman",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Coachman Formation(?). The section between",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "Rank taken from the unit name"
+   },
+   "group": {
+    "value": "Black Creek Group",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "to the. Black Creek Group; the section between",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "Section 1,322-790 ft is assigned to the Black Creek Group"
+   },
+   "age": {
+    "value": "Middle Campanian Zone CC 20",
+    "source_id": "ngmdb:40025",
+    "page": 13,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Middle Campanian Zone CC 20",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 75.93333333333332,
+     "older_ma": 79.76666666666667,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "1,177 ft to 1,088 ft (contact with Bladen Formation(?) questionably placed at 1,088 ft)",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "questionably placed at 1,088 ft. The base of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "inner-neritic (Haplocytheridea insolita assemblage)",
+    "source_id": "ngmdb:40025",
+    "page": 20,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "suggests an inner-neritic paleoenvironment.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "fossils": {
+    "value": "Haplocytheridea insolita ostracode assemblage (1,168 ft to 1,095 ft)",
+    "source_id": "ngmdb:40025",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "(tables 4, 5). The Haplocytheridea insolita",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Bladen Formation(?)",
+    "source_id": "ngmdb:40025",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "is present at 1,073 ft and 1,061 ft in the Bladen",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Bladen",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:40025",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "is present at 1,073 ft and 1,061 ft in the Bladen",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "Rank taken from the unit name"
+   },
+   "group": {
+    "value": "Black Creek Group",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "to the. Black Creek Group; the section between",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "Section 1,322-790 ft is assigned to the Black Creek Group"
+   },
+   "age": {
+    "value": "Middle Campanian Zone CC 20",
+    "source_id": "ngmdb:40025",
+    "page": 13,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Formation(?), the Bladen Formation(?), and the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "Zone CC 20 interval is represented by the Coachman Formation(?), the Bladen Formation(?), and lower Donoho Creek",
+    "normalized": {
+     "younger_ma": 75.93333333333332,
+     "older_ma": 79.76666666666667,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "1,088 ft to 1,039 ft in the St. George core",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "questionably placed at 1,088 ft. The base of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "paleoenvironmentally restricted inner-neritic site of deposition",
+    "source_id": "ngmdb:40025",
+    "page": 20,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "paleoenvironmentally restricted inner-neritic",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "fossils": {
+    "value": "low-diversity Haplocytheridea wilmingtonensis ostracode assemblage at 1,073 ft and 1,061 ft",
+    "source_id": "ngmdb:40025",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "is present at 1,073 ft and 1,061 ft in the Bladen",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Donoho Creek Formation",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the Donoho Creek Formation is questionably",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Donoho Creek",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "the Donoho Creek Formation is questionably",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "Rank taken from the unit name"
+   },
+   "group": {
+    "value": "Black Creek Group",
+    "source_id": "ngmdb:40025",
+    "page": 19,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Preliminary list of ostracodes from the Donoho Creek Formation of the Black Creek Group.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "table": true
+   },
+   "age": {
+    "value": "Upper Campanian Zone CC 22 (upper half); Zone CC 21 and Zone CC 20 in lower part",
+    "source_id": "ngmdb:40025",
+    "page": 14,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Upper Campanian Zone CC 22",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 72.1,
+     "older_ma": 75.93333333333332,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "contacts": {
+    "value": "base questionably placed at 1,039 ft; top placed at the unconformity at 790 ft",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "placed at 1,039 ft, and its top is placed at the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "In other South Carolina drill holes, Donoho Creek sections contain one and locally two unconformities in addition to the unit's lower and upper contacts; likely to be subdivided in the future",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "contain one and locally two unconformities, in",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "inner-neritic",
+    "source_id": "ngmdb:40025",
+    "page": 21,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "minardi suggests an inner-neritic paleo-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "fossils": {
+    "value": "Haplocytheridea wilmingtonensis (high and low diversity) and Haplocytheridea sarectaensis ostracode assemblages; calcareous nannofossil Zones CC 20-CC 22",
+    "source_id": "ngmdb:40025",
+    "page": 20,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "816 ft are assigned to the Haplocytheridea",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Peedee Formation",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "790 ft and 604 ft is assigned to the Peedee",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Peedee",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "790 ft and 604 ft is assigned to the Peedee",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "Rank taken from the unit name"
+   },
+   "age": {
+    "value": "Maastrichtian",
+    "source_id": "ngmdb:40025",
+    "page": 15,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "core indicate a Maastrichtian age and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 66.0,
+     "older_ma": 72.1,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "calcareous clayey silts and muddy very fine sands",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "muddy very fine sands between this",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "790 ft and 604 ft depth in the St. George core",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "790 ft and 604 ft is assigned to the Peedee",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 604.0,
+     "max_ft": 790.0,
+     "values_ft": [
+      790.0,
+      604.0
+     ],
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "contacts": {
+    "value": "basal contact is an unconformity overlain by a thin phosphate-pebble bed at the base of the Peedee Formation",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "pebble bed at the base of the Peedee",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "Decreases in nannofossil abundance and preservation in the highest samples may indicate a weathering zone at the top of the Peedee section; upward change in lithology from silty clay to muddy fine sand",
+    "source_id": "ngmdb:40025",
+    "page": 15,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "quality may indicate a weathering zone at the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "upward change from middle neritic depositon to inner neritic deposition",
+    "source_id": "ngmdb:40025",
+    "page": 21,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "middle neritic depositon to inner neritic",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "fossils": {
+    "value": "calcareous nannofossil Zone CC 25 (Subzones CC 25a, CC 25b); Antibythocypris fabaformis, Haplocytheridea renfroensis and Antibythocypris minuta ostracode assemblages",
+    "source_id": "ngmdb:40025",
+    "page": 21,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Zone CC 25. Three ostracode assemblages",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "unnamed Cretaceous sand unit",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "ft is assigned to an unnamed Cretaceous sand",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "cretaceous",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "informal unit",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "ft is assigned to an unnamed Cretaceous sand",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Maastrichtian",
+    "source_id": "ngmdb:40025",
+    "page": 15,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Formation, indicate a Maastrichtian age for the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 66.0,
+     "older_ma": 72.1,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "sparingly shelly, slightly muddy, fine to medium or locally coarse sand",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "consist of sparingly shelly, slightly muddy, fine",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "604 ft to 550 ft depth in the St. George core",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "between depths of 604 ft and 550 ft was poorly",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 604.0,
+     "max_ft": 550.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "description": {
+    "value": "A 10-ft-thick clay bed that contains Cretaceous dinoflagellates is present at the top of the unit; not present in the Clubhouse Crossroads core",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "thick clay bed that contains Cretaceous",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "fossils": {
+    "value": "dinoflagellate Dinogymnium euclaense at 550 ft",
+    "source_id": "ngmdb:40025",
+    "page": 15,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "of the dinoflagellate Dinogymnium euclaense at",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Sawdust Landing Member(?)",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "to the Sawdust Landing Member(?).",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Sawdust Landing",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Member",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "to the Sawdust Landing Member(?).",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "Rank taken from the unit name"
+   },
+   "group": {
+    "value": "Rhems Formation of the Black Mingo Group (per Muthig and Colquhoun, 1988)",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Formation of the Black Mingo Group.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Paleocene",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "This interval may represent the Paleocene",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 56.0,
+     "older_ma": 66.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "sand-dominated unit",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "A second sand-dominated unit from 550 ft",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "550 ft to 522 ft depth in the St. George core",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "A second sand-dominated unit from 550 ft",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 550.0,
+     "max_ft": 522.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "contacts": {
+    "value": "overlain by fine-grained marine deposits of middle Paleocene age",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Paleocene age overlie the Sawdust Landing",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Middendorf Formation(?)",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "assigned to the Middendorf Formation(?). An",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Middendorf",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "assigned to the Middendorf Formation(?). An",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "Rank taken from the unit name"
+   },
+   "lithology": {
+    "value": "noncalcareous, oxidized sediments",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "noncalcareous, oxidized sediments that are",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "contacts": {
+    "value": "overlain at 1,322 ft by the Cane Acre Formation",
+    "source_id": "ngmdb:40025",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "depth of 1,322 ft, the Cane Acre Formation,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ],
+ "observations": [
+  {
+   "kind": "core",
+   "label": {
+    "value": "USGS-St. George No. 1 (DOR-211)",
+    "source_id": "ngmdb:40025",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "designated as USGS drill hole DOR-211.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "33°09'25\"N latitude and 80°31'18\"W longitude",
+    "source_id": "ngmdb:40025",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "33°09'25\"N latitude and 80°31'18\"W longitude;",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "about three miles southeast of the town of St. George near the village of Byrd, northern Dorchester County",
+    "normalized": {
+     "lat": 33.15694444444444,
+     "lon": -80.52166666666666,
+     "format": "dms",
+     "hemisphere_inferred": false
+    }
+   },
+   "elevation": {
+    "value": "+78 feet",
+    "source_id": "ngmdb:40025",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "ground elevation at the site is +78 feet (Reid",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 78.0,
+     "max_ft": 78.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "2,067 ft",
+    "source_id": "ngmdb:40025",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "total depth of 2,067 ft. The hole was cored",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 2067.0,
+     "max_ft": 2067.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "date": {
+    "value": "1982",
+    "source_id": "ngmdb:40025",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "by a commercial drilling company during 1982.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "522 ft",
+      "source_id": "ngmdb:40025",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "to 522 ft is virtually unrepresented by cores.",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 522.0,
+       "max_ft": 522.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "550 ft",
+      "source_id": "ngmdb:40025",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "A second sand-dominated unit from 550 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 550.0,
+       "max_ft": 550.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Sawdust Landing Member(?)",
+      "source_id": "ngmdb:40025",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "to the Sawdust Landing Member(?).",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Sawdust Landing",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "sand-dominated unit, virtually unrepresented by cores",
+      "source_id": "ngmdb:40025",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "to 522 ft is virtually unrepresented by cores.",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    },
+    {
+     "top": {
+      "value": "550 ft",
+      "source_id": "ngmdb:40025",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "between depths of 604 ft and 550 ft was poorly",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 550.0,
+       "max_ft": 550.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "604 ft",
+      "source_id": "ngmdb:40025",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "between depths of 604 ft and 550 ft was poorly",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 604.0,
+       "max_ft": 604.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "unnamed Cretaceous sand unit",
+      "source_id": "ngmdb:40025",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "ft is assigned to an unnamed Cretaceous sand",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "cretaceous",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "sparingly shelly, slightly muddy, fine to medium or locally coarse sand; poorly recovered",
+      "source_id": "ngmdb:40025",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "consist of sparingly shelly, slightly muddy, fine",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    },
+    {
+     "top": {
+      "value": "604 ft",
+      "source_id": "ngmdb:40025",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "790 ft and 604 ft is assigned to the Peedee",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 604.0,
+       "max_ft": 604.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "790 ft",
+      "source_id": "ngmdb:40025",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "790 ft and 604 ft is assigned to the Peedee",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 790.0,
+       "max_ft": 790.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Peedee Formation",
+      "source_id": "ngmdb:40025",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "790 ft and 604 ft is assigned to the Peedee",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Peedee",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "calcareous clayey silts and muddy very fine sands",
+      "source_id": "ngmdb:40025",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "muddy very fine sands between this",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    },
+    {
+     "top": {
+      "value": "790 ft",
+      "source_id": "ngmdb:40025",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "unconformity at 790 ft.",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 790.0,
+       "max_ft": 790.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "1,039 ft",
+      "source_id": "ngmdb:40025",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "placed at 1,039 ft, and its top is placed at the",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 1039.0,
+       "max_ft": 1039.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Donoho Creek Formation",
+      "source_id": "ngmdb:40025",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "the Donoho Creek Formation is questionably",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Donoho Creek",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "1,039 ft",
+      "source_id": "ngmdb:40025",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "1,177 ft and 1,039 ft is assigned to the",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 1039.0,
+       "max_ft": 1039.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "1,088 ft",
+      "source_id": "ngmdb:40025",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "questionably placed at 1,088 ft. The base of",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 1088.0,
+       "max_ft": 1088.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Bladen Formation(?)",
+      "source_id": "ngmdb:40025",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Formation(?) with the formational contact",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Bladen",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "1,088 ft",
+      "source_id": "ngmdb:40025",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "questionably placed at 1,088 ft. The base of",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 1088.0,
+       "max_ft": 1088.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "1,177 ft",
+      "source_id": "ngmdb:40025",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "1,177 ft and 1,039 ft is assigned to the",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 1177.0,
+       "max_ft": 1177.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Coachman Formation(?)",
+      "source_id": "ngmdb:40025",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Coachman Formation(?). The section between",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Coachman",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "1,177 ft",
+      "source_id": "ngmdb:40025",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "pebble bed) at 1,177 ft is the contact between",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 1177.0,
+       "max_ft": 1177.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "1,322 ft",
+      "source_id": "ngmdb:40025",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "depth of 1,322 ft, the Cane Acre Formation,",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 1322.0,
+       "max_ft": 1322.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Cane Acre Formation",
+      "source_id": "ngmdb:40025",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "depth of 1,322 ft, the Cane Acre Formation,",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Cane Acre",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "1,322 ft",
+      "source_id": "ngmdb:40025",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "depth of 1,322 ft, the Cane Acre Formation,",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 1322.0,
+       "max_ft": 1322.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "1,375 ft",
+      "source_id": "ngmdb:40025",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Formation (1,375 ft to 1,322 ft).",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 1375.0,
+       "max_ft": 1375.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Middendorf Formation",
+      "source_id": "ngmdb:40025",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Formation (1,375 ft to 1,322 ft).",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "note": "Renken (in Reid and others, 1986); this report: Middendorf Formation(?) below 1,322 ft",
+      "normalized": {
+       "canonical": "Middendorf",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "noncalcareous, oxidized sediments",
+      "source_id": "ngmdb:40025",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "noncalcareous, oxidized sediments that are",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    },
+    {
+     "top": {
+      "value": "1,375 ft",
+      "source_id": "ngmdb:40025",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "(1,930 ft to 1,375 ft), and to the Middendorf",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 1375.0,
+       "max_ft": 1375.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "1,930 ft",
+      "source_id": "ngmdb:40025",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "(1,930 ft to 1,375 ft), and to the Middendorf",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 1930.0,
+       "max_ft": 1930.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Cape Fear Formation",
+      "source_id": "ngmdb:40025",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "saprolite in part), to the Cape Fear Formation",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "note": "Assignment by Renken (in Reid and others, 1986); fluvial to possibly marginal-marine sediments",
+      "normalized": {
+       "canonical": "Cape Fear",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "1,930 ft",
+      "source_id": "ngmdb:40025",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "clay unit (1,962 ft to 1,930 ft, which may be",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 1930.0,
+       "max_ft": 1930.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "1,962 ft",
+      "source_id": "ngmdb:40025",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "clay unit (1,962 ft to 1,930 ft, which may be",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 1962.0,
+       "max_ft": 1962.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "unnamed clay unit",
+      "source_id": "ngmdb:40025",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "clay unit (1,962 ft to 1,930 ft, which may be",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "note": "Renken (in Reid and others, 1986)"
+     },
+     "description": {
+      "value": "unnamed clay unit, which may be saprolite in part",
+      "source_id": "ngmdb:40025",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "clay unit (1,962 ft to 1,930 ft, which may be",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    },
+    {
+     "top": {
+      "value": "about 1,939 ft",
+      "source_id": "ngmdb:40025",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "hole, at about 1,939 ft. The Cretaceous-",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "note": "This report's top of saprolite; Reid and others (1986) placed it at 1,962 ft",
+      "normalized": {
+       "min_ft": 1939.0,
+       "max_ft": 1939.0,
+       "unit": "ft",
+       "approximate": true
+      }
+     },
+     "bottom": {
+      "value": "2,067 ft",
+      "source_id": "ngmdb:40025",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "total depth of 2,067 ft. The hole was cored",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 2067.0,
+       "max_ft": 2067.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "basalt of probable early Mesozoic age",
+      "source_id": "ngmdb:40025",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "basalt of probable early Mesozoic age beneath",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     },
+     "description": {
+      "value": "basalt saprolite over basalt of probable early Mesozoic age",
+      "source_id": "ngmdb:40025",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "placed the top of basalt saprolite at 1,962 ft in",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    }
+   ]
+  }
+ ],
+ "structures": [],
+ "groundwater": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Gohn, G.S., 1992a, Correlation, age, and depositional framework of subsurface upper Santonian and Campanian sediments in east-central South Carolina, in Gohn, G.S., ed., Proceedings of the 1988 U.S. Geological Survey workshop on the geology and geohydrology of the Atlantic Coastal Plain: U.S. Geological Survey Circular 1059, p. 115-120.",
+    "source_id": "ngmdb:40025",
+    "page": 23,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gohn, G.S., 1992a, Correlation, age, and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Gohn, G.S., 1992b, Revised nomenclature, definitions, and correlations for the Cretaceous formations in USGS-Clubhouse Crossroads #1, Dorchester County, South Carolina: U.S. Geological Survey Professional Paper 1518, 39 p.",
+    "source_id": "ngmdb:40025",
+    "page": 23,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "1992b, Revised nomenclature,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Habib, Daniel, and Miller, J.A., 1989, Dinoflagellate species and organic facies evidence of marine transgression and regression in the Atlantic Coastal Plain: Palaeogeography, Palaeoclimatology, Palaeoecology, v. 74, p. 23-47.",
+    "source_id": "ngmdb:40025",
+    "page": 23,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Habib, Daniel, and Miller, J.A., 1989,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Hattner, J.G., and Wise, S.W., Jr., 1980, Upper Cretaceous calcareous nannofossil biostratigraphy of South Carolina: South Carolina Geology, v. 24, no. 2, p. 41-117.",
+    "source_id": "ngmdb:40025",
+    "page": 23,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Hattner, J.G., and Wise, S.W., Jr., 1980, Upper",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Hattner, J.G., Wind, F.H., and Wise, S.W., Jr., 1980, The Santonian-Campanian boundary: Comparison of nearshore-offshore calcareous nannofossil assemblages: Cahiers de Micropaleontologie, v. 3, p. 9-38.",
+    "source_id": "ngmdb:40025",
+    "page": 23,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Wind, F.H., and Wise, S.W., Jr., 1980,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Hazel, J.E., and Brouwers, E.M, 1982, Biostratigraphic and chronostratigraphic distribution of ostracodes in the Coniacian-Maastrichtian (Austinian-Navarroan) in the Atlantic and Gulf Coastal Province, in Maddocks, R.F., ed., Texas Ostracoda, Guidebook of excursions and related papers for the Eighth International Symposium on Ostracoda, Houston, University of Houston, p. 166-198.",
+    "source_id": "ngmdb:40025",
+    "page": 23,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Hazel, J.E., and Brouwers, E.M, 1982,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Muthig, M.G., and Colquhoun, D.J., 1988, Formal recognition of two members within the Rhems Formation in Calhoun County, South Carolina: South Carolina Geology, v. 32, nos. 1 and 2, p. 11-19.",
+    "source_id": "ngmdb:40025",
+    "page": 24,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Muthig, M.G., and Colquhoun, D.J., 1988,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Reid, M.S., Aucott, W.R., Lee, R.W., and Renken, R.A., 1986, Hydrologic and geologic analysis of a well in Dorchester County, South Carolina: U.S. Geological Survey Water-Resources Investigations Report 86-4161, 23 p.",
+    "source_id": "ngmdb:40025",
+    "page": 24,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Reid, M.S., Aucott, W.R., Lee. R.W., and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Sohl, N.F., and Owens, J.P., 1991, Cretaceous stratigraphy of the Carolina Coastal Plain, in Horton, J.W., Jr., and Zullo, V.A., The Geology of the Carolinas: Carolina Geological Society Fiftieth Anniversary Volume, Knoxville, University of Tennessee Press, p. 191-220.",
+    "source_id": "ngmdb:40025",
+    "page": 24,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Sohl, N.F., and Owens, J.P., 1991, Cretaceous",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ]
+}

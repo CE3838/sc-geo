@@ -1,0 +1,1921 @@
+{
+ "source_id": "ngmdb:27394",
+ "title": "Preliminary stratigraphic database for the subsurface Tertiary and uppermost Cretaceous sediments of Dorchester County, South Carolina",
+ "citation": "Gohn, G.S., Bybell, P.G., Chirico, R.A., Christopher, R.A., Edwards, L.E., Frederiksen, N.O., Prowell, D.C., Self-Trail, J.M., and Weems, R.E., 2000, Preliminary stratigraphic database for the subsurface Tertiary and uppermost Cretaceous sediments of Dorchester County, South Carolina: U.S. Geological Survey Open-File Report OF-2000-49.",
+ "year": 2000,
+ "scale": null,
+ "publisher": "U.S. Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-10-04T09:49:16+00:00",
+ "updated_at": "2026-10-04T09:50:25+00:00",
+ "reader": "Claude, reading session 2026-10-04",
+ "packets": [
+  "packet-01",
+  "packet-02"
+ ],
+ "blocks_done": [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "8",
+  "9",
+  "10",
+  "11",
+  "16",
+  "17",
+  "18",
+  "21",
+  "22",
+  "27"
+ ],
+ "blocks_total": 15,
+ "complete": true,
+ "notes": "Chapter C (drill-hole data charts). The packet text holds only the correlation chart, references, index map and paleontologic occurrence tables; the field logs and geosummary logs (pages 6-7 etc.) have no text in the packet, so no lithologic intervals could be read. Correlation-chart ages are inferred from chart position (chart text is jumbled). Species occurrence rows were not transcribed. Table depths are sampling depths; the source says to add 5 feet to convert to log depths. Clubhouse Crossroads Tertiary nannofossil zones (page 9) were not assigned to formations because column alignment is ambiguous. No locations are given in the text.\nPacket holds only paleontologic occurrence tables (Clubhouse Crossroads sporomorphs, Pregnall nannofossils, dinocysts and sporomorphs, St. George Cretaceous and Tertiary nannofossils, DOR-St2 nannofossils). Species rows were not transcribed; the Pregnall dinocyst table depths are printed as ## in the text. Zone-to-formation assignments are inferred from header order. Peedee/Donoho Creek stages on page 21 repeat those on page 8 (packet 1) and were not recorded again. Logs on pages 12-15, 19-20, 23-26 have no text in the packets.",
+ "files": [
+  {
+   "url": "https://pubs.usgs.gov/of/2000/of00-049/ChapC/Dorchester.pdf",
+   "via": "pubs_index",
+   "sha256": "7db4a574985d5f9afa90fcdb936fd11840036a65a07ef0682429e56a0f8f8a27",
+   "pages": 27,
+   "first_page": 1
+  }
+ ],
+ "summary": {
+  "stored": 103,
+  "quote_match": {
+   "exact": 103
+  },
+  "verification": {
+   "agree": 78,
+   "unclear": 2
+  },
+  "inferred": 56
+ },
+ "ingests": [
+  {
+   "at": "2026-10-04T09:49:16+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, reading session 2026-10-04",
+   "values": 74,
+   "stored": 74,
+   "exact": 74,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 50,
+   "disagree": 0,
+   "unclear": 1,
+   "review_items": 1
+  },
+  {
+   "at": "2026-10-04T09:50:25+00:00",
+   "packets": [
+    "packet-02"
+   ],
+   "reader": "Claude, reading session 2026-10-04",
+   "values": 29,
+   "stored": 29,
+   "exact": 29,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 28,
+   "disagree": 0,
+   "unclear": 1,
+   "review_items": 1
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "Wando",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Wando, Ten Mile Hill beds, Ladson,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Quat. Pleistocene   Calabrian",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Age read from the unit's position on the correlation chart",
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Ten Mile Hill beds",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Wando, Ten Mile Hill beds, Ladson,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "canonical": "Ten Mile Hill",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "beds",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Ten Mile Hill beds",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Quat. Pleistocene   Calabrian",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Age read from the unit's position on the correlation chart",
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Ladson",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Wando, Ten Mile Hill beds, Ladson,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Quat. Pleistocene   Calabrian",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Age read from the unit's position on the correlation chart",
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Penholoway",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Penholoway, Waccamaw, Sunderland",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Quat. Pleistocene   Calabrian   19-21   Penholoway, Waccamaw, Sunderland",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Age read from the unit's position on the correlation chart",
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Waccamaw",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Penholoway, Waccamaw, Sunderland",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Quat. Pleistocene   Calabrian   19-21   Penholoway, Waccamaw, Sunderland",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Age read from the unit's position on the correlation chart",
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Sunderland",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Penholoway, Waccamaw, Sunderland",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Quat. Pleistocene   Calabrian   19-21   Penholoway, Waccamaw, Sunderland",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Age read from the unit's position on the correlation chart",
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Goose Creek Limestone",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "NN   Goose Creek Limestone",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "canonical": "Goose Creek",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Pliocene",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "NN   Goose Creek Limestone",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Age read from the unit's position on the correlation chart",
+    "normalized": {
+     "younger_ma": 2.58,
+     "older_ma": 5.333,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Rudd Branch beds",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "10   NN9   Rudd Branch beds",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "canonical": "Rudd Branch",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "late Miocene (Tortonian, zone NN9)",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "10   NN9   Rudd Branch beds",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Age read from the unit's position on the correlation chart",
+    "normalized": {
+     "younger_ma": 5.333,
+     "older_ma": 11.63,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "rank": {
+    "value": "beds",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "10   NN9   Rudd Branch beds",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "rank taken from the unit name"
+   }
+  },
+  {
+   "name": {
+    "value": "Marks Head Formation",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "20   NN3   Marks Head Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "canonical": "Marks Head",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "early Miocene (zone NN3)",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "20   NN3   Marks Head Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Age read from the unit's position on the correlation chart",
+    "normalized": {
+     "younger_ma": 15.98,
+     "older_ma": 23.03,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "20   NN3   Marks Head Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "rank taken from the unit name"
+   }
+  },
+  {
+   "name": {
+    "value": "Edisto Formation",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "NN1   Edisto Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "canonical": "Edisto",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "early Miocene (Aquitanian, zone NN1)",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "NN1   Edisto Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Age read from the unit's position on the correlation chart",
+    "normalized": {
+     "younger_ma": 15.98,
+     "older_ma": 23.03,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "NN1   Edisto Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "rank taken from the unit name"
+   }
+  },
+  {
+   "name": {
+    "value": "Chandler Bridge Formation",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Chandler Bridge Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "canonical": "Chandler Bridge",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "late Oligocene",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Chandler Bridge Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Age read from the unit's position on the correlation chart",
+    "normalized": {
+     "younger_ma": 23.03,
+     "older_ma": 27.82,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Chandler Bridge Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "rank taken from the unit name"
+   }
+  },
+  {
+   "name": {
+    "value": "Ashley Formation",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Ashley Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "canonical": "Ashley",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Oligocene",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Ashley Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Age read from the unit's position on the correlation chart",
+    "normalized": {
+     "younger_ma": 23.03,
+     "older_ma": 33.9,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Ashley Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "rank taken from the unit name"
+   }
+  },
+  {
+   "name": {
+    "value": "Drayton limestone beds",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "NP21   Drayton limestone beds",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "canonical": "Drayton",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "late Eocene",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.476,
+    "inferred": true,
+    "locator": null,
+    "quote": "NP21   Drayton limestone beds",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "unclear",
+    "table": true,
+    "note": "Age read from the unit's position on the correlation chart",
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 37.71,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "rank": {
+    "value": "beds",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "NP21   Drayton limestone beds",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "rank taken from the unit name"
+   }
+  },
+  {
+   "name": {
+    "value": "Parkers Ferry Formation",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Priabonian   Parkers Ferry Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "canonical": "Parkers Ferry",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "late Eocene (Priabonian)",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Priabonian   Parkers Ferry Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Age read from the unit's position on the correlation chart",
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 37.71,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Priabonian   Parkers Ferry Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "rank taken from the unit name"
+   }
+  },
+  {
+   "name": {
+    "value": "Harleyville Formation",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "NP18   Harleyville Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "canonical": "Harleyville",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "late Eocene (zone NP18)",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "NP18   Harleyville Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Age read from the unit's position on the correlation chart",
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 37.71,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "NP18   Harleyville Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "rank taken from the unit name"
+   }
+  },
+  {
+   "name": {
+    "value": "Cross Member",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cross Member",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "canonical": "Cross",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Member",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Cross Member",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Santee Limestone",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Santee",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Member shown within the Santee Limestone column of the chart"
+   },
+   "age": {
+    "value": "middle Eocene",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Cross Member",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Age read from the unit's position on the correlation chart",
+    "normalized": {
+     "younger_ma": 37.71,
+     "older_ma": 47.8,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Moultrie Member",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Moultrie Member",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "canonical": "Moultrie",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Member",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Moultrie Member",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Santee Limestone",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Santee",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Member shown within the Santee Limestone column of the chart"
+   },
+   "age": {
+    "value": "middle Eocene",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Moultrie Member",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Age read from the unit's position on the correlation chart",
+    "normalized": {
+     "younger_ma": 37.71,
+     "older_ma": 47.8,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Fishburne Formation",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "NP10  Fishburne Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "canonical": "Fishburne",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "early Eocene (zone NP10)",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "NP10  Fishburne Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Age read from the unit's position on the correlation chart",
+    "normalized": {
+     "younger_ma": 47.8,
+     "older_ma": 56.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "NP10  Fishburne Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "rank taken from the unit name"
+   }
+  },
+  {
+   "name": {
+    "value": "Williamsburg Formation",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Williamsburg",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "canonical": "Williamsburg",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "late Paleocene",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Williamsburg",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Age read from the unit's position on the correlation chart",
+    "normalized": {
+     "younger_ma": 56.0,
+     "older_ma": 59.333333333333336,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Rhems Formation",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "NP1   Rhems Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "canonical": "Rhems",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "early Paleocene (Danian)",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "NP1   Rhems Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Age read from the unit's position on the correlation chart",
+    "normalized": {
+     "younger_ma": 62.666666666666664,
+     "older_ma": 66.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:27394",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "NP1   Rhems Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "rank taken from the unit name"
+   }
+  },
+  {
+   "name": {
+    "value": "Peedee",
+    "source_id": "ngmdb:27394",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Peedee",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Maastrichtian",
+    "source_id": "ngmdb:27394",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Maastrichtian",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Stage column of the Clubhouse Crossroads core Cretaceous nannofossil table",
+    "normalized": {
+     "younger_ma": 66.0,
+     "older_ma": 72.1,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "fossils": {
+    "value": "calcareous nannofossil zones CC26a and CC25b (Clubhouse Crossroads core, sample depths 805-864 ft)",
+    "source_id": "ngmdb:27394",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "CC26a   805 R   F   F",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "zone labels of the samples in the Peedee interval of the table"
+   }
+  },
+  {
+   "name": {
+    "value": "Donoho Creek",
+    "source_id": "ngmdb:27394",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Donoho Creek",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Campanian",
+    "source_id": "ngmdb:27394",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Campanian",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Stage column of the Clubhouse Crossroads core Cretaceous nannofossil table",
+    "normalized": {
+     "younger_ma": 72.1,
+     "older_ma": 83.6,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "fossils": {
+    "value": "calcareous nannofossil zones CC22c and CC22a/b (Clubhouse Crossroads core, sample depths 868-975.5 ft)",
+    "source_id": "ngmdb:27394",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "CC22a/b 929",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "zone labels of the samples in the Donoho Creek interval of the table"
+   }
+  },
+  {
+   "name": {
+    "value": "Rhems Formation",
+    "source_id": "ngmdb:27394",
+    "page": 9,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Samples 796.6, 796, and 795 are in the Rhems Formation ABOVE the Peedee/Rhems",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Rhems",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "contacts": {
+    "value": "Rhems Formation lies above the Peedee/Rhems contact; samples 796.6, 796 and 795 (sample depths, ft) are in the Rhems in the Clubhouse Crossroads core",
+    "source_id": "ngmdb:27394",
+    "page": 9,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Samples 796.6, 796, and 795 are in the Rhems Formation ABOVE the Peedee/Rhems",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Ashley",
+    "source_id": "ngmdb:27394",
+    "page": 18,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Formation   Ashley",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Upper Oligocene",
+    "source_id": "ngmdb:27394",
+    "page": 18,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Subseries Upper Oligocene",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 23.03,
+     "older_ma": 27.82,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "fossils": {
+    "value": "sporomorphs in the Pregnall core (samples 33.6-33.8 and 78.4-78.8 ft): Betula (birch), Carya (hickory), Eleagnaceae (silverberry), Liquidambar (sweet-gum), Momipites spackmanianus group, Pinus (pine) haploxylon type, Quercus (oak), Tetracolporopollenites megadolium, Tilia (basswood), Ulmus (elm), several species of fern spores",
+    "source_id": "ngmdb:27394",
+    "page": 18,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Pregnall Core (DOR-208) -- Sporomorphs",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   }
+  },
+  {
+   "name": {
+    "value": "Ashley",
+    "source_id": "ngmdb:27394",
+    "page": 27,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Formation   Santee Limestone   H-P   Ash-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "fossils": {
+    "value": "calcareous nannofossil zone NP 24-25 (DOR-St2, sample 94-84 ft)",
+    "source_id": "ngmdb:27394",
+    "page": 27,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "94-84 NP 24-25",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "zone assigned to the formation by matching the order of zone labels to the formation header; column alignment in the text is approximate"
+   }
+  },
+  {
+   "name": {
+    "value": "Harleyville-Parkers Ferry Formations",
+    "source_id": "ngmdb:27394",
+    "page": 27,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "H-P, Harleyville-Parkers Ferry Formations",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "canonical": "harleyville parkers ferry",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Upper Eocene",
+    "source_id": "ngmdb:27394",
+    "page": 27,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Subseries   Middle   U   L-U",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "U (upper) subseries column of the Eocene in the DOR-St2 table header",
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 37.71,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Cross",
+    "source_id": "ngmdb:27394",
+    "page": 27,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Member   Cross   ley",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "group": {
+    "value": "Santee Limestone",
+    "source_id": "ngmdb:27394",
+    "page": 27,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Formation   Santee Limestone   H-P   Ash-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Member column under the Santee Limestone in the table header"
+   },
+   "age": {
+    "value": "Middle Eocene",
+    "source_id": "ngmdb:27394",
+    "page": 27,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Subseries   Middle   U   L-U",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Middle Eocene subseries column of the table header",
+    "normalized": {
+     "younger_ma": 37.71,
+     "older_ma": 47.8,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "fossils": {
+    "value": "calcareous nannofossil zones NP 16 and NP 17 (DOR-St2)",
+    "source_id": "ngmdb:27394",
+    "page": 27,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "NP 16?",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "zone assigned to the formation by matching the order of zone labels to the formation header; column alignment in the text is approximate"
+   }
+  },
+  {
+   "name": {
+    "value": "Moultrie",
+    "source_id": "ngmdb:27394",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Member   Chicora   Moultrie   Cross   Harley-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "group": {
+    "value": "Santee",
+    "source_id": "ngmdb:27394",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Formation   Williamsburg   Santee   ville   Ashley",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "fossils": {
+    "value": "calcareous nannofossil zone NP 16 (Pregnall core)",
+    "source_id": "ngmdb:27394",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "NP 16 230.9",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "zone assigned to the formation by matching the order of zone labels to the formation header; column alignment in the text is approximate"
+   }
+  },
+  {
+   "name": {
+    "value": "Cross",
+    "source_id": "ngmdb:27394",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Member   Chicora   Moultrie   Cross   Harley-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "group": {
+    "value": "Santee",
+    "source_id": "ngmdb:27394",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Formation   Williamsburg   Santee   ville   Ashley",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "fossils": {
+    "value": "calcareous nannofossil zone NP 17 (Pregnall core)",
+    "source_id": "ngmdb:27394",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "NP 17 186.5",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "zone assigned to the formation by matching the order of zone labels to the formation header; column alignment in the text is approximate"
+   }
+  },
+  {
+   "name": {
+    "value": "Harleyville",
+    "source_id": "ngmdb:27394",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Formation   Williamsburg   Santee   ville   Ashley",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "name split across lines as Harley- / ville in the header"
+   },
+   "fossils": {
+    "value": "calcareous nannofossil zone NP 18 (Pregnall core)",
+    "source_id": "ngmdb:27394",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "NP 18 123.3",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "zone assigned to the formation by matching the order of zone labels to the formation header; column alignment in the text is approximate"
+   }
+  },
+  {
+   "name": {
+    "value": "Ashley",
+    "source_id": "ngmdb:27394",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Formation   Williamsburg   Santee   ville   Ashley",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Lower-Upper Oligocene",
+    "source_id": "ngmdb:27394",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Subseries   Upper   Middle   Upper   Lower-Upper",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "last subseries column of the header, under Oligocene",
+    "normalized": {
+     "younger_ma": 23.03,
+     "older_ma": 27.82,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "fossils": {
+    "value": "calcareous nannofossil zone NP 24 (Pregnall core)",
+    "source_id": "ngmdb:27394",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "NP 24",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "zone assigned to the formation by matching the order of zone labels to the formation header; column alignment in the text is approximate"
+   }
+  },
+  {
+   "name": {
+    "value": "Chicora",
+    "source_id": "ngmdb:27394",
+    "page": 22,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Member   Chicora?   Chicora   M. C.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "group": {
+    "value": "Williamsburg",
+    "source_id": "ngmdb:27394",
+    "page": 22,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Formation   Williamsburg   Santee",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Upper Paleocene",
+    "source_id": "ngmdb:27394",
+    "page": 22,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Subseries   Upper   Middle",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Upper Paleocene subseries column of the table header",
+    "normalized": {
+     "younger_ma": 56.0,
+     "older_ma": 59.333333333333336,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "fossils": {
+    "value": "calcareous nannofossil zones NP 5 upper, NP 8 and NP 9 (St. George core; uppermost NP 5 samples are queried Chicora)",
+    "source_id": "ngmdb:27394",
+    "page": 22,
+    "extraction_method": "llm",
+    "confidence": 0.476,
+    "inferred": true,
+    "locator": null,
+    "quote": "NP 9 320.7",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "unclear",
+    "table": true,
+    "note": "zone assigned to the formation by matching the order of zone labels to the formation header; column alignment in the text is approximate"
+   }
+  },
+  {
+   "name": {
+    "value": "Moultrie and Cross Members of the Santee",
+    "source_id": "ngmdb:27394",
+    "page": 22,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "M.= Moultrie, C.=Cross",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "canonical": "moultrie and cross",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Middle Eocene",
+    "source_id": "ngmdb:27394",
+    "page": 22,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Subseries   Upper   Middle",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 37.71,
+     "older_ma": 47.8,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "fossils": {
+    "value": "calcareous nannofossil zone NP 16/17 (St. George core)",
+    "source_id": "ngmdb:27394",
+    "page": 22,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "NP 16/17",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "zone assigned to the formation by matching the order of zone labels to the formation header; column alignment in the text is approximate"
+   }
+  }
+ ],
+ "observations": [
+  {
+   "kind": "core",
+   "label": {
+    "value": "USGS-Clubhouse Crossroads No. 1 (DOR-037)",
+    "source_id": "ngmdb:27394",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "USGS-Clubhouse Crossroads No. 1 (DOR-037)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "Summerville water well (DOR-052)",
+    "source_id": "ngmdb:27394",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Summerville water well (DOR-052)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "kind": "core",
+   "label": {
+    "value": "USGS-Pregnall No. 1 (DOR-208)",
+    "source_id": "ngmdb:27394",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "USGS-Pregnall No. 1 (DOR-208)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "kind": "core",
+   "label": {
+    "value": "USGS-St. George No. 1 (DOR-211)",
+    "source_id": "ngmdb:27394",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "USGS-St. George No. 1 (DOR-211)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "USGS-Stallsville No. 1 (DOR-st1)",
+    "source_id": "ngmdb:27394",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "USGS-Stallsville No. 1 (DOR-st1)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "kind": "core",
+   "label": {
+    "value": "USGS-Stallsville No. 2 (DOR-st2)",
+    "source_id": "ngmdb:27394",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "USGS-Stallsville No. 2 (DOR-st2)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ],
+ "structures": [],
+ "groundwater": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Berggren, W.A., Kent, D.V., Swisher, C.C., III, and Aubry, M.-P., 1995, A revised Cenozoic geochronology and chronostratigraphy: SEPM Special Publication No. 54, p. 129-212.",
+    "source_id": "ngmdb:27394",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Berggren, W.A., Kent, D.V., Swisher, C.C., III, and Aubry, M.-P., 1995, A revised",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Habib, Daniel, and Miller, J.A., 1989, Dinoflagellate species and organic facies evidence of marine transgression and regression in the Atlantic Coastal Plain: Palaeogeography, Palaeoclimatology, Palaeoecology, v. 74, p. 23-47.",
+    "source_id": "ngmdb:27394",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Habib, Daniel, and Miller, J.A., 1989, Dinoflagellate species and organic facies evidence",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Martini, Erlend, 1971, Standard Tertiary and Quaternary calcareous nannoplankton zonation: Planktonic Conference, 2d, Rome 1969, Proceedings, p. 739-785.",
+    "source_id": "ngmdb:27394",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Martini, Erlend, 1971, Standard Tertiary and Quaternary calcareous nannoplankton",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Perch-Nielsen, Katharina, 1985, Mesozoic calcareous nannofossils, in Bolli, H.M., Saunders, J.B., and Perch-Nielsen, Katharina, eds., Plankton Stratigraphy: Cambridge University Press, p. 329-426.",
+    "source_id": "ngmdb:27394",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Perch-Nielsen, Katharina, 1985, Mesozoic calcareous nannofossils",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Shipboard Scientific Party, 1998, Explanatory notes, Proceedings of the Ocean Drilling Program, Part A: Initial Reports, 171B, p. 11-44.",
+    "source_id": "ngmdb:27394",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Shipboard Scientific Party, 1998, Explanatory notes",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ]
+}

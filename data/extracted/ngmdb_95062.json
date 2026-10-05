@@ -1,0 +1,244 @@
+{
+ "source_id": "ngmdb:95062",
+ "title": "Drilling a deep geologic test well at Hilton Head Island, South Carolina",
+ "citation": "Schultz, A.P., and Seefelt, E.L., 2011, Drilling a deep geologic test well at Hilton Head Island, South Carolina: U.S. Geological Survey Fact Sheet FS-2011-3032, map scale 1:12,000,000.",
+ "year": 2011,
+ "scale": 12000000,
+ "publisher": "U.S. Geological Survey",
+ "kind": "publication",
+ "schema_version": 1,
+ "extracted_at": "2026-10-05T00:46:57+00:00",
+ "updated_at": "2026-10-05T00:46:57+00:00",
+ "reader": "Claude, reading session 2026-10-05",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1",
+  "2",
+  "3",
+  "4"
+ ],
+ "blocks_total": 4,
+ "complete": true,
+ "notes": "Four-page fact sheet announcing a planned test well; no logs or unit descriptions. Page 2 is a garbled cross-section figure (text layer of overlapping labels) and was skipped. Floridan thickness/top values are stated for the Savannah, Ga., area, not South Carolina. The Pineora, Ga. core depths (fig. 4) are outside SC and not recorded.",
+ "files": [
+  {
+   "url": "https://pubs.usgs.gov/fs/2011/3032/pdf/FS2011-3032.pdf",
+   "via": "pubs_index",
+   "sha256": "a3d0fdc16762d2ab824d1275e3f9ba988a63fa3c21ee2874a252e002f08afc8f",
+   "pages": 4,
+   "first_page": 1
+  }
+ ],
+ "summary": {
+  "stored": 12,
+  "quote_match": {
+   "exact": 12
+  },
+  "verification": {
+   "agree": 2
+  },
+  "inferred": 0
+ },
+ "ingests": [
+  {
+   "at": "2026-10-05T00:46:57+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, reading session 2026-10-05",
+   "values": 12,
+   "stored": 12,
+   "exact": 12,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 2,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [],
+ "observations": [
+  {
+   "kind": "core",
+   "label": {
+    "value": "Hilton Head test well",
+    "source_id": "ngmdb:95062",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Hilton Head test well will take about two",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Hilton Head Island, S.C.",
+    "source_id": "ngmdb:95062",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "logic test well at Hilton Head Island, S.C.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "total_depth": {
+    "value": "about 1,000 feet deep (planned)",
+    "source_id": "ngmdb:95062",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "When completed, the well will be about 1,000 feet",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 1000.0,
+     "max_ft": 1000.0,
+     "unit": "feet",
+     "approximate": true
+    }
+   },
+   "date": {
+    "value": "scheduled mid-March to early May 2011",
+    "source_id": "ngmdb:95062",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "is scheduled to run between mid-March and early May",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": "2011-05"
+   }
+  }
+ ],
+ "structures": [],
+ "groundwater": [
+  {
+   "aquifer": {
+    "value": "Floridan aquifer",
+    "source_id": "ngmdb:95062",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "about the regional-scale Floridan aquifer, an important",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "role": {
+    "value": "aquifer",
+    "source_id": "ngmdb:95062",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "source of groundwater in the Hilton Head area",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Savannah, Ga., area",
+    "source_id": "ngmdb:95062",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "In the Savannah, Ga., area,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "description": {
+    "value": "the Floridan is about 400 feet thick and the top is about 200 feet below the surface",
+    "source_id": "ngmdb:95062",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the Floridan is about 400 feet thick and the top is about 200 feet",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Floridan aquifer",
+    "source_id": "ngmdb:95062",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Floridan aquifer,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "location": {
+    "value": "along the coast",
+    "source_id": "ngmdb:95062",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "this resource has caused some wells along the coast to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "heavy use has caused some coastal wells to experience saltwater intrusion",
+    "source_id": "ngmdb:95062",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "experience saltwater intrusion, rendering them unsuit-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ],
+ "references": [
+  {
+   "citation": {
+    "value": "Falls, W.F., Ransom, Camille, Landmeyer, J.E., Reuber, E.J., and Edwards, L.E., 2005, Hydrogeology, water quality, and saltwater intrusion in the Upper Floridan aquifer in the offshore area near Hilton Head Island, South Carolina, and Tybee Island, Georgia, 1999-2002: U.S. Geological Survey Scientific Investigations Report 2005-5134, 48 p.",
+    "source_id": "ngmdb:95062",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "and saltwater intrusion in the Upper Floridan aquifer in",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ]
+}

@@ -1,5 +1,148 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 0,
- "items": []
+ "count": 11,
+ "items": [
+  {
+   "source_id": "ngmdb:27394",
+   "path": "units[12].age",
+   "problem": "verify_unclear",
+   "value": "late Eocene",
+   "page": 3,
+   "quote": "NP21   Drayton limestone beds",
+   "added_at": "2026-10-04T09:49:16+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "Chart places NP21 next to the Priabonian/Rupelian boundary; the beds could be latest Eocene or earliest Oligocene"
+   }
+  },
+  {
+   "source_id": "ngmdb:27394",
+   "path": "units[8].fossils",
+   "problem": "verify_unclear",
+   "value": "calcareous nannofossil zones NP 5 upper, NP 8 and NP 9 (St. George core; uppermost NP 5 samples are queried Chicora)",
+   "page": 22,
+   "quote": "NP 9 320.7",
+   "added_at": "2026-10-04T09:50:25+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "Which NP 5 upper samples fall under the queried Chicora? column cannot be told from the text; NP 5 upper samples are the deepest (425.8-506.5 ft)"
+   }
+  },
+  {
+   "source_id": "ngmdb:16481",
+   "path": "observations[41].intervals[4].top",
+   "problem": "verify_unclear",
+   "value": "15",
+   "page": 56,
+   "quote": "15-30 Calcarenite, fine-grained, olive-green",
+   "added_at": "2026-10-05T01:00:16+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "printed 15-30 but overlying Goose Creek is 15-25; probably a misprint for 25"
+   }
+  },
+  {
+   "source_id": "ngmdb:10296",
+   "path": "observations[0].total_depth",
+   "problem": "verify_unclear",
+   "value": "2579 ft",
+   "page": 2,
+   "quote": "Total depth = 2579 ft",
+   "added_at": "2026-10-05T05:48:46+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "page shows Total depth = 2579 ft on a cross section; which hole it belongs to is not legible in OCR"
+   }
+  },
+  {
+   "source_id": "ngmdb:5893",
+   "path": "observations[5].location",
+   "problem": "inexact_quote",
+   "value": "Mount Pleasant",
+   "page": 8,
+   "quote": "surface. The potentiometric surface at one of the Mount Pleasant",
+   "added_at": "2026-10-05T05:50:16+00:00",
+   "match": "fuzzy"
+  },
+  {
+   "source_id": "ngmdb:7459",
+   "path": "units[4].map_symbol",
+   "problem": "verify_unclear",
+   "value": "Qes",
+   "page": 1,
+   "quote": "Unit Qes consists of granular or shelly, coarse- to medium-grained,",
+   "added_at": "2026-10-05T05:55:17+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR shows Qes and Qces; the printed symbol may be Qcs"
+   }
+  },
+  {
+   "source_id": "ngmdb:7662",
+   "path": "observations[4].intervals[0].bottom",
+   "problem": "verify_disagree",
+   "value": "S",
+   "page": 8,
+   "quote": "PAH-9   0-S   1.27   Ilmenite, epidote, sillimanite, staurolite, amphibole, tourmaline, zircon, rutile",
+   "added_at": "2026-10-05T05:56:31+00:00",
+   "verify": {
+    "verdict": "disagree",
+    "note": "text layer prints 0-S; the plate copy of table 4 (p. 11) reads 0-5, so the bottom is 5",
+    "value": "5"
+   }
+  },
+  {
+   "source_id": "ngmdb:20738",
+   "path": "units[14].depositional_environment",
+   "problem": "verify_disagree",
+   "value": "marine; Duplin marl near the present coast was deposited during a regression of the sea",
+   "page": 40,
+   "quote": "showing that Duplin marl near the present coast was deposited during a regression of the sea",
+   "added_at": "2026-10-05T05:49:47+00:00",
+   "verify": {
+    "verdict": "disagree",
+    "value": "Duplin marl near the present coast was deposited during a regression of the sea",
+    "note": "page 40 does not say 'marine' here; that word was added"
+   }
+  },
+  {
+   "source_id": "ngmdb:20738",
+   "path": "observations[4].intervals[9].description",
+   "problem": "verify_unclear",
+   "value": "Marl, olive; phosphate grains in upper part; shells; upper foot soft; 8½ ft penetrated",
+   "page": 48,
+   "quote": "10. Marl, olive (5 Y 4/3); phosphate grains in upper part; shells;",
+   "added_at": "2026-10-05T05:49:47+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text reads '8% ft penetrated', probably 8 1/2 ft garbled"
+   }
+  },
+  {
+   "source_id": "ngmdb:4756",
+   "path": "observations[21].location",
+   "problem": "verify_unclear",
+   "value": "33°H'40\"N. 79°31'55\" W. (Honey Hill quadrangle)",
+   "page": 15,
+   "quote": "33°H'40\"N.   0   92   8   1   0   .005   3.2   2.4   2   32   20   8   P   5   3   7   2   2   2 79°31'55\" W.",
+   "added_at": "2026-10-05T11:00:47+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "latitude minutes garbled in text layer (33°H'40\")"
+   }
+  },
+  {
+   "source_id": "ngmdb:4756",
+   "path": "observations[22].intervals[3].description",
+   "problem": "verify_unclear",
+   "value": "heavy minerals (sp gr >2.85) 27 percent (as printed)",
+   "page": 21,
+   "quote": "4.6-6.1   27",
+   "added_at": "2026-10-05T11:00:47+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "printed 27 percent, out of trend with 3.7, 2.0, .9 above; decimal point possibly lost"
+   }
+  }
+ ]
 }

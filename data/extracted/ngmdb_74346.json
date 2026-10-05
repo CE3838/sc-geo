@@ -1,0 +1,745 @@
+{
+ "source_id": "ngmdb:74346",
+ "title": "Calcareous nannofossils from Pliocene and Pleistocene deposits in South Carolina",
+ "citation": "Bybell, L.M., 1990, Calcareous nannofossils from Pliocene and Pleistocene deposits in South Carolina: U.S. Geological Survey Professional Paper 1367-B, map scale 1:2,500,000.",
+ "year": 1990,
+ "scale": 2500000,
+ "publisher": "U.S. Geological Survey",
+ "kind": "publication",
+ "schema_version": 1,
+ "extracted_at": "2026-10-04T20:38:59+00:00",
+ "updated_at": "2026-10-04T20:39:40+00:00",
+ "reader": "Claude, reading session 2026-10-04",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "61",
+  "65",
+  "66",
+  "67",
+  "68",
+  "69",
+  "70",
+  "71",
+  "72",
+  "73",
+  "75",
+  "76",
+  "77"
+ ],
+ "blocks_total": 13,
+ "complete": true,
+ "notes": "Nannofossil age study. Ages are taken from the Conclusions (p. 72) or unit sections. Figure 3 (p. 70, sample occurrence chart) is garbled in the text layer and was not read. References: only those about the Atlantic Coastal Plain / South Carolina recorded; deep-sea and general nannofossil references skipped.\nNannofossil age study. Ages are taken from the Conclusions (p. 72) or unit sections. Figure 3 (p. 70, sample occurrence chart) is garbled in the text layer and was not read. References: only those about the Atlantic Coastal Plain / South Carolina recorded; deep-sea and general nannofossil references skipped.",
+ "files": [
+  {
+   "url": "https://pubs.usgs.gov/pp/1367/report.pdf",
+   "via": "pubs_usgs",
+   "sha256": "f123bf5e3ad9be7126706d0b91c435f59642a61b1f2bbe83ccd8dbb885f2bf92",
+   "pages": 315,
+   "first_page": 1
+  }
+ ],
+ "summary": {
+  "stored": 40,
+  "quote_match": {
+   "exact": 40
+  },
+  "verification": {
+   "agree": 4
+  },
+  "inferred": 1
+ },
+ "ingests": [
+  {
+   "at": "2026-10-04T20:38:59+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, reading session 2026-10-04",
+   "values": 40,
+   "stored": 40,
+   "exact": 40,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 4,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-10-04T20:39:40+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, reading session 2026-10-04",
+   "values": 40,
+   "stored": 40,
+   "exact": 40,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 4,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "Raysor Formation and associated beds",
+    "source_id": "ngmdb:74346",
+    "page": 72,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "tion and associated beds are early Pliocene in age in",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "raysor formation and associated",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "early Pliocene, Zones NN 12-NN 15, 5.2 to 3.9 Ma",
+    "source_id": "ngmdb:74346",
+    "page": 72,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Zones NN 12-NN 15, 5.2 to 3.9 Ma",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 3.6,
+     "older_ma": 5.333,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "fossils": {
+    "value": "Cyclococcolithus macintyrei and Helicosphaera sellii; Pseudoemiliania lacunosa not observed",
+    "source_id": "ngmdb:74346",
+    "page": 69,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "lacunosa has not been observed",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Givhans beds",
+    "source_id": "ngmdb:74346",
+    "page": 69,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "PR19 assigned to the Givhans beds (localities 63 and 64 in",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "Givhans",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "beds",
+    "source_id": "ngmdb:74346",
+    "page": 69,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "PR19 assigned to the Givhans beds (localities 63 and 64 in",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "rank taken from the unit name"
+   }
+  },
+  {
+   "name": {
+    "value": "Goose Creek Limestone",
+    "source_id": "ngmdb:74346",
+    "page": 71,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Goose Creek Limestone age is between 3.9 and 3.2 Ma or",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Goose Creek",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "between 3.9 and 3.2 Ma or Zone NN 15 to mid-Zone NN 16",
+    "source_id": "ngmdb:74346",
+    "page": 71,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Goose Creek Limestone age is between 3.9 and 3.2 Ma or",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "fossils": {
+    "value": "Pseudoemiliania lacunosa and a few specimens of Sphenolithus abies",
+    "source_id": "ngmdb:74346",
+    "page": 69,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "lacunosa in this unit, as well as a few specimens of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Bear Bluff Formation",
+    "source_id": "ngmdb:74346",
+    "page": 72,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Bear Bluff Formation is a late Pliocene unit occur-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Bear Bluff",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "late Pliocene, Zones NN 16-NN 18, 3.0 to 1.75 Ma",
+    "source_id": "ngmdb:74346",
+    "page": 72,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "ring somewhere within Zones NN 16-NN 18, 3.0 to 1.75",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 2.58,
+     "older_ma": 3.6,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "unnamed sediments (corehole LB179)",
+    "source_id": "ngmdb:74346",
+    "page": 71,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "sediments to 3.9 to 3.0 Ma or from Zone NN 15 to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "3.9 to 3.0 Ma, Zone NN 15 to mid-Zone NN 16",
+    "source_id": "ngmdb:74346",
+    "page": 71,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "sediments to 3.9 to 3.0 Ma or from Zone NN 15 to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Q6",
+    "source_id": "ngmdb:74346",
+    "page": 71,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "stratigraphic unit Q6 of McCartan and others (this vol-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "Waccamaw(?) Formation",
+    "source_id": "ngmdb:74346",
+    "page": 72,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Ma. The Waccamaw(?) Formation occurs in early Pleis-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Waccamaw",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "early Pleistocene, Zones NN 19a and (or) NN 19b, 1.7 to 1.2 Ma",
+    "source_id": "ngmdb:74346",
+    "page": 72,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "tocene Zones NN 19a and (or) NN 19b, 1.7 to 1.2 Ma",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.774,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "fossils": {
+    "value": "Gephyrocapsa oceanica, Cyclococcolithus macintyrei, Helicosphaera sellii, and Pseudoemiliania lacunosa (samples NCSC66 and 78TC18)",
+    "source_id": "ngmdb:74346",
+    "page": 71,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "NCSC66 and 78TC18 from locality 75 contain Gephyro-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Q5",
+    "source_id": "ngmdb:74346",
+    "page": 66,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Penholoway Formation (unit Q5)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "Penholoway Formation",
+    "source_id": "ngmdb:74346",
+    "page": 72,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Penholoway Formation is in Pleistocene Zone NN 19d,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Penholoway",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Pleistocene, Zone NN 19d, 925 to 700 ka",
+    "source_id": "ngmdb:74346",
+    "page": 71,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "to 700 ka for the Penholoway.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "fossils": {
+    "value": "Gephyrocapsa oceanica and Gephyrocapsa small species; Pseudoemiliania lacunosa in sample XSU1",
+    "source_id": "ngmdb:74346",
+    "page": 71,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "basis of the presence of Gephyrocapsa oceanica and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Q4",
+    "source_id": "ngmdb:74346",
+    "page": 66,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "patch Formation (unit Q4), Ten Mile Hill beds (unit Q3),",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "Canepatch Formation",
+    "source_id": "ngmdb:74346",
+    "page": 71,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "CANEPATCH FORMATION (UNIT Q4)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Canepatch",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Pleistocene, about 450 ka, Zone NN 20",
+    "source_id": "ngmdb:74346",
+    "page": 71,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "about 450 ka or in Zone NN 20",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "fossils": {
+    "value": "Pseudoemiliania lacunosa and Emiliania huxleyi absent",
+    "source_id": "ngmdb:74346",
+    "page": 71,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "lacunosa and Emiliania huxleyi are absent from this",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Q3",
+    "source_id": "ngmdb:74346",
+    "page": 66,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "patch Formation (unit Q4), Ten Mile Hill beds (unit Q3),",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "name": {
+    "value": "Ten Mile Hill beds",
+    "source_id": "ngmdb:74346",
+    "page": 72,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "TEN MILE HILL BEDS (OLDER PART OF UNIT Q3)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Ten Mile Hill",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Pleistocene, Zones NN 20-NN 21a, 240 to 200 ka",
+    "source_id": "ngmdb:74346",
+    "page": 72,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "beds are also of Pleistocene age in Zones NN 20-NN 21a,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Q2",
+    "source_id": "ngmdb:74346",
+    "page": 66,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "and Wando Formation (unit Q2)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "Wando Formation",
+    "source_id": "ngmdb:74346",
+    "page": 72,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "WANDO FORMATION (UNIT Q2)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "Wando",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "late Pleistocene, Zones NN 20-NN 21a, 129 to 87 ka",
+    "source_id": "ngmdb:74346",
+    "page": 72,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "deposited in the late Pleistocene in Zones NN 20-NN 21a",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 0.129,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  }
+ ],
+ "observations": [
+  {
+   "kind": "core",
+   "label": {
+    "value": "LB179",
+    "source_id": "ngmdb:74346",
+    "page": 69,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "96) near Darlington and corehole LB173 (locality 80)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "near Darlington (locality 96)",
+    "source_id": "ngmdb:74346",
+    "page": 69,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "96) near Darlington and corehole LB173 (locality 80)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "kind": "core",
+   "label": {
+    "value": "LB173",
+    "source_id": "ngmdb:74346",
+    "page": 69,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "96) near Darlington and corehole LB173 (locality 80)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "southwest of Florence (locality 80)",
+    "source_id": "ngmdb:74346",
+    "page": 69,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "southwest of Florence. These three units cannot be",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ],
+ "structures": [],
+ "groundwater": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Akers, W.H., and Koeppel, P.E., 1973, Age of some Neogene formations, Atlantic Coastal Plains, United States and Mexico",
+    "source_id": "ngmdb:74346",
+    "page": 72,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Akers, W.H., and Koeppel, P.E., 1973, Age of some Neogene forma-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Cronin, T.M., Bybell, L.M., Poore, R.Z., Blackwelder, B.W., Liddicoat, J.C., and Hazel, J.E., 1984, Age and correlation of emerged Pliocene and Pleistocene deposits, U.S. Atlantic Coastal Plain: Palaeogeography, Palaeoclimatology, Palaeoecology, v. 47",
+    "source_id": "ngmdb:74346",
+    "page": 72,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cronin, T.M., Bybell, L.M., Poore, R.Z., Blackwelder, B.W., Liddi-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Liddicoat, J.C., McCartan, Lucy, Weems, R.E., and Lemon, E.M., Jr., 1981, Paleomagnetic investigation of Pliocene and Pleistocene sediments in the Charleston, South Carolina, area [abs.]",
+    "source_id": "ngmdb:74346",
+    "page": 72,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Liddicoat, J.C., McCartan, Lucy, Weems, R.E., and Lemon, E.M.,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Szabo, B.J., 1985, Uranium-series dating of fossil corals from marine sediments of southeastern United States Atlantic Coastal Plain: Geological Society of America Bulletin, v. 96, no. 3",
+    "source_id": "ngmdb:74346",
+    "page": 73,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Szabo, B.J., 1985, Uranium-series dating of fossil corals from marine",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Weems, R.E., and Lemon, E.M., Jr., 1984, Geologic map of the Stallsville quadrangle, Dorchester and Charleston Counties, South Carolina: U.S. Geological Survey Geologic Quadrangle Map GQ-1581, scale 1:24,000",
+    "source_id": "ngmdb:74346",
+    "page": 73,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Weems, R.E., and Lemon, E.M., Jr., 1984, Geologic map of the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Weems, R.E., Lemon, E.M., Jr., McCartan, Lucy, Bybell, L.M., and Sanders, A.E., 1982, Recognition and formalization of the Pliocene \"Goose Creek phase\" in the Charleston, South Carolina, area: U.S. Geological Survey Bulletin 1529-H, p. H137-H148",
+    "source_id": "ngmdb:74346",
+    "page": 73,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Weems, R.E., Lemon, E.M., Jr., McCartan, Lucy, Bybell, L.M., and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ]
+}
