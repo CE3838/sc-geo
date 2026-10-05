@@ -1,0 +1,115 @@
+{
+ "source_id": "ngmdb:118515",
+ "title": "U.S. Geological Survey global seabed mineral resources",
+ "citation": "U.S. Geological Survey, 2025, U.S. Geological Survey global seabed mineral resources: U.S. Geological Survey Fact Sheet FS-2025-3017, map scale 1:103,450,000.",
+ "year": 2025,
+ "scale": 103450000,
+ "publisher": "U.S. Geological Survey",
+ "kind": "publication",
+ "schema_version": 1,
+ "extracted_at": "2026-10-05T21:25:23+00:00",
+ "updated_at": "2026-10-05T21:25:23+00:00",
+ "reader": "Claude, scheduled Claude Code session 2026-10-05",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1",
+  "2",
+  "3",
+  "4"
+ ],
+ "blocks_total": 4,
+ "complete": true,
+ "notes": "Four-page global fact sheet on seabed mineral resources (all pages have pdf_text; no OCR needed). It describes no named stratigraphic units, borings, wells, structures or aquifers in South Carolina; its only South Carolina content is a mention of ecosystem work on the Blake Plateau off South Carolina (page 1). Seabed mineral types in table 1 (polymetallic nodules, sulfides, crusts, phosphorite, heavy mineral sands) are commodity classes, not map units, and were not recorded as units. Only references relevant to South Carolina offshore or the map's prospective regions were recorded; general references (Burton 2022; Gartman and others 2022 on Alaska; Hein and others 2005 on the Pacific; Pearsall 2022 on Escanaba Trough; U.S. Department of State 2023; USGS 2022a critical minerals list; USGS 2025 extended continental shelf) were skipped. Reference entries are two-column on page 4; citations were read across the interleaved lines.",
+ "files": [
+  {
+   "url": "https://pubs.usgs.gov/fs/2025/3017/fs20253017.pdf",
+   "via": "pubs_usgs",
+   "sha256": "881d2703e3e0d5425789859a9403175e8cceed44093167480bcb3c820c46439f",
+   "pages": 4,
+   "first_page": 1
+  }
+ ],
+ "summary": {
+  "stored": 3,
+  "quote_match": {
+   "exact": 3
+  },
+  "verification": {
+   "agree": 1
+  },
+  "inferred": 0
+ },
+ "ingests": [
+  {
+   "at": "2026-10-05T21:25:23+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-05",
+   "values": 3,
+   "stored": 3,
+   "exact": 3,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 1,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [],
+ "observations": [],
+ "structures": [],
+ "groundwater": [],
+ "references": [
+  {
+   "citation": {
+    "value": "U.S. Geological Survey [USGS], 2024, Environmental impacts following the 1970 testing of seabed mining equipment on the Blake Plateau—Quantification of benthic communities across disturbance gradients: U.S. Geological Survey web page, accessed March 12, 2025, at https://www.usgs.gov/centers/wetland-and-aquatic-research-center/science/environmental-impacts-following-1970-testing.",
+    "source_id": "ngmdb:118515",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "U.S. Geological Survey [USGS], 2024, Environmental impacts",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Mizell, K., Hein, J.R., Au, M., and Gartman, A., 2022, Estimates of metals contained in abyssal manganese nodules and ferromanganese crusts in the global ocean based on regional variations and genetic types of nodules, in Sharma, R., ed., Perspectives on deep-sea mining: Cham, Switzerland, Springer, p. 53–80, https://doi.org/10.1007/978-3-030-87982-2_3.",
+    "source_id": "ngmdb:118515",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Mizell, K., Hein, J.R., Au, M., and Gartman, A., 2022, Estimates",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "U.S. Geological Survey [USGS], 2022b, Global seabed mineral resources: U.S. Geological Survey web page, accessed March 27, 2025, at https://www.usgs.gov/centers/pcmsc/science/global-marine-mineral-resources.",
+    "source_id": "ngmdb:118515",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "U.S. Geological Survey [USGS], 2022b, Global seabed mineral",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  }
+ ]
+}
