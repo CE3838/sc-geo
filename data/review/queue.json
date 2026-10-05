@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 9,
+ "count": 11,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -116,6 +116,32 @@
    "verify": {
     "verdict": "unclear",
     "note": "text reads '8% ft penetrated', probably 8 1/2 ft garbled"
+   }
+  },
+  {
+   "source_id": "ngmdb:4756",
+   "path": "observations[21].location",
+   "problem": "verify_unclear",
+   "value": "33°H'40\"N. 79°31'55\" W. (Honey Hill quadrangle)",
+   "page": 15,
+   "quote": "33°H'40\"N.   0   92   8   1   0   .005   3.2   2.4   2   32   20   8   P   5   3   7   2   2   2 79°31'55\" W.",
+   "added_at": "2026-10-05T11:00:47+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "latitude minutes garbled in text layer (33°H'40\")"
+   }
+  },
+  {
+   "source_id": "ngmdb:4756",
+   "path": "observations[22].intervals[3].description",
+   "problem": "verify_unclear",
+   "value": "heavy minerals (sp gr >2.85) 27 percent (as printed)",
+   "page": 21,
+   "quote": "4.6-6.1   27",
+   "added_at": "2026-10-05T11:00:47+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "printed 27 percent, out of trend with 3.7, 2.0, .9 above; decimal point possibly lost"
    }
   }
  ]
