@@ -1,9 +1,10 @@
 """Display classes for merged map units (derived, so flagged inferred).
 
-`age_class` picks the time interval a unit's age range falls in, splitting
-the Pleistocene into early/middle/late because the Coastal Plain terraces
-are told apart that way. A range spanning all three parts is 'Pleistocene';
-a range spanning other intervals takes the one it overlaps most.
+`age_class` picks the time interval a unit's age range falls in; a range
+spanning several intervals takes the one it overlaps most. The legend has
+one Pleistocene class: the early/middle/late parts decide the overlap but
+are shown as 'Pleistocene', and each unit keeps its refined age (`age`,
+`age_ma`) for the click box.
 `material_class` groups GeMS GeoMaterial terms and SGMC lithology into a
 short legend.
 """
@@ -38,11 +39,18 @@ _AGES = [
     ("Paleoproterozoic", 1600.0, 2500.0, "#f74370"),
     ("Archean", 2500.0, 4031.0, "#f0047f"),
 ]
-AGE_CLASSES = [{"id": a, "color": c} for a, _, _, c in _AGES] + [{"id": "Unknown", "color": "#bdbdbd"}]
 _PLEISTOCENE_PARTS = {"late Pleistocene", "middle Pleistocene", "early Pleistocene"}
+AGE_CLASSES = [{"id": a, "color": c} for a, _, _, c in _AGES if a not in _PLEISTOCENE_PARTS] + \
+    [{"id": "Unknown", "color": "#bdbdbd"}]
 
 
 def age_class(age_ma) -> str:
+    """Legend class for an age range in Ma: the Pleistocene is one class."""
+    interval = _interval(age_ma)
+    return "Pleistocene" if interval in _PLEISTOCENE_PARTS else interval
+
+
+def _interval(age_ma) -> str:
     if not age_ma:
         return "Unknown"
     young, old = age_ma
@@ -71,7 +79,7 @@ def age_class(age_ma) -> str:
 
 
 MATERIAL_CLASSES = [
-    {"id": "Made land", "color": "#9e9e9e"},
+    {"id": "Artificial fill", "color": "#9e9e9e"},
     {"id": "Water", "color": "#9ec9e2"},
     {"id": "Marsh and peat", "color": "#6b8e23"},
     {"id": "Eolian sand", "color": "#f6e8b1"},
@@ -84,8 +92,15 @@ MATERIAL_CLASSES = [
     {"id": "Unknown", "color": "#bdbdbd"},
 ]
 
+# Earth moved or placed by people: fill, made land, dredge spoil, landfill and the like.
+# Natural deposits that use the word fill (valley fill, channel fill) are left out.
+ARTIFICIAL_FILL = re.compile(
+    r"(?<!valley.)(?<!channel.)(?<!basin.)(?<!cave.)\bfill\b|\bmade\b|human|artificial|anthropogenic|"
+    r"spoil|dredg|landfill|reclaimed|moved earth|disturbed ground|tailings|mine waste",
+    re.I,
+)
+
 _RULES = [
-    (r"made|human|artificial|fill|spoil", "Made land"),
     (r"^water|water or ice", "Water"),
     (r"peat|muck|marsh|swamp", "Marsh and peat"),
     (r"eolian|aeolian|dune", "Eolian sand"),
@@ -99,7 +114,11 @@ _RULES = [
 
 
 def material_class(props: dict) -> str:
-    for text in (props.get("geomaterial"), props.get("lith"), props.get("name")):
+    texts = (props.get("geomaterial"), props.get("lith"), props.get("name"))
+    # Human-moved earth wins over any natural material another field names.
+    if any(text and ARTIFICIAL_FILL.search(text) for text in texts):
+        return "Artificial fill"
+    for text in texts:
         if not text:
             continue
         for pattern, cls in _RULES:

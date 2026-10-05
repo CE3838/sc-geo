@@ -79,7 +79,9 @@ def test_split_tables_keeps_polygons_lean_and_tables_complete():
     polys, units, srcs = build.split_tables([{"type": "Feature", "geometry": geom, "properties": full}])
     p = polys[0]["properties"]
     assert p["unit"] == "ngmdb:1|Qws"
-    assert p["age_class"] == "late Pleistocene" and p["material_class"] == "Coastal and marine sediment"
+    assert p["age_class"] == "Pleistocene" and p["material_class"] == "Coastal and marine sediment"
+    # The legend class is the epoch; the unit table keeps the refined age for the click box.
+    assert units["ngmdb:1|Qws"]["age"] == "late Pleistocene" and units["ngmdb:1|Qws"]["age_ma"] == [0.0117, 0.129]
     assert "description" not in p and "citation" not in p
     assert p["conf"] == 0.9 and p["locator"] == "MapUnitPolys_ID=MUP1"
     assert polys[0]["geometry"]["coordinates"][0][0] == [-79.123457, 32.1]

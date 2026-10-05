@@ -29,7 +29,7 @@ import zipfile
 from functools import lru_cache
 from pathlib import Path
 
-from merge import sources
+from merge import classes, sources
 from model import gisio
 from model.provenance import ExtractionMethod, StoredValue
 from model.units import Lexicon, name_key
@@ -50,7 +50,7 @@ _CANDIDATES = {
 }
 # Unit names that say the unit is unconsolidated material (the merge's surficial layer).
 _SEDIMENT_NAME = re.compile(r"sediment|\bsands?\b|gravel|\bclays?\b|\bmud|alluvi|colluvi|eolian|marsh|swamp|peat|dune|"
-                            r"beach|terrace|lakebed|\bfill\b|moved earth|disturbed ground|carolina bay", re.I)
+                            r"beach|terrace|lakebed|carolina bay|" + classes.ARTIFICIAL_FILL.pattern, re.I)
 _LABEL = re.compile(r"^[A-Za-z][A-Za-z0-9 ,_-]{0,11}$")
 
 # Leading letters of USGS-style map symbols and the age they stand for. Ambiguous letters
