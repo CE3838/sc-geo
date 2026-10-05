@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 7,
+ "count": 9,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -89,6 +89,33 @@
     "verdict": "disagree",
     "note": "text layer prints 0-S; the plate copy of table 4 (p. 11) reads 0-5, so the bottom is 5",
     "value": "5"
+   }
+  },
+  {
+   "source_id": "ngmdb:20738",
+   "path": "units[14].depositional_environment",
+   "problem": "verify_disagree",
+   "value": "marine; Duplin marl near the present coast was deposited during a regression of the sea",
+   "page": 40,
+   "quote": "showing that Duplin marl near the present coast was deposited during a regression of the sea",
+   "added_at": "2026-10-05T05:49:47+00:00",
+   "verify": {
+    "verdict": "disagree",
+    "value": "Duplin marl near the present coast was deposited during a regression of the sea",
+    "note": "page 40 does not say 'marine' here; that word was added"
+   }
+  },
+  {
+   "source_id": "ngmdb:20738",
+   "path": "observations[4].intervals[9].description",
+   "problem": "verify_unclear",
+   "value": "Marl, olive; phosphate grains in upper part; shells; upper foot soft; 8½ ft penetrated",
+   "page": 48,
+   "quote": "10. Marl, olive (5 Y 4/3); phosphate grains in upper part; shells;",
+   "added_at": "2026-10-05T05:49:47+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text reads '8% ft penetrated', probably 8 1/2 ft garbled"
    }
   }
  ]
