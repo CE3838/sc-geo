@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 11,
+ "count": 12,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -142,6 +142,20 @@
    "verify": {
     "verdict": "unclear",
     "note": "printed 27 percent, out of trend with 3.7, 2.0, .9 above; decimal point possibly lost"
+   }
+  },
+  {
+   "source_id": "ngmdb:18974",
+   "path": "units[3].lithology",
+   "problem": "verify_disagree",
+   "value": "lower part: dark green to dark gray laminated fine sand/silt and carbonaceous clay; upper part: largely poorly-sorted quartz sand overlain by thick beds of sandy kaolinitic clay",
+   "page": 12,
+   "quote": "green to dark gray laminated fine sand/silt and carbonaceous clay",
+   "added_at": "2026-10-05T21:28:57+00:00",
+   "verify": {
+    "verdict": "disagree",
+    "value": "dark green to dark gray laminated fine sand/silt and carbonaceous clay (lower part)",
+    "note": "page 12 supports only the lower part; the upper part's sand and kaolinitic clay is described on page 13"
    }
   }
  ]
