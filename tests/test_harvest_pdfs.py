@@ -327,3 +327,91 @@ def test_queue_skips_excluded_ids(monkeypatch):
     assert ids == ["ngmdb:4"]
     monkeypatch.setattr(pdfs, "excluded_ids", lambda: {"ngmdb:4"})
     assert [r["id"] for r in pdfs.queue([CHS, COASTAL], PILOT)] == ["ngmdb:1"]
+
+
+# --- OCR outcomes ---------------------------------------------------------------
+
+def _scan_setup(tmp_path, pdf_pages):
+    scan = make_pdf(tmp_path / "scan.pdf", pdf_pages).read_bytes()
+    chs = rec("ngmdb:1", CHS["bbox"], pdf=["https://pubs.usgs.gov/a.pdf"])
+    paths = _setup(tmp_path, [chs])
+    f = FakeFetcher({"https://pubs.usgs.gov/a.pdf": scan, "https://ngmdb.usgs.gov/Prodesc/": "<html></html>",
+                     "https://pubs.usgs.gov/pubs-services/publication/?": {"records": []}})
+    return paths, f
+
+
+def _ck(paths):
+    return json.loads((paths["checkpoint_dir"] / "ngmdb_1.json").read_text())
+
+
+@pytest.mark.skipif(not shutil.which("pdftotext"), reason="poppler-utils not installed")
+def test_partially_ocred_file_is_text_with_missing_pages_noted(tmp_path, monkeypatch):
+    from extract import pdftext
+    monkeypatch.setattr(pdftext, "ocr_engine", lambda: "tesseract")
+    paths, f = _scan_setup(tmp_path, [[], [], ["Wando Formation, clayey sand, as much as 30 ft thick."]])
+    ocr = lambda path, pages: {n: ("Ladson Formation, sand and clay, fossiliferous", "x") for n in pages if n != 2}
+    status = pdfs.run(fetcher=f, ocr=ocr, log=lambda *a: None, **paths)
+    assert status["by_status"] == {"text": 1}
+    ck = _ck(paths)
+    assert ck["unread_files"] == 0
+    assert ck["ocr_missing_pages"] == [2]
+    assert "OCR failed on 1 of 2 pages" in ck["reason"]
+    cached = sorted(p.name for p in (paths["cache_dir"] / "ocr").rglob("p*.txt"))
+    assert cached == ["p1.raw.txt", "p1.txt"]  # the finished page is cached for the retry
+
+
+@pytest.mark.skipif(not shutil.which("pdftotext"), reason="poppler-utils not installed")
+def test_missing_pages_are_retried_from_the_cache(tmp_path, monkeypatch):
+    from extract import pdftext
+    monkeypatch.setattr(pdftext, "ocr_engine", lambda: "tesseract")
+    paths, f = _scan_setup(tmp_path, [[], [], ["Wando Formation, clayey sand, as much as 30 ft thick."]])
+    calls, ok = [], {1}
+
+    def ocr(path, pages):
+        calls.append(list(pages))
+        return {n: ("Ladson Formation, sand and clay, fossiliferous", "x") for n in pages if n in ok}
+
+    pdfs.run(fetcher=f, ocr=ocr, log=lambda *a: None, **paths)
+    ok.add(2)
+    pdfs.run(fetcher=f, ocr=ocr, log=lambda *a: None, **paths)
+    assert calls == [[1, 2], [2]]
+    ck = _ck(paths)
+    assert ck["status"] == "text" and ck["ocr_missing_pages"] == [] and ck["reason"] is None
+    pdfs.run(fetcher=f, ocr=ocr, log=lambda *a: None, **paths)
+    assert len(calls) == 2  # nothing left to OCR
+
+
+@pytest.mark.skipif(not shutil.which("pdftotext"), reason="poppler-utils not installed")
+def test_retries_of_failing_pages_are_limited(tmp_path, monkeypatch):
+    from extract import pdftext
+    monkeypatch.setattr(pdftext, "ocr_engine", lambda: "tesseract")
+    paths, f = _scan_setup(tmp_path, [[]])
+    calls = []
+    ocr = lambda path, pages: calls.append(1) or {}
+    for _ in range(pdfs.CONFIG["ocr"]["max_attempts"] + 2):
+        pdfs.run(fetcher=f, ocr=ocr, log=lambda *a: None, **paths)
+    assert len(calls) == pdfs.CONFIG["ocr"]["max_attempts"]
+    assert _ck(paths)["ocr_attempts"] == pdfs.CONFIG["ocr"]["max_attempts"]
+
+
+@pytest.mark.skipif(not shutil.which("pdftotext"), reason="poppler-utils not installed")
+def test_scan_where_every_page_fails_reports_ocr_failure(tmp_path, monkeypatch):
+    from extract import pdftext
+    monkeypatch.setattr(pdftext, "ocr_engine", lambda: "tesseract")
+    paths, f = _scan_setup(tmp_path, [[], []])
+    status = pdfs.run(fetcher=f, ocr=lambda path, pages: {}, log=lambda *a: None, **paths)
+    assert status["by_status"] == {"needs_ocr": 1}
+    ck = _ck(paths)
+    assert ck["unread_files"] == 1 and ck["ocr_missing_pages"] == [1, 2]
+    assert "OCR failed on 2 of 2 pages" in ck["reason"]
+    assert "no OCR engine" not in ck["reason"]
+
+
+@pytest.mark.skipif(not shutil.which("pdftotext"), reason="poppler-utils not installed")
+def test_scan_without_an_engine_says_so(tmp_path, monkeypatch):
+    from extract import pdftext
+    monkeypatch.setattr(pdftext, "ocr_engine", lambda: None)
+    paths, f = _scan_setup(tmp_path, [[]])
+    pdfs.run(fetcher=f, ocr="auto", log=lambda *a: None, **paths)
+    ck = _ck(paths)
+    assert ck["status"] == "needs_ocr" and "no OCR engine" in ck["reason"]
