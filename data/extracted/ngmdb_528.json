@@ -8,7 +8,7 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-05T01:06:08+00:00",
- "updated_at": "2026-10-05T01:06:08+00:00",
+ "updated_at": "2026-10-05T01:10:55+00:00",
  "reader": "Claude, reading session 2026-10-05",
  "packets": [
   "packet-01"
@@ -20,7 +20,7 @@
  ],
  "blocks_total": 3,
  "complete": true,
- "notes": "Page 3 is OCR of the full map sheet; columns of text are interleaved on each OCR line and many passages are garbled (Ten Mile Hill and Ladson unit headings, Wando clayey facies, Ladson barrier sand facies, much of the Tertiary text column). Only legible fragments were used; map symbols were mostly lost and are assigned from the text (flagged inferred). Auger-hole log columns (LA 19, LA 4, LA 16, M-TL, etc.) are not legible enough to record intervals. Pages 1-2 are the cover and a standard symbol sheet. References with garbled or truncated citations were recorded only by their legible first line; Cronin, Hazel, Gibbes, Cooke, Shackleton, Sloan, Thornbury, Miller and others were skipped or only partly legible.",
+ "notes": "Page 3 is OCR of the full map sheet; columns of text are interleaved on each OCR line and many passages are garbled (Ten Mile Hill and Ladson unit headings, Wando clayey facies, Ladson barrier sand facies, much of the Tertiary text column). Only legible fragments were used; map symbols were mostly lost and are assigned from the text (flagged inferred). Auger-hole log columns (LA 19, LA 4, LA 16, M-TL, etc.) are not legible enough to record intervals. Pages 1-2 are the cover and a standard symbol sheet. References with garbled or truncated citations were recorded only by their legible first line; Cronin, Hazel, Gibbes, Cooke, Shackleton, Sloan, Thornbury, Miller and others were skipped or only partly legible.\nPage 3 is OCR of the full map sheet; columns of text are interleaved on each OCR line and many passages are garbled (Ten Mile Hill and Ladson unit headings, Wando clayey facies, Ladson barrier sand facies, much of the Tertiary text column). Only legible fragments were used; map symbols were mostly lost and are assigned from the text (flagged inferred). Auger-hole log columns (LA 19, LA 4, LA 16, M-TL, etc.) are not legible enough to record intervals. Pages 1-2 are the cover and a standard symbol sheet. References with garbled or truncated citations were recorded only by their legible first line; Cronin, Hazel, Gibbes, Cooke, Shackleton, Sloan, Thornbury, Miller and others were skipped or only partly legible.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/gq/1630/report.pdf",
@@ -43,8 +43,7 @@
    "exact": 180
   },
   "verification": {
-   "unclear": 1,
-   "agree": 17
+   "agree": 18
   },
   "inferred": 30
  },
@@ -66,6 +65,24 @@
    "disagree": 0,
    "unclear": 1,
    "review_items": 1
+  },
+  {
+   "at": "2026-10-05T01:10:55+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, reading session 2026-10-05",
+   "values": 180,
+   "stored": 180,
+   "exact": 180,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 18,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
   }
  ],
  "units": [
@@ -191,7 +208,7 @@
     "verification": null
    },
    "age": {
-    "value": "Holocene; deposits less than 50 years old",
+    "value": "deposits less than 50 years old",
     "source_id": "ngmdb:528",
     "page": 3,
     "extraction_method": "llm",
@@ -201,13 +218,7 @@
     "quote": "Goose Creek Reservoir. Deposits less than 50 years old",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
-    "normalized": {
-     "younger_ma": 0.0,
-     "older_ma": 0.0117,
-     "inferred": true,
-     "source": "International Chronostratigraphic Chart v2023/09"
-    }
+    "verification": null
    },
    "lithology": {
     "value": "Sands, silts, clays, muck and peat",
@@ -264,7 +275,7 @@
     "verification": null
    },
    "age": {
-    "value": "Holocene; less than 5,000 years old",
+    "value": "less than 5,000 years old",
     "source_id": "ngmdb:528",
     "page": 3,
     "extraction_method": "llm",
@@ -274,13 +285,7 @@
     "quote": "Deposits are less than 5,000 years old, 0-10 ft (0-3 m)",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
-    "normalized": {
-     "younger_ma": 0.0,
-     "older_ma": 0.0117,
-     "inferred": true,
-     "source": "International Chronostratigraphic Chart v2023/09"
-    }
+    "verification": null
    },
    "lithology": {
     "value": "Fine-grained, clean quartz sand, clayey sand, and clay, medium-gray (N5) to black (N1), soft, organic-rich",
@@ -356,7 +361,7 @@
     "verification": null
    },
    "age": {
-    "value": "Holocene and Pleistocene, present to Wisconsinan glacial age; modern to at least 34,000 years",
+    "value": "modern to at least 34,000 years",
     "source_id": "ngmdb:528",
     "page": 3,
     "extraction_method": "llm",
@@ -366,13 +371,7 @@
     "quote": "range from modern to at least 34,000 years (radiocarbon age from Qhm1)",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
-    "normalized": {
-     "younger_ma": 0.0,
-     "older_ma": 2.58,
-     "inferred": true,
-     "source": "International Chronostratigraphic Chart v2023/09"
-    }
+    "verification": null
    },
    "lithology": {
     "value": "Thin, soft, brown (5YR3/4) to black (N1) mucks and peats",
@@ -429,7 +428,7 @@
     "verification": null
    },
    "age": {
-    "value": "Holocene*; formed between 5,000 and 35,000 years ago; now known to be partly latest Pleistocene",
+    "value": "formed between 5,000 and 35,000 years ago",
     "source_id": "ngmdb:528",
     "page": 3,
     "extraction_method": "llm",
@@ -439,13 +438,7 @@
     "quote": "ft (0-3 m) thick and formed between 5,000 and 35,000 years ago on",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
-    "normalized": {
-     "younger_ma": 0.0,
-     "older_ma": 2.58,
-     "inferred": true,
-     "source": "International Chronostratigraphic Chart v2023/09"
-    }
+    "verification": null
    },
    "lithology": {
     "value": "Silty to sandy clay and quartz sand, fine-grained, clayey, medium-gray (N5) to dark-gray (N3)",
@@ -912,7 +905,7 @@
     "verification": null
    },
    "age": {
-    "value": "between 200,000 and 240,000 years ago; stage 7",
+    "value": "between 200,000 and 240,000 years ago",
     "source_id": "ngmdb:528",
     "page": 3,
     "extraction_method": "llm",
@@ -1219,7 +1212,7 @@
     "verification": null
    },
    "age": {
-    "value": "Pleistocene, 485,000 ± 245,000 years; between 730,000 and 245,000 years",
+    "value": "between 730,000 and 245,000 years",
     "source_id": "ngmdb:528",
     "page": 3,
     "extraction_method": "llm",
@@ -1229,13 +1222,7 @@
     "quote": "Therefore, the age of the Ladson lies between 730,000 and 245,000 years,",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
-    "normalized": {
-     "younger_ma": 0.0117,
-     "older_ma": 2.58,
-     "inferred": true,
-     "source": "International Chronostratigraphic Chart v2023/09"
-    }
+    "verification": null
    },
    "description": {
     "value": "Nearshore complex of lower middle Pleistocene barrier sands and backbarrier clays to clayey sands; type section defined by Malde (1959) in an auger hole at locality M-TL",
@@ -1618,20 +1605,20 @@
     "verification": null
    },
    "age": {
-    "value": "Pliocene, about 3.5 m.y.; early to middle Pliocene (between 3 and 5 m.y.)",
+    "value": "early to middle Pliocene (between 3 and 5 m.y.)",
     "source_id": "ngmdb:528",
     "page": 3,
     "extraction_method": "llm",
-    "confidence": 0.598,
+    "confidence": 0.855,
     "inferred": false,
     "locator": null,
     "quote": "casts. The Goose Creek is early to middle Pliocene in age (between 3 and 5 m.y.), indicated by the",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "unclear",
+    "verification": "agree",
     "normalized": {
-     "younger_ma": 2.58,
-     "older_ma": 5.333,
+     "younger_ma": 3.497666666666667,
+     "older_ma": 4.415333333333334,
      "inferred": true,
      "source": "International Chronostratigraphic Chart v2023/09"
     }
@@ -1950,7 +1937,7 @@
     "verification": null
    },
    "age": {
-    "value": "Oligocene, about 30 m.y.; late Oligocene (early Chattian)",
+    "value": "Oligocene, about 30 m.y.",
     "source_id": "ngmdb:528",
     "page": 3,
     "extraction_method": "llm",
@@ -1962,8 +1949,8 @@
     "text_method": "ocr",
     "verification": null,
     "normalized": {
-     "younger_ma": 26.223333333333333,
-     "older_ma": 27.82,
+     "younger_ma": 23.03,
+     "older_ma": 33.9,
      "inferred": true,
      "source": "International Chronostratigraphic Chart v2023/09"
     }
@@ -2090,7 +2077,7 @@
     "verification": null
    },
    "age": {
-    "value": "Eocene, about 38 m.y.; late Eocene (Priabonian), zone NP 20",
+    "value": "Eocene, about 38 m.y.",
     "source_id": "ngmdb:528",
     "page": 3,
     "extraction_method": "llm",
@@ -2103,7 +2090,7 @@
     "verification": null,
     "normalized": {
      "younger_ma": 33.9,
-     "older_ma": 37.71,
+     "older_ma": 56.0,
      "inferred": true,
      "source": "International Chronostratigraphic Chart v2023/09"
     }

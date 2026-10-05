@@ -8,7 +8,7 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-05T00:56:52+00:00",
- "updated_at": "2026-10-05T00:56:52+00:00",
+ "updated_at": "2026-10-05T01:10:55+00:00",
  "reader": "Claude, reading session 2026-10-05",
  "packets": [
   "packet-01"
@@ -18,7 +18,7 @@
  ],
  "blocks_total": 1,
  "complete": true,
- "notes": "OCR of a map sheet. Munsell codes are OCR-garbled in places (NS for N5, SYR for 5YR, IOYR for 10YR); values give the corrected reading only where obvious, quotes are verbatim. Metric conversions in some thickness values are garbled (e.g. '(13 m)', '(03 m)'). Abstract says the source map is Weems and Lemon (1994) while References Cited lists 1993. Auger holes are named only as typical sections; no logs or locations are legible. Cross section A-B text is illegible.",
+ "notes": "OCR of a map sheet. Munsell codes are OCR-garbled in places (NS for N5, SYR for 5YR, IOYR for 10YR); values give the corrected reading only where obvious, quotes are verbatim. Metric conversions in some thickness values are garbled (e.g. '(13 m)', '(03 m)'). Abstract says the source map is Weems and Lemon (1994) while References Cited lists 1993. Auger holes are named only as typical sections; no logs or locations are legible. Cross section A-B text is illegible.\nOCR of a map sheet. Munsell codes are OCR-garbled in places (NS for N5, SYR for 5YR, IOYR for 10YR); values give the corrected reading only where obvious, quotes are verbatim. Metric conversions in some thickness values are garbled (e.g. '(13 m)', '(03 m)'). Abstract says the source map is Weems and Lemon (1994) while References Cited lists 1993. Auger holes are named only as typical sections; no logs or locations are legible. Cross section A-B text is illegible.",
  "files": [
   {
    "url": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=28744_13233_2",
@@ -41,6 +41,24 @@
  "ingests": [
   {
    "at": "2026-10-05T00:56:52+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, reading session 2026-10-05",
+   "values": 138,
+   "stored": 138,
+   "exact": 138,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 14,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-10-05T01:10:55+00:00",
    "packets": [
     "packet-01"
    ],
@@ -294,7 +312,7 @@
     "verification": null
    },
    "age": {
-    "value": "Holocene; known ages less than 5 ka",
+    "value": "known ages less than 5 ka",
     "source_id": "ngmdb:13233",
     "page": 1,
     "extraction_method": "llm",
@@ -304,13 +322,7 @@
     "quote": "Known ages less than 5 ka",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
-    "normalized": {
-     "younger_ma": 0.0,
-     "older_ma": 0.0117,
-     "inferred": true,
-     "source": "International Chronostratigraphic Chart v2023/09"
-    }
+    "verification": null
    },
    "lithology": {
     "value": "Clayey sand and clay, medium gray (N5) to black (N1), soft, organic rich",
@@ -387,7 +399,7 @@
     "verification": null
    },
    "age": {
-    "value": "Holocene; age less than 10 ka, surface deposits probably less than 1 ka",
+    "value": "age less than 10 ka, surface deposits probably less than 1 ka",
     "source_id": "ngmdb:13233",
     "page": 1,
     "extraction_method": "llm",
@@ -397,13 +409,7 @@
     "quote": "Age less than 10 ka, and surface deposits probably less than 1 ka",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
-    "normalized": {
-     "younger_ma": 0.0,
-     "older_ma": 0.0117,
-     "inferred": true,
-     "source": "International Chronostratigraphic Chart v2023/09"
-    }
+    "verification": null
    },
    "lithology": {
     "value": "Quartz sand, very light gray (N8), fine grained, well sorted, shelly",
@@ -673,7 +679,7 @@
     "verification": null
    },
    "age": {
-    "value": "Holocene to Pleistocene (Wisconsinan glacial age); known ages range from modern to at least 34 ka",
+    "value": "known ages range from modern to at least 34 ka",
     "source_id": "ngmdb:13233",
     "page": 1,
     "extraction_method": "llm",
@@ -683,13 +689,7 @@
     "quote": "Known ages range from modern to at least 34 ka",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
-    "normalized": {
-     "younger_ma": 0.0,
-     "older_ma": 2.58,
-     "inferred": true,
-     "source": "International Chronostratigraphic Chart v2023/09"
-    }
+    "verification": null
    },
    "lithology": {
     "value": "Peat and muck, moderate brown (5YR 3/4) to black (N1), thin, soft",

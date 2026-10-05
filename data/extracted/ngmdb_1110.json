@@ -1,0 +1,3002 @@
+{
+ "source_id": "ngmdb:1110",
+ "title": "Geologic map of the Mount Holly quadrangle, Berkeley and Charleston Counties, South Carolina",
+ "citation": "Weems, R.E., and Lemon, E.M., 1984, Geologic map of the Mount Holly quadrangle, Berkeley and Charleston Counties, South Carolina: U.S. Geological Survey Geologic Quadrangle Map GQ-1579, map scale 1:24,000.",
+ "year": 1984,
+ "scale": 24000,
+ "publisher": "U.S. Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-10-05T01:10:27+00:00",
+ "updated_at": "2026-10-05T01:10:27+00:00",
+ "reader": "Claude, reading session 2026-10-05",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1",
+  "2",
+  "3"
+ ],
+ "blocks_total": 3,
+ "complete": true,
+ "notes": "Page 3 is OCR of the full map sheet; the text column is clean. Pages 1-2 are the cover and a standard symbol sheet. Unit symbols in the legend boxes are partly lost; most symbols are taken from the auger-log column or text (flagged inferred; OCR Qte/Qic/Teb read as Qtc/Qlc/Tcb). Auger-hole surface elevations are matched to holes by column order in the log header (flagged inferred); log intervals are not legible. Parkers Ferry thickness is cut off in OCR. The Marks Head age ~15 Ma and the Penholoway age about 1,000,000 ± 250,000 years differ from later sheets (as printed).",
+ "files": [
+  {
+   "url": "https://pubs.usgs.gov/gq/1579/report.pdf",
+   "via": "pubs_usgs",
+   "sha256": "475b559ecad5499e255eb04838e8875a7cf693dddf721153f9a0209c27a6f0cf",
+   "pages": 2,
+   "first_page": 1
+  },
+  {
+   "url": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=2657_1110_2",
+   "via": "ngmdb_scan",
+   "sha256": "d360faaf480aa07446f3dcf06ab350c1963082d76ada90a820e4c9888e1fb415",
+   "pages": 1,
+   "first_page": 3
+  }
+ ],
+ "summary": {
+  "stored": 190,
+  "quote_match": {
+   "exact": 190
+  },
+  "verification": {
+   "agree": 19
+  },
+  "inferred": 36
+ },
+ "ingests": [
+  {
+   "at": "2026-10-05T01:10:27+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, reading session 2026-10-05",
+   "values": 190,
+   "stored": 190,
+   "exact": 190,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 19,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "Artificial fill",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Artificial fill (Holocene)—Excavated sand or clayey sand of diverse origin, 1—",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "less than 300 years old",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "are less than 300 years old",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "lithology": {
+    "value": "Excavated sand or clayey sand of diverse origin",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Artificial fill (Holocene)—Excavated sand or clayey sand of diverse origin, 1—",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "1-3 m",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "3 m thick. Used as fill for roads, dams, and other construction.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 3.280839895013123,
+     "max_ft": 9.842519685039369,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "description": {
+    "value": "Used as fill for roads, dams, and other construction",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "3 m thick. Used as fill for roads, dams, and other construction.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Qal",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.684,
+    "inferred": true,
+    "locator": null,
+    "quote": "Qal Qhm",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "legend symbols listed in order"
+   },
+   "name": {
+    "value": "Alluvium",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Alluvium (Holocene)—Material presently accumulating along fresh-water",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "less than 5,000 years old",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": null,
+    "quote": "than 5,000 years old and 0-3 m thick",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "lithology": {
+    "value": "Quartz sand, and clayey sand, sandy clay, medium-gray (N5) to black (N1), fine-grained, soft, organic-rich",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "channels. Quartz sand, and clayey sand, sandy clay, medium-gray (N5) to",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "Material presently accumulating along fresh-water channels; dominant clay mineral kaolinite; unconsolidated",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Alluvium (Holocene)—Material presently accumulating along fresh-water",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "0-3 m",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": null,
+    "quote": "than 5,000 years old and 0-3 m thick",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "min_ft": 0.0,
+     "max_ft": 9.842519685039369,
+     "unit": "m",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Qhm",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": null,
+    "quote": "Qal Qhm",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "legend symbols listed in order"
+   },
+   "name": {
+    "value": "Fresh-water marsh deposits",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fresh-water marsh deposits (Holocene)—Thin, soft, organic-rich, brown to",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fresh-water marsh deposits (Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Thin, soft, organic-rich, brown to black mucks to peats",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fresh-water marsh deposits (Holocene)—Thin, soft, organic-rich, brown to",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "description": {
+    "value": "accumulating in ovoid-shaped depressions (Carolina bays) on the Ladson and Penholoway terrace surfaces; peat probably no more than 2000 years old",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "bays) on the Ladson and Penholoway terrace surfaces",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Qhec",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": null,
+    "quote": "Qhec",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "legend symbol order"
+   },
+   "name": {
+    "value": "Estuarine deposits",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Estuarine deposits (Holocene)—Silty to sandy clay, and quartz sand, fine-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "about 7,000 years old",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "dewatered sufficiently to form firm ground. Deposits are about 7,000 years old",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "lithology": {
+    "value": "Silty to sandy clay, and quartz sand, fine-grained, clayey, medium-gray (N5) to dark-gray (N3)",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "grained, clayey, medium-gray (N5) to dark-gray (N3). Kaolinite is dominant",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "Kaolinite is dominant clay mineral, with lesser amounts of illite/smectite and illite; dewatered sufficiently to form firm ground",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "dewatered sufficiently to form firm ground.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "0-3 m",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": null,
+    "quote": "and 0-3 m thick",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "min_ft": 0.0,
+     "max_ft": 9.842519685039369,
+     "unit": "m",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Qwe",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": null,
+    "quote": "Qwe",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "symbol on section and auger log"
+   },
+   "name": {
+    "value": "Wando Formation, fluvial-estuarine clayey sand and clay facies",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fluvial-estuarine clayey sand and clay facies—Clayey quartz sand, mottled",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "sand and",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": null,
+    "quote": "Wando Formation (Pleistocene, about 100,000 years)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene, about 100,000 years",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": null,
+    "quote": "Wando Formation (Pleistocene, about 100,000 years)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Clayey quartz sand and clay, mottled pale-grayish-orange (10YR 7/4) and medium-light-gray (N6), silty to sandy; fine- to medium-grained",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fluvial-estuarine clayey sand and clay facies—Clayey quartz sand, mottled",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "Soil profile poorly developed; B horizon pale yellow to yellowish orange, base 2 m deep; typical sections MH 63 and MH 40; covered in places by modern swamp deposits less than 1 m thick",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "deep (see MH 63 and MH 40 for typical sections). Unit covered, in places, by",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "fossils": {
+    "value": "Wood and terrestrial vertebrate fossils present",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "modern swamp deposits less than 1 m thick. Wood and terrestrial vertebrate",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "fluvial-estuarine",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fluvial-estuarine clayey sand and clay facies—Clayey quartz sand, mottled",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "1.5 m",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "fossils present. Unit is 1.5 m thick",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 4.921259842519684,
+     "max_ft": 4.921259842519684,
+     "unit": "m",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Qtc",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": null,
+    "quote": "Qte",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR reads Qte"
+   },
+   "name": {
+    "value": "Ten Mile Hill beds, fluvial-estuarine clayey sand and clay facies",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Ten Mile Hill beds (informal) (Pleistocene, about 200,000 years)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "sand and",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "beds (informal)",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Ten Mile Hill beds (informal) (Pleistocene, about 200,000 years)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene, about 200,000 years",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Ten Mile Hill beds (informal) (Pleistocene, about 200,000 years)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Clayey quartz sand, typically dark-yellowish-orange (10YR 6/6) and/or medium-light-gray (N6), fine- to medium-grained, poorly sorted, and silty to sandy clay",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fluvial-estuarine clayey sand and clay facies—Clayey quartz sand, typically",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "Typical sections MH 55 and MH 76; underlies the lower Talbot terrace southeast of the Bethera scarp; oldest unit which definitely underwent liquefaction in the 1886 earthquake",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "shown by auger holes MH 55 and MH 76. Soil profile moderately well",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "fossils": {
+    "value": "Wood and terrestrial vertebrate fossils present",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "orange (10YR 6/6). Wood and terrestrial vertebrate fossils present. Unit is",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "fluvial to estuarine",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "in fluvial to estuarine environments.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "commonly 5-10 m",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "commonly 5-10 m thick",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 16.404199475065614,
+     "max_ft": 32.80839895013123,
+     "unit": "m",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Qlc",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": null,
+    "quote": "(Qic)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR reads Qic; delta-front deposits of the Ladson"
+   },
+   "name": {
+    "value": "Ladson Formation, fluvial-estuarine clayey sand and clay facies",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Ladson Formation (Pleistocene, about 450,000 years)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "sand and",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": null,
+    "quote": "Ladson Formation (Pleistocene, about 450,000 years)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene, about 450,000 years",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Ladson Formation (Pleistocene, about 450,000 years)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Clayey quartz sand, moderate-reddish-brown, moderate-red (5R 4/6) and/or medium-light-gray (N6), medium-grained, poorly sorted, and silty to sandy clay",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fluvial-estuarine clayey sand and clay facies—Clayey quartz sand, moderate-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "Typical sections MH 46 and MH 53; clayey, coarse-grained sand and feldspathic gravels spread across the Santee River delta front in the central and eastern quadrangle",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "sections are shown by auger holes MH 46 and MH 53. Soil profile is well",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "fossils": {
+    "value": "Terrestrial vertebrate fossils present",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Terrestrial vertebrate fossils present.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "3-6 m",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "is 3-6 m thick",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 9.842519685039369,
+     "max_ft": 19.685039370078737,
+     "unit": "m",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Qls",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "the shoreline was marked by a barrier island which now forms the sand deposit (Qls) across the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "name": {
+    "value": "Ladson Formation, barrier sand facies",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Barrier sand facies—Quartz sand, dark-yellowish-orange (10R 6/6) coarse-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Ladson",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "lithology": {
+    "value": "Quartz sand, dark-yellowish-orange, coarse-grained, poorly sorted; abundant fine-grained dark heavy minerals below soil profile",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Barrier sand facies—Quartz sand, dark-yellowish-orange (10R 6/6) coarse-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "Dominant clay minerals kaolinite and vermiculite, with reworked gibbsite forming detrital clayballs at base; occurs only in far southwestern corner of the quadrangle",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "corner of the quadrangle. Unit is up to 6 m thick",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "barrier island",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "the shoreline was marked by a barrier island which now forms the sand deposit (Qls) across the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "up to 6 m",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "corner of the quadrangle. Unit is up to 6 m thick",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 19.685039370078737,
+     "unit": "m",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Qpf",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": null,
+    "quote": "Qpf =|",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "symbol on auger log"
+   },
+   "name": {
+    "value": "Penholoway Formation, fossiliferous shelf sand facies",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fossiliferous shelf sand facies—Quartz sand, medium-gray (N5), medium-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "Penholoway",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": null,
+    "quote": "Penholoway Formation (Pleistocene, about 1,000,000 + 250,000 years)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene, about 1,000,000 ± 250,000 years",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Penholoway Formation (Pleistocene, about 1,000,000 + 250,000 years)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR shows + for ±",
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Quartz sand, medium-gray (N5), medium-bluish-gray (5B 5/1) or greenish-gray (5G 6/1), fine- to medium-grained, phosphatic, bioturbated",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "bluish-gray (5B 5/1) or greenish-gray (5G 6/1), fine- to medium-grained,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "fossils": {
+    "value": "moderately diverse molluscan fossil fauna",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Unweathered beds contain a moderately diverse molluscan fossil",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "Typical section auger hole MH 83",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Typical section is shown by auger",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "open ocean shelf",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": null,
+    "quote": "Fossiliferous shelf sand facies—Quartz sand, medium-gray (N5), medium-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "up to 12 m",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "fauna. Unit is up to 12 m thick",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 39.370078740157474,
+     "unit": "m",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Qpc",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": null,
+    "quote": "Qpc",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "symbol on auger log"
+   },
+   "name": {
+    "value": "Penholoway Formation, fluvial-estuarine clayey sand and clay facies",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fluvial-estuarine clayey sand and clay facies—Silty to sandy clay, medium-gray",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "sand and",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "lithology": {
+    "value": "Silty to sandy clay, medium-gray (N5) to medium-bluish-green (5B 5/1), weathers to very light gray (N8), frequently well laminated",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "(N5) to medium-bluish-green (5B 5/1), weathers to very light gray (N8),",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "Typical sections MH 81 and MH 83; B horizon 3-4 m deep",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "and illite in variable proportions. Typical sections shown by auger holes MH 81",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "more sandy (fluvial) deposits to the northwest; more clayey (lagoonal to tidal marsh) deposits to the southwest",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "deposits predominate to the northwest (landward) while more clayey (lagoonal",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "up to 4 m",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "gray (N7) and is 3-4 m deep. Unit is up to 4 m thick.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 13.123359580052492,
+     "unit": "m",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Qps",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "the Ridgeville barrier across the present Mount Holly quadrangle (Qps).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "name": {
+    "value": "Penholoway Formation, barrier sand facies",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Barrier sand facies—Quartz sand, moderate-reddish-brown (10R 4/6) to dark-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Penholoway",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "lithology": {
+    "value": "Quartz sand, moderate-reddish-brown (10R 4/6) to dark-yellowish-orange, medium- to coarse-grained; abundant fine-grained dark heavy minerals below soil profile",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Barrier sand facies—Quartz sand, moderate-reddish-brown (10R 4/6) to dark-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "Pinopolis barrier sands; reworked gibbsite forms detrital clayballs at base; typical section auger hole MH 81",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "base. A typical section is shown by auger hole MH 81. Unit is up to 5 m thick",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "barrier island",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Later during this same transgression, the Pinopolis barrier sands developed seaward of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "up to 5 m",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "base. A typical section is shown by auger hole MH 81. Unit is up to 5 m thick",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 16.404199475065614,
+     "unit": "m",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Tgc",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": null,
+    "quote": "Tgc",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "symbol on auger log"
+   },
+   "name": {
+    "value": "Goose Creek Limestone",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Goose Creek Limestone (Pliocene, about 3,500,000 years)—Quartzose and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Goose Creek",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Pliocene, about 3,500,000 years",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Goose Creek Limestone (Pliocene, about 3,500,000 years)—Quartzose and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 2.58,
+     "older_ma": 5.333,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Quartzose and phosphatic calcarenite, very pale orange (10YR 8/2) (wet) to chalk-white (dry), medium- to coarse-grained, sparsely shelly",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "phosphatic calcarenite, very pale orange (10YR 8/2) (wet) to chalk-white (dry),",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "contacts": {
+    "value": "Basal contact marked by thin layer of black, rounded, phosphate pebbles, 2 to 10 cm thick",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": null,
+    "quote": "Basal contact marked by thin layer of black,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "fossils": {
+    "value": "pectinids such as Amusium mortoni, Argopecten eboreus, and Pecten hemicyclica; shark Carcharodon carcharias; vertebrate remains locally abundant",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "locally abundant, as are shells of pectinids such as Amusium mortoni, Argopecten eboreus, and Pecten",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "open-shelf, shallow-marine",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Goose Creek formed in an open-shelf, shallow-marine environment",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "preserved only in the far southwestern corner and northeastern portion of the quadrangle",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Goose Creek has been preserved only in the far",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "up to 12 m",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "rounded, phosphate pebbles, 2 to 10 cm thick. Unit is up to 12 m thick",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 39.370078740157474,
+     "unit": "m",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Tmh",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": null,
+    "quote": "Tmh",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "symbol on auger log"
+   },
+   "name": {
+    "value": "Marks Head Formation of Abbott and Huddlestun 1980",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Marks Head Formation of Abbott and Huddlestun 1980 (Miocene, about",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Marks Head",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": null,
+    "quote": "Marks Head Formation of Abbott and Huddlestun 1980 (Miocene, about",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Miocene, about 15,000,000 years",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "15,000,000 years)—Clay, moderate-green (5G 5/6) to dark-greenish-gray (5G",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 5.333,
+     "older_ma": 23.03,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Clay, moderate-green (5G 5/6) to dark-greenish-gray (5G 4/1), dense, sandy, cheese-like to waxy texture; attapulgite major clay-mineral constituent",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "4/1) dense, sandy, cheese-like to waxy texture. Attapulgite is major clay-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "contacts": {
+    "value": "Basal contact marked by burrowed, gently rolling unconformity that occasionally has worn and rounded bivalve fragments scattered across it",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "unconformity that occasionally has worn and rounded bivalve fragments",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "fossils": {
+    "value": "Vertebrate remains are sparse to common",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": null,
+    "quote": "Vertebrate remains are sparse to common.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "depositional_environment": {
+    "value": "somewhat restricted, hypersaline",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "somewhat restricted, hypersaline environment judging from the presence of attapulgite and dolomite in",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "only 1-2 m in this quadrangle",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Unit is only 1-2",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 3.280839895013123,
+     "max_ft": 6.561679790026246,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "description": {
+    "value": "only encountered in auger holes MH 81 and MH 82; probably represents the Hawthorn Formation as defined by Cooke (1936)",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "This unit probably represents the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Tcb",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": null,
+    "quote": "Teb",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR reads Teb on auger log"
+   },
+   "name": {
+    "value": "Chandler Bridge Formation",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": null,
+    "quote": "Chandler Bridge Formation (Oligocene, about 28,000,000 years)—Quartz-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "Chandler Bridge",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": null,
+    "quote": "Chandler Bridge Formation (Oligocene, about 28,000,000 years)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Oligocene, about 28,000,000 years",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Chandler Bridge Formation (Oligocene, about 28,000,000 years)—Quartz-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 23.03,
+     "older_ma": 33.9,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Quartz-phosphate sand, dusky-green (5G 3/2) weathered to medium-gray (N5), very fine to fine-grained",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "phosphate sand, dusky-green (5G 3/2) weathered to medium-gray (N5), very",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "contacts": {
+    "value": "Basal contact with the underlying Ashley Formation is marked by a burrowed, gently rolling unconformity",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "contact with the underlying Ashley Formation is marked by a burrowed, gently",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "fossils": {
+    "value": "Vertebrate remains are abundant",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Vertebrate remains are abundant. Unit is up to 5 m thick",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "lagoonal to marginal-marine",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Chandler Bridge accumulated in lagoonal to marginal-marine",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "probably the parent lithology for some of the phosphate rock mined to the south",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Chandler Bridge is probably the parent",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "thickness": {
+    "value": "up to 5 m",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Vertebrate remains are abundant. Unit is up to 5 m thick",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 16.404199475065614,
+     "unit": "m",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Cooper Group",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cooper Group (Oligocene-Eocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Cooper",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Group",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": null,
+    "quote": "Cooper Group (Oligocene-Eocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Oligocene-Eocene",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cooper Group (Oligocene-Eocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 23.03,
+     "older_ma": 56.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Ta",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": null,
+    "quote": "Ta",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "symbol on auger log"
+   },
+   "name": {
+    "value": "Ashley Formation",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Ashley Formation (Oligocene, about 30,000,000 years)—Calcarenite, light-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Ashley",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": null,
+    "quote": "Ashley Formation (Oligocene, about 30,000,000 years)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "group": {
+    "value": "Cooper Group",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": null,
+    "quote": "Cooper Group (Oligocene-Eocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "listed under the Cooper Group heading"
+   },
+   "age": {
+    "value": "Oligocene, about 30,000,000 years",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Ashley Formation (Oligocene, about 30,000,000 years)—Calcarenite, light-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 23.03,
+     "older_ma": 33.9,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Calcarenite, light-olive-brown (5Y 5/6), fine-grained, phosphatic, massive",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "olive-brown (5Y 5/6), fine-grained, phosphatic, massive. Dominant clay",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "contacts": {
+    "value": "Base of unit contains densely packed, phosphate pebble bed 2-10 cm thick",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "of unit contains densely packed, phosphate pebble bed 2-10 cm thick.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "fossils": {
+    "value": "Sparsely macrofossiliferous but abundantly microfossiliferous",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Sparsely macrofossiliferous but abundantly microfossiliferous.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "open-marine, shelf",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Ashley accumulated in an open-marine, shelf environment",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "exceptionally thick in the southwestern portion of the quadrangle (up to 60 m)",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Ashley Formation is exceptionally thick in the southwestern portion of the quadrangle (up to 60",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "up to 30 m",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Sparsely macrofossiliferous but abundantly microfossiliferous. Unit is up to 30",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 98.42519685039369,
+     "unit": "m",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Tpf",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": null,
+    "quote": "Tpf",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "symbol on auger log"
+   },
+   "name": {
+    "value": "Parkers Ferry Formation",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Parkers Ferry Formation (Eocene, about 38,000,000 years)—Calcilutite to",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Parkers Ferry",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": null,
+    "quote": "Parkers Ferry Formation (Eocene, about 38,000,000 years)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "group": {
+    "value": "Cooper Group",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": null,
+    "quote": "Cooper Group (Oligocene-Eocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "listed under the Cooper Group heading"
+   },
+   "age": {
+    "value": "Eocene, about 38,000,000 years",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Parkers Ferry Formation (Eocene, about 38,000,000 years)—Calcilutite to",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 56.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Calcilutite to very fine grained calcarenite, light-blue-green (5B 6/6) to moderate-yellowish-green (10GY 6/4), stiff to plastic, dense, sticky",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "very fine grained calcarenite, light-blue-green (5B 6/6) to moderate-yellowish-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "Dominant clay mineral illite/smectite; lesser amounts of clinoptilolite; oldest unit in the shallow subsurface, ephemerally exposed only in the northeastern portion of the quadrangle",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "It is ephemerally exposed in ditches and roadcuts only in the northeastern portion of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "fossils": {
+    "value": "numerous short echinoid spines",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "Contains numerous short echinoid",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "soft-bottomed, open-marine shelf",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Parkers Ferry is inferred to have accumulated in a soft-bottomed, open-marine shelf",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Edisto Formation",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "deposited the Edisto Formation (an impure quartz-rich limestone).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Edisto",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "lithology": {
+    "value": "impure quartz-rich limestone",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "deposited the Edisto Formation (an impure quartz-rich limestone).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "very early Miocene",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "It next transgressed across the outer Coastal Plain during very early Miocene time and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 15.98,
+     "older_ma": 23.03,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "eroded from the Mount Holly quadrangle; persists in small remnant patches in the Clubhouse Crossroads quadrangle",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": null,
+    "quote": "This unit subsequently has been",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "observations": [
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "MH 63",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "deep (see MH 63 and MH 40 for typical sections).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "elevation": {
+    "value": "11' elev",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.52,
+    "inferred": true,
+    "locator": null,
+    "quote": "(11' elev) (12' elev) | (33’ elev) (30' elev) | (50' elev) (45' elev) | (84' elev) (65' elev)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "matched to the hole by column order in the auger hole log header",
+    "normalized": {
+     "min_ft": 11.0,
+     "max_ft": 11.0,
+     "unit": "'",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "MH 40",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "deep (see MH 63 and MH 40 for typical sections).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "elevation": {
+    "value": "12' elev",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.52,
+    "inferred": true,
+    "locator": null,
+    "quote": "(11' elev) (12' elev) | (33’ elev) (30' elev) | (50' elev) (45' elev) | (84' elev) (65' elev)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "matched to the hole by column order in the auger hole log header",
+    "normalized": {
+     "min_ft": 12.0,
+     "max_ft": 12.0,
+     "unit": "'",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "MH 55",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "shown by auger holes MH 55 and MH 76.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "elevation": {
+    "value": "33' elev",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.52,
+    "inferred": true,
+    "locator": null,
+    "quote": "(11' elev) (12' elev) | (33’ elev) (30' elev) | (50' elev) (45' elev) | (84' elev) (65' elev)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "matched to the hole by column order in the auger hole log header",
+    "normalized": {
+     "min_ft": 33.0,
+     "max_ft": 33.0,
+     "unit": "'",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "MH 76",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "shown by auger holes MH 55 and MH 76.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "elevation": {
+    "value": "30' elev",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": null,
+    "quote": "(11' elev) (12' elev) | (33’ elev) (30' elev) | (50' elev) (45' elev) | (84' elev) (65' elev)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "matched to the hole by column order in the auger hole log header",
+    "normalized": {
+     "min_ft": 30.0,
+     "max_ft": 30.0,
+     "unit": "'",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "MH 46",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "sections are shown by auger holes MH 46 and MH 53.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "elevation": {
+    "value": "50' elev",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.52,
+    "inferred": true,
+    "locator": null,
+    "quote": "(11' elev) (12' elev) | (33’ elev) (30' elev) | (50' elev) (45' elev) | (84' elev) (65' elev)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "matched to the hole by column order in the auger hole log header",
+    "normalized": {
+     "min_ft": 50.0,
+     "max_ft": 50.0,
+     "unit": "'",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "MH 53",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "sections are shown by auger holes MH 46 and MH 53.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "elevation": {
+    "value": "45' elev",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.52,
+    "inferred": true,
+    "locator": null,
+    "quote": "(11' elev) (12' elev) | (33’ elev) (30' elev) | (50' elev) (45' elev) | (84' elev) (65' elev)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "matched to the hole by column order in the auger hole log header",
+    "normalized": {
+     "min_ft": 45.0,
+     "max_ft": 45.0,
+     "unit": "'",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "MH 81",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "and illite in variable proportions. Typical sections shown by auger holes MH 81",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "elevation": {
+    "value": "84' elev",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.52,
+    "inferred": true,
+    "locator": null,
+    "quote": "(11' elev) (12' elev) | (33’ elev) (30' elev) | (50' elev) (45' elev) | (84' elev) (65' elev)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "matched to the hole by column order in the auger hole log header",
+    "normalized": {
+     "min_ft": 84.0,
+     "max_ft": 84.0,
+     "unit": "'",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Marks Head Formation",
+      "source_id": "ngmdb:1110",
+      "page": 3,
+      "extraction_method": "llm",
+      "confidence": 0.765,
+      "inferred": false,
+      "locator": null,
+      "quote": "quadrangle (MH 81, MH 82), but otherwise has been stripped from this quadrangle by later erosion.",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "agree",
+      "normalized": {
+       "canonical": "Marks Head",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "MH 83",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "hole MH 83. Unweathered beds contain a moderately diverse molluscan fossil",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "elevation": {
+    "value": "65' elev",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.52,
+    "inferred": true,
+    "locator": null,
+    "quote": "(11' elev) (12' elev) | (33’ elev) (30' elev) | (50' elev) (45' elev) | (84' elev) (65' elev)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "matched to the hole by column order in the auger hole log header",
+    "normalized": {
+     "min_ft": 65.0,
+     "max_ft": 65.0,
+     "unit": "'",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "MH 82",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "quadrangle (MH 81, MH 82), but otherwise has been stripped from this quadrangle by later erosion.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Marks Head Formation",
+      "source_id": "ngmdb:1110",
+      "page": 3,
+      "extraction_method": "llm",
+      "confidence": 0.65,
+      "inferred": false,
+      "locator": null,
+      "quote": "quadrangle (MH 81, MH 82), but otherwise has been stripped from this quadrangle by later erosion.",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": null,
+      "normalized": {
+       "canonical": "Marks Head",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "structures": [
+  {
+   "kind": "contact",
+   "name": {
+    "value": "Eocene-Oligocene contact",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "unusually steep slope on the Eocene-Oligocene contact that is a prominent feature shown in sections",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "strike_dip": {
+    "value": "trends north-northwest and dips to the southwest; dip shallow, locally up to 20°",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "This slope trends north-northwest and dips to the southwest. The dip is shallow, but",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "unusually steep slope on the Eocene-Oligocene contact; the 1886 earthquake epicenter may lie above the toe of this slope; locally up to 20° at the prominent scarp in section A-A'",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "locally it may be up to 20°, as at the prominent scarp in section A-A’",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "kind": "contact",
+   "name": {
+    "value": "Subsurface boundary between the Parkers Ferry (Eocene) and Ashley (Oligocene) Formations",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Subsurface boundary between the Parkers Ferry (Eocene) and Ashley",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "Tick marks point to Ashley beds",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "(Oligocene) Formations—Tick marks point to Ashley beds",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "kind": "other",
+   "name": {
+    "value": "domal feature of Parkers Ferry Formation",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": null,
+    "quote": "Formation in the northeastern section of the quadrangle is part of a domal feature entirely surrounded",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "location": {
+    "value": "northeastern section of the quadrangle",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Formation in the northeastern section of the quadrangle is part of a domal feature entirely surrounded",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "domal feature surrounded by Ashley sediment; at least in part the result of paleoerosion, but may be partly tectonic",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "These features are, at least in part, the result of paleoerosion, but may be partly",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "kind": "other",
+   "name": {
+    "value": "Structure contours on base of Quaternary units",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Structure contour—Drawn on base of Quaternary units. Contour interval 10",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "Drawn on base of Quaternary units; contour interval 10 feet; datum mean sea level",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Structure contour—Drawn on base of Quaternary units. Contour interval 10",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "kind": "other",
+   "name": {
+    "value": "Bethera Scarp",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Talbot terrace northwest of the Bethera Scarp (Colquhoun, 1974) and is equivalent to unit Q4 of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "groundwater": [
+  {
+   "aquifer": {
+    "value": "the water sands",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Ground water flows freely through this unit, and it is locally known as “the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "unit": {
+    "value": "Goose Creek Limestone",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.52,
+    "inferred": true,
+    "locator": null,
+    "quote": "soft and easily excavated. Ground water flows freely through this unit, and it is locally known as “the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "paragraph on the Goose Creek Limestone",
+    "normalized": {
+     "canonical": "Goose Creek",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "role": {
+    "value": "aquifer",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.52,
+    "inferred": true,
+    "locator": null,
+    "quote": "Ground water flows freely through this unit",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Quaternary units",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Quaternary units are generally saturated with water",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "generally saturated with water and occasionally tapped; major regional aquifers lie below the units shown",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "this area below any of the units shown in this report.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "references": [
+  {
+   "citation": {
+    "value": "Abbott, W. H., and Huddlestun, P. F., 1980, The Miocene of South Carolina, in Dubar, J. R., Dubar, S. S., Ward, L. W., and Blackwelser, B. W., Cenozoic biostratigraphy of the Carolina outer Coastal Plain: Geological Society of America Field Trip Guidebook Number 9, p. 208-210.",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Abbott, W. H., and Huddlestun, P. F., 1980, The Miocene of South Carolina, in Dubar, J. R., Dubar",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Colquhoun, D. J., 1974, Cyclic surficial stratigraphic units of the middle and lower coastal plains, central South Carolina in Oaks, R. Q., Jr., and DuBar, J. R., eds., Post-Miocene stratigraphy central and southern Atlantic Coastal Plain: Logan, Utah State University Press, p. 179-190.",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Colquhoun, D. J., 1974, Cyclic surficial stratigraphic units of the middle and lower coastal plains, central",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Cooke, C. W., 1936, Geology of the coastal plain of South Carolina: U. S. Geological Survey Bulletin 867, 196 p.",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cooke, C. W., 1936, Geology of the coastal plain of South Carolina: U. S. Geological Survey Bulletin",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Cronin, T. M., Szabo, B. J., Ager, T. A., Hazel, J. E., and Owens, J. P., 1981, Quaternary climates and sea levels of the U.S, Atlantic Coastal Plain; Science, v. 211, no. 4479, p. 233-240.",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cronin, T. M., Szabo, B. J., Ager, T. A., Hazel, J. E., and Owens, J. P., 1981, Quaternary climates and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "DuBar, J. R., 1971, Neogene stratigraphy of the Lower Coastal Plain of the Carolinas: Atlantic Coastal Plain Geological Association Field Conference, no. 12, 128 p.",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "DuBar, J. R., 1971, Neogene stratigraphy of the Lower Coastal Plain of the Carolinas: Atlantic Coastal",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Dutton, C. E., 1889, The Charleston earthquake of August 31, 1886: U.S. Geological Survey, Ninth Annual Report 1887-88, p. 203-528.",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Dutton, C. E., 1889, The Charleston earthquake of August 31, 1886: U.S. Geological Survey, Ninth",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Force, E. R., Gohn, G. S., Force, L. M., and Higgins, B. B., 1978, Uranium and phosphate resources of the Charleston region, South Carolina: Geologic Notes, v. 22, n. 1, p. 17-31.",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Force, E. R., Gohn, G. S., Force, L. M., and Higgins, B. B., 1978, Uranium and phosphate resources",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Gibbes, L. R., Mazyck, W. G., Schlepegrell, F. W., Manigault, G. E., and Colson, C. B., 1887, report of the commission appointed to study the Charleston Earthquake of August 31, 1886: Proceedings of the Elliott Society of Science and Art, Charleston, South Carolina v. 2, p. 134-171.",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gibbes, L. R., Mazyck, W. G., Schlepegrell, F. W., Manigault, G. E., and Colson, C. B., 1887, report",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Goddard, E. N., and others, 1948, Rock-color chart: Washington, D. C., National Research Council; reprinted by Geological Society of America 1951, 1963, 1970, 1970, 6 p.",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "Goddard, E. N., and others, 1948, Rock-color chart: Washington, D. C., National Research Council;",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Gohn, G. S., Higgins, B. B., Smith, C. C., and Owens, J. P., 1977, Lithostratigraphy of the deep corehole (Clubhouse Crossroads corehole 1) near Charleston, South Carolina in D. W. Rankin, ed., Studies related to the Charleston, South Carolina, earthquake of 1886; A preliminary report: U. S. Geological Survey Professional Paper 1028-E, p. 59-70.",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gohn, G. S., Higgins, B. B., Smith, C. C., and Owens, J. P., 1977, Lithostratigraphy of the deep",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Hazel, J. E., Bybell, L. M., Christopher, R. A., Frederiksen, N. O., May, F. E., McLean, D. M., Poore, R. Z., Smith, C. C., Sohl, N. F., Valentine, P. C., and Witmer, R. J., 1977, Biostratigraphy of the deep corehole (Clubhouse Crossroads corehole 1) near Charleston, South Carolina, in Rankin, D. W., ed., Studies related to the Charleston, South Carolina, earthquake of 1886; A preliminary report: U. S. Geological Survey Professional Paper 1028-F, p. 71-89.",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Hazel, J. E., Bybell, L. M., Christopher, R. A., Frederiksen, N. O., May, F. E., McLean, D. M., Poore",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Leidy, J. P., 1876, Remarks on fossils from the Ashley phosphate beds: Proceedings of the Academy of Natural Sciences of Philadelphia, v. 28, p. 80-81, 86-87, 114-115.",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Leidy, J. P., 1876, Remarks on fossils from the Ashley phosphate beds: Proceedings of the Academy of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Leidy, J. P., 1877, Description of vertebrate remains, chiefly from the phosphate beds of South Carolina: Journal of Academy of Natural Sciences, Philadelphia, series 2, v. 8, part 3, article 9, p. 209-262.",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": null,
+    "quote": "1877, Description of vertebrate remains, chiefly from the phosphate beds of South Carolina:",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Lemon, E. M., Jr., 1979, Textural and clay-mineral differentiation of Oligocene and Pleistocene deposits in the Stallsville quadrangle, S. C.: Geological Society of America, Southeastern Section, 28th Annual Meeting, Abstracts with Programs, v. 11, no. 4. p. 186.",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Lemon, E. M., Jr., 1979, Textural and clay-mineral differentiation of Oligocene and Pleistocene deposits",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Liddicoat, J. C., McCartan, Lucy, Weems, R. E., and Lemon, E. M. Jdr., 1981, Paleomagnetic investigation of Pliocene and Pleistocene sediments in the Charleston, S. C., area: Geological Society of America, Southeastern Section, 30th Annual meeting, Abstracts with Programs v. 13, no. 1, p. 12, 29.",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Liddicoat, J. C., McCartan, Lucy, Weems, R. E., and Lemon, E. M. Jdr., 1981, Paleomagnetic",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Malde, H. E., 1959, Geology of the Charleston phosphate area, South Carolina: U.S. Geological Survey Bulletin 1079, p. 1-105.",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "Malde, H. E., 1959, Geology of the Charleston phosphate area, South Carolina: U.S. Geological Survey",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "McCartan, Lucy, Weems, R. E., and Lemon, E. M., Jr., 1980, The Wando Formation (Upper Pleistocene) in the Charleston, S. C. area, in Contributions to stratigraphy: U. S. Geological Survey Bulletin 1502-A, p. A110-A116.",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "McCartan, Lucy, Weems, R. E., and Lemon, E. M., Jr., 1980, The Wando Formation (Upper Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "McCartan, Lucy, Lemon, E. M., Jr., and Weems, R. E., 1984, Geology of the area between Charleston and Orangeburg, South Carolina, 1:250,000 scale: U.S. Geological Survey Miscellaneous Investigations Series Map I-1472.",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "McCartan, Lucy, Lemon, E. M., Jr., and Weems, R. E., 1984, Geology of the area between Charleston",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Parker, G. G., and Cooke, C. W., 1944, Late Cenozoic geology of southern Florida, with a discussion of the groundwater: Florida Geological Survey Bulletin 27, p. 1-119.",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Parker, G. G., and Cooke, C. W., 1944, Late Cenozoic geology of southern Florida, with a discussion",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Sanders, A. E., Weems, R. E., and Lemon, E. M., Jr., 1982, The Chandler Bridge formation—a new Oligocene stratiagraphic unit in the lower Coastal Plain of South Carolina in Contributions to stratigraphy. U.S. Geological Survey Bulletin 1529-H, p. H105-H124.",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Sanders, A. E., Weems, R. E., and Lemon, E. M., Jr., 1982, The Chandler Bridge formation—a new",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Shackleton, N. J., and Opydke, N. D., 1973, Oxygen isotope and paleomagnetic stratigraphy, of Equatorial Pacific core V28-238: Quaternary Research, v. 3, p. 39-55.",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Shackleton, N. J., and Opydke, N. D., 1973, Oxygen isotope and paleomagnetic stratigraphy, of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Sloan, Earle, 1908, Catalogue of the mineral localities of South Carolina: South Carolina Geological Survey Bulletin, v. 2, p. 1-105; reprinted 1958.",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Sloan, Earle, 1908, Catalogue of the mineral localities of South Carolina: South Carolina Geological",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Ward, L. W., Blackwelder, B. W., Gohn, G. S. and Poore, R. Z., 1979. Stratigraphic revision of Eocene, Oligocene and Lower Miocene formations of South Carolina: Geologic Notes, v. 23, no. 1, p. 2-32.",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Ward, L. W., Blackwelder, B. W., Gohn, G. S. and Poore, R. Z., 1979. Stratigraphic revision of Eocene",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Weems, R. E., Lemon, E. M., dr., McCartan, Lucy, Bybell, L. M., and Sanders, A. E., 1982, Recognition and formalization of the Pliocene “Goose Creek Phase” in the Charleston, S. C., area in Contributions to stratigraphy: United States Geological Survey Bulletin 1529-H, p. H137-H148.",
+    "source_id": "ngmdb:1110",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Weems, R. E., Lemon, E. M., dr., McCartan, Lucy, Bybell, L. M., and Sanders, A. E., 1982, Recognition",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ]
+}
