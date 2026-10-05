@@ -8,10 +8,11 @@
  "kind": "publication",
  "schema_version": 1,
  "extracted_at": "2026-10-05T01:10:02+00:00",
- "updated_at": "2026-10-05T01:10:02+00:00",
+ "updated_at": "2026-10-05T01:11:25+00:00",
  "reader": "Claude, reading session 2026-10-05",
  "packets": [
-  "packet-01"
+  "packet-01",
+  "packet-02"
  ],
  "blocks_done": [
   "1",
@@ -64,11 +65,72 @@
   "49",
   "50",
   "51",
-  "52"
+  "52",
+  "53",
+  "54",
+  "55",
+  "56",
+  "57",
+  "58",
+  "59",
+  "60",
+  "61",
+  "62",
+  "63",
+  "64",
+  "65",
+  "66",
+  "67",
+  "68",
+  "69",
+  "70",
+  "71",
+  "72",
+  "73",
+  "74",
+  "75",
+  "76",
+  "77",
+  "78",
+  "79",
+  "80",
+  "81",
+  "82",
+  "83",
+  "84",
+  "85",
+  "86",
+  "87",
+  "88",
+  "89",
+  "90",
+  "91",
+  "92",
+  "93",
+  "94",
+  "95",
+  "96",
+  "97",
+  "98",
+  "99",
+  "100",
+  "101",
+  "102",
+  "103",
+  "104",
+  "105",
+  "106",
+  "107",
+  "108",
+  "109",
+  "110",
+  "111",
+  "112",
+  "113"
  ],
  "blocks_total": 112,
- "complete": false,
- "notes": "Pages 1-52. Water-chemistry report. Map figures (pp. 10, 23, 31-34), figure 12 profiles (p. 38) and figure 14 (p. 43, garbled) were skipped. Water-chemistry tables (Table 2 starting p. 51, continued in the next packet) hold chemical analyses that do not fit the schema fields and were not recorded. Regional formation list on p. 16 (Cape Fear, Middendorf, Black Creek, Congaree, McBean, Barnwell) is cited from other reports and recorded only as names/ages stated. References: general chemistry/method references and Georgia-only references were skipped. Siple 1956-1969 entries are printed without author name (continuation entries); author inferred from the preceding entry.",
+ "complete": true,
+ "notes": "Pages 1-52. Water-chemistry report. Map figures (pp. 10, 23, 31-34), figure 12 profiles (p. 38) and figure 14 (p. 43, garbled) were skipped. Water-chemistry tables (Table 2 starting p. 51, continued in the next packet) hold chemical analyses that do not fit the schema fields and were not recorded. Regional formation list on p. 16 (Cape Fear, Middendorf, Black Creek, Congaree, McBean, Barnwell) is cited from other reports and recorded only as names/ages stated. References: general chemistry/method references and Georgia-only references were skipped. Siple 1956-1969 entries are printed without author name (continuation entries); author inferred from the preceding entry.\nPages 53-113 are water-chemistry tables only (Table 2 cont., Tables 3, 4, 5). Chemical constituent values do not fit the schema fields and were not recorded. From Table 5 (isolated-section sampling, 1984-87) each well's land-surface elevation, depth of well, sample interval and field specific conductance are recorded as observations; wells BFT-1672 to BFT-1680 were drilled beneath Port Royal Sound from a platform ship (elevation printed as 0). For some rows (BFT-566, BFT-787, BFT-1814) the sample-interval bottom exceeds the printed well depth; recorded as printed. BFT-1288 date printed as 01-04-95 on one row and 01-04-85 on the next. Tables 2-4 give only depth of well and chemistry for historical wells; not recorded. Table 3 data are from Hassen (1985).",
  "files": [
   {
    "url": "https://pubs.usgs.gov/wri/1996/4102/report.pdf",
@@ -79,12 +141,12 @@
   }
  ],
  "summary": {
-  "stored": 135,
+  "stored": 407,
   "quote_match": {
-   "exact": 135
+   "exact": 407
   },
   "verification": {
-   "agree": 14
+   "agree": 251
   },
   "inferred": 10
  },
@@ -103,6 +165,24 @@
    "quote_not_found": 0,
    "wrong_page": 0,
    "agree": 14,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-10-05T01:11:25+00:00",
+   "packets": [
+    "packet-02"
+   ],
+   "reader": "Claude, reading session 2026-10-05",
+   "values": 272,
+   "stored": 272,
+   "exact": 272,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 237,
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
@@ -891,6 +971,5310 @@
      "approximate": false
     }
    }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-121",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-121   02-27-85   31.2   105.00   84   100   20   241",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "02-27-85",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-121   02-27-85   31.2   105.00   84   100   20   241",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "31.2",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-121   02-27-85   31.2   105.00   84   100   20   241",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 31.2,
+     "max_ft": 31.2,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "105.00",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-121   02-27-85   31.2   105.00   84   100   20   241",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 105.0,
+     "max_ft": 105.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "84",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-121   02-27-85   31.2   105.00   84   100   20   241",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 84.0,
+       "max_ft": 84.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "100",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-121   02-27-85   31.2   105.00   84   100   20   241",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 100.0,
+       "max_ft": 100.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 241 uS/cm (sampled 02-27-85)",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-121   02-27-85   31.2   105.00   84   100   20   241",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-181",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-181   12-20-84   11.2   119.00   93   117   20.5   4,760",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "12-20-84",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-181   12-20-84   11.2   119.00   93   117   20.5   4,760",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "11.2",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-181   12-20-84   11.2   119.00   93   117   20.5   4,760",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 11.2,
+     "max_ft": 11.2,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "119.00",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-181   12-20-84   11.2   119.00   93   117   20.5   4,760",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 119.0,
+     "max_ft": 119.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "93",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-181   12-20-84   11.2   119.00   93   117   20.5   4,760",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 93.0,
+       "max_ft": 93.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "117",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-181   12-20-84   11.2   119.00   93   117   20.5   4,760",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 117.0,
+       "max_ft": 117.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 4,760 uS/cm (sampled 12-20-84)",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-181   12-20-84   11.2   119.00   93   117   20.5   4,760",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-210",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-210   05-21-85   5.9   164.00   130   160   20.5   325",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "05-21-85",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-210   05-21-85   5.9   164.00   130   160   20.5   325",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "5.9",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-210   05-21-85   5.9   164.00   130   160   20.5   325",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 5.9,
+     "max_ft": 5.9,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "164.00",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-210   05-21-85   5.9   164.00   130   160   20.5   325",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 164.0,
+     "max_ft": 164.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "130",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-210   05-21-85   5.9   164.00   130   160   20.5   325",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 130.0,
+       "max_ft": 130.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "160",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-210   05-21-85   5.9   164.00   130   160   20.5   325",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 160.0,
+       "max_ft": 160.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 325 uS/cm (sampled 05-21-85)",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-210   05-21-85   5.9   164.00   130   160   20.5   325",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-439",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-439   07-23-85   6.9   195   182   195   21.5   332",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "07-23-85",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-439   07-23-85   6.9   195   182   195   21.5   332",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "6.9",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-439   07-23-85   6.9   195   182   195   21.5   332",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 6.9,
+     "max_ft": 6.9,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "195",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-439   07-23-85   6.9   195   182   195   21.5   332",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 195.0,
+     "max_ft": 195.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "182",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-439   07-23-85   6.9   195   182   195   21.5   332",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 182.0,
+       "max_ft": 182.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "195",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-439   07-23-85   6.9   195   182   195   21.5   332",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 195.0,
+       "max_ft": 195.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 332 uS/cm (sampled 07-23-85)",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-439   07-23-85   6.9   195   182   195   21.5   332",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-441",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-441   01-10-85   10.1   216   187   216   21   500",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "01-10-85",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-441   01-10-85   10.1   216   187   216   21   500",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "10.1",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-441   01-10-85   10.1   216   187   216   21   500",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 10.1,
+     "max_ft": 10.1,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "216",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-441   01-10-85   10.1   216   187   216   21   500",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 216.0,
+     "max_ft": 216.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "187",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-441   01-10-85   10.1   216   187   216   21   500",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 187.0,
+       "max_ft": 187.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "216",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-441   01-10-85   10.1   216   187   216   21   500",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 216.0,
+       "max_ft": 216.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 500 uS/cm (sampled 01-10-85)",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-441   01-10-85   10.1   216   187   216   21   500",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-453",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-453   04-16-85   18   105   85   105   21.5   289",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "04-16-85",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-453   04-16-85   18   105   85   105   21.5   289",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "18",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-453   04-16-85   18   105   85   105   21.5   289",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 18.0,
+     "max_ft": 18.0,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "105",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-453   04-16-85   18   105   85   105   21.5   289",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 105.0,
+     "max_ft": 105.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "85",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-453   04-16-85   18   105   85   105   21.5   289",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 85.0,
+       "max_ft": 85.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "105",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-453   04-16-85   18   105   85   105   21.5   289",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 105.0,
+       "max_ft": 105.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 289 uS/cm (sampled 04-16-85)",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-453   04-16-85   18   105   85   105   21.5   289",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-459",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-459   02-26-85   10.2   100   85   100   20.5   4,020",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "02-26-85",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-459   02-26-85   10.2   100   85   100   20.5   4,020",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "10.2",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-459   02-26-85   10.2   100   85   100   20.5   4,020",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 10.2,
+     "max_ft": 10.2,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "100",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-459   02-26-85   10.2   100   85   100   20.5   4,020",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 100.0,
+     "max_ft": 100.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "85",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-459   02-26-85   10.2   100   85   100   20.5   4,020",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 85.0,
+       "max_ft": 85.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "100",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-459   02-26-85   10.2   100   85   100   20.5   4,020",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 100.0,
+       "max_ft": 100.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 4,020 uS/cm (sampled 02-26-85)",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-459   02-26-85   10.2   100   85   100   20.5   4,020",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-565",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-565   05-22-85   15.8   207   89   207   21.5   11,900",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "05-22-85",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-565   05-22-85   15.8   207   89   207   21.5   11,900",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "15.8",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-565   05-22-85   15.8   207   89   207   21.5   11,900",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 15.8,
+     "max_ft": 15.8,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "207",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-565   05-22-85   15.8   207   89   207   21.5   11,900",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 207.0,
+     "max_ft": 207.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "89",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-565   05-22-85   15.8   207   89   207   21.5   11,900",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 89.0,
+       "max_ft": 89.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "207",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-565   05-22-85   15.8   207   89   207   21.5   11,900",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 207.0,
+       "max_ft": 207.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 11,900 uS/cm (sampled 05-22-85)",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-565   05-22-85   15.8   207   89   207   21.5   11,900",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-566",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-566   02-25-85   13.1   189   184   232   21.5   42,800",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "02-25-85",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-566   02-25-85   13.1   189   184   232   21.5   42,800",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "13.1",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-566   02-25-85   13.1   189   184   232   21.5   42,800",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 13.1,
+     "max_ft": 13.1,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "189",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-566   02-25-85   13.1   189   184   232   21.5   42,800",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 189.0,
+     "max_ft": 189.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "184",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-566   02-25-85   13.1   189   184   232   21.5   42,800",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 184.0,
+       "max_ft": 184.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "232",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-566   02-25-85   13.1   189   184   232   21.5   42,800",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Sample-interval bottom exceeds the depth of well as printed",
+      "normalized": {
+       "min_ft": 232.0,
+       "max_ft": 232.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 42,800 uS/cm (sampled 02-25-85)",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-566   02-25-85   13.1   189   184   232   21.5   42,800",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-787",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-787   04-23-85   12   185   126   239   21   479",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "04-23-85",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-787   04-23-85   12   185   126   239   21   479",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "12",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-787   04-23-85   12   185   126   239   21   479",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 12.0,
+     "max_ft": 12.0,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "185",
+    "source_id": "ngmdb:48460",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-787   04-23-85   12   185   126   239   21   479",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 185.0,
+     "max_ft": 185.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "126",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-787   04-23-85   12   185   126   239   21   479",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 126.0,
+       "max_ft": 126.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "239",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-787   04-23-85   12   185   126   239   21   479",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Sample-interval bottom exceeds the depth of well as printed",
+      "normalized": {
+       "min_ft": 239.0,
+       "max_ft": 239.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 479 uS/cm (sampled 04-23-85)",
+      "source_id": "ngmdb:48460",
+      "page": 82,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-787   04-23-85   12   185   126   239   21   479",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-791",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-791   03-06-85   10   102   81   102   20   436",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "03-06-85",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-791   03-06-85   10   102   81   102   20   436",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "10",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-791   03-06-85   10   102   81   102   20   436",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 10.0,
+     "max_ft": 10.0,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "102",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-791   03-06-85   10   102   81   102   20   436",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 102.0,
+     "max_ft": 102.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "81",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-791   03-06-85   10   102   81   102   20   436",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 81.0,
+       "max_ft": 81.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "102",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-791   03-06-85   10   102   81   102   20   436",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 102.0,
+       "max_ft": 102.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 436 uS/cm (sampled 03-06-85)",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-791   03-06-85   10   102   81   102   20   436",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-795",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-795   01-16-85   9.7   91   77   91   21   41,300",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "01-16-85",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-795   01-16-85   9.7   91   77   91   21   41,300",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "9.7",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-795   01-16-85   9.7   91   77   91   21   41,300",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 9.7,
+     "max_ft": 9.7,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "91",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-795   01-16-85   9.7   91   77   91   21   41,300",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 91.0,
+     "max_ft": 91.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "77",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-795   01-16-85   9.7   91   77   91   21   41,300",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 77.0,
+       "max_ft": 77.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "91",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-795   01-16-85   9.7   91   77   91   21   41,300",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 91.0,
+       "max_ft": 91.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 41,300 uS/cm (sampled 01-16-85)",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-795   01-16-85   9.7   91   77   91   21   41,300",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-1288",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1288   01-04-95   10   115   60   115   20   408",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "01-04-95",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1288   01-04-95   10   115   60   115   20   408",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "10",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1288   01-04-95   10   115   60   115   20   408",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 10.0,
+     "max_ft": 10.0,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "115",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1288   01-04-95   10   115   60   115   20   408",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 115.0,
+     "max_ft": 115.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "60",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1288   01-04-95   10   115   60   115   20   408",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 60.0,
+       "max_ft": 60.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "115",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1288   01-04-95   10   115   60   115   20   408",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 115.0,
+       "max_ft": 115.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 408 uS/cm (sampled 01-04-95)",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1288   01-04-95   10   115   60   115   20   408",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-1672",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1672   07-23-84   0   117   95   107   21   1,080",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "07-23-84",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1672   07-23-84   0   117   95   107   21   1,080",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "0",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1672   07-23-84   0   117   95   107   21   1,080",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 0.0,
+     "max_ft": 0.0,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "117",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1672   07-23-84   0   117   95   107   21   1,080",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 117.0,
+     "max_ft": 117.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "95",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1672   07-23-84   0   117   95   107   21   1,080",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 95.0,
+       "max_ft": 95.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "107",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1672   07-23-84   0   117   95   107   21   1,080",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 107.0,
+       "max_ft": 107.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 1,080 uS/cm (sampled 07-23-84)",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1672   07-23-84   0   117   95   107   21   1,080",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    },
+    {
+     "top": {
+      "value": "174",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "07-25-84   211   174   211   22   24,400",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 174.0,
+       "max_ft": 174.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "211",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "07-25-84   211   174   211   22   24,400",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 211.0,
+       "max_ft": 211.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 24,400 uS/cm (sampled 07-25-84); depth of well 211 ft at this sampling",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "07-25-84   211   174   211   22   24,400",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-1673",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1673   08-02-84   0   101   85   101   25   652",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "08-02-84",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1673   08-02-84   0   101   85   101   25   652",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "0",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1673   08-02-84   0   101   85   101   25   652",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 0.0,
+     "max_ft": 0.0,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "101",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1673   08-02-84   0   101   85   101   25   652",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 101.0,
+     "max_ft": 101.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "85",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1673   08-02-84   0   101   85   101   25   652",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 85.0,
+       "max_ft": 85.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "101",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1673   08-02-84   0   101   85   101   25   652",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 101.0,
+       "max_ft": 101.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 652 uS/cm (sampled 08-02-84)",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1673   08-02-84   0   101   85   101   25   652",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    },
+    {
+     "top": {
+      "value": "170",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "08-03-84   208   170   208   24   20,000",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 170.0,
+       "max_ft": 170.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "208",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "08-03-84   208   170   208   24   20,000",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 208.0,
+       "max_ft": 208.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 20,000 uS/cm (sampled 08-03-84); depth of well 208 ft at this sampling",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "08-03-84   208   170   208   24   20,000",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-1674",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1674   08-09-84   0   113   101   113   25.5   660",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "08-09-84",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1674   08-09-84   0   113   101   113   25.5   660",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "0",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1674   08-09-84   0   113   101   113   25.5   660",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 0.0,
+     "max_ft": 0.0,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "113",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1674   08-09-84   0   113   101   113   25.5   660",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 113.0,
+     "max_ft": 113.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "101",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1674   08-09-84   0   113   101   113   25.5   660",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 101.0,
+       "max_ft": 101.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "113",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1674   08-09-84   0   113   101   113   25.5   660",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 113.0,
+       "max_ft": 113.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 660 uS/cm (sampled 08-09-84)",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1674   08-09-84   0   113   101   113   25.5   660",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    },
+    {
+     "top": {
+      "value": "170",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "08-10-84   174   170   174   22   27,800",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 170.0,
+       "max_ft": 170.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "174",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "08-10-84   174   170   174   22   27,800",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 174.0,
+       "max_ft": 174.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 27,800 uS/cm (sampled 08-10-84); depth of well 174 ft at this sampling",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "08-10-84   174   170   174   22   27,800",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-1675",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1675   08-24-84   0   103   89   103   21   544",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "08-24-84",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1675   08-24-84   0   103   89   103   21   544",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "0",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1675   08-24-84   0   103   89   103   21   544",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 0.0,
+     "max_ft": 0.0,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "103",
+    "source_id": "ngmdb:48460",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1675   08-24-84   0   103   89   103   21   544",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 103.0,
+     "max_ft": 103.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "89",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1675   08-24-84   0   103   89   103   21   544",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 89.0,
+       "max_ft": 89.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "103",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1675   08-24-84   0   103   89   103   21   544",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 103.0,
+       "max_ft": 103.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 544 uS/cm (sampled 08-24-84)",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1675   08-24-84   0   103   89   103   21   544",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    },
+    {
+     "top": {
+      "value": "186",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "08-24-84   212   186   212   22.3   871",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 186.0,
+       "max_ft": 186.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "212",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "08-24-84   212   186   212   22.3   871",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 212.0,
+       "max_ft": 212.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 871 uS/cm (sampled 08-24-84); depth of well 212 ft at this sampling",
+      "source_id": "ngmdb:48460",
+      "page": 90,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "08-24-84   212   186   212   22.3   871",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-1676",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1676   8-30-84   0   110   97   110   21.5   380",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "8-30-84",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1676   8-30-84   0   110   97   110   21.5   380",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "0",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1676   8-30-84   0   110   97   110   21.5   380",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 0.0,
+     "max_ft": 0.0,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "110",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1676   8-30-84   0   110   97   110   21.5   380",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 110.0,
+     "max_ft": 110.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "97",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1676   8-30-84   0   110   97   110   21.5   380",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 97.0,
+       "max_ft": 97.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "110",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1676   8-30-84   0   110   97   110   21.5   380",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 110.0,
+       "max_ft": 110.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 380 uS/cm (sampled 8-30-84)",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1676   8-30-84   0   110   97   110   21.5   380",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    },
+    {
+     "top": {
+      "value": "178",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "8-31-84   0   211   178   182   22   1,640",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 178.0,
+       "max_ft": 178.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "182",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "8-31-84   0   211   178   182   22   1,640",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 182.0,
+       "max_ft": 182.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 1,640 uS/cm (sampled 8-31-84); depth of well 211 ft at this sampling",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "8-31-84   0   211   178   182   22   1,640",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-1677",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1677   9-07-84   0   99   92   99   21   4,420",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "9-07-84",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1677   9-07-84   0   99   92   99   21   4,420",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "0",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1677   9-07-84   0   99   92   99   21   4,420",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 0.0,
+     "max_ft": 0.0,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "99",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1677   9-07-84   0   99   92   99   21   4,420",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 99.0,
+     "max_ft": 99.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "92",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1677   9-07-84   0   99   92   99   21   4,420",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 92.0,
+       "max_ft": 92.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "99",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1677   9-07-84   0   99   92   99   21   4,420",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 99.0,
+       "max_ft": 99.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 4,420 uS/cm (sampled 9-07-84)",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1677   9-07-84   0   99   92   99   21   4,420",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    },
+    {
+     "top": {
+      "value": "159",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "9-08-84   0   169   159   176   21.5   19,100",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 159.0,
+       "max_ft": 159.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "176",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "9-08-84   0   169   159   176   21.5   19,100",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 176.0,
+       "max_ft": 176.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 19,100 uS/cm (sampled 9-08-84); depth of well 169 ft at this sampling",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "9-08-84   0   169   159   176   21.5   19,100",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-1678",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1678   9-20-84   0   87   76   86   21   757",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "9-20-84",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1678   9-20-84   0   87   76   86   21   757",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "0",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1678   9-20-84   0   87   76   86   21   757",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 0.0,
+     "max_ft": 0.0,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "87",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1678   9-20-84   0   87   76   86   21   757",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 87.0,
+     "max_ft": 87.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "76",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1678   9-20-84   0   87   76   86   21   757",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 76.0,
+       "max_ft": 76.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "86",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1678   9-20-84   0   87   76   86   21   757",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 86.0,
+       "max_ft": 86.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 757 uS/cm (sampled 9-20-84)",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1678   9-20-84   0   87   76   86   21   757",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    },
+    {
+     "top": {
+      "value": "151",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "9-21-84   192   151   155   22   1,050",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 151.0,
+       "max_ft": 151.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "155",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "9-21-84   192   151   155   22   1,050",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 155.0,
+       "max_ft": 155.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 1,050 uS/cm (sampled 9-21-84); depth of well 192 ft at this sampling",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "9-21-84   192   151   155   22   1,050",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-1679",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1679   9-27-84   0   120   108   120   21   1,450",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "9-27-84",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1679   9-27-84   0   120   108   120   21   1,450",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "0",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1679   9-27-84   0   120   108   120   21   1,450",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 0.0,
+     "max_ft": 0.0,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "120",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1679   9-27-84   0   120   108   120   21   1,450",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 120.0,
+     "max_ft": 120.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "108",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1679   9-27-84   0   120   108   120   21   1,450",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 108.0,
+       "max_ft": 108.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "120",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1679   9-27-84   0   120   108   120   21   1,450",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 120.0,
+       "max_ft": 120.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 1,450 uS/cm (sampled 9-27-84)",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1679   9-27-84   0   120   108   120   21   1,450",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-1680",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1680   10-05-84   0   117   103   117   21   20,600",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "10-05-84",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1680   10-05-84   0   117   103   117   21   20,600",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "0",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1680   10-05-84   0   117   103   117   21   20,600",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 0.0,
+     "max_ft": 0.0,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "117",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1680   10-05-84   0   117   103   117   21   20,600",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 117.0,
+     "max_ft": 117.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "103",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1680   10-05-84   0   117   103   117   21   20,600",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 103.0,
+       "max_ft": 103.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "117",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1680   10-05-84   0   117   103   117   21   20,600",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 117.0,
+       "max_ft": 117.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 20,600 uS/cm (sampled 10-05-84)",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1680   10-05-84   0   117   103   117   21   20,600",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    },
+    {
+     "top": {
+      "value": "173",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "10-05-84   218   173   218   21.5   25,300",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 173.0,
+       "max_ft": 173.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "218",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "10-05-84   218   173   218   21.5   25,300",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 218.0,
+       "max_ft": 218.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 25,300 uS/cm (sampled 10-05-84); depth of well 218 ft at this sampling",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "10-05-84   218   173   218   21.5   25,300",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-1689",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1689   1-11-85   5   203   91   203   21   246",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "1-11-85",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1689   1-11-85   5   203   91   203   21   246",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "5",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1689   1-11-85   5   203   91   203   21   246",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 5.0,
+     "max_ft": 5.0,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "203",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1689   1-11-85   5   203   91   203   21   246",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 203.0,
+     "max_ft": 203.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "91",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1689   1-11-85   5   203   91   203   21   246",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 91.0,
+       "max_ft": 91.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "203",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1689   1-11-85   5   203   91   203   21   246",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 203.0,
+       "max_ft": 203.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 246 uS/cm (sampled 1-11-85)",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1689   1-11-85   5   203   91   203   21   246",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-1754",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1754   4-22-85   11   75   66   75   19.5   2,390",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "4-22-85",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1754   4-22-85   11   75   66   75   19.5   2,390",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "11",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1754   4-22-85   11   75   66   75   19.5   2,390",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 11.0,
+     "max_ft": 11.0,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "75",
+    "source_id": "ngmdb:48460",
+    "page": 98,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1754   4-22-85   11   75   66   75   19.5   2,390",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 75.0,
+     "max_ft": 75.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "66",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1754   4-22-85   11   75   66   75   19.5   2,390",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 66.0,
+       "max_ft": 66.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "75",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1754   4-22-85   11   75   66   75   19.5   2,390",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 75.0,
+       "max_ft": 75.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 2,390 uS/cm (sampled 4-22-85)",
+      "source_id": "ngmdb:48460",
+      "page": 98,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1754   4-22-85   11   75   66   75   19.5   2,390",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-1810",
+    "source_id": "ngmdb:48460",
+    "page": 106,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1810   1-28-87   12   202   175   202   21.5   1,540",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "1-28-87",
+    "source_id": "ngmdb:48460",
+    "page": 106,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1810   1-28-87   12   202   175   202   21.5   1,540",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "12",
+    "source_id": "ngmdb:48460",
+    "page": 106,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1810   1-28-87   12   202   175   202   21.5   1,540",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 12.0,
+     "max_ft": 12.0,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "202",
+    "source_id": "ngmdb:48460",
+    "page": 106,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1810   1-28-87   12   202   175   202   21.5   1,540",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 202.0,
+     "max_ft": 202.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "175",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1810   1-28-87   12   202   175   202   21.5   1,540",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 175.0,
+       "max_ft": 175.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "202",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1810   1-28-87   12   202   175   202   21.5   1,540",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 202.0,
+       "max_ft": 202.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 1,540 uS/cm (sampled 1-28-87)",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1810   1-28-87   12   202   175   202   21.5   1,540",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    },
+    {
+     "top": {
+      "value": "102",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "1-29-87   102   125   21   466",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 102.0,
+       "max_ft": 102.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "125",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "1-29-87   102   125   21   466",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 125.0,
+       "max_ft": 125.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 466 uS/cm (sampled 1-29-87)",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "1-29-87   102   125   21   466",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-1814",
+    "source_id": "ngmdb:48460",
+    "page": 106,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1814   1-13-87   12   202   175   220   21.5   816",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "1-13-87",
+    "source_id": "ngmdb:48460",
+    "page": 106,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1814   1-13-87   12   202   175   220   21.5   816",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "12",
+    "source_id": "ngmdb:48460",
+    "page": 106,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1814   1-13-87   12   202   175   220   21.5   816",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 12.0,
+     "max_ft": 12.0,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "202",
+    "source_id": "ngmdb:48460",
+    "page": 106,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1814   1-13-87   12   202   175   220   21.5   816",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 202.0,
+     "max_ft": 202.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "175",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1814   1-13-87   12   202   175   220   21.5   816",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 175.0,
+       "max_ft": 175.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "220",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1814   1-13-87   12   202   175   220   21.5   816",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Sample-interval bottom exceeds the depth of well as printed",
+      "normalized": {
+       "min_ft": 220.0,
+       "max_ft": 220.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 816 uS/cm (sampled 1-13-87)",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1814   1-13-87   12   202   175   220   21.5   816",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    },
+    {
+     "top": {
+      "value": "102",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "1-15-87   102   150   21.5   658",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 102.0,
+       "max_ft": 102.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "150",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "1-15-87   102   150   21.5   658",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 150.0,
+       "max_ft": 150.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 658 uS/cm (sampled 1-15-87)",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "1-15-87   102   150   21.5   658",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BFT-1841",
+    "source_id": "ngmdb:48460",
+    "page": 106,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1841   2-03-87   120   190   96   100   20   3,500",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "2-03-87",
+    "source_id": "ngmdb:48460",
+    "page": 106,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1841   2-03-87   120   190   96   100   20   3,500",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "120",
+    "source_id": "ngmdb:48460",
+    "page": 106,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1841   2-03-87   120   190   96   100   20   3,500",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 120.0,
+     "max_ft": 120.0,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "190",
+    "source_id": "ngmdb:48460",
+    "page": 106,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BFT-1841   2-03-87   120   190   96   100   20   3,500",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 190.0,
+     "max_ft": 190.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "96",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1841   2-03-87   120   190   96   100   20   3,500",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 96.0,
+       "max_ft": 96.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "100",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1841   2-03-87   120   190   96   100   20   3,500",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 100.0,
+       "max_ft": 100.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 3,500 uS/cm (sampled 2-03-87)",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "BFT-1841   2-03-87   120   190   96   100   20   3,500",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "HAM- 122",
+    "source_id": "ngmdb:48460",
+    "page": 106,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "HAM- 122   06-25-85   75.0   174.00   82   174   20.5   285",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "06-25-85",
+    "source_id": "ngmdb:48460",
+    "page": 106,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "HAM- 122   06-25-85   75.0   174.00   82   174   20.5   285",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "75.0",
+    "source_id": "ngmdb:48460",
+    "page": 106,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "HAM- 122   06-25-85   75.0   174.00   82   174   20.5   285",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 75.0,
+     "max_ft": 75.0,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "174.00",
+    "source_id": "ngmdb:48460",
+    "page": 106,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "HAM- 122   06-25-85   75.0   174.00   82   174   20.5   285",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 174.0,
+     "max_ft": 174.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "82",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "HAM- 122   06-25-85   75.0   174.00   82   174   20.5   285",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 82.0,
+       "max_ft": 82.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "174",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "HAM- 122   06-25-85   75.0   174.00   82   174   20.5   285",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 174.0,
+       "max_ft": 174.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 285 uS/cm (sampled 06-25-85)",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "HAM- 122   06-25-85   75.0   174.00   82   174   20.5   285",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "JAS-136",
+    "source_id": "ngmdb:48460",
+    "page": 106,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "JAS-136   06-26-85   20.0   245.00   200   245   21.5   200",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "date": {
+    "value": "06-26-85",
+    "source_id": "ngmdb:48460",
+    "page": 106,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "JAS-136   06-26-85   20.0   245.00   200   245   21.5   200",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Sampling date"
+   },
+   "elevation": {
+    "value": "20.0",
+    "source_id": "ngmdb:48460",
+    "page": 106,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "JAS-136   06-26-85   20.0   245.00   200   245   21.5   200",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet above sea level",
+    "table": true,
+    "note": "Elevation of land surface",
+    "normalized": {
+     "min_ft": 20.0,
+     "max_ft": 20.0,
+     "unit": "feet above sea level",
+     "approximate": false
+    }
+   },
+   "total_depth": {
+    "value": "245.00",
+    "source_id": "ngmdb:48460",
+    "page": 106,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "JAS-136   06-26-85   20.0   245.00   200   245   21.5   200",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "feet",
+    "table": true,
+    "note": "Depth of well",
+    "normalized": {
+     "min_ft": 245.0,
+     "max_ft": 245.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "200",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "JAS-136   06-26-85   20.0   245.00   200   245   21.5   200",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to top of sample interval",
+      "normalized": {
+       "min_ft": 200.0,
+       "max_ft": 200.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "245",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "JAS-136   06-26-85   20.0   245.00   200   245   21.5   200",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "units": "feet",
+      "table": true,
+      "note": "Depth to bottom of sample interval",
+      "normalized": {
+       "min_ft": 245.0,
+       "max_ft": 245.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper permeable zone of the Upper Floridan aquifer",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "isolated sections of the upper permeable zone of the Upper Floridan aquifer",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "permeable",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "specific conductance 200 uS/cm (sampled 06-26-85)",
+      "source_id": "ngmdb:48460",
+      "page": 106,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "JAS-136   06-26-85   20.0   245.00   200   245   21.5   200",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
   }
  ],
  "structures": [
