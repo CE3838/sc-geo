@@ -1,0 +1,721 @@
+{
+ "source_id": "ngmdb:43001",
+ "title": "Geology of the Pelion East and Gaston quadrangles, Lexington County, South Carolina",
+ "citation": "Kite, L.E., 1984, Geology of the Pelion East and Gaston quadrangles, Lexington County, South Carolina: South Carolina Geological Survey Open-File Report OFR-42, map scale 1:24,000.",
+ "year": 1984,
+ "scale": 24000,
+ "publisher": "South Carolina Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-10-05T05:49:00+00:00",
+ "updated_at": "2026-10-05T05:49:00+00:00",
+ "reader": "Claude, reading session 2026-10-05",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1",
+  "2"
+ ],
+ "blocks_total": 2,
+ "complete": true,
+ "notes": "Two OCR map sheets (Pelion East, Gaston) with legend only; no text descriptions beyond one-line legend entries. Map face text is garbled and was skipped. Drill-hole labels in the symbol explanation (32-103, 32-101) look like legend samples and were not recorded. No references.",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/img1/43000_43999/43001_1",
+   "via": "ngmdb_image",
+   "sha256": "430c06a71c574d0062a93a53622544cd3f30e4ce07f6cf5a1e377916859d0e36",
+   "pages": 1,
+   "first_page": 1
+  },
+  {
+   "url": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+   "via": "ngmdb_image",
+   "sha256": "d4fa470e3500f37cbc61167314ff02806bf4cc132fdd51d3147c1036cd69cab7",
+   "pages": 1,
+   "first_page": 2
+  }
+ ],
+ "summary": {
+  "stored": 41,
+  "quote_match": {
+   "exact": 41
+  },
+  "verification": {
+   "agree": 5
+  },
+  "inferred": 12
+ },
+ "ingests": [
+  {
+   "at": "2026-10-05T05:49:00+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, reading session 2026-10-05",
+   "values": 41,
+   "stored": 41,
+   "exact": 41,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 5,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "Quaternary alluvium",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Qal_ | Quaternary alluvium",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "map_symbol": {
+    "value": "Qal",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Qal_ | Quaternary alluvium",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Quaternary",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Quaternary alluvium",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Pinehurst Formation",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "| Tp | Pinehurst Formation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "Pinehurst",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "map_symbol": {
+    "value": "Tp",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "| Tp | Pinehurst Formation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Pinehurst Formation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Altamaha Formation",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Tal | Altamaha Formation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Altamaha",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "map_symbol": {
+    "value": "Ta",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Tal | Altamaha Formation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR reads 'Tal'; page 1 reads '[a |'"
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Altamaha Formation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Barnwell Group",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Barnwell Group (upper Eocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Barnwell",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "map_symbol": {
+    "value": "Tb",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Tb Sand and Tdb: Dry Branch Formation.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "symbol read from OCR line beside the legend entry"
+   },
+   "rank": {
+    "value": "Group",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Barnwell Group (upper Eocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "upper Eocene",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Barnwell Group (upper Eocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 37.71,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Where differentiated, Ttr: Tobacoo Road Sand and Tdb: Dry Branch Formation.",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Where differentiated, Ttr: Tobacoo Road",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Tobacoo Road Sand",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Ttr: Tobacoo Road",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "tobacoo road",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "map_symbol": {
+    "value": "Ttr",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Ttr: Tobacoo Road",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "group": {
+    "value": "Barnwell Group",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Barnwell Group (upper Eocene) — Where differentiated, Ttr: Tobacoo Road",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "upper Eocene",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Barnwell Group (upper Eocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "age of the Barnwell Group",
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 37.71,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Dry Branch Formation",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Tdb: Dry Branch Formation.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Dry Branch",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "map_symbol": {
+    "value": "Tdb",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Tdb: Dry Branch Formation.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Tdb: Dry Branch Formation.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "group": {
+    "value": "Barnwell Group",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Barnwell Group (upper Eocene) — Where differentiated",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "upper Eocene",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Barnwell Group (upper Eocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "age of the Barnwell Group",
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 37.71,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Middle Eocene sediments, undifferentiated",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Tme | Middle Eocene sediments, undifferentiated",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "map_symbol": {
+    "value": "Tme",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Tme | Middle Eocene sediments, undifferentiated",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Middle Eocene",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Middle Eocene sediments, undifferentiated",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 37.71,
+     "older_ma": 47.8,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Lang Syne Formation",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Lang Syne Formation — Paleocene sendiments",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Lang Syne",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "map_symbol": {
+    "value": "Tls",
+    "source_id": "ngmdb:43001",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_1",
+    "quote": "[ ts | Lang Syne Formation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR reads '[ ts |' on page 1 and '78' on page 2"
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Lang Syne Formation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Paleocene",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Lang Syne Formation — Paleocene sendiments",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 56.0,
+     "older_ma": 66.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "fullers earth and black clay, locally sandy or silty",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "fullers earth and black clay, locally",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "fossils": {
+    "value": "fossiliferous",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "sandy or silty, fossiliferous.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Sawdust Landing Formation",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Sawdust Landing Formation — Paleocene sendiments",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Sawdust Landing",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "map_symbol": {
+    "value": "Ksl",
+    "source_id": "ngmdb:43001",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_1",
+    "quote": "Ksl Sawdust Landing Formation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Sawdust Landing Formation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Paleocene",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Sawdust Landing Formation — Paleocene sendiments",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "the legend says Paleocene although the symbol begins with K",
+    "normalized": {
+     "younger_ma": 56.0,
+     "older_ma": 66.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "feldspathic, sandy clay, clayey sand",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "feldspathic, sandy clay, clayey",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Cretaceous sediments, undifferentiated",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "| uKs | Cretaceous sediments, undifferentiated",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "map_symbol": {
+    "value": "uKs",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "| uKs | Cretaceous sediments, undifferentiated",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Cretaceous",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Cretaceous sediments, undifferentiated",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 66.0,
+     "older_ma": 145.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  }
+ ],
+ "observations": [],
+ "structures": [
+  {
+   "kind": "contact",
+   "certainty": {
+    "value": "Identity and existence certain, location approximate; dotted where inferred",
+    "source_id": "ngmdb:43001",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43001_2",
+    "quote": "Contact — Identity and existence certain, location approximate; dotted where",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "groundwater": [],
+ "references": []
+}
