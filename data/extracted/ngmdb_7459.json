@@ -1,0 +1,989 @@
+{
+ "source_id": "ngmdb:7459",
+ "title": "Geologic map of the Hell Hole Bay, Wambaw Swamp, Little Wambaw Swamp, and Wambaw Creek Wilderness, Berkeley and Charleston Counties, South Carolina",
+ "citation": "Cameron, C.C., Force, E.R., and Grosz, A.E., 1984, Geologic map of the Hell Hole Bay, Wambaw Swamp, Little Wambaw Swamp, and Wambaw Creek Wilderness, Berkeley and Charleston Counties, South Carolina: U.S. Geological Survey Miscellaneous Field Studies Map MF-1556-A, map scale 1:48,000.",
+ "year": 1984,
+ "scale": 48000,
+ "publisher": "U.S. Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-10-05T05:55:18+00:00",
+ "updated_at": "2026-10-05T05:55:18+00:00",
+ "reader": "Claude, reading session 2026-10-05",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1"
+ ],
+ "blocks_total": 1,
+ "complete": true,
+ "notes": "Single OCR map sheet. Map-unit descriptions lack symbols in OCR; Qfs and Tc symbols assigned by order of correlation chart and flagged inferred. Power-auger hole profiles (PAH) are garbled; no hole logs recorded. Some references in garbled multi-column text skipped.",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=15949_7459_2",
+   "via": "ngmdb_scan",
+   "sha256": "391c3c91f48c8b993fff8b1e0b443f7cffce030255fbf603c076580efbadea37",
+   "pages": 1,
+   "first_page": 1
+  }
+ ],
+ "summary": {
+  "stored": 60,
+  "quote_match": {
+   "exact": 60
+  },
+  "verification": {
+   "agree": 5,
+   "unclear": 1
+  },
+  "inferred": 4
+ },
+ "ingests": [
+  {
+   "at": "2026-10-05T05:55:18+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, reading session 2026-10-05",
+   "values": 60,
+   "stored": 60,
+   "exact": 60,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 5,
+   "disagree": 0,
+   "unclear": 1,
+   "review_items": 1
+  }
+ ],
+ "units": [
+  {
+   "map_symbol": {
+    "value": "Hpm",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Unit Hpm represents the current stage of sedimentation that is",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "name": {
+    "value": "Peat and muck",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Peat and muck (Holoene)—Partly decomposed vegetal matter",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Peat and muck (Holoene)—Partly decomposed vegetal matter",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "printed 'Holoene'",
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Partly decomposed vegetal matter that accumulated under water or in a water-saturated environment; peat contains not more than 25 percent ash on the dry basis; muck contains more than 25 percent ash",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "environment; peat contains not more than 25 percent ash on",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "lithology": {
+    "value": "Organic silt (muck) and peat",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "spits. Organic silt (muck) and peat characterize this unit which is generally",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "generally 1 to 3 ft thick, except in Wambaw Swamp where it reaches 7 ft, 5 ft of which is peat",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "1 to 3 ft thick, except in Wambaw Swamp where it reaches a thickness of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 1.0,
+     "max_ft": 3.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "depositional_environment": {
+    "value": "fresh-water swamps",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.81,
+    "inferred": false,
+    "locator": null,
+    "quote": "taking place in the fresh-water swamps that formed over the sediments of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Qfs",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.551,
+    "inferred": true,
+    "locator": null,
+    "quote": "Formed in tidal channels and tidal deltas",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "symbol matched to description by order of correlation chart"
+   },
+   "name": {
+    "value": "Fine quartz sand and silt",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fine quartz sand and silt.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene and Holocene",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "(Pleistocene and Holocene)—",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Fine-grained sand, silt, and organic clay",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Formation. Fine-grained sand, silt, and organic clay of unit Qfs filled",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "Formed in tidal channels and tidal deltas",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Formed in tidal channels and tidal deltas",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "fossils": {
+    "value": "Spartina",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Qs and Qm. The unit locally contains Spartina, a grass indicative of tidal",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Qs",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Unit Qs consists of well-sorted sands that form the gentle rises",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "name": {
+    "value": "Fine and medium quartz sand",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fine and medium quartz sand (Pleistocene)-Formed in",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "medium quartz",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fine and medium quartz sand (Pleistocene)-Formed in",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "depositional_environment": {
+    "value": "barrier-complex environments; former barrier-island and sand-spit deposits",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "barrier-complex environments",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "oldest sands probably correlative with the Canepatch Formation; youngest sands probably belong to the Socastee Formation",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.81,
+    "inferred": false,
+    "locator": null,
+    "quote": "the north, are probably correlative with the Canepatch Formation, whereas",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Qm",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "unit Qm overlie unit Qces. They locally contain abundant mollusks and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "name": {
+    "value": "Mud and fine unsorted quartz sand",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Mud and fine unsorted quartz sand (Pleistocene)—Formed in",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "unsorted quartz",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Mud and fine unsorted quartz sand (Pleistocene)—Formed in",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Blue-gray, calcareous, sandy muds and muddy, fine-grained sands",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Blue-gray, calcareous, sandy muds and muddy, fine-grained sands of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "bay-complex environments; nearshore shelf, lagoon, and inlet",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "bay-complex environments",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "fossils": {
+    "value": "abundant mollusks and foraminifera shells",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "unit Qm overlie unit Qces. They locally contain abundant mollusks and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Qes",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.567,
+    "inferred": false,
+    "locator": null,
+    "quote": "Unit Qes consists of granular or shelly, coarse- to medium-grained,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "unclear",
+    "note": "symbol Qcs/Qes; OCR also shows 'Qces'"
+   },
+   "name": {
+    "value": "Coarse feldspathic sand grading upward into clay",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.551,
+    "inferred": true,
+    "locator": null,
+    "quote": "felspathie sand grading upward into clay",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR 'felspathie'",
+    "normalized": {
+     "canonical": "feldspathic sand grading upward into",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "(Pleistocene)—Formed in fluvial and estuarine environments,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "granular or shelly, coarse- to medium-grained, feldspathic sand, locally grading upward into silty clay containing large wood fragments",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Unit Qes consists of granular or shelly, coarse- to medium-grained,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "fluvial (at the base) to upper estuary (at the top)",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.81,
+    "inferred": false,
+    "locator": null,
+    "quote": "base) to upper estuary (at the top) paleoenvironments are indicated for unit",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "description": {
+    "value": "wood fragments have a radiocarbon age of greater than 40 thousand years BP; feldspar contents about 1-5 percent",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "wood fragments having a radiocarbon age of greater than 40 thousand years",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Tc",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.648,
+    "inferred": true,
+    "locator": null,
+    "quote": "Te Oligocene ;",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "OCR 'Te' in correlation chart"
+   },
+   "name": {
+    "value": "Cooper Formation",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.81,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cooper Formation (Tertiary)—Impure marine foraminiferal",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "Cooper",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cooper Formation (Tertiary)—Impure marine foraminiferal",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "upper Eocene and Oligocene",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cooper Formation is upper Eocene and Oligocene, with paraconformities at",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 23.03,
+     "older_ma": 37.71,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "impure foraminiferal marl, characteristically homogeneous and plastic",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "impure foraminiferal marl, characteristically homogeneous and plastic, and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "olive when wet and pale gray when dry; found at bottom of PAH 16, 17, 20, and 21 as erosional remnants on the Santee Limestone",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "PAH 16, 17, 20, and 21 where it forms erosional remnants on the Santee",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "entirely marine; may have accumulated in relatively deep, cold water",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "environment and may have accumulated in relatively deep, cold water",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Ts",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Ts Eocene Tertiary",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "name": {
+    "value": "Santee Limestone",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Santee Limestone (Tertiary)—Marine limestone",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Santee",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Limestone",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.551,
+    "inferred": true,
+    "locator": null,
+    "quote": "Santee Limestone (Tertiary)—Marine limestone",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "middle or middle and late Eocene",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "middle or middle and late Eocene age (Ward and others, 1979; Baum and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 37.71,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "upper part of sand-sized broken shell fragments and a more competent lower bryozoan limestone having some well-cemented beds; white to cream",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "limestone having some well-cemented beds. Both parts are relatively pure",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "encountered at auger hole sites 11-15 and in PAH 1-10 and 14; lies closest to the surface in the Hell Hole Bay and Wambaw Creek Wildernesses",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "was encountered in borings made by D. J. Colquhoun at auger hole sites 11-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Quaternary deposits",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "and are more than 60 ft thick at the southern borders of Wambaw Swamp",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "more than 60 ft at the southern borders of Wambaw Swamp and Little Wambaw Swamp",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "and are more than 60 ft thick at the southern borders of Wambaw Swamp",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 60.0,
+     "max_ft": null,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "contacts": {
+    "value": "unconformably overlie the Santee Limestone and Cooper Formation",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Deposits of clay, silt, sand, and gravel unconformably overlie the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "observations": [],
+ "structures": [
+  {
+   "kind": "other",
+   "name": {
+    "value": "Bethera, Cainhoy, Awendaw, and Mt. Pleasant Scarps",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Mt. Pleasant Scarps are shown on the geologic map. These discontinuous",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "former shore faces formed during higher stands of sea level during Quaternary time",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "they are former shore faces formed during higher stands of sea level during",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "groundwater": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Colquhoun, D. J., 1965, Terrace sediment complexes in central South",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Colquhoun, D. J., 1965, Terrace sediment complexes in central South",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "first line of reference"
+   }
+  },
+  {
+   "citation": {
+    "value": "Cooke, C. W., 1936, Geology of the Coastal Plain of South Carolina: U.S.",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cooke, C. W., 1936, Geology of the Coastal Plain of South Carolina: U.S.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "first line of reference"
+   }
+  },
+  {
+   "citation": {
+    "value": "Force, E. R., Gohn, G. S., Force, L. M., and Higgins, B. B., 1978, Uranium",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Force, E. R., Gohn, G. S., Force, L. M., and Higgins, B. B., 1978, Uranium",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "first line of reference"
+   }
+  },
+  {
+   "citation": {
+    "value": "Gohn, G. S., Bybell, L. M., Smith, C. C., and Owens, J. P., 1978,",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gohn, G. S., Bybell, L. M., Smith, C. C., and Owens, J. P., 1978,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "first line of reference"
+   }
+  },
+  {
+   "citation": {
+    "value": "Gohn, G. S., Higgins, B. B., Smith, C. C., and Owens, J. P., 1977,",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gohn, G. S., Higgins, B. B., Smith, C. C., and Owens, J. P., 1977,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "first line of reference"
+   }
+  },
+  {
+   "citation": {
+    "value": "Hazel, J. E., 1975, Cooper Marl in the Coastal Plain of South Carolina and",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Hazel, J. E., 1975, Cooper Marl in the Coastal Plain of South Carolina and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "first line of reference"
+   }
+  },
+  {
+   "citation": {
+    "value": "Heron, S. D., Jr., Robinson, G. C., and Johnson, H. S., Jr., 1965, Clays and",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Heron, S. D., Jr., Robinson, G. C., and Johnson, H. S., Jr., 1965, Clays and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "first line of reference"
+   }
+  },
+  {
+   "citation": {
+    "value": "Malde, H. E., 1959, Geology of the Charleston phosphate area, South",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Malde, H. E., 1959, Geology of the Charleston phosphate area, South",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "first line of reference"
+   }
+  },
+  {
+   "citation": {
+    "value": "McCartan, Lucy , Lemon, E. M., Jr., and Weems, R. E., 1982, Generalized",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "McCartan, Lucy , Lemon, E. M., Jr., and Weems, R. E., 1982, Generalized",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "first line of reference"
+   }
+  },
+  {
+   "citation": {
+    "value": "Rogers, G. S., 1914, The phosphate deposits of South Carolina:",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Rogers, G. S., 1914, The phosphate deposits of South Carolina:",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "first line of reference"
+   }
+  },
+  {
+   "citation": {
+    "value": "Siple, G. E., 1958, Stratigraphic data from selected oil tests and water",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Siple, G. E., 1958, Stratigraphic data from selected oil tests and water",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "first line of reference"
+   }
+  },
+  {
+   "citation": {
+    "value": "Ward, L. W., Blackwelder, B. W., Gohn, G. S., and Poore, R. Z., 1979,",
+    "source_id": "ngmdb:7459",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Ward, L. W., Blackwelder, B. W., Gohn, G. S., and Poore, R. Z., 1979,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "first line of reference"
+   }
+  }
+ ]
+}

@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 3,
+ "count": 7,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -39,6 +39,56 @@
    "verify": {
     "verdict": "unclear",
     "note": "printed 15-30 but overlying Goose Creek is 15-25; probably a misprint for 25"
+   }
+  },
+  {
+   "source_id": "ngmdb:10296",
+   "path": "observations[0].total_depth",
+   "problem": "verify_unclear",
+   "value": "2579 ft",
+   "page": 2,
+   "quote": "Total depth = 2579 ft",
+   "added_at": "2026-10-05T05:48:46+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "page shows Total depth = 2579 ft on a cross section; which hole it belongs to is not legible in OCR"
+   }
+  },
+  {
+   "source_id": "ngmdb:5893",
+   "path": "observations[5].location",
+   "problem": "inexact_quote",
+   "value": "Mount Pleasant",
+   "page": 8,
+   "quote": "surface. The potentiometric surface at one of the Mount Pleasant",
+   "added_at": "2026-10-05T05:50:16+00:00",
+   "match": "fuzzy"
+  },
+  {
+   "source_id": "ngmdb:7459",
+   "path": "units[4].map_symbol",
+   "problem": "verify_unclear",
+   "value": "Qes",
+   "page": 1,
+   "quote": "Unit Qes consists of granular or shelly, coarse- to medium-grained,",
+   "added_at": "2026-10-05T05:55:17+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR shows Qes and Qces; the printed symbol may be Qcs"
+   }
+  },
+  {
+   "source_id": "ngmdb:7662",
+   "path": "observations[4].intervals[0].bottom",
+   "problem": "verify_disagree",
+   "value": "S",
+   "page": 8,
+   "quote": "PAH-9   0-S   1.27   Ilmenite, epidote, sillimanite, staurolite, amphibole, tourmaline, zircon, rutile",
+   "added_at": "2026-10-05T05:56:31+00:00",
+   "verify": {
+    "verdict": "disagree",
+    "note": "text layer prints 0-S; the plate copy of table 4 (p. 11) reads 0-5, so the bottom is 5",
+    "value": "5"
    }
   }
  ]

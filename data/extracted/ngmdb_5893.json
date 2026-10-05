@@ -1,0 +1,2968 @@
+{
+ "source_id": "ngmdb:5893",
+ "title": "Stratigraphic framework for geologic and hydrologic studies of the subsurface Cretaceous section near Charleston, South Carolina",
+ "citation": "Campbell, B.G., and Gohn, G.S., 1994, Stratigraphic framework for geologic and hydrologic studies of the subsurface Cretaceous section near Charleston, South Carolina: U.S. Geological Survey Miscellaneous Field Studies Map MF-2273, map scale 1:154,000.",
+ "year": 1994,
+ "scale": 154000,
+ "publisher": "U.S. Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-10-05T05:50:16+00:00",
+ "updated_at": "2026-10-05T05:50:16+00:00",
+ "reader": "Claude, reading session 2026-10-05",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10",
+  "11",
+  "13",
+  "14"
+ ],
+ "blocks_total": 13,
+ "complete": true,
+ "notes": "Pamphlet pages 1-11 have a clean text layer (two-column). Plates (pages 13-14) are OCR of geophysical-log sections; formation names on plates are legible but depths largely garbled, so only text depths were recorded. References: non-SC references (Donovan, Fallaw, Hanneman, Heron, Van Wagoner) skipped; citations given as first line only because columns interleave.",
+ "files": [
+  {
+   "url": "https://pubs.usgs.gov/mf/1994/2273/report.pdf",
+   "via": "pubs_usgs",
+   "sha256": "8b217c63516eb36e3c1093744ce885e20a40bdacb803c64d22e8dceee854380a",
+   "pages": 12,
+   "first_page": 1
+  },
+  {
+   "url": "https://pubs.usgs.gov/mf/1994/2273/plate-2.pdf",
+   "via": "pubs_usgs",
+   "sha256": "472d9f2dca33e4926ebbef87df9566303f664e81c8311aa1a6bbcac7abf19952",
+   "pages": 1,
+   "first_page": 13
+  },
+  {
+   "url": "https://pubs.usgs.gov/mf/1994/2273/plate-1.pdf",
+   "via": "pubs_usgs",
+   "sha256": "f5ea9b88cd102e2887a4e74e7f8f215dd4632be5160654720c7f5cbd1a9c760e",
+   "pages": 1,
+   "first_page": 14
+  }
+ ],
+ "summary": {
+  "stored": 173,
+  "quote_match": {
+   "fuzzy": 1,
+   "exact": 172
+  },
+  "verification": {
+   "agree": 18
+  },
+  "inferred": 3
+ },
+ "ingests": [
+  {
+   "at": "2026-10-05T05:50:16+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, reading session 2026-10-05",
+   "values": 173,
+   "stored": 173,
+   "exact": 172,
+   "ocr": 0,
+   "fuzzy": 1,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 18,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 1
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "Beech Hill Formation",
+    "source_id": "ngmdb:5893",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Beech Hill Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Beech Hill",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:5893",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Beech Hill Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Cenomanian(?)",
+    "source_id": "ngmdb:5893",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "assigned a Cenomanian(?) age to the Beech Hill on the basis of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 93.9,
+     "older_ma": 100.5,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "47 ft (type section)",
+    "source_id": "ngmdb:5893",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The 47-foot-thick Beech Hill type section consists of an",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 47.0,
+     "max_ft": 47.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "lithology": {
+    "value": "basal feldspathic clayey sand; brownish-gray and greenish-gray, hard, noncalcareous, unfossiliferous clay",
+    "source_id": "ngmdb:5893",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "brownish-gray and greenish-gray, hard, noncalcareous, unfossilif-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "contacts": {
+    "value": "lower contact sharp between basal feldspathic clayey sand of the Beech Hill and underlying, strongly weathered, early Mesozoic basalt",
+    "source_id": "ngmdb:5893",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "section is sharp between a basal feldspathic clayey sand of the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "fluvial to perhaps colluvial",
+    "source_id": "ngmdb:5893",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Formation. Gohn (1992) also inferred fluvial to perhaps colluvial",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Clubhouse Formation",
+    "source_id": "ngmdb:5893",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Clubhouse Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Clubhouse",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:5893",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Clubhouse Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Cenomanian(?) and Turonian",
+    "source_id": "ngmdb:5893",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gohn (1992) assigned a Cenomanian(?) and Turonian age to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 89.8,
+     "older_ma": 100.5,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "79 ft (type section)",
+    "source_id": "ngmdb:5893",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "(section A-A', DOR-37) (Gohn, 1992). This 79-foot-thick section",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 79.0,
+     "max_ft": 79.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "lithology": {
+    "value": "dark-gray to brownish-gray silty clays alternating with light-gray to pale-olive silts and very fine to fine sands",
+    "source_id": "ngmdb:5893",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "consists primarily of dark-gray to brownish-gray silty clays that",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "shallow-subtidal to peritidal",
+    "source_id": "ngmdb:5893",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "subtidal to peritidal paleoenvironment of deposition (Gohn, 1992).",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "fossils": {
+    "value": "Mollusk fragments, dinoflagellates, and calcareous micro- and nannofossils locally sparse to common",
+    "source_id": "ngmdb:5893",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "U-shaped burrows. Mollusk fragments, dinoflagellates, and calcar-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Cape Fear Formation",
+    "source_id": "ngmdb:5893",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cape Fear Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Cape Fear",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:5893",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cape Fear Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "late Turonian(?), Coniacian(?), and Santonian",
+    "source_id": "ngmdb:5893",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "able data and assigned a late Turonian(?), Coniacian(?), and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 83.6,
+     "older_ma": 91.16666666666667,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "477 ft in USGS-Clubhouse Crossroads #1 core",
+    "source_id": "ngmdb:5893",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Cape Fear Formation is the thickest unit (477 ft) in the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 477.0,
+     "max_ft": 477.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "description": {
+    "value": "numerous 10- to 30-foot-thick, fining-upward, sand-clay cycles",
+    "source_id": "ngmdb:5893",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "consists of numerous 10- to 30-foot-thick, fining-upward, sand-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "lithology": {
+    "value": "yellowish-gray, feldspathic, medium-to-very coarse sand grading upward into red, yellow, and brown, sandy and (or) silty clay",
+    "source_id": "ngmdb:5893",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "into red, yellow, and brown, sandy and (or) silty clay. In the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "contacts": {
+    "value": "contact with underlying Clubhouse Formation at 2,338 ft sharp",
+    "source_id": "ngmdb:5893",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Formation with the underlying Clubhouse Formation at 2,338 ft is",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "channel and overbank sedimentation by a mixed-load, meandering channel system; possibly large estuarine or tidal-delta system",
+    "source_id": "ngmdb:5893",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "channel and overbank sedimentation by a mixed-load, meander-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Middendorf Formation",
+    "source_id": "ngmdb:5893",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Middendorf Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Middendorf",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:5893",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Middendorf Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Santonian",
+    "source_id": "ngmdb:5893",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "(fig. 1; section A-A'). Gohn (1992) assigned a Santonian age to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 83.6,
+     "older_ma": 86.3,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "107 ft in Clubhouse Crossroads #1 to about 200 ft in Charleston-Mt. Pleasant area",
+    "source_id": "ngmdb:5893",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "dendorf Formation roughly doubles in thickness from 107 ft in",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 107.0,
+     "max_ft": 200.0,
+     "values_ft": [
+      107.0,
+      200.0
+     ],
+     "unit": "ft",
+     "approximate": true
+    }
+   },
+   "lithology": {
+    "value": "medium-gray, moderately well sorted, feldspathic, coarse to very coarse to gravelly sands in lower part; macrofossiliferous fine-to-coarse sand at top",
+    "source_id": "ngmdb:5893",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "medium- gray, moderately well sorted, feldspathic, coarse to very",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "marginal-marine",
+    "source_id": "ngmdb:5893",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gohn (1992) inferred marginal-marine paleoenvironments for",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "fossils": {
+    "value": "Ostrea cretacea",
+    "source_id": "ngmdb:5893",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "specimens of the small oyster Ostrea cretacea. Stephenson (1914)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Shepherd Grove Formation",
+    "source_id": "ngmdb:5893",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Shepherd Grove Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Shepherd Grove",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:5893",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Shepherd Grove Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Santonian and Campanian",
+    "source_id": "ngmdb:5893",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "1977; Hattner and Wise, 1980) and assigned a Santonian and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 72.1,
+     "older_ma": 86.3,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "110 ft (type section); about 110 to 120 ft through most of study area",
+    "source_id": "ngmdb:5893",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "thickness of about 110 to 120 ft throughout most of the study area",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 110.0,
+     "max_ft": 120.0,
+     "unit": "ft",
+     "approximate": true
+    }
+   },
+   "lithology": {
+    "value": "medium-light-gray to light-olive-gray, calcareous, silty clay, clayey silt, and clayey very fine sand",
+    "source_id": "ngmdb:5893",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "light-olive-gray, calcareous, silty clay, clayey silt, ard clayey very",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "contacts": {
+    "value": "basal lag deposit of phosphate granules and small pebbles, very coarse sand, and bone fragments",
+    "source_id": "ngmdb:5893",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "sists of phosphate granules and small pebbles, very coarse sand,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "depositional_environment": {
+    "value": "subtidal-marine",
+    "source_id": "ngmdb:5893",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "proposed a subtidal-marine paleoenvironment for deposition of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Caddin Formation",
+    "source_id": "ngmdb:5893",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Caddin Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Caddin",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:5893",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Caddin Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "early Campanian",
+    "source_id": "ngmdb:5893",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "1977; Hattner and Wise, 1980) establish an early Campanian age",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 79.76666666666667,
+     "older_ma": 83.6,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "100 ft (type section); 40 ft to slightly more than 200 ft east of Clubhouse Crossroads",
+    "source_id": "ngmdb:5893",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "as the 100-foot-thick interval from 1,644 to 1,544 ft in the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 40.0,
+     "max_ft": 200.0,
+     "values_ft": [
+      100.0,
+      40.0,
+      200.0
+     ],
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "lithology": {
+    "value": "strongly bioturbated, calcareous, clayey, glauconitic quartz sand",
+    "source_id": "ngmdb:5893",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "monotonous section of strongly bioturbated, calcareous, clayey,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "contacts": {
+    "value": "lower contact sharp, irregular, burrowed; upper contact a low-angle, high-relief erosional unconformity",
+    "source_id": "ngmdb:5893",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Crossroads is a sharp, irregular, burrowed boundary. Glauconite-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "offshore-marine",
+    "source_id": "ngmdb:5893",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "a offshore-marine paleoenvironment of depos:tion for the Caddin",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Black Creek Group",
+    "source_id": "ngmdb:5893",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "was raised to group status (fig. 3), following the use of a Black",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Black Creek",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Group",
+    "source_id": "ngmdb:5893",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "was raised to group status (fig. 3), following the use of a Black",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "name": {
+    "value": "Cane Acre Formation",
+    "source_id": "ngmdb:5893",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cane Acre Formation of the Black Creek Group",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Cane Acre",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:5893",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cane Acre Formation of the Black Creek Group",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Black Creek Group",
+    "source_id": "ngmdb:5893",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cane Acre Formation of the Black Creek Group",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "middle Campanian",
+    "source_id": "ngmdb:5893",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "and Hattner and Wise (1980) assigned a middle Campanian age to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 75.93333333333332,
+     "older_ma": 79.76666666666667,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "200 ft (type section)",
+    "source_id": "ngmdb:5893",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Group (fig. 3). At Clubhouse Crossroads, the 200-foot-thick Cane",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 200.0,
+     "max_ft": 200.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "lithology": {
+    "value": "lower clay member of light-olive-gray, bioturbated silty clay, clayey silt, and clayey very fine sand; upper sand member of well-sorted fine to medium sand",
+    "source_id": "ngmdb:5893",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Acre Formation consists of a lower clay member and an upper",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "depositional_environment": {
+    "value": "dominantly regressive marine section; offshore deposits grade upward into nearshore-marine sand",
+    "source_id": "ngmdb:5893",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Crossroads to be a dominantly regressive marine section in which",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Coachman Formation",
+    "source_id": "ngmdb:5893",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Coachman Formation of the Black Creek Group",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Coachman",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:5893",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Coachman Formation of the Black Creek Group",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Black Creek Group",
+    "source_id": "ngmdb:5893",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Coachman Formation of the Black Creek Group",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "middle and late Campanian",
+    "source_id": "ngmdb:5893",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "assigned a middle and late Campanian age to the section assigned",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 72.1,
+     "older_ma": 75.93333333333332,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "130 ft at Clubhouse Crossroads",
+    "source_id": "ngmdb:5893",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "(Gohn, 1992). The 130-ft-thick Coachman Formation at Club-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 130.0,
+     "max_ft": 130.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "lithology": {
+    "value": "greenish-gray to gray, calcareous silty clays, clayey silts, and very fine sands",
+    "source_id": "ngmdb:5893",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "gray to gray, calcareous silty clays, clayey silts, and very fine sands.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "contacts": {
+    "value": "sharp lower contact marked by basal phosphate-pebble lag deposit",
+    "source_id": "ngmdb:5893",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "sharp lower contact of the Coachman is marked by a basal",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "dominantly regressive marine section",
+    "source_id": "ngmdb:5893",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Formation is a dominantly regressive marine section in which",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Bladen Formation",
+    "source_id": "ngmdb:5893",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Bladen Formation of the Black Creek Group",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Bladen",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:5893",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Bladen Formation of the Black Creek Group",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Black Creek Group",
+    "source_id": "ngmdb:5893",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Bladen Formation of the Black Creek Group",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "late Campanian",
+    "source_id": "ngmdb:5893",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "common in the Bladen Formation. Gohn (1992) assigned a late",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 72.1,
+     "older_ma": 75.93333333333332,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "142 ft at Clubhouse Crossroads",
+    "source_id": "ngmdb:5893",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "142-foot-thick Bladen Formation above the thin basal sand con-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "min_ft": 142.0,
+     "max_ft": 142.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "lithology": {
+    "value": "gray to gray-green, calcareous silty clay and clayey silt; upper half gray, calcareous, clayey and silty very fine sand",
+    "source_id": "ngmdb:5893",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "sists of gray to gray-green, calcareous silty clay and clayey silt,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "offshore-marine grading up to nearshore-marine",
+    "source_id": "ngmdb:5893",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "offshore-marine section that grades up into slightly coarser grained",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Donoho Creek Formation",
+    "source_id": "ngmdb:5893",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Donoho Creek Formation of the Black Creek Group",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Donoho Creek",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:5893",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Donoho Creek Formation of the Black Creek Group",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Black Creek Group",
+    "source_id": "ngmdb:5893",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Donoho Creek Formation of the Black Creek Group",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "early Maastrichtian",
+    "source_id": "ngmdb:5893",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gohn (1992) assigned an early Maastrichtian age to the Donoho",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 70.06666666666666,
+     "older_ma": 72.1,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "light-olive-gray to medium-gray, calcareous clayey silt, silty clay, and clayey fine sand",
+    "source_id": "ngmdb:5893",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "of the unit consists of light-olive-gray to medium-gray, calcareous",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "offshore-marine",
+    "source_id": "ngmdb:5893",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "offshore-marine deposition for the Donoho Creek section at",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Peedee Formation",
+    "source_id": "ngmdb:5893",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Peedee Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Peedee",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:5893",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Peedee Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "late early Maastrichtian and middle to late(?) Maastrichtian",
+    "source_id": "ngmdb:5893",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Crossroads #1 core. Gohn (1992) assigned a late early Maastrich-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 66.0,
+     "older_ma": 72.1,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "73 ft in core; about 50 to 75 ft throughout study area",
+    "source_id": "ngmdb:5893",
+    "page": 7,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Peedee Formation maintains a thickness of about 50 to 75",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 50.0,
+     "max_ft": 75.0,
+     "unit": "ft",
+     "approximate": true
+    }
+   },
+   "lithology": {
+    "value": "light-olive-gray, calcareous, clayey and silty fine to medium sand; silty clay and clayey silt; macrofossiliferous clayey silt and very fine to fine sand at top",
+    "source_id": "ngmdb:5893",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "10 ft of the Peedee Formation consists of light-olive-gray, massive,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "shallow-marine",
+    "source_id": "ngmdb:5893",
+    "page": 7,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "shallow-marine paleoenvironment for deposition of the Peedee",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ],
+ "observations": [
+  {
+   "kind": "core",
+   "label": {
+    "value": "USGS-Clubhouse Crossroads #1 (DOR-37)",
+    "source_id": "ngmdb:5893",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Crossroads #1 (fig. 1; DOR-37), and 13 municipal or private water",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "2,464 ft",
+      "source_id": "ngmdb:5893",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Formation, whose type section is from 2,464 to 2,417 ft in the",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 2464.0,
+       "max_ft": 2464.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "2,417 ft",
+      "source_id": "ngmdb:5893",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Formation, whose type section is from 2,464 to 2,417 ft in the",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 2417.0,
+       "max_ft": 2417.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Beech Hill Formation",
+      "source_id": "ngmdb:5893",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Formation, whose type section is from 2,464 to 2,417 ft in the",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Beech Hill",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "2,417 ft",
+      "source_id": "ngmdb:5893",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "2,417 to 2,338 ft in the USGS-Clubhouse Crossroads #1 core",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 2417.0,
+       "max_ft": 2417.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "2,338 ft",
+      "source_id": "ngmdb:5893",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "2,417 to 2,338 ft in the USGS-Clubhouse Crossroads #1 core",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "normalized": {
+       "min_ft": 2338.0,
+       "max_ft": 2338.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Clubhouse Formation",
+      "source_id": "ngmdb:5893",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "2,417 to 2,338 ft in the USGS-Clubhouse Crossroads #1 core",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Clubhouse",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "2,338 ft",
+      "source_id": "ngmdb:5893",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Formation with the underlying Clubhouse Formation at 2,338 ft is",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 2338.0,
+       "max_ft": 2338.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "1,861 ft",
+      "source_id": "ngmdb:5893",
+      "page": 3,
+      "extraction_method": "llm",
+      "confidence": 0.578,
+      "inferred": true,
+      "locator": null,
+      "quote": "in the core (1,861 to 1,754 ft) consists of moderately thick,",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "note": "top of Cape Fear taken as base of Middendorf",
+      "normalized": {
+       "min_ft": 1861.0,
+       "max_ft": 1861.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Cape Fear Formation",
+      "source_id": "ngmdb:5893",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Formation with the underlying Clubhouse Formation at 2,338 ft is",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Cape Fear",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "1,861 ft",
+      "source_id": "ngmdb:5893",
+      "page": 3,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "in the core (1,861 to 1,754 ft) consists of moderately thick,",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 1861.0,
+       "max_ft": 1861.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "1,754 ft",
+      "source_id": "ngmdb:5893",
+      "page": 3,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "in the core (1,861 to 1,754 ft) consists of moderately thick,",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 1754.0,
+       "max_ft": 1754.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Middendorf Formation",
+      "source_id": "ngmdb:5893",
+      "page": 3,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "in the core (1,861 to 1,754 ft) consists of moderately thick,",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Middendorf",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "1,754 ft",
+      "source_id": "ngmdb:5893",
+      "page": 3,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "to 1,644-ft interval in the Clubhouse Crossroads #1 core (Gohn,",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 1754.0,
+       "max_ft": 1754.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "1,644 ft",
+      "source_id": "ngmdb:5893",
+      "page": 3,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "to 1,644-ft interval in the Clubhouse Crossroads #1 core (Gohn,",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 1644.0,
+       "max_ft": 1644.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Shepherd Grove Formation",
+      "source_id": "ngmdb:5893",
+      "page": 3,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "to 1,644-ft interval in the Clubhouse Crossroads #1 core (Gohn,",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Shepherd Grove",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "1,644 ft",
+      "source_id": "ngmdb:5893",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "as the 100-foot-thick interval from 1,644 to 1,544 ft in the",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 1644.0,
+       "max_ft": 1644.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "1,544 ft",
+      "source_id": "ngmdb:5893",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "as the 100-foot-thick interval from 1,644 to 1,544 ft in the",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 1544.0,
+       "max_ft": 1544.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Caddin Formation",
+      "source_id": "ngmdb:5893",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "as the 100-foot-thick interval from 1,644 to 1,544 ft in the",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Caddin",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "1,544 ft",
+      "source_id": "ngmdb:5893",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Gohn (1992) defined the 1,544- to 1,344-ft interval in the",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 1544.0,
+       "max_ft": 1544.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "1,344 ft",
+      "source_id": "ngmdb:5893",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Gohn (1992) defined the 1,544- to 1,344-ft interval in the",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "normalized": {
+       "min_ft": 1344.0,
+       "max_ft": 1344.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Cane Acre Formation",
+      "source_id": "ngmdb:5893",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Gohn (1992) defined the 1,544- to 1,344-ft interval in the",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Cane Acre",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "1,344 ft",
+      "source_id": "ngmdb:5893",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "The type section of the Coachman Formation is the 1,344- to",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 1344.0,
+       "max_ft": 1344.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "1,214 ft",
+      "source_id": "ngmdb:5893",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "The type section of the Coachman Formation is the 1,344- to",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "normalized": {
+       "min_ft": 1214.0,
+       "max_ft": 1214.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Coachman Formation",
+      "source_id": "ngmdb:5893",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "The type section of the Coachman Formation is the 1,344- to",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Coachman",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "1,214 ft",
+      "source_id": "ngmdb:5893",
+      "page": 6,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "from 1,214 to 1,072 ft in the USGS-Clubhouse Crossroads #1",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 1214.0,
+       "max_ft": 1214.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "1,072 ft",
+      "source_id": "ngmdb:5893",
+      "page": 6,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "from 1,214 to 1,072 ft in the USGS-Clubhouse Crossroads #1",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 1072.0,
+       "max_ft": 1072.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Bladen Formation",
+      "source_id": "ngmdb:5893",
+      "page": 6,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "from 1,214 to 1,072 ft in the USGS-Clubhouse Crossroads #1",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Bladen",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "1,072 ft",
+      "source_id": "ngmdb:5893",
+      "page": 6,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "the section from 1,072 to 873 ft in the USGS-Clubhouse Cross-",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "normalized": {
+       "min_ft": 1072.0,
+       "max_ft": 1072.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "873 ft",
+      "source_id": "ngmdb:5893",
+      "page": 6,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "the section from 1,072 to 873 ft in the USGS-Clubhouse Cross-",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 873.0,
+       "max_ft": 873.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Donoho Creek Formation",
+      "source_id": "ngmdb:5893",
+      "page": 6,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "the section from 1,072 to 873 ft in the USGS-Clubhouse Cross-",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Donoho Creek",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "873 ft",
+      "source_id": "ngmdb:5893",
+      "page": 6,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "now defined as the 73-foot-thick section from a depth of 873 ft to",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 873.0,
+       "max_ft": 873.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "800 ft",
+      "source_id": "ngmdb:5893",
+      "page": 6,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "now defined as the 73-foot-thick section from a depth of 873 ft to",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 800.0,
+       "max_ft": 800.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Peedee Formation",
+      "source_id": "ngmdb:5893",
+      "page": 6,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "now defined as the 73-foot-thick section from a depth of 873 ft to",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Peedee",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "CHN-635",
+    "source_id": "ngmdb:5893",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "cuttings from water well CHN-635. We also thank Steven Schin-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Sullivans Island",
+    "source_id": "ngmdb:5893",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "CHN-635 located on Sullivans Island (fig. 2). Drillers logs were",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "2,400 ft",
+      "source_id": "ngmdb:5893",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "at 2,400 ft in this well (sections A-A', D-D'). Similarly, the highest",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 2400.0,
+       "max_ft": 2400.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Clubhouse Formation",
+      "source_id": "ngmdb:5893",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "at 2,400 ft in this well (sections A-A', D-D'). Similarly, the highest",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Clubhouse",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "partial thickness of 136 ft recorded; hole did not reach bottom of formation",
+      "source_id": "ngmdb:5893",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "(section A A'); only a partial thickness of 136 ft was recorded in",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    },
+    {
+     "top": {
+      "value": "1,823 ft",
+      "source_id": "ngmdb:5893",
+      "page": 3,
+      "extraction_method": "llm",
+      "confidence": 0.578,
+      "inferred": true,
+      "locator": null,
+      "quote": "very coarse sand is in the 1,823- to-l,812-ft sample, which",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "note": "sample interval corresponding to top of Middendorf",
+      "normalized": {
+       "min_ft": 1823.0,
+       "max_ft": 1823.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Middendorf Formation",
+      "source_id": "ngmdb:5893",
+      "page": 3,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "corresponds to the top of the Middendorf as interpreted from the",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "normalized": {
+       "canonical": "Middendorf",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "CHN-14",
+    "source_id": "ngmdb:5893",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Company (CHN-14), considered these sands to be part of the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Charlotte Street, Charleston",
+    "source_id": "ngmdb:5893",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Stephenson (1914), in his description of a well drilled at Charlotte",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "total_depth": {
+    "value": "2,001 ft when installed in 1911; collapsed below casing at 1,866 feet",
+    "source_id": "ngmdb:5893",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fahrenheit (Stephenson, 1914). The depth of the well was 2,001",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 1866.0,
+     "max_ft": 2001.0,
+     "values_ft": [
+      2001.0,
+      1866.0
+     ],
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "date": {
+    "value": "1911",
+    "source_id": "ngmdb:5893",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "in 1911 when this well was installed. At that time, it reportedly",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "water_level": {
+    "value": "about 90 ft above sea level (1911)",
+    "source_id": "ngmdb:5893",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Pleasant. A water level of about 90 ft above sea level was recorded",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 90.0,
+     "max_ft": 90.0,
+     "unit": "ft",
+     "approximate": true
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "1,800 ft",
+      "source_id": "ngmdb:5893",
+      "page": 8,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "CHN-14 is at a depth of 1,800 ft.",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 1800.0,
+       "max_ft": 1800.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Middendorf Formation",
+      "source_id": "ngmdb:5893",
+      "page": 8,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "in 1990 indicate that the top of the Middendorf Formation in",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Middendorf",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "CHN-14",
+    "source_id": "ngmdb:5893",
+    "page": 9,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "CHN-14 declined from 2 ft below land surface to 54.81 ft below",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "water_level": {
+    "value": "54.81 ft below land surface",
+    "source_id": "ngmdb:5893",
+    "page": 9,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "CHN-14 declined from 2 ft below land surface to 54.81 ft below",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 54.81,
+     "max_ft": 54.81,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "water_level_date": {
+    "value": "July 13, 1993",
+    "source_id": "ngmdb:5893",
+    "page": 9,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "land surface as of July 13, 1993. Water levels in other Middendorf",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": "1993-07-13"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "CHN-559",
+    "source_id": "ngmdb:5893",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "(fig. 4) where the water level in well CHN-559 was 48 ft below sea",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "water_level": {
+    "value": "48 ft below sea level",
+    "source_id": "ngmdb:5893",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "(fig. 4) where the water level in well CHN-559 was 48 ft below sea",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 48.0,
+     "max_ft": 48.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "water_level_date": {
+    "value": "November 1991",
+    "source_id": "ngmdb:5893",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "path. By November 1991, a large cone of depression in the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": "1991-11"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "CHN-173",
+    "source_id": "ngmdb:5893",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "wells (CHN-173, fig. 2) was about 126 ft abo\"e sea level when it",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Mount Pleasant",
+    "source_id": "ngmdb:5893",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.614,
+    "inferred": false,
+    "locator": null,
+    "quote": "surface. The potentiometric surface at one of the Mount Pleasant",
+    "quote_match": "fuzzy",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "water_level": {
+    "value": "about 126 ft above sea level",
+    "source_id": "ngmdb:5893",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "wells (CHN-173, fig. 2) was about 126 ft abo\"e sea level when it",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 126.0,
+     "max_ft": 126.0,
+     "unit": "ft",
+     "approximate": true
+    }
+   },
+   "water_level_date": {
+    "value": "1971",
+    "source_id": "ngmdb:5893",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "was drilled in 1971.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ],
+ "structures": [],
+ "groundwater": [
+  {
+   "aquifer": {
+    "value": "Middendorf aquifer",
+    "source_id": "ngmdb:5893",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the stratigraphically complex nature of this geohydrologically",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "role": {
+    "value": "aquifer",
+    "source_id": "ngmdb:5893",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "PRINCIPAL AQUIFER OF CRETACEOUS AGE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "unit": {
+    "value": "Middendorf Formation",
+    "source_id": "ngmdb:5893",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "category III sands of the Middendorf Formation. However, clayey",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Middendorf",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "description": {
+    "value": "principal aquifer in sands of Cretaceous age underlying Charleston at depths of 1,800 to 2,000 ft",
+    "source_id": "ngmdb:5893",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "at depths of 1,800 to 2,000 ft, which is referred to here as the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "transmissivity": {
+    "value": "1,200 to 1,600 ft^/d (single-well tests)",
+    "source_id": "ngmdb:5893",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "from single-well tests range from 1,200 to 1,600 ft^/d (Aucott and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "head": {
+    "value": "predevelopment water levels as much as 126 ft above sea level",
+    "source_id": "ngmdb:5893",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "126 ft above sea level, and predevelopment flow was parallel to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 126.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Middendorf aquifer",
+    "source_id": "ngmdb:5893",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "open to the Middendorf aquifer. Yields range from 350 to 1,600",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "east of the Cooper River",
+    "source_id": "ngmdb:5893",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Most deep wells in the area east of the Coooer River (fig. 2) are",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "Yields range from 350 to 1,600 gal/min with up to 300 ft of drawdown",
+    "source_id": "ngmdb:5893",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "open to the Middendorf aquifer. Yields range from 350 to 1,600",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Middendorf aquifer",
+    "source_id": "ngmdb:5893",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "ft below sea level (well DOR-221, not shown) was centered in the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Summerville area (well DOR-221)",
+    "source_id": "ngmdb:5893",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "ft below sea level (well DOR-221, not shown) was centered in the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "head": {
+    "value": "minimum water level of 40 ft below sea level",
+    "source_id": "ngmdb:5893",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "level (fig. 2). A similar depression with a minimum water level of 40",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 40.0,
+     "max_ft": null,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "date": {
+    "value": "November 1991",
+    "source_id": "ngmdb:5893",
+    "page": 8,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "path. By November 1991, a large cone of depression in the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": "1991-11"
+   }
+  }
+ ],
+ "references": [
+  {
+   "citation": {
+    "value": "Aucott, W.R., and Newcome, Roy, Jr., 1986, Selected aquifer-test",
+    "source_id": "ngmdb:5893",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Aucott, W.R., and Newcome, Roy, Jr., 1986, Selected aquifer-test",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of reference entry; text continues in two-column layout"
+   }
+  },
+  {
+   "citation": {
+    "value": "Aucott, W.R., and Speiran, G.K., 1985, Ground water flow in the",
+    "source_id": "ngmdb:5893",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Aucott, W.R., and Speiran, G.K., 1985, Ground water flow in the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of reference entry; text continues in two-column layout"
+   }
+  },
+  {
+   "citation": {
+    "value": "Aucott, W.R., Davis, M.E., and Speiran, G.K., 1987, Geohydro-",
+    "source_id": "ngmdb:5893",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Aucott, W.R., Davis, M.E., and Speiran, G.K., 1987, Geohydro-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of reference entry; text continues in two-column layout"
+   }
+  },
+  {
+   "citation": {
+    "value": "Brown, P.M., Brown, D.L., Reid, M.S., and Lloyd, O.B., Jr., 1979,",
+    "source_id": "ngmdb:5893",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Brown, P.M., Brown, D.L., Reid, M.S., and Lloyd, O.B., Jr., 1979,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of reference entry; text continues in two-column layout"
+   }
+  },
+  {
+   "citation": {
+    "value": "Colquhoun, D.J., Woollen, I.D., Van Nieuwenhuise, D.S., Padgett,",
+    "source_id": "ngmdb:5893",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Colquhoun, D.J., Woollen, I.D., Van Nieuwenhuise, D.S., Padgett,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "first line of reference entry; text continues in two-column layout"
+   }
+  },
+  {
+   "citation": {
+    "value": "Cooke, C.W., 1936, Geology of the Coastal Plain of South",
+    "source_id": "ngmdb:5893",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cooke, C.W., 1936, Geology of the Coastal Plain of South",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of reference entry; text continues in two-column layout"
+   }
+  },
+  {
+   "citation": {
+    "value": "Darton, N.H., 1896, Artesian well prospects in the Atlantic Coastal",
+    "source_id": "ngmdb:5893",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Darton, N.H., 1896, Artesian well prospects in the Atlantic Coastal",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of reference entry; text continues in two-column layout"
+   }
+  },
+  {
+   "citation": {
+    "value": "Gohn, G.S., 1992, Revised nomenclature, definitions, and corre-",
+    "source_id": "ngmdb:5893",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gohn, G.S., 1992, Revised nomenclature, definitions, and corre-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of reference entry; text continues in two-column layout"
+   }
+  },
+  {
+   "citation": {
+    "value": "Gohn, G.S., and Campbell, B.C., 1992, Recent revisions to the",
+    "source_id": "ngmdb:5893",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gohn, G.S., and Campbell, B.C., 1992, Recent revisions to the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "first line of reference entry; text continues in two-column layout"
+   }
+  },
+  {
+   "citation": {
+    "value": "Gohn, G.S., Higgins, B.B., Smith, C.C., and Owens, J.P., 1977,",
+    "source_id": "ngmdb:5893",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gohn, G.S., Higgins, B.B., Smith, C.C., and Owens, J.P., 1977,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of reference entry; text continues in two-column layout"
+   }
+  },
+  {
+   "citation": {
+    "value": "Gohn, G.S., Christopher, R.A., Smith, C.C., and Owens, J.P.,",
+    "source_id": "ngmdb:5893",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gohn, G.S., Christopher, R.A., Smith, C.C., and Owens, J.P.,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of reference entry; text continues in two-column layout"
+   }
+  },
+  {
+   "citation": {
+    "value": "Hamilton, R.M., Behrendt, J.C., and Ackermann, H D., 1983,",
+    "source_id": "ngmdb:5893",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Hamilton, R.M., Behrendt, J.C., and Ackermann, H D., 1983,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of reference entry; text continues in two-column layout"
+   }
+  },
+  {
+   "citation": {
+    "value": "Hattner, J.G., and Wise, S.W., Jr., 1980, Upper Cretaceous",
+    "source_id": "ngmdb:5893",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Hattner, J.G., and Wise, S.W., Jr., 1980, Upper Cretaceous",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of reference entry; text continues in two-column layout"
+   }
+  },
+  {
+   "citation": {
+    "value": "Hazel, J.E., Bybell, L.M., Christopher, R.A., Frederiksen, N.O.,",
+    "source_id": "ngmdb:5893",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Hazel, J.E., Bybell, L.M., Christopher, R.A., Frederiksen, N.O.,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of reference entry; text continues in two-column layout"
+   }
+  },
+  {
+   "citation": {
+    "value": "Lynch, P.N., Shepard, C.V., Geddings, J.F.M., 1881, Artesian",
+    "source_id": "ngmdb:5893",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Lynch, P.N., Shepard, C.V., Geddings, J.F.M., 1881, Artesian",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "first line of reference entry; text continues in two-column layout"
+   }
+  },
+  {
+   "citation": {
+    "value": "Owens, J.P., 1989, Geologic map of the Cape Fear region,",
+    "source_id": "ngmdb:5893",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Owens, J.P., 1989, Geologic map of the Cape Fear region,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of reference entry; text continues in two-column layout"
+   }
+  },
+  {
+   "citation": {
+    "value": "Park, A.D., 1985, The ground-water resources of Charleston,",
+    "source_id": "ngmdb:5893",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Park, A.D., 1985, The ground-water resources of Charleston,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of reference entry; text continues in two-column layout"
+   }
+  },
+  {
+   "citation": {
+    "value": "Prowell, D.C., Christopher, R.A., Edwards, L.E., Bybell, L.M., and",
+    "source_id": "ngmdb:5893",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Prowell, D.C., Christopher, R.A., Edwards, L.E., Bybell, L.M., and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of reference entry; text continues in two-column layout"
+   }
+  },
+  {
+   "citation": {
+    "value": "Reid, M.S., Aucott, W.R., Lee, R.W., and Renken, R.A., 1986,",
+    "source_id": "ngmdb:5893",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Reid, M.S., Aucott, W.R., Lee, R.W., and Renken, R.A., 1986,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of reference entry; text continues in two-column layout"
+   }
+  },
+  {
+   "citation": {
+    "value": "Siple, G.E., 1946, Progress report on ground-water investigations",
+    "source_id": "ngmdb:5893",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Siple, G.E., 1946, Progress report on ground-water investigations",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of reference entry; text continues in two-column layout"
+   }
+  },
+  {
+   "citation": {
+    "value": "Sohl, N.F., and Owens, J.P., 1991, Cretaceous stratigraphy of the",
+    "source_id": "ngmdb:5893",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Sohl, N.F., and Owens, J.P., 1991, Cretaceous stratigraphy of the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of reference entry; text continues in two-column layout"
+   }
+  },
+  {
+   "citation": {
+    "value": "Stephenson, L.W., 1914, A deep well at Charleston, South",
+    "source_id": "ngmdb:5893",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Stephenson, L.W., 1914, A deep well at Charleston, South",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "first line of reference entry; text continues in two-column layout"
+   }
+  },
+  {
+   "citation": {
+    "value": "Valentine, P.C., 1982, Upper Cretaceous subsurface stratigraphy",
+    "source_id": "ngmdb:5893",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Valentine, P.C., 1982, Upper Cretaceous subsurface stratigraphy",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of reference entry; text continues in two-column layout"
+   }
+  }
+ ]
+}
