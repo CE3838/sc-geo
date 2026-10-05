@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 4,
+ "count": 5,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -53,6 +53,16 @@
     "verdict": "unclear",
     "note": "page shows Total depth = 2579 ft on a cross section; which hole it belongs to is not legible in OCR"
    }
+  },
+  {
+   "source_id": "ngmdb:5893",
+   "path": "observations[5].location",
+   "problem": "inexact_quote",
+   "value": "Mount Pleasant",
+   "page": 8,
+   "quote": "surface. The potentiometric surface at one of the Mount Pleasant",
+   "added_at": "2026-10-05T05:50:16+00:00",
+   "match": "fuzzy"
   }
  ]
 }
