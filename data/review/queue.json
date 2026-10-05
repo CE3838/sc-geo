@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 6,
+ "count": 7,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -75,6 +75,20 @@
    "verify": {
     "verdict": "unclear",
     "note": "OCR shows Qes and Qces; the printed symbol may be Qcs"
+   }
+  },
+  {
+   "source_id": "ngmdb:7662",
+   "path": "observations[4].intervals[0].bottom",
+   "problem": "verify_disagree",
+   "value": "S",
+   "page": 8,
+   "quote": "PAH-9   0-S   1.27   Ilmenite, epidote, sillimanite, staurolite, amphibole, tourmaline, zircon, rutile",
+   "added_at": "2026-10-05T05:56:31+00:00",
+   "verify": {
+    "verdict": "disagree",
+    "note": "text layer prints 0-S; the plate copy of table 4 (p. 11) reads 0-5, so the bottom is 5",
+    "value": "5"
    }
   }
  ]
