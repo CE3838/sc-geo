@@ -8,10 +8,11 @@
  "kind": "publication",
  "schema_version": 1,
  "extracted_at": "2026-10-05T01:06:49+00:00",
- "updated_at": "2026-10-05T01:06:49+00:00",
+ "updated_at": "2026-10-05T01:07:35+00:00",
  "reader": "Claude, reading session 2026-10-05",
  "packets": [
-  "packet-01"
+  "packet-01",
+  "packet-02"
  ],
  "blocks_done": [
   "1",
@@ -47,11 +48,24 @@
   "32",
   "33",
   "34",
-  "35"
+  "35",
+  "36",
+  "37",
+  "38",
+  "39",
+  "40",
+  "41",
+  "42",
+  "43",
+  "44",
+  "45",
+  "46",
+  "47",
+  "48"
  ],
  "blocks_total": 47,
- "complete": false,
- "notes": "Pages 1-35. Hydrology report with a solute-transport model; model input parameters (Table 2, Table 3) and simulated velocities/leakages were not recorded as field values. Figure 4 (p. 14) stratigraphic column is garbled in the text layer; the Santee Limestone name is read from fragments of that figure and flagged inferred. Table 1 (p. 17) per-sample core values (Beaufort County wells 1672-1809) were not recorded individually; the summary statistics given in the text are recorded. Formation descriptions of the Waccamaw, Pamlico and Talbot are attributed in the text to an unpublished 1960 report by Siple. Figure maps (pp. 10, 12, 16, 21, 24, 25) are mostly garbled and skipped.",
+ "complete": true,
+ "notes": "Pages 1-35. Hydrology report with a solute-transport model; model input parameters (Table 2, Table 3) and simulated velocities/leakages were not recorded as field values. Figure 4 (p. 14) stratigraphic column is garbled in the text layer; the Santee Limestone name is read from fragments of that figure and flagged inferred. Table 1 (p. 17) per-sample core values (Beaufort County wells 1672-1809) were not recorded individually; the summary statistics given in the text are recorded. Formation descriptions of the Waccamaw, Pamlico and Talbot are attributed in the text to an unpublished 1960 report by Siple. Figure maps (pp. 10, 12, 16, 21, 24, 25) are mostly garbled and skipped.\nPages 36-48. These pages hold model sensitivity tests, hypothetical pumping simulations (simulated values, not recorded), the summary, and the reference list. References relevant to South Carolina and the Floridan aquifer system near Savannah/Hilton Head are recorded; general hydrology/modeling references (Davis 1969, Davis and DeWiest 1966, Domenico and Schwartz 1990, Freeze and Cherry 1979, Frind 1982, Hubbert 1940, Javandel and others 1984, Kohout 1964, Lohman 1972, Voss 1984, Wolff 1982, Cooper 1964) and Georgia-only data reports were skipped. Page 48 is a publisher series list.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/wsp/2421/report.pdf",
@@ -62,12 +76,12 @@
   }
  ],
  "summary": {
-  "stored": 77,
+  "stored": 94,
   "quote_match": {
-   "exact": 77
+   "exact": 94
   },
   "verification": {
-   "agree": 8
+   "agree": 10
   },
   "inferred": 9
  },
@@ -86,6 +100,24 @@
    "quote_not_found": 0,
    "wrong_page": 0,
    "agree": 8,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-10-05T01:07:35+00:00",
+   "packets": [
+    "packet-02"
+   ],
+   "reader": "Claude, reading session 2026-10-05",
+   "values": 17,
+   "stored": 17,
+   "exact": 17,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 2,
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
@@ -1216,5 +1248,263 @@
    }
   }
  ],
- "references": []
+ "references": [
+  {
+   "citation": {
+    "value": "Back, William, Hanshaw, B.B., and Ruben, Meyer, 1970, Carbon-14 ages related to occurrence of saltwater: American Society of Civil Engineers Proceedings, Journal of the Hydraulics Division, Nov. 1970, p. 2325-2336.",
+    "source_id": "ngmdb:25422",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Carbon-14 ages related to occurrence of saltwater:",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Burnette, T.L., 1952, History of the Parris Island water supply: Department of Public Works, U.S. Navy, Parris Island, S.C., 6 p.",
+    "source_id": "ngmdb:25422",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Burnette, T.L., 1952, History of the Parris Island water sup-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Burt, R.A., Belval, D.L., Crouch, Michael, and Hughes, W.B., 1987, Geohydrologic data from Port Royal Sound, Beaufort County, South Carolina: U.S. Geological Survey Open-File Report 86^497, 67 p.",
+    "source_id": "ngmdb:25422",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "W.B., 1987, Geohydrologic data from Port Royal",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "Report number as printed in the text layer"
+   }
+  },
+  {
+   "citation": {
+    "value": "Bush, P.W., 1988, Simulation of saltwater movement in the Floridan aquifer system, Hilton Head Island, South Carolina: U.S. Geological Survey Water-Supply Paper 2331, 19 p.",
+    "source_id": "ngmdb:25422",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Bush, P.W., 1988, Simulation of saltwater movement in the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Counts, H.B., and Donsky, Ellis, 1959, Summary of salt-water encroachment, geology, and ground-water resources of Savannah area, Georgia and South Carolina: Georgia Geological Survey Mineral Newsletter, v. 12, no. 3, 16 p.",
+    "source_id": "ngmdb:25422",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Counts, H.B., and Donsky, Ellis, 1959, Summary of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Counts, H.B., and Donsky, Ellis, 1963, Salt-water encroachment, geology, and ground-water resources of Savannah area, Georgia and South Carolina: U.S. Geological Survey Water-Supply Paper 1611, 100 p.",
+    "source_id": "ngmdb:25422",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "1963, Salt-water encroachment, geology, and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Duncan, D.A., 1972, High resolution seismic study, in Port Royal Sound Environmental Study: South Carolina Water Resources Commission p. 86-106.",
+    "source_id": "ngmdb:25422",
+    "page": 47,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Duncan, D.A., 1972, High resolution seismic study, in Port",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Hassen, J.A., 1985, Ground-water conditions in the Ladies and St. Helena Islands areas, South Carolina: South Carolina Water Resources Commission Report No. 147, 56 p.",
+    "source_id": "ngmdb:25422",
+    "page": 47,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Hassen, J.A., 1985, Ground-water conditions in the Ladies",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Hayes, L.R., 1979, The ground-water resources of Beaufort, Colleton, Hampton, and Jasper Counties, South Carolina: South Carolina Water Resources Commission Report No. 9, 91 p.",
+    "source_id": "ngmdb:25422",
+    "page": 47,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Hayes, L.R., 1979, The ground-water resources of Beaufort,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Hughes, W.B., Crouch, M.S., and Park, A.D., 1989, Hydrogeology and Saltwater contamination of the Floridan Aquifer in Beaufort and Jasper Counties, South Carolina: South Carolina Water Resources Commission Report No. 158, 52 p.",
+    "source_id": "ngmdb:25422",
+    "page": 47,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Hughes, W.B., Crouch, M.S., and Park, A.D., 1989, Hydro-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Krause, R.E., 1982, Digital model evaluation of the predevelopment flow system of the Tertiary limestone aquifer, southeast Georgia, northeast Florida and southern South Carolina: U.S. Geological Survey Open-File Report 82-173, 27 p.",
+    "source_id": "ngmdb:25422",
+    "page": 47,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Krause, R.E., 1982, Digital model evaluation of the prede-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "McCollum, M.J., and Counts, H.B., 1964, Relation of salt-water encroachment to the major aquifer zones, Savannah area, Georgia and South Carolina: U.S. Geological Survey Water-Supply Paper 1613-D, 26 p.",
+    "source_id": "ngmdb:25422",
+    "page": 47,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "McCollum, M.J., and Counts, H.B., 1964, Relation of salt-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Miller, J.A., 1982, Geology and configuration of the top of the Tertiary limestone aquifer system, southeastern United States: U.S. Geological Survey Open-File Report 81-1178, 1 sheet.",
+    "source_id": "ngmdb:25422",
+    "page": 47,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Miller, J.A., 1982, Geology and configuration of the top of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Miller, J.A., 1986, Hydrogeologic framework of the Floridan aquifer system in Florida and in parts of Georgia, Alabama, and South Carolina: U.S. Geological Survey Professional Paper 1403-B, 91 p.",
+    "source_id": "ngmdb:25422",
+    "page": 47,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "1986, Hydrogeologic framework of the Floridan",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Smith, B.S., 1988, Ground-water flow and saltwater encroachment in the Upper Floridan aquifer, Beaufort and Jasper Counties, South Carolina: U.S. Geological Survey Water-Resources Investigations Report 87^285, 61 p.",
+    "source_id": "ngmdb:25422",
+    "page": 47,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Smith, B.S., 1988, Ground-water flow and saltwater",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "Report number printed as 87^285 in the text layer"
+   }
+  },
+  {
+   "citation": {
+    "value": "Spigner, B.C., and Ransom, Camille, 1979, Report on ground-water conditions in the Low Country area, South Carolina: S.C. Water Resources Commission Report No. 132, 144 p.",
+    "source_id": "ngmdb:25422",
+    "page": 47,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Spigner, B.C., and Ransom, Camille, 1979, Report on",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Warren, M.A., 1944, Artesian water in southeastern Georgia with special reference to the coastal area: Georgia Geological Survey Bulletin No. 49, 140 p.",
+    "source_id": "ngmdb:25422",
+    "page": 47,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Warren, M.A., 1944, Artesian water in southeastern Georgia",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ]
 }
