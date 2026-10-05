@@ -28,6 +28,13 @@ sheet is about 1,400-2,000 tile downloads (roughly 12 minutes) plus a few
 minutes of OCR, so `next_batch` can take a while on them. Values read from
 them carry the image URL as their locator.
 
+To pick specific documents, take them from `config/reading_list.json`
+(records whose titles are geology): `python -m extract.prep --todo` lists the
+ones not yet read, and `python -m extract.next_batch --id <ID> --n 1` hands
+out one of them. OCR can run ahead as a background job with no reading
+(`python -m extract.prep --next 10`, one document at a time, resumable); it
+prints `READY <id>` when a document's packets are built.
+
 ## 1. Pick the packets
 
 ```sh
