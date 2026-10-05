@@ -8,10 +8,11 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-05T01:01:52+00:00",
- "updated_at": "2026-10-05T01:01:52+00:00",
+ "updated_at": "2026-10-05T01:02:17+00:00",
  "reader": "Claude, reading session 2026-10-05",
  "packets": [
-  "packet-01"
+  "packet-01",
+  "packet-02"
  ],
  "blocks_done": [
   "279",
@@ -40,11 +41,14 @@
   "307",
   "308",
   "309",
-  "310"
+  "310",
+  "311",
+  "312",
+  "313"
  ],
  "blocks_total": 30,
- "complete": false,
- "notes": "Packet 1 of 2 (pp. 279-310). Pages 280-282, 300, 301 were image-only and not OCRed in this session (served with --allow-partial). Locality register (96 localities) stored as observations with location, surface altitude (elevation) and sample altitudes (interval description; altitudes relative to sea level, not depths). Fossil occurrence tables 2-6 have garbled column alignment in the text layer and were not stored per locality. References repeated from other chapters and non-SC references skipped.",
+ "complete": true,
+ "notes": "Packet 1 of 2 (pp. 279-310). Pages 280-282, 300, 301 were image-only and not OCRed in this session (served with --allow-partial). Locality register (96 localities) stored as observations with location, surface altitude (elevation) and sample altitudes (interval description; altitudes relative to sea level, not depths). Fossil occurrence tables 2-6 have garbled column alignment in the text layer and were not stored per locality. References repeated from other chapters and non-SC references skipped.\nPacket 2 of 2 (pp. 311-313): continuation of Table 6 (sporomorph occurrences). Column alignment is lost in the text layer, so per-locality occurrences were not stored; only the Marks Head pollen marker named in the text is recorded.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/pp/1367/report.pdf",
@@ -69,14 +73,14 @@
   }
  ],
  "summary": {
-  "stored": 434,
+  "stored": 437,
   "quote_match": {
-   "exact": 434
+   "exact": 437
   },
   "verification": {
-   "agree": 60
+   "agree": 63
   },
-  "inferred": 1
+  "inferred": 2
  },
  "ingests": [
   {
@@ -93,6 +97,24 @@
    "quote_not_found": 0,
    "wrong_page": 0,
    "agree": 60,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-10-05T01:02:17+00:00",
+   "packets": [
+    "packet-02"
+   ],
+   "reader": "Claude, reading session 2026-10-05",
+   "values": 3,
+   "stored": 3,
+   "exact": 3,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 3,
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
@@ -903,6 +925,62 @@
     "quote_match": "exact",
     "text_method": "pdf_text",
     "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Marks Head Formation",
+    "source_id": "ngmdb:74350",
+    "page": 312,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Marks Head   Penholoway   Ladson   Ten Mile",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "canonical": "Marks Head",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Miocene",
+    "source_id": "ngmdb:74350",
+    "page": 312,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "MIOCENE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 5.333,
+     "older_ma": 23.03,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "fossils": {
+    "value": "Momipites spackmanianus (pollen), in both Marks Head samples (localities 52 and 18)",
+    "source_id": "ngmdb:74350",
+    "page": 312,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Momipites spackmanianus (T) . X   X",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "Table 6 columns are misaligned in the text layer; assignment to the two Marks Head columns inferred from position and from the text on p. 292"
    }
   }
  ],
