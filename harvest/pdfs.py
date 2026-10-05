@@ -19,8 +19,11 @@ metadata in data/review/needs_access.json for library access.
 Records are processed Charleston County first, then the rest of the Coastal
 Plain, then everything else (config/extract.json). PDFs go to
 .cache/pdfs/<id>/, page text (with OCR where there is no text layer) to
-.cache/text/<id>.json, and one checkpoint per document to .checkpoints/pdfs,
-so a rerun skips finished work.
+.cache/text/<id>.json, OCRed pages one by one to .cache/ocr/<sha256>/, and one
+checkpoint per document to .checkpoints/pdfs, so a rerun skips finished work.
+A file counts as unread only when none of its pages has text; pages whose OCR
+failed are listed as `ocr_missing_pages` and retried (from the OCR cache) up to
+config "ocr.max_attempts" times.
 
     python -m harvest.pdfs [--limit N] [--max-minutes M] [--resolve-only] [--id ngmdb:10009 ...]
 """
@@ -501,6 +504,23 @@ def _stale(ck: dict, email: str | None) -> bool:
     return ck.get("status") != "text" and ck.get("resolver_version") != RESOLVER_VERSION
 
 
+def _ocr_retry_due(ck: dict, ocr) -> bool:
+    """True when a document still has pages without text that OCR should try again.
+
+    Finished pages come from the OCR cache, so a retry only redoes the missing ones; after
+    CONFIG["ocr"]["max_attempts"] tries the document is left as it is.
+    """
+    from extract import pdftext
+
+    if ocr is None or ck.get("status") not in ("needs_ocr", "text"):
+        return False
+    if ck["status"] == "text" and not ck.get("ocr_missing_pages"):
+        return False
+    if ck.get("ocr_attempts", 0) >= CONFIG["ocr"].get("max_attempts", 3):
+        return False
+    return pdftext.ocr_engine() is not None
+
+
 def process(rec: dict, fetcher, ckpt_dir: Path, cache_dir: Path, email: str | None, ocr="auto",
             resolve_only: bool = False, log: Callable[..., None] = print, drop_pdfs: bool = False) -> dict:
     """Run the remaining stages for one record; returns its checkpoint.
@@ -530,6 +550,7 @@ def process(rec: dict, fetcher, ckpt_dir: Path, cache_dir: Path, email: str | No
     if not files_ok:
         files, problems = download_files(rec, ck["candidates"], fetcher, pdf_dir, log)
         ck.update(files=files, problems=problems, downloaded_at=_now())
+        ck.pop("ocr_attempts", None)
         if files:
             ck["status"] = "downloaded"
         elif problems and all("not a PDF" in p or "no PDF" in p or "HTTP Error 4" in p for p in problems):
@@ -540,10 +561,11 @@ def process(rec: dict, fetcher, ckpt_dir: Path, cache_dir: Path, email: str | No
         if not files:
             return ck
 
-    redo_ocr = ck.get("status") == "needs_ocr" and ocr is not None and pdftext.ocr_engine()
+    redo_ocr = _ocr_retry_due(ck, ocr)
     if not text_path.exists() or ck.get("status") == "downloaded" or redo_ocr:
         try:
-            doc = pdftext.document(rec["id"], ck["files"], ocr=ocr, min_chars=CONFIG["min_text_chars_per_page"])
+            doc = pdftext.document(rec["id"], ck["files"], ocr=ocr, min_chars=CONFIG["min_text_chars_per_page"],
+                                   ocr_cache=Path(cache_dir) / "ocr")
         except (RuntimeError, OSError) as err:
             ck.update(status="failed", reason=f"text: {type(err).__name__}: {str(err)[:200]}")
             _save(path, ck)
@@ -558,10 +580,27 @@ def process(rec: dict, fetcher, ckpt_dir: Path, cache_dir: Path, email: str | No
         ck.update(summary, unread_files=len(unread), text_at=_now(),
                   text_path=str(text_path.relative_to(cache_dir.parent))
                   if cache_dir.parent in text_path.parents else str(text_path))
+        # Pages that needed OCR (no text layer) and those still without text. A file with
+        # some text is read now; its missing pages are retried later from the OCR cache.
+        needed = [p["page"] for p in doc["pages"] if p["method"] != "pdf_text"]
+        missing = [p["page"] for p in doc["pages"] if p.get("needs_ocr")]
+        attempted = bool(needed) and ocr is not None and pdftext.ocr_engine() is not None
+        if attempted:
+            ck["ocr_attempts"] = ck.get("ocr_attempts", 0) + 1
+        ck["ocr_missing_pages"] = missing
         ck["status"] = "needs_ocr" if unread else "text"
-        ck["reason"] = (f"{len(unread)} file(s) are scans without a text layer and no OCR engine was available"
-                        if unread else None)
-        if drop_pdfs and ck["status"] == "text":
+        if not missing:
+            ck["reason"] = None
+        elif attempted:
+            ck["reason"] = f"OCR failed on {len(missing)} of {len(needed)} pages"
+            if unread:
+                ck["reason"] += f"; {len(unread)} file(s) have no text yet"
+        elif ocr is None:
+            ck["reason"] = f"OCR was not run; {len(missing)} page(s) without a text layer"
+        else:
+            ck["reason"] = (f"no OCR engine was available; {len(unread)} file(s) are scans without a text layer"
+                            if unread else f"no OCR engine was available; {len(missing)} page(s) without a text layer")
+        if drop_pdfs and ck["status"] == "text" and not _ocr_retry_due(ck, ocr):
             shutil.rmtree(pdf_dir, ignore_errors=True)
             ck["pdfs_dropped"] = True
         _save(path, ck)
@@ -642,9 +681,8 @@ def run(catalog_path: Path = ROOT / "data" / "catalog" / "sc_catalog.json",
         st = ck.get("status")
         if resolve_only:
             return "candidates" not in ck
-        if st == "needs_ocr":
-            from extract import pdftext
-            return ocr is not None and pdftext.ocr_engine() is not None
+        if st == "needs_ocr" or (st == "text" and ck.get("ocr_missing_pages")):
+            return _ocr_retry_due(ck, ocr)
         return st not in DONE
 
     work = [r for r in todo if needs_work(r)]
