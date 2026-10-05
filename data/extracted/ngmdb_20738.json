@@ -8,10 +8,11 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-05T05:49:47+00:00",
- "updated_at": "2026-10-05T05:49:47+00:00",
+ "updated_at": "2026-10-05T05:51:41+00:00",
  "reader": "Claude, reading session 2026-10-05",
  "packets": [
-  "packet-01"
+  "packet-01",
+  "packet-02"
  ],
  "blocks_done": [
   "1",
@@ -57,11 +58,55 @@
   "46",
   "47",
   "48",
-  "49"
+  "49",
+  "50",
+  "51",
+  "52",
+  "53",
+  "54",
+  "55",
+  "56",
+  "57",
+  "58",
+  "59",
+  "60",
+  "61",
+  "62",
+  "63",
+  "64",
+  "65",
+  "66",
+  "67",
+  "68",
+  "69",
+  "70",
+  "72",
+  "73",
+  "74",
+  "75",
+  "76",
+  "77",
+  "78",
+  "79",
+  "80",
+  "81",
+  "82",
+  "83",
+  "84",
+  "85",
+  "86",
+  "87",
+  "88",
+  "89",
+  "90",
+  "91",
+  "92",
+  "93",
+  "94"
  ],
  "blocks_total": 115,
  "complete": false,
- "notes": "Pages 1-5 are OCR of the map plates and are heavily garbled; only the legible explanation text of plate 1 was used, and unit symbols read as Qif/Qip in the OCR are recorded as Qlf/Qlp (inferred). Plate 1 assigns no unit names to the two youngest sand descriptions except 'Terrace deposits along Goose Creek' and 'Sand on Tenmile Hill'; the middle description is attributed to the Pamlico formation by inference from page 15. Ladson formation maximum thickness: plate 1 says 33 feet, the abstract (page 15) says 35 feet; both recorded. Logs on pages 25, 41 and 48 give bed thicknesses, not depths; thicknesses are put in interval notes rather than converted to depths. The type-section auger hole number is garbled ('2^2') and recorded as 242 from figure 5 (inferred). Fossil tables on pages 27-28 and 42-43 are garbled and were not itemized.",
+ "notes": "Pages 1-5 are OCR of the map plates and are heavily garbled; only the legible explanation text of plate 1 was used, and unit symbols read as Qif/Qip in the OCR are recorded as Qlf/Qlp (inferred). Plate 1 assigns no unit names to the two youngest sand descriptions except 'Terrace deposits along Goose Creek' and 'Sand on Tenmile Hill'; the middle description is attributed to the Pamlico formation by inference from page 15. Ladson formation maximum thickness: plate 1 says 33 feet, the abstract (page 15) says 35 feet; both recorded. Logs on pages 25, 41 and 48 give bed thicknesses, not depths; thicknesses are put in interval notes rather than converted to depths. The type-section auger hole number is garbled ('2^2') and recorded as 242 from figure 5 (inferred). Fossil tables on pages 27-28 and 42-43 are garbled and were not itemized.\nText layer pages; some characters garbled (Munsell hue 'Y' printed as 'F', fractions such as 'J^', '%' and '1J_!' in thickness columns). Thickness columns with garbled fractions were not recorded; bed thicknesses that are legible are given in interval notes, not converted to depths. Pollen tables (pages 62-63), X-ray table 3, chemical analyses (tables 4-5, pages 77-80) and the phosphate production table (page 85) were not itemized. Soil profiles on pages 87 and 94 (soil horizons, not geologic units) were not recorded as observations. The Ladson formation members continue from packet 1.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/bul/1079/plate-1.pdf",
@@ -107,16 +152,16 @@
   }
  ],
  "summary": {
-  "stored": 153,
+  "stored": 308,
   "quote_match": {
-   "exact": 153
+   "exact": 308
   },
   "verification": {
-   "disagree": 1,
-   "agree": 58,
-   "unclear": 1
+   "agree": 145,
+   "unclear": 1,
+   "disagree": 1
   },
-  "inferred": 16
+  "inferred": 27
  },
  "ingests": [
   {
@@ -136,6 +181,24 @@
    "disagree": 1,
    "unclear": 1,
    "review_items": 2
+  },
+  {
+   "at": "2026-10-05T05:51:41+00:00",
+   "packets": [
+    "packet-02"
+   ],
+   "reader": "Claude, reading session 2026-10-05",
+   "values": 155,
+   "stored": 155,
+   "exact": 155,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 87,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
   }
  ],
  "units": [
@@ -1292,6 +1355,786 @@
      "inferred": true,
      "source": "International Chronostratigraphic Chart v2023/09"
     }
+   }
+  },
+  {
+   "name": {
+    "value": "phosphate member",
+    "source_id": "ngmdb:20738",
+    "page": 50,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The phosphate member of the Ladson formation includes all beds at the base that are dominantly medium or coarse grained, or conglomeratic, and contain phosphate",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "rank": {
+    "value": "member",
+    "source_id": "ngmdb:20738",
+    "page": 50,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The phosphate member of the Ladson formation includes all beds",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Ladson formation",
+    "source_id": "ngmdb:20738",
+    "page": 50,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "The phosphate member of the Ladson formation includes all beds",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "lithology": {
+    "value": "unconsolidated gravel, sand, and clay, rather poorly sorted into layers",
+    "source_id": "ngmdb:20738",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The phosphate member consists of unconsolidated gravel, sand, and clay, rather poorly sorted into layers",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "Where unweathered the phosphate member is gray, olive gray, or yellowish gray; weathered parts are vividly mottled red, yellow, and gray",
+    "source_id": "ngmdb:20738",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Where unweathered the phosphate member is gray, olive gray, or yellowish gray",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "1 to 18 feet thick, averaging 10 feet",
+    "source_id": "ngmdb:20738",
+    "page": 56,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "the phosphate member is 1 to 18 feet thick, averaging 10 feet",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "min_ft": 1.0,
+     "max_ft": 18.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "contacts": {
+    "value": "rests on Cooper marl along the Ashley River, but appears to lie on younger formations locally; contact on the Cooper marl ordinarily sharp",
+    "source_id": "ngmdb:20738",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The phosphate member rests on Cooper marl along the Ashley River and at some places where the base has been reached with an auger",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "fossils": {
+    "value": "Bones, fish teeth, and shells are common in the gravel",
+    "source_id": "ngmdb:20738",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Bones, fish teeth, and shells are common in the gravel",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "phosphate member",
+    "source_id": "ngmdb:20738",
+    "page": 51,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the beds dip seaward (southeast) about 1 foot per mile",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "base lies above 20 feet altitude in the northwest part of the Ladson quadrangle, but only the beds below 15 feet altitude contain large amounts of phosphate rock",
+    "source_id": "ngmdb:20738",
+    "page": 51,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "only the beds below 15 feet altitude contain large amounts of phosphate rock",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "fine-sand member",
+    "source_id": "ngmdb:20738",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The fine-sand member consists of noncalcareous, evenly bedded, fairly well layered fine sand and clay overlying the phosphate member",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Ladson formation",
+    "source_id": "ngmdb:20738",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "the unweathered fine-sand member is gray, olive gray, or yellowish gray",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "lithology": {
+    "value": "noncalcareous, evenly bedded, fairly well layered fine sand and clay",
+    "source_id": "ngmdb:20738",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The fine-sand member consists of noncalcareous, evenly bedded, fairly well layered fine sand and clay",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "very well sorted, massive, fine sand, in places micaceous; crossbedded fine sand; fine sand with thin wavy laminae of clay; laminated clay. Unweathered: gray, olive gray, or yellowish gray",
+    "source_id": "ngmdb:20738",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The following are typical sediments: very well sorted, massive, fine sand, in places micaceous",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "maximum thickness is 20 feet; thins northwestward to 5 feet at the type locality",
+    "source_id": "ngmdb:20738",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the maximum thickness is 20 feet",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 5.0,
+     "max_ft": 20.0,
+     "values_ft": [
+      20.0,
+      5.0
+     ],
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "contacts": {
+    "value": "base and top are both abrupt changes to material containing medium-grained or coarse sand",
+    "source_id": "ngmdb:20738",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The base and top of the fine-sand member are both abrupt changes to material containing medium-grained or coarse sand",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "near-shore deposition in water less than 100 feet deep",
+    "source_id": "ngmdb:20738",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "indicate near-shore deposition in water less than 100 feet deep",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "medium-sand member",
+    "source_id": "ngmdb:20738",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The medium-sand member forms the rather flat areas in the northwest part of the Ladson quadrangle at about 45 to 50 feet above sea level",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "medium",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "group": {
+    "value": "Ladson formation",
+    "source_id": "ngmdb:20738",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "as compared to underlying members of the Ladson formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "lithology": {
+    "value": "laminae of medium-grained sand from 3 to 5 millimeters thick alternating with clayey laminae; wavy and crossbedded at low angles",
+    "source_id": "ngmdb:20738",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "This exposure shows laminae of medium-grained sand from 3 to 5 millimeters thick that alternate with clayey laminae",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "from 3 to 12 feet thick",
+    "source_id": "ngmdb:20738",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "which is from 3 to 12 feet thick",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "min_ft": 3.0,
+     "max_ft": 12.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "contacts": {
+    "value": "rests partly on the phosphate member and partly on the fine-sand member; a change to coarse sand marks the top",
+    "source_id": "ngmdb:20738",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The medium-sand member rests partly on the phosphate member and partly on the fine-sand member",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "coarse-sand member",
+    "source_id": "ngmdb:20738",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The coarse-sand member, the uppermost part of the Ladson formation, consists of slightly clayey, coarse sand",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Ladson formation",
+    "source_id": "ngmdb:20738",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The coarse-sand member, the uppermost part of the Ladson formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "lithology": {
+    "value": "slightly clayey, coarse sand; massive and well sorted, except for a small amount of clay",
+    "source_id": "ngmdb:20738",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "show that the coarse-sand member is massive and well sorted, except for a small amount of clay",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "15 to 20 feet thick",
+    "source_id": "ngmdb:20738",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "indicate that the member is 15 to 20 feet thick",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 15.0,
+     "max_ft": 20.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "description": {
+    "value": "crops out in the northwest corner of the Ladson quadrangle above about 50 feet altitude; forms a flat area 60 to 65 feet above sea level farther northwest",
+    "source_id": "ngmdb:20738",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "extends farther northwest to form a flat area 60 to 65 feet above sea level",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Ladson formation",
+    "source_id": "ngmdb:20738",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "show that the lower part is marine",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Ladson",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "depositional_environment": {
+    "value": "marine; lower part shown marine by fish teeth, mollusk shells and microfossils; near-shore currents suggested by some layers",
+    "source_id": "ngmdb:20738",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fish teeth and mollusk shells near the base of the Ladson formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene; interglacial",
+    "source_id": "ngmdb:20738",
+    "page": 64,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the similarity of the pollen assemblage to the modern pollen rain suggests that the Ladson formation is interglacial",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "fossils": {
+    "value": "Littorina sp., Anadara sp. cf. A. transversa (Say), Anomia sp., Barnea sp., Corbula, Gemma sp., Lunarca sp. cf. L. pexata (Say), Ostrea cf. O. virginica, Semele sp. (collection D206-T); regarded as Pleistocene",
+    "source_id": "ngmdb:20738",
+    "page": 60,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "I regard this fauna as Pleistocene.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "sand on Tenmile Hill",
+    "source_id": "ngmdb:20738",
+    "page": 65,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "These deposits are here informally termed, \"sand on Tenmile Hill,\"",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "rank": {
+    "value": "informal",
+    "source_id": "ngmdb:20738",
+    "page": 65,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "These deposits are here informally termed, \"sand on Tenmile Hill,\"",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "lithology": {
+    "value": "very well sorted, loose or friable fine sand or, in some places, very fine sand",
+    "source_id": "ngmdb:20738",
+    "page": 65,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The sand on Tenmile Hill consists of very well sorted, loose or friable fine sand or, in some places, very fine sand",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "grains subangular with 1 or 2 percent dark minerals; no mica or clay; carbonized plant fragments common in upper 5 feet; top weathered pale yellow, lower part nearly white",
+    "source_id": "ngmdb:20738",
+    "page": 65,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The sand grains are subangular and include 1 or 2 percent of dark minerals",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "maximum thickness is 12 feet at The Farms",
+    "source_id": "ngmdb:20738",
+    "page": 65,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The maximum thickness is 12 feet at The Farms",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 12.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "contacts": {
+    "value": "base mapped where loose, pale-yellow sand changes to firm, mottled sand, or where the deposits become stratified; rests on the fine-sand member of the Ladson formation",
+    "source_id": "ngmdb:20738",
+    "page": 66,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The base of the sand on Tenmile Hill is mapped where the loose, pale-yellow sand changes to firm, mottled sand",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "pattern seems most of all like dunes",
+    "source_id": "ngmdb:20738",
+    "page": 67,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Their pattern seems most of all like dunes.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Pamlico formation",
+    "source_id": "ngmdb:20738",
+    "page": 68,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "As used in this report, the Pamlico formation includes sand that is mainly below 25 feet altitude, resting on weathered beds of the Ladson formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Pamlico",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "formation",
+    "source_id": "ngmdb:20738",
+    "page": 68,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Stephenson (1912, p. 286) named the Pamlico formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "lithology": {
+    "value": "pale-yellow very well sorted loose or friable fine sand or very fine sand on well-drained ridges; similar but dark and firm in low, poorly drained locations",
+    "source_id": "ngmdb:20738",
+    "page": 68,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the deposits are pale-yellow very well sorted loose or friable fine sand or very fine sand",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "contacts": {
+    "value": "rests on weathered beds of the Ladson formation",
+    "source_id": "ngmdb:20738",
+    "page": 68,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "resting on weathered beds of the Ladson formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "about 80 feet beneath Charleston if the shells there are Pamlico; wedges out northwestward in about 8 miles",
+    "source_id": "ngmdb:20738",
+    "page": 72,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "they would indicate a thickness of about 80 feet, which wedges out northwestward in about 8 miles",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 80.0,
+     "max_ft": 80.0,
+     "unit": "feet",
+     "approximate": true
+    }
+   },
+   "age": {
+    "value": "probably not older than Wisconsin",
+    "source_id": "ngmdb:20738",
+    "page": 74,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "they probably are not older than Wisconsin",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "fossils": {
+    "value": "Anadara transversa (Say), Anatina canaliculata (Say), Cardium robustum Solander, Divaricella quadrisulcata (d'Orbigny), Lunarca pexata (Say), Mulinia lateralis Say and others (collections 1 and 2)",
+    "source_id": "ngmdb:20738",
+    "page": 73,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Anatina canaliculala (Say) and Lunarca pexata (Say) are not known to have lived earlier than the Pleistocene",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Terrace deposits along Goose Creek",
+    "source_id": "ngmdb:20738",
+    "page": 74,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "flat areas capped by deposits of loose, yellow or brown sand define a terrace that rises upstream",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "lithology": {
+    "value": "dominantly fine sand; upstream deposits contain some medium-grained sand",
+    "source_id": "ngmdb:20738",
+    "page": 74,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "All are dominantly fine sand, but the upstream deposits contain some medium-grained sand",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "average thickness is 4 feet; mapped only where at least 2 feet thick",
+    "source_id": "ngmdb:20738",
+    "page": 74,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The average thickness is 4 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 2.0,
+     "max_ft": 4.0,
+     "values_ft": [
+      4.0,
+      2.0
+     ],
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "contacts": {
+    "value": "downstream overlie the fine-sand member of the Ladson formation; upstream overlie the phosphate member",
+    "source_id": "ngmdb:20738",
+    "page": 74,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Downstream the deposits overlie the fine-sand member of the Ladson formation; upstream they overlie the phosphate member",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "mainly younger than the Pamlico formation",
+    "source_id": "ngmdb:20738",
+    "page": 74,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "are regarded, therefore, as mainly younger",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "phosphate rock (nodular)",
+    "source_id": "ngmdb:20738",
+    "page": 83,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The paleontologic, lithologic, and stratigraphic evidence is accepted as indicating that the nodular phosphate rock is phosphatized Cooper marl",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "nodules pale brown, faintly mottled with darker brown, weather white; specific gravity 2.2 to 2.5; about 28 percent P2O5 (61 percent bone phosphate of lime)",
+    "source_id": "ngmdb:20738",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "The nodules range between 2.2 and 2.5 in specific gravity",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "lithology": {
+    "value": "carbonate-fluorapatite",
+    "source_id": "ngmdb:20738",
+    "page": 81,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the phosphatic material is most likely carbonate-fluorapatite",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
    }
   }
  ],
@@ -2572,6 +3415,1821 @@
      }
     }
    ]
+  },
+  {
+   "kind": "outcrop",
+   "label": {
+    "value": "Section in wall of borrow pit 0.2 mile southwest of The Farms",
+    "source_id": "ngmdb:20738",
+    "page": 66,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "borrow pit 0,2 mile southwest of The Farms",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "borrow pit 0.2 mile southwest of The Farms",
+    "source_id": "ngmdb:20738",
+    "page": 66,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "borrow pit 0,2 mile southwest of The Farms",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "elevation": {
+    "value": "45 feet",
+    "source_id": "ngmdb:20738",
+    "page": 66,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "[Altitude 45 feet]",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 45.0,
+     "max_ft": 45.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Sand on Tenmile Hill",
+      "source_id": "ngmdb:20738",
+      "page": 66,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Sand on Tenmile Hill:",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     },
+     "description": {
+      "value": "Sand, fine, very friable, very dark gray; numerous fragments of carbonized wood",
+      "source_id": "ngmdb:20738",
+      "page": 66,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "1. Sand, fine, very friable, very dark gray (10 YR 3/1); numerous",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     },
+     "munsell": {
+      "value": "10 YR 3/1",
+      "source_id": "ngmdb:20738",
+      "page": 66,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "very dark gray (10 YR 3/1)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "hue": "10YR",
+       "value": 3,
+       "chroma": 1,
+       "notation": "10YR 3/1"
+      }
+     }
+    },
+    {
+     "unit": {
+      "value": "Sand on Tenmile Hill",
+      "source_id": "ngmdb:20738",
+      "page": 66,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Sand on Tenmile Hill:",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     },
+     "description": {
+      "value": "Sand, fine, massive, slightly firm, brownish-yellow; sparse, faint mottles of brown (7.5 YR 5/8) in lower part; fragments of carbonized wood decrease downward",
+      "source_id": "ngmdb:20738",
+      "page": 66,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "2. Sand, fine, massive, slightly firm, brownish-yellow (10 YR 6/6)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     },
+     "munsell": {
+      "value": "10 YR 6/6",
+      "source_id": "ngmdb:20738",
+      "page": 66,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "brownish-yellow (10 YR 6/6)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "hue": "10YR",
+       "value": 6,
+       "chroma": 6,
+       "notation": "10YR 6/6"
+      }
+     }
+    },
+    {
+     "unit": {
+      "value": "Sand on Tenmile Hill",
+      "source_id": "ngmdb:20738",
+      "page": 66,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Sand on Tenmile Hill:",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     },
+     "description": {
+      "value": "Sand, fine, massive, very friable, pale-yellow; sparse fragments of carbonized wood",
+      "source_id": "ngmdb:20738",
+      "page": 66,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "3. Sand, fine, massive, very friable, pale-yellow (2.5 F 7/4); sparse",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     },
+     "munsell": {
+      "value": "2.5 Y 7/4",
+      "source_id": "ngmdb:20738",
+      "page": 66,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "pale-yellow (2.5 F 7/4)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "hue printed as 'F'",
+      "normalized": {
+       "hue": "2.5Y",
+       "value": 7,
+       "chroma": 4,
+       "notation": "2.5Y 7/4"
+      }
+     }
+    },
+    {
+     "unit": {
+      "value": "Sand on Tenmile Hill",
+      "source_id": "ngmdb:20738",
+      "page": 66,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Sand on Tenmile Hill:",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     },
+     "description": {
+      "value": "Sand, fine, massive, slightly firm, yellow",
+      "source_id": "ngmdb:20738",
+      "page": 66,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "4. Sand, fine, massive, slightly firm, yellow (2.5 F6/6)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     },
+     "munsell": {
+      "value": "2.5 Y 6/6",
+      "source_id": "ngmdb:20738",
+      "page": 66,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "yellow (2.5 F6/6)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "hue printed as 'F'",
+      "normalized": {
+       "hue": "2.5Y",
+       "value": 6,
+       "chroma": 6,
+       "notation": "2.5Y 6/6"
+      }
+     }
+    },
+    {
+     "unit": {
+      "value": "Sand on Tenmile Hill",
+      "source_id": "ngmdb:20738",
+      "page": 66,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Sand on Tenmile Hill:",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     },
+     "description": {
+      "value": "Sand, fine, massive, friable, pale-yellow with faint mottles of yellow",
+      "source_id": "ngmdb:20738",
+      "page": 66,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "5. Sand, fine, massive, friable, pale-yellow (5 F 7/3) with faint mottles",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     },
+     "munsell": {
+      "value": "5 Y 7/3",
+      "source_id": "ngmdb:20738",
+      "page": 66,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "pale-yellow (5 F 7/3)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "hue printed as 'F'",
+      "normalized": {
+       "hue": "5Y",
+       "value": 7,
+       "chroma": 3,
+       "notation": "5Y 7/3"
+      }
+     }
+    },
+    {
+     "unit": {
+      "value": "Sand on Tenmile Hill",
+      "source_id": "ngmdb:20738",
+      "page": 66,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Sand on Tenmile Hill:",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     },
+     "description": {
+      "value": "Sand, fine, massive, moderately firm, light-yellowish-brown",
+      "source_id": "ngmdb:20738",
+      "page": 66,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "6. Sand, fine, massive, moderately firm, light-yellowish-brown",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    },
+    {
+     "unit": {
+      "value": "Sand on Tenmile Hill",
+      "source_id": "ngmdb:20738",
+      "page": 66,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Sand on Tenmile Hill:",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     },
+     "description": {
+      "value": "Sand, fine, massive, friable, very pale yellow",
+      "source_id": "ngmdb:20738",
+      "page": 66,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "7. Sand, fine, massive, friable, very pale yellow (5 F8/3)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "thickness 5 ft; total sand on Tenmile Hill 12 ft"
+     }
+    },
+    {
+     "unit": {
+      "value": "Ladson formation (fine-sand member)",
+      "source_id": "ngmdb:20738",
+      "page": 66,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Ladson formation (fine-sand member):",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "canonical": "Ladson",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "Sand, fine, friable, very pale yellow; laminae of gray clay; flakes of mica common; 1 ft exposed",
+      "source_id": "ngmdb:20738",
+      "page": 66,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "8. Sand, fine, friable, very pale yellow; laminae of gray clay; flakes of",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    }
+   ]
+  },
+  {
+   "kind": "outcrop",
+   "label": {
+    "value": "Section in road cut on north side of State Route 61, 0.9 mile southwest of the Ashley Marl Works",
+    "source_id": "ngmdb:20738",
+    "page": 67,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Section in road cut on north side of State Route 61, 0.9 mile southwest of the Ashley",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "road cut on north side of State Route 61, 0.9 mile southwest of the Ashley Marl Works (0.3 mile south of auger hole 253)",
+    "source_id": "ngmdb:20738",
+    "page": 67,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Marl Works (0.3 mile south of auger hole 253)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "lat": 0.9,
+     "lon": 0.3,
+     "format": "decimal",
+     "hemisphere_inferred": false
+    }
+   },
+   "elevation": {
+    "value": "43 feet",
+    "source_id": "ngmdb:20738",
+    "page": 67,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "[Altitude43feet]",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 43.0,
+     "max_ft": 43.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Sand on Tenmile Hill",
+      "source_id": "ngmdb:20738",
+      "page": 67,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Sand on Tenmile Hill:",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     },
+     "description": {
+      "value": "Sand, fine, massive, loose, dark-grayish-brown",
+      "source_id": "ngmdb:20738",
+      "page": 67,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "1. Sand, fine, massive, loose, dark-grayish-brown (10 YR 4/2)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     },
+     "munsell": {
+      "value": "10 YR 4/2",
+      "source_id": "ngmdb:20738",
+      "page": 67,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "dark-grayish-brown (10 YR 4/2)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "hue": "10YR",
+       "value": 4,
+       "chroma": 2,
+       "notation": "10YR 4/2"
+      }
+     }
+    },
+    {
+     "unit": {
+      "value": "Sand on Tenmile Hill",
+      "source_id": "ngmdb:20738",
+      "page": 67,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Sand on Tenmile Hill:",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     },
+     "description": {
+      "value": "Sand, fine, massive, loose, brown; numerous fragments of carbonized wood",
+      "source_id": "ngmdb:20738",
+      "page": 67,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "2. Sand, fine, massive, loose, brown (10 YR 5/3); numerous fragments",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     },
+     "munsell": {
+      "value": "10 YR 5/3",
+      "source_id": "ngmdb:20738",
+      "page": 67,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "brown (10 YR 5/3)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "hue": "10YR",
+       "value": 5,
+       "chroma": 3,
+       "notation": "10YR 5/3"
+      }
+     }
+    },
+    {
+     "unit": {
+      "value": "Sand on Tenmile Hill",
+      "source_id": "ngmdb:20738",
+      "page": 67,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Sand on Tenmile Hill:",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     },
+     "description": {
+      "value": "Sand, fine, massive, friable, brownish-yellow; fragments of carbonized wood",
+      "source_id": "ngmdb:20738",
+      "page": 67,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "3. Sand, fine, massive, friable, brownish-yellow (10 YR 6/6); frag-",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     },
+     "munsell": {
+      "value": "10 YR 6/6",
+      "source_id": "ngmdb:20738",
+      "page": 67,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "brownish-yellow (10 YR 6/6)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "hue": "10YR",
+       "value": 6,
+       "chroma": 6,
+       "notation": "10YR 6/6"
+      }
+     }
+    },
+    {
+     "unit": {
+      "value": "Sand on Tenmile Hill",
+      "source_id": "ngmdb:20738",
+      "page": 67,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Sand on Tenmile Hill:",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     },
+     "description": {
+      "value": "Sand, fine, massive, friable, yellow; fragments of carbonized wood in upper part",
+      "source_id": "ngmdb:20738",
+      "page": 67,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "4. Sand, fine, massive, friable, yellow (10 YR 7/6); fragments of",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "thickness 3 ft"
+     },
+     "munsell": {
+      "value": "10 YR 7/6",
+      "source_id": "ngmdb:20738",
+      "page": 67,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "yellow (10 YR 7/6)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "hue": "10YR",
+       "value": 7,
+       "chroma": 6,
+       "notation": "10YR 7/6"
+      }
+     }
+    },
+    {
+     "unit": {
+      "value": "Ladson formation (fine-sand member)",
+      "source_id": "ngmdb:20738",
+      "page": 67,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Ladson formation (fine-sand member) at base.",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "canonical": "Ladson",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
+  },
+  {
+   "kind": "outcrop",
+   "label": {
+    "value": "Section of Pamlico formation in wall of borrow pit 0.2 mile west of Goodrich (poorly drained)",
+    "source_id": "ngmdb:20738",
+    "page": 69,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Section of Pamlico formation in wall of borrow pit 0.2 mile west of Goodrich",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "borrow pit 0.2 mile west of Goodrich",
+    "source_id": "ngmdb:20738",
+    "page": 69,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Section of Pamlico formation in wall of borrow pit 0.2 mile west of Goodrich",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "elevation": {
+    "value": "19 feet",
+    "source_id": "ngmdb:20738",
+    "page": 69,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "[Altitude 19 feet; land marginal to the borrow pit is poorly drained]",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 19.0,
+     "max_ft": 19.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Pamlico formation",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Section of Pamlico formation in wall of borrow pit 0.2 mile west of Goodrich",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "canonical": "Pamlico",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "Sand, fine, firm, black; rich in humus",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "1. Sand, fine, firm, black (10 YR 2/1); rich in humus",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     },
+     "munsell": {
+      "value": "10 YR 2/1",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "black (10 YR 2/1)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "hue": "10YR",
+       "value": 2,
+       "chroma": 1,
+       "notation": "10YR 2/1"
+      }
+     }
+    },
+    {
+     "unit": {
+      "value": "Pamlico formation",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Section of Pamlico formation in wall of borrow pit 0.2 mile west of Goodrich",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "canonical": "Pamlico",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "Sand, fine, firm, dark-brown; faint medium-sized mottles of brown; crossbedding shown by partings on the weathered face",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "2. Sand, fine, firm, dark-brown (7.5 YR 3/2); contains faint medium-sized",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     },
+     "munsell": {
+      "value": "7.5 YR 3/2",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "dark-brown (7.5 YR 3/2)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "hue": "7.5YR",
+       "value": 3,
+       "chroma": 2,
+       "notation": "7.5YR 3/2"
+      }
+     }
+    },
+    {
+     "unit": {
+      "value": "Pamlico formation",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Section of Pamlico formation in wall of borrow pit 0.2 mile west of Goodrich",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "canonical": "Pamlico",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "Sand, fine, friable, brown; distinct fine mottles of dark brown; bedding as in unit 2",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "3. Sand, fine, friable, brown (10 YR 5/3); contains distinct fine mottles of",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     },
+     "munsell": {
+      "value": "10 YR 5/3",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "brown (10 YR 5/3); contains distinct fine mottles",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "hue": "10YR",
+       "value": 5,
+       "chroma": 3,
+       "notation": "10YR 5/3"
+      }
+     }
+    },
+    {
+     "unit": {
+      "value": "Pamlico formation",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Section of Pamlico formation in wall of borrow pit 0.2 mile west of Goodrich",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "canonical": "Pamlico",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "Sand, fine, friable, massive, pale-brown; exposed",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "4. Sand, fine, friable, massive, pale-brown (10 YR 7/3); exposed",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "total exposed Pamlico formation 5 ft"
+     },
+     "munsell": {
+      "value": "10 YR 7/3",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "pale-brown (10 YR 7/3)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "hue": "10YR",
+       "value": 7,
+       "chroma": 3,
+       "notation": "10YR 7/3"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "kind": "outcrop",
+   "label": {
+    "value": "Section of Pamlico formation in wall of borrow pit 0.2 mile west of Goodrich and 75 feet south of the preceding section (well drained)",
+    "source_id": "ngmdb:20738",
+    "page": 69,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "feet south of the preceding section",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "elevation": {
+    "value": "21 feet",
+    "source_id": "ngmdb:20738",
+    "page": 69,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "[Altitude 21 feet; land marginal to the borrow pit is well drained]",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 21.0,
+     "max_ft": 21.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Pamlico formation",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Total exposed Pamlico formation",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "canonical": "Pamlico",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "Sand, fine, loose, very dark brown; rich in humus",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "1. Sand, fine, loose, very dark brown; rich in humus",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    },
+    {
+     "unit": {
+      "value": "Pamlico formation",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Total exposed Pamlico formation",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "canonical": "Pamlico",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "Sand, fine, loose, dark-grayish-brown; faint fine mottles of pale brown and yellow; abundant fragments of carbonized wood",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "2. Sand, fine, loose, dark-grayish-brown (10 YR 4/2); contains faint fine mot-",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     },
+     "munsell": {
+      "value": "10 YR 4/2",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "dark-grayish-brown (10 YR 4/2); contains faint fine",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "hue": "10YR",
+       "value": 4,
+       "chroma": 2,
+       "notation": "10YR 4/2"
+      }
+     }
+    },
+    {
+     "unit": {
+      "value": "Pamlico formation",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Total exposed Pamlico formation",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "canonical": "Pamlico",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "Sand, fine, very friable, massive, light-yellowish-brown; faint fine mottles of reddish yellow and very pale yellow",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "3. Sand, fine, very friable, massive, light-yellowish-brown (10 YR 7/5); con-",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "thickness 1 ft"
+     },
+     "munsell": {
+      "value": "10 YR 7/5",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "light-yellowish-brown (10 YR 7/5)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "hue": "10YR",
+       "value": 7,
+       "chroma": 5,
+       "notation": "10YR 7/5"
+      }
+     }
+    },
+    {
+     "unit": {
+      "value": "Pamlico formation",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Total exposed Pamlico formation",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "canonical": "Pamlico",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "Sand, fine, very friable, massive, pale-yellow; very faint coarse mottles of very pale brown",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "4. Sand, fine, very friable, massive, pale-yellow (2.5 Y 8/4); contains very",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "thickness 1 ft"
+     },
+     "munsell": {
+      "value": "2.5 Y 8/4",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "pale-yellow (2.5 Y 8/4); contains very",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "hue": "2.5Y",
+       "value": 8,
+       "chroma": 4,
+       "notation": "2.5Y 8/4"
+      }
+     }
+    },
+    {
+     "unit": {
+      "value": "Pamlico formation",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Total exposed Pamlico formation",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "canonical": "Pamlico",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "Sand, fine, very friable, massive, pale-yellow; sparse distinct medium-sized and fine mottles of yellowish red (5 YR 5/8)",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "5. Sand, fine, very friable, massive, pale-yellow (2.5 Y 8/5); contains sparse",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "thickness 1 ft"
+     },
+     "munsell": {
+      "value": "2.5 Y 8/5",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "pale-yellow (2.5 Y 8/5)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "hue": "2.5Y",
+       "value": 8,
+       "chroma": 5,
+       "notation": "2.5Y 8/5"
+      }
+     }
+    },
+    {
+     "unit": {
+      "value": "Pamlico formation",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Total exposed Pamlico formation",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "canonical": "Pamlico",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "Sand, fine, friable, massive, pale-yellowish-gray; distinct medium-sized mottles of yellowish red (5 YR 5/8); exposed",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "6. Sand, fine, friable, massive, pale-yellowish-gray (2.5 Y 8/3); contains dis-",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "thickness 3 ft; total exposed Pamlico formation 7 ft"
+     },
+     "munsell": {
+      "value": "2.5 Y 8/3",
+      "source_id": "ngmdb:20738",
+      "page": 69,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "pale-yellowish-gray (2.5 Y 8/3)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "hue": "2.5Y",
+       "value": 8,
+       "chroma": 3,
+       "notation": "2.5Y 8/3"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "248 (USGS paleobotany loc. D1100)",
+    "source_id": "ngmdb:20738",
+    "page": 60,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Ten samples of the Ladson formation from auger hole 248",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "22 feet",
+      "source_id": "ngmdb:20738",
+      "page": 60,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "22-23",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "sample F",
+      "normalized": {
+       "min_ft": 22.0,
+       "max_ft": 22.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "23 feet",
+      "source_id": "ngmdb:20738",
+      "page": 60,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "22-23",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "min_ft": 23.0,
+       "max_ft": 23.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Ladson formation",
+      "source_id": "ngmdb:20738",
+      "page": 60,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Ten samples of the Ladson formation from auger hole 248",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Ladson",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "28 feet",
+      "source_id": "ngmdb:20738",
+      "page": 60,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Another sample from the interval 28-33 feet was prepared but proved to have too little pollen to count",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "normalized": {
+       "min_ft": 28.0,
+       "max_ft": 28.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "33 feet",
+      "source_id": "ngmdb:20738",
+      "page": 60,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Another sample from the interval 28-33 feet was prepared but proved to have too little pollen to count",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 33.0,
+       "max_ft": 33.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Ladson formation",
+      "source_id": "ngmdb:20738",
+      "page": 60,
+      "extraction_method": "llm",
+      "confidence": 0.578,
+      "inferred": true,
+      "locator": null,
+      "quote": "Ten samples of the Ladson formation from auger hole 248",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Ladson",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "232",
+    "source_id": "ngmdb:20738",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Sample A. Pebble from Cooper marl in auger hole 232, depth 24 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "24 feet",
+      "source_id": "ngmdb:20738",
+      "page": 55,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Pebble from Cooper marl in auger hole 232, depth 24 feet",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "normalized": {
+       "min_ft": 24.0,
+       "max_ft": 24.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Cooper marl",
+      "source_id": "ngmdb:20738",
+      "page": 55,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Pebble from Cooper marl in auger hole 232, depth 24 feet",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "249",
+    "source_id": "ngmdb:20738",
+    "page": 78,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "1-11, auger hole 249:",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "24 ft",
+      "source_id": "ngmdb:20738",
+      "page": 78,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "2. Depth 24-24M ft.",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "sample 2 of Cooper marl, table 4",
+      "normalized": {
+       "min_ft": 24.0,
+       "max_ft": 24.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Cooper marl",
+      "source_id": "ngmdb:20738",
+      "page": 78,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "Samples of Cooper marl Con.",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "25 ft",
+      "source_id": "ngmdb:20738",
+      "page": 78,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "4. Depth 25-26 ft.",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "min_ft": 25.0,
+       "max_ft": 25.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "26 ft",
+      "source_id": "ngmdb:20738",
+      "page": 78,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "4. Depth 25-26 ft.",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "min_ft": 26.0,
+       "max_ft": 26.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Cooper marl",
+      "source_id": "ngmdb:20738",
+      "page": 78,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "Samples of Cooper marl Con.",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "253",
+    "source_id": "ngmdb:20738",
+    "page": 78,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "12-18, auger hole 253:",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "18 ft",
+      "source_id": "ngmdb:20738",
+      "page": 78,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "12. Depth 18-20 ft.",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "min_ft": 18.0,
+       "max_ft": 18.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "20 ft",
+      "source_id": "ngmdb:20738",
+      "page": 78,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "12. Depth 18-20 ft.",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "min_ft": 20.0,
+       "max_ft": 20.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Cooper marl",
+      "source_id": "ngmdb:20738",
+      "page": 78,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "Samples of Cooper marl Con.",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "20 ft",
+      "source_id": "ngmdb:20738",
+      "page": 78,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "13. Depth 20-21 ft.",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "min_ft": 20.0,
+       "max_ft": 20.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "21 ft",
+      "source_id": "ngmdb:20738",
+      "page": 78,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "13. Depth 20-21 ft.",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "min_ft": 21.0,
+       "max_ft": 21.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Cooper marl",
+      "source_id": "ngmdb:20738",
+      "page": 78,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "Samples of Cooper marl Con.",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "24 ft",
+      "source_id": "ngmdb:20738",
+      "page": 78,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "18. Depth 24-25 ft.",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "min_ft": 24.0,
+       "max_ft": 24.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "25 ft",
+      "source_id": "ngmdb:20738",
+      "page": 78,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "18. Depth 24-25 ft.",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "min_ft": 25.0,
+       "max_ft": 25.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Cooper marl",
+      "source_id": "ngmdb:20738",
+      "page": 78,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "Samples of Cooper marl Con.",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
   }
  ],
  "structures": [
@@ -2686,6 +5344,35 @@
     "inferred": false,
     "locator": null,
     "quote": "an unconformity dipping southward about 4 feet per mile",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "kind": "bedding",
+   "name": {
+    "value": "phosphate rock beds (phosphate member of the Ladson formation)",
+    "source_id": "ngmdb:20738",
+    "page": 51,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the beds dip seaward (southeast) about 1 foot per mile",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "strike_dip": {
+    "value": "dip seaward (southeast) about 1 foot per mile",
+    "source_id": "ngmdb:20738",
+    "page": 51,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the beds dip seaward (southeast) about 1 foot per mile",
     "quote_match": "exact",
     "text_method": "pdf_text",
     "verification": null
