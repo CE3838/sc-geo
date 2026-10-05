@@ -25,8 +25,12 @@
   "ocr": {
     "enabled": true,
     "language": "eng",
+    "_comment": "Pages are OCRed one at a time; the timeout is per page (env SC_GEO_OCR_TIMEOUT overrides it). Renders are capped at max_pixels on the long side, tesseract runs with OMP_THREAD_LIMIT=threads, and a document with pages that failed is retried at most max_attempts times.",
     "tesseract_timeout_seconds": 900,
-    "fallback_dpi": 300
+    "fallback_dpi": 300,
+    "max_pixels": 8000,
+    "threads": 1,
+    "max_attempts": 3
   },
   "packet_max_tokens": 40000,
   "_chars_per_token": "Measured on a USGS report packet (layout text, tables, OCR noise): about 2.0-2.2 characters per token, not 4. 2.5 keeps packets near the token budget.",
