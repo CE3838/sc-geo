@@ -61,7 +61,7 @@ try {
     sections: [...document.querySelectorAll('.side-section h2')].map((h) => h.textContent),
     status: document.querySelector('.status-bar')?.textContent ?? '',
   }));
-  check(layout.title === 'SC Geo Viewer', `header shows the app name (${layout.title})`);
+  check(layout.title === 'South Carolina Geology Viewer', `header shows the app name (${layout.title})`);
   check(layout.sections.join() === 'Layers,Map units', `left panel has Layers and Map units (${layout.sections})`);
   await page.mouse.move(700, 400);
   const status = await page.locator('.status-bar').textContent();
@@ -99,8 +99,8 @@ try {
   check(geo.surficial > 50, `merged surficial units render (${geo.surficial})`);
   check(geo.bedrock > 50, `merged bedrock units render (${geo.bedrock})`);
   check(geo.legend.length >= 5, `legend lists classes (${geo.legend.join(', ')})`);
-  check(['Surficial geology', 'Bedrock geology', 'Faults and shear zones', 'Roads and route numbers', 'Parcels',
-    'Aerial imagery'].every((n) =>
+  check(['Unconsolidated Deposits', 'Consolidated Rock', 'Faults and Shear Zones', 'Roads and Route Numbers', 'Parcels',
+    'Aerial Imagery'].every((n) =>
     geo.layers.some((l) => l.startsWith(n))), `Layers panel lists each layer (${geo.layers.join(', ')})`);
 
   // Faults (harvest/sgmc.py output) in the Piedmont.
@@ -265,7 +265,7 @@ try {
         return { id: f.properties.id, type: f.properties.type, x: p.x + r.left, y: p.y + r.top };
       });
     });
-    check(await page.locator('#layer-water').count() === 1, 'Layers panel lists Water monitoring (USGS)');
+    check(await page.locator('#layer-water').count() === 1, 'Layers panel lists Water Monitoring (USGS)');
     let unavailable = false;
     for (const [name, center] of [['Columbia', [-81.03, 34.0]], ['Charleston', [-79.95, 32.85]]]) {
       await jumpTo({ center, zoom: 10.5 });

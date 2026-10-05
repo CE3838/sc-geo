@@ -103,7 +103,7 @@ test('mergedCard: name, group, age, Ma range, aliases, confidence and cited rows
   const c = mergedCard({ props: POLY, unit: UNIT, sources: SOURCES, records: RECORDS, lng: -79.95, lat: 32.8 });
   assert.equal(c.title, 'Wando Formation, barrier-island sand facies');
   assert.equal(c.group, 'Wando Formation');
-  assert.equal(c.subtitle, 'Surficial · map label Qws');
+  assert.equal(c.subtitle, 'Unconsolidated Deposits · map label Qws');
   assert.equal(c.age, 'late Pleistocene');
   assert.equal(c.ma, '0.129–0.0117 Ma');
   assert.deepEqual(c.aliases, ['Barrier-island sand facies', 'Wando']);

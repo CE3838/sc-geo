@@ -21,7 +21,7 @@ export function setupParcels(map, ui) {
   let registry = new Map();
   const status = el('ul', { class: 'parcel-status', 'aria-live': 'polite' });
   status.hidden = !on;
-  const row = ui.addLayer({ id: 'parcels', label: 'Parcels (property lines)', order: 45, detail: status, checked: LIVE_ON_AT_START.parcels,
+  const row = ui.addLayer({ id: 'parcels', label: 'Parcels (Property Lines)', order: 45, detail: status, checked: LIVE_ON_AT_START.parcels,
     onChange: (checked) => {
       on = checked;
       for (const id of PARCEL_LAYER_IDS) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', on ? 'visible' : 'none');

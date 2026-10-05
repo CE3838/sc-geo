@@ -1,4 +1,4 @@
-// "Water monitoring (USGS)" layer: a symbol per USGS station with a current
+// "Water Monitoring (USGS)" layer: a symbol per USGS station with a current
 // water reading in the view (usgs-water.js), shaped by station type and
 // colored by how fresh its latest reading is, plus a chart panel (a bottom
 // sheet on phones) that opens when a station is clicked.
@@ -74,7 +74,7 @@ export function setupWater(map, ui, { phone = window.matchMedia('(max-width: 700
     el('p', { class: 'geo-cite' }, 'Live from ', el('a', { href: 'https://api.waterdata.usgs.gov/', target: '_blank',
       rel: 'noopener noreferrer' }, 'USGS Water Data'), '. Click a station for its chart.'));
   key.hidden = !on;
-  const row = ui.addLayer({ id: 'water', label: 'Water monitoring (USGS)', order: 60, detail: key, checked: LIVE_ON_AT_START.water,
+  const row = ui.addLayer({ id: 'water', label: 'Water Monitoring (USGS)', order: 60, detail: key, checked: LIVE_ON_AT_START.water,
     onChange: (checked) => {
       on = checked;
       key.hidden = !checked;

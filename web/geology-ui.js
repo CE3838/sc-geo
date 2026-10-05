@@ -14,7 +14,7 @@ const META_URL = 'data/geology/sgmc-sc.meta.json';
 export function setupGeology(map, ui) {
   const state = { visible: true, mode: 'age', opacity: 0.55, features: [], meta: null };
 
-  const layer = ui.addLayer({ id: 'geo-visible', label: 'Geologic map units (SGMC)', order: 10,
+  const layer = ui.addLayer({ id: 'geo-visible', label: 'Geologic Map Units (SGMC)', order: 10,
     onChange: (on) => { state.visible = on; apply(); } });
   layer.setNote('Loading…');
   const modeSelect = el('select', {
