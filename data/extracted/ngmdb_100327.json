@@ -8,7 +8,7 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-05T01:01:22+00:00",
- "updated_at": "2026-10-05T01:01:22+00:00",
+ "updated_at": "2026-10-05T01:02:25+00:00",
  "reader": "Claude, reading session 2026-10-05",
  "packets": [
   "packet-01"
@@ -18,7 +18,7 @@
  ],
  "blocks_total": 1,
  "complete": true,
- "notes": "OCR of a map sheet image. Most map-unit symbols were lost or misplaced in OCR; the four symbols kept (QHfw, QPph, QPwsr, QPld) are assigned by their position and flagged inferred. The Ten Mile Hill/Talbot terrace deposit symbol reads '@Pimh' and was not recorded. OCR reads '1' as '|' in some thicknesses (flagged inferred). Map face (drill-hole labels, contacts) is not legible in OCR. Drill-hole logs are on file at the state survey, not in this document.",
+ "notes": "OCR of a map sheet image. Most map-unit symbols were lost or misplaced in OCR; the four symbols kept (QHfw, QPph, QPwsr, QPld) are assigned by their position and flagged inferred. The Ten Mile Hill/Talbot terrace deposit symbol reads '@Pimh' and was not recorded. OCR reads '1' as '|' in some thicknesses (flagged inferred). Map face (drill-hole labels, contacts) is not legible in OCR. Drill-hole logs are on file at the state survey, not in this document.\nOCR of a map sheet image. Most map-unit symbols were lost or misplaced in OCR; the four symbols kept (QHfw, QPph, QPwsr, QPld) are assigned by their position and flagged inferred. The Ten Mile Hill/Talbot terrace deposit symbol reads '@Pimh' and was not recorded. OCR reads '1' as '|' in some thicknesses (flagged inferred). Map face (drill-hole labels, contacts) is not legible in OCR. Drill-hole logs are on file at the state survey, not in this document.",
  "files": [
   {
    "url": "https://ngmdb.usgs.gov/img2/100000_100999/100327_1",
@@ -41,6 +41,24 @@
  "ingests": [
   {
    "at": "2026-10-05T01:01:22+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, reading session 2026-10-05",
+   "values": 70,
+   "stored": 70,
+   "exact": 70,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 7,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-10-05T01:02:25+00:00",
    "packets": [
     "packet-01"
    ],
@@ -866,7 +884,7 @@
   },
   {
    "name": {
-    "value": "Terrace deposit (Ten Mile Hill beds / beneath the Talbot Terrace)",
+    "value": "Terrace deposit",
     "source_id": "ngmdb:100327",
     "page": 1,
     "extraction_method": "llm",
