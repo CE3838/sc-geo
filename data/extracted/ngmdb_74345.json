@@ -8,10 +8,11 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-05T00:52:49+00:00",
- "updated_at": "2026-10-05T00:52:49+00:00",
+ "updated_at": "2026-10-05T00:54:13+00:00",
  "reader": "Claude, reading session 2026-10-05",
  "packets": [
-  "packet-01"
+  "packet-01",
+  "packet-02"
  ],
  "blocks_done": [
   "17",
@@ -41,11 +42,23 @@
   "44",
   "45",
   "46",
-  "47"
+  "47",
+  "48",
+  "49",
+  "50",
+  "51",
+  "52",
+  "53",
+  "54",
+  "55",
+  "56",
+  "57",
+  "58",
+  "59"
  ],
  "blocks_total": 40,
- "complete": false,
- "notes": "Packet 1 of 2 (pp. 17-47). Page 18 (figure) had no text and was not OCRed. Heavy-mineral tables 3, 5-8 and clay table 4 not stored (no schema fields). Unit names are the report's informal units Q1-Q6 and lithofacies (OCR in the text writes 1 as l, e.g. Q21 = Q2l). Regional geology section continues into packet 2.",
+ "complete": true,
+ "notes": "Packet 1 of 2 (pp. 17-47). Page 18 (figure) had no text and was not OCRed. Heavy-mineral tables 3, 5-8 and clay table 4 not stored (no schema fields). Unit names are the report's informal units Q1-Q6 and lithofacies (OCR in the text writes 1 as l, e.g. Q21 = Q2l). Regional geology section continues into packet 2.\nPacket 2 of 2 (pp. 48-59). Continues the regional geology section (Santee Limestone/Black Mingo) from packet 1. Table 9 heavy minerals not stored. Figure 16 column (Mount Pleasant) has no readable depths; layers listed top to bottom. Skipped references outside South Carolina (New Jersey, Delmarva, Australia, Gulf Coast, Florida, general clay and sea-level papers).",
  "files": [
   {
    "url": "https://pubs.usgs.gov/pp/1367/report.pdf",
@@ -105,14 +118,14 @@
   }
  ],
  "summary": {
-  "stored": 190,
+  "stored": 291,
   "quote_match": {
-   "exact": 190
+   "exact": 291
   },
   "verification": {
-   "agree": 65
+   "agree": 85
   },
-  "inferred": 3
+  "inferred": 5
  },
  "ingests": [
   {
@@ -129,6 +142,24 @@
    "quote_not_found": 0,
    "wrong_page": 0,
    "agree": 65,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-10-05T00:54:13+00:00",
+   "packets": [
+    "packet-02"
+   ],
+   "reader": "Claude, reading session 2026-10-05",
+   "values": 101,
+   "stored": 101,
+   "exact": 101,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 20,
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
@@ -2171,6 +2202,460 @@
     "text_method": "pdf_text",
     "verification": null
    }
+  },
+  {
+   "name": {
+    "value": "Black Mingo Formation",
+    "source_id": "ngmdb:74345",
+    "page": 48,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the northeast part of the area by the Black Mingo",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Black Mingo",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:74345",
+    "page": 48,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Formation of Paleocene age (Van Nieuwenhuise and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "age": {
+    "value": "Paleocene",
+    "source_id": "ngmdb:74345",
+    "page": 48,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Formation of Paleocene age (Van Nieuwenhuise and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 56.0,
+     "older_ma": 66.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "a sequence of fissile, dark, calcareous silts and fine-grained quartz sands",
+    "source_id": "ngmdb:74345",
+    "page": 48,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "dark, calcareous silts and fine-grained quartz sands.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "contacts": {
+    "value": "underlies and succeeds the Santee Limestone at the surface in the northeast part of the area",
+    "source_id": "ngmdb:74345",
+    "page": 48,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Limestone is underlain and succeeded at the surface in",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Quaternary deposits",
+    "source_id": "ngmdb:74345",
+    "page": 56,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "In the Charleston area, 5-25 m of marine and fluvial",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "5-25 m",
+    "source_id": "ngmdb:74345",
+    "page": 56,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "In the Charleston area, 5-25 m of marine and fluvial",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 16.404199475065614,
+     "max_ft": 82.02099737532808,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "contacts": {
+    "value": "blanket Paleocene to Pliocene units between about 35 m altitude and the sea",
+    "source_id": "ngmdb:74345",
+    "page": 56,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Quaternary deposits blanket Paleocene to Pliocene units",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Q6",
+    "source_id": "ngmdb:74345",
+    "page": 56,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The oldest Pleistocene deposits, unit Q6, consist of a",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "unit Q6",
+    "source_id": "ngmdb:74345",
+    "page": 56,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The oldest Pleistocene deposits, unit Q6, consist of a",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "discontinuous, long, low belt of fine- to medium-grained quartz sand having surface altitudes up to 32 m; muddy sand flats inland; shelly, gritty, medium-grained sand seaward at altitudes of 10 to 15 m beneath younger deposits",
+    "source_id": "ngmdb:74345",
+    "page": 56,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The oldest Pleistocene deposits, unit Q6, consist of a",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "early Pleistocene; corals from reworked material older than 1 Ma; probably a correlative of the Waccamaw Formation",
+    "source_id": "ngmdb:74345",
+    "page": 56,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "fossils is judged to be early Pleistocene on the basis of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 0.774,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Q5",
+    "source_id": "ngmdb:74345",
+    "page": 56,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "large, southward-prograded, intertidal spit system accu-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "unit Q5",
+    "source_id": "ngmdb:74345",
+    "page": 56,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "large, southward-prograded, intertidal spit system accu-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "between 1 Ma and 730 ka (reversed magnetic polarity)",
+    "source_id": "ngmdb:74345",
+    "page": 56,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "of reversed magnetic polarity, unit Q5 is between 1 Ma",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "large, southward-prograded, intertidal spit system between Summerville and Pinopolis; sand ridges (Q5b) and muddy sand flats (Q5l) between 28 m and 15 m above sea level over a transgressive shelf deposit (Q5o) with abundant fossils",
+    "source_id": "ngmdb:74345",
+    "page": 56,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "large, southward-prograded, intertidal spit system accu-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Q4",
+    "source_id": "ngmdb:74345",
+    "page": 56,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "and Q3, we tentatively correlate unit Q4 with the Cane-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "unit Q4",
+    "source_id": "ngmdb:74345",
+    "page": 56,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "and Q3, we tentatively correlate unit Q4 with the Cane-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "tentatively correlated with the Canepatch Formation of Myrtle Beach (corals average 450 ka)",
+    "source_id": "ngmdb:74345",
+    "page": 56,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "and Q3, we tentatively correlate unit Q4 with the Cane-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "in the Bethera area between 19 m and 12 m a single large, low, clean quartz sand body (Q4b) and gritty, muddy, medium-grained sand (Q4l)",
+    "source_id": "ngmdb:74345",
+    "page": 56,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "In the Bethera area between 19 m and 12 m is a single",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "fossils": {
+    "value": "Fossils are sparse in unit Q4",
+    "source_id": "ngmdb:74345",
+    "page": 56,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fossils are sparse in unit Q4, and radiometric dates are",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Q2",
+    "source_id": "ngmdb:74345",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "yielded corals about 120 to 90 ka.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "unit Q2",
+    "source_id": "ngmdb:74345",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "yielded corals about 120 to 90 ka.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "corals about 120 to 90 ka",
+    "source_id": "ngmdb:74345",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "yielded corals about 120 to 90 ka.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "youngest Pleistocene unit, first beach and backbarrier system 11 m to 8 m in altitude behind the Holocene beaches; very thin weathering profile; modern fauna",
+    "source_id": "ngmdb:74345",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "system, 11 m to 8 m in altitude, behind the Holocene",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Q3o",
+    "source_id": "ngmdb:74345",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Q3o), is present discontinuously beneath lithofacies Q3b.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "lithofacies Q3o",
+    "source_id": "ngmdb:74345",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Q3o), is present discontinuously beneath lithofacies Q3b.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "lithology": {
+    "value": "Shelly, fine-grained sand, muddy in places",
+    "source_id": "ngmdb:74345",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Shelly, fine-grained sand, muddy in places (lithofacies",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "contacts": {
+    "value": "present discontinuously beneath lithofacies Q3b",
+    "source_id": "ngmdb:74345",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Q3o), is present discontinuously beneath lithofacies Q3b.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Wando Formation (upper Pleistocene)",
+    "source_id": "ngmdb:74345",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Wando Formation (upper Pleistocene) in the Charleston,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "Wando",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "upper Pleistocene",
+    "source_id": "ngmdb:74345",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Wando Formation (upper Pleistocene) in the Charleston,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "from the reference title McCartan and others, 1980",
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 0.129,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
   }
  ],
  "observations": [
@@ -3022,9 +3507,1059 @@
      }
     }
    ]
+  },
+  {
+   "kind": "outcrop",
+   "label": {
+    "value": "Stratigraphic column for unit Q2 at Mount Pleasant (figure 16)",
+    "source_id": "ngmdb:74345",
+    "page": 51,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Charleston, S.C., area. Stratigraphic column for unit Q2 at",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Mount Pleasant",
+    "source_id": "ngmdb:74345",
+    "page": 51,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Charleston, S.C., area. Stratigraphic column for unit Q2 at",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Q2b",
+      "source_id": "ngmdb:74345",
+      "page": 51,
+      "extraction_method": "llm",
+      "confidence": 0.578,
+      "inferred": true,
+      "locator": null,
+      "quote": "includes, from the top, lithofacies Q2b (beach), Q21 (backbar-",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "note": "figure caption gives facies order; layer assignment inferred"
+     },
+     "description": {
+      "value": "Tan, fine-grained sand containing heavy-mineral laminae and rusty-brown-stained zones; planar bedding",
+      "source_id": "ngmdb:74345",
+      "page": 50,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "1. Tan, fine-grained sand containing",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    },
+    {
+     "unit": {
+      "value": "Q2b",
+      "source_id": "ngmdb:74345",
+      "page": 51,
+      "extraction_method": "llm",
+      "confidence": 0.578,
+      "inferred": true,
+      "locator": null,
+      "quote": "includes, from the top, lithofacies Q2b (beach), Q21 (backbar-",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     },
+     "description": {
+      "value": "Well-sorted, fine- to medium-grained tan to gray sand; broad trough crossbeds, ripple laminae; shells in stringers and wedges",
+      "source_id": "ngmdb:74345",
+      "page": 50,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "2. Well-sorted, fine- to medium-grained",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    },
+    {
+     "description": {
+      "value": "Blue-gray to green-gray silty clay and silty fine-grained sand containing abundant shell beds several centimeters thick; Mulinia is dominant species",
+      "source_id": "ngmdb:74345",
+      "page": 50,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "3. Blue-gray to green-gray silty clay and",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    },
+    {
+     "description": {
+      "value": "Fine- to medium-grained, clayey, gray sand and minor shells",
+      "source_id": "ngmdb:74345",
+      "page": 50,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "4. Fine- to medium-grained, clayey, gray",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    },
+    {
+     "description": {
+      "value": "Coarse-grained, gray, fairly well sorted sand containing whole and broken shells",
+      "source_id": "ngmdb:74345",
+      "page": 50,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "5. Coarse-grained, gray, fairly well",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    },
+    {
+     "description": {
+      "value": "Clayey, fine-grained, gray-green sand and fine-grained shell fragments",
+      "source_id": "ngmdb:74345",
+      "page": 50,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "6. Clayey, fine-grained, gray-green sand",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    },
+    {
+     "description": {
+      "value": "Medium- to coarse-grained, silty gray sand and shell hash",
+      "source_id": "ngmdb:74345",
+      "page": 50,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "7. Medium- to coarse-grained, silty gray",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    },
+    {
+     "description": {
+      "value": "Clayey gray sand containing mica and shells",
+      "source_id": "ngmdb:74345",
+      "page": 50,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "8. Clayey gray sand containing mica and",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    },
+    {
+     "description": {
+      "value": "Well-sorted, gray, medium-grained sand",
+      "source_id": "ngmdb:74345",
+      "page": 50,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "9. Well-sorted, gray, medium-grained",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true
+     }
+    },
+    {
+     "unit": {
+      "value": "COOPER FORMATION",
+      "source_id": "ngmdb:74345",
+      "page": 50,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "i   i   COOPER FORMATION",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Tertiary unit at base of column",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
   }
  ],
- "structures": [],
+ "structures": [
+  {
+   "kind": "fault",
+   "name": {
+    "value": "\"Cooke Fault\"",
+    "source_id": "ngmdb:74345",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "I   ^Southeast Georgia   Fault\" of Behrendt and others (1981). No causal relation-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "name split across lines: near the \"Cooke Fault\" of Behrendt and others (1981)"
+   },
+   "location": {
+    "value": "area 5 km south of Summerville",
+    "source_id": "ngmdb:74345",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "area 5 km south of Summerville (fig. 1A) near the \"Cooke",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "minor northeast-trending disruption of seismic lines; no causal relationship shown with modern seismicity",
+    "source_id": "ngmdb:74345",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "ship has been shown between the minor northeast-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "kind": "fold",
+   "name": {
+    "value": "structural domes over aeromagnetic highs 1, 2, and 3",
+    "source_id": "ngmdb:74345",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "interpreted as structural domes rather than erosional",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "near Charleston, over three aeromagnetic highs (1, 2, and 3 in fig. 17)",
+    "source_id": "ngmdb:74345",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the aeromagnetic highs near Charleston (1, 2, and 3 in",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "unusually high areas of Eocene deposits interpreted as structural domes rather than erosional remnants",
+    "source_id": "ngmdb:74345",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "interpreted as structural domes rather than erosional",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "certainty": {
+    "value": "interpreted",
+    "source_id": "ngmdb:74345",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "interpreted as structural domes rather than erosional",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "kind": "other",
+   "name": {
+    "value": "chaotic dike",
+    "source_id": "ngmdb:74345",
+    "page": 54,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "A 1-m-wide \"chaotic dike\" was discovered in a railroad",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "railroad embankment west of Goose Creek Reservoir, S.C.",
+    "source_id": "ngmdb:74345",
+    "page": 54,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "embankment west of Goose Creek Reservoir, S.C. (fig.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "age": {
+    "value": "between 200 and 100 ka",
+    "source_id": "ngmdb:74345",
+    "page": 54,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "therefore, occurred between 200 and 100 ka and was a",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "1-m-wide disruption of backbarrier clay and sand (lithofacies Q3l); a rapid event that may have accompanied an earthquake",
+    "source_id": "ngmdb:74345",
+    "page": 54,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "rapid event that may have accompanied an earthquake.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "kind": "other",
+   "name": {
+    "value": "1886 sand blows",
+    "source_id": "ngmdb:74345",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "relocated (fig. 3) (Weems and others, 1986). Trenches",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "three 1886 sand blows relocated; trenches through two reveal ejection dikes in marine deposits; two of the three are in unit Q3 and one is in unit Q2",
+    "source_id": "ngmdb:74345",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "blows are in unit Q3 and one is in unit Q2.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "1886",
+    "source_id": "ngmdb:74345",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "graphed immediately after the 1886 earthquake (Button,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "kind": "other",
+   "name": {
+    "value": "Cape Fear Arch",
+    "source_id": "ngmdb:74345",
+    "page": 48,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Cape Fear Arch and southeast Georgia embay-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "Quaternary units Q6 and Q2 pinch out across the nose of the Cape Fear Arch; arch and southeast Georgia embayment have influenced sedimentary patterns for at least 140 million years",
+    "source_id": "ngmdb:74345",
+    "page": 48,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "17, 18, and 19 reveals that Quaternary units Q6 and Q2",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ],
  "groundwater": [],
- "references": []
+ "references": [
+  {
+   "citation": {
+    "value": "Behrendt, J.C., Hamilton, R.M., Ackermann, H.D., and Henry, V.J., 1981, Cenozoic faulting in the vicinity of the Charleston, South Carolina, 1886 earthquake: Geology, v. 9, p. 117-122.",
+    "source_id": "ngmdb:74345",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Behrendt, J.C., Hamilton, R.M., Ackermann, H.D., and Henry, V.J.,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Bollinger, G.A., 1977, Reinterpretation of the intensity data for the 1886 Charleston, South Carolina, earthquake, in Rankin, D.W., ed., U.S. Geological Survey Professional Paper 1028, p. 17-32.",
+    "source_id": "ngmdb:74345",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Bollinger, G.A., 1977, Reinterpretation of the intensity data for the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Colquhoun, D.J., 1965, Terrace sediment complexes in central South Carolina: Atlantic Coastal Plain Geological Association, 6th Annual Field Conference, Guidebook, 62 p.",
+    "source_id": "ngmdb:74345",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Colquhoun, D.J., 1965, Terrace sediment complexes in central South",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Colquhoun, D.J., 1969, Geomorphology of the lower Coastal Plain of South Carolina: South Carolina Division of Geology Map Series MS-15, scale 1:500,000.",
+    "source_id": "ngmdb:74345",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "1969, Geomorphology of the lower Coastal Plain of South",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Colquhoun, D.J., 1974, Cyclic surficial stratigraphic units of the middle and lower Coastal Plains, central South Carolina, in Oaks and DuBar, eds., p. 179-190.",
+    "source_id": "ngmdb:74345",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "-1974, Cyclic surficial stratigraphic units of the middle and lower",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Colquhoun, D.J., Heron, S.D., Jr., Johnson, H.S., Jr., Pooser, W.K., and Siple, G.E., 1969, Up-dip Paleocene-Eocene stratigraphy of South Carolina reviewed: South Carolina Division of Geology Geologic Notes, v. 13, p. 1-25.",
+    "source_id": "ngmdb:74345",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Colquhoun, D.J., Heron, S.D., Jr., Johnson, H.S., Jr., Pooser, W.K.,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Colquhoun, D.J., Herrick, S.M., and Richards, H.G., 1968, A fossil assemblage from the Wicomico Formation in Berkeley County, South Carolina: Geological Society of America Bulletin, v. 79, p. 1211-1219.",
+    "source_id": "ngmdb:74345",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Colquhoun, D.J., Herrick, S.M., and Richards, H.G., 1968, A fossil",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Cooke, C.W., 1936, Geology of the Coastal Plain of South Carolina: U.S. Geological Survey Bulletin 867, 196 p.",
+    "source_id": "ngmdb:74345",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "-1936, Geology of the Coastal Plain of South Carolina: U.S.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Counts, H.B., and Donsky, Ellis, 1963 [1964], Salt-water encroachment, geology, and ground-water resources of Savannah area, Georgia and South Carolina: U.S. Geological Survey Water-Supply Paper 1611, 100 p.",
+    "source_id": "ngmdb:74345",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Counts, H.B., and Donsky, Ellis, 1963 [1964], Salt-water encroach-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "DuBar, J.R., 1971, Neogene stratigraphy of the lower Coastal Plain of the Carolinas: Atlantic Coastal Plain Geological Association, 12th Annual Field Conference, Myrtle Beach, S.C., Guidebook, 128 p.",
+    "source_id": "ngmdb:74345",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "DuBar, J.R., 1971, Neogene stratigraphy of the lower Coastal Plain of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Dutton, C.E., 1889, The Charleston earthquake of August 31, 1886: U.S. Geological Survey Ninth Annual Report, 1887-88, p. 203-528.",
+    "source_id": "ngmdb:74345",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Dutton, C.E., 1889, The Charleston earthquake of August 31, 1886:",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Faye, R.E., and Prowell, D.C., 1982, Effects of Late Cretaceous and Cenozoic faulting on the geology and hydrology of the Coastal Plain near the Savannah River, Georgia and South Carolina: U.S. Geological Survey Open-File Report 82-156, 85 p.",
+    "source_id": "ngmdb:74345",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Faye, R.E., and Prowell, D.C., 1982, Effects of Late Cretaceous and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Force, L.M., 1978a, Geological studies of the Charleston, South Carolina, area - Elevation contours on the top of the Cooper Formation: U.S. Geological Survey Miscellaneous Field Studies Map MF-1021-A, scale 1:250,000.",
+    "source_id": "ngmdb:74345",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Force, L.M., 1978a, Geological studies of the Charleston, South",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Force, L.M., 1978b, Geological studies of the Charleston, South Carolina area - Thickness of overburden map: U.S. Geological Survey Miscellaneous Field Studies Map MF-1021-B, scale 1:250,000.",
+    "source_id": "ngmdb:74345",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "1978b, Geological studies of the Charleston, South Carolina",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Gohn, G.S., ed., 1983, Studies related to the Charleston, South Carolina, earthquake of 1886 - Tectonics and seismicity: U.S. Geological Survey Professional Paper 1313, 375 p.",
+    "source_id": "ngmdb:74345",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gohn, G.S., ed., 1983, Studies related to the Charleston, South",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Gohn, G.S., Bybell, L.M., Smith, C.C., and Owens, J.P., 1978, Preliminary stratigraphic cross sections of Atlantic Coastal Plain sediments of the southeastern United States - Cenozoic sediments along the South Carolina coastal margin: U.S. Geological Survey Miscellaneous Field Studies Map MF-1015-B.",
+    "source_id": "ngmdb:74345",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gohn, G.S., Bybell, L.M., Smith, C.C., and Owens, J.P., 1978,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Gohn, G.S., Christopher, R.A., Smith, C.C., and Owens, J.P., 1978, Preliminary stratigraphic cross sections of Atlantic Coastal Plain sediments of the southeastern United States - Cretaceous sediments along the South Carolina coastal margin: U.S. Geological Survey Miscellaneous Field Studies Map MF-1015-A.",
+    "source_id": "ngmdb:74345",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gohn, G.S., Christopher, R.A., Smith, C.C., and Owens, J.P., 1978,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Heron, S.D., Jr., and Johnson, H.S., Jr., 1966, Clay mineralogy, stratigraphy, and structural setting of the Hawthorn Formation, Coosawhatchie district, South Carolina: Southeastern Geology, v. 7, p. 51-63.",
+    "source_id": "ngmdb:74345",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Heron, S.D., Jr., and Johnson, H.S., Jr., 1966, Clay mineralogy,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Liddicoat, J.C., McCartan, Lucy, Weems, R.E., and Lemon, E.M., Jr., 1981, Paleomagnetic investigation of Pliocene and Pleistocene sediments in the Charleston, South Carolina, area [abs.]: GSA Abstracts with Programs, v. 13, p. 12, 29.",
+    "source_id": "ngmdb:74345",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Liddicoat, J.C., McCartan, Lucy, Weems, R.E., and Lemon, E.M.,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Malde, H.E., 1959, Geology of the Charleston phosphate area, South Carolina: U.S. Geological Survey Bulletin 1079, 105 p.",
+    "source_id": "ngmdb:74345",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Malde, H.E., 1959, Geology of the Charleston phosphate area, South",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "McCartan, Lucy, Lemon, E.M., Jr., and Weems, R.E., 1984, Geologic map of the area between Charleston and Orangeburg, South Carolina: U.S. Geological Survey Miscellaneous Investigations Series Map I-1472, scale 1:250,000.",
+    "source_id": "ngmdb:74345",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "McCartan, Lucy, Lemon, E.M., Jr., and Weems, R.E., 1984, Geologic",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "McCartan, Lucy, Owens, J.P., Blackwelder, B.W., Szabo, B.J., Belknap, D.F., Kriausakul, Nivat, Mitterer, R.M., and Wehmiller, J.F., 1982, Comparison of amino acid racemization geochronometry with lithostratigraphy, biostratigraphy, uranium-series coral dating, and magnetostratigraphy in the Atlantic Coastal Plain of the Southeastern United States: Quaternary Research, v. 18, p. 337-359.",
+    "source_id": "ngmdb:74345",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "McCartan, Lucy, Owens, J.P., Blackwelder, B.W., Szabo, B.J.,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "McCartan, Lucy, Weems, R.E., and Lemon, E.M., Jr., 1980 [1981], The Wando Formation (upper Pleistocene) in the Charleston, South Carolina, area: U.S. Geological Survey Bulletin 1502-A, p. A110-A116.",
+    "source_id": "ngmdb:74345",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "McCartan, Lucy, Weems, R.E., and Lemon, E.M., Jr., 1980 [1981],",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "McDowell, R.C., and Houser, B.B., 1983, Map showing distribution of small-scale deformation structures in a part of the upper Coastal Plain of South Carolina and adjacent Georgia: U.S. Geological Survey Miscellaneous Field Studies Map MF-1538, scale 1:250,000.",
+    "source_id": "ngmdb:74345",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "McDowell, R.C., and Houser, B.B., 1983, Map showing distribution of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Owens, J.P., Prowell, D.C., and Higgins, B.B., 1976, Tectonic origin of deformed strata in the upper Coastal Plain in South Carolina [abs.]: GSA Abstracts with Programs, v. 8, p. 240.",
+    "source_id": "ngmdb:74345",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Owens, J.P., Prowell, D.C., and Higgins, B.B., 1976, Tectonic origin of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Phillips, J.D., Daniels, D.L., Zietz, Isidore, and Popenoe, Peter, 1978, Geophysical studies of the Charleston, South Carolina, area - Onshore aeromagnetic map: U.S. Geological Survey Miscellaneous Field Studies Map MF-1022-A, scale 1:250,000.",
+    "source_id": "ngmdb:74345",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Phillips, J.D., Daniels, D.L., Zietz, Isidore, and Popenoe, Peter, 1978,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Pooser, W.K., 1965, Biostratigraphy of Cenozoic Ostracoda from South Carolina: Kansas University Paleontological Contributions [38], Arthropoda, art. 8, 80 p.",
+    "source_id": "ngmdb:74345",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Pooser, W.K., 1965, Biostratigraphy of Cenozoic Ostracoda from South",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Rankin, D.W., ed., 1977, Studies related to the Charleston, South Carolina, earthquake of 1886 - A preliminary report: U.S. Geological Survey Professional Paper 1028, 204 p.",
+    "source_id": "ngmdb:74345",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Rankin, D.W., ed., 1977, Studies related to the Charleston, South",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Sanders, A.E., Weems, R.E., and Lemon, E.M., Jr., 1982, Chandler Bridge Formation - A new Oligocene stratigraphic unit in the lower Coastal Plain of South Carolina: U.S. Geological Survey Bulletin 1529-H, p. H105-H124.",
+    "source_id": "ngmdb:74345",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Sanders, A.E., Weems, R.E., and Lemon, E.M., Jr., 1982, Chandler",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Szabo, B.J., 1985, Uranium-series dating of fossil corals from marine sediments of southeastern United States Atlantic Coastal Plain: Geological Society of America Bulletin, v. 96, p. 398-406.",
+    "source_id": "ngmdb:74345",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Szabo, B.J., 1985, Uranium-series dating of fossil corals from marine",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Tarr, A.C., 1977, Recent seismicity near Charleston, South Carolina, and its relationship to the August 31, 1886, earthquake: U.S. Geological Survey Professional Paper 1028, p. 43-57.",
+    "source_id": "ngmdb:74345",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Tarr, A.C., 1977, Recent seismicity near Charleston, South Carolina,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Tarr, A.C., and Rhea, Susan, 1983, Seismicity near Charleston, South Carolina, March 1973 to December 1979: U.S. Geological Survey Professional Paper 1313, p. R1-R17.",
+    "source_id": "ngmdb:74345",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Tarr, A.C., and Rhea, Susan, 1983, Seismicity near Charleston, South",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Van Nieuwenhuise, D.S., and Colquhoun, D.J., 1982, Contact relationships of the Black Mingo and Peedee Formations: the Cretaceous-Tertiary boundary in South Carolina: South Carolina Geology, v. 26, p. 1-14.",
+    "source_id": "ngmdb:74345",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Van Nieuwenhuise, D.S., and Colquhoun, D.J., 1982, Contact relation-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Ward, L.W., Blackwelder, B.W., Gohn, G.S., and Poore, R.Z., 1979, Stratigraphic revision of Eocene, Oligocene, and lower Miocene formations of South Carolina: South Carolina Geological Survey Geologic Notes, v. 23, p. 2-32.",
+    "source_id": "ngmdb:74345",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Ward, L.W., Blackwelder, B.W., Gohn, G.S., and Poore, R.Z., 1979,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Weems, R.E., and Lemon, E.M., Jr., 1984a, Geologic map of the Mount Holly quadrangle, Berkeley and Charleston Counties, South Carolina: U.S. Geological Survey Geologic Quadrangle Map GQ-1579, scale 1:24,000.",
+    "source_id": "ngmdb:74345",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Weems, R.E., and Lemon, E.M., Jr., 1984a, Geologic map of the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Weems, R.E., and Lemon, E.M., Jr., 1984b, Geologic map of the Stallsville quadrangle, Dorchester and Charleston Counties, South Carolina: U.S. Geological Survey Geologic Quadrangle Map GQ-1581, scale 1:24,000.",
+    "source_id": "ngmdb:74345",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "1984b, Geologic map of the Stallsville quadrangle, Dorchester",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Weems, R.E., Lemon, E.M., Jr., McCartan, Lucy, Bybell, L.M., and Sanders, A.E., 1982, Recognition and formalization of the Pliocene \"Goose Creek phase\" in the Charleston, South Carolina, area: U.S. Geological Survey Bulletin 1529-H, p. H137-H148.",
+    "source_id": "ngmdb:74345",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Weems, R.E., Lemon, E.M., Jr., McCartan, Lucy, Bybell, L.M., and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Weems, R.E., Obermeier, S.F., Pavich, M.J., Gohn, G.S., Rubin, Meyer, Phipps, R.L., and Jacobson, R.B., 1986, Evidence for three moderate to large prehistoric Holocene earthquakes near Charleston, S.C.: U.S. National Conference on Earthquake Engineering, 3d, Proceedings, v. 1, p. 3-13.",
+    "source_id": "ngmdb:74345",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Weems, R.E., Obermeier, S.F., Pavich, M.J., Gohn, G.S., Rubin,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Wojtal, A.M., and Tye, R.S., 1980, Stratigraphy of backbarrier environments, Kiawah Island, South Carolina [abs.]: GSA Abstracts with Programs, v. 12, p. 212-213.",
+    "source_id": "ngmdb:74345",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Wojtal, A.M., and Tye, R.S., 1980, Stratigraphy of backbarrier",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Zietz, Isidore, Riggle, F.E., and Daniels, D.L., 1982, Aeromagnetic map of South Carolina: U.S. Geological Survey Geophysical Investigations Map GP-951, scale 1:1,000,000.",
+    "source_id": "ngmdb:74345",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Zietz, Isidore, Riggle, F.E., and Daniels, D.L., 1982, Aeromagnetic",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ]
 }
