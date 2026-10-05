@@ -1,0 +1,3359 @@
+{
+ "source_id": "ngmdb:74890",
+ "title": "Uranium and phosphate resources in the Cooper Formation of the Charleston region, South Carolina",
+ "citation": "Force, E.R., Gohn, G.S., Force, L.M., and Higgins, B.B., 1978, Uranium and phosphate resources in the Cooper Formation of the Charleston region, South Carolina: U.S. Geological Survey Open-File Report OF-78-586, map scale 1:150,000.",
+ "year": 1978,
+ "scale": 150000,
+ "publisher": "U.S. Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-10-05T05:55:31+00:00",
+ "updated_at": "2026-10-05T05:55:31+00:00",
+ "reader": "Claude, reading session 2026-10-05",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10",
+  "12",
+  "13",
+  "14",
+  "15",
+  "16",
+  "17",
+  "18",
+  "19",
+  "20",
+  "21",
+  "22",
+  "23",
+  "24"
+ ],
+ "blocks_total": 23,
+ "complete": true,
+ "notes": "Plate 1 (page 1) is an OCR map image; only its legend is legible. Table 2 (pages 15-19) text layer is partly garbled: rows record depth, U (ppm), P2O5 (%) and comment; the surface elevation and depth-to-top-of-Cooper columns are read only where clear. Interval descriptions quote the table row verbatim (U ppm and P2O5 % values). Rows from Malde (1959) table 4 (page 18, unlabeled holes), EF 39C/40C/40B outcrops and AH 4/AH 18/AH59 were skipped because their columns are scrambled. Uranium and phosphate grades are recorded in descriptions; the schema has no chemistry fields.",
+ "files": [
+  {
+   "url": "https://pubs.usgs.gov/of/1978/0586/plate-1.pdf",
+   "via": "pubs_usgs",
+   "sha256": "dd72495f54873c1c158c373961ac99dfb0c4bceb90929232c0a7d409e1e108ee",
+   "pages": 1,
+   "first_page": 1
+  },
+  {
+   "url": "https://pubs.usgs.gov/of/1978/0586/report.pdf",
+   "via": "pubs_usgs",
+   "sha256": "c9049eae145a809ce0d1e6f1584df023e458474bbd55d2f3f2cf76337635f925",
+   "pages": 23,
+   "first_page": 2
+  }
+ ],
+ "summary": {
+  "stored": 174,
+  "quote_match": {
+   "exact": 174
+  },
+  "verification": {
+   "agree": 135
+  },
+  "inferred": 84
+ },
+ "ingests": [
+  {
+   "at": "2026-10-05T05:55:31+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, reading session 2026-10-05",
+   "values": 174,
+   "stored": 174,
+   "exact": 174,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 135,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "Cooper Formation",
+    "source_id": "ngmdb:74890",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Phosphate deposits formerly exploited in the Charleston district were formed",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Cooper",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:74890",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "by weathering and reworking of the Cooper Formation (Eocene and Oliogcene).",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Eocene and Oliogcene",
+    "source_id": "ngmdb:74890",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "by weathering and reworking of the Cooper Formation (Eocene and Oliogcene).",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 56.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "upper 48 m late Oligocene and lower 14 m late Eocene at Clubhouse Crossroads",
+    "source_id": "ngmdb:74890",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "At Clubhouse\nCrossroads, the upper 48 m of the Cooper is of late Oligocene age, whereas the\nlower 14 m is of late Eocene age.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 45.93175853018372,
+     "max_ft": 157.4803149606299,
+     "values_ft": [
+      157.4803149606299,
+      45.93175853018372
+     ],
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "contacts": {
+    "value": "overlies the Santee Limestone (Eocene); unconformably overlain by Pleistocene, Holocene, and locally upper Tertiary deposits; top is a subareal erosional surface in most places",
+    "source_id": "ngmdb:74890",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Cooper Formation overlies the Santee Limestone, (Eocene), and both\nare unconformably overlain by Pleistocene, Holocene, and locally upper Tertiary",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "depth to Cooper ranges from 0 to 20 m; old Charleston mining district is on an erosional high in the vicinity of the Ashley River",
+    "source_id": "ngmdb:74890",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Contours on the top of the Cooper Formation show that depth to Cooper ranges\nfrom 0 to 20 m.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Cooper Formation (Oligocene part)",
+    "source_id": "ngmdb:74890",
+    "page": 9,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "The Oligocene sediments are typically olive-brown, muddy, calcareous sand con-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "informal name for the Oligocene part described in the text",
+    "normalized": {
+     "canonical": "Cooper",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "late Oligocene",
+    "source_id": "ngmdb:74890",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the upper 48 m of the Cooper is of late Oligocene age",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 23.03,
+     "older_ma": 27.82,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "olive-brown, muddy, calcareous sand containing phosphate and glauconite",
+    "source_id": "ngmdb:74890",
+    "page": 9,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Oligocene sediments are typically olive-brown, muddy, calcareous sand con-\n\ntaining phosphate and glauconite",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "48 m (Clubhouse Crossroads)",
+    "source_id": "ngmdb:74890",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the upper 48 m of the Cooper is of late Oligocene age",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 157.4803149606299,
+     "max_ft": 157.4803149606299,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "description": {
+    "value": "average 14.5 ppm uranium and 1.0 percent P2O5 in fresh samples; calcium carbonate constitutes 30 to 50 percent of the rock",
+    "source_id": "ngmdb:74890",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fresh sediments from the Cooper Formation average 14.5 ppm uranium and\n1.0 percent P205 for Oliogcene samples",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Cooper Formation (Eocene part)",
+    "source_id": "ngmdb:74890",
+    "page": 9,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "whereas the Eocene sediments are light olive-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "informal name for the Eocene part described in the text",
+    "normalized": {
+     "canonical": "Cooper",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "late Eocene",
+    "source_id": "ngmdb:74890",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "lower 14 m is of late Eocene age",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 37.71,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "light olive-green silty, plastic, calcareous clay that does not contain much phosphate",
+    "source_id": "ngmdb:74890",
+    "page": 9,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "green silty, plastic, calcareous clay that does not contain much phosphate",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "14 m (Clubhouse Crossroads)",
+    "source_id": "ngmdb:74890",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "lower 14 m is of late Eocene age",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 45.93175853018372,
+     "max_ft": 45.93175853018372,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "contacts": {
+    "value": "separated from the Oligocene part by an unconformity representing the early Oligocene, about 5-6 million years",
+    "source_id": "ngmdb:74890",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The intervening unconformity represents the\nearly Oligocene, a duration of about 5-6 million years",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "average 5.6 ppm U and 0.15 percent P2O5 in fresh samples",
+    "source_id": "ngmdb:74890",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "5.6 ppm U and 0.15 percent P205 for\nEocene samples",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Santee Limestone",
+    "source_id": "ngmdb:74890",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Cooper Formation overlies the Santee Limestone, (Eocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Santee",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Eocene",
+    "source_id": "ngmdb:74890",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Cooper Formation overlies the Santee Limestone, (Eocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 56.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "contacts": {
+    "value": "overlain by the Cooper Formation",
+    "source_id": "ngmdb:74890",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Cooper Formation overlies the Santee Limestone",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "zone of secondary enrichment (weathered Cooper Formation)",
+    "source_id": "ngmdb:74890",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Zones of secondary enrichment over undifferentiated Cooper",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "average 2 m; range 0 to 5 m",
+    "source_id": "ngmdb:74890",
+    "page": 14,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "enrichment thicknesses range\nfrom 0 to 5 m, and average about 2 m.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 0.0,
+     "max_ft": 16.404199475065614,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "description": {
+    "value": "enrichment zones range from about 2 to 18 percent P2O5 and from about 25 to 145 ppm uranium, and average about 5.4 percent P2O5 and 60 ppm uranium",
+    "source_id": "ngmdb:74890",
+    "page": 14,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "range\nfrom about 2 to 18 percent P205 and from about 25 to 145 ppm uranium",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ],
+ "observations": [
+  {
+   "kind": "core",
+   "label": {
+    "value": "Clubhouse Crossroads Core",
+    "source_id": "ngmdb:74890",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Clubhouse Crossroads Core (fig. 1)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "elevation": {
+    "value": "6,0",
+    "source_id": "ngmdb:74890",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "CC 1   6,0   5   Clubhouse Crossroads core",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "m",
+    "table": true,
+    "note": "surface elevation column; OCR comma",
+    "normalized": {
+     "min_ft": 0.0,
+     "max_ft": 19.685039370078737,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "0",
+      "source_id": "ngmdb:74890",
+      "page": 9,
+      "extraction_method": "llm",
+      "confidence": 0.578,
+      "inferred": true,
+      "locator": null,
+      "quote": "115 at the base of the Pleistocene (5.2 m)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     },
+     "bottom": {
+      "value": "5.2 m",
+      "source_id": "ngmdb:74890",
+      "page": 9,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "115 at the base of the Pleistocene (5.2 m)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 17.060367454068242,
+       "max_ft": 17.060367454068242,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Pleistocene",
+      "source_id": "ngmdb:74890",
+      "page": 9,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "at the base of the Pleistocene (5.2 m)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    },
+    {
+     "top": {
+      "value": "5.2 m",
+      "source_id": "ngmdb:74890",
+      "page": 9,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "at the base of the Pleistocene (5.2 m)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "normalized": {
+       "min_ft": 17.060367454068242,
+       "max_ft": 17.060367454068242,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "62.9 m",
+      "source_id": "ngmdb:74890",
+      "page": 9,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "88 at the base of the Cooper (62.9 m)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 206.36482939632543,
+       "max_ft": 206.36482939632543,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Cooper Formation",
+      "source_id": "ngmdb:74890",
+      "page": 9,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "88 at the base of the Cooper (62.9 m)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "phosphate pebble beds within the Cooper at 56 and 57.9 m and at the base of the Cooper (62.9 m)",
+      "source_id": "ngmdb:74890",
+      "page": 9,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "120 and\n105 within the Cooper (56 and 57.9 m)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    },
+    {
+     "top": {
+      "value": "7 m",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "7 m   21.3   1.9   leached (from. gamma and lithologic logs)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 22.96587926509186,
+       "max_ft": 22.96587926509186,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "7 m   21.3   1.9   leached (from. gamma and lithologic logs)",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "7 m   21.3   1.9   leached (from. gamma and lithologic logs)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     }
+    },
+    {
+     "top": {
+      "value": "11 m",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "11 m   50.2   5.4   enriched (from gamma and lithologic logs)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 36.08923884514435,
+       "max_ft": 36.08923884514435,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "11 m   50.2   5.4   enriched (from gamma and lithologic logs)",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "11 m   50.2   5.4   enriched (from gamma and lithologic logs)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     }
+    },
+    {
+     "top": {
+      "value": "40 m",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "40 m   12.8   1.5   typical Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 131.2335958005249,
+       "max_ft": 131.2335958005249,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "40 m   12.8   1.5   typical Oligocene",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "40 m   12.8   1.5   typical Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "unit": {
+      "value": "Cooper Formation (Oligocene part)",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "40 m   12.8   1.5   typical Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "table comment gives the age; the samples are from the Cooper Formation",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "63 m",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "63 m   4.6   .08   typical. Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 206.69291338582676,
+       "max_ft": 206.69291338582676,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "63 m   4.6   .08   typical. Eocene",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "63 m   4.6   .08   typical. Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "unit": {
+      "value": "Cooper Formation (Eocene part)",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "63 m   4.6   .08   typical. Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "table comment gives the age; the samples are from the Cooper Formation",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "AH 38",
+    "source_id": "ngmdb:74890",
+    "page": 15,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "AH 38   3   8.5   relative physiographic low",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "elevation": {
+    "value": "3",
+    "source_id": "ngmdb:74890",
+    "page": 15,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "AH 38   3   8.5   relative physiographic low",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "m",
+    "table": true,
+    "note": "surface elevation; depth to top of Cooper 8.5 m",
+    "normalized": {
+     "min_ft": 9.842519685039369,
+     "max_ft": 9.842519685039369,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "9 m",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "9-11 in   46.6   2.3",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 29.527559055118108,
+       "max_ft": 29.527559055118108,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "9-11 in 46.6 2.3",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "9-11 in   46.6   2.3",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "bottom": {
+      "value": "11 m",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "9-11 in   46.6   2.3",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "bottom of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 36.08923884514435,
+       "max_ft": 36.08923884514435,
+       "unit": "m",
+       "approximate": false
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "15 m",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "15-17 m   16.8   1.2   typical   Oligocene(7.)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 49.212598425196845,
+       "max_ft": 49.212598425196845,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "15-17 m   16.8   1.2   typical   Oligocene(7.)",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "15-17 m   16.8   1.2   typical   Oligocene(7.)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "bottom": {
+      "value": "17 m",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "15-17 m   16.8   1.2   typical   Oligocene(7.)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "bottom of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 55.77427821522309,
+       "max_ft": 55.77427821522309,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Cooper Formation (Oligocene part)",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "15-17 m   16.8   1.2   typical   Oligocene(7.)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "table comment gives the age; the samples are from the Cooper Formation",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "18.5 m",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "18.5-20 m   6.4   .16   Oligocene-Eocene boundary; Eocene   bryozoan limestone",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 60.69553805774277,
+       "max_ft": 60.69553805774277,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "18.5-20 m   6.4   .16   Oligocene-Eocene boundary; Eocene   bryozoan limestone",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "18.5-20 m   6.4   .16   Oligocene-Eocene boundary; Eocene   bryozoan limestone",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "bottom": {
+      "value": "20 m",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "18.5-20 m   6.4   .16   Oligocene-Eocene boundary; Eocene   bryozoan limestone",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "bottom of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 65.61679790026245,
+       "max_ft": 65.61679790026245,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Oligocene-Eocene boundary; Eocene bryozoan limestone",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "18.5-20 m   6.4   .16   Oligocene-Eocene boundary; Eocene   bryozoan limestone",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "normalized": {
+       "canonical": "oligocene eocene boundary eocene bryozoan",
+       "in_geolex": false,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "23 m",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "23-24.5 m   3.8   .14   typical   Eocene (1)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 75.45931758530183,
+       "max_ft": 75.45931758530183,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "23-24.5 m   3.8   .14   typical   Eocene (1)",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "23-24.5 m   3.8   .14   typical   Eocene (1)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "bottom": {
+      "value": "24.5 m",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "23-24.5 m   3.8   .14   typical   Eocene (1)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "bottom of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 80.3805774278215,
+       "max_ft": 80.3805774278215,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Cooper Formation (Eocene part)",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "23-24.5 m   3.8   .14   typical   Eocene (1)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "table comment gives the age; the samples are from the Cooper Formation",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "AH 2",
+    "source_id": "ngmdb:74890",
+    "page": 15,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "AH 2   6   6   relative physiographic low",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "elevation": {
+    "value": "6",
+    "source_id": "ngmdb:74890",
+    "page": 15,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "AH 2   6   6   relative physiographic low",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "m",
+    "table": true,
+    "normalized": {
+     "min_ft": 19.685039370078737,
+     "max_ft": 19.685039370078737,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "8 m",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "8-9 m   8.7   .22   soft sugary olive-green; Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 26.246719160104984,
+       "max_ft": 26.246719160104984,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "8-9 m   8.7   .22   soft sugary olive-green; Oligocene",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "8-9 m   8.7   .22   soft sugary olive-green; Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "bottom": {
+      "value": "9 m",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "8-9 m   8.7   .22   soft sugary olive-green; Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "bottom of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 29.527559055118108,
+       "max_ft": 29.527559055118108,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Cooper Formation (Oligocene part)",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "8-9 m   8.7   .22   soft sugary olive-green; Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "table comment gives the age; the samples are from the Cooper Formation",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "11 m",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "11-12 m   3.5   .08   stiff, plastic; Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 36.08923884514435,
+       "max_ft": 36.08923884514435,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "11-12 m   3.5   .08   stiff, plastic; Eocene",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "11-12 m   3.5   .08   stiff, plastic; Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "bottom": {
+      "value": "12 m",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "11-12 m   3.5   .08   stiff, plastic; Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "bottom of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 39.370078740157474,
+       "max_ft": 39.370078740157474,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Cooper Formation (Eocene part)",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "11-12 m   3.5   .08   stiff, plastic; Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "table comment gives the age; the samples are from the Cooper Formation",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "12 m",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "12-13.5 m   9.1   ..30   stiff, plastic; Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 39.370078740157474,
+       "max_ft": 39.370078740157474,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "12-13.5 m   9.1   ..30   stiff, plastic; Eocene",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "12-13.5 m   9.1   ..30   stiff, plastic; Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "bottom": {
+      "value": "13.5 m",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "12-13.5 m   9.1   ..30   stiff, plastic; Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "bottom of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 44.29133858267716,
+       "max_ft": 44.29133858267716,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Cooper Formation (Eocene part)",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "12-13.5 m   9.1   ..30   stiff, plastic; Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "table comment gives the age; the samples are from the Cooper Formation",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "AH 9",
+    "source_id": "ngmdb:74890",
+    "page": 15,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "All 9   5   6",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "OCR 'All 9'; table 1 lists AH-9"
+   },
+   "elevation": {
+    "value": "5",
+    "source_id": "ngmdb:74890",
+    "page": 15,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "All 9   5   6",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "m",
+    "table": true,
+    "normalized": {
+     "min_ft": 16.404199475065614,
+     "max_ft": 16.404199475065614,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "6 m",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "G-7.5 m   2.9   .08   sandy, dry, olive; Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 19.685039370078737,
+       "max_ft": 19.685039370078737,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "G-7.5 m   2.9   .08   sandy, dry, olive; Oligocene",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "G-7.5 m   2.9   .08   sandy, dry, olive; Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "bottom": {
+      "value": "7.5 m",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "G-7.5 m   2.9   .08   sandy, dry, olive; Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "bottom of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 24.606299212598422,
+       "max_ft": 24.606299212598422,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Cooper Formation (Oligocene part)",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "G-7.5 m   2.9   .08   sandy, dry, olive; Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "table comment gives the age; the samples are from the Cooper Formation",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "7.5 m",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "7.5-9 m   20.8   2.0   clayey, dry;Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 24.606299212598422,
+       "max_ft": 24.606299212598422,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "7.5-9 m   20.8   2.0   clayey, dry;Eocene",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "7.5-9 m   20.8   2.0   clayey, dry;Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "bottom": {
+      "value": "9 m",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "7.5-9 m   20.8   2.0   clayey, dry;Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "bottom of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 29.527559055118108,
+       "max_ft": 29.527559055118108,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Cooper Formation (Eocene part)",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "7.5-9 m   20.8   2.0   clayey, dry;Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "table comment gives the age; the samples are from the Cooper Formation",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "9 m",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "9-11 m   5.5   .15   clayey, dry;, Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 29.527559055118108,
+       "max_ft": 29.527559055118108,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "9-11 m   5.5   .15   clayey, dry;, Eocene",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "9-11 m   5.5   .15   clayey, dry;, Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "bottom": {
+      "value": "11 m",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "9-11 m   5.5   .15   clayey, dry;, Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "bottom of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 36.08923884514435,
+       "max_ft": 36.08923884514435,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Cooper Formation (Eocene part)",
+      "source_id": "ngmdb:74890",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "9-11 m   5.5   .15   clayey, dry;, Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "table comment gives the age; the samples are from the Cooper Formation",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "GS 4",
+    "source_id": "ngmdb:74890",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "GS 4   6,5   3.5   relative physiographic high; heavily weathered.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "elevation": {
+    "value": "6,5",
+    "source_id": "ngmdb:74890",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "GS 4   6,5   3.5",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "m",
+    "table": true,
+    "normalized": {
+     "min_ft": 16.404199475065614,
+     "max_ft": 19.685039370078737,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "6 m",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "6-6.5 m   36.6   3.9   muddy; calcareous fine sand; Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 19.685039370078737,
+       "max_ft": 19.685039370078737,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "6-6.5 m   36.6   3.9   muddy; calcareous fine sand; Oligocene",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "6-6.5 m   36.6   3.9   muddy; calcareous fine sand; Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "bottom": {
+      "value": "6.5 m",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "6-6.5 m   36.6   3.9   muddy; calcareous fine sand; Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "bottom of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 21.3254593175853,
+       "max_ft": 21.3254593175853,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Cooper Formation (Oligocene part)",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "6-6.5 m   36.6   3.9   muddy; calcareous fine sand; Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "table comment gives the age; the samples are from the Cooper Formation",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "6.5 m",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "6.5-7 m   38.7   4.3   greener; Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 21.3254593175853,
+       "max_ft": 21.3254593175853,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "6.5-7 m   38.7   4.3   greener; Oligocene",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "6.5-7 m   38.7   4.3   greener; Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "bottom": {
+      "value": "7 m",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "6.5-7 m   38.7   4.3   greener; Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "bottom of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 22.96587926509186,
+       "max_ft": 22.96587926509186,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Cooper Formation (Oligocene part)",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "6.5-7 m   38.7   4.3   greener; Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "table comment gives the age; the samples are from the Cooper Formation",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "9 m",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "9-10 m   62.3   6.0   typical Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 29.527559055118108,
+       "max_ft": 29.527559055118108,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "9-10 m   62.3   6.0   typical Oligocene",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "9-10 m   62.3   6.0   typical Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "bottom": {
+      "value": "10 m",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "9-10 m   62.3   6.0   typical Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "bottom of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 32.80839895013123,
+       "max_ft": 32.80839895013123,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Cooper Formation (Oligocene part)",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "9-10 m   62.3   6.0   typical Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "table comment gives the age; the samples are from the Cooper Formation",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "16 m",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "16-17 m   6.4   .16   typical Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 52.49343832020997,
+       "max_ft": 52.49343832020997,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "16-17 m   6.4   .16   typical Eocene",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "16-17 m   6.4   .16   typical Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "bottom": {
+      "value": "17 m",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "16-17 m   6.4   .16   typical Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "bottom of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 55.77427821522309,
+       "max_ft": 55.77427821522309,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Cooper Formation (Eocene part)",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "16-17 m   6.4   .16   typical Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "table comment gives the age; the samples are from the Cooper Formation",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "AH 3",
+    "source_id": "ngmdb:74890",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "AH 3   30   '13   relative physiographic high;",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "elevation": {
+    "value": "30",
+    "source_id": "ngmdb:74890",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "AH 3   30   '13",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "m",
+    "table": true,
+    "normalized": {
+     "min_ft": 98.42519685039369,
+     "max_ft": 98.42519685039369,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "13 m",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "13-15 m   48.4   4.6   dark olive-green, leached, passing down to olive brown;",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 42.6509186351706,
+       "max_ft": 42.6509186351706,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "13-15 m   48.4   4.6   dark olive-green, leached, passing down to olive brown;",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "13-15 m   48.4   4.6   dark olive-green, leached, passing down to olive brown;",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "bottom": {
+      "value": "15 m",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "13-15 m   48.4   4.6   dark olive-green, leached, passing down to olive brown;",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "bottom of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 49.212598425196845,
+       "max_ft": 49.212598425196845,
+       "unit": "m",
+       "approximate": false
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "15 m",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "15-17 m   14.0   .36   Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 49.212598425196845,
+       "max_ft": 49.212598425196845,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "15-17 m   14.0   .36   Oligocene",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "15-17 m   14.0   .36   Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "bottom": {
+      "value": "17 m",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "15-17 m   14.0   .36   Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "bottom of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 55.77427821522309,
+       "max_ft": 55.77427821522309,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Cooper Formation (Oligocene part)",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "15-17 m   14.0   .36   Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "table comment gives the age; the samples are from the Cooper Formation",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
+  },
+  {
+   "kind": "outcrop",
+   "label": {
+    "value": "EF 17",
+    "source_id": "ngmdb:74890",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "EF 17   25   4.5   Carolina Giant Cememt Co. quarry",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "location": {
+    "value": "Carolina Giant Cement Co. quarry near Harleyville",
+    "source_id": "ngmdb:74890",
+    "page": 14,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "At the Carolina Giant Cement Co. quarry near Harleyville (EF 17)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "elevation": {
+    "value": "25",
+    "source_id": "ngmdb:74890",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "EF 17   25   4.5",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "m",
+    "table": true,
+    "normalized": {
+     "min_ft": 82.02099737532808,
+     "max_ft": 82.02099737532808,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "5 m",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "5 m   84.8*   8.0   weathered top of Cooper",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 16.404199475065614,
+       "max_ft": 16.404199475065614,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "5 m   84.8*   8.0   weathered top of Cooper",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "5 m   84.8*   8.0   weathered top of Cooper",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     }
+    },
+    {
+     "top": {
+      "value": "8 m",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "8 m   13.2   2.4   base of Cooper; glauconitic sand with phosphatic hardgrourd",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 26.246719160104984,
+       "max_ft": 26.246719160104984,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "8 m   13.2   2.4   base of Cooper; glauconitic sand with phosphatic hardgrourd",
+      "source_id": "ngmdb:74890",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "8 m   13.2   2.4   base of Cooper; glauconitic sand with phosphatic hardgrourd",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     }
+    }
+   ]
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "MU 1",
+    "source_id": "ngmdb:74890",
+    "page": 17,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "MU 1",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "5.5 m",
+      "source_id": "ngmdb:74890",
+      "page": 17,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "5.5 m   3.9   .36   weathered Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 18.044619422572175,
+       "max_ft": 18.044619422572175,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "5.5 m   3.9   .36   weathered Eocene",
+      "source_id": "ngmdb:74890",
+      "page": 17,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "5.5 m   3.9   .36   weathered Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "unit": {
+      "value": "Cooper Formation (Eocene part)",
+      "source_id": "ngmdb:74890",
+      "page": 17,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "5.5 m   3.9   .36   weathered Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "table comment gives the age; the samples are from the Cooper Formation",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "7 m",
+      "source_id": "ngmdb:74890",
+      "page": 17,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "7 m   3.2   ..36   weathered Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 22.96587926509186,
+       "max_ft": 22.96587926509186,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "7 m   3.2   ..36   weathered Eocene",
+      "source_id": "ngmdb:74890",
+      "page": 17,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "7 m   3.2   ..36   weathered Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "unit": {
+      "value": "Cooper Formation (Eocene part)",
+      "source_id": "ngmdb:74890",
+      "page": 17,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "7 m   3.2   ..36   weathered Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "table comment gives the age; the samples are from the Cooper Formation",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "9 m",
+      "source_id": "ngmdb:74890",
+      "page": 17,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "9 m   3.3   .36   weathered Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 29.527559055118108,
+       "max_ft": 29.527559055118108,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "9 m   3.3   .36   weathered Eocene",
+      "source_id": "ngmdb:74890",
+      "page": 17,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "9 m   3.3   .36   weathered Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "unit": {
+      "value": "Cooper Formation (Eocene part)",
+      "source_id": "ngmdb:74890",
+      "page": 17,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "9 m   3.3   .36   weathered Eocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "table comment gives the age; the samples are from the Cooper Formation",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "NC 1",
+    "source_id": "ngmdb:74890",
+    "page": 17,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "NC 1",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "8.8 m",
+      "source_id": "ngmdb:74890",
+      "page": 17,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "8.8 m   23.9   1.7   weathered   Oligocene; pebbly",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 28.871391076115486,
+       "max_ft": 28.871391076115486,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "8.8 m   23.9   1.7   weathered   Oligocene; pebbly",
+      "source_id": "ngmdb:74890",
+      "page": 17,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "8.8 m   23.9   1.7   weathered   Oligocene; pebbly",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "unit": {
+      "value": "Cooper Formation (Oligocene part)",
+      "source_id": "ngmdb:74890",
+      "page": 17,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "8.8 m   23.9   1.7   weathered   Oligocene; pebbly",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "table comment gives the age; the samples are from the Cooper Formation",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "9.2 m",
+      "source_id": "ngmdb:74890",
+      "page": 17,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "9.2 m   21.7   1.7   Oligocene (1).",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 30.18372703412073,
+       "max_ft": 30.18372703412073,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "9.2 m   21.7   1.7   Oligocene (1).",
+      "source_id": "ngmdb:74890",
+      "page": 17,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "9.2 m   21.7   1.7   Oligocene (1).",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "unit": {
+      "value": "Cooper Formation (Oligocene part)",
+      "source_id": "ngmdb:74890",
+      "page": 17,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "9.2 m   21.7   1.7   Oligocene (1).",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "table comment gives the age; the samples are from the Cooper Formation",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "CNC 15",
+    "source_id": "ngmdb:74890",
+    "page": 19,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "CNC 15   9   6.5   relative physiographic high",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "elevation": {
+    "value": "9",
+    "source_id": "ngmdb:74890",
+    "page": 19,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "CNC 15   9   6.5",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "m",
+    "table": true,
+    "normalized": {
+     "min_ft": 29.527559055118108,
+     "max_ft": 29.527559055118108,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "9 m",
+      "source_id": "ngmdb:74890",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "9 m   20.2   1.8   Oligocene, weathered",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 29.527559055118108,
+       "max_ft": 29.527559055118108,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "9 m   20.2   1.8   Oligocene, weathered",
+      "source_id": "ngmdb:74890",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "9 m   20.2   1.8   Oligocene, weathered",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "unit": {
+      "value": "Cooper Formation (Oligocene part)",
+      "source_id": "ngmdb:74890",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "9 m   20.2   1.8   Oligocene, weathered",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "table comment gives the age; the samples are from the Cooper Formation",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "10.5 m",
+      "source_id": "ngmdb:74890",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "10.5 m   22.2   1.8   Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 34.44881889763779,
+       "max_ft": 34.44881889763779,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "10.5 m   22.2   1.8   Oligocene",
+      "source_id": "ngmdb:74890",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "10.5 m   22.2   1.8   Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "unit": {
+      "value": "Cooper Formation (Oligocene part)",
+      "source_id": "ngmdb:74890",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "10.5 m   22.2   1.8   Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "table comment gives the age; the samples are from the Cooper Formation",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "CA 3",
+    "source_id": "ngmdb:74890",
+    "page": 19,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "CA 3   6.5   6",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "elevation": {
+    "value": "6.5",
+    "source_id": "ngmdb:74890",
+    "page": 19,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "CA 3   6.5   6",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "units": "m",
+    "table": true,
+    "normalized": {
+     "min_ft": 21.3254593175853,
+     "max_ft": 21.3254593175853,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "15.3 m",
+      "source_id": "ngmdb:74890",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "15.3 m   47   8.5   Mixed with Pleistocene material; contains phosphate pebble",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 50.196850393700785,
+       "max_ft": 50.196850393700785,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "15.3 m   47   8.5   Mixed with Pleistocene material; contains phosphate pebble",
+      "source_id": "ngmdb:74890",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "15.3 m   47   8.5   Mixed with Pleistocene material; contains phosphate pebble",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     }
+    },
+    {
+     "top": {
+      "value": "15.9 m",
+      "source_id": "ngmdb:74890",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "15.9 m   41   6.9   Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 52.16535433070866,
+       "max_ft": 52.16535433070866,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "15.9 m   41   6.9   Oligocene",
+      "source_id": "ngmdb:74890",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "15.9 m   41   6.9   Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "unit": {
+      "value": "Cooper Formation (Oligocene part)",
+      "source_id": "ngmdb:74890",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "15.9 m   41   6.9   Oligocene",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "table comment gives the age; the samples are from the Cooper Formation",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "16.8 m",
+      "source_id": "ngmdb:74890",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "16.8 m   40   7.1",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 55.11811023622047,
+       "max_ft": 55.11811023622047,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "16.8 m   40   7.1",
+      "source_id": "ngmdb:74890",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "16.8 m   40   7.1",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     }
+    }
+   ]
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "CA 4",
+    "source_id": "ngmdb:74890",
+    "page": 19,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "CA 4   8   relative physiographic low",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "12.2 m",
+      "source_id": "ngmdb:74890",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "12.2 m   33   4.8 '   Mixed with Pleistocene material",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 40.0262467191601,
+       "max_ft": 40.0262467191601,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "12.2 m   33   4.8 '   Mixed with Pleistocene material",
+      "source_id": "ngmdb:74890",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "12.2 m   33   4.8 '   Mixed with Pleistocene material",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     }
+    },
+    {
+     "top": {
+      "value": "12.2 m",
+      "source_id": "ngmdb:74890",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "12.2-12.5 m   123   13.9 '   Oligocene; contains pieces of phosphate nodule",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "top of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 40.0262467191601,
+       "max_ft": 40.0262467191601,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "12.2-12.5 m   123   13.9 '   Oligocene; contains pieces of phosphate nodule",
+      "source_id": "ngmdb:74890",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "12.2-12.5 m   123   13.9 '   Oligocene; contains pieces of phosphate nodule",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "Table 2 row: depth, U (ppm), P2O5 (%), comment"
+     },
+     "bottom": {
+      "value": "12.5 m",
+      "source_id": "ngmdb:74890",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "12.2-12.5 m   123   13.9 '   Oligocene; contains pieces of phosphate nodule",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "bottom of sampled interval from the depth column",
+      "normalized": {
+       "min_ft": 41.01049868766404,
+       "max_ft": 41.01049868766404,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Cooper Formation (Oligocene part)",
+      "source_id": "ngmdb:74890",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "12.2-12.5 m   123   13.9 '   Oligocene; contains pieces of phosphate nodule",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "table": true,
+      "note": "table comment gives the age; the samples are from the Cooper Formation",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "structures": [],
+ "groundwater": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Altschuler, Z.S., Clarke, R.S., Jr., and Young, E.S., 1958, Geochemistry of uranium in apatite and phosphorite: U.S. Geological Survey Professional Paper 314 D, p. 45-87.",
+    "source_id": "ngmdb:74890",
+    "page": 22,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Altschuler, Z.S., Clarke, R.S., Jr., and Young, E.S., 1958, Geochemistry of uranium",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Cooke, C.W., 1936, Geology of the Coastal Plain of South Carolina: U.S. Geological Survey Bulletin 867, 196 p.",
+    "source_id": "ngmdb:74890",
+    "page": 22,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cooke, C.W.,1936, Geology of the Coastal Plain of South Carolina",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Cooke, C.W., and MacNeil, F.S., 1952, Tertiary stratigraphy of South Carolina: U.S. Geological Survey Professional Paper 243-B, p. 19-29.",
+    "source_id": "ngmdb:74890",
+    "page": 22,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cooke, C.W., and MacNeil, F.S., 1952, Tertiary stratigraphy of South Carolina",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Energy Research and Development Administration, 1975a, Aerial radiometric and magnetic survey, Georgetown national topographic map, North and South Carolina areas, 2 vols.",
+    "source_id": "ngmdb:74890",
+    "page": 22,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Energy Research and Development Administration, 1975a, Aerial radiometric",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Energy Research and Development Administration, 1975b, Aerial radiometric and magnetic survey, Savannah national topographic map, Georgia and South Carolina areas, 2 vols.",
+    "source_id": "ngmdb:74890",
+    "page": 22,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Energy Research and Development Administration, 1975b, Aerial radiometric",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Energy Research and Development Administration, 1975c, Aerial radiometric and magnetic survey, Augusta national topographic map, Georgia and South Carolina areas, 2 vols.",
+    "source_id": "ngmdb:74890",
+    "page": 22,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Energy Research and Development Administration, 1975c, Aerial radiometric",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Hazel, J.E., 1976, Cooper marl in the Coastal Plain of South Carolina and Georgia",
+    "source_id": "ngmdb:74890",
+    "page": 22,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Hazel, J.E., 1976, Cooper marl in the Coastal Plain of South Carolina and Georgia",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Hazel, J.E., Bybell, L.M., and others, 1977, Biostratigraphy of the deep corehole (Clubhouse Crossroads corehole 1) near Charleston, South Carolina: U.S. Geological Survey Professional Paper 1028",
+    "source_id": "ngmdb:74890",
+    "page": 22,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "R.J., 1977, Biostratigraphy of the deep corehole (Clubhouse Crossroads corehole",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Malde, H.E., 1959, Geology of the Charleston phosphate area, South Carolina: U.S. Geological Survey Bulletin 1079, 105 p.",
+    "source_id": "ngmdb:74890",
+    "page": 23,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Malde, H.E., 1959, Geology of the Charleston phosphate area, South Carolina",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Pooser, W.K., 1965, Biostratigraphy of Cenozoic Ostracoda from South Carolina: Kansas Univ. Paleont. Contr. (38), Arthropoda, Art. 8, 80 p.",
+    "source_id": "ngmdb:74890",
+    "page": 23,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Pooser, W.K., 1965, Biostratigraphy of Cenozoic Ostracoda from South Carolina",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Rogers, G.S., 1915, The phosphate deposits of South Carolina: U.S. Geol. Survey Bull. 580, pt. 1, p. 183-220.",
+    "source_id": "ngmdb:74890",
+    "page": 23,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Rogers, G.S., 1915, The phosphate deposits of South Carolina",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Ruffin, Edmund, 1843, Report of the commencement and progress of the agricultural survey of South Carolina for 1843: Columbia.",
+    "source_id": "ngmdb:74890",
+    "page": 23,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Ruffin, Edmund, 1843, Report of the commencement and progress of the agricultural",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ]
+}
