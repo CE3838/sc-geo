@@ -138,7 +138,7 @@ map.on('error', (e) => {
 });
 
 sidebar.addLayer({
-  id: 'imagery', label: 'Aerial imagery (NAIP)', order: 90,
+  id: 'imagery', label: 'Aerial Imagery (NAIP)', order: 90,
   onChange: (on) => {
     imageryOn = on;
     for (const id of ['overview', 'naip']) {

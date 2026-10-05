@@ -147,3 +147,8 @@ def test_extent_check():
     assert scgs.extent_check([-80.3, 32.4, -80.0, 32.7], ROCKVILLE["bbox"]) == "larger than catalog bbox"
     assert scgs.extent_check([-81.0, 33.0, -80.9, 33.1], ROCKVILLE["bbox"]) == "outside catalog bbox"
     assert scgs.extent_check([-81.0, 33.0, -80.9, 33.1], None) == "no catalog bbox"
+
+
+@pytest.mark.parametrize("name", ["Artificial fill", "Dredge spoil", "Made land", "Landfill", "Disturbed ground"])
+def test_artificial_fill_names_are_surficial(name):
+    assert scgs._SEDIMENT_NAME.search(name)

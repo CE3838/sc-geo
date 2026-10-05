@@ -3,7 +3,7 @@
 // Every row names the reference it comes from (`cite`, 1-based into
 // `references`) and derived values are flagged `inferred`.
 import { formatAgeRange, safeHttpsUrl } from './geology.js';
-import { parseAlternatives, scaleText, sourceLink } from './merged.js';
+import { layerName, parseAlternatives, scaleText, sourceLink } from './merged.js';
 
 export const SGMC_REFERENCE = {
   id: 'usgs-sgmc',
@@ -138,7 +138,7 @@ export function mergedCard({ props: p, unit, sources, records, lng, lat }) {
   return {
     title,
     group,
-    subtitle: `${p.layer === 'bedrock' ? 'Bedrock' : 'Surficial'} · map label ${u.map_unit ?? p.map_unit}`,
+    subtitle: `${layerName(p.layer)} · map label ${u.map_unit ?? p.map_unit}`,
     age: u.age ?? null,
     ma: formatMa(u.age_ma),
     aliases: distinct([u.name, u.full_name, u.formation, u.canonical], title, group),

@@ -1,5 +1,15 @@
 // Pure helpers for the merged geology layers (merge/build.py output).
 
+// The two merged layers split units by material (merge/score.py layer()), not by province.
+export const GEOLOGY_LAYERS = [
+  { id: 'surficial', label: 'Unconsolidated Deposits', visible: true, order: 10 },
+  { id: 'bedrock', label: 'Consolidated Rock', visible: true, order: 20 },
+];
+
+export function layerName(id) {
+  return (GEOLOGY_LAYERS.find((l) => l.id === id) ?? GEOLOGY_LAYERS[0]).label;
+}
+
 export function matchColor(property, classes) {
   const expr = ['match', ['get', property]];
   for (const c of classes) if (c.id !== 'Unknown') expr.push(c.id, c.color);

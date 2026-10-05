@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  confidenceColor, confidenceText, legendFor, matchColor, parseAlternatives, scaleText, sourceLink,
+  GEOLOGY_LAYERS, confidenceColor, confidenceText, layerName, legendFor, matchColor, parseAlternatives, scaleText, sourceLink,
 } from '../../web/merged.js';
 
 const CLASSES = [{ id: 'Holocene', color: '#fff7bc' }, { id: 'late Pleistocene', color: '#fee391' },
@@ -46,4 +46,12 @@ test('legendFor lists classes present, in class order, with counts', () => {
     { properties: { age_class: 'Holocene' } }, { properties: { age_class: 'Odd' } }];
   assert.deepEqual(legendFor(feats, 'age_class', CLASSES).map((e) => [e.id, e.count]),
     [['Holocene', 2], ['late Pleistocene', 1], ['Unknown', 1]]);
+});
+
+
+test('merged layers are named by material: Unconsolidated Deposits and Consolidated Rock', () => {
+  assert.deepEqual(GEOLOGY_LAYERS.map((l) => [l.id, l.label]),
+    [['surficial', 'Unconsolidated Deposits'], ['bedrock', 'Consolidated Rock']]);
+  assert.equal(layerName('bedrock'), 'Consolidated Rock');
+  assert.equal(layerName('surficial'), 'Unconsolidated Deposits');
 });

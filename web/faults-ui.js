@@ -38,7 +38,7 @@ export function setupFaults(map, ui) {
   let meta = null;
   const key = el('ul', { class: 'fault-key', 'aria-label': 'Fault symbols' },
     ...FAULT_LEGEND.map((e) => el('li', {}, sample(e), e.label)));
-  const row = ui.addLayer({ id: 'faults', label: 'Faults and shear zones', order: 30, detail: key,
+  const row = ui.addLayer({ id: 'faults', label: 'Faults and Shear Zones', order: 30, detail: key,
     onChange: (on) => {
       for (const id of FAULT_LAYER_IDS) if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', on ? 'visible' : 'none');
       key.hidden = !on;

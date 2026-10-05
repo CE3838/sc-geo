@@ -4,7 +4,7 @@
 // layers were merged. Click: a short description, and the property card
 // model (card.js).
 import {
-  confidenceColor, confidenceText, CONFIDENCE_STOPS, legendFor, matchColor, parseAlternatives, scaleText, sourceLink,
+  confidenceColor, confidenceText, CONFIDENCE_STOPS, GEOLOGY_LAYERS, layerName, legendFor, matchColor, parseAlternatives, scaleText, sourceLink,
 } from './merged.js';
 import { safeHttpsUrl, shortCitation } from './geology.js';
 import { mergedCard } from './card.js';
@@ -12,10 +12,7 @@ import { el } from './dom.js';
 import { onStyleReady } from './geo.js';
 
 const BASE = 'data/geology/';
-const LAYERS = [
-  { id: 'surficial', label: 'Surficial geology', visible: true, order: 10 },
-  { id: 'bedrock', label: 'Bedrock geology', visible: true, order: 20 },
-];
+const LAYERS = GEOLOGY_LAYERS;
 
 const getJson = (name) => fetch(BASE + name).then((r) => (r.ok ? r.json() : Promise.reject(new Error(`${name}: HTTP ${r.status}`))));
 
@@ -105,7 +102,7 @@ export async function setupMergedGeology(map, ui) {
       const alts = parseAlternatives(p.alternatives);
       return el('div', { class: 'feature-info' },
         el('div', { class: 'feature-layer' }, u.unit_name || u.name || p.map_unit),
-        el('div', {}, `${p.layer === 'bedrock' ? 'Bedrock' : 'Surficial'} · map label ${u.map_unit ?? p.map_unit}`),
+        el('div', {}, `${layerName(p.layer)} · map label ${u.map_unit ?? p.map_unit}`),
         u.age && el('div', {}, `Age: ${u.age}`),
         el('div', {}, `Material: ${p.material_class}`),
         u.description && el('div', { class: 'geo-cite' }, shortCitation(u.description, 220)),

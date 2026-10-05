@@ -80,7 +80,7 @@ function drawShield(spec, ratio = 2) {
 export function setupRoads(map, ui) {
   let on = LIVE_ON_AT_START.roads;
   let ready = false;
-  const row = ui.addLayer({ id: 'roads', label: 'Roads and route numbers', order: 40, checked: LIVE_ON_AT_START.roads,
+  const row = ui.addLayer({ id: 'roads', label: 'Roads and Route Numbers', order: 40, checked: LIVE_ON_AT_START.roads,
     onChange: (checked) => {
       on = checked;
       for (const l of roadLayers()) if (map.getLayer(l.id)) map.setLayoutProperty(l.id, 'visibility', on ? 'visible' : 'none');
