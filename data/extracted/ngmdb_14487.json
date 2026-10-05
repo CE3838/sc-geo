@@ -1,0 +1,641 @@
+{
+ "source_id": "ngmdb:14487",
+ "title": "Schlumberger electric soundings in the Charleston, S.C. earthquake area",
+ "citation": "Campbell, D.L., 1977, Schlumberger electric soundings in the Charleston, S.C. earthquake area: U.S. Geological Survey Open-File Report OF-77-617, map scale 1:250,000.",
+ "year": 1977,
+ "scale": 250000,
+ "publisher": "U.S. Geological Survey",
+ "kind": "publication",
+ "schema_version": 1,
+ "extracted_at": "2026-10-05T10:51:51+00:00",
+ "updated_at": "2026-10-05T10:51:51+00:00",
+ "reader": "Claude, reading session 2026-10-05",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10",
+  "11",
+  "12",
+  "13",
+  "14",
+  "15",
+  "16",
+  "17",
+  "18",
+  "19",
+  "20",
+  "21",
+  "22",
+  "23",
+  "24",
+  "25",
+  "26",
+  "27",
+  "28",
+  "29",
+  "30",
+  "31",
+  "32"
+ ],
+ "blocks_total": 32,
+ "complete": true,
+ "notes": "Geophysical report (Schlumberger VES soundings). The resistivity-depth layer tables (Tables 1-2, pages 7-9) are not recorded: the schema has no resistivity field and the layers are not stratigraphic units. Recorded only the depths the text interprets geologically (coreholes CCC1-3 basalt at about 750 m; VES 1 of 1975 electric basement; CSC76-VES2 basalt?/crystalline basement?). Figures (pages 10-31) are plotted curves with garbled text; the plate (page 32) shows only sounding locations, no coordinates in text.",
+ "files": [
+  {
+   "url": "https://pubs.usgs.gov/of/1977/0617/report.pdf",
+   "via": "pubs_usgs",
+   "sha256": "72ffd8eae9601baaa12fa04dc33e86ed47a0b6d94edbc990ee87472abd9b1835",
+   "pages": 31,
+   "first_page": 1
+  },
+  {
+   "url": "https://pubs.usgs.gov/of/1977/0617/plate-1.pdf",
+   "via": "pubs_usgs",
+   "sha256": "fba1c5b3be656dc7b56cc51a89eb4ac1f463eb8cc6f8bd6b57fa3b7e6b3e1e78",
+   "pages": 1,
+   "first_page": 32
+  }
+ ],
+ "summary": {
+  "stored": 33,
+  "quote_match": {
+   "exact": 33
+  },
+  "verification": {
+   "agree": 4
+  },
+  "inferred": 2
+ },
+ "ingests": [
+  {
+   "at": "2026-10-05T10:51:51+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, reading session 2026-10-05",
+   "values": 33,
+   "stored": 33,
+   "exact": 33,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 4,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [],
+ "observations": [
+  {
+   "kind": "core",
+   "label": {
+    "value": "CCC1",
+    "source_id": "ngmdb:14487",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "designated CCCl, CCC2, and CCC3 on Plate 1.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "OCR 'CCCl'"
+   },
+   "location": {
+    "value": "near Clubhouse Crossroads, S.C.",
+    "source_id": "ngmdb:14487",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "all near Clubhouse Crossroads, S.C.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "about 750 m",
+      "source_id": "ngmdb:14487",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "encountered basalt flows at about 750 m depth",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 2460.6299212598424,
+       "max_ft": 2460.6299212598424,
+       "unit": "m",
+       "approximate": true
+      }
+     },
+     "unit": {
+      "value": "basalt flows",
+      "source_id": "ngmdb:14487",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "All three coreholes\nencountered basalt flows at about 750 m depth",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    }
+   ]
+  },
+  {
+   "kind": "core",
+   "label": {
+    "value": "CCC2",
+    "source_id": "ngmdb:14487",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "designated CCCl, CCC2, and CCC3 on Plate 1.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "near Clubhouse Crossroads, S.C.",
+    "source_id": "ngmdb:14487",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "all near Clubhouse Crossroads, S.C.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "about 750 m",
+      "source_id": "ngmdb:14487",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "encountered basalt flows at about 750 m depth",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 2460.6299212598424,
+       "max_ft": 2460.6299212598424,
+       "unit": "m",
+       "approximate": true
+      }
+     },
+     "unit": {
+      "value": "basalt flows",
+      "source_id": "ngmdb:14487",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "All three coreholes\nencountered basalt flows at about 750 m depth",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    }
+   ]
+  },
+  {
+   "kind": "core",
+   "label": {
+    "value": "CCC3",
+    "source_id": "ngmdb:14487",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "designated CCCl, CCC2, and CCC3 on Plate 1.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "near Clubhouse Crossroads, S.C.",
+    "source_id": "ngmdb:14487",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "all near Clubhouse Crossroads, S.C.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "about 750 m",
+      "source_id": "ngmdb:14487",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "encountered basalt flows at about 750 m depth",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 2460.6299212598424,
+       "max_ft": 2460.6299212598424,
+       "unit": "m",
+       "approximate": true
+      }
+     },
+     "unit": {
+      "value": "basalt flows",
+      "source_id": "ngmdb:14487",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "All three coreholes\nencountered basalt flows at about 750 m depth",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     },
+     "bottom": {
+      "value": "about 750 m plus about 260 m of basalt",
+      "source_id": "ngmdb:14487",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.578,
+      "inferred": true,
+      "locator": null,
+      "quote": "CCC3 penetrated\n\nthrough about 260 m of basalt into a sedimentary unit",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "note": "bottom of basalt not given as a depth; source says CCC3 went through about 260 m of basalt",
+      "normalized": {
+       "min_ft": 853.018372703412,
+       "max_ft": 2460.6299212598424,
+       "values_ft": [
+        2460.6299212598424,
+        853.018372703412
+       ],
+       "unit": "m",
+       "approximate": true
+      }
+     }
+    },
+    {
+     "unit": {
+      "value": "sedimentary unit which underlies the basalt unit",
+      "source_id": "ngmdb:14487",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "into a sedimentary unit which underlies\nthe basalt unit",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "normalized": {
+       "canonical": "unit which underlies the basalt",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "sedimentary unit beneath the basalt; none of the wells reached crystalline basement",
+      "source_id": "ngmdb:14487",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "None of the\nwells reached crystalline basement.",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    }
+   ]
+  },
+  {
+   "kind": "other",
+   "label": {
+    "value": "VES 1 of 1975",
+    "source_id": "ngmdb:14487",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The electrical sounding nearest\nto these coreholes is VES 1 of 1975",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "about 1300 m",
+      "source_id": "ngmdb:14487",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "basement at about 1300 m.",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 4265.09186351706,
+       "max_ft": 4265.09186351706,
+       "unit": "m",
+       "approximate": true
+      }
+     },
+     "unit": {
+      "value": "electric basement",
+      "source_id": "ngmdb:14487",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "did detect electric\n\nbasement at about 1300 m.",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     },
+     "description": {
+      "value": "did not detect a high-resistivity layer corresponding to the basalt, but did detect electric basement at about 1300 m",
+      "source_id": "ngmdb:14487",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "which did not detect a high-\n\nresistivity layer corresponding to the basalt",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree"
+     }
+    }
+   ]
+  },
+  {
+   "kind": "other",
+   "label": {
+    "value": "CSC76-VES2",
+    "source_id": "ngmdb:14487",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "CSC76-VES2, for example, shows a resistivity increase from 9 to 47",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "560 m",
+      "source_id": "ngmdb:14487",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "ohm-tn at 560 m (basalt?)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 1837.2703412073488,
+       "max_ft": 1837.2703412073488,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "basalt?",
+      "source_id": "ngmdb:14487",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "ohm-tn at 560 m (basalt?)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     },
+     "description": {
+      "value": "resistivity increase from 9 to 47 ohm-m",
+      "source_id": "ngmdb:14487",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "shows a resistivity increase from 9 to 47",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    },
+    {
+     "top": {
+      "value": "2850 m",
+      "source_id": "ngmdb:14487",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "higher value at 2850 m (crystalline basement?)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 9350.393700787401,
+       "max_ft": 9350.393700787401,
+       "unit": "m",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "crystalline basement?",
+      "source_id": "ngmdb:14487",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "higher value at 2850 m (crystalline basement?)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     },
+     "description": {
+      "value": "second increase from 47 ohm-m to a much higher value",
+      "source_id": "ngmdb:14487",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "a second increase from 47 ohm-m to a much\nhigher value at 2850 m",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    }
+   ]
+  }
+ ],
+ "structures": [],
+ "groundwater": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Anderson, W. L., 1971, Application of bicubic spline functions to two dimensional guided data: NTIS (National Technical Information Service), No. PB-203579, Springfield, Va.",
+    "source_id": "ngmdb:14487",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Application of bicubic spline functions to two",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Campbell, D. L., 1977, Electric and electromagnetic soundings near Charleston, South Carolina, a preliminary report: U.S. Geol. Survey Prof. Paper 1026-M, (in press).",
+    "source_id": "ngmdb:14487",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Electric and electromagnetic soundings near\n   Charleston, South Carolina, a preliminary report",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Keller, G. V., and Frischknecht, F. C., 1966, Electrical methods in geophysical prospecting: New York, Pergamon Press, 517 p.",
+    "source_id": "ngmdb:14487",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Frischknecht, F. C., 1966, Electrical methods in",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Zohdy, Adel A. R., 1974a, A computer program for the automatic interpretation of Schlumberger sounding curves over horizontally stratified media: NTIS, No. PB-232703/AS, 25 p.",
+    "source_id": "ngmdb:14487",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "1974a, A computer program for the automatic inter-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Zohdy, Adel A. R., 1974b, The use of Dar Zarrouk curves in the interpretation of VES data: U.S. Geol. Survey Bull. 1313-D, 41 p.",
+    "source_id": "ngmdb:14487",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "1974b, The use of Dar Zarrouk curves in the inter-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Zohdy, Adel A. R., 1975, Automatic interpretation of Schlumberger sounding curves using modified Dar Zarrouk functions: U.S. Geol. Survey Bull. 1313-E, 39 p.",
+    "source_id": "ngmdb:14487",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "1975, Automatic interpretation of Schlumberger sound-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Zohdy, Adel A. R., Anderson, L. A., and Muffler, L. J. P., 1973, Resistivity, self potential, and induced polarization surveys of a vapor-dominated geothermal system: Geophysics, v. 38, p. 1130-1144.",
+    "source_id": "ngmdb:14487",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "dominated geothermal system:   Geophysics, v, 38, p. 1130-1144.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ]
+}
