@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 5,
+ "count": 6,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -63,6 +63,19 @@
    "quote": "surface. The potentiometric surface at one of the Mount Pleasant",
    "added_at": "2026-10-05T05:50:16+00:00",
    "match": "fuzzy"
+  },
+  {
+   "source_id": "ngmdb:7459",
+   "path": "units[4].map_symbol",
+   "problem": "verify_unclear",
+   "value": "Qes",
+   "page": 1,
+   "quote": "Unit Qes consists of granular or shelly, coarse- to medium-grained,",
+   "added_at": "2026-10-05T05:55:17+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR shows Qes and Qces; the printed symbol may be Qcs"
+   }
   }
  ]
 }
