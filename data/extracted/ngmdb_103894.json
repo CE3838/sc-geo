@@ -8,7 +8,7 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-06T10:57:01+00:00",
- "updated_at": "2026-10-06T10:57:01+00:00",
+ "updated_at": "2026-10-06T10:58:24+00:00",
  "reader": "Claude, scheduled Claude Code session 2026-10-06",
  "packets": [
   "packet-01"
@@ -18,7 +18,7 @@
  ],
  "blocks_total": 1,
  "complete": true,
- "notes": "Single OCR map sheet. Unit descriptions legible; several map symbols garbled (beach sand, moved earth, freshwater marsh, Princess Anne units, Ten Mile Hill strand deposits) and left out; symbols given are inferred from placement. Three thicknesses print '|' for a digit (read as 1, flagged inferred). Pleistocene units are alloformations; subunits named as printed with parent in the note. SCGS drill holes shown only as map symbols (e.g. 26-165), logs on file at SCGS, not in this document; none recorded.\nSUBSURFACE: p.1 gives elevation ranges of alloformation margins (Holocene <10 ft landward; Silver Bluff >6 ft seaward, <10 ft landward; Princess Anne >10/<18 ft; Pamlico >17/<25 ft; Ten Mile Hill >25/<35 ft), stored as contacts; vertical datum not stated in the OCR text (horizontal 1927 North American Datum; base map USGS 1973); bathymetric contours from Taylor and others (2008); SCGS drill-hole locations with log IDs on map (logs not included). No cross sections or structure-contour maps.",
+ "notes": "Single OCR map sheet. Unit descriptions legible; several map symbols garbled (beach sand, moved earth, freshwater marsh, Princess Anne units, Ten Mile Hill strand deposits) and left out; symbols given are inferred from placement. Three thicknesses print '|' for a digit (read as 1, flagged inferred). Pleistocene units are alloformations; subunits named as printed with parent in the note. SCGS drill holes shown only as map symbols (e.g. 26-165), logs on file at SCGS, not in this document; none recorded.\nSUBSURFACE: p.1 gives elevation ranges of alloformation margins (Holocene <10 ft landward; Silver Bluff >6 ft seaward, <10 ft landward; Princess Anne >10/<18 ft; Pamlico >17/<25 ft; Ten Mile Hill >25/<35 ft), stored as contacts; vertical datum not stated in the OCR text (horizontal 1927 North American Datum; base map USGS 1973); bathymetric contours from Taylor and others (2008); SCGS drill-hole locations with log IDs on map (logs not included). No cross sections or structure-contour maps.\nSingle OCR map sheet. Unit descriptions legible; several map symbols garbled (beach sand, moved earth, freshwater marsh, Princess Anne units, Ten Mile Hill strand deposits) and left out; symbols given are inferred from placement. Three thicknesses print '|' for a digit (read as 1, flagged inferred). Pleistocene units are alloformations; subunits named as printed with parent in the note. SCGS drill holes shown only as map symbols (e.g. 26-165), logs on file at SCGS, not in this document; none recorded.\nSUBSURFACE: p.1 gives elevation ranges of alloformation margins (Holocene <10 ft landward; Silver Bluff >6 ft seaward, <10 ft landward; Princess Anne >10/<18 ft; Pamlico >17/<25 ft; Ten Mile Hill >25/<35 ft), stored as contacts; vertical datum not stated in the OCR text (horizontal 1927 North American Datum; base map USGS 1973); bathymetric contours from Taylor and others (2008); SCGS drill-hole locations with log IDs on map (logs not included). No cross sections or structure-contour maps.",
  "files": [
   {
    "url": "https://ngmdb.usgs.gov/img2/103000_103999/103894_1",
@@ -29,13 +29,13 @@
   }
  ],
  "summary": {
-  "stored": 74,
+  "stored": 73,
   "quote_match": {
-   "exact": 74
+   "exact": 73
   },
   "verification": {
-   "unclear": 3,
-   "agree": 8
+   "agree": 8,
+   "unclear": 3
   },
   "inferred": 7
  },
@@ -49,6 +49,24 @@
    "values": 74,
    "stored": 74,
    "exact": 74,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 8,
+   "disagree": 0,
+   "unclear": 3,
+   "review_items": 3
+  },
+  {
+   "at": "2026-10-06T10:58:24+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-06",
+   "values": 73,
+   "stored": 73,
+   "exact": 73,
    "ocr": 0,
    "fuzzy": 0,
    "quote_not_found": 0,
@@ -1157,24 +1175,7 @@
   }
  ],
  "observations": [],
- "structures": [
-  {
-   "kind": "contact",
-   "certainty": {
-    "value": "Identity and existence certain, location approximate",
-    "source_id": "ngmdb:103894",
-    "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.65,
-    "inferred": false,
-    "locator": "https://ngmdb.usgs.gov/img2/103000_103999/103894_1",
-    "quote": "Contact — Identity and existence certain, location approximate.",
-    "quote_match": "exact",
-    "text_method": "ocr",
-    "verification": null
-   }
-  }
- ],
+ "structures": [],
  "groundwater": [],
  "references": [
   {
