@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 15,
+ "count": 17,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -197,6 +197,32 @@
     "verdict": "disagree",
     "value": "field bulk density 96 to 120 lb per ft3 and porosity 26 to 46 percent (D'Appolonia, 1981, 1982)",
     "note": "page 64 gives the field bulk density and porosity; the 4 to 10 percent permeability result is on page 66, not page 64"
+   }
+  },
+  {
+   "source_id": "ngmdb:48337",
+   "path": "observations[1].intervals[1].description",
+   "problem": "verify_unclear",
+   "value": "Gray to white sandy fill material,",
+   "page": 10,
+   "quote": "Gray to white sandy fill material,",
+   "added_at": "2026-10-05T21:58:39+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "description ends with a comma and the next lines of the log are garbled text-layer characters; it may continue"
+   }
+  },
+  {
+   "source_id": "ngmdb:100555",
+   "path": "groundwater[1].aquifer",
+   "problem": "verify_unclear",
+   "value": "upper unit",
+   "page": 63,
+   "quote": "Discharge areas, such as in Cedar Creek Basin, tend to be",
+   "added_at": "2026-10-06T01:45:08+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "page 63 does not name the aquifer for the Cedar Creek Basin discharge areas; 'upper unit' rests on p. 31 (springs discharge the upper unit), not on the cited page"
    }
   }
  ]
