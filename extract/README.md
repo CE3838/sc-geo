@@ -29,6 +29,8 @@ extract/ingest.py   validate, check every quote on its page, normalize,
 | `patterns.py` | Deterministic normalizers used after the model: Munsell, lengths to feet, USCS, SPT N, strike/dip, coordinates (decimal, DMS, SC State Plane NAD83), ages to Ma, unit names to Geolex |
 | `ingest.py` | `python -m extract.ingest result.json [--verify verify.json]` |
 | `next_batch.py` | `python -m extract.next_batch --n 5`: next pending documents, building text and packets on the fly |
+| `reading_list.py` | `python -m extract.reading_list`: ranks online catalog records by South Carolina geologic relevance into `config/reading_list.json`, with scores and exclusion reasons in `config/reading_list_scores.json` |
+| `prep.py` | `python -m extract.prep --todo`: reading-list documents not yet read; `--next N` builds their text and packets ahead of a session |
 | `prompts/` | Instructions for the reading and verifying passes |
 | `SESSION.md` | Steps for a scheduled Claude Code session (used as the Routine prompt) |
 
