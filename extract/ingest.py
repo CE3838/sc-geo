@@ -14,8 +14,10 @@ Steps (see extract/README.md for the confidence formula):
    breaks, ligatures, curly quotes, case and common OCR confusions. A quote
    found only on a neighbouring page, or not at all, is NOT stored; it goes
    to data/review/queue.json.
-3. Normalize values with extract/patterns.py (feet, Munsell, USCS, SPT,
-   strike/dip, coordinates, Ma ranges, Geolex names).
+3. Normalize values with extract/patterns.py (feet, signed elevations,
+   vertical datums, Munsell, USCS, SPT, strike/dip, coordinates, Ma ranges,
+   Geolex names). Locations that model/coords.py can read also get a
+   separate inferred `derived_coordinates` value.
 4. Store each value as a model.provenance.StoredValue (extraction_method
    "llm", source_id = catalog id, page, confidence computed here) plus its
    quote, how the quote matched, and the second-pass verdict.
