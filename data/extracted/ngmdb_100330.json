@@ -1,0 +1,819 @@
+{
+ "source_id": "ngmdb:100330",
+ "title": "Geologic Map of the Santee Point  Quadrangle, Georgetown County, South Carolina",
+ "citation": "Doar, W.R., III, 2012, Geologic Map of the Santee Point  Quadrangle, Georgetown County, South Carolina: South Carolina Geological Survey Open-File Report OFR-189, map scale 1:24,000.",
+ "year": 2012,
+ "scale": 24000,
+ "publisher": "South Carolina Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-10-06T22:58:31+00:00",
+ "updated_at": "2026-10-06T22:58:31+00:00",
+ "reader": "Claude, Claude Code reading session 2026-10-06",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1"
+ ],
+ "blocks_total": 1,
+ "complete": true,
+ "notes": "Single OCR map sheet; map face is noise. Units are grouped by terrace (Holocene, Silver Bluff), not alloformation. Thicknesses OCR'd with '|' as first digit (freshwater marshes '| to 40', spit deposits '| to 15') read as 1 (inferred, sent to review). Symbols QHsm and QPsbs inferred from placement; QHebr appears on the map face but its unit is not identified in the text, so it is not assigned. Other symbols illegible. Bodies of water skipped. No references on the sheet.\nSUBSURFACE: page 1 has cross section A-A' (vertical exaggeration 50; scale 40 to -40 feet with SEA LEVEL marked); unit labels and drill holes along it are garbled in the OCR and could not be read. Terrace margins given as elevations: Holocene below 10 ft at landward margin; Silver Bluff 6-10 ft (page 1). Section uses sea level; no named vertical datum; base map 1927 North American Datum.",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+   "via": "ngmdb_image",
+   "sha256": "348f0bc303cc86a88b5b57a9bc9add3c6a4992a283a47e43553ce10568a23676",
+   "pages": 1,
+   "first_page": 1
+  }
+ ],
+ "summary": {
+  "stored": 48,
+  "quote_match": {
+   "exact": 48
+  },
+  "verification": {
+   "unclear": 2,
+   "agree": 4
+  },
+  "inferred": 7
+ },
+ "ingests": [
+  {
+   "at": "2026-10-06T22:58:31+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, Claude Code reading session 2026-10-06",
+   "values": 48,
+   "stored": 48,
+   "exact": 48,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 4,
+   "disagree": 0,
+   "unclear": 2,
+   "review_items": 2
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "Moved earth",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Moved earth (modern) — Bulk, earthen material moved by humans.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "modern",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Moved earth (modern) — Bulk, earthen material moved by humans.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "up to 10 feet",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Thickness is up to 10 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 10.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Beach sands",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Beach sands (Holocene) — White (N9) to medium-gray (N5), well-sorted, subrounded",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Beach sands (Holocene) — White (N9) to medium-gray (N5), well-sorted, subrounded",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "well-sorted, subrounded to well-rounded, fine to medium quartz sand with lenses of very coarse shell fragments and very angular, very fine heavy mineral sand",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "to well-rounded, fine to medium quartz sand with lenses of very coarse shell fragments",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "exposed above mean low water and up to the storm tide line",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "exposed above mean low water and up to the storm tide line.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "less than 1 foot",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "include any of the subaqueous beach face. Thickness less than 1 foot.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 1.0,
+     "unit": "foot",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QHsm",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "30 feet.\n\nQHsm",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "symbol placed after this description in the OCR text; association inferred from layout"
+   },
+   "name": {
+    "value": "Salt-marsh deposits",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Salt-marsh deposits (Holocene) — Black (N1) sticky, silty clay with scattered lenses of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Salt-marsh deposits (Holocene) — Black (N1) sticky, silty clay with scattered lenses of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Black (N1) sticky, silty clay with scattered lenses of well-sorted, subrounded, very fine-grained quartz sand",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Salt-marsh deposits (Holocene) — Black (N1) sticky, silty clay with scattered lenses of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "intertidal zone in estuaries",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "occurs in the intertidal zone in",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "3 to 30 feet",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Thickness is 3 to\n30 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "min_ft": 3.0,
+     "max_ft": 30.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Undifferentiated deposits in freshwater marshes and swamps",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Undifferentiated deposits in freshwater marshes and swamps (Holocene) — Black",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Undifferentiated deposits in freshwater marshes and swamps (Holocene) — Black",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Black (N1) silty clay and peat",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "(N1) silty clay and peat deposited in stream valleys and areas of locally low elevation.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "depositional_environment": {
+    "value": "deposited in stream valleys and areas of locally low elevation",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "(N1) silty clay and peat deposited in stream valleys and areas of locally low elevation.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "1 to 40 feet",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.479,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "of streams. Thickness | to 40 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "unclear",
+    "note": "OCR text reads 'Thickness | to 40 feet.'; first digit read as 1",
+    "normalized": {
+     "min_ft": 1.0,
+     "max_ft": 40.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Spit deposits",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Spit deposits (Holocene) — White (N9) to medium-gray (N5), moderately well-sorted,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Spit deposits (Holocene) — White (N9) to medium-gray (N5), moderately well-sorted,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "moderately well-sorted, subangular to subrounded, fine to medium-grained quartz sand grading into silty, clayey, quartzose sand",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "subangular to subrounded, fine to medium-grained quartz sand grading into silty, clayey,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "along a shoreline or projecting into a body of water, oriented parallel to the dominant direction of longshore transport",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Deposits occur along a shoreline or project into a body of water and are oriented",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "1 to 15 feet",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.479,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "parallel to the dominant direction of longshore transport. Thickness is | to 15 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "unclear",
+    "note": "OCR text reads 'Thickness is | to 15 feet.'; first digit read as 1",
+    "normalized": {
+     "min_ft": 1.0,
+     "max_ft": 15.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Overwash deposits",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Overwash deposits (Holocene) — White (N9) to medium-gray (N5), poorly sorted,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Overwash deposits (Holocene) — White (N9) to medium-gray (N5), poorly sorted,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "poorly sorted, subrounded to well-rounded, shelly, fine to medium, silty quartz sand",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "subrounded to well-rounded, shelly, fine to medium, silty quartz sand.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "depositional_environment": {
+    "value": "derived from the beach face and ridge moved inland by storm overwash; fan-shaped deposits behind the active beach face or beach ridges; typical of barrier retreat during time of rising sea level",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "barrier retreat during time of rising sea level.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "up to 5 feet",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Thickness up to 5 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 5.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Beach ridge sands",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Beach ridge sands (Holocene) — White (N9) to medium-gray (N5), bimodal,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Beach ridge sands (Holocene) — White (N9) to medium-gray (N5), bimodal,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "bimodal, subrounded, fine and medium quartz sand with very fine heavy mineral sand and sparse, well-rounded, fine phosphorite sand",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "subrounded, fine and medium quartz sand with very fine heavy mineral sand and sparse,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "3 to 20 feet",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Thickness 3 to 20\nfeet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 3.0,
+     "max_ft": 20.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Beach ridge sand",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Beach ridge sand (Holocene or Pleistocene) — Quartz sand, white (N9) to medium-gray",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene or Pleistocene",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Beach ridge sand (Holocene or Pleistocene) — Quartz sand, white (N9) to medium-gray",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Quartz sand, moderately sorted to well sorted, subrounded to well-rounded, fine to coarse grained",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "(N5), moderately sorted to well sorted, subrounded to well-rounded, fine to coarse",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "Composite deposits of former beach-face dune ridges and former ocean-fronting barrier-island deposits",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "grained. Composite deposits of former beach-face dune ridges and former ocean-fronting",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "3 to 25 feet",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "barrier-island deposits. Thickness 3 to 25 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 3.0,
+     "max_ft": 25.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Sediments beneath the Silver Bluff terrace",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Sediments beneath the Silver Bluff terrace\nSediments beneath",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "rank": {
+    "value": "terrace sediments (informal)",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Sediments beneath the Silver Bluff terrace\nSediments beneath",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "contacts": {
+    "value": "generally lie above elevations of 6 feet at their seaward margin where overlapped by Holocene deposits; generally lie below elevations of 10 feet at their landward margin where they overlap, overlie, or abut sediments of the Princess Anne terrace",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Sediments beneath the Silver Bluff terrace generally lie above elevations of 6 feet at their seaward",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QPsbs",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "ridges. Thickness 4 to 50 feet.\n\nQPsbs",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "symbol placed after this description in the OCR text; association inferred from layout"
+   },
+   "name": {
+    "value": "Barrier-island deposits (Silver Bluff terrace)",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Barrier-island deposits (Pleistocene) — Quartz sand, light-gray (N7) to dark-gray (N3),",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "listed under the Silver Bluff terrace heading"
+   },
+   "group": {
+    "value": "Silver Bluff terrace",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Sediments beneath the Silver Bluff terrace generally lie above elevations of 6 feet at their seaward",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Barrier-island deposits (Pleistocene) — Quartz sand, light-gray (N7) to dark-gray (N3),",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Quartz sand, poorly to moderately well sorted, subrounded to well-rounded, fine grained with a minor fraction of fine-grained heavy minerals, phosphorite sand, and shell hash",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "poorly to moderately well sorted, subrounded to well-rounded, fine grained with a minor",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "Deposits form subparallel ridges",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "Deposits form subparallel",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "4 to 50 feet",
+    "source_id": "ngmdb:100330",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100330_1",
+    "quote": "ridges. Thickness 4 to 50 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 4.0,
+     "max_ft": 50.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  }
+ ],
+ "observations": [],
+ "structures": [],
+ "groundwater": [],
+ "references": []
+}
