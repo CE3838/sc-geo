@@ -8,7 +8,7 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-06T01:44:40+00:00",
- "updated_at": "2026-10-06T10:58:45+00:00",
+ "updated_at": "2026-10-06T22:59:54+00:00",
  "reader": "Claude, scheduled Claude Code session 2026-10-06",
  "packets": [
   "packet-01"
@@ -18,7 +18,7 @@
  ],
  "blocks_total": 1,
  "complete": true,
- "notes": "Single OCR map sheet. Unit symbols in the description of map units sit in boxes that the OCR printed beside the descriptions; associations are read from the layout and flagged inferred. Symbols for moved earth ('[me ]'), Duplin Formation fluvial ('[neat]') and Lang Syne Formation ('[ Pats |', 'PPIs') are garbled and were not recorded. Corrected text-layer characters (Qebs for Qcbs, '|' for 1) are flagged inferred with notes. Bodies of water and disturbed ground were not recorded as units. Cross section A-A' and the drill-hole symbols are not readable and were skipped. The map sheet states its products are provided 'as is' without warranty.\nSingle OCR map sheet. Unit symbols in the description of map units sit in boxes that the OCR printed beside the descriptions; associations are read from the layout and flagged inferred. Symbols for moved earth ('[me ]'), Duplin Formation fluvial ('[neat]') and Lang Syne Formation ('[ Pats |', 'PPIs') are garbled and were not recorded. Corrected text-layer characters (Qebs for Qcbs, '|' for 1) are flagged inferred with notes. Bodies of water and disturbed ground were not recorded as units. Cross section A-A' and the drill-hole symbols are not readable and were skipped. The map sheet states its products are provided 'as is' without warranty.",
+ "notes": "Single OCR map sheet. Unit symbols in the description of map units sit in boxes that the OCR printed beside the descriptions; associations are read from the layout and flagged inferred. Symbols for moved earth ('[me ]'), Duplin Formation fluvial ('[neat]') and Lang Syne Formation ('[ Pats |', 'PPIs') are garbled and were not recorded. Corrected text-layer characters (Qebs for Qcbs, '|' for 1) are flagged inferred with notes. Bodies of water and disturbed ground were not recorded as units. Cross section A-A' and the drill-hole symbols are not readable and were skipped. The map sheet states its products are provided 'as is' without warranty.\nSingle OCR map sheet. Unit symbols in the description of map units sit in boxes that the OCR printed beside the descriptions; associations are read from the layout and flagged inferred. Symbols for moved earth ('[me ]'), Duplin Formation fluvial ('[neat]') and Lang Syne Formation ('[ Pats |', 'PPIs') are garbled and were not recorded. Corrected text-layer characters (Qebs for Qcbs, '|' for 1) are flagged inferred with notes. Bodies of water and disturbed ground were not recorded as units. Cross section A-A' and the drill-hole symbols are not readable and were skipped. The map sheet states its products are provided 'as is' without warranty.\nSingle OCR map sheet. Unit symbols in the description of map units sit in boxes that the OCR printed beside the descriptions; associations are read from the layout and flagged inferred. Symbols for moved earth ('[me ]'), Duplin Formation fluvial ('[neat]') and Lang Syne Formation ('[ Pats |', 'PPIs') are garbled and were not recorded. Corrected text-layer characters (Qebs for Qcbs, '|' for 1) are flagged inferred with notes. Bodies of water and disturbed ground were not recorded as units. Cross section A-A' and the drill-hole symbols are not readable and were skipped. The map sheet states its products are provided 'as is' without warranty.",
  "files": [
   {
    "url": "https://ngmdb.usgs.gov/img2/104000_104999/104800_1",
@@ -29,12 +29,12 @@
   }
  ],
  "summary": {
-  "stored": 76,
+  "stored": 75,
   "quote_match": {
-   "exact": 76
+   "exact": 75
   },
   "verification": {
-   "agree": 9,
+   "agree": 8,
    "unclear": 1
   },
   "inferred": 13
@@ -72,6 +72,24 @@
    "quote_not_found": 0,
    "wrong_page": 0,
    "agree": 9,
+   "disagree": 0,
+   "unclear": 1,
+   "review_items": 1
+  },
+  {
+   "at": "2026-10-06T22:59:54+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-06",
+   "values": 75,
+   "stored": 75,
+   "exact": 75,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 8,
    "disagree": 0,
    "unclear": 1,
    "review_items": 1
@@ -1214,23 +1232,6 @@
     "text_method": "ocr",
     "verification": null,
     "note": "text layer reads 'and.2.5'"
-   }
-  },
-  {
-   "kind": "contact",
-   "certainty": {
-    "value": "Identity and existence certain, location approximate",
-    "source_id": "ngmdb:104800",
-    "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.765,
-    "inferred": false,
-    "locator": "https://ngmdb.usgs.gov/img2/104000_104999/104800_1",
-    "quote": "Contact — Identity and existence certain, location approximate.",
-    "quote_match": "exact",
-    "text_method": "ocr",
-    "verification": "agree",
-    "table": true
    }
   }
  ],

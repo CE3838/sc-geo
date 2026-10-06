@@ -8,7 +8,7 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-06T22:58:10+00:00",
- "updated_at": "2026-10-06T22:58:10+00:00",
+ "updated_at": "2026-10-06T22:59:54+00:00",
  "reader": "Claude, scheduled Claude Code session 2026-10-07",
  "packets": [
   "packet-01"
@@ -18,7 +18,7 @@
  ],
  "blocks_total": 1,
  "complete": true,
- "notes": "Single OCR map sheet; the map face is garbled. Deposits under a formation heading are tied to it from the layout and flagged inferred. Legend symbols: Qe and QPwsr are printed after their descriptions (inferred); QPphr ('@Pphr') and QPwr ('aPwr') corrected from the text layer (inferred, noted); '[ aPtme |', 'Phe.', 'piq,' and '.|' are garbled and not recorded. Three thicknesses read '|' for 1 are flagged inferred and marked unclear for a check against the map image. Bodies of standing water not recorded. Portions of Georgia not mapped. The sheet says its products are provided 'as is' without warranty.\nSUBSURFACE: p. 1 gives elevation ranges of each unit's seaward and landward margins (Ten Mile Hill beds 25-35 ft, Ladson 35-57 ft, Penholoway 57-70 ft, Wicomico 70-90 ft) and a Dean Swamp member shoreline 90 ft above modern sea level, stored as unit descriptions. Drill holes are plotted with SCGS log numbers (labels garbled) but no depths; logs on file at SCGS. No cross section or structure-contour map. Datum: horizontal 1927 North American Datum; vertical datum for the elevations not stated ('modern sea level').",
+ "notes": "Single OCR map sheet; the map face is garbled. Deposits under a formation heading are tied to it from the layout and flagged inferred. Legend symbols: Qe and QPwsr are printed after their descriptions (inferred); QPphr ('@Pphr') and QPwr ('aPwr') corrected from the text layer (inferred, noted); '[ aPtme |', 'Phe.', 'piq,' and '.|' are garbled and not recorded. Three thicknesses read '|' for 1 are flagged inferred and marked unclear for a check against the map image. Bodies of standing water not recorded. Portions of Georgia not mapped. The sheet says its products are provided 'as is' without warranty.\nSUBSURFACE: p. 1 gives elevation ranges of each unit's seaward and landward margins (Ten Mile Hill beds 25-35 ft, Ladson 35-57 ft, Penholoway 57-70 ft, Wicomico 70-90 ft) and a Dean Swamp member shoreline 90 ft above modern sea level, stored as unit descriptions. Drill holes are plotted with SCGS log numbers (labels garbled) but no depths; logs on file at SCGS. No cross section or structure-contour map. Datum: horizontal 1927 North American Datum; vertical datum for the elevations not stated ('modern sea level').\nSingle OCR map sheet; the map face is garbled. Deposits under a formation heading are tied to it from the layout and flagged inferred. Legend symbols: Qe and QPwsr are printed after their descriptions (inferred); QPphr ('@Pphr') and QPwr ('aPwr') corrected from the text layer (inferred, noted); '[ aPtme |', 'Phe.', 'piq,' and '.|' are garbled and not recorded. Three thicknesses read '|' for 1 are flagged inferred and marked unclear for a check against the map image. Bodies of standing water not recorded. Portions of Georgia not mapped. The sheet says its products are provided 'as is' without warranty.\nSUBSURFACE: p. 1 gives elevation ranges of each unit's seaward and landward margins (Ten Mile Hill beds 25-35 ft, Ladson 35-57 ft, Penholoway 57-70 ft, Wicomico 70-90 ft) and a Dean Swamp member shoreline 90 ft above modern sea level, stored as unit descriptions. Drill holes are plotted with SCGS log numbers (labels garbled) but no depths; logs on file at SCGS. No cross section or structure-contour map. Datum: horizontal 1927 North American Datum; vertical datum for the elevations not stated ('modern sea level').",
  "files": [
   {
    "url": "https://ngmdb.usgs.gov/img2/99000_99999/99140_1",
@@ -29,13 +29,13 @@
   }
  ],
  "summary": {
-  "stored": 92,
+  "stored": 91,
   "quote_match": {
-   "exact": 92
+   "exact": 91
   },
   "verification": {
-   "unclear": 3,
-   "agree": 10
+   "agree": 9,
+   "unclear": 3
   },
   "inferred": 18
  },
@@ -54,6 +54,24 @@
    "quote_not_found": 0,
    "wrong_page": 0,
    "agree": 10,
+   "disagree": 0,
+   "unclear": 3,
+   "review_items": 3
+  },
+  {
+   "at": "2026-10-06T22:59:54+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-07",
+   "values": 91,
+   "stored": 91,
+   "exact": 91,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 9,
    "disagree": 0,
    "unclear": 3,
    "review_items": 3
@@ -1471,25 +1489,7 @@
   }
  ],
  "observations": [],
- "structures": [
-  {
-   "kind": "contact",
-   "certainty": {
-    "value": "Identity and existence certain, location approximate",
-    "source_id": "ngmdb:99140",
-    "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.765,
-    "inferred": false,
-    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99140_1",
-    "quote": "Contact — Identity and existence certain, location approximate.",
-    "quote_match": "exact",
-    "text_method": "ocr",
-    "verification": "agree",
-    "table": true
-   }
-  }
- ],
+ "structures": [],
  "groundwater": [],
  "references": [
   {
