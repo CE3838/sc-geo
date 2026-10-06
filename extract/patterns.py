@@ -158,9 +158,22 @@ def elevation_ft(text, default_unit: str | None = None) -> dict | None:
         vals = [(-1 if m.group(1) else 1) * _f(m.group(2)) * _unit_factor(m.group(3) or unit) for m in found[:2]]
     except KeyError:
         return None
-    if _BELOW_DATUM.search(s):
+    below = bool(_BELOW_DATUM.search(s))
+    if below:
         vals = [-abs(x) for x in vals]
-    return {"min_ft": min(vals), "max_ft": max(vals), "unit": unit.lower().rstrip("."), "approximate": approx}
+    lo, hi = min(vals), max(vals)
+    if lo == hi:
+        # 'minimum'/'maximum' bound the value itself; 'as much as', 'more than'... bound its size,
+        # so below a datum they bound the other side ('more than 40 ft below sea level' < -40).
+        if re.search(r"(?i)\bminimum\b|\bmin\.", s):
+            hi = None
+        elif re.search(r"(?i)\bmaximum\b|\bmax\.", s):
+            lo = None
+        elif _UPPER.search(s):
+            lo, hi = (lo, None) if below else (None, hi)
+        elif _LOWER.search(s):
+            lo, hi = (None, hi) if below else (lo, None)
+    return {"min_ft": lo, "max_ft": hi, "unit": unit.lower().rstrip("."), "approximate": approx}
 
 
 def vertical_datum(text) -> str | None:

@@ -251,3 +251,20 @@ def test_vertical_datum(text, datum):
 def test_elevation_ft_ignores_numbers_inside_well_labels(text, lo, hi):
     r = p.elevation_ft(text)
     assert (r["min_ft"], r["max_ft"]) == pytest.approx((lo, hi))
+
+
+@pytest.mark.parametrize("text,lo,hi", [
+    ("minimum of –97 ft", -97.0, None),                              # a minimum stays a minimum
+    ("minimum water level of 40 ft below sea level", -40.0, None),
+    ("maximum of -12 ft", None, -12.0),
+    ("max. 3 ft below sea level", None, -3.0),
+    ("more than 40 ft below sea level", None, -40.0),               # deeper than -40
+    ("as much as 120 ft below sea level", -120.0, None),             # down to -120
+    ("as much as 30 ft above sea level", None, 30.0),
+    ("at least 10 ft above sea level", 10.0, None),
+    ("-62 ft", -62.0, -62.0),
+])
+def test_elevation_ft_keeps_bounds_with_the_sign(text, lo, hi):
+    r = p.elevation_ft(text)
+    assert r["min_ft"] == (pytest.approx(lo) if lo is not None else None)
+    assert r["max_ft"] == (pytest.approx(hi) if hi is not None else None)
