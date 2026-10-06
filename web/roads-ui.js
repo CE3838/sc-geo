@@ -13,8 +13,12 @@ import { IMAGERY_BOUNDS, onStyleReady } from './geo.js';
 const EMPTY = { type: 'FeatureCollection', features: [] };
 const PAGE = 2000;
 
-export async function fetchJson(url) {
-  const r = await fetch(url);
+// A live service that never answers must not leave a layer "loading…" forever:
+// the request is given up after this long and the layer shows its "unavailable" note.
+export const FETCH_TIMEOUT_MS = 30000;
+
+export async function fetchJson(url, { timeoutMs = FETCH_TIMEOUT_MS, fetchImpl = fetch } = {}) {
+  const r = await fetchImpl(url, { signal: AbortSignal.timeout(timeoutMs) });
   if (!r.ok) throw new Error(`HTTP ${r.status}`);
   return r.json();
 }
