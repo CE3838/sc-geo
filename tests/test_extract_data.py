@@ -5,6 +5,7 @@ from pathlib import Path
 
 import pytest
 
+from extract.ingest import SECTIONS
 from model.provenance import ExtractionMethod, StoredValue
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -26,7 +27,7 @@ def _values(node):
 @pytest.mark.parametrize("path", FILES, ids=[p.name for p in FILES])
 def test_extracted_values_have_provenance_and_short_quotes(path):
     doc = json.loads(path.read_text())
-    values = list(_values({k: doc[k] for k in ("units", "observations", "structures", "groundwater", "references")}))
+    values = list(_values({k: doc.get(k, []) for k in SECTIONS}))
     # A document that holds nothing to extract (a program summary, a surface-water study) is
     # committed once, complete and with a note saying why, so it is not handed out again.
     if not values:
@@ -37,6 +38,9 @@ def test_extracted_values_have_provenance_and_short_quotes(path):
         assert sv.extraction_method is ExtractionMethod.LLM and sv.page is not None
         assert 0 < len(v["quote"]) <= 400
         assert v["quote_match"] in ("exact", "ocr", "fuzzy")
+        if "derived_coordinates" in v:  # a converted location is an inference, never a reading
+            d = StoredValue.from_dict(v["derived_coordinates"])
+            assert d.inferred and d.extraction_method is ExtractionMethod.INFERENCE and d.page == sv.page
     assert all("path" not in f for f in doc["files"])  # no local paths
 
 
