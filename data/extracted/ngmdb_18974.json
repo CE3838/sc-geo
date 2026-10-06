@@ -1,0 +1,2288 @@
+{
+ "source_id": "ngmdb:18974",
+ "title": "Geology near a hazardous waste landfill at the headwaters of Lake Marion, Sumter County, South Carolina",
+ "citation": "Prowell, D.C., 1990, Geology near a hazardous waste landfill at the headwaters of Lake Marion, Sumter County, South Carolina: U.S. Geological Survey Open-File Report OF-90-236, map scale 1:24,000.",
+ "year": 1990,
+ "scale": 24000,
+ "publisher": "U.S. Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-10-05T21:28:57+00:00",
+ "updated_at": "2026-10-05T21:28:57+00:00",
+ "reader": "Claude, Claude Code reading session 2026-10-05",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1",
+  "2",
+  "3",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10",
+  "11",
+  "12",
+  "13",
+  "14",
+  "15",
+  "16",
+  "17",
+  "18",
+  "19",
+  "20",
+  "21",
+  "22",
+  "23",
+  "24",
+  "25",
+  "26",
+  "27",
+  "28",
+  "29",
+  "30"
+ ],
+ "blocks_total": 29,
+ "complete": true,
+ "notes": "Plates 1-2 (pages 1-2) are OCR of geologic sections and show only unit names and the lithology legend; no depths could be read from them. Page 4 is absent from the packet. Figures 1-4 (pages 27-30) have only labels. Depths for MAN-1A come from the text. Black Creek Group lower/middle/upper units are informal subdivisions of this report; their ages: lower and middle units together 'middle to late Campanian'. The report uses 'Peedee formation' (lowercase) for local beds equivalent to the Peedee Formation. Sawdust Landing age is the author's 'most likely' bracketed age. References: skipped North Carolina and Georgia-only entries (Brett and Wheeler 1961; Buie 1978, 1980; Heron and Wheeler 1964; Sohl and Christopher 1983; Stephenson 1907, 1912, 1923, 1927; Wolfe 1976) and an unpublished permit application. No groundwater values (aquifer properties are left to a later report).",
+ "files": [
+  {
+   "url": "https://pubs.usgs.gov/of/1990/0236/plate-1.pdf",
+   "via": "pubs_usgs",
+   "sha256": "8ce6c906a7e09984dd09741e3184106683df81451cbb78e9de9e5f6d2efca961",
+   "pages": 1,
+   "first_page": 1
+  },
+  {
+   "url": "https://pubs.usgs.gov/of/1990/0236/plate-2.pdf",
+   "via": "pubs_usgs",
+   "sha256": "d3e85ca6d2027514207f55fb7b3ee6e741f9dbec1212abf889a9803fc34774af",
+   "pages": 1,
+   "first_page": 2
+  },
+  {
+   "url": "https://pubs.usgs.gov/of/1990/0236/report.pdf",
+   "via": "pubs_usgs",
+   "sha256": "1c2b010c927ea86faf4945329b91454a385f603186d2fea58c73bbd79c6cfba7",
+   "pages": 28,
+   "first_page": 3
+  }
+ ],
+ "summary": {
+  "stored": 143,
+  "quote_match": {
+   "exact": 143
+  },
+  "verification": {
+   "disagree": 1,
+   "agree": 14
+  },
+  "inferred": 13
+ },
+ "ingests": [
+  {
+   "at": "2026-10-05T21:28:57+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, Claude Code reading session 2026-10-05",
+   "values": 143,
+   "stored": 143,
+   "exact": 143,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 14,
+   "disagree": 1,
+   "unclear": 0,
+   "review_items": 1
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "lower unit of the Black Creek Group",
+    "source_id": "ngmdb:18974",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The lower unit of the Black Creek Group in the MAN-1A core is comprised of thick beds",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "informal subdivision used in this report"
+   },
+   "rank": {
+    "value": "informal unit",
+    "source_id": "ngmdb:18974",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "These units will be described separately for later",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "group": {
+    "value": "Black Creek Group",
+    "source_id": "ngmdb:18974",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The lower unit of the Black Creek Group in the MAN-1A core is comprised of thick beds",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "middle to late Campanian",
+    "source_id": "ngmdb:18974",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "are therefore middle to late Campanian in age",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "stated for the lower and middle units together",
+    "normalized": {
+     "younger_ma": 72.1,
+     "older_ma": 75.93333333333332,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "thick beds of loose sand separated by beds of carbonaceous clay",
+    "source_id": "ngmdb:18974",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "of loose sand separated by beds of carbonaceous clay",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "In the basal part of this unit, the sand is typically fine to very coarse, angular, poorly-sorted quartz",
+    "source_id": "ngmdb:18974",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "In the basal part of this unit, the sand is typically fine to very coarse, angular, poorly-sorted quartz",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "lower delta plain",
+    "source_id": "ngmdb:18974",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "The lower unit in the Black Creek Group of this report is characteristic of a lower delta plain depositional environment",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "contacts": {
+    "value": "upper surface of the unit is highly fractured and contains faint impressions of leached lignitic material",
+    "source_id": "ngmdb:18974",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "upper surface of the unit is highly fractured and contains faint impressions of leached lignitic",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "middle unit of the Black Creek Group",
+    "source_id": "ngmdb:18974",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The middle unit of the Black Creek Group in the MAN-1A core is characterized by",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "rank": {
+    "value": "informal unit",
+    "source_id": "ngmdb:18974",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "These units will be described separately for later",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Black Creek Group",
+    "source_id": "ngmdb:18974",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The middle unit of the Black Creek Group in the MAN-1A core is characterized by",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "middle to late Campanian",
+    "source_id": "ngmdb:18974",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "are therefore middle to late Campanian in age",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "stated for the lower and middle units together",
+    "normalized": {
+     "younger_ma": 72.1,
+     "older_ma": 75.93333333333332,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "laminated carbonaceous clays and fine sand",
+    "source_id": "ngmdb:18974",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "laminated carbonaceous clays and fine sand",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "fossils": {
+    "value": "molds of megafossils, mostly bivalves, common from 428 to 435 ft",
+    "source_id": "ngmdb:18974",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "molds of megafossils, mostly bivalves, common from 428 to 435 ft",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "delta front deposition",
+    "source_id": "ngmdb:18974",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The strata of the middle unit of the Black Creek Group are indicative of delta front deposition",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "upper unit of the Black Creek Group",
+    "source_id": "ngmdb:18974",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The upper unit of the Black Creek Group in the MAN-1A core is a sequence of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "rank": {
+    "value": "informal unit",
+    "source_id": "ngmdb:18974",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "These units will be described separately for later",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Black Creek Group",
+    "source_id": "ngmdb:18974",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The upper unit of the Black Creek Group in the MAN-1A core is a sequence of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "early Maestrichtian",
+    "source_id": "ngmdb:18974",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "are therefore early Maestrichtian in age",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "sequence of shallowing-upward strata from calcareous fossiliferous clay and limestone at the base to clayey sand at the top",
+    "source_id": "ngmdb:18974",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "shallowing-upward strata from calcareous fossiliferous clay and limestone at the base to clayey sand at the top",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "fossils": {
+    "value": "Antibythocypris phaseolites and Haplocytheridea wilmingtonensis",
+    "source_id": "ngmdb:18974",
+    "page": 12,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Antibythocypris phaseolites and Haplocytheridea wilmingtonensis",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "deltaic system prograding from prodelta to shallow delta front",
+    "source_id": "ngmdb:18974",
+    "page": 11,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "deltaic system prograding from prodelta to shallow delta front",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "contacts": {
+    "value": "directly equivalent to the Donoho Creek Formation of Sohl and Owens (in press)",
+    "source_id": "ngmdb:18974",
+    "page": 12,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "equivalent to the Donoho Creek Formation of Sohl and Owens (in press)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "correlation, not a contact"
+   }
+  },
+  {
+   "name": {
+    "value": "Peedee formation",
+    "source_id": "ngmdb:18974",
+    "page": 12,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Peedee formation in the study area is comprised of two lithologic units separated by a",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "Peedee",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:18974",
+    "page": 12,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "The Peedee formation in the study area is comprised of two lithologic units separated by a",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "middle Maestrichtian",
+    "source_id": "ngmdb:18974",
+    "page": 13,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "middle Maestrichtian part of the Exogyra costata Zone of Sohl and Christopher (1983)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "two lithologic units separated by a gradational contact about 10 ft thick",
+    "source_id": "ngmdb:18974",
+    "page": 12,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "two lithologic units separated by a gradational contact about 10 ft thick",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "lithology": {
+    "value": "lower part: dark green to dark gray laminated fine sand/silt and carbonaceous clay; upper part: largely poorly-sorted quartz sand overlain by thick beds of sandy kaolinitic clay",
+    "source_id": "ngmdb:18974",
+    "page": 12,
+    "extraction_method": "llm",
+    "confidence": 0.34,
+    "inferred": false,
+    "locator": null,
+    "quote": "green to dark gray laminated fine sand/silt and carbonaceous clay",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "disagree",
+    "note": "upper part described on page 13"
+   },
+   "contacts": {
+    "value": "The base of the formation (258 ft) is marked by a very thin bed of well-rounded phosphate and quartz pebbles",
+    "source_id": "ngmdb:18974",
+    "page": 13,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The base of the formation (258 ft) is marked by a very thin bed of well-rounded",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "prograding deltaic sequence from open marine delta front strata at the base to restricted marine lower delta plain deposits at the top",
+    "source_id": "ngmdb:18974",
+    "page": 13,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "represents a prograding deltaic sequence from",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "fossils": {
+    "value": "Antibythocypris crassa",
+    "source_id": "ngmdb:18974",
+    "page": 13,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "based on the occurrence of Antibythocypris crassa of Hazel and Brouwers (1982)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Sawdust Landing Member",
+    "source_id": "ngmdb:18974",
+    "page": 14,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Sawdust Landing Member of the Rhems Formation in the MAN-1A core is",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Sawdust Landing",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Member",
+    "source_id": "ngmdb:18974",
+    "page": 14,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Sawdust Landing Member of the Rhems Formation in the MAN-1A core is",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Rhems Formation",
+    "source_id": "ngmdb:18974",
+    "page": 14,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Sawdust Landing Member of the Rhems Formation in the MAN-1A core is",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "Rhems Formation of the Black Mingo Group"
+   },
+   "age": {
+    "value": "early Paleocene (upper Danian)",
+    "source_id": "ngmdb:18974",
+    "page": 15,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the age of the Sawdust Landing strata is most likely early",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "source: 'most likely early Paleocene (upper Danian)', from stratigraphic bracketing",
+    "normalized": {
+     "younger_ma": 62.666666666666664,
+     "older_ma": 66.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "thick massive to weakly crossbedded beds of very clayey sand",
+    "source_id": "ngmdb:18974",
+    "page": 14,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "characterized by thick massive to weakly crossbedded beds of very clayey sand",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "contacts": {
+    "value": "unconformable contact with the underlying Peedee formation",
+    "source_id": "ngmdb:18974",
+    "page": 14,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "unconformable contact with the underlying Peedee formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "upper delta plain environment",
+    "source_id": "ngmdb:18974",
+    "page": 15,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "in an upper delta plain environment",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "fossils": {
+    "value": "No fossils have been recovered from the Sawdust Landing strata in the study area or the type sections along the Congaree River",
+    "source_id": "ngmdb:18974",
+    "page": 15,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "No fossils have been recovered from the Sawdust Landing strata in the study area or the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Lang Syne Member",
+    "source_id": "ngmdb:18974",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Lang Syne Member of the Williamsburg Formation in the study area is largely a",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Lang Syne",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Member",
+    "source_id": "ngmdb:18974",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Lang Syne Member of the Williamsburg Formation in the study area is largely a",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Williamsburg Formation",
+    "source_id": "ngmdb:18974",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Lang Syne Member of the Williamsburg Formation in the study area is largely a",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "Williamsburg Formation of the Black Mingo Group"
+   },
+   "age": {
+    "value": "very latest Midwayan (middle Selandian/Thanetian) part of the upper Paleocene",
+    "source_id": "ngmdb:18974",
+    "page": 18,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Midwayan (middle Selandian/Thanetian) part of the upper Paleocene",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 56.0,
+     "older_ma": 59.333333333333336,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "medium to dark gray, low density, carbonaceous claystone to siltstone",
+    "source_id": "ngmdb:18974",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "medium to dark gray, low density, carbonaceous claystone to siltstone",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "description": {
+    "value": "Most of the formation has apparently experienced a weak secondary silicification; this lithofacies is commonly called \"opaline claystone\"",
+    "source_id": "ngmdb:18974",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "This lithofacies is commonly called \"opaline claystone\"",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "over 120 ft",
+    "source_id": "ngmdb:18974",
+    "page": 17,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "the considerable thickness (over 120 ft)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "min_ft": 120.0,
+     "max_ft": null,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "contacts": {
+    "value": "unconformable contact with the underlying Sawdust Landing strata",
+    "source_id": "ngmdb:18974",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "unconformable contact with the underlying Sawdust Landing strata",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "back-barrier bays and restricted lagoons in a marginal marine environment",
+    "source_id": "ngmdb:18974",
+    "page": 17,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "back-barrier bays and restricted lagoons in a marginal",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "fossils": {
+    "value": "shell molds and shell fragments of bivalves, gastropods, and bryozoans, and remnants of leaves",
+    "source_id": "ngmdb:18974",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "shell molds and shell fragments of bivalves,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "upland fluvial deposits",
+    "source_id": "ngmdb:18974",
+    "page": 18,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The term \"Upland fluvial deposits\" is an informal designation used in this report for",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "rank": {
+    "value": "informal designation",
+    "source_id": "ngmdb:18974",
+    "page": 18,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "is an informal designation used in this report",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Pliocene or younger",
+    "source_id": "ngmdb:18974",
+    "page": 19,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "deposits are Pliocene or younger in age",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 2.58,
+     "older_ma": 5.333,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "crossbedded clayey sand and gravel beds that cap the hilltops in the study area",
+    "source_id": "ngmdb:18974",
+    "page": 18,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "crossbedded clayey sand and gravel beds that cap the hilltops in the study area",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "lithology": {
+    "value": "largely clayey sand",
+    "source_id": "ngmdb:18974",
+    "page": 19,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "largely clayey sand with a thick (1-2 ft) bed of very coarse, rounded quartz gravel marking the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "contacts": {
+    "value": "a thick (1-2 ft) bed of very coarse, rounded quartz gravel marking the basal unconformable contact with the Williamsburg Formation",
+    "source_id": "ngmdb:18974",
+    "page": 19,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "basal unconformable contact with the Williamsburg Formation",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "deposited in a large fluvial system",
+    "source_id": "ngmdb:18974",
+    "page": 19,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "deposited in a large fluvial system",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "fossils": {
+    "value": "No fossils have ever been found in the upland fluvial deposits",
+    "source_id": "ngmdb:18974",
+    "page": 19,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "No fossils have ever been found in the upland fluvial deposits",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Santee alluvium",
+    "source_id": "ngmdb:18974",
+    "page": 20,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "They are hereafter referred to as \"Santee alluvium\"",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "rank": {
+    "value": "informal unit",
+    "source_id": "ngmdb:18974",
+    "page": 20,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "They are hereafter referred to as \"Santee alluvium\"",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "late Quaternary",
+    "source_id": "ngmdb:18974",
+    "page": 20,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the best\nestimate of age for this deposit is late Quaternary",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.86,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "as much as 38 feet",
+    "source_id": "ngmdb:18974",
+    "page": 20,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "encountered as much as 38 feet of fluvial strata",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 38.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "lithology": {
+    "value": "largely thick beds of clayey sand overlain by sandy clay at the top",
+    "source_id": "ngmdb:18974",
+    "page": 20,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Santee alluvium is largely thick beds of clayey sand overlain by sandy clay at the top",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "contacts": {
+    "value": "The base of the unit is marked by a thick bed (1-3 ft) of very coarse quartz gravels and cobbles",
+    "source_id": "ngmdb:18974",
+    "page": 20,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The base of the unit is marked by a thick bed (1-3 ft) of very coarse quartz gravels and cobbles",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "fluvial environment such as the present Santee River flood plain",
+    "source_id": "ngmdb:18974",
+    "page": 20,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "fluvial environment such as the present Santee River flood",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "fossils": {
+    "value": "No fossils were recovered from the Santee alluvium",
+    "source_id": "ngmdb:18974",
+    "page": 20,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "No fossils were recovered from the Santee alluvium",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ],
+ "observations": [
+  {
+   "kind": "core",
+   "label": {
+    "value": "MAN-1A",
+    "source_id": "ngmdb:18974",
+    "page": 9,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "A deep core hole (MAN-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "at a topographic high within the Manchester State Forest immediately north of the hazardous waste landfill",
+    "source_id": "ngmdb:18974",
+    "page": 9,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "at a topographic high within the Manchester State Forest immediately north of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "total_depth": {
+    "value": "725 ft",
+    "source_id": "ngmdb:18974",
+    "page": 9,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "to the bottom of the core at 725 ft",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 725.0,
+     "max_ft": 725.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "258 ft",
+      "source_id": "ngmdb:18974",
+      "page": 10,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "upper unit, 258 to 389 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "table": false,
+      "normalized": {
+       "min_ft": 258.0,
+       "max_ft": 258.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "389 ft",
+      "source_id": "ngmdb:18974",
+      "page": 10,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "upper unit, 258 to 389 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 389.0,
+       "max_ft": 389.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "upper unit, Black Creek Group",
+      "source_id": "ngmdb:18974",
+      "page": 10,
+      "extraction_method": "llm",
+      "confidence": 0.578,
+      "inferred": true,
+      "locator": null,
+      "quote": "upper unit, 258 to 389 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Black Creek",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "389 ft",
+      "source_id": "ngmdb:18974",
+      "page": 10,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "middle unit, 389 to 542 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 389.0,
+       "max_ft": 389.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "542 ft",
+      "source_id": "ngmdb:18974",
+      "page": 10,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "middle unit, 389 to 542 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 542.0,
+       "max_ft": 542.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "middle unit, Black Creek Group",
+      "source_id": "ngmdb:18974",
+      "page": 10,
+      "extraction_method": "llm",
+      "confidence": 0.578,
+      "inferred": true,
+      "locator": null,
+      "quote": "middle unit, 389 to 542 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Black Creek",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "top": {
+      "value": "542 ft",
+      "source_id": "ngmdb:18974",
+      "page": 10,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "unit, 542 to 725 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "normalized": {
+       "min_ft": 542.0,
+       "max_ft": 542.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "725 ft",
+      "source_id": "ngmdb:18974",
+      "page": 10,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "unit, 542 to 725 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 725.0,
+       "max_ft": 725.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "lower unit, Black Creek Group",
+      "source_id": "ngmdb:18974",
+      "page": 10,
+      "extraction_method": "llm",
+      "confidence": 0.578,
+      "inferred": true,
+      "locator": null,
+      "quote": "unit, 542 to 725 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Black Creek",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
+  },
+  {
+   "kind": "core",
+   "label": {
+    "value": "RAILWAY-1A",
+    "source_id": "ngmdb:18974",
+    "page": 21,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "At the RAILWAY-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Lang Syne Member",
+      "source_id": "ngmdb:18974",
+      "page": 22,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "has resulted in at least 124 ft of Lang Syne deposition",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Lang Syne",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "at least 124 ft of Lang Syne deposition",
+      "source_id": "ngmdb:18974",
+      "page": 22,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "has resulted in at least 124 ft of Lang Syne deposition",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    },
+    {
+     "unit": {
+      "value": "Sawdust Landing Member",
+      "source_id": "ngmdb:18974",
+      "page": 21,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "the Sawdust Landing beds have been thinned to only 7 ft by erosion",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Sawdust Landing",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "Sawdust Landing beds thinned to only 7 ft by erosion prior to deposition of the overlying Lang Syne beds",
+      "source_id": "ngmdb:18974",
+      "page": 21,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "the Sawdust Landing beds have been thinned to only 7 ft by erosion",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    }
+   ]
+  },
+  {
+   "kind": "core",
+   "label": {
+    "value": "LM-2A",
+    "source_id": "ngmdb:18974",
+    "page": 22,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Only 2 ft of basal clayey sand remain in the core at LM-2A",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Lang Syne Member",
+      "source_id": "ngmdb:18974",
+      "page": 22,
+      "extraction_method": "llm",
+      "confidence": 0.578,
+      "inferred": true,
+      "locator": null,
+      "quote": "Only 2 ft of basal clayey sand remain in the core at LM-2A",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "note": "paragraph is about the Lang Syne Member",
+      "normalized": {
+       "canonical": "Lang Syne",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "Only 2 ft of basal clayey sand remain",
+      "source_id": "ngmdb:18974",
+      "page": 22,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Only 2 ft of basal clayey sand remain in the core at LM-2A",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    }
+   ]
+  },
+  {
+   "kind": "core",
+   "label": {
+    "value": "RIM-1A",
+    "source_id": "ngmdb:18974",
+    "page": 12,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "samples from the RIM-1A core (Figs 2 and 5) at depths of 300 ft and 305 ft",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "uppermost unit of the Black Creek Group",
+      "source_id": "ngmdb:18974",
+      "page": 12,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "substantiate that the uppermost unit of the",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "uppermost",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "ostracode samples at depths of 300 ft and 305 ft; early Maestrichtian",
+      "source_id": "ngmdb:18974",
+      "page": 12,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "samples from the RIM-1A core (Figs 2 and 5) at depths of 300 ft and 305 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    },
+    {
+     "unit": {
+      "value": "lower Peedee strata",
+      "source_id": "ngmdb:18974",
+      "page": 13,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Ostracode assemblages from 219 ft in the RIM-1A core and 225 ft in the MAN-1A core verify",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     },
+     "description": {
+      "value": "ostracode assemblage from 219 ft; Maestrichtian",
+      "source_id": "ngmdb:18974",
+      "page": 13,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Ostracode assemblages from 219 ft in the RIM-1A core and 225 ft in the MAN-1A core verify",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    }
+   ]
+  },
+  {
+   "kind": "core",
+   "label": {
+    "value": "MW-32",
+    "source_id": "ngmdb:18974",
+    "page": 18,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The sample from the MW-32 core at 79 ft",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Lang Syne",
+      "source_id": "ngmdb:18974",
+      "page": 18,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "is from the lowermost Lang Syne strata in the study area",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     },
+     "description": {
+      "value": "sample at 79 ft is from the lowermost Lang Syne strata in the study area (\"basal clay\")",
+      "source_id": "ngmdb:18974",
+      "page": 18,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "The sample from the MW-32 core at 79 ft",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree"
+     }
+    }
+   ]
+  },
+  {
+   "kind": "core",
+   "label": {
+    "value": "UBC-9",
+    "source_id": "ngmdb:18974",
+    "page": 18,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the sample from the UBC-9 core at 27 ft is from the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Lang Syne",
+      "source_id": "ngmdb:18974",
+      "page": 18,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "middle of the Lang Syne section",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     },
+     "description": {
+      "value": "sample at 27 ft is from the middle of the Lang Syne section (\"claystone\")",
+      "source_id": "ngmdb:18974",
+      "page": 18,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "the sample from the UBC-9 core at 27 ft is from the",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "town well at St. Matthews",
+    "source_id": "ngmdb:18974",
+    "page": 15,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "carbonaceous clay cuttings (depth 175-185 ft; +100 ft MSL) from the town well at St.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "St. Matthews, Calhoun Co., S.C., about 15 miles east of the study area",
+    "source_id": "ngmdb:18974",
+    "page": 16,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Matthews, Calhoun Co., S.C. (see Colquhoun and others, 1983), about 15 miles east of the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "175 ft",
+      "source_id": "ngmdb:18974",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "depth 175-185 ft; +100 ft MSL",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 175.0,
+       "max_ft": 175.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "185 ft",
+      "source_id": "ngmdb:18974",
+      "page": 15,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "depth 175-185 ft; +100 ft MSL",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "min_ft": 185.0,
+       "max_ft": 185.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "carbonaceous clay cuttings with early Paleocene dinoflagellates",
+      "source_id": "ngmdb:18974",
+      "page": 16,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "in which early Paleocene dinoflagellates were reported by L.E. Edwards",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    }
+   ]
+  },
+  {
+   "kind": "outcrop",
+   "label": {
+    "value": "Old Sawdust Pile Landing (now Trezevant Landing)",
+    "source_id": "ngmdb:18974",
+    "page": 14,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Syne beds at Old Sawdust Pile Landing (now Trezevant Landing) on the Congaree River about",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "on the Congaree River about 6.5 mi upstream from the landfill site",
+    "source_id": "ngmdb:18974",
+    "page": 14,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "on the Congaree River about\n6.5 mi upstream",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "type section of the Sawdust Landing Member"
+   }
+  },
+  {
+   "kind": "outcrop",
+   "label": {
+    "value": "Devil's Elbow",
+    "source_id": "ngmdb:18974",
+    "page": 17,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "on the bluff at Devil's Elbow on",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "location": {
+    "value": "on the bluff at Devil's Elbow on the west bank of the Congaree River just upriver from Old Sawdust Pile Landing",
+    "source_id": "ngmdb:18974",
+    "page": 17,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the west bank of the Congaree River just upriver from Old Sawdust Pile Landing",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "kind": "outcrop",
+   "label": {
+    "value": "roadcut on the road to Sparkleberry Landing",
+    "source_id": "ngmdb:18974",
+    "page": 19,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "large roadcut on the road to Sparkleberry",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "about 0.25 mi south of the MAN-drill site",
+    "source_id": "ngmdb:18974",
+    "page": 19,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "about 0.25 mi south of the MAN-drill site",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "upland fluvial deposits",
+      "source_id": "ngmdb:18974",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.578,
+      "inferred": true,
+      "locator": null,
+      "quote": "the unit is well exposed in a large roadcut on the road to Sparkleberry",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     },
+     "description": {
+      "value": "large scale crossbedding within the different sand layers",
+      "source_id": "ngmdb:18974",
+      "page": 19,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "shows large\nscale crossbedding within the different sand layers",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    }
+   ]
+  }
+ ],
+ "structures": [
+  {
+   "kind": "joint",
+   "description": {
+    "value": "steeply-inclined, commonly slickensided, planar joints and(or) fractures characterize the Lang Syne claystone/siltstone",
+    "source_id": "ngmdb:18974",
+    "page": 17,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "steeply-inclined, commonly slickensided, planar joints",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Lang Syne claystone/siltstone, in outcrop and cores",
+    "source_id": "ngmdb:18974",
+    "page": 17,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Both in outcrop and cores, steeply-inclined",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "kind": "fault",
+   "description": {
+    "value": "small scale slump faults (probably from compaction) in the cored interval from 565 to 627 ft",
+    "source_id": "ngmdb:18974",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "small scale slump faults (probably from compaction) were observed in the cored interval from",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "MAN-1A core, lower unit of the Black Creek Group, 565 to 627 ft",
+    "source_id": "ngmdb:18974",
+    "page": 10,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "565 to 627 ft",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  }
+ ],
+ "groundwater": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Colquhoun, D. J., Wollen, I. D., Van Nieuwenhuise, D. S., Padgett, G. G., Oldham, R. W., Boylan, D. C., Bishop, J. W., Howell, P. D., 1983, Surface and subsurface stratigraphy, structure and aquifers of the South Carolina Coastal Plain: Columbia, South Carolina, Department of Geology, University of South Carolina, Report to the Department of Health and Environmental Control, Ground-water Protection Division, published through the Office of the Governor, State of South Carolina, 79 p.",
+    "source_id": "ngmdb:18974",
+    "page": 24,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Colquhoun, D. J., Wollen, I. D., Van Nieuwenhuise, D. S., Padgett, G. G., Oldham, R. W.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Cooke, C.W., 1936, Geology of the Coastal Plain of South Carolina: U.S. Geological Survey Bulletin 867, 196 p.",
+    "source_id": "ngmdb:18974",
+    "page": 24,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cooke, C.W., 1936, Geology of the Coastal Plain of South Carolina",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Cooke, C.W. and MacNeil, F.S., 1952, Tertiary stratigraphy of South Carolina: U.S. Geological Survey Professional Paper 243-B, p. 19-29.",
+    "source_id": "ngmdb:18974",
+    "page": 24,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cooke, C.W. and MacNeil, F.S., 1952, Tertiary stratigraphy of South Carolina",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Dennehy, K.F., Prowell, D.C., and McMahon, P.B., 1988, Geohydrology of the Defense Waste Processing Facility and vicinity, Savannah River Plant, South Carolina: U.S. Geological Survey Water Resources Investigation, WRD 88-4221, 74 p.",
+    "source_id": "ngmdb:18974",
+    "page": 24,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Dennehy, K.F., Prowell, D.C., and McMahon, P.B., 1988, Geohydrology of the Defense Waste",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Gohn, G. S., 1987, Late Mesozoic and early Cenozoic geology of the Atlantic Coastal Plain: North Carolina to Florida, in Sheridan, R. E. and Grow, J. A., eds., The geology of North America: Geological Society of America, v. 1-2, Chapter 7, p. 107-130.",
+    "source_id": "ngmdb:18974",
+    "page": 24,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gohn, G. S., 1987, Late Mesozoic and early Cenozoic geology of the Atlantic Coastal Plain",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Hazel, J. E., Bybell, L. M., Christopher, R. A., Frederiksen, N. O., May, F.E., McLean, D. M., Poore, R. Z., Smith, C. C., Sohl, N. F., Valentine, P. C., and Witmer, R. J., 1977, Biostratigraphy of the deep core-hole (Clubhouse Crossroads corehole 1) near Charleston, South Carolina, in Rankin, D. W., ed., Studies related to the Charleston, South Carolina earthquake of 1886-a preliminary report: U.S. Geological Survey Professional Paper 1028, p. 71-89.",
+    "source_id": "ngmdb:18974",
+    "page": 24,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Biostratigraphy of the deep core-hole (Clubhouse Crossroads corehole 1) near",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Heron, S. D., Jr., 1969, Mineralogy of Black Mingo mudrocks: S. C. State Development Board, Division of Geology, Geologic Notes, v. 13, no. 1, p. 27-41.",
+    "source_id": "ngmdb:18974",
+    "page": 24,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Heron, S. D., Jr., 1969, Mineralogy of Black Mingo mudrocks",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Heron, S. D., Jr., Robinson, G. C., and Johnson, H. S., Jr., 1965, Clays and opal-bearing claystones of the South Carolina Coastal Plain: State Development Board, Division of Geology Bulletin 31, 66 p.",
+    "source_id": "ngmdb:18974",
+    "page": 24,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Heron, S. D., Jr., Robinson, G. C., and Johnson, H. S., Jr., 1965, Clays and opal-bearing",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Kite, L.E., 1982, Tertiary stratigraphy of the Oakwood quadrangle, Aiken County, South Carolina, in P.O. Nystrom, Jr., and R.H. Willoughby (eds.), Geological Investigations related to the stratigraphy in the kaolin mining district, Aiken County, South Carolina: South Carolina Geological Survey, Carolina Geological Society Field Trip Guidebook 1982, 183 p.",
+    "source_id": "ngmdb:18974",
+    "page": 25,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Kite, L.E., 1982, Tertiary stratigraphy of the Oakwood quadrangle, Aiken County, South",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Lawrence, D. R. and Hall, J. P., 1987, The Upper Cretaceous-Black Creek Formational contact at Burches Ferry, Florence County, South Carolina: South Carolina Geology, v. 31, no. 2, p. 59-66.",
+    "source_id": "ngmdb:18974",
+    "page": 25,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Lawrence, D. R. and Hall, J. P., 1987, The Upper Cretaceous-Black Creek Formational contact",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "McCartan, Lucy, Lemon, E.M., Jr., and Weems, R.E., 1984, Geologic map of the area between Charleston and Orangeburg, South Carolina: U.S. Geological Survey Miscellaneous Investigations Series Map I-1472, (1:250,000).",
+    "source_id": "ngmdb:18974",
+    "page": 25,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "McCartan, Lucy, Lemon, E.M., Jr., and Weems, R.E., 1984, Geologic map of the area between",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Muthig, M. G. and Colquhoun, D. J., 1988, Formal recognition of two members within the Rhems Formation in Calhoun County, South Carolina: South Carolina Geology, v. 32, nos. 1&2, p. 11-19.",
+    "source_id": "ngmdb:18974",
+    "page": 25,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Muthig, M. G. and Colquhoun, D. J., 1988, Formal recognition of two members within the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Nystrom, P.G., Jr., and Willoughby, R.H., 1982, Geological Investigations related to the stratigraphy in the kaolin mining district, Aiken County, South Carolina: South Carolina Geological Survey, Carolina Geological Society Field Trip Guidebook 1982, 183 p.",
+    "source_id": "ngmdb:18974",
+    "page": 25,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Nystrom, P.G., Jr., and Willoughby, R.H., 1982, Geological Investigations related to the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Nystrom, P.G., Willoughby, R.H., and Kite, L.E., 1986, Cretaceous-Tertiary stratigraphy of the upper edge of the Coastal Plain between North Augusta and Lexington, South Carolina: South Carolina Geological Survey, Carolina Geological Society Field Trip Guidebook 1986, 82 p.",
+    "source_id": "ngmdb:18974",
+    "page": 25,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Nystrom, P.G., Willoughby, R.H., and Kite, L.E., 1986, Cretaceous-Tertiary stratigraphy of the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Owens, J. P., 1988, Geology of the Cape Fear Arch area (Florence and one-half Georgetown 2-degree sheets), U.S. Geological Survey Map Series, MI-1948a.",
+    "source_id": "ngmdb:18974",
+    "page": 25,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Owens, J. P., 1988, Geology of the Cape Fear Arch area",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Owens, J. P. and Gohn, G. S., 1985, Depositional history of the Cretaceous Series in the U.S. Atlantic Coastal Plain: Stratigraphy, paleoenvironments, and tectonic controls of sedimentation, in Poag, C. W., ed, Geologic evolution of the United States Atlantic margin: New York, Van Nostrand Reinhold, p. 25-86.",
+    "source_id": "ngmdb:18974",
+    "page": 25,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Owens, J. P. and Gohn, G. S., 1985, Depositional history of the Cretaceous Series in the U.S.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Padgett, G. G., 1980, Lithostratigraphy of the Black Mingo Formation in Sumter, Calhoun, and Richland Counties, South Carolina: Columbia, South Carolina, University of South Carolina, Master of Science Thesis, 68 p.",
+    "source_id": "ngmdb:18974",
+    "page": 25,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Padgett, G. G., 1980, Lithostratigraphy of the Black Mingo Formation in Sumter, Calhoun, and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Pooser, W. K., 1965, Biostratigraphy of Cenozoic ostracoda from South Carolina: University of Kansas Paleontological Contributions, no. 38, Arthropoda, Art. 8, 80 p.",
+    "source_id": "ngmdb:18974",
+    "page": 25,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Pooser, W. K., 1965, Biostratigraphy of Cenozoic ostracoda from South Carolina",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Prowell, D.C., Christopher, R.A., Edwards, L.E., Bybell, L.M., and Gill, H.E., 1985a, Geologic section of the updip Coastal Plain from central Georgia to western South Carolina: U.S. Geological Survey Map MF-1737.",
+    "source_id": "ngmdb:18974",
+    "page": 25,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Prowell, D.C., Christopher, R.A., Edwards, L.E., Bybell, L.M., and Gill, H.E., 1985a, Geologic",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Prowell, D.C., Edwards, L.E., and Frederiksen, N.O., 1985b, The Ellenton Formation in South Carolina - A revised age designation from Cretaceous to Paleocene: U.S. Geological Survey Bulletin 1605-A, p. A63-A69.",
+    "source_id": "ngmdb:18974",
+    "page": 25,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Prowell, D.C., Edwards, L.E., and Frederiksen, N.O., 1985b, The Ellenton Formation in South",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Siple, 1967, Geology and ground water of the Savannah River Plant and vicinity, South Carolina: U.S. Geological Survey Water-Supply Paper 1841, 113 p.",
+    "source_id": "ngmdb:18974",
+    "page": 25,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Siple, 1967, Geology and ground water of the Savannah River Plant and vicinity, South",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Sloan, Earle, 1907, A summary of the mineral resources of South Carolina: South Carolina Department of Agriculture, Commerce and Immigration, Columbia, South Carolina, p. 77-145.",
+    "source_id": "ngmdb:18974",
+    "page": 26,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Sloan, Earle, 1907, A summary of the mineral resources of South Carolina",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Sohl, N. F. and Owens, J. P., 1989, Cretaceous stratigraphy of the Coastal Plain, in Horton, W. and Zullo, V., eds., Geology of the Carolinas: Geological Society of the Carolinas, 50th Anniversary Volume, in press.",
+    "source_id": "ngmdb:18974",
+    "page": 26,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Sohl, N. F. and Owens, J. P., 1989, Cretaceous stratigraphy of the Coastal Plain",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Swift, D. J. P., 1969, The Black Creek-Peedee boundary in South Carolina; A discussion: South Carolina Division of Geology, Geologic Notes, v. 13, no. 3, p. 83-84.",
+    "source_id": "ngmdb:18974",
+    "page": 26,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Swift, D. J. P., 1969, The Black Creek-Peedee boundary in South Carolina",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Van Nieuwenhuise, D.S., 1978, Ostracode biostratigraphy and stratigraphy of the Black Mingo Formation, South Carolina Coastal Plain: Ph.D Dissertation, University of South Carolina, Columbia, South Carolina, 92 p.",
+    "source_id": "ngmdb:18974",
+    "page": 26,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Van Nieuwenhuise, D.S., 1978, Ostracode biostratigraphy and stratigraphy of the Black Mingo",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Van Nieuwenhuise, D.S., and Colquhoun, D.J., 1982, The Paleocene-lower Eocene Black Mingo Group of the east central Coastal Plain of South Carolina: South Carolina Geology, v. 26, no. 2, p. 47-67.",
+    "source_id": "ngmdb:18974",
+    "page": 26,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Van Nieuwenhuise, D.S., and Colquhoun, D.J., 1982, The Paleocene-lower Eocene Black",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Weaver, F. M. and Wise, S. W., Jr., 1974, Opaline sediments of the Southeastern Coastal Plain and Horizon A: Biogenic Origin: Science, v. 184, p. 899-901.",
+    "source_id": "ngmdb:18974",
+    "page": 26,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Weaver, F. M. and Wise, S. W., Jr., 1974, Opaline sediments of the Southeastern Coastal Plain",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Wollen, I. D., 1978, Structural framework, lithostratigraphy, and depositional environments of Upper Cretaceous sediments of eastern South Carolina: PhD. Dissertation, University of South Carolina, Columbia, South Carolina, 276 p.",
+    "source_id": "ngmdb:18974",
+    "page": 26,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Wollen, I. D., 1978, Structural framework, lithostratigraphy, and depositional environments of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Wollen, I. D. and Colquhoun, D. J., 1977, The Black Creek and Middendorf Formations in Darlington and Chesterfield Counties, South Carolina, Geologic Notes, v. 21, no. 4, p. 164-197.",
+    "source_id": "ngmdb:18974",
+    "page": 26,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Wollen, I. D. and Colquhoun, D. J., 1977, The Black Creek and Middendorf Formations in",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Sloan, Earle, 1908, Catalogue of mineral localities of South Carolina: South Carolina Geological Survey, ser. 4, Bulletin 2, p. 449-453.",
+    "source_id": "ngmdb:18974",
+    "page": 26,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "1908, Catalogue of mineral localities of South Carolina: South Carolina Geological",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "author shown as a dash (same as previous entry, Sloan)"
+   }
+  }
+ ]
+}

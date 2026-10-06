@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 11,
+ "count": 18,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -142,6 +142,100 @@
    "verify": {
     "verdict": "unclear",
     "note": "printed 27 percent, out of trend with 3.7, 2.0, .9 above; decimal point possibly lost"
+   }
+  },
+  {
+   "source_id": "ngmdb:18974",
+   "path": "units[3].lithology",
+   "problem": "verify_disagree",
+   "value": "lower part: dark green to dark gray laminated fine sand/silt and carbonaceous clay; upper part: largely poorly-sorted quartz sand overlain by thick beds of sandy kaolinitic clay",
+   "page": 12,
+   "quote": "green to dark gray laminated fine sand/silt and carbonaceous clay",
+   "added_at": "2026-10-05T21:28:57+00:00",
+   "verify": {
+    "verdict": "disagree",
+    "value": "dark green to dark gray laminated fine sand/silt and carbonaceous clay (lower part)",
+    "note": "page 12 supports only the lower part; the upper part's sand and kaolinitic clay is described on page 13"
+   }
+  },
+  {
+   "source_id": "ngmdb:48826",
+   "path": "units[7].rank",
+   "problem": "verify_disagree",
+   "value": "Limestone",
+   "page": 14,
+   "quote": "The Santee Limestone consists of moderately",
+   "added_at": "2026-10-06T01:44:02+00:00",
+   "verify": {
+    "verdict": "disagree",
+    "value": "Formation",
+    "note": "p.13: Cooke (1936) coined the term Santee Limestone with formational status; the rank is formation, not 'Limestone'"
+   }
+  },
+  {
+   "source_id": "ngmdb:48826",
+   "path": "references[34].citation",
+   "problem": "verify_unclear",
+   "value": "Nystrom, P.G., Jr., Willoughby, R.H., and Price, L.K., 1989, The Cretaceous and Tertiary stratigraphy of the upper Coastal Plain of South Carolina, in Upper Cretaceous and Cenozoic geology of the southeastern Atlantic Coastal Plain: International Geological Congress, 28th, Field Trip Guidebook T172, p. 23-42.",
+   "page": 28,
+   "quote": "The Cretaceous and Tertiary stratigraphy of the upper",
+   "added_at": "2026-10-06T01:44:02+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "year printed as '198k' in the text layer (OCR); 1989 is likely from the text citations but not legible in the entry"
+   }
+  },
+  {
+   "source_id": "ngmdb:47117",
+   "path": "groundwater[11].description",
+   "problem": "verify_disagree",
+   "value": "field bulk density 96 to 120 lb per ft3 and porosity 26 to 46 percent (D'Appolonia, 1981, 1982); laboratory salt-solution column tests reduced permeability to about 4 to 10 percent of baseline",
+   "page": 64,
+   "quote": "bulk density ranged from 96 to 120 Ib.",
+   "added_at": "2026-10-06T01:43:08+00:00",
+   "verify": {
+    "verdict": "disagree",
+    "value": "field bulk density 96 to 120 lb per ft3 and porosity 26 to 46 percent (D'Appolonia, 1981, 1982)",
+    "note": "page 64 gives the field bulk density and porosity; the 4 to 10 percent permeability result is on page 66, not page 64"
+   }
+  },
+  {
+   "source_id": "ngmdb:48337",
+   "path": "observations[1].intervals[1].description",
+   "problem": "verify_unclear",
+   "value": "Gray to white sandy fill material,",
+   "page": 10,
+   "quote": "Gray to white sandy fill material,",
+   "added_at": "2026-10-05T21:58:39+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "description ends with a comma and the next lines of the log are garbled text-layer characters; it may continue"
+   }
+  },
+  {
+   "source_id": "ngmdb:100555",
+   "path": "groundwater[1].aquifer",
+   "problem": "verify_unclear",
+   "value": "upper unit",
+   "page": 63,
+   "quote": "Discharge areas, such as in Cedar Creek Basin, tend to be",
+   "added_at": "2026-10-06T01:45:08+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "page 63 does not name the aquifer for the Cedar Creek Basin discharge areas; 'upper unit' rests on p. 31 (springs discharge the upper unit), not on the cited page"
+   }
+  },
+  {
+   "source_id": "ngmdb:104799",
+   "path": "units[15].name",
+   "problem": "verify_unclear",
+   "value": "Estuarine deposits (Ten Mile Hill alloformation)",
+   "page": 1,
+   "quote": "Estuarine deposits — Clay to quartz sand, yellowish-orange (10YR 6/6-7/6), pale brown",
+   "added_at": "2026-10-06T01:43:47+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "this description is printed after the disclaimer in OCR column order; its alloformation (Ten Mile Hill vs. another) cannot be confirmed from the text alone"
    }
   }
  ]
