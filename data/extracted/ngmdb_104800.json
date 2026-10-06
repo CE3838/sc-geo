@@ -8,7 +8,7 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-06T01:44:40+00:00",
- "updated_at": "2026-10-06T01:44:40+00:00",
+ "updated_at": "2026-10-06T10:58:45+00:00",
  "reader": "Claude, scheduled Claude Code session 2026-10-06",
  "packets": [
   "packet-01"
@@ -18,7 +18,7 @@
  ],
  "blocks_total": 1,
  "complete": true,
- "notes": "Single OCR map sheet. Unit symbols in the description of map units sit in boxes that the OCR printed beside the descriptions; associations are read from the layout and flagged inferred. Symbols for moved earth ('[me ]'), Duplin Formation fluvial ('[neat]') and Lang Syne Formation ('[ Pats |', 'PPIs') are garbled and were not recorded. Corrected text-layer characters (Qebs for Qcbs, '|' for 1) are flagged inferred with notes. Bodies of water and disturbed ground were not recorded as units. Cross section A-A' and the drill-hole symbols are not readable and were skipped. The map sheet states its products are provided 'as is' without warranty.",
+ "notes": "Single OCR map sheet. Unit symbols in the description of map units sit in boxes that the OCR printed beside the descriptions; associations are read from the layout and flagged inferred. Symbols for moved earth ('[me ]'), Duplin Formation fluvial ('[neat]') and Lang Syne Formation ('[ Pats |', 'PPIs') are garbled and were not recorded. Corrected text-layer characters (Qebs for Qcbs, '|' for 1) are flagged inferred with notes. Bodies of water and disturbed ground were not recorded as units. Cross section A-A' and the drill-hole symbols are not readable and were skipped. The map sheet states its products are provided 'as is' without warranty.\nSingle OCR map sheet. Unit symbols in the description of map units sit in boxes that the OCR printed beside the descriptions; associations are read from the layout and flagged inferred. Symbols for moved earth ('[me ]'), Duplin Formation fluvial ('[neat]') and Lang Syne Formation ('[ Pats |', 'PPIs') are garbled and were not recorded. Corrected text-layer characters (Qebs for Qcbs, '|' for 1) are flagged inferred with notes. Bodies of water and disturbed ground were not recorded as units. Cross section A-A' and the drill-hole symbols are not readable and were skipped. The map sheet states its products are provided 'as is' without warranty.",
  "files": [
   {
    "url": "https://ngmdb.usgs.gov/img2/104000_104999/104800_1",
@@ -34,7 +34,8 @@
    "exact": 76
   },
   "verification": {
-   "agree": 9
+   "agree": 9,
+   "unclear": 1
   },
   "inferred": 13
  },
@@ -56,6 +57,24 @@
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
+  },
+  {
+   "at": "2026-10-06T10:58:45+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-06",
+   "values": 76,
+   "stored": 76,
+   "exact": 76,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 9,
+   "disagree": 0,
+   "unclear": 1,
+   "review_items": 1
   }
  ],
  "units": [
@@ -401,13 +420,13 @@
     "source_id": "ngmdb:104800",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.581,
+    "confidence": 0.479,
     "inferred": true,
     "locator": "https://ngmdb.usgs.gov/img2/104000_104999/104800_1",
     "quote": "Thickness is | to 6 feet.",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
+    "verification": "unclear",
     "note": "text layer reads '|' for '1'",
     "normalized": {
      "min_ft": 1.0,
