@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 27,
+ "count": 30,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -353,6 +353,45 @@
    "verify": {
     "verdict": "unclear",
     "note": "text layer reads 'Thickness is | to 15 feet.'; value read as '1 to 15 feet' with '|' taken as '1'; check the digit against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99140",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 60 feet",
+   "page": 1,
+   "quote": "deposited by colian processes. Thickness | to 60 feet.",
+   "added_at": "2026-10-06T22:58:10+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'deposited by colian processes. Thickness | to 60 feet.'; value read as '1 to 60 feet' with '|' taken as '1'; check the digit against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99140",
+   "path": "units[3].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "salinity, and rising tides importing high salinity waters. Thickness | to 40 feet.",
+   "added_at": "2026-10-06T22:58:10+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'salinity, and rising tides importing high salinity waters. Thickness | to 40 feet.'; value read as '1 to 40 feet' with '|' taken as '1'; check the digit against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99140",
+   "path": "units[5].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 6 feet",
+   "page": 1,
+   "quote": "as well as Carolina bays that formed more recently. Thickness | to 6 feet.",
+   "added_at": "2026-10-06T22:58:10+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'as well as Carolina bays that formed more recently. Thickness | to 6 feet.'; value read as '1 to 6 feet' with '|' taken as '1'; check the digit against the map image"
    }
   }
  ]
