@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 11,
+ "count": 12,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -142,6 +142,19 @@
    "verify": {
     "verdict": "unclear",
     "note": "printed 27 percent, out of trend with 3.7, 2.0, .9 above; decimal point possibly lost"
+   }
+  },
+  {
+   "source_id": "ngmdb:48337",
+   "path": "observations[1].intervals[1].description",
+   "problem": "verify_unclear",
+   "value": "Gray to white sandy fill material,",
+   "page": 10,
+   "quote": "Gray to white sandy fill material,",
+   "added_at": "2026-10-05T21:58:39+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "description ends with a comma and the next lines of the log are garbled text-layer characters; it may continue"
    }
   }
  ]
