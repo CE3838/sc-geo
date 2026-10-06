@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 14,
+ "count": 15,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -183,6 +183,20 @@
    "verify": {
     "verdict": "unclear",
     "note": "year printed as '198k' in the text layer (OCR); 1989 is likely from the text citations but not legible in the entry"
+   }
+  },
+  {
+   "source_id": "ngmdb:47117",
+   "path": "groundwater[11].description",
+   "problem": "verify_disagree",
+   "value": "field bulk density 96 to 120 lb per ft3 and porosity 26 to 46 percent (D'Appolonia, 1981, 1982); laboratory salt-solution column tests reduced permeability to about 4 to 10 percent of baseline",
+   "page": 64,
+   "quote": "bulk density ranged from 96 to 120 Ib.",
+   "added_at": "2026-10-06T01:43:08+00:00",
+   "verify": {
+    "verdict": "disagree",
+    "value": "field bulk density 96 to 120 lb per ft3 and porosity 26 to 46 percent (D'Appolonia, 1981, 1982)",
+    "note": "page 64 gives the field bulk density and porosity; the 4 to 10 percent permeability result is on page 66, not page 64"
    }
   }
  ]
