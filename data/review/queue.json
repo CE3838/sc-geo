@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 24,
+ "count": 28,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -314,6 +314,58 @@
    "verify": {
     "verdict": "unclear",
     "note": "OCR prints 'LOYR 8/6'; read as 10YR 8/6, needs a check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100324",
+   "path": "units[2].lithology",
+   "problem": "verify_unclear",
+   "value": "White (N9) to medium-gray (N35), well-sorted, subrounded to well-rounded, fine to medium quartz sand with lenses of very coarse shell fragments and very angular, very fine heavy mineral sand",
+   "page": 1,
+   "quote": "to well-rounded, fine to medium quartz sand with lenses of very coarse shell fragments",
+   "added_at": "2026-10-06T22:58:14+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "value kept as printed; 'N35' is likely an OCR misread of a Munsell code (N5?); check the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100324",
+   "path": "units[3].lithology",
+   "problem": "verify_unclear",
+   "value": "White (N9) to yellowish-gray (SY 8/1) and medium-gray (N5), bimodal, subrounded to well-rounded, fine and medium quartz sand",
+   "page": 1,
+   "quote": "(N5), bimodal, subrounded to well-rounded, fine and medium quartz sand.",
+   "added_at": "2026-10-06T22:58:14+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "value kept as printed; 'SY 8/1' is likely an OCR misread of a Munsell code (5Y 8/1?); check the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100324",
+   "path": "units[6].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "drainages of streams. Thickness | to 40 feet.",
+   "added_at": "2026-10-06T22:58:14+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit; read as 1, needs a check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100324",
+   "path": "units[7].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 15 feet",
+   "page": 1,
+   "quote": "parallel to the dominant direction of longshore transport. Thickness is | to 15 feet.",
+   "added_at": "2026-10-06T22:58:14+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit; read as 1, needs a check against the map image"
    }
   }
  ]
