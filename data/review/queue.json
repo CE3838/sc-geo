@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 12,
+ "count": 13,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -156,6 +156,19 @@
     "verdict": "disagree",
     "value": "dark green to dark gray laminated fine sand/silt and carbonaceous clay (lower part)",
     "note": "page 12 supports only the lower part; the upper part's sand and kaolinitic clay is described on page 13"
+   }
+  },
+  {
+   "source_id": "ngmdb:104799",
+   "path": "units[15].name",
+   "problem": "verify_unclear",
+   "value": "Estuarine deposits (Ten Mile Hill alloformation)",
+   "page": 1,
+   "quote": "Estuarine deposits — Clay to quartz sand, yellowish-orange (10YR 6/6-7/6), pale brown",
+   "added_at": "2026-10-06T01:43:47+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "this description is printed after the disclaimer in OCR column order; its alloformation (Ten Mile Hill vs. another) cannot be confirmed from the text alone"
    }
   }
  ]
