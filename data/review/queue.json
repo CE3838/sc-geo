@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 27,
+ "count": 29,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -362,6 +362,34 @@
     "verdict": "unclear",
     "value": "upper part 1 to 10 feet thick",
     "note": "digit OCR'd as '|' ('The upper part is | to 10 feet thick.'); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99143",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "less than 1 foot",
+   "page": 1,
+   "quote": "the subaqueous beach face. Thickness less than 1| foot.",
+   "added_at": "2026-10-06T22:58:35+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "less than 1 foot",
+    "note": "digit OCR'd as '|' ('the subaqueous beach face. Thickness less than 1| foot.'); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99143",
+   "path": "units[4].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "Thickness | to 40 feet.",
+   "added_at": "2026-10-06T22:58:35+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "1 to 40 feet",
+    "note": "digit OCR'd as '|' ('Thickness | to 40 feet.'); check against the map image"
    }
   }
  ]
