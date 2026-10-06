@@ -197,3 +197,47 @@ def test_length_unit_with_a_qualifier_is_read():
 def test_unknown_length_unit_is_not_normalized_instead_of_crashing():
     assert p.length_ft(3, default_unit="fathoms") is None
     assert p.length_ft("3", default_unit="furlongs") is None
+
+
+# --- elevations and vertical datums --------------------------------------------
+
+@pytest.mark.parametrize("text,unit,lo,hi", [
+    ("-120 ft", None, -120.0, -120.0),
+    ("−120 feet", None, -120.0, -120.0),                       # Unicode minus
+    ("120 ft below sea level", None, -120.0, -120.0),
+    ("about 120 feet below mean sea level", None, -120.0, -120.0),
+    ("120 ft below NGVD 29", None, -120.0, -120.0),
+    ("12 ft above sea level", None, 12.0, 12.0),
+    ("-110 to -130 ft", None, -130.0, -110.0),
+    ("-36.6 m", None, -36.6 / 0.3048, -36.6 / 0.3048),
+    (-120, "ft", -120.0, -120.0),
+    ("-120", "ft", -120.0, -120.0),
+    ("12.5 ft (NAVD 88)", None, 12.5, 12.5),                   # the datum's year is not a value
+])
+def test_elevation_ft_keeps_the_sign(text, unit, lo, hi):
+    r = p.elevation_ft(text, default_unit=unit)
+    assert r["min_ft"] == pytest.approx(lo) and r["max_ft"] == pytest.approx(hi)
+
+
+def test_elevation_ft_flags_approximate_and_refuses_depths():
+    assert p.elevation_ft("about -120 ft")["approximate"] is True
+    assert p.elevation_ft("120 ft below land surface") is None  # a depth, not an elevation
+    assert p.elevation_ft("-120") is None                       # no unit
+    assert p.elevation_ft("not legible") is None
+
+
+def test_elevation_ft_matches_length_ft_for_plain_positive_values():
+    for text in ("12 ft", "3.5 m", "10 to 15 ft"):
+        assert p.elevation_ft(text) == p.length_ft(text)
+
+
+@pytest.mark.parametrize("text,datum", [
+    ("NGVD 29", "NGVD29"), ("National Geodetic Vertical Datum of 1929", "NGVD29"),
+    ("sea-level datum of 1929", "NGVD29"), ("NAVD 88", "NAVD88"),
+    ("North American Vertical Datum of 1988", "NAVD88"), ("mean sea level", "MSL"), ("msl", "MSL"),
+    ("feet above sea level", "MSL"), ("below land surface", "land surface"), ("ft bls", "land surface"),
+    ("ground surface", "land surface"), ("datum unknown", "unknown"), ("arbitrary datum", "unknown"),
+    ("NGVD 29 and NAVD 88", None), ("the map sheet", None), (None, None),
+])
+def test_vertical_datum(text, datum):
+    assert p.vertical_datum(text) == datum

@@ -118,6 +118,69 @@ def length_ft(text, default_unit: str | None = None) -> dict | None:
     return {"min_ft": lo, "max_ft": hi, "unit": unit.lower().rstrip("."), "approximate": approx}
 
 
+_DATUM_NAME = re.compile(r"(?i)\b(?:ngvd|navd|nad)\s*(?:of\s*)?(?:19)?\d{2}\b|\b(?:datum\s+of\s+)?(?:1929|1988)\b")
+_BELOW_DATUM = re.compile(r"(?i)\bbelow\b[^.;]{0,40}?\b(?:sea[- ]level|msl|ngvd|navd|datum)\b|\bbsl\b|\bb\.s\.l\.")
+_BELOW_LAND = re.compile(r"(?i)\bbelow\b[^.;]{0,30}?\b(?:land|ground)\s+surface\b|\bbls\b|\bb\.l\.s\.")
+_SIGNED = re.compile(rf"(?<![\w.,])([-−–]?)\s?({_NUM})\s*{_UNIT_RE}?", re.I)
+
+
+def elevation_ft(text, default_unit: str | None = None) -> dict | None:
+    """Like length_ft, but an elevation keeps its sign: '-120 ft', '120 ft below sea level' -> -120.
+
+    Depths below land surface are not elevations (None). The datum's own year ('NGVD 29') is not
+    read as a value."""
+    if isinstance(text, (int, float)) and not isinstance(text, bool):
+        if not default_unit:
+            return None
+        try:
+            v = float(text) * _unit_factor(default_unit)
+        except KeyError:
+            return None
+        return {"min_ft": v, "max_ft": v, "unit": default_unit, "approximate": False}
+    s = re.sub(r"\s+", " ", str(text or ""))[:1000]
+    if _BELOW_LAND.search(s):
+        return None
+    plain = length_ft(s, default_unit)
+    if not re.search(r"[-−–]\s?\d", s) and not _BELOW_DATUM.search(s) and plain is not None \
+            and not _DATUM_NAME.search(s):
+        return plain  # nothing signed: the same as a length
+    approx = bool(re.search(r"\b(about|approximately|approx\.?|roughly|ca\.)\b|~", s, re.I))
+    found = list(_SIGNED.finditer(_DATUM_NAME.sub(" ", s)))
+    if not found:
+        return None
+    unit = next((m.group(3) for m in found if m.group(3)), None) or default_unit
+    if not unit:
+        return None
+    try:
+        vals = [(-1 if m.group(1) else 1) * _f(m.group(2)) * _unit_factor(m.group(3) or unit) for m in found[:2]]
+    except KeyError:
+        return None
+    if _BELOW_DATUM.search(s):
+        vals = [-abs(x) for x in vals]
+    return {"min_ft": min(vals), "max_ft": max(vals), "unit": unit.lower().rstrip("."), "approximate": approx}
+
+
+def vertical_datum(text) -> str | None:
+    """'NGVD29', 'NAVD88', 'MSL', 'land surface' or 'unknown' from a datum as printed; None otherwise."""
+    s = str(text or "")
+    found = []
+    if re.search(r"(?i)\bngvd|national geodetic vertical datum|sea[- ]level datum of 1929", s):
+        found.append("NGVD29")
+    if re.search(r"(?i)\bnavd|north american vertical datum", s):
+        found.append("NAVD88")
+    if len(found) > 1:
+        return None
+    if found:
+        return found[0]
+    if re.search(r"(?i)\b(?:land|ground)\s+surface\b|\bbls\b|\bground\s+level\b", s):
+        return "land surface"
+    if re.search(r"(?i)mean sea[- ]level|\bmsl\b|\bsea[- ]level\b", s):
+        return "MSL"
+    if re.search(r"(?i)\bunknown\b|\bnot known\b|\barbitrary\b|\bassumed datum\b|\blocal datum\b", s):
+        return "unknown"
+    return None
+
+
 # --- soils -------------------------------------------------------------------
 
 USCS = {"GW", "GP", "GM", "GC", "SW", "SP", "SM", "SC", "ML", "CL", "OL", "MH", "CH", "OH", "PT"}
