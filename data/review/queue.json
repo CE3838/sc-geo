@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 25,
+ "count": 27,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -334,6 +334,34 @@
     "verdict": "unclear",
     "value": "1 to 40 feet",
     "note": "digit OCR'd as '|' ('Thickness | to 40 feet.'); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99142",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 50 feet",
+   "page": 1,
+   "quote": "Thickness | to 50 feet.",
+   "added_at": "2026-10-06T22:57:56+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "1 to 50 feet",
+    "note": "digit OCR'd as '|' ('Thickness | to 50 feet.'); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99142",
+   "path": "units[8].description",
+   "problem": "verify_unclear",
+   "value": "upper part 1 to 10 feet thick",
+   "page": 1,
+   "quote": "The upper part is | to 10 feet thick.",
+   "added_at": "2026-10-06T22:57:56+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "upper part 1 to 10 feet thick",
+    "note": "digit OCR'd as '|' ('The upper part is | to 10 feet thick.'); check against the map image"
    }
   }
  ]
