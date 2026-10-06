@@ -8,7 +8,7 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-06T10:56:29+00:00",
- "updated_at": "2026-10-06T10:56:29+00:00",
+ "updated_at": "2026-10-06T10:57:10+00:00",
  "reader": "Claude, Claude Code reading session 2026-10-06",
  "packets": [
   "packet-01"
@@ -18,7 +18,7 @@
  ],
  "blocks_total": 1,
  "complete": true,
- "notes": "Single OCR map sheet; map face is noise. Symbols: dg and PEwh legible inline; QHfw, PEodb and PEc inferred from placement (flagged). 'NPdu' is printed after the Duplin estuarine description and the correlation chart shows 'NPdu | NPs', so the Duplin symbols could not be assigned and are omitted. Thicknesses with '|' as first digit (freshwater marsh, Carolina bay, Duplin Formation '| to 56', Duplin estuarine '| to 25', Duplin sands '| to 50') not recorded. The explanation lists a fault symbol, but no fault can be read on the map face. Bodies of water skipped.\nSUBSURFACE: page 1 has no cross section on this sheet; SCGS drill hole number 38-374 shown in the explanation, logs on file at SCGS and not printed. Duplin Formation inland limit at +220 ft (+67.5 m) in the map area (page 1). Correlation chart (page 1) lists Paleocene and Upper Cretaceous units below the Eocene units with unconformities, but their descriptions are not on the sheet (OCR 'PEG:'). Vertical datum not stated; base map uses 1927 North American Datum, contour interval 1.5 meters.",
+ "notes": "Single OCR map sheet; map face is noise. Symbols: dg and PEwh legible inline; QHfw, PEodb and PEc inferred from placement (flagged). 'NPdu' is printed after the Duplin estuarine description and the correlation chart shows 'NPdu | NPs', so the Duplin symbols could not be assigned and are omitted. Thicknesses with '|' as first digit (freshwater marsh, Carolina bay, Duplin Formation '| to 56', Duplin estuarine '| to 25', Duplin sands '| to 50') not recorded. The explanation lists a fault symbol, but no fault can be read on the map face. Bodies of water skipped.\nSUBSURFACE: page 1 has no cross section on this sheet; SCGS drill hole number 38-374 shown in the explanation, logs on file at SCGS and not printed. Duplin Formation inland limit at +220 ft (+67.5 m) in the map area (page 1). Correlation chart (page 1) lists Paleocene and Upper Cretaceous units below the Eocene units with unconformities, but their descriptions are not on the sheet (OCR 'PEG:'). Vertical datum not stated; base map uses 1927 North American Datum, contour interval 1.5 meters.\nSingle OCR map sheet; map face is noise. Symbols: dg and PEwh legible inline; QHfw, PEodb and PEc inferred from placement (flagged). 'NPdu' is printed after the Duplin estuarine description and the correlation chart shows 'NPdu | NPs', so the Duplin symbols could not be assigned and are omitted. Thicknesses with '|' as first digit (freshwater marsh, Carolina bay, Duplin Formation '| to 56', Duplin estuarine '| to 25', Duplin sands '| to 50') not recorded. The explanation lists a fault symbol, but no fault trace or location can be read on the map face; the fault entry is kept as inferred and sent to review (legend symbol only). Bodies of water skipped.\nSUBSURFACE: page 1 has no cross section on this sheet; SCGS drill hole number 38-374 shown in the explanation, logs on file at SCGS and not printed. Duplin Formation inland limit at +220 ft (+67.5 m) in the map area (page 1). Correlation chart (page 1) lists Paleocene and Upper Cretaceous units below the Eocene units with unconformities, but their descriptions are not on the sheet (OCR 'PEG:'). Vertical datum not stated; base map uses 1927 North American Datum, contour interval 1.5 meters.",
  "files": [
   {
    "url": "https://ngmdb.usgs.gov/img2/103000_103999/103895_1",
@@ -34,9 +34,10 @@
    "exact": 54
   },
   "verification": {
-   "agree": 6
+   "unclear": 2,
+   "agree": 5
   },
-  "inferred": 4
+  "inferred": 5
  },
  "ingests": [
   {
@@ -56,6 +57,24 @@
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
+  },
+  {
+   "at": "2026-10-06T10:57:10+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, Claude Code reading session 2026-10-06",
+   "values": 54,
+   "stored": 54,
+   "exact": 54,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 5,
+   "disagree": 0,
+   "unclear": 2,
+   "review_items": 2
   }
  ],
  "units": [
@@ -827,27 +846,28 @@
     "source_id": "ngmdb:103895",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.765,
-    "inferred": false,
+    "confidence": 0.428,
+    "inferred": true,
     "locator": "https://ngmdb.usgs.gov/img2/103000_103999/103895_1",
     "quote": "Fault — Identity and existence certain, location accurate. Location approximate",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree"
+    "verification": "unclear",
+    "note": "legend symbol only, no trace or location readable"
    },
    "description": {
     "value": "fault shown on the map (map symbol explanation)",
     "source_id": "ngmdb:103895",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.52,
+    "confidence": 0.428,
     "inferred": true,
     "locator": "https://ngmdb.usgs.gov/img2/103000_103999/103895_1",
     "quote": "Fault — Identity and existence certain, location accurate. Location approximate",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
-    "note": "the explanation lists a fault symbol; the fault's name, trace and location cannot be read from the OCR"
+    "verification": "unclear",
+    "note": "legend symbol only, no trace or location readable"
    }
   }
  ],

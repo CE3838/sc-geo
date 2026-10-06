@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 14,
+ "count": 16,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -183,6 +183,32 @@
     "verdict": "disagree",
     "value": "Kaczorowski, R. T., 1976, Origin of Carolina bays, in Hayes, M. O., and Kana, T. W. (eds.), Terrigenous clastic depositional environments, some modern examples, a field course sponsored by the American Association of Petroleum Geologists: Columbia, Coastal Research Division, Department of Geology, University of South Carolina, Technical Report 11-CRD, p. II-16 - I-36.",
     "note": "page reads 'p. II-16 - I-36.'; the first pass changed it to II-36"
+   }
+  },
+  {
+   "source_id": "ngmdb:103895",
+   "path": "structures[0].certainty",
+   "problem": "verify_unclear",
+   "value": "Identity and existence certain, location accurate. Location approximate where dashed.",
+   "page": 1,
+   "quote": "Fault — Identity and existence certain, location accurate. Location approximate",
+   "added_at": "2026-10-06T10:57:10+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "legend symbol only, no trace or location readable; the explanation alone does not show a fault exists on this quadrangle"
+   }
+  },
+  {
+   "source_id": "ngmdb:103895",
+   "path": "structures[0].description",
+   "problem": "verify_unclear",
+   "value": "fault shown on the map (map symbol explanation)",
+   "page": 1,
+   "quote": "Fault — Identity and existence certain, location accurate. Location approximate",
+   "added_at": "2026-10-06T10:57:10+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "legend symbol only, no trace or location readable; the explanation alone does not show a fault exists on this quadrangle"
    }
   }
  ]
