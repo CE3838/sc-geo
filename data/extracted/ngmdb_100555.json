@@ -8,10 +8,11 @@
  "kind": "publication",
  "schema_version": 1,
  "extracted_at": "2026-10-06T01:43:38+00:00",
- "updated_at": "2026-10-06T01:43:38+00:00",
+ "updated_at": "2026-10-06T01:44:20+00:00",
  "reader": "Claude, scheduled Claude Code session 2026-10-06",
  "packets": [
-  "packet-01"
+  "packet-01",
+  "packet-02"
  ],
  "blocks_done": [
   "1",
@@ -42,11 +43,38 @@
   "29",
   "30",
   "31",
-  "32"
+  "32",
+  "33",
+  "34",
+  "35",
+  "36",
+  "37",
+  "38",
+  "39",
+  "40",
+  "41",
+  "42",
+  "43",
+  "44",
+  "45",
+  "46",
+  "47",
+  "48",
+  "49",
+  "50",
+  "51",
+  "52",
+  "53",
+  "54",
+  "55",
+  "56",
+  "57",
+  "58",
+  "59"
  ],
  "blocks_total": 107,
  "complete": false,
- "notes": "Water-quality report. Packet 1 covers the hydrogeologic setting (pp. 19, 21, 27), the well/spring table (table 3, p. 30) and well descriptions (pp. 29, 31). Wells/springs: one observation per table 3 row; label notes give county number and USGS site ID (site IDs are identifiers, no coordinates were computed). The aquifer column is stored as the interval unit. Table 1 chemistry and table 2 compound properties not recorded (not geologic). No reference list in this packet (it comes later).",
+ "notes": "Water-quality report. Packet 1 covers the hydrogeologic setting (pp. 19, 21, 27), the well/spring table (table 3, p. 30) and well descriptions (pp. 29, 31). Wells/springs: one observation per table 3 row; label notes give county number and USGS site ID (site IDs are identifiers, no coordinates were computed). The aquifer column is stored as the interval unit. Table 1 chemistry and table 2 compound properties not recorded (not geologic). No reference list in this packet (it comes later).\nPacket 2 (pp. 33-59) is mostly methods and water-chemistry tables (tables 4-6: field parameters, EDB/DBCP and other VOC concentrations) and plume maps; these are not geologic and were not recorded. Only hydrogeologic statements were recorded. Continues from packet 1.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/sir/2014/5114/pdf/sir2014-5114.pdf",
@@ -57,14 +85,14 @@
   }
  ],
  "summary": {
-  "stored": 216,
+  "stored": 235,
   "quote_match": {
-   "exact": 216
+   "exact": 235
   },
   "verification": {
-   "agree": 158
+   "agree": 160
   },
-  "inferred": 2
+  "inferred": 4
  },
  "ingests": [
   {
@@ -81,6 +109,24 @@
    "quote_not_found": 0,
    "wrong_page": 0,
    "agree": 158,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-10-06T01:44:20+00:00",
+   "packets": [
+    "packet-02"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-06",
+   "values": 19,
+   "stored": 19,
+   "exact": 19,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 2,
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
@@ -3454,6 +3500,53 @@
      }
     }
    ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "CTF–189",
+    "source_id": "ngmdb:100555",
+    "page": 43,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Monitoring well CTF–189 also was sampled",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Swift Creek Basin, which lies west of the monitoring wells in the Cedar Creek Basin",
+    "source_id": "ngmdb:100555",
+    "page": 43,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Swift Creek Basin, which lies west of the monitoring wells",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "upper part of the Crouch Branch aquifer",
+      "source_id": "ngmdb:100555",
+      "page": 43,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "upper part of the Crouch Branch aquifer and is located in the",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "note": "well is screened in this part of the aquifer"
+     }
+    }
+   ]
   }
  ],
  "structures": [],
@@ -3862,6 +3955,227 @@
     "inferred": false,
     "locator": null,
     "quote": "agricultural area north of McBee is located in a recharge",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Crouch and McQueen Branch aquifers",
+    "source_id": "ngmdb:100555",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Crouch and McQueen Branch aquifers were characterized",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "In general, most wells have groundwater that is dilute, oxygenated, and acidic",
+    "source_id": "ngmdb:100555",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "is dilute, oxygenated, and acidic; groundwater samples",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Crouch and McQueen Branch aquifers",
+    "source_id": "ngmdb:100555",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Crouch and McQueen Branch aquifers were characterized",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "the sediments in the subsurface have been highly weathered since the Late Cretaceous period; little buffering capacity in the subsurface, as minerals such as feldspars have already been weathered",
+    "source_id": "ngmdb:100555",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "weathered since the Late Cretaceous period. As such, there is",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Crouch Branch aquifer",
+    "source_id": "ngmdb:100555",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Crouch Branch aquifer. In general, groundwater temperatures",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "flow through highly weathered sands to wells or springs in the Cedar Creek Basin",
+    "source_id": "ngmdb:100555",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "through highly weathered sands to wells or springs in the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Cedar Creek Basin",
+    "source_id": "ngmdb:100555",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "through highly weathered sands to wells or springs in the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Crouch Branch aquifer",
+    "source_id": "ngmdb:100555",
+    "page": 43,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the Crouch Branch aquifer in the upper part of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "recharge area near Wire Road to the north (bounding the EDB plume in the upper part of the Cedar Creek Basin)",
+    "source_id": "ngmdb:100555",
+    "page": 43,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "near Wire Road to the north, the Sand Hills State Forest",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "near Wire Road",
+    "source_id": "ngmdb:100555",
+    "page": 43,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "near Wire Road to the north, the Sand Hills State Forest",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Crouch Branch aquifer",
+    "source_id": "ngmdb:100555",
+    "page": 43,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the Crouch Branch aquifer in the upper part of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "discharge area of the Cedar Creek Basin springs to the west and south (bounding the EDB plume)",
+    "source_id": "ngmdb:100555",
+    "page": 43,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "and discharge area of the Cedar Creek Basin springs to the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "location": {
+    "value": "Cedar Creek Basin springs",
+    "source_id": "ngmdb:100555",
+    "page": 43,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "and discharge area of the Cedar Creek Basin springs to the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Crouch and McQueen Branch aquifers",
+    "source_id": "ngmdb:100555",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "for the Crouch and McQueen Branch aquifers in the McBee",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "There are no published values for porosity for the Crouch and McQueen Branch aquifers in the McBee area; particle-tracking simulations used uniform values that ranged from 25 to 35 percent porosity",
+    "source_id": "ngmdb:100555",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "well using uniform values that ranged from 25 to 35 percent",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "model assumption, based on Heath (1983) value of 25 percent for sand"
+   },
+   "location": {
+    "value": "McBee area",
+    "source_id": "ngmdb:100555",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "for the Crouch and McQueen Branch aquifers in the McBee",
     "quote_match": "exact",
     "text_method": "pdf_text",
     "verification": null
