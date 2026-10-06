@@ -54,6 +54,20 @@ try {
     const r = window.scGeo.map.getContainer().getBoundingClientRect();
     return { x: p.x + r.left, y: p.y + r.top };
   }, lngLat);
+  // Wait until the map has drawn everything it has (sources set by a layer
+  // that just loaded included).
+  const waitIdle = () => page.evaluate(() => new Promise((resolve) => {
+    const { map } = window.scGeo;
+    const done = () => { clearTimeout(timer); resolve(); };
+    const timer = setTimeout(() => { map.off('idle', done); resolve(); }, 20000);
+    map.once('idle', done);
+    map.triggerRepaint();
+  }));
+  // Live layers (web/live.js) start off. Turn one on from its Layers panel
+  // checkbox, as a user would, once the map is on the area to check, so the
+  // layer queries its service for that one view only; turn it off after.
+  const turnOn = (id) => page.check(`#layer-${id}`);
+  const turnOff = (id) => page.uncheck(`#layer-${id}`);
 
   // Layout: header, Layers and Map units panels, status bar.
   const layout = await page.evaluate(() => ({
@@ -182,9 +196,12 @@ try {
   // A clean "service unavailable" note is accepted so an outage is not a failure.
   const layerNote = (id) => page.evaluate((i) => document.getElementById(`layer-${i}`)?.closest('li')?.textContent ?? '', id);
   await jumpTo({ center: [-79.96, 32.83], zoom: 12 });
+  await turnOn('roads');
+  await page.waitForTimeout(600); // the layer loads 250 ms after it is turned on
   await page.waitForFunction(() => !/loading/.test(document.getElementById('layer-roads')?.closest('li')?.textContent ?? ''),
     null, { timeout: 45000 }).catch(() => {});
   await settle();
+  await waitIdle();
   const roadInfo = await page.evaluate(() => {
     const { map } = window.scGeo;
     const ids = ['roads-state-line', 'roads-hwy-line', 'roads-local-line'].filter((id) => map.getLayer(id));
@@ -208,14 +225,17 @@ try {
     check(roadInfo.shields > 0, `route shields render (${roadInfo.shields})`);
   }
   await snapshot(page, 'roads-z12');
+  await turnOff('roads');
 
   // Parcels (Charleston County's own service, live) from z15: lines, IDs and a click.
   await jumpTo({ center: [-79.9311, 32.7765], zoom: 17 });
+  await turnOn('parcels');
   await page.waitForFunction(() => {
     const t = document.querySelector('.parcel-status')?.textContent ?? '';
     return /Charleston County:/.test(t) && !/loading/.test(document.getElementById('layer-parcels')?.closest('li')?.textContent ?? '');
   }, null, { timeout: 60000 }).catch(() => {});
   await settle();
+  await waitIdle();
   const parcelStatus = await page.locator('.parcel-status').textContent();
   const parcelCount = await page.evaluate(() => window.scGeo.map.queryRenderedFeatures({ layers: ['parcels-fill'] }).length);
   console.log(`parcels: ${parcelCount}; ${parcelStatus}`);
@@ -247,6 +267,7 @@ try {
   })();
   check(/Zoom in to see parcels/.test(below), `parcels panel says to zoom in below z15 (${below})`);
   await page.locator('.maplibregl-popup-close-button').click().catch(() => {});
+  await turnOff('parcels');
 
   // USGS water monitoring stations (web/water-ui.js), live from USGS Water
   // Data; a service outage is a clean "service unavailable", not a failure.
@@ -269,8 +290,10 @@ try {
     let unavailable = false;
     for (const [name, center] of [['Columbia', [-81.03, 34.0]], ['Charleston', [-79.95, 32.85]]]) {
       await jumpTo({ center, zoom: 10.5 });
-      await page.waitForTimeout(600); // the layer loads 400 ms after the map stops
+      if (name === 'Columbia') await turnOn('water'); // loads at once; later moves load 400 ms after the map stops
+      await page.waitForTimeout(600);
       await waitWater();
+      await waitIdle();
       const note = await waterNote();
       const found = await stations();
       unavailable ||= /unavailable/.test(note);
@@ -302,6 +325,7 @@ try {
     } else {
       check(unavailable, 'a station to click (or the service is unavailable)');
     }
+    await turnOff('water');
   }
 
   // Add-ons (the desktop app) put their own content in the click popup.

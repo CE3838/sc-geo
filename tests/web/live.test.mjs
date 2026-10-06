@@ -17,3 +17,14 @@ test('layers that query other sites live start off, so a page view sends them no
 test('the viewer says the data is provided as is, without warranty', () => {
   assert.match(web('index.html'), /without warranty/i);
 });
+
+test('the viewer smoke check turns each live layer on, the way a user would, before checking it', () => {
+  const smoke = readFileSync(new URL('../../scripts/viewer_smoke.mjs', import.meta.url), 'utf8');
+  const firstCheck = { roads: 'roads render with interstates', parcels: 'Charleston parcels', water: 'water stations around' };
+  for (const [key, startsOn] of Object.entries(LIVE_ON_AT_START)) {
+    if (startsOn) continue;
+    const on = smoke.indexOf(`turnOn('${key}')`);
+    assert.ok(on > 0, `smoke turns ${key} on`);
+    assert.ok(on < smoke.indexOf(firstCheck[key]), `smoke turns ${key} on before checking it`);
+  }
+});
