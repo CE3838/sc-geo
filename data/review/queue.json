@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 11,
+ "count": 13,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -142,6 +142,33 @@
    "verify": {
     "verdict": "unclear",
     "note": "printed 27 percent, out of trend with 3.7, 2.0, .9 above; decimal point possibly lost"
+   }
+  },
+  {
+   "source_id": "ngmdb:48826",
+   "path": "units[7].rank",
+   "problem": "verify_disagree",
+   "value": "Limestone",
+   "page": 14,
+   "quote": "The Santee Limestone consists of moderately",
+   "added_at": "2026-10-06T01:44:02+00:00",
+   "verify": {
+    "verdict": "disagree",
+    "value": "Formation",
+    "note": "p.13: Cooke (1936) coined the term Santee Limestone with formational status; the rank is formation, not 'Limestone'"
+   }
+  },
+  {
+   "source_id": "ngmdb:48826",
+   "path": "references[34].citation",
+   "problem": "verify_unclear",
+   "value": "Nystrom, P.G., Jr., Willoughby, R.H., and Price, L.K., 1989, The Cretaceous and Tertiary stratigraphy of the upper Coastal Plain of South Carolina, in Upper Cretaceous and Cenozoic geology of the southeastern Atlantic Coastal Plain: International Geological Congress, 28th, Field Trip Guidebook T172, p. 23-42.",
+   "page": 28,
+   "quote": "The Cretaceous and Tertiary stratigraphy of the upper",
+   "added_at": "2026-10-06T01:44:02+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "year printed as '198k' in the text layer (OCR); 1989 is likely from the text citations but not legible in the entry"
    }
   }
  ]
