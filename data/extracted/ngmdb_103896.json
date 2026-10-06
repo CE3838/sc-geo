@@ -8,7 +8,7 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-06T10:57:40+00:00",
- "updated_at": "2026-10-06T10:57:40+00:00",
+ "updated_at": "2026-10-06T10:58:34+00:00",
  "reader": "Claude, scheduled Claude Code session 2026-10-06",
  "packets": [
   "packet-01"
@@ -18,7 +18,7 @@
  ],
  "blocks_total": 1,
  "complete": true,
- "notes": "Single map sheet read from OCR (page 1). Map symbols recorded where on the same line as the unit name (dg, me) or printed directly below or within a description (Qe, Qal, PEodb, PEwh; flagged inferred). OCR-garbled symbols ('~QHiw' for the swamp deposits, '[Pris |' for the Lang Syne, 'UKs' for the Cretaceous) were not recorded. The Water map unit was not recorded. The correlation chart shows unconformities between the Pliocene?, Eocene, Paleocene and Upper Cretaceous units; its unit order is partly garbled in OCR. Map graphics are not readable.\nSUBSURFACE: Upper Cretaceous maximum drilled thickness 30 feet (page 1). SCGS drill holes are plotted with log identification numbers (e.g. 09-314); the logs are on file at the SCGS and are not in this document (page 1). Correlation chart with unconformity-bounded units, Upper Cretaceous to Holocene (page 1). No cross sections or structure contours appear in the OCR text. Datum: horizontal 1927 North American Datum; topographic contour interval 3 meters on the 1986 base map; the vertical datum is not stated (page 1).",
+ "notes": "Single map sheet read from OCR (page 1). Map symbols recorded where on the same line as the unit name (dg, me) or printed directly below or within a description (Qe, Qal, PEodb, PEwh; flagged inferred). OCR-garbled symbols ('~QHiw' for the swamp deposits, '[Pris |' for the Lang Syne, 'UKs' for the Cretaceous) were not recorded. The Water map unit was not recorded. The correlation chart shows unconformities between the Pliocene?, Eocene, Paleocene and Upper Cretaceous units; its unit order is partly garbled in OCR. Map graphics are not readable.\nSUBSURFACE: Upper Cretaceous maximum drilled thickness 30 feet (page 1). SCGS drill holes are plotted with log identification numbers (e.g. 09-314); the logs are on file at the SCGS and are not in this document (page 1). Correlation chart with unconformity-bounded units, Upper Cretaceous to Holocene (page 1). No cross sections or structure contours appear in the OCR text. Datum: horizontal 1927 North American Datum; topographic contour interval 3 meters on the 1986 base map; the vertical datum is not stated (page 1).\nSingle map sheet read from OCR (page 1). Map symbols recorded where on the same line as the unit name (dg, me) or printed directly below or within a description (Qe, Qal, PEodb, PEwh; flagged inferred). OCR-garbled symbols ('~QHiw' for the swamp deposits, '[Pris |' for the Lang Syne, 'UKs' for the Cretaceous) were not recorded. The Water map unit was not recorded. The correlation chart shows unconformities between the Pliocene?, Eocene, Paleocene and Upper Cretaceous units; its unit order is partly garbled in OCR. Map graphics are not readable.\nSUBSURFACE: Upper Cretaceous maximum drilled thickness 30 feet (page 1). SCGS drill holes are plotted with log identification numbers (e.g. 09-314); the logs are on file at the SCGS and are not in this document (page 1). Correlation chart with unconformity-bounded units, Upper Cretaceous to Holocene (page 1). No cross sections or structure contours appear in the OCR text. Datum: horizontal 1927 North American Datum; topographic contour interval 3 meters on the 1986 base map; the vertical datum is not stated (page 1).",
  "files": [
   {
    "url": "https://ngmdb.usgs.gov/img2/103000_103999/103896_1",
@@ -34,9 +34,10 @@
    "exact": 63
   },
   "verification": {
+   "unclear": 3,
    "agree": 7
   },
-  "inferred": 5
+  "inferred": 8
  },
  "ingests": [
   {
@@ -56,6 +57,24 @@
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
+  },
+  {
+   "at": "2026-10-06T10:58:34+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-06",
+   "values": 63,
+   "stored": 63,
+   "exact": 63,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 7,
+   "disagree": 0,
+   "unclear": 3,
+   "review_items": 3
   }
  ],
  "units": [
@@ -224,14 +243,14 @@
     "source_id": "ngmdb:103896",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.727,
-    "inferred": false,
+    "confidence": 0.479,
+    "inferred": true,
     "locator": "https://ngmdb.usgs.gov/img2/103000_103999/103896_1",
     "quote": "Thickness | to 40 feet.",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
-    "note": "OCR prints the 1 as '|'",
+    "verification": "unclear",
+    "note": "OCR text: 'Thickness | to 40 feet.'; '|' read as the digit 1",
     "normalized": {
      "min_ft": 1.0,
      "max_ft": 40.0,
@@ -305,14 +324,14 @@
     "source_id": "ngmdb:103896",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.727,
-    "inferred": false,
+    "confidence": 0.479,
+    "inferred": true,
     "locator": "https://ngmdb.usgs.gov/img2/103000_103999/103896_1",
     "quote": "Thickness is | to 12 feet.",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
-    "note": "OCR prints the 1 as '|'",
+    "verification": "unclear",
+    "note": "OCR text: 'Thickness is | to 12 feet.'; '|' read as the digit 1",
     "normalized": {
      "min_ft": 1.0,
      "max_ft": 12.0,
@@ -386,14 +405,14 @@
     "source_id": "ngmdb:103896",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.727,
-    "inferred": false,
+    "confidence": 0.479,
+    "inferred": true,
     "locator": "https://ngmdb.usgs.gov/img2/103000_103999/103896_1",
     "quote": "Thickness is | to 44 feet.",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
-    "note": "OCR prints the 1 as '|'",
+    "verification": "unclear",
+    "note": "OCR text: 'Thickness is | to 44 feet.'; '|' read as the digit 1",
     "normalized": {
      "min_ft": 1.0,
      "max_ft": 44.0,

@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 18,
+ "count": 23,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -236,6 +236,76 @@
    "verify": {
     "verdict": "unclear",
     "note": "this description is printed after the disclaimer in OCR column order; its alloformation (Ten Mile Hill vs. another) cannot be confirmed from the text alone"
+   }
+  },
+  {
+   "source_id": "ngmdb:103892",
+   "path": "units[3].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "Thickness | to 40 feet.",
+   "added_at": "2026-10-06T10:58:33+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "1 to 40 feet",
+    "note": "digit OCR'd as '|' ('Thickness | to 40 feet.'); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:103892",
+   "path": "units[11].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 15 feet",
+   "page": 1,
+   "quote": "Thickness is | to 15 feet.",
+   "added_at": "2026-10-06T10:58:33+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "1 to 15 feet",
+    "note": "digit OCR'd as '|' ('Thickness is | to 15 feet.'); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:103896",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "Thickness | to 40 feet.",
+   "added_at": "2026-10-06T10:58:34+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "1 to 40 feet",
+    "note": "digit OCR'd as '|' ('Thickness | to 40 feet.'); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:103896",
+   "path": "units[3].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 12 feet",
+   "page": 1,
+   "quote": "Thickness is | to 12 feet.",
+   "added_at": "2026-10-06T10:58:34+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "1 to 12 feet",
+    "note": "digit OCR'd as '|' ('Thickness is | to 12 feet.'); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:103896",
+   "path": "units[4].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 44 feet",
+   "page": 1,
+   "quote": "Thickness is | to 44 feet.",
+   "added_at": "2026-10-06T10:58:34+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "1 to 44 feet",
+    "note": "digit OCR'd as '|' ('Thickness is | to 44 feet.'); check against the map image"
    }
   }
  ]

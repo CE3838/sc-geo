@@ -8,7 +8,7 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-06T10:56:42+00:00",
- "updated_at": "2026-10-06T10:56:42+00:00",
+ "updated_at": "2026-10-06T10:58:33+00:00",
  "reader": "Claude, scheduled Claude Code session 2026-10-06",
  "packets": [
   "packet-01"
@@ -18,7 +18,7 @@
  ],
  "blocks_total": 1,
  "complete": true,
- "notes": "Single map sheet read from OCR (page 1). OCR places map symbols loosely between descriptions; symbols were recorded only where on the same line as the unit name (dg, QPpm) or directly below its description (Qe, flagged inferred). Other symbols in the text (QHfm, QHfw, QPpam, QPps) could not be tied to a unit with certainty and were not recorded. The Water map unit was not recorded. Pleistocene units are interpreted as alloformations bounded by unconformities. The map graphics (contacts, drill-hole locations) are not readable from the OCR text.\nSUBSURFACE: margin elevations bounding each alloformation (Silver Bluff above 6 ft seaward, below 10 ft landward; Princess Anne above 10 ft, below 18 ft; Pamlico above 17 ft, below 25 ft; page 1). SCGS drill holes are plotted on the map with log identification numbers (e.g. 22-138); the logs are on file at the SCGS and are not in this document (page 1). No cross sections or structure contours appear in the OCR text. Datum: horizontal 1927 North American Datum (base map, page 1); the vertical datum is not stated.",
+ "notes": "Single map sheet read from OCR (page 1). OCR places map symbols loosely between descriptions; symbols were recorded only where on the same line as the unit name (dg, QPpm) or directly below its description (Qe, flagged inferred). Other symbols in the text (QHfm, QHfw, QPpam, QPps) could not be tied to a unit with certainty and were not recorded. The Water map unit was not recorded. Pleistocene units are interpreted as alloformations bounded by unconformities. The map graphics (contacts, drill-hole locations) are not readable from the OCR text.\nSUBSURFACE: margin elevations bounding each alloformation (Silver Bluff above 6 ft seaward, below 10 ft landward; Princess Anne above 10 ft, below 18 ft; Pamlico above 17 ft, below 25 ft; page 1). SCGS drill holes are plotted on the map with log identification numbers (e.g. 22-138); the logs are on file at the SCGS and are not in this document (page 1). No cross sections or structure contours appear in the OCR text. Datum: horizontal 1927 North American Datum (base map, page 1); the vertical datum is not stated.\nSingle map sheet read from OCR (page 1). OCR places map symbols loosely between descriptions; symbols were recorded only where on the same line as the unit name (dg, QPpm) or directly below its description (Qe, flagged inferred). Other symbols in the text (QHfm, QHfw, QPpam, QPps) could not be tied to a unit with certainty and were not recorded. The Water map unit was not recorded. Pleistocene units are interpreted as alloformations bounded by unconformities. The map graphics (contacts, drill-hole locations) are not readable from the OCR text.\nSUBSURFACE: margin elevations bounding each alloformation (Silver Bluff above 6 ft seaward, below 10 ft landward; Princess Anne above 10 ft, below 18 ft; Pamlico above 17 ft, below 25 ft; page 1). SCGS drill holes are plotted on the map with log identification numbers (e.g. 22-138); the logs are on file at the SCGS and are not in this document (page 1). No cross sections or structure contours appear in the OCR text. Datum: horizontal 1927 North American Datum (base map, page 1); the vertical datum is not stated.",
  "files": [
   {
    "url": "https://ngmdb.usgs.gov/img2/103000_103999/103892_1",
@@ -34,9 +34,10 @@
    "exact": 54
   },
   "verification": {
+   "unclear": 2,
    "agree": 6
   },
-  "inferred": 1
+  "inferred": 3
  },
  "ingests": [
   {
@@ -56,6 +57,24 @@
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
+  },
+  {
+   "at": "2026-10-06T10:58:33+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-06",
+   "values": 54,
+   "stored": 54,
+   "exact": 54,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 6,
+   "disagree": 0,
+   "unclear": 2,
+   "review_items": 2
   }
  ],
  "units": [
@@ -291,14 +310,14 @@
     "source_id": "ngmdb:103892",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.727,
-    "inferred": false,
+    "confidence": 0.479,
+    "inferred": true,
     "locator": "https://ngmdb.usgs.gov/img2/103000_103999/103892_1",
     "quote": "Thickness | to 40 feet.",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
-    "note": "OCR prints the 1 as '|'",
+    "verification": "unclear",
+    "note": "OCR text: 'Thickness | to 40 feet.'; '|' read as the digit 1",
     "normalized": {
      "min_ft": 1.0,
      "max_ft": 40.0,
@@ -835,14 +854,14 @@
     "source_id": "ngmdb:103892",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.727,
-    "inferred": false,
+    "confidence": 0.479,
+    "inferred": true,
     "locator": "https://ngmdb.usgs.gov/img2/103000_103999/103892_1",
     "quote": "Thickness is | to 15 feet.",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
-    "note": "OCR prints the 1 as '|'",
+    "verification": "unclear",
+    "note": "OCR text: 'Thickness is | to 15 feet.'; '|' read as the digit 1",
     "normalized": {
      "min_ft": 1.0,
      "max_ft": 15.0,
