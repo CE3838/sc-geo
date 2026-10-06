@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 12,
+ "count": 13,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -155,6 +155,19 @@
    "verify": {
     "verdict": "unclear",
     "note": "description ends with a comma and the next lines of the log are garbled text-layer characters; it may continue"
+   }
+  },
+  {
+   "source_id": "ngmdb:100555",
+   "path": "groundwater[1].aquifer",
+   "problem": "verify_unclear",
+   "value": "upper unit",
+   "page": 63,
+   "quote": "Discharge areas, such as in Cedar Creek Basin, tend to be",
+   "added_at": "2026-10-06T01:45:08+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "page 63 does not name the aquifer for the Cedar Creek Basin discharge areas; 'upper unit' rests on p. 31 (springs discharge the upper unit), not on the cited page"
    }
   }
  ]

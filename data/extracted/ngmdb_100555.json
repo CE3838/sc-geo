@@ -8,11 +8,12 @@
  "kind": "publication",
  "schema_version": 1,
  "extracted_at": "2026-10-06T01:43:38+00:00",
- "updated_at": "2026-10-06T01:44:20+00:00",
+ "updated_at": "2026-10-06T01:45:08+00:00",
  "reader": "Claude, scheduled Claude Code session 2026-10-06",
  "packets": [
   "packet-01",
-  "packet-02"
+  "packet-02",
+  "packet-03"
  ],
  "blocks_done": [
   "1",
@@ -70,11 +71,38 @@
   "56",
   "57",
   "58",
-  "59"
+  "59",
+  "60",
+  "61",
+  "62",
+  "63",
+  "64",
+  "65",
+  "66",
+  "67",
+  "68",
+  "69",
+  "70",
+  "71",
+  "72",
+  "73",
+  "74",
+  "75",
+  "76",
+  "77",
+  "78",
+  "79",
+  "80",
+  "81",
+  "82",
+  "83",
+  "84",
+  "85",
+  "86"
  ],
  "blocks_total": 107,
  "complete": false,
- "notes": "Water-quality report. Packet 1 covers the hydrogeologic setting (pp. 19, 21, 27), the well/spring table (table 3, p. 30) and well descriptions (pp. 29, 31). Wells/springs: one observation per table 3 row; label notes give county number and USGS site ID (site IDs are identifiers, no coordinates were computed). The aquifer column is stored as the interval unit. Table 1 chemistry and table 2 compound properties not recorded (not geologic). No reference list in this packet (it comes later).\nPacket 2 (pp. 33-59) is mostly methods and water-chemistry tables (tables 4-6: field parameters, EDB/DBCP and other VOC concentrations) and plume maps; these are not geologic and were not recorded. Only hydrogeologic statements were recorded. Continues from packet 1.",
+ "notes": "Water-quality report. Packet 1 covers the hydrogeologic setting (pp. 19, 21, 27), the well/spring table (table 3, p. 30) and well descriptions (pp. 29, 31). Wells/springs: one observation per table 3 row; label notes give county number and USGS site ID (site IDs are identifiers, no coordinates were computed). The aquifer column is stored as the interval unit. Table 1 chemistry and table 2 compound properties not recorded (not geologic). No reference list in this packet (it comes later).\nPacket 2 (pp. 33-59) is mostly methods and water-chemistry tables (tables 4-6: field parameters, EDB/DBCP and other VOC concentrations) and plume maps; these are not geologic and were not recorded. Only hydrogeologic statements were recorded. Continues from packet 1.\nPacket 3 (pp. 60-86) is mostly VOC, radium, radon and inorganic concentration tables (tables 6-10), trend graphs, and soil-gas sampler results (table 10, with sampler coordinates); not geologic, not recorded. Recorded only bedrock/aquifer statements and well screen notes. Continues from packet 2.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/sir/2014/5114/pdf/sir2014-5114.pdf",
@@ -85,14 +113,15 @@
   }
  ],
  "summary": {
-  "stored": 235,
+  "stored": 258,
   "quote_match": {
-   "exact": 235
+   "exact": 258
   },
   "verification": {
-   "agree": 160
+   "agree": 162,
+   "unclear": 1
   },
-  "inferred": 4
+  "inferred": 5
  },
  "ingests": [
   {
@@ -130,6 +159,24 @@
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
+  },
+  {
+   "at": "2026-10-06T01:45:08+00:00",
+   "packets": [
+    "packet-03"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-06",
+   "values": 23,
+   "stored": 23,
+   "exact": 23,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 2,
+   "disagree": 0,
+   "unclear": 1,
+   "review_items": 1
   }
  ],
  "units": [
@@ -222,6 +269,107 @@
     "inferred": false,
     "locator": null,
     "quote": "sand with local gravel that overlies a weakly metamorphosed",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "pre-Paleozoic to Middle Cambrian rocks",
+    "source_id": "ngmdb:100555",
+    "page": 81,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "of uranium to groundwater may be the pre-Paleozoic to Middle",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "pre-Paleozoic to Middle Cambrian",
+    "source_id": "ngmdb:100555",
+    "page": 81,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "of uranium to groundwater may be the pre-Paleozoic to Middle",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 251.902,
+     "older_ma": 538.8,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "contacts": {
+    "value": "lie beneath the Mesozoic and Cenozoic rocks of the Crouch and McQueen Branch aquifers",
+    "source_id": "ngmdb:100555",
+    "page": 81,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cambrian rocks that lie beneath the Mesozoic and Cenozoic rocks",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "possible source of uranium to groundwater",
+    "source_id": "ngmdb:100555",
+    "page": 81,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "of uranium to groundwater may be the pre-Paleozoic to Middle",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "bedrock",
+    "source_id": "ngmdb:100555",
+    "page": 81,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "public-supply wells in the McBee area are drilled to “bedrock”",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "lithology": {
+    "value": "generally the slightly metamorphosed clays (slates)",
+    "source_id": "ngmdb:100555",
+    "page": 81,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "(generally the slightly metamorphosed clays (slates)), the use",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "most public-supply wells in the McBee area are drilled to bedrock",
+    "source_id": "ngmdb:100555",
+    "page": 81,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "public-supply wells in the McBee area are drilled to “bedrock”",
     "quote_match": "exact",
     "text_method": "pdf_text",
     "verification": null
@@ -3547,6 +3695,73 @@
      }
     }
    ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "PW3",
+    "source_id": "ngmdb:100555",
+    "page": 62,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "tion of 1,1–DCA in well PW3, most likely screened in the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "shallow, Crouch Branch aquifer",
+      "source_id": "ngmdb:100555",
+      "page": 62,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "shallow, Crouch Branch aquifer, proximal to Well 10 (fig. 19),",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "note": "'most likely screened in'"
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "Well 10",
+    "source_id": "ngmdb:100555",
+    "page": 62,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "shallow, Crouch Branch aquifer, proximal to Well 10 (fig. 19),",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "deeper McQueen Branch aquifer",
+      "source_id": "ngmdb:100555",
+      "page": 62,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "which is screened across the deeper McQueen Branch aquifer,",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    }
+   ]
   }
  ],
  "structures": [],
@@ -4176,6 +4391,172 @@
     "inferred": false,
     "locator": null,
     "quote": "for the Crouch and McQueen Branch aquifers in the McBee",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "upper unit",
+    "source_id": "ngmdb:100555",
+    "page": 65,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "for the upper unit located near Wire Road and S.C. Highway",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "recharge area for the upper unit",
+    "source_id": "ngmdb:100555",
+    "page": 65,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "for the upper unit located near Wire Road and S.C. Highway",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "near Wire Road and S.C. Highway 145 North",
+    "source_id": "ngmdb:100555",
+    "page": 65,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "for the upper unit located near Wire Road and S.C. Highway",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "upper unit",
+    "source_id": "ngmdb:100555",
+    "page": 63,
+    "extraction_method": "llm",
+    "confidence": 0.476,
+    "inferred": true,
+    "locator": null,
+    "quote": "Discharge areas, such as in Cedar Creek Basin, tend to be",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "unclear"
+   },
+   "description": {
+    "value": "Discharge areas, such as in Cedar Creek Basin, tend to be characterized by a large contribution of groundwater from long flow pathways that were recharged farther upgradient decades ago",
+    "source_id": "ngmdb:100555",
+    "page": 63,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Discharge areas, such as in Cedar Creek Basin, tend to be",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Cedar Creek Basin",
+    "source_id": "ngmdb:100555",
+    "page": 63,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Discharge areas, such as in Cedar Creek Basin, tend to be",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "description": {
+    "value": "water table some 160 ft below the injection sites (soil fumigant injection at shallow depths of the soil zone)",
+    "source_id": "ngmdb:100555",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "zone to the water table some 160 ft below the injection sites;",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "McBee area",
+    "source_id": "ngmdb:100555",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "samplers deployed in the McBee area between 2010 and 2012",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "description": {
+    "value": "the enrichment of 228Ra relative to 226Ra indicates a source of thorium local to the area",
+    "source_id": "ngmdb:100555",
+    "page": 70,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "of 228Ra relative to 226Ra indicates a source of thorium local to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "McBee area",
+    "source_id": "ngmdb:100555",
+    "page": 70,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Ra isotopes in groundwater in the McBee area (fig. 25). A",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "description": {
+    "value": "Heron and Johnson (1969) reported that the sediments of the Atlantic Coastal Plain, and specifically those in Chesterfield County, S.C., are characterized by low radioactivity",
+    "source_id": "ngmdb:100555",
+    "page": 70,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "County, S.C., are characterized by low radioactivity.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Chesterfield County, S.C.",
+    "source_id": "ngmdb:100555",
+    "page": 70,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the Atlantic Coastal Plain, and specifically those in Chesterfield",
     "quote_match": "exact",
     "text_method": "pdf_text",
     "verification": null
