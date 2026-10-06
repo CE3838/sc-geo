@@ -8,10 +8,11 @@
  "kind": "publication",
  "schema_version": 1,
  "extracted_at": "2026-10-06T01:41:20+00:00",
- "updated_at": "2026-10-06T01:41:20+00:00",
- "reader": "Claude, Claude Code reading session 2026-10-05",
+ "updated_at": "2026-10-06T01:42:07+00:00",
+ "reader": "Claude, Claude Code reading session 2026-10-06",
  "packets": [
-  "packet-01"
+  "packet-01",
+  "packet-02"
  ],
  "blocks_done": [
   "1",
@@ -47,11 +48,25 @@
   "31",
   "32",
   "33",
-  "34"
+  "34",
+  "35",
+  "36",
+  "37",
+  "38",
+  "39",
+  "40",
+  "41",
+  "42",
+  "43",
+  "44",
+  "45",
+  "46",
+  "47",
+  "48"
  ],
  "blocks_total": 48,
- "complete": false,
- "notes": "Hydrology report on the unsaturated zone; geology is brief (page 10). Monitoring sites recorded as 'other' observations with ground elevations from Table 1 (page 14). Instrument positions, tensions, saturations, tracer rates and conductance curves (pages 14-34) are not recorded; the compacted clayey-sand cap/barrier is engineered fill and its properties are skipped. Figure pages 15-19, 21-23, 25-34 are graphs with garbled text. Ksat table on page 21 has a garbled text layer; units header reads 'Ksat(C/n/S)' (cm/s). Packet 2 continues the report.",
+ "complete": true,
+ "notes": "Hydrology report on the unsaturated zone; geology is brief (page 10). Monitoring sites recorded as 'other' observations with ground elevations from Table 1 (page 14). Instrument positions, tensions, saturations, tracer rates and conductance curves (pages 14-34) are not recorded; the compacted clayey-sand cap/barrier is engineered fill and its properties are skipped. Figure pages 15-19, 21-23, 25-34 are graphs with garbled text. Ksat table on page 21 has a garbled text layer; units header reads 'Ksat(C/n/S)' (cm/s). Packet 2 continues the report.\nContinues packet 1. Tritium concentrations (Table 3, page 37), tracer velocities, model grid details and error analysis are not recorded (not geologic units or aquifer properties). Graph pages 36, 38, 40, 42-44 have garbled labels. References: kept South Carolina site and regional entries; skipped general methods and national references (ASTM, Bowen, Brooks and Corey, Brutsaert, Campbell, Davis and Neuman, Drever, EPA, Freeze and Cherry, Freeze and Witherspoon, Hung, Neff, Purcell, state health department 1984 monitoring report, Thatcher and others, NOAA, Winter).",
  "files": [
   {
    "url": "https://pubs.usgs.gov/wsp/2345/report.pdf",
@@ -62,14 +77,14 @@
   }
  ],
  "summary": {
-  "stored": 54,
+  "stored": 84,
   "quote_match": {
-   "exact": 54
+   "exact": 84
   },
   "verification": {
-   "agree": 15
+   "agree": 18
   },
-  "inferred": 5
+  "inferred": 6
  },
  "ingests": [
   {
@@ -86,6 +101,24 @@
    "quote_not_found": 0,
    "wrong_page": 0,
    "agree": 15,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-10-06T01:42:07+00:00",
+   "packets": [
+    "packet-02"
+   ],
+   "reader": "Claude, Claude Code reading session 2026-10-06",
+   "values": 30,
+   "stored": 30,
+   "exact": 30,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 3,
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
@@ -710,6 +743,51 @@
     "text_method": "pdf_text",
     "verification": null
    }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "WB-0803",
+    "source_id": "ngmdb:25572",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "nearby water-table well WB-0803 (fig. 2)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "water-table well some 13.7 m from the experimental trenches",
+    "source_id": "ngmdb:25572",
+    "page": 41,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "A water-table well",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "some 13.7 m from the experimental trenches",
+    "source_id": "ngmdb:25572",
+    "page": 41,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "some 13.7 m from the experimental trenches provided",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
   }
  ],
  "structures": [
@@ -750,6 +828,48 @@
     "inferred": false,
     "locator": null,
     "quote": "be observed at trench cut sites",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "kind": "contact",
+   "name": {
+    "value": "contact between the surface sand and the undisturbed clayey sand",
+    "source_id": "ngmdb:25572",
+    "page": 40,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "The contact between the surface sand and the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "strike_dip": {
+    "value": "slope (less than 1°) to the east",
+    "source_id": "ngmdb:25572",
+    "page": 40,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "surface although it has a slope (less than 1°) to the east",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "at the experimental trenches",
+    "source_id": "ngmdb:25572",
+    "page": 40,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "at the experimental trenches. Both the flat and the",
     "quote_match": "exact",
     "text_method": "pdf_text",
     "verification": null
@@ -953,7 +1073,362 @@
     "verification": null,
     "normalized": "1983-07"
    }
+  },
+  {
+   "role": {
+    "value": "unsaturated zone",
+    "source_id": "ngmdb:25572",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "investigate water movement in the unsaturated zone at",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "unit": {
+    "value": "undisturbed clayey sand",
+    "source_id": "ngmdb:25572",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "als, respectively: (1) undisturbed clayey sand, 0.30 and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "undisturbed clayey",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "hydraulic_conductivity": {
+    "value": "1.4x 10-7 cm/s (average saturated)",
+    "source_id": "ngmdb:25572",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "1.4x 10~ 7 cm/s; (2) compacted clayey sand, 0.30 and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "average porosity 0.30",
+    "source_id": "ngmdb:25572",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "als, respectively: (1) undisturbed clayey sand, 0.30 and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "role": {
+    "value": "unsaturated zone",
+    "source_id": "ngmdb:25572",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "investigate water movement in the unsaturated zone at",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "unit": {
+    "value": "backfill sand",
+    "source_id": "ngmdb:25572",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "1.5x 10~ 6 cm/s; (3) backfill sand, 0.36 and 4.0x 10~ 3",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "backfill",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "hydraulic_conductivity": {
+    "value": "4.0x 10-3 cm/s (average saturated)",
+    "source_id": "ngmdb:25572",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "1.5x 10~ 6 cm/s; (3) backfill sand, 0.36 and 4.0x 10~ 3",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "average porosity 0.36",
+    "source_id": "ngmdb:25572",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "1.5x 10~ 6 cm/s; (3) backfill sand, 0.36 and 4.0x 10~ 3",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "role": {
+    "value": "recharge to the saturated zone",
+    "source_id": "ngmdb:25572",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "R = recharge to the saturated zone;",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "southeastern half of the site where burial trenches do not exist (undisturbed surface sand)",
+    "source_id": "ngmdb:25572",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "turbed surface sand is present, that is, the southeastern",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "Mass-balance estimates indicate a residual of 43 cm of recharge water to the saturated zone; error in annual recharge is ±17 percent",
+    "source_id": "ngmdb:25572",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "estimates using equation 7 indicate a residual of 43 cm",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "date": {
+    "value": "July 1983 through June 1984",
+    "source_id": "ngmdb:25572",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "From July 1983 through June 1984, total meas-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": "1983-07"
+   }
+  },
+  {
+   "role": {
+    "value": "perched water",
+    "source_id": "ngmdb:25572",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "graphs show that the water in the trenches is perched",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "experimental trench 2 (designed without the clayey-sand barrier)",
+    "source_id": "ngmdb:25572",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "table. At experimental trench 2 (designed without the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "head": {
+    "value": "2.3 m of water ponded on the trench bottom",
+    "source_id": "ngmdb:25572",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "clayey-sand barrier), 2.3 m of water ponded on the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 7.545931758530182,
+     "max_ft": 7.545931758530182,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "description": {
+    "value": "water in the trenches is perched above the water table and is not due to a rising water table; leakage rate from trench 2 of 1 x 10-5 cm/s",
+    "source_id": "ngmdb:25572",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "graphs show that the water in the trenches is perched",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
   }
  ],
- "references": []
+ "references": [
+  {
+   "citation": {
+    "value": "Cahill, J.M., 1982, Hydrology of the low-level radioactive solid waste burial site and vicinity near Barnwell, South Carolina: U.S. Geological Survey Open-File Report 82-863, 101 p.",
+    "source_id": "ngmdb:25572",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cahill, J.M., 1982, Hydrology of the low-level radioactive",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Chem-Nuclear Systems, Inc., 1980, Environmental assessment for the Barnwell low-level radioactive waste disposal facility: Columbia, S.C., Compliance Assistance and Technical Services.",
+    "source_id": "ngmdb:25572",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Chem-Nuclear Systems, Inc., 1980, Environmental assessment",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Cook, James, 1981, Study of the relationship of pH and permeability in the separations area seepage basins: Aiken, S.C., E.I. du Pont de Nemours and Co., Savannah River Laboratory, DPST-81-935, 17 p.",
+    "source_id": "ngmdb:25572",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cook, James, 1981, Study of the relationship of pH and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Dennehy, K.F., and McMahon, P.B., 1985, Hydrologic and micrometeorologic data from an unsaturated zone study at a low-level radioactive waste burial site near Barnwell, South Carolina: U.S. Geological Survey Open-File Report 85-476, 32 p.",
+    "source_id": "ngmdb:25572",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Dennehy, K.F., and McMahon, P.B., 1985, Hydrologic and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Dennehy, K.F., and McMahon, P.B., 1987, Microclimate and actual evapotranspiration in a humid coastal-plain environment: Journal of Hydrology, v. 93 (3-4), p. 295-312.",
+    "source_id": "ngmdb:25572",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "1987, Microclimate and actual evapotranspiration in a",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "authors shown by a dash (same as previous entry)"
+   }
+  },
+  {
+   "citation": {
+    "value": "McDonald, B.B., 1984, General description of the geohydrology and burial trenches at the low-level radioactive waste burial facility near Barnwell, South Carolina: U.S. Geological Survey Open-File Report 84-806, 23 p.",
+    "source_id": "ngmdb:25572",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "McDonald, B.B., 1984, General description of the geohydro-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Siple, G.E., 1967, Geology and ground water of the Savannah River Plant and vicinity, South Carolina: U.S. Geological Survey Water-Supply Paper 1841, 113 p.",
+    "source_id": "ngmdb:25572",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Siple, G.E., 1967, Geology and ground water of the Savannah",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "U.S. Nuclear Regulatory Commission, 1982, Environmental assessment for the Barnwell low-level waste disposal facility: Division of Waste Management, Office of Nuclear Material Safety and Safeguards, NUREG-0879, 247 p.",
+    "source_id": "ngmdb:25572",
+    "page": 47,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "U.S. Nuclear Regulatory Commission, 1982, Environmental",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ]
 }
