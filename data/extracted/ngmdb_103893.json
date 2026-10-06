@@ -8,7 +8,7 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-06T10:56:41+00:00",
- "updated_at": "2026-10-06T10:56:41+00:00",
+ "updated_at": "2026-10-06T10:58:14+00:00",
  "reader": "Claude, scheduled Claude Code session 2026-10-06",
  "packets": [
   "packet-01"
@@ -18,7 +18,7 @@
  ],
  "blocks_total": 1,
  "complete": true,
- "notes": "Single OCR map sheet; the map face is garbled. Units under an alloformation heading are associated with it from the layout and flagged inferred; symbols printed after descriptions likewise. Garbled symbols not recorded: 'QuHabf' (between beach sand and beach ridge sand), '[ aPtas |' (Ladson barrier deposits), 'OP' (Princess Anne estuarine). Corrected text-layer characters ('|' for 1, 'aFpas', 'Pamiico') are flagged inferred or noted. Bodies of water and disturbed ground not recorded as units. The sheet says its products are provided 'as is' without warranty.\nSUBSURFACE: p. 1 gives the elevation range of each alloformation's seaward and landward margins (Silver Bluff 6-10 ft, Princess Anne 10-18 ft, Pamlico 17-25 ft, Ten Mile Hill 25-35 ft, Ladson 35-57 ft), stored as unit descriptions. Drill holes (e.g. 26-373) are plotted with SCGS log numbers but no depths; logs are on file at SCGS. No cross section or structure-contour map on this sheet. Datum: horizontal 1927 North American Datum, contour interval 2 meters; vertical datum for the elevations not stated.",
+ "notes": "Single OCR map sheet; the map face is garbled. Units under an alloformation heading are associated with it from the layout and flagged inferred; symbols printed after descriptions likewise. Garbled symbols not recorded: 'QuHabf' (between beach sand and beach ridge sand), '[ aPtas |' (Ladson barrier deposits), 'OP' (Princess Anne estuarine). Corrected text-layer characters ('|' for 1, 'aFpas', 'Pamiico') are flagged inferred or noted. Bodies of water and disturbed ground not recorded as units. The sheet says its products are provided 'as is' without warranty.\nSUBSURFACE: p. 1 gives the elevation range of each alloformation's seaward and landward margins (Silver Bluff 6-10 ft, Princess Anne 10-18 ft, Pamlico 17-25 ft, Ten Mile Hill 25-35 ft, Ladson 35-57 ft), stored as unit descriptions. Drill holes (e.g. 26-373) are plotted with SCGS log numbers but no depths; logs are on file at SCGS. No cross section or structure-contour map on this sheet. Datum: horizontal 1927 North American Datum, contour interval 2 meters; vertical datum for the elevations not stated.\nSingle OCR map sheet; the map face is garbled. Units under an alloformation heading are associated with it from the layout and flagged inferred; symbols printed after descriptions likewise. Garbled symbols not recorded: 'QuHabf' (between beach sand and beach ridge sand), '[ aPtas |' (Ladson barrier deposits), 'OP' (Princess Anne estuarine). Corrected text-layer characters ('|' for 1, 'aFpas', 'Pamiico') are flagged inferred or noted. Bodies of water and disturbed ground not recorded as units. The sheet says its products are provided 'as is' without warranty.\nSUBSURFACE: p. 1 gives the elevation range of each alloformation's seaward and landward margins (Silver Bluff 6-10 ft, Princess Anne 10-18 ft, Pamlico 17-25 ft, Ten Mile Hill 25-35 ft, Ladson 35-57 ft), stored as unit descriptions. Drill holes (e.g. 26-373) are plotted with SCGS log numbers but no depths; logs are on file at SCGS. No cross section or structure-contour map on this sheet. Datum: horizontal 1927 North American Datum, contour interval 2 meters; vertical datum for the elevations not stated.",
  "files": [
   {
    "url": "https://ngmdb.usgs.gov/img2/103000_103999/103893_1",
@@ -34,6 +34,7 @@
    "exact": 93
   },
   "verification": {
+   "unclear": 2,
    "agree": 11
   },
   "inferred": 14
@@ -56,6 +57,24 @@
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
+  },
+  {
+   "at": "2026-10-06T10:58:14+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-06",
+   "values": 93,
+   "stored": 93,
+   "exact": 93,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 11,
+   "disagree": 0,
+   "unclear": 2,
+   "review_items": 2
   }
  ],
  "units": [
@@ -348,13 +367,13 @@
     "source_id": "ngmdb:103893",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.581,
+    "confidence": 0.479,
     "inferred": true,
     "locator": "https://ngmdb.usgs.gov/img2/103000_103999/103893_1",
     "quote": "Thickness | to 40 feet.",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
+    "verification": "unclear",
     "note": "text layer reads '|' for '1'",
     "normalized": {
      "min_ft": 1.0,
@@ -521,13 +540,13 @@
     "source_id": "ngmdb:103893",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.581,
+    "confidence": 0.479,
     "inferred": true,
     "locator": "https://ngmdb.usgs.gov/img2/103000_103999/103893_1",
     "quote": "(Kaczorowski, 1977). Thickness | to 20 feet.",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
+    "verification": "unclear",
     "note": "text layer reads '|' for '1'",
     "normalized": {
      "min_ft": 1.0,

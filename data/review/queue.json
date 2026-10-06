@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 18,
+ "count": 22,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -236,6 +236,58 @@
    "verify": {
     "verdict": "unclear",
     "note": "this description is printed after the disclaimer in OCR column order; its alloformation (Ten Mile Hill vs. another) cannot be confirmed from the text alone"
+   }
+  },
+  {
+   "source_id": "ngmdb:103893",
+   "path": "units[3].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "Thickness | to 40 feet.",
+   "added_at": "2026-10-06T10:58:14+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Thickness | to 40 feet.'; value read as '1 to 40 feet' with '|' taken as '1'; check the digit against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:103893",
+   "path": "units[5].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 20 feet",
+   "page": 1,
+   "quote": "(Kaczorowski, 1977). Thickness | to 20 feet.",
+   "added_at": "2026-10-06T10:58:14+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads '(Kaczorowski, 1977). Thickness | to 20 feet.'; value read as '1 to 20 feet' with '|' taken as '1'; check the digit against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99137",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 60 feet",
+   "page": 1,
+   "quote": "Thickness | to 60 feet.",
+   "added_at": "2026-10-06T10:58:15+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Thickness | to 60 feet.'; value read as '1 to 60 feet' with '|' taken as '1'; check the digit against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99137",
+   "path": "units[3].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "Thickness | to 40 feet.",
+   "added_at": "2026-10-06T10:58:15+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Thickness | to 40 feet.'; value read as '1 to 40 feet' with '|' taken as '1'; check the digit against the map image"
    }
   }
  ]

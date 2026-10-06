@@ -8,7 +8,7 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-06T10:57:30+00:00",
- "updated_at": "2026-10-06T10:57:30+00:00",
+ "updated_at": "2026-10-06T10:58:15+00:00",
  "reader": "Claude, scheduled Claude Code session 2026-10-06",
  "packets": [
   "packet-01"
@@ -18,7 +18,7 @@
  ],
  "blocks_total": 1,
  "complete": true,
- "notes": "Single OCR map sheet; the map face is garbled. Flood plain deposits and meander scars under a formation heading are associated with it from the layout and flagged inferred. Symbols: Qe and QPldms are on the same line as their descriptions; QPphr is printed after the Penholoway flood plain deposits (also once beside the Ten Mile Hill flood plain text, so not assigned there); 'QPidms' on the map face not recorded. Thicknesses read '|' for 1 are flagged inferred. Bodies of standing water not recorded as a unit. Portions of Georgia not mapped. The sheet says its products are provided 'as is' without warranty; it has no reference list.\nSUBSURFACE: p. 1 gives elevation ranges of each unit's seaward and landward margins (Ten Mile Hill beds 25-35 ft, Ladson Formation 35-57 ft, Penholoway Formation 57-70 ft), stored as unit descriptions. Drill holes 25-186 and 25-187 are plotted with SCGS log numbers but no depths; logs are on file at SCGS. No cross section or structure-contour map. Datum: horizontal 1927 North American Datum, contour interval 10 feet; vertical datum for the elevations not stated.",
+ "notes": "Single OCR map sheet; the map face is garbled. Flood plain deposits and meander scars under a formation heading are associated with it from the layout and flagged inferred. Symbols: Qe and QPldms are on the same line as their descriptions; QPphr is printed after the Penholoway flood plain deposits (also once beside the Ten Mile Hill flood plain text, so not assigned there); 'QPidms' on the map face not recorded. Thicknesses read '|' for 1 are flagged inferred. Bodies of standing water not recorded as a unit. Portions of Georgia not mapped. The sheet says its products are provided 'as is' without warranty; it has no reference list.\nSUBSURFACE: p. 1 gives elevation ranges of each unit's seaward and landward margins (Ten Mile Hill beds 25-35 ft, Ladson Formation 35-57 ft, Penholoway Formation 57-70 ft), stored as unit descriptions. Drill holes 25-186 and 25-187 are plotted with SCGS log numbers but no depths; logs are on file at SCGS. No cross section or structure-contour map. Datum: horizontal 1927 North American Datum, contour interval 10 feet; vertical datum for the elevations not stated.\nSingle OCR map sheet; the map face is garbled. Flood plain deposits and meander scars under a formation heading are associated with it from the layout and flagged inferred. Symbols: Qe and QPldms are on the same line as their descriptions; QPphr is printed after the Penholoway flood plain deposits (also once beside the Ten Mile Hill flood plain text, so not assigned there); 'QPidms' on the map face not recorded. Thicknesses read '|' for 1 are flagged inferred. Bodies of standing water not recorded as a unit. Portions of Georgia not mapped. The sheet says its products are provided 'as is' without warranty; it has no reference list.\nSUBSURFACE: p. 1 gives elevation ranges of each unit's seaward and landward margins (Ten Mile Hill beds 25-35 ft, Ladson Formation 35-57 ft, Penholoway Formation 57-70 ft), stored as unit descriptions. Drill holes 25-186 and 25-187 are plotted with SCGS log numbers but no depths; logs are on file at SCGS. No cross section or structure-contour map. Datum: horizontal 1927 North American Datum, contour interval 10 feet; vertical datum for the elevations not stated.",
  "files": [
   {
    "url": "https://ngmdb.usgs.gov/img2/99000_99999/99137_1",
@@ -34,7 +34,8 @@
    "exact": 56
   },
   "verification": {
-   "agree": 7
+   "agree": 7,
+   "unclear": 2
   },
   "inferred": 9
  },
@@ -56,6 +57,24 @@
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
+  },
+  {
+   "at": "2026-10-06T10:58:15+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-06",
+   "values": 56,
+   "stored": 56,
+   "exact": 56,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 7,
+   "disagree": 0,
+   "unclear": 2,
+   "review_items": 2
   }
  ],
  "units": [
@@ -242,13 +261,13 @@
     "source_id": "ngmdb:99137",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.581,
+    "confidence": 0.479,
     "inferred": true,
     "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99137_1",
     "quote": "Thickness | to 60 feet.",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
+    "verification": "unclear",
     "note": "text layer reads '|' for '1'",
     "normalized": {
      "min_ft": 1.0,
@@ -322,13 +341,13 @@
     "source_id": "ngmdb:99137",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.581,
+    "confidence": 0.479,
     "inferred": true,
     "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99137_1",
     "quote": "Thickness | to 40 feet.",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
+    "verification": "unclear",
     "note": "text layer reads '|' for '1'",
     "normalized": {
      "min_ft": 1.0,
