@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 28,
+ "count": 32,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -363,6 +363,58 @@
    "page": 1,
    "quote": "parallel to the dominant direction of longshore transport. Thickness is | to 15 feet.",
    "added_at": "2026-10-06T22:58:14+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit; read as 1, needs a check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100325",
+   "path": "units[3].thickness",
+   "problem": "verify_unclear",
+   "value": "less than 1 foot",
+   "page": 1,
+   "quote": "the subaqueous beach face. Thickness less than | foot.",
+   "added_at": "2026-10-06T22:59:23+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit; read as 1, needs a check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100325",
+   "path": "units[4].lithology",
+   "problem": "verify_unclear",
+   "value": "Black (N1) to 5GY 2/1 (Dark greenish-black), soupy, organic-rich (peaty) muds and fine quartz sand",
+   "page": 1,
+   "quote": "Freshwater marsh (Holocene) — Black (N1) to SGY 2/1 (Dark greenish-black), soupy,",
+   "added_at": "2026-10-06T22:59:23+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints 'SGY 2/1'; read as 5GY 2/1, needs a check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100325",
+   "path": "units[6].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "salinity, and rising tides importing high salinity waters. Thickness | to 40 feet.",
+   "added_at": "2026-10-06T22:59:23+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit; read as 1, needs a check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100325",
+   "path": "units[7].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 15 feet",
+   "page": 1,
+   "quote": "system if enough material is accreted to remain above high tide. Thickness | to 15 feet.",
+   "added_at": "2026-10-06T22:59:23+00:00",
    "verify": {
     "verdict": "unclear",
     "note": "OCR prints '|' in place of a digit; read as 1, needs a check against the map image"
