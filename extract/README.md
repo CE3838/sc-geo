@@ -29,6 +29,7 @@ extract/ingest.py   validate, check every quote on its page, normalize,
 | `schema.json`, `schema.py` | What one document's extraction contains; standard-library validator |
 | `patterns.py` | Deterministic normalizers used after the model: Munsell, lengths to feet, signed elevations, vertical datums, USCS, SPT N, strike/dip, coordinates (decimal, DMS, SC State Plane NAD83), ages to Ma, unit names to Geolex |
 | `ingest.py` | `python -m extract.ingest result.json [--verify verify.json]` |
+| `renormalize.py` | `python -m extract.renormalize [--write]`: recompute normalized fields of committed files (dry run by default) |
 | `next_batch.py` | `python -m extract.next_batch --n 5`: next pending documents, building text and packets on the fly |
 | `prompts/` | Instructions for the reading and verifying passes |
 | `SESSION.md` | Steps for a scheduled Claude Code session (used as the Routine prompt) |
@@ -200,7 +201,8 @@ stored like every other value, and every one of them is in the verify plan.
 Normalized forms: `elevation`, `top_elevation` and `base_elevation` keep
 their sign (`patterns.elevation_ft`: "-62 ft" and "62 ft below sea level"
 are both -62), and so does a groundwater `head`; a head given relative to land
-surface stays as printed, marked `relative_to: "land surface"`; `depth`, `interval`, `length` and distances are lengths;
+surface stays as printed, marked `relative_to: "land surface"` and
+`direction` (below, above, or null when the printed sign carries it); `depth`, `interval`, `length` and distances are lengths;
 `datum` maps to NGVD29, NAVD88, MSL, land surface or unknown
 (`patterns.vertical_datum`; the value as printed is kept, and no datum is
 converted to another); contour labels and vertical exaggeration are numbers.
@@ -218,3 +220,12 @@ stated) and every assumption made (such as a western longitude with no sign).
 Ambiguous text (State Plane without a datum, NAD27 without its zone, two
 places, two latitudes) gives no derived value. The value as printed is
 unchanged.
+
+## Re-normalizing committed files
+
+When a normalizer changes, `python -m extract.renormalize` recomputes
+`normalized` and `derived_coordinates` in `data/extracted/` from each stored
+value's own value and units, with ingest's functions. It never changes a
+value as read, its quote, page, provenance, confidence or verification, and
+re-reads nothing. It is a dry run by default (a JSON report of every change);
+`--write` writes the files.

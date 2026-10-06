@@ -224,11 +224,14 @@ def normalized(path: str, val: dict, lexicon: Lexicon | None):
     if field == "head":
         # A head is an elevation and keeps its sign. One given relative to land surface stays as
         # printed ("12 ft below land surface" is +12, "-15 ft with reference to land surface" is -15),
-        # marked relative_to land surface, never flipped into an elevation.
+        # marked relative_to land surface with the printed direction (below/above, or None when the
+        # sign carries it), never flipped into an elevation.
         if patterns.vertical_datum(x) == "land surface":
             head = patterns.elevation_ft(x, default_unit=val.get("units")) \
                 or patterns.length_ft(x, default_unit=val.get("units"))
-            return head and head | {"relative_to": "land surface"}
+            sense = re.search(r"(?i)\b(below|above)\b[^.;]{0,30}?\b(?:land|ground)\s+surface", str(x))
+            return head and head | {"relative_to": "land surface",
+                                    "direction": sense.group(1).lower() if sense else None}
         return patterns.elevation_ft(x, default_unit=val.get("units"))
     if field == "datum":
         return patterns.vertical_datum(x)

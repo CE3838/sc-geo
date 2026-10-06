@@ -275,8 +275,14 @@ def test_head_keeps_its_sign(value, units, lo):
 def test_head_given_as_depth_below_land_surface_is_not_flipped():
     n = ingest.normalized("groundwater[0].head", v("12 ft below land surface", 1, "q"), None)
     assert n["min_ft"] == 12.0 and n["max_ft"] == 12.0 and n["relative_to"] == "land surface"
+    assert n["direction"] == "below"
+
+
+def test_head_above_land_surface_says_so():
+    n = ingest.normalized("groundwater[0].head", v("106 feet (ft) above land surface", 1, "q"), None)
+    assert n["min_ft"] == 106.0 and n["relative_to"] == "land surface" and n["direction"] == "above"
 
 
 def test_head_printed_relative_to_land_surface_keeps_the_printed_sign():
     n = ingest.normalized("groundwater[0].head", v("-15.04 feet with reference to land surface", 1, "q"), None)
-    assert n["min_ft"] == -15.04 and n["relative_to"] == "land surface"
+    assert n["min_ft"] == -15.04 and n["relative_to"] == "land surface" and n["direction"] is None  # signed
