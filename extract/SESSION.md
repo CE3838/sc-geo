@@ -29,7 +29,10 @@ minutes of OCR, so `next_batch` can take a while on them. Values read from
 them carry the image URL as their locator.
 
 To pick specific documents, take them from `config/reading_list.json`
-(records whose titles are geology): `python -m extract.prep --todo` lists the
+(online records ranked by South Carolina geologic relevance, Charleston County
+first; `python -m extract.reading_list` rebuilds it, and
+`config/reading_list_scores.json` gives each record's score and, for records
+left out, the reason): `python -m extract.prep --todo` lists the
 ones not yet read, and `python -m extract.next_batch --id <ID> --n 1` hands
 out one of them. OCR can run ahead as a background job with no reading
 (`python -m extract.prep --next 10`, one document at a time, resumable); it
