@@ -8,10 +8,11 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-06T01:41:32+00:00",
- "updated_at": "2026-10-06T01:41:32+00:00",
- "reader": "Claude, scheduled Claude Code session 2026-10-05",
+ "updated_at": "2026-10-06T01:43:08+00:00",
+ "reader": "Claude, scheduled Claude Code session 2026-10-06",
  "packets": [
-  "packet-01"
+  "packet-01",
+  "packet-02"
  ],
  "blocks_done": [
   "1",
@@ -63,11 +64,38 @@
   "49",
   "50",
   "51",
-  "52"
+  "52",
+  "53",
+  "54",
+  "55",
+  "56",
+  "57",
+  "58",
+  "59",
+  "60",
+  "61",
+  "62",
+  "63",
+  "64",
+  "65",
+  "66",
+  "67",
+  "68",
+  "69",
+  "70",
+  "71",
+  "72",
+  "73",
+  "74",
+  "75",
+  "76",
+  "77",
+  "78",
+  "79"
  ],
  "blocks_total": 77,
- "complete": false,
- "notes": "Table 1 correlation chart (p. 15) is garbled OCR and was skipped; table 2 hydraulic conductivities (p. 39) are partly garbled, so conductivities are taken from the text. Geologic and hydrogeologic sections and maps (figs. 5-20) give only labels. Table 3 (p. 42): OCR reads 'A' for '4' in well numbers and values; corrected values are noted per well; SDS-4A has a single water level whose column is unclear and was skipped. Thickness of the green clay differs: 2 to 6 ft (pp. 6, 23) versus averaging about 10 ft (p. 40); tan clay 2 to 10 ft (p. 25) versus 0 to 10 ft (pp. 6, 36). Abstract conductivity exponents are garbled and skipped. Continues in packet-02. No image-only pages.",
+ "complete": true,
+ "notes": "Table 1 correlation chart (p. 15) is garbled OCR and was skipped; table 2 hydraulic conductivities (p. 39) are partly garbled, so conductivities are taken from the text. Geologic and hydrogeologic sections and maps (figs. 5-20) give only labels. Table 3 (p. 42): OCR reads 'A' for '4' in well numbers and values; corrected values are noted per well; SDS-4A has a single water level whose column is unclear and was skipped. Thickness of the green clay differs: 2 to 6 ft (pp. 6, 23) versus averaging about 10 ft (p. 40); tan clay 2 to 10 ft (p. 25) versus 0 to 10 ft (pp. 6, 36). Abstract conductivity exponents are garbled and skipped. Continues in packet-02. No image-only pages.\nContinues from packet-01. Daily gage heights (tables 4, 5), water-chemistry table 6, the laboratory salt-solution tables (7, 8 except sediment properties) and figs. 21-27 (garbled plots) were not recorded value by value. Summary hydraulic conductivities for the Barnwell and McBean aquifers (p. 72) are garbled and were skipped. The summary (p. 71) places the calcareous zone at the bottom of the McBean Formation, while p. 23 describes it above the green clay. References: general chemistry, methods and non-South Carolina references were skipped (Alperovitch, APHA, Arora, August, Baedecker, Bechtel, Bowles, Drever, Fishman, Freeze, Hayes, Hem, May, Plummer, Tardy, van Olphen, Wood). No image-only pages.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/wri/1988/4221/report.pdf",
@@ -78,12 +106,13 @@
   }
  ],
  "summary": {
-  "stored": 231,
+  "stored": 331,
   "quote_match": {
-   "exact": 231
+   "exact": 331
   },
   "verification": {
-   "agree": 115
+   "agree": 133,
+   "disagree": 1
   },
   "inferred": 9
  },
@@ -105,6 +134,24 @@
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
+  },
+  {
+   "at": "2026-10-06T01:43:08+00:00",
+   "packets": [
+    "packet-02"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-06",
+   "values": 100,
+   "stored": 100,
+   "exact": 100,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 18,
+   "disagree": 1,
+   "unclear": 0,
+   "review_items": 1
   }
  ],
  "units": [
@@ -1337,6 +1384,114 @@
      "inferred": true,
      "source": "International Chronostratigraphic Chart v2023/09"
     }
+   }
+  },
+  {
+   "name": {
+    "value": "Barnwell Group",
+    "source_id": "ngmdb:47117",
+    "page": 65,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Table 8. Properties of Barnwell sediments used in laboratory study",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Barnwell",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "description": {
+    "value": "sand fraction 85-90 weight percent (quartz, kaolinite as aggregates, mica, feldspar); silt and clay fraction 10-15 weight percent (kaolinite, quartz, mica, hematite); bulk density 93.6 lbs/ft3; total porosity 42 percent (laboratory samples)",
+    "source_id": "ngmdb:47117",
+    "page": 65,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Sand   85-90   Quartz, kaolinite",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "lithology": {
+    "value": "very little, if any, expandable clay",
+    "source_id": "ngmdb:47117",
+    "page": 67,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "there is very little, if any,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "name": {
+    "value": "upland unit",
+    "source_id": "ngmdb:47117",
+    "page": 62,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "within the upland unit generally are more sandy",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "generally more sandy and lower clay content than the sediments of the Barnwell Group",
+    "source_id": "ngmdb:47117",
+    "page": 62,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "generally are more sandy and have a lower clay",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "calcareous zone",
+    "source_id": "ngmdb:47117",
+    "page": 71,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "identification of a calcareous zone at the bottom of the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "calcareous",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "description": {
+    "value": "at the bottom of the McBean Formation; present east of F Area (well FC-3A) and identified in SDS wells",
+    "source_id": "ngmdb:47117",
+    "page": 71,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The calcareous zone is present east of F Area (well",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
    }
   }
  ],
@@ -3158,6 +3313,146 @@
     "note": "September 1986 column of table 3",
     "normalized": "1986-09"
    }
+  },
+  {
+   "kind": "other",
+   "label": {
+    "value": "McQueens Branch near S Area at Savannah River Plant, S.C. (021973010) streamflow gaging station",
+    "source_id": "ngmdb:47117",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gage height data collected at McQueens Branch near S Area at",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "location": {
+    "value": "Lat 33°18*34\", long 81°38'02* f , Aiken County, on left bank, 0.75 mile northeast of intersection of Savannah River Plant Roads F and 4",
+    "source_id": "ngmdb:47117",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Location: Lat 33°18*34\", long 81°38'02* f , Aiken County, on left bank,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "OCR symbols in the coordinates are copied as printed"
+   },
+   "elevation": {
+    "value": "168 feet above sea level (from topographic map)",
+    "source_id": "ngmdb:47117",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Elevation of gage is 168 feet above",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "min_ft": 168.0,
+     "max_ft": 168.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "date": {
+    "value": "February 25, 1986 to June 27, 1986",
+    "source_id": "ngmdb:47117",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Period of record: February 25, 1986 to June 27, 1986",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": "1986-02-25"
+   }
+  },
+  {
+   "kind": "other",
+   "label": {
+    "value": "Crouch Branch near H Area (021973012) streamflow gaging station",
+    "source_id": "ngmdb:47117",
+    "page": 54,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gage height data collected at Crouch Branch near H Area at",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "location": {
+    "value": "Lat 33 0 17*57\", long 81 0 39*34\", Aiken County, on left bank, 1.0 mile northwest of H Area, 1.0 mile northeast of F Area, 1,500 feet from confluence with Upper Three Runs Creek",
+    "source_id": "ngmdb:47117",
+    "page": 54,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "mile northwest of H Area, 1.0 mile northeast of F Area, 1,500",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "OCR symbols in the coordinates are copied as printed",
+    "normalized": {
+     "lat": 33.00472222222222,
+     "lon": -81.01083333333334,
+     "format": "dms",
+     "hemisphere_inferred": true
+    }
+   },
+   "elevation": {
+    "value": "150 feet above sea level (from topographic map)",
+    "source_id": "ngmdb:47117",
+    "page": 54,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Elevation of gage is 150 feet above",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "min_ft": 150.0,
+     "max_ft": 150.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "date": {
+    "value": "February 25, 1986 to November 17, 1986",
+    "source_id": "ngmdb:47117",
+    "page": 54,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Period of record: February 25, 1986 to November 17, 1986",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": "1986-02-25"
+   }
   }
  ],
  "structures": [
@@ -3860,7 +4155,1256 @@
     "text_method": "pdf_text",
     "verification": null
    }
+  },
+  {
+   "location": {
+    "value": "Upper Three Runs within the study area",
+    "source_id": "ngmdb:47117",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The results of the seepage investigation for that part of Upper Three",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "date": {
+    "value": "March 19, 1986",
+    "source_id": "ngmdb:47117",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "during a low\nflow period on March 19, 1986",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": "1986-03-19"
+   },
+   "description": {
+    "value": "seepage investigation: average gain in streamflow 9.3 (ft3/s)/mi of stream channel; ground-water contribution constant throughout the length measured",
+    "source_id": "ngmdb:47117",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the average gain in streamflow was",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "location": {
+    "value": "McQueens Branch",
+    "source_id": "ngmdb:47117",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "McQueens Branch, the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "date": {
+    "value": "March 19, 1986",
+    "source_id": "ngmdb:47117",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "March 19, 1986",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": "1986-03-19"
+   },
+   "description": {
+    "value": "gained ground water at an average rate of 0.65 (ft3/s)/mi of stream length",
+    "source_id": "ngmdb:47117",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "0.65 (ft /s)/mi of stream length",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "location": {
+    "value": "Crouch Branch",
+    "source_id": "ngmdb:47117",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Crouch Branch gained ground water at an",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "date": {
+    "value": "March 19, 1986",
+    "source_id": "ngmdb:47117",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "March 19, 1986",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": "1986-03-19"
+   },
+   "description": {
+    "value": "gained ground water at an average rate of 0.56 (ft3/s)/mi of stream length",
+    "source_id": "ngmdb:47117",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "average rate of 0.56 (ft /s)/mi of stream length",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "McBean aquifer",
+    "source_id": "ngmdb:47117",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "calcareous zone in the McBean aquifer",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "unit": {
+    "value": "calcareous zone",
+    "source_id": "ngmdb:47117",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "This is about the same altitude as the base of the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "calcareous",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "location": {
+    "value": "McQueens Branch between tributaries 4 and 5; streambed altitude about 165 ft",
+    "source_id": "ngmdb:47117",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "between tributaries 4 and 5 of McQueens Branch",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "ground water entered the stream at an equivalent rate of 1.68 (ft3/s)/mi; higher discharge possibly from a more permeable interval in the calcareous zone",
+    "source_id": "ngmdb:47117",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Ground water entered the stream at an equivalent rate of 1.68",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Congaree aquifer",
+    "source_id": "ngmdb:47117",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The top of the Congaree aquifer is at an altitude of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Crouch Branch between the gage and tributary 2; top of aquifer at approximately 160 ft",
+    "source_id": "ngmdb:47117",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "approximately 160 ft in this area",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "the stream probably has intercepted the more permeable Congaree aquifer, which discharges ground water at a greater rate than the overlying strata",
+    "source_id": "ngmdb:47117",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "permeable Congaree aquifer which discharges ground water at a greater rate",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "upper part of the Barnwell-McBean aquifer",
+    "source_id": "ngmdb:47117",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The mixed-ion water at SDS-20C is from the upper part of the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "SDS-20C",
+    "source_id": "ngmdb:47117",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The mixed-ion water at SDS-20C is from the upper part of the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "acidic mixed-ion water (pH 6.04, dissolved oxygen 8.8 mg/L, dissolved solids 21 mg/L), characteristic of recharge waters",
+    "source_id": "ngmdb:47117",
+    "page": 60,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "relatively high with a pH of 6.04, dissolved oxygen is relatively high (8.8",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Congaree aquifer and lower part of the Barnwell-McBean aquifer",
+    "source_id": "ngmdb:47117",
+    "page": 60,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The calcium bicarbonate water is from the Congaree aquifer and the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "calcium-bicarbonate water, pH 7.81 to 8.40, dissolved solids 92 to 175 mg/L",
+    "source_id": "ngmdb:47117",
+    "page": 60,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "mixed-ion water, with measured values of pH ranging from 7.81 to 8.40.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Barnwell-McBean aquifer",
+    "source_id": "ngmdb:47117",
+    "page": 71,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Barnwell-McBean aquifer is highly dissected by area streams.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "highly dissected by area streams; under water-table conditions and can be perched locally; inflow from infiltrating precipitation and lateral flow from the south; discharge to local streams and as leakage through the green-clay confining unit",
+    "source_id": "ngmdb:47117",
+    "page": 71,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "in this aquifer is under water-table conditions and can be perched locally.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "tan-clay confining unit",
+    "source_id": "ngmdb:47117",
+    "page": 72,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The head difference across the tan-clay confining unit, which separates the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "head difference across the tan-clay confining unit, between the Barnwell and McBean aquifers, about 2 ft",
+    "source_id": "ngmdb:47117",
+    "page": 72,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Barnwell from the McBean aquifer, is about 2 ft.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "green-clay confining unit",
+    "source_id": "ngmdb:47117",
+    "page": 72,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "The decrease in hydraulic head across the green-clay confining unit,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "description": {
+    "value": "decrease in hydraulic head across the green-clay confining unit approximately 50 ft",
+    "source_id": "ngmdb:47117",
+    "page": 72,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "which separates the Congaree aquifer from the McBean aquifer, is",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Congaree aquifer",
+    "source_id": "ngmdb:47117",
+    "page": 72,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Congaree aquifer is the deepest aquifer included in this",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "hydraulic_conductivity": {
+    "value": "approximately 10-5 ft/s (average)",
+    "source_id": "ngmdb:47117",
+    "page": 72,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Its average hydraulic conductivity is approximately",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "Upper Three Runs is the only stream to incise this aquifer within the study area; flow seems to be to the northwest",
+    "source_id": "ngmdb:47117",
+    "page": 72,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Upper Three Runs is the only stream to incise this aquifer",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "unit": {
+    "value": "Barnwell Group",
+    "source_id": "ngmdb:47117",
+    "page": 64,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Values obtained in field measurements conducted by",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Barnwell",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "description": {
+    "value": "field bulk density 96 to 120 lb per ft3 and porosity 26 to 46 percent (D'Appolonia, 1981, 1982); laboratory salt-solution column tests reduced permeability to about 4 to 10 percent of baseline",
+    "source_id": "ngmdb:47117",
+    "page": 64,
+    "extraction_method": "llm",
+    "confidence": 0.34,
+    "inferred": false,
+    "locator": null,
+    "quote": "bulk density ranged from 96 to 120 Ib.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "disagree"
+   }
   }
  ],
- "references": []
+ "references": [
+  {
+   "citation": {
+    "value": "Buie, B.F., 1978, The Huber Formation of eastern central Georgia, in Shorter contributions to the geology of Georgia: Georgia Geologic Survey Bulletin 93, p. 1-7.",
+    "source_id": "ngmdb:47117",
+    "page": 74,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Buie, B.F., 1978, The Huber Formation of eastern central Georgia, in",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Buie, B.F., 1980, Kaolin deposits and the Cretaceous-Tertiary boundary in east-central Georgia, in Frey, R.W., ed., Excursions in Southeastern Geology: Geological Society of America Field Trip Guidebook, 1980 Annual Meeting, v. 2, p. 311-322.",
+    "source_id": "ngmdb:47117",
+    "page": 74,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "1980, Kaolin deposits and the Cretaceous-Tertiary boundary in",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Christensen, E.J., 1983, Technical Summary of Groundwater Quality Protection Program at Savannah River Plant, Volume II, DP-1653, E.I. du Pont de Nemours and Co., Savannah River Laboratory, Aiken, SC, 114 p.",
+    "source_id": "ngmdb:47117",
+    "page": 74,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Christensen, E.J., 1983, Technical Summary of Groundwater Quality",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Christensen, E.J., and Gordon, D.E., 1983. Technical Summary of Groundwater Quality Protection Program at Savannah River Plant, DPST-83 829, E. I. du Pont de Nemours and Co., Savannah River Laboratory, Aiken, SC, 487 p.",
+    "source_id": "ngmdb:47117",
+    "page": 75,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Christensen, E.J., and Gordon, D.E., 1983. Technical Summary of Groundwater",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Christl, R.J., 1964, Storage of radioactive wastes in basement rock beneath the Savannah River Plant: E.I. DuPont de Nemours and Co., Report DP-844, 105 p.",
+    "source_id": "ngmdb:47117",
+    "page": 75,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Christl, R.J., 1964, Storage of radioactive wastes in basement rock beneath",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Colquhoun, D.J., and Johnson, H.S., Jr., 1968, Tertiary sea level fluctuation in South Carolina: Palaeogeography, Palaeoclimatology, Palaeoecology, v. 5, no. 1, p. 105-126.",
+    "source_id": "ngmdb:47117",
+    "page": 75,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Colquhoun, D.J., and Johnson, H.S., Jr., 1968, Tertiary sea level",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Colquhoun, D.J., Oldham, R.W., Bishop, J.W., and Howell, P.O., 1982, Updip delineation of the Tertiary Limestone Aquifer, S.C.: Clemson University, Water Resources Research Institute, Report No. 97, 93 p.",
+    "source_id": "ngmdb:47117",
+    "page": 75,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Colquhoun, D.J., Oldham, R.W., Bishop, J.W., and Howell, P.O., 1982, Updip",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Colquhoun, D.J., Woollen, I.D., Van Nieuwenhuise, D.S., Padgett, G.G., Oldham, R.W., Boylan, D.C., Bishop, J.W., and Howell, P.D., 1983, Surface and subsurface stratigraphy, structure and aquifers of the South Carolina Coastal Plain: Report to the Department of Health and Environmental Control, Ground Water Protection Division, published through the Office of the Governor, State of South Carolina, S.C., 78 p.",
+    "source_id": "ngmdb:47117",
+    "page": 75,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Colquhoun, D.J., Woollen, I.D., Van Nieuwenhuise, D.S., Padgett, G.G.,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Colquhoun, D.J., and Steele, K.B., 1985, Chronostratigraphy and hydrostratigraphy of the northwestern South Carolina Coastal Plain: Project No. G868-05, Annual Cooperative Grant Agreement No. 13040 R-83-591, Interum Technical Report to Water Resources Research Institute, Clemson University, Clemson, South Carolina, 15 p.",
+    "source_id": "ngmdb:47117",
+    "page": 75,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Colquhoun, D.J., and Steele, K.B., 1985, Chronostratigraphy and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Cook, James R., 1986, Hydrogeologic data from Z Area: E. I. du Pont de Nemours and Co., Savannah River Laboratory, DPST-86-320, 113 p.",
+    "source_id": "ngmdb:47117",
+    "page": 75,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cook, James R., 1986, Hydrogeologic data from Z Area: E. I. du Pont de",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Cooke, C.W., 1936, Geology of the Coastal Plain of South Carolina:   U.S. Geological Survey Bulletin 867, 196 p.",
+    "source_id": "ngmdb:47117",
+    "page": 75,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cooke, C.W., 1936, Geology of the Coastal Plain of South Carolina:   U.S.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Cooke, C.W., and MacNeil, F.S., 1952, Tertiary stratigraphy of South Carolina: U.S. Geological Survey Professional Paper 243-B, p. 19-29.",
+    "source_id": "ngmdb:47117",
+    "page": 75,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cooke, C.W., and MacNeil, F.S., 1952, Tertiary stratigraphy of South",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Cooke, C.W., and Shearer, H.K., 1918, Deposits of Claiborne and Jackson age in Georgia: U.S. Geological Survey Professional Paper 120, p. 41-81.",
+    "source_id": "ngmdb:47117",
+    "page": 75,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cooke, C.W., and Shearer, H.K., 1918, Deposits of Claiborne and Jackson age",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Daniels, D.L., 1974, Geologic interpretation of geophysical maps, central Savannah River area, South Carolina and Georgia: U.S. Geological Survey Geophysical Investigations Map GP-893, 3 sheets.",
+    "source_id": "ngmdb:47117",
+    "page": 75,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Daniels, D.L., 1974, Geologic interpretation of geophysical maps,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "D'Appolonia, 1981, Boring and instrument installation, DWFP salt disposal site, E. I. du Pont Nemours and Co., Savannah River Laboratory, Aiken, SC, 37 p.",
+    "source_id": "ngmdb:47117",
+    "page": 75,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "D'Appolonia, 1981, Boring and instrument installation, DWFP salt disposal",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "D'Appolonia, 1982, Preliminary Safety Analysis-Defense Waste Processing Facility, Volumes 1-4: E. I. du Pont de Nemours and Company, Savannah River Laboratory, DPST-82-675.",
+    "source_id": "ngmdb:47117",
+    "page": 75,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "- 1982, Preliminary Safety Analysis-Defense Waste Processing Facility,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Dennehy, K.F., and McMahon, P.B., 1987, Water movement in the unsaturated zone at a low-level radioactive-waste burial site near Barnwell, South Carolina: U.S. Geological Survey Open-File Report 87-46, 66 p.",
+    "source_id": "ngmdb:47117",
+    "page": 76,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Dennehy, K.F., and McMahon, P.B., 1987, Water movement in the unsaturated",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Edwards, L.E., 1980, Dinoflagellate biostratigraphy A first look, in Reinhardt, Juergen, and Gibson, T.G., Upper Cretaceous and lower Tertiary geology of the Chattahoochee River Valley, western Georgia and eastern Alabama, in Frey, R.W., ed., Excursions in Southeastern Geology: Geological Society of America Field Trip Guidebook, 1980 Annual Meeting, v. 2, p. 424-427.",
+    "source_id": "ngmdb:47117",
+    "page": 76,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Edwards, L.E., 1980, Dinoflagellate biostratigraphy A first look, in",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Faye, R.E., and Prowell, D.C., 1982, Effects of Late Cretaceous and Cenozonic faulting on the geology and hydrology of the Coastal Plain near the Savannah River, Georgia and South Carolina: U.S. Geological Survey Open-File Report 82-156, 85 p.",
+    "source_id": "ngmdb:47117",
+    "page": 76,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Faye, R.E., and Prowell, D.C., 1982, Effects of Late Cretaceous and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Hawkins, R.H., 1971, Mineralogy and ion-exchange characteristics of Savannah River Plant streambed sediments: E. I. du Pont de Nemours and Company, Savannah River Laboratory, DPST-71-322, 14 p.",
+    "source_id": "ngmdb:47117",
+    "page": 76,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Hawkins, R.H., 1971, Mineralogy and ion-exchange characteristics of Savannah",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Hoel, D.D., 1983, Climatology of the Savannah River Plant Site, DPST-83-705, E. I. du Pont de Nemours and Co., Savannah River Laboratory, Aiken, SC, 315 p.",
+    "source_id": "ngmdb:47117",
+    "page": 76,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Hoel, D.D., 1983, Climatology of the Savannah River Plant Site, DPST-83-705,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Huddlestun, P.F., 1982, The development of the stratigraphic terminology of the Claibornian and Jacksonian marine deposits of western South Carolina and eastern Georgia, in P.G. Nystrom, Jr., and R.H. Willoughby (eds.), Geological investigations related to the stratigraphy in the kaolin mining district, Aiken County, South Carolina: South Carolina Geological Survey, 1982 Carolina Geological Society Field Trip Guidebook, p. 21-33.",
+    "source_id": "ngmdb:47117",
+    "page": 76,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Huddlestun, P.F., 1982, The development of the stratigraphic terminology of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Huddlestun, P.F., 1985, An examination of the Altamaha Formation near Oak Park, Emanuel County, Georgia, the Miocene through Holocene: Georgia Geological Society 20th Annual Field Trip Guidebook, p. 1-19.",
+    "source_id": "ngmdb:47117",
+    "page": 76,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "1985, An examination of the Altamaha Formation near Oak",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Huddlestun, P.F., and Hetrick, J.H., 1979, The stratigraphy of the Barnwell Group in Georgia: Georgia Geologic Survey Open File Report 80-1, published for the 14th Field Trip of the Georgia Geological Society, 89 p.",
+    "source_id": "ngmdb:47117",
+    "page": 77,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Huddlestun, P.F., and Hetrick, J.H., 1979, The stratigraphy of the Barnwell",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Huddlestun, P.F., and Hetrick, J.H., 1985, Upper Eocene stratigraphy of central and eastern Georgia: Georgia Geologic Survey Bulletin 95, 78 p.",
+    "source_id": "ngmdb:47117",
+    "page": 77,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "1985, Upper Eocene stratigraphy of central and eastern Georgia:",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "INTERA, 1985, An evaluation of the leaching of saltstone due both to convection and diffusion, INTERA Technologies, Austin, TX.",
+    "source_id": "ngmdb:47117",
+    "page": 77,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "INTERA, 1985, An evaluation of the leaching of saltstone due both to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "INTERA, 1986, Z-Area site assessment, INTERA Technologies, Austin, TX, 175 p.",
+    "source_id": "ngmdb:47117",
+    "page": 77,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "1986, Z-Area site assessment, INTERA Technologies, Austin, TX, 175 p.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Kite, L.E., 1982, Tertiary stratigraphy of the Oakwood quadrangel, Aiken County, South Carolina, in P.G. Nystrom, Jr., and R.H. Willoughby (eds.), Geological investigations related to the stratigraphy in the kaolin mining district, Aiken County, South Carolina* South Carolina Geological Survey, 1982 Carolina Geological Society Field Trip Guidebook, p. 56-64.",
+    "source_id": "ngmdb:47117",
+    "page": 77,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Kite, L.E., 1982, Tertiary stratigraphy of the Oakwood quadrangel, Aiken",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "LaMoreaux, P.E., 1946, Geology of the Coastal Plain of east-central Georgia: Georgia Geological Survey Bulletin 50, 26 p.",
+    "source_id": "ngmdb:47117",
+    "page": 77,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "LaMoreaux, P.E., 1946, Geology of the Coastal Plain of east-central Georgia:",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Lang, W.B., 1940, The sedimentary kaolinitic clays of South Carolina, in Lang, W.B., and others, Clay investigations in the southeastern states, 1934-1935: U.S. Geological Survey Bulletin 901, p. 23-82.",
+    "source_id": "ngmdb:47117",
+    "page": 77,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Lang, W.B., 1940, The sedimentary kaolinitic clays of South Carolina, in",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Marine, I.W., 1979, Hydrology of buried crystalline rocks at the Savannah River Plant near Aiken, South Carolina: U.S. Geological Survey Open-File Report 79-1544, 160 p.",
+    "source_id": "ngmdb:47117",
+    "page": 77,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Marine, I.W., 1979, Hydrology of buried crystalline rocks at the Savannah",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Marine, I.W., and Root, R.W., Jr., 1978, Geohydrology of deposits of Claiborne age at the Savannah River Plant: Savanah River Laboratory Environmental Transport and Effects Research Annual Report DP-1489, p. 57-60.",
+    "source_id": "ngmdb:47117",
+    "page": 77,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Marine, I.W., and Root, R.W., Jr., 1978, Geohydrology of deposits of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Marine, I.W., and Siple, G.E., 1974, Buried Triassic basin in the central Savannah River area, South Carolina and Georgia: Geological Society of America Bulletin, v. 85, p. 311-320.",
+    "source_id": "ngmdb:47117",
+    "page": 77,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Marine, I.W., and Siple, G.E., 1974, Buried Triassic basin in the central",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "McCartan, Lucy, Lemon, E.M., Jr., and Weems, R.E., 1984, Geologic map of the area between Charleston and Orangeburg, South Carolina: U.S. Geological Survey Miscellaneous Investigations Series Map 1-1472, scale 1:250,000.",
+    "source_id": "ngmdb:47117",
+    "page": 77,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "McCartan, Lucy, Lemon, E.M., Jr., and Weems, R.E., 1984, Geologic map of the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Newell, W.L., Pavich, M.J., Prowell, D.C., and Markewich, H.W., 1980, Surficial deposits, weathering processes, and evolution of an inner Coastal Plain landscape, Augusta, Georgia, in Frey. R.W. (ed) Excursions in southeastern geology, volume 2, Field Guide for the Geological Society of America 1980 Annual Meeting, Atlanta, Georgia: American Geophysical Institute, p. 527-544.",
+    "source_id": "ngmdb:47117",
+    "page": 78,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Newell, W.L., Pavich, M.J., Prowell, D.C., and Markewich, H.W., 1980,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Nystrom, P.G., Jr., and Willoughby, R.H., 1982, Geological investigations related to the stratigraphy in the kaolin mining district, Aiken County, South Carolina: South Carolina Geological Survey, 1982 Carolina Geological Society Field Trip Guidebook, 183 p.",
+    "source_id": "ngmdb:47117",
+    "page": 78,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Nystrom, P.G., Jr., and Willoughby, R.H., 1982, Geological investigations",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Nystrom, P.G., Willoughby, R.H., and Kite, L.E., 1986, Cretaceous-Tertiary stratigraphy of the upper edge of the Coastal Plain between North Augusta and Lexington, South Carolina: South Carolina Geological Survey, 1986 Carolina Geological Society Field Trip Guidebook, 82 p.",
+    "source_id": "ngmdb:47117",
+    "page": 78,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Nystrom, P.G., Willoughby, R.H., and Kite, L.E., 1986, Cretaceous-Tertiary",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Parizek, R.R., and Root, R.W., Jr., 1984, Progress toward the development of a ground-water velocity model for the Radioactive Waste Management Facility Savannah River Plant, South Carolina, Quarterly Report, July 15, 1984, The Pennsylvania State University.",
+    "source_id": "ngmdb:47117",
+    "page": 78,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Parizek, R.R., and Root, R.W., Jr., 1984, Progress toward the development of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Petty, A.J., Petrafeso, F.A., and Moore, F.C., Jr., 1965, Aeromagnetic map of the Savannah River Plant area, South Carolina and Georgia: U.S. Geological Survey Geophysical Investigations Map GP-489.",
+    "source_id": "ngmdb:47117",
+    "page": 78,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Petty, A.J., Petrafeso, F.A., and Moore, F.C., Jr., 1965, Aeromagnetic",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Prowell, D.C., Christopher, R.A., Edwards, L.E., Bybell, L.M., and Gill, H.E., 1985a, Geologic section of the updip Coastal Plain from central Georgia to western South Carolina: U.S. Geological Survey Map MF-1737.",
+    "source_id": "ngmdb:47117",
+    "page": 78,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Prowell, D.C., Christopher, R.A., Edwards, L.E., Bybell, L.M., and Gill,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Prowell, D.C., Edwards, L.E., and Frederiksen, N.O., 1985b, The Ellenton Formation in South Carolina - A revised age designation from Cretaceous to Paleocene: U.S. Geological Survey Bulletin 1605-A, p. A63-A69.",
+    "source_id": "ngmdb:47117",
+    "page": 78,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Prowell, D.C., Edwards, L.E., and Frederiksen, N.O., 1985b, The Ellenton",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Prowell, D.C., and o'Connor, B.J., 1978, Belair fault zone* Evidence of Tertiary fault displacement in eastern Georgia: Geology, v. 6, no. 11, p. 681-684.",
+    "source_id": "ngmdb:47117",
+    "page": 78,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Prowell, D.C., and o'Connor, B.J., 1978, Belair fault zone* Evidence of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Root, R.W., Jr., 1980, Ground-water data from the H-Area, Savannah River Plant, South Carolina: Savannah River Laboratory Report DPST-80-601, 34 p.",
+    "source_id": "ngmdb:47117",
+    "page": 78,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Root, R.W., Jr., 1980, Ground-water data from the H-Area, Savannah River",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Root, R.W., Jr., 1981, Results of drilling a well cluster near F-area at SRP:   Savannah River Laboratory Report DPST-81-503.",
+    "source_id": "ngmdb:47117",
+    "page": 78,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "1981, Results of drilling a well cluster near F-area at SRP:   Savannah",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Sargent, K.A., 1984, Study of a perched condition in the DWPF saltstone disposal site: E. I. du Pont de Nemours and Company, Savannah River Laboratory, Aiken, SC, 113 p.",
+    "source_id": "ngmdb:47117",
+    "page": 79,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Sargent, K.A., 1984, Study of a perched condition in the DWPF saltstone",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Shearer, H.K., 1917, Bauxite and fullers earth of the Coastal Plain of Georgia: Georgia Geological Survey Bulletin 31, p. 158-259.",
+    "source_id": "ngmdb:47117",
+    "page": 79,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Shearer, H.K., 1917, Bauxite and fullers earth of the Coastal Plain of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Siple, G.E., 1967, Geology and ground water of the Savannah River Plant and vicinity, South Carolina: U.S. Geological Survey Water-Supply Paper 1841, 113 p.",
+    "source_id": "ngmdb:47117",
+    "page": 79,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Siple, G.E., 1967, Geology and ground water of the Savannah River Plant",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Sloan, Earle, 1907, A summary of the mineral resources of South Carolina: South Carolina Department of Agriculture, Commerce and Immigration, Columbia, South Carolina, 66 p.",
+    "source_id": "ngmdb:47117",
+    "page": 79,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Sloan, Earle, 1907, A summary of the mineral resources of South Carolina:",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Sloan, Earle, 1908, Catalogue of mineral localities of South Carolina: South Carolina Geological Survey, Serial 4, Bulletin 2, p. 449-453.",
+    "source_id": "ngmdb:47117",
+    "page": 79,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "1908, Catalogue of mineral localities of South Carolina: South",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "U.S. Geological Survey, 1986, Water resources data for South Carolina, Water Year 1985: U.S. Geological Survey Water-Data Report SC-85-1, 412 p.",
+    "source_id": "ngmdb:47117",
+    "page": 79,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "U.S. Geological Survey, 1986, Water resources data for South Carolina,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Van Nieuwenhuise, D.S., and Colquhoun, D.J., 1982, The Paleocene-lower Eocene Black Mingo Group of the east-central Coastal Plain of South Carolina: South Carolina Geology, v. 26, no. 2, p. 47-67.",
+    "source_id": "ngmdb:47117",
+    "page": 79,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Van Nieuwenhuise, D.S., and Colquhoun, D.J., 1982, The Paleocene-lower",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Veatch, Otto, and Stephenson, L.W., 1911, Preliminary report on the geology of the Coastal Plain of Georgia: Georgia Geologic Survey Bulletin 26, p. 237-296.",
+    "source_id": "ngmdb:47117",
+    "page": 79,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Veatch, Otto, and Stephenson, L.W., 1911, Preliminary report on the geology",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Zullo, V.A., Willoughby, R.H., and Nystrom, P.G., Jr., 1982, A late Oligocene or early Miocene age for the Dry Branch and Tobacco Road Sand in Aiken County, South Carolina?, in P.G. Nystrom,Jr., and R.H. Willoughby, (eds.), Geological investigations related to the stratigraphy in the kaolin mining district, Aiken County, South Carolina: South Carolina Geological Survey, 1982 Carolina Geological Society Field Trip Guidebook p. 34-45.",
+    "source_id": "ngmdb:47117",
+    "page": 79,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Zullo, V.A., Willoughby, R.H., and Nystrom, P.G., Jr., 1982, A late",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ]
 }
