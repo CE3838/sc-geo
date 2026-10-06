@@ -8,12 +8,13 @@
  "kind": "publication",
  "schema_version": 1,
  "extracted_at": "2026-10-06T01:43:38+00:00",
- "updated_at": "2026-10-06T01:45:08+00:00",
+ "updated_at": "2026-10-06T01:46:21+00:00",
  "reader": "Claude, scheduled Claude Code session 2026-10-06",
  "packets": [
   "packet-01",
   "packet-02",
-  "packet-03"
+  "packet-03",
+  "packet-04"
  ],
  "blocks_done": [
   "1",
@@ -98,11 +99,35 @@
   "83",
   "84",
   "85",
-  "86"
+  "86",
+  "87",
+  "88",
+  "89",
+  "90",
+  "91",
+  "92",
+  "93",
+  "94",
+  "95",
+  "96",
+  "97",
+  "98",
+  "99",
+  "100",
+  "101",
+  "102",
+  "103",
+  "104",
+  "105",
+  "106",
+  "107",
+  "108",
+  "109",
+  "110"
  ],
  "blocks_total": 107,
- "complete": false,
- "notes": "Water-quality report. Packet 1 covers the hydrogeologic setting (pp. 19, 21, 27), the well/spring table (table 3, p. 30) and well descriptions (pp. 29, 31). Wells/springs: one observation per table 3 row; label notes give county number and USGS site ID (site IDs are identifiers, no coordinates were computed). The aquifer column is stored as the interval unit. Table 1 chemistry and table 2 compound properties not recorded (not geologic). No reference list in this packet (it comes later).\nPacket 2 (pp. 33-59) is mostly methods and water-chemistry tables (tables 4-6: field parameters, EDB/DBCP and other VOC concentrations) and plume maps; these are not geologic and were not recorded. Only hydrogeologic statements were recorded. Continues from packet 1.\nPacket 3 (pp. 60-86) is mostly VOC, radium, radon and inorganic concentration tables (tables 6-10), trend graphs, and soil-gas sampler results (table 10, with sampler coordinates); not geologic, not recorded. Recorded only bedrock/aquifer statements and well screen notes. Continues from packet 2.",
+ "complete": true,
+ "notes": "Water-quality report. Packet 1 covers the hydrogeologic setting (pp. 19, 21, 27), the well/spring table (table 3, p. 30) and well descriptions (pp. 29, 31). Wells/springs: one observation per table 3 row; label notes give county number and USGS site ID (site IDs are identifiers, no coordinates were computed). The aquifer column is stored as the interval unit. Table 1 chemistry and table 2 compound properties not recorded (not geologic). No reference list in this packet (it comes later).\nPacket 2 (pp. 33-59) is mostly methods and water-chemistry tables (tables 4-6: field parameters, EDB/DBCP and other VOC concentrations) and plume maps; these are not geologic and were not recorded. Only hydrogeologic statements were recorded. Continues from packet 1.\nPacket 3 (pp. 60-86) is mostly VOC, radium, radon and inorganic concentration tables (tables 6-10), trend graphs, and soil-gas sampler results (table 10, with sampler coordinates); not geologic, not recorded. Recorded only bedrock/aquifer statements and well screen notes. Continues from packet 2.\nPacket 4 (pp. 87-110): soil-gas results, CFC apparent ages (table 11), dissolved gases (table 12), particle-tracking maps, summary, references. Apparent groundwater ages and chemistry not recorded (not geologic). References: only those on South Carolina geology/hydrogeology/groundwater were recorded; general chemistry, toxicology, methods and out-of-state references were skipped. Completes the document.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/sir/2014/5114/pdf/sir2014-5114.pdf",
@@ -113,15 +138,15 @@
   }
  ],
  "summary": {
-  "stored": 258,
+  "stored": 293,
   "quote_match": {
-   "exact": 258
+   "exact": 293
   },
   "verification": {
-   "agree": 162,
+   "agree": 166,
    "unclear": 1
   },
-  "inferred": 5
+  "inferred": 7
  },
  "ingests": [
   {
@@ -177,6 +202,24 @@
    "disagree": 0,
    "unclear": 1,
    "review_items": 1
+  },
+  {
+   "at": "2026-10-06T01:46:21+00:00",
+   "packets": [
+    "packet-04"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-06",
+   "values": 35,
+   "stored": 35,
+   "exact": 35,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 4,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
   }
  ],
  "units": [
@@ -370,6 +413,66 @@
     "inferred": false,
     "locator": null,
     "quote": "public-supply wells in the McBee area are drilled to “bedrock”",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "pre-Paleozoic to Middle Cambrian bedrock",
+    "source_id": "ngmdb:100555",
+    "page": 104,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "als in pre-Paleozoic to Middle Cambrian bedrock beneath",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "pre-Paleozoic to Middle Cambrian",
+    "source_id": "ngmdb:100555",
+    "page": 104,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "als in pre-Paleozoic to Middle Cambrian bedrock beneath",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 251.902,
+     "older_ma": 538.8,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "contacts": {
+    "value": "beneath the McQueen Branch aquifer",
+    "source_id": "ngmdb:100555",
+    "page": 104,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the McQueen Branch aquifer.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "uranium minerals in this bedrock may be the source of elevated uranium concentrations in some deep wells",
+    "source_id": "ngmdb:100555",
+    "page": 104,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "elevated uranium concentrations in some deep wells may",
     "quote_match": "exact",
     "text_method": "pdf_text",
     "verification": null
@@ -4561,7 +4664,459 @@
     "text_method": "pdf_text",
     "verification": null
    }
+  },
+  {
+   "aquifer": {
+    "value": "lower unit",
+    "source_id": "ngmdb:100555",
+    "page": 91,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Simulated potentiometric surface, lower unit, 2010.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "flow pathways are depicted on the lower-unit potentiometric surface (fig. 35)"
+   },
+   "description": {
+    "value": "Flow pathway 1, from the McBee Well(R) through Wells 7, 5 and 9, ultimately discharges to the Lynches River",
+    "source_id": "ngmdb:100555",
+    "page": 87,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "this flow pathway ultimately discharges to the Lynches River.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Lynches River",
+    "source_id": "ngmdb:100555",
+    "page": 87,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "this flow pathway ultimately discharges to the Lynches River.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "lower unit",
+    "source_id": "ngmdb:100555",
+    "page": 91,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Simulated potentiometric surface, lower unit, 2010.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "flow pathways are depicted on the lower-unit potentiometric surface (fig. 35)"
+   },
+   "description": {
+    "value": "Flow pathway 2, from the McBee Well(R) through Wells 10, 4 and 8, ultimately discharges to Lake Robinson",
+    "source_id": "ngmdb:100555",
+    "page": 92,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "pathway ultimately discharges to Lake Robinson.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Lake Robinson",
+    "source_id": "ngmdb:100555",
+    "page": 92,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "pathway ultimately discharges to Lake Robinson.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "description": {
+    "value": "Well 3 is essentially equidistant from the two regional groundwater discharge locations of the Lynches River and Lake Robinson; hydraulic gradients in the area of Well 3 are lower than any other part of the flow system and groundwater apparent ages are the oldest",
+    "source_id": "ngmdb:100555",
+    "page": 93,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "in the area of Well 3 are lower than any other part of the flow",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "area of Well 3",
+    "source_id": "ngmdb:100555",
+    "page": 93,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "in the area of Well 3 are lower than any other part of the flow",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "description": {
+    "value": "groundwater recharge tends to occur during the cool winter months, when evapotranspiration rates in the area are low",
+    "source_id": "ngmdb:100555",
+    "page": 93,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "recharge tends to occur during the cool winter months, when",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "McBee area",
+    "source_id": "ngmdb:100555",
+    "page": 93,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "in the McBee area, because CFC concentrations attendant",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "two aquifer units separated by a confining unit of lower permeability",
+    "source_id": "ngmdb:100555",
+    "page": 103,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "units separated by a confining unit of lower permeability),",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "Groundwater flow and particle flow are primarily horizontal in the aquifer; the numerical model consisted of three layers (the two aquifer units separated by a confining unit of lower permeability)",
+    "source_id": "ngmdb:100555",
+    "page": 103,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "horizontal in the aquifer, but when the particles pass through",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "description": {
+    "value": "The source of the radium isotopes appears to be uranium- and thorium-bearing minerals in aquifer sediments near well screens",
+    "source_id": "ngmdb:100555",
+    "page": 104,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "to be uranium- and thorium-bearing minerals in aquifer",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "McBee area",
+    "source_id": "ngmdb:100555",
+    "page": 104,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "water for the McBee area is 0.055 µg/L. The source of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
   }
  ],
- "references": []
+ "references": [
+  {
+   "citation": {
+    "value": "Campbell, B.G., and Landmeyer, J.E., 2014, Groundwater availability in the Crouch Branch and McQueen Branch aquifers, Chesterfield County, South Carolina, 1900–2012: U.S. Geological Survey Scientific Investigations Report 2014–5050, 68 p.",
+    "source_id": "ngmdb:100555",
+    "page": 104,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Campbell, B.G., and Landmeyer, J.E., 2014, Groundwater",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Carter, G.E., Jr., Ligon, J.T., and Riley, M.B., 1984, DBCP residue studies in soil and well water from two South Carolina peach orchards: Water, Air, and Soil Pollution, v. 22, p. 201–208.",
+    "source_id": "ngmdb:100555",
+    "page": 105,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Carter, G.E., Jr., Ligon, J.T., and Riley, M.B., 1984, DBCP",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Carter, G.E., Jr., and Riley, M.B., 1981, 1,2-dibromo-3-dichloropropane residues in water in South Carolina, 1979–80: Pesticide Monitoring Journal, v. 15, p. 139–142.",
+    "source_id": "ngmdb:100555",
+    "page": 105,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Carter, G.E., Jr., and Riley, M.B., 1981, 1,2-dibromo-3",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Curley, R.E., 1990, Ground water in the Pee Dee Region of South Carolina, A preliminary report: South Carolina Water Resources Commission Open-File Report No. 36, [variously paged].",
+    "source_id": "ngmdb:100555",
+    "page": 105,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Curley, R.E., 1990, Ground water in the Pee Dee Region",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Denham, M., Millings, M., and Noonkester, J., 2005, Intermittent elevated radium concentrations in coastal plain groundwater of South Carolina, U.S.A.: WSRC–MS–2005–00565, 25 p.",
+    "source_id": "ngmdb:100555",
+    "page": 105,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Denham, M., Millings, M., and Noonkester, J., 2005",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Feder, G.L., and Lee, R.W., 1981, Water-quality reconnaissance of Cretaceous aquifers in the Southeastern Coastal Plain: U.S. Geological Survey Open-File Report 81–696, 10 p.",
+    "source_id": "ngmdb:100555",
+    "page": 105,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Feder, G.L., and Lee, R.W., 1981, Water-quality reconnaissance",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Gellici, J.A., and Lautier, J.C., 2010, Hydrogeologic framework of the Atlantic Coastal Plain, North and South Carolina, in Campbell, B.G., and Coes, A.L., eds., 2010, Groundwater availability in the Atlantic Coastal Plain of North and South Carolina: U.S. Geological Survey Professional Paper 1773, 241 p., 7 pls.",
+    "source_id": "ngmdb:100555",
+    "page": 105,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gellici, J.A., and Lautier, J.C., 2010, Hydrogeologic",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Heron, S.D., Jr., and Johnson, H.S., Jr., 1969, Radioactive mineral resources of South Carolina: State Development Board, Division of Geology, MR–4, 4 p.",
+    "source_id": "ngmdb:100555",
+    "page": 106,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Heron, S.D., Jr., and Johnson, H.S., Jr., 1969, Radioactive",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Hughes, W.B., Abrahamsen, T.A., Maluk, T.L., Reuber, E.J., and Wilhelm, L.J., 2000, Water quality in the Santee River Basin and coastal drainages, North and South Carolina, 1995–98: U.S. Geological Survey Circular 1206, 32 p.",
+    "source_id": "ngmdb:100555",
+    "page": 106,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Hughes, W.B., Abrahamsen, T.A., Maluk, T.L., Reuber, E.J.,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "King, P.T., Michel, J., and Moore, W.S., 1982, Ground water geochemistry of 228Ra, 226Ra and 222Rn: Geochimica et Cosmochimica Acta, v. 46, p. 1173–1182.",
+    "source_id": "ngmdb:100555",
+    "page": 106,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "King, P.T., Michel, J., and Moore, W.S., 1982, Ground water",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Kubilius, W., 2007, Elevated radium-226 in groundwater due to oxidation of sedimentary iron sulfide-Upper Coastal Plain, South Carolina [abs.]: Geological Society of America Abstracts with Programs, v. 39, no. 2, p. 10, Southeastern Section, 56th Annual Meeting, March 29–30, 2007, paper no. 5–2.",
+    "source_id": "ngmdb:100555",
+    "page": 106,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Kubilius, W., 2007, Elevated radium-226 in groundwater due",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Landmeyer, J.E., and Campbell, B.G., 2010, Contamination of groundwater by the fumigants ethylene dibromide (EDB) and dibromochloropropane (DBCP) near McBee, South Carolina: Proceedings of the 2010 South Carolina Water Resources Conference, October 13–14, 2010, Columbia, S.C.",
+    "source_id": "ngmdb:100555",
+    "page": 106,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Landmeyer, J.E., and Campbell, B.G., 2010",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Latimer, W.J., Beck, M.W., Snyder, J.M., Cantrell, L., and Kirk, N.M., 1915, Soil survey of Chesterfield County, South Carolina: U.S. Department of Agriculture, 42 p.",
+    "source_id": "ngmdb:100555",
+    "page": 106,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Latimer, W.J., Beck, M.W., Snyder, J.M., Cantrell, L., and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Mitchell, H.L., 2004, Springs of South Carolina: South Carolina Department of Natural Resources Hydrology/Geology Map 6, 1 sheet.",
+    "source_id": "ngmdb:100555",
+    "page": 107,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Mitchell, H.L., 2004, Springs of South Carolina",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Newcome, R., Jr., 2004, Ground-water resources of Chesterfield County, South Carolina: South Carolina Department of Natural Resources Water Resources Report 36, 16 p.",
+    "source_id": "ngmdb:100555",
+    "page": 107,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Newcome, R., Jr., 2004, Ground-water resources of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Park, A.D., 1979, Groundwater in the Coastal Plains region—A status report and handbook: Charleston, S.C., Coastal Plains Regional Commission, 160 p.",
+    "source_id": "ngmdb:100555",
+    "page": 107,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Park, A.D., 1979, Groundwater in the Coastal Plains region",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Schrag, J.M., Stone, P.A., Skipper, K.B., Ebinger, D.J., and Wargo, C.A., 2010, Radium in well water of South Carolina—Its regional distribution and apparent local controls: Poster presentation, South Carolina Water Resources Conference, Columbia, S.C.",
+    "source_id": "ngmdb:100555",
+    "page": 107,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Schrag, J.M., Stone, P.A., Skipper, K.B., Ebinger, D.J., and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ]
 }
