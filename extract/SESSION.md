@@ -67,7 +67,11 @@ scope. When a scope changes, `next_batch` rebuilds that record's packets.
 For each packet, in order:
 
 1. Read `extract/prompts/extract.md` (once per session) and `extract/schema.json`.
-2. Read the packet file completely.
+2. Read the packet file completely. Besides units, observations, structures,
+   groundwater and references, record subsurface data where the packet has
+   it: tops and bases of units (`surfaces`), structure-contour and isopach
+   maps (`contours`) and cross sections (`sections`), with each datum as
+   printed.
 3. Write the result JSON to its `write:` path
    (`.cache/results/<id>.<packet>.json`), with `"packets": ["<packet>"]`.
 4. Check it:
@@ -87,8 +91,9 @@ For each packet result:
 python -m extract.ingest .cache/results/<id>.<packet>.json --plan-verify > .cache/results/<id>.<packet>.plan.json
 ```
 
-Then follow `extract/prompts/verify.md`: re-read the cited pages for every
-value in the plan, independently of your first reading, and write
+The plan holds every table value and every subsurface value, plus a sample
+of the rest. Then follow `extract/prompts/verify.md`: re-read the cited pages
+for every value in the plan, independently of your first reading, and write
 `.cache/results/<id>.<packet>.verify.json`.
 
 ## 4. Ingest

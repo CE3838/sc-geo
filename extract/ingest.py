@@ -14,8 +14,10 @@ Steps (see extract/README.md for the confidence formula):
    breaks, ligatures, curly quotes, case and common OCR confusions. A quote
    found only on a neighbouring page, or not at all, is NOT stored; it goes
    to data/review/queue.json.
-3. Normalize values with extract/patterns.py (feet, Munsell, USCS, SPT,
-   strike/dip, coordinates, Ma ranges, Geolex names).
+3. Normalize values with extract/patterns.py (feet, signed elevations,
+   vertical datums, Munsell, USCS, SPT, strike/dip, coordinates, Ma ranges,
+   Geolex names). Locations that model/coords.py can read also get a
+   separate inferred `derived_coordinates` value.
 4. Store each value as a model.provenance.StoredValue (extraction_method
    "llm", source_id = catalog id, page, confidence computed here) plus its
    quote, how the quote matched, and the second-pass verdict.
@@ -40,6 +42,7 @@ from pathlib import Path
 from extract import packets, patterns, schema, scope
 from extract.packets import safe_id
 from merge.score import scale_weight
+from model import coords
 from model.provenance import ExtractionMethod, StoredValue
 from model.units import Lexicon
 
@@ -202,7 +205,10 @@ def confidence(rec: dict, method: str, match: str, verdict: str | None, inferred
 
 # --- normalizing ---------------------------------------------------------------
 
-_LENGTH = {"top", "bottom", "thickness", "total_depth", "water_level", "elevation", "head"}
+_LENGTH = {"top", "bottom", "thickness", "total_depth", "water_level", "depth", "interval", "length",
+           "from_distance", "to_distance"}
+_ELEVATION = {"elevation", "top_elevation", "base_elevation"}
+SUBSURFACE = ("surfaces", "contours", "sections")
 
 
 def normalized(path: str, val: dict, lexicon: Lexicon | None):
@@ -213,6 +219,24 @@ def normalized(path: str, val: dict, lexicon: Lexicon | None):
         return None
     if field in _LENGTH:
         return patterns.length_ft(x, default_unit=val.get("units"))
+    if field in _ELEVATION:
+        return patterns.elevation_ft(x, default_unit=val.get("units"))
+    if field == "head":
+        # A head is an elevation and keeps its sign. One given relative to land surface stays as
+        # printed ("12 ft below land surface" is +12, "-15 ft with reference to land surface" is -15),
+        # marked relative_to land surface with the printed direction (below/above, or None when the
+        # sign carries it), never flipped into an elevation.
+        if patterns.vertical_datum(x) == "land surface":
+            head = patterns.elevation_ft(x, default_unit=val.get("units")) \
+                or patterns.length_ft(x, default_unit=val.get("units"))
+            sense = re.search(r"(?i)\b(below|above)\b[^.;]{0,30}?\b(?:land|ground)\s+surface", str(x))
+            return head and head | {"relative_to": "land surface",
+                                    "direction": sense.group(1).lower() if sense else None}
+        return patterns.elevation_ft(x, default_unit=val.get("units"))
+    if field == "datum":
+        return patterns.vertical_datum(x)
+    if field in ("vertical_exaggeration", "values"):
+        return patterns.number(x)
     if field == "munsell":
         return patterns.munsell(x)
     if field == "uscs":
@@ -234,13 +258,33 @@ def normalized(path: str, val: dict, lexicon: Lexicon | None):
     return None
 
 
+def derived_coordinates(path: str, val: dict, stored: dict, cfg: dict = CONFIG) -> dict | None:
+    """A printed location converted to latitude/longitude by model.coords, as its own stored value.
+
+    The value as printed stays the reading; the conversion is an inference (extraction_method
+    'inference', inferred=True, confidence lowered by the inference factor) and names what it assumed."""
+    field = re.sub(r"\[\d+\]", "", path).split(".")[-1]
+    if field not in ("location", "coordinates") or not isinstance(val.get("value"), str):
+        return None
+    c = coords.parse(val["value"])
+    if c is None:
+        return None
+    sv = StoredValue(value={"lat": round(c["lat"], 6), "lon": round(c["lon"], 6)}, source_id=stored["source_id"],
+                     page=stored["page"], extraction_method=ExtractionMethod.INFERENCE,
+                     confidence=round(stored["confidence"] * cfg["confidence"]["inferred_factor"], 3),
+                     inferred=True, locator=stored.get("locator"))
+    return sv.to_dict() | {k: c[k] for k in ("format", "datum", "approximate", "assumptions", "conversion")}
+
+
 # --- ingest ----------------------------------------------------------------------
 
 def verify_sample(result: dict, fraction: float = CONFIG["verify_sample_fraction"]) -> list[str]:
-    """Paths the second pass re-reads: every table value plus a seeded random share of the rest."""
+    """Paths the second pass re-reads: every table value, every subsurface value (surfaces, contours,
+    sections, observation datums) plus a seeded random share of the rest."""
     values = list(schema.iter_values(result))
-    table = [p for p, v in values if v.get("table")]
-    others = [p for p, v in values if not v.get("table")]
+    must = lambda p, v: v.get("table") or p.split("[", 1)[0] in SUBSURFACE or p.endswith((".datum", ".depth_reference"))
+    table = [p for p, v in values if must(p, v)]
+    others = [p for p, v in values if not must(p, v)]
     seed = int(hashlib.sha256(str(result.get("source_id")).encode()).hexdigest()[:12], 16)
     k = math.ceil(fraction * len(others)) if others else 0
     chosen = set(random.Random(seed).sample(others, k)) | set(table)
@@ -268,7 +312,7 @@ def _combine(results: list[dict]) -> dict:
     notes = [r["notes"] for r in results if r.get("notes")]
     if notes:
         out["notes"] = "\n".join(notes)
-    for key in ("units", "observations", "structures", "groundwater", "references"):
+    for key in SECTIONS:
         out[key] = [x for r in results for x in r.get(key, [])]
     return out
 
@@ -403,6 +447,9 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
         norm = normalized(path, val, lexicon)
         if norm not in (None, [], {}):
             entry["normalized"] = norm
+        derived = derived_coordinates(path, val, entry, cfg)
+        if derived:
+            entry["derived_coordinates"] = derived
         stored[path] = entry
         counts["stored"] += 1
 
@@ -477,7 +524,7 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
                      "blocks_total": len(all_blocks)}
 
 
-SECTIONS = ("units", "observations", "structures", "groundwater", "references")
+SECTIONS = ("units", "observations", "structures", "groundwater", "references") + SUBSURFACE
 
 
 def _is_stored(x) -> bool:

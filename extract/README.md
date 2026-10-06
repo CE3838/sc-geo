@@ -15,7 +15,8 @@ harvest/pdfs.py     find legal open full text, download, page text, OCR       (n
 extract/triage.py   mark blank / contents / index pages to skip               (no model)
 extract/packets.py  page text -> packets under ~40k tokens in .cache/packets  (no model)
 prompts/extract.md  the reading model writes result JSON per schema.json      (MODEL)
-prompts/verify.md   a second pass re-reads table values + a 10% sample        (MODEL)
+prompts/verify.md   a second pass re-reads table and subsurface values
+                    + a 10% sample of the rest                                (MODEL)
 extract/ingest.py   validate, check every quote on its page, normalize,
                     compute confidence, write data/extracted, review queue    (no model)
 ```
@@ -26,8 +27,9 @@ extract/ingest.py   validate, check every quote on its page, normalize,
 | `triage.py` | Page kinds (blank, title, toc, index, references, content) used only to skip or rank pages, never to decide values |
 | `packets.py` | One or more Markdown packets per document with the catalog header and `=== PAGE n (method) ===` blocks |
 | `schema.json`, `schema.py` | What one document's extraction contains; standard-library validator |
-| `patterns.py` | Deterministic normalizers used after the model: Munsell, lengths to feet, USCS, SPT N, strike/dip, coordinates (decimal, DMS, SC State Plane NAD83), ages to Ma, unit names to Geolex |
+| `patterns.py` | Deterministic normalizers used after the model: Munsell, lengths to feet, signed elevations, vertical datums, USCS, SPT N, strike/dip, coordinates (decimal, DMS, SC State Plane NAD83), ages to Ma, unit names to Geolex |
 | `ingest.py` | `python -m extract.ingest result.json [--verify verify.json]` |
+| `renormalize.py` | `python -m extract.renormalize [--write]`: recompute normalized fields of committed files (dry run by default) |
 | `next_batch.py` | `python -m extract.next_batch --n 5`: next pending documents, building text and packets on the fly |
 | `prompts/` | Instructions for the reading and verifying passes |
 | `SESSION.md` | Steps for a scheduled Claude Code session (used as the Routine prompt) |
@@ -183,3 +185,47 @@ as latitude/longitude (SC State Plane assumed NAD83 international feet unless
 stated, flagged `datum_inferred`); dates as ISO; ages as Ma ranges and unit
 names as Geolex names, both flagged `inferred: true` (CLAUDE.md rule 2). The
 value as stated is always kept.
+
+## Subsurface values
+
+For cross sections, a result may also hold `surfaces` (the elevation or depth
+of the top or base of a unit at one place, with `datum`, `observation` and
+`method`: measured, contour, interpolated or stated), `contours`
+(structure-contour and isopach maps, with the legible contour labels as
+`values`) and `sections` (published cross sections: ends, vertical
+exaggeration, datum, wells shown, and units along the line). Observations
+gain `datum` and `depth_reference` (land surface or elevation). All are
+optional, so earlier results still validate. They are quote-checked and
+stored like every other value, and every one of them is in the verify plan.
+
+Normalized forms: `elevation`, `top_elevation` and `base_elevation` keep
+their sign (`patterns.elevation_ft`: "-62 ft" and "62 ft below sea level"
+are both -62), and so does a groundwater `head`; a head given relative to land
+surface stays as printed, marked `relative_to: "land surface"` and
+`direction` (below, above, or null when the printed sign carries it); `depth`, `interval`, `length` and distances are lengths;
+`datum` maps to NGVD29, NAVD88, MSL, land surface or unknown
+(`patterns.vertical_datum`; the value as printed is kept, and no datum is
+converted to another); contour labels and vertical exaggeration are numbers.
+
+## Derived coordinates
+
+Every `location` or `coordinates` value that `model/coords.py` can read
+(decimal degrees, degrees-minutes-seconds, USGS packed DDMMSS/DDDMMSS, SC
+State Plane NAD83 in feet or metres, NAD27 North/South zone in feet) gets a
+`derived_coordinates` entry: its own StoredValue with `extraction_method`
+"inference", `inferred: true`, the same page, and confidence lowered by the
+inference factor. It names the conversion, the horizontal datum, whether it
+is approximate (NAD27 shifted with a 3-parameter shift, or datum not
+stated) and every assumption made (such as a western longitude with no sign).
+Ambiguous text (State Plane without a datum, NAD27 without its zone, two
+places, two latitudes) gives no derived value. The value as printed is
+unchanged.
+
+## Re-normalizing committed files
+
+When a normalizer changes, `python -m extract.renormalize` recomputes
+`normalized` and `derived_coordinates` in `data/extracted/` from each stored
+value's own value and units, with ingest's functions. It never changes a
+value as read, its quote, page, provenance, confidence or verification, and
+re-reads nothing. It is a dry run by default (a JSON report of every change);
+`--write` writes the files.

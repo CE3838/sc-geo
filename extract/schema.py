@@ -2,7 +2,7 @@
 
 Implements the subset of JSON Schema the file uses: type, const, enum,
 properties, required, additionalProperties, items, minimum, minLength,
-maxLength, anyOf and local $ref. Errors are 'path: message' strings, with
+maxLength, anyOf, allOf and local $ref. Errors are 'path: message' strings, with
 paths like units[0].name.page.
 """
 
@@ -44,6 +44,10 @@ def _join(path: str, key: str | int) -> str:
 def _check(x: Any, s: dict, path: str, root: dict, errs: list[str]) -> None:
     if "$ref" in s:
         _check(x, _resolve(s["$ref"], root), path, root, errs)
+        return
+    if "allOf" in s:
+        for sub in s["allOf"]:
+            _check(x, sub, path, root, errs)
         return
     if "anyOf" in s:
         trials = []
