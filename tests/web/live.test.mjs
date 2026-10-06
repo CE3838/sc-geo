@@ -28,3 +28,18 @@ test('the viewer smoke check turns each live layer on, the way a user would, bef
     assert.ok(on < smoke.indexOf(firstCheck[key]), `smoke turns ${key} on before checking it`);
   }
 });
+
+test('live requests give up after a timeout instead of loading forever', async () => {
+  const { fetchJson, FETCH_TIMEOUT_MS } = await import('../../web/roads-ui.js');
+  assert.ok(FETCH_TIMEOUT_MS >= 10000 && FETCH_TIMEOUT_MS <= 60000);
+  // A server that never answers: the request is aborted by its signal.
+  const hang = (url, { signal }) => new Promise((_, reject) => {
+    signal.addEventListener('abort', () => reject(signal.reason));
+  });
+  await assert.rejects(fetchJson('https://example.test/q', { timeoutMs: 50, fetchImpl: hang }));
+  // A normal answer still works, and HTTP errors still throw.
+  const ok = async () => ({ ok: true, json: async () => ({ a: 1 }) });
+  assert.deepEqual(await fetchJson('https://example.test/q', { fetchImpl: ok }), { a: 1 });
+  const bad = async () => ({ ok: false, status: 503 });
+  await assert.rejects(fetchJson('https://example.test/q', { fetchImpl: bad }), /HTTP 503/);
+});
