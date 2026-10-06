@@ -205,7 +205,7 @@ def confidence(rec: dict, method: str, match: str, verdict: str | None, inferred
 
 # --- normalizing ---------------------------------------------------------------
 
-_LENGTH = {"top", "bottom", "thickness", "total_depth", "water_level", "head", "depth", "interval", "length",
+_LENGTH = {"top", "bottom", "thickness", "total_depth", "water_level", "depth", "interval", "length",
            "from_distance", "to_distance"}
 _ELEVATION = {"elevation", "top_elevation", "base_elevation"}
 SUBSURFACE = ("surfaces", "contours", "sections")
@@ -220,6 +220,15 @@ def normalized(path: str, val: dict, lexicon: Lexicon | None):
     if field in _LENGTH:
         return patterns.length_ft(x, default_unit=val.get("units"))
     if field in _ELEVATION:
+        return patterns.elevation_ft(x, default_unit=val.get("units"))
+    if field == "head":
+        # A head is an elevation and keeps its sign. One given relative to land surface stays as
+        # printed ("12 ft below land surface" is +12, "-15 ft with reference to land surface" is -15),
+        # marked relative_to land surface, never flipped into an elevation.
+        if patterns.vertical_datum(x) == "land surface":
+            head = patterns.elevation_ft(x, default_unit=val.get("units")) \
+                or patterns.length_ft(x, default_unit=val.get("units"))
+            return head and head | {"relative_to": "land surface"}
         return patterns.elevation_ft(x, default_unit=val.get("units"))
     if field == "datum":
         return patterns.vertical_datum(x)

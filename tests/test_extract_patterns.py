@@ -241,3 +241,13 @@ def test_elevation_ft_matches_length_ft_for_plain_positive_values():
 ])
 def test_vertical_datum(text, datum):
     assert p.vertical_datum(text) == datum
+
+
+@pytest.mark.parametrize("text,lo,hi", [
+    ("from a high of 234 ft at SDS-5 to a low of 222 ft above sea level at SDS-17", 222.0, 234.0),
+    ("4.07 ft above NAVD 88 at well 17MW-03S", 4.07, 4.07),
+    ("-12 ft at well CHN-14", -12.0, -12.0),
+])
+def test_elevation_ft_ignores_numbers_inside_well_labels(text, lo, hi):
+    r = p.elevation_ft(text)
+    assert (r["min_ft"], r["max_ft"]) == pytest.approx((lo, hi))

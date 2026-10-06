@@ -255,3 +255,28 @@ def test_committed_extractions_still_load_and_merge(path):
         kept = [r for r in (ingest._prune(r, lambda f, v: False) for r in doc.get(key, [])) if r is not None]
         assert kept == doc.get(key, [])
     assert ingest._totals(sections)["stored"] == len(vals)
+
+
+# --- groundwater heads keep their sign ----------------------------------------------
+
+@pytest.mark.parametrize("value,units,lo", [
+    ("-5 ft", None, -5.0),
+    ("5 ft below sea level", None, -5.0),
+    ("−5 feet relative to NGVD 29", None, -5.0),
+    (-5, "ft", -5.0),
+    ("12 ft above sea level", None, 12.0),
+])
+def test_head_keeps_its_sign(value, units, lo):
+    val = v(value, 1, "q", **({"units": units} if units else {}))
+    n = ingest.normalized("groundwater[0].head", val, None)
+    assert n["min_ft"] == pytest.approx(lo) and n["max_ft"] == pytest.approx(lo)
+
+
+def test_head_given_as_depth_below_land_surface_is_not_flipped():
+    n = ingest.normalized("groundwater[0].head", v("12 ft below land surface", 1, "q"), None)
+    assert n["min_ft"] == 12.0 and n["max_ft"] == 12.0 and n["relative_to"] == "land surface"
+
+
+def test_head_printed_relative_to_land_surface_keeps_the_printed_sign():
+    n = ingest.normalized("groundwater[0].head", v("-15.04 feet with reference to land surface", 1, "q"), None)
+    assert n["min_ft"] == -15.04 and n["relative_to"] == "land surface"

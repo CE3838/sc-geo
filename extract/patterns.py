@@ -121,7 +121,10 @@ def length_ft(text, default_unit: str | None = None) -> dict | None:
 _DATUM_NAME = re.compile(r"(?i)\b(?:ngvd|navd|nad)\s*(?:of\s*)?(?:19)?\d{2}\b|\b(?:datum\s+of\s+)?(?:1929|1988)\b")
 _BELOW_DATUM = re.compile(r"(?i)\bbelow\b[^.;]{0,40}?\b(?:sea[- ]level|msl|ngvd|navd|datum)\b|\bbsl\b|\bb\.s\.l\.")
 _BELOW_LAND = re.compile(r"(?i)\bbelow\b[^.;]{0,30}?\b(?:land|ground)\s+surface\b|\bbls\b|\bb\.l\.s\.")
-_SIGNED = re.compile(rf"(?<![\w.,])([-−–]?)\s?({_NUM})\s*{_UNIT_RE}?", re.I)
+# A sign only where it is not a hyphen inside a label (SDS-5), and no number glued to letters (17MW).
+_SIGNED = re.compile(rf"(?:(?<![\w.,])([-−–])\s?|(?<![\w.,\-−–]))({_NUM})(?=\s*{_UNIT_RE}|\s|$|[^\w])"
+                     rf"\s*{_UNIT_RE}?", re.I)
+_MINUS = re.compile(r"(?<!\w)[-−–]\s?\d")
 
 
 def elevation_ft(text, default_unit: str | None = None) -> dict | None:
@@ -141,7 +144,7 @@ def elevation_ft(text, default_unit: str | None = None) -> dict | None:
     if _BELOW_LAND.search(s):
         return None
     plain = length_ft(s, default_unit)
-    if not re.search(r"[-−–]\s?\d", s) and not _BELOW_DATUM.search(s) and plain is not None \
+    if not _MINUS.search(s) and not _BELOW_DATUM.search(s) and plain is not None \
             and not _DATUM_NAME.search(s):
         return plain  # nothing signed: the same as a length
     approx = bool(re.search(r"\b(about|approximately|approx\.?|roughly|ca\.)\b|~", s, re.I))

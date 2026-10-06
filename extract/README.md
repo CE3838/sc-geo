@@ -199,7 +199,8 @@ stored like every other value, and every one of them is in the verify plan.
 
 Normalized forms: `elevation`, `top_elevation` and `base_elevation` keep
 their sign (`patterns.elevation_ft`: "-62 ft" and "62 ft below sea level"
-are both -62); `depth`, `interval`, `length` and distances are lengths;
+are both -62), and so does a groundwater `head`; a head given relative to land
+surface stays as printed, marked `relative_to: "land surface"`; `depth`, `interval`, `length` and distances are lengths;
 `datum` maps to NGVD29, NAVD88, MSL, land surface or unknown
 (`patterns.vertical_datum`; the value as printed is kept, and no datum is
 converted to another); contour labels and vertical exaggeration are numbers.
