@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 65,
+ "count": 67,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -859,6 +859,32 @@
    "verify": {
     "verdict": "unclear",
     "note": "text layer reads 'salinity, and rising tides importing high salinity waters. Thickness | to 40 feet.'; value read as '1 to 40 feet' with '|' taken as '1'; check the digit against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:97582",
+   "path": "units[12].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 15 feet",
+   "page": 1,
+   "quote": "Thickness | to 15 feet.",
+   "added_at": "2026-10-07T04:19:21+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Thickness | to 15 feet.'; value read as '1 to 15 feet' with '|' taken as '1'; check the digit against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:97582",
+   "path": "surfaces[1].elevation",
+   "problem": "verify_unclear",
+   "value": "between 1 m above, and 10 m below, sea level",
+   "page": 1,
+   "quote": "averages 4.5 m (15ft) and is encountered between Im above, and 10 m below, sea level.",
+   "added_at": "2026-10-07T04:19:21+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'between Im above, and 10 m below, sea level'; 'I' read as '1'; check the digit against the map image"
    }
   }
  ]
