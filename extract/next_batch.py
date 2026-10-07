@@ -5,10 +5,11 @@
 Documents a session has started (data/extracted/<id>.json with
 "complete": false) come first, with only their unread packets; then pending
 documents in harvest-queue order (Charleston County first; see
-harvest/pdfs.py), skipping finished documents and ones listed in
-data/review/needs_access.json. Packets are handed out one by one until
---max-tokens is reached, so a long document can be read over several
-sessions; the first packet is always handed out even if it alone exceeds
+harvest/pdfs.py), skipping finished documents, ones listed in
+data/review/needs_access.json, and ones marked "read: not applicable" in
+data/review/not_applicable.json (unless asked for with --id). Packets
+are handed out one by one until --max-tokens is reached, so a long
+document can be read over several sessions; the first packet is always handed out even if it alone exceeds
 the budget.
 
 For each document it makes sure the page text exists (downloading and
@@ -35,11 +36,20 @@ ROOT = Path(__file__).resolve().parent.parent
 CONFIG = pdfs.CONFIG
 
 
-def _needs_access_ids(review_dir: Path) -> set[str]:
+def _ids_in(path: Path) -> set[str]:
     try:
-        return {r["id"] for r in json.loads((Path(review_dir) / "needs_access.json").read_text())["records"]}
+        return {r["id"] for r in json.loads(Path(path).read_text())["records"]}
     except (OSError, ValueError, KeyError):
         return set()
+
+
+def _needs_access_ids(review_dir: Path) -> set[str]:
+    return _ids_in(Path(review_dir) / "needs_access.json")
+
+
+def _not_applicable_ids(review_dir: Path) -> set[str]:
+    """Records marked "read: not applicable" (low SC geologic value; see extract/reading_list.py)."""
+    return _ids_in(Path(review_dir) / "not_applicable.json")
 
 
 def ensure_packets(rec: dict, cache_dir: Path, max_tokens: int | None = None,
@@ -99,6 +109,12 @@ def next_batch(n: int = 5, ids: list[str] | None = None, catalog: list[dict] | N
     started = {r["id"] for r in order if (p := progress(extracted_dir, packets.safe_id(r["id"]))) and not p["complete"]}
     order = [r for r in order if r["id"] in started] + [r for r in order if r["id"] not in started]
     blocked = set() if ids else _needs_access_ids(review_dir)
+    if not ids:
+        not_applicable = _not_applicable_ids(review_dir)
+        if not_applicable:
+            log(f"skipping {len(not_applicable)} records marked read: not applicable "
+                f"(data/review/not_applicable.json has each reason)")
+        blocked |= not_applicable
     email = os.environ.get("CONTACT_EMAIL", "").strip() or None
     fetcher = fetcher or pdfs.HttpFetcher()
     deadline = None if max_minutes is None else time.monotonic() + max_minutes * 60

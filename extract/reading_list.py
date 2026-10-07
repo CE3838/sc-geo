@@ -11,7 +11,11 @@ keywords), map kind and scale, and series or publisher. National and global
 compilations whose box is mostly outside SC, and non-geologic subjects
 (water quality, streamflow and floods, statistics and economics, biology,
 outreach), are penalized. Records at or above THRESHOLD are listed, the
-Charleston County pilot area first, then by score. Every other catalog
+Charleston County pilot area first, then by score. Records whose GIS is
+merged (merge.build) are always listed: their map sheets and reports are
+read for unit descriptions, explanations, cross sections and references.
+Online records left out are also written to data/review/not_applicable.json
+as "read: not applicable" with the reason. Every other catalog
 record is listed in the scores file with the reason it was left out
 (records with no open full text are grouped). The result depends only on
 the catalog, config/ and web/data/sc-region.geojson, so it is the same on
@@ -35,8 +39,11 @@ REGION_PATH = ROOT / "web" / "data" / "sc-region.geojson"
 PILOT_PATH = ROOT / "config" / "pilot_area.json"
 LIST_PATH = ROOT / "config" / "reading_list.json"
 SCORES_PATH = ROOT / "config" / "reading_list_scores.json"
+EXTRACTED_DIR = ROOT / "data" / "extracted"
+NOT_APPLICABLE_PATH = ROOT / "data" / "review" / "not_applicable.json"
 
-THRESHOLD = 40
+THRESHOLD = 30
+GIS_REASON = "GIS merged; text read for unit descriptions"
 # Atlantic off the Georgia, SC and southern NC coast (lon/lat). Inside it, whatever is not GA, SC or NC
 # land is open sea, which does not count against a coastal record's share inside SC.
 OFFSHORE = (-81.6, 30.75, -75.5, 34.7)
@@ -45,9 +52,10 @@ NATIONAL_AREA = 150.0  # square degrees, about 15 times South Carolina
 ABOUT = ("Online catalog records ranked by South Carolina geologic relevance (python -m extract.reading_list): "
          "bbox share inside SC, SC quadrangles, SC places in the title, geologic subject, map scale and series; "
          "national or global compilations and non-geologic subjects are penalized. Charleston County (pilot) "
-         "records come first, then by score. Reading sessions take documents in this order; "
-         "python -m extract.prep --todo lists the ones not yet read. Scores and the reason every other record "
-         "is left out: config/reading_list_scores.json.")
+         "records come first, then by score. Records whose GIS is merged are listed too, for their map-sheet "
+         "text. Reading sessions take documents in this order; python -m extract.prep --todo lists the ones not yet read. Scores and the reason every other record "
+         "is left out: config/reading_list_scores.json; those records are marked read: not applicable in "
+         "data/review/not_applicable.json.")
 
 
 # --- geometry ----------------------------------------------------------------
@@ -199,11 +207,14 @@ _NONGEO = re.compile(
     r"biogeograph|\bbirds?\b|\bfish(?:es)?\b|ecolog|habitat|sea-level rise|vulnerability|photograph|standards|"
     r"data exchange|reclamation|orphaned|critical mineral|world minerals|\bglobal\b|watershed boundary|"
     r"hydrologic unit|tracer simulation|records of surface|water summary|water priorities|oil and gas|"
-    r"enhanced oil recovery|equability|glaciation|ice sheets|coal|thorium|beryllium|spodumene|cobalt|"
+    r"enhanced oil recovery|equability|glaciation|ice sheets|"
     r"radioactive-waste|three-dimensional geologic models|inventory of|low-flow|flow duration|flood stage|catchment|"
     r"influenza|virus|tritium|transpiration|environmental flow|salinity|hydrodynamic|bacteria|"
     r"best management|culvert|ecosystem|rainfall|benthic|invertebrate|limnolog|retention time|flow patterns|"
     r"supply potential|\bbiota\b|floodflow|watershed model|load simulation|storm-tide", re.I)
+_SETTING = re.compile(r"piedmont|blue ridge|coastal plain|appalach|physiograph|triassic|jurassic|cretaceous|tertiary|"
+                      r"paleogene|neogene|paleocene|eocene|oligocene|miocene|pliocene|pleistocene|holocene|"
+                      r"quaternary|cenozoic|mesozoic|paleozoic|\bbelts?\b", re.I)
 _DATA_LISTING = re.compile(r"heavy-mineral-concentrate|geochemical samples|analytical results|sidescan sonar|"
                            r"navigation (?:field )?data", re.I)
 _KEYWORDS = ("stratigraphy", "isopach", "structure", "geophysics", "aeromagnetic", "gravity", "seismic", "fault",
@@ -300,7 +311,10 @@ def score(rec: dict, ctx: Context) -> dict:
             add(5, f"subsurface data ({sub.group(0).lower()})")
     elif sub:
         add(12, f"subsurface or hydrogeology ({sub.group(0).lower()})")
-    if non and not geo:
+    # Province and age names (Coastal Plain, Piedmont, Cretaceous) only say where or when: with a
+    # non-geologic subject such as water quality they do not make the report geologic.
+    subject = [m.group(0) for m in _GEOLOGY.finditer(title) if not _SETTING.fullmatch(m.group(0))]
+    if non and not subject:
         add(-30, f"not geologic ({non.group(0).lower()})")
         why.append("+0 themes, keywords and map scale not counted for a non-geologic subject")
     else:
@@ -339,10 +353,12 @@ def build(catalog: list[dict], ctx: Context) -> dict:
             continue
         s = score(rec, ctx)
         scores[rid] = s
-        if rid in ctx.merged:
-            excluded[rid] = "GIS source merged directly by merge.build, not read as a document"
-        elif rid in ctx.excluded:
+        if rid in ctx.excluded:
             excluded[rid] = "left out in config/catalog_exclude.json"
+        elif rid in ctx.merged:  # its GIS is merged; its map sheet is read whatever the score
+            s["reasons"].insert(0, GIS_REASON)
+            s["include"] = True
+            ranked.append(rec)
         elif not s["include"]:
             neg = [r.split(" ", 1)[1] for r in s["reasons"] if r.startswith("-")]
             pos = [r.split(" ", 1)[1] for r in s["reasons"] if r.startswith("+") and not r.startswith("+0")]
@@ -354,6 +370,25 @@ def build(catalog: list[dict], ctx: Context) -> dict:
     ranked.sort(key=lambda r: (0 if scores[r["id"]]["pilot"] else 1, -scores[r["id"]]["score"], _area(r.get("bbox")),
                                -year(r), r["id"]))
     return {"ids": [r["id"] for r in ranked], "scores": scores, "excluded": excluded}
+
+
+def not_applicable(out: dict, extracted_dir: Path = EXTRACTED_DIR) -> dict:
+    """Online records left off the list, marked "read: not applicable" with the reason.
+
+    Documents already read keep their extracted values (data/extracted is only read here);
+    they are flagged already_read. extract.next_batch skips these records unless asked by id."""
+    from extract import next_batch, packets
+
+    records = []
+    for rid in sorted(i for i in out["excluded"] if i in out["scores"]):
+        prog = next_batch.progress(Path(extracted_dir), packets.safe_id(rid))
+        records.append({"id": rid, "status": "read: not applicable", "reason": out["excluded"][rid],
+                        "already_read": bool(prog and prog["complete"])})
+    return {"about": "Online catalog records left off config/reading_list.json as low value for South Carolina "
+                     "geology, marked 'read: not applicable' with the reason (python -m extract.reading_list). "
+                     "extract.next_batch skips them unless asked for by id. Documents already read "
+                     "(already_read) keep their values in data/extracted.",
+            "count": len(records), "already_read": sum(r["already_read"] for r in records), "records": records}
 
 
 def render(out: dict) -> tuple[str, str]:
@@ -391,10 +426,16 @@ _POINTS = ("bbox share of non-sea area inside SC +35/+25/+12/+4 (offshore of SC 
            "USGS report +3, society/journal +5, general-audience or methods -5 (commodity summaries -10).")
 
 
-def write(out: dict, list_path: Path = LIST_PATH, scores_path: Path = SCORES_PATH) -> None:
+def write(out: dict, list_path: Path = LIST_PATH, scores_path: Path = SCORES_PATH,
+          not_applicable_path: Path | None = None, extracted_dir: Path = EXTRACTED_DIR) -> None:
     listed, scores = render(out)
     Path(list_path).write_text(listed)
     Path(scores_path).write_text(scores)
+    if not_applicable_path is not None:
+        na = not_applicable(out, extracted_dir)
+        lines = ",\n  ".join(json.dumps(r, ensure_ascii=False, separators=(",", ":")) for r in na["records"])
+        head = json.dumps({k: v for k, v in na.items() if k != "records"}, ensure_ascii=False)[:-1]
+        Path(not_applicable_path).write_text(head + ',\n "records": [\n  ' + lines + "\n ]\n}\n")
 
 
 def main() -> None:
@@ -408,7 +449,7 @@ def main() -> None:
         ok = LIST_PATH.read_text() == listed and SCORES_PATH.read_text() == scores
         print("reading list up to date" if ok else "reading list out of date: run python -m extract.reading_list")
         sys.exit(0 if ok else 1)
-    write(out)
+    write(out, not_applicable_path=NOT_APPLICABLE_PATH)
     print(f"{len(out['ids'])} listed, {len(out['scores']) - len(out['ids'])} online records left out, "
           f"{len(out['excluded']) - (len(out['scores']) - len(out['ids']))} without open full text")
 
