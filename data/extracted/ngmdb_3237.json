@@ -1,0 +1,737 @@
+{
+ "source_id": "ngmdb:3237",
+ "title": "Natural gamma aeroradioactivity of the Savannah River Plant area, South Carolina and Georgia",
+ "citation": "Schmidt, R.G., 1961, Natural gamma aeroradioactivity of the Savannah River Plant area, South Carolina and Georgia: U.S. Geological Survey Geophysical Investigations Map GP-306, map scale 1:250,000.",
+ "year": 1961,
+ "scale": 250000,
+ "publisher": "U.S. Geological Survey",
+ "kind": "publication",
+ "schema_version": 1,
+ "extracted_at": "2026-10-07T10:59:54+00:00",
+ "updated_at": "2026-10-07T11:00:11+00:00",
+ "reader": "Claude, scheduled Claude Code session 2026-10-07",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1",
+  "2"
+ ],
+ "blocks_total": 2,
+ "complete": true,
+ "notes": "Aeroradioactivity map (p.2, OCR) with a three-column text panel, a generalized geologic map and a radioactivity map; p.1 is the cover. Columns are interleaved in the OCR; quotes are single-column segments. Radioactivity ranges (cps) kept in unit descriptions. Units from the generalized geologic map explanation recorded only where the explanation gives a description; other explanation entries (McBean, Tuscaloosa to Providence, granite gneiss) garbled or unlabeled and skipped. Radioactivity boundaries and map labels not recorded (map/legend only). Reference to Schmidt 1961 and Davis and Reinhardt 1957 are footnotes; not recorded as they concern methods.\nSUBSURFACE: none; surface aeroradioactivity map only, no elevations, sections or logs.\nAeroradioactivity map (p.2, OCR) with a three-column text panel, a generalized geologic map and a radioactivity map; p.1 is the cover. Columns are interleaved in the OCR; quotes are single-column segments. Radioactivity ranges (cps) kept in unit descriptions. Units from the generalized geologic map explanation recorded only where the explanation gives a description; other explanation entries (McBean, Tuscaloosa to Providence, granite gneiss) garbled or unlabeled and skipped. Radioactivity boundaries and map labels not recorded (map/legend only). References Schmidt 1961 and Davis and Reinhardt 1957 are footnotes (page numbers of the latter print as '7138-727' in the OCR).\nSUBSURFACE: none; surface aeroradioactivity map only, no elevations, sections or logs.",
+ "files": [
+  {
+   "url": "https://pubs.usgs.gov/gp/0306/report.pdf",
+   "via": "pubs_usgs",
+   "sha256": "6d629c30ff35bfde239f7090307c0974358522e2af45af3e501b72f6d19dbf1d",
+   "pages": 1,
+   "first_page": 1
+  },
+  {
+   "url": "https://pubs.usgs.gov/gp/0306/plate-1.pdf",
+   "via": "pubs_usgs",
+   "sha256": "471aa40d6b9a741bae45c6ed3fbad210f7338260cb017db0b67237e923986f24",
+   "pages": 1,
+   "first_page": 2
+  }
+ ],
+ "summary": {
+  "stored": 41,
+  "quote_match": {
+   "exact": 41
+  },
+  "verification": {
+   "agree": 5
+  },
+  "inferred": 4
+ },
+ "ingests": [
+  {
+   "at": "2026-10-07T10:59:54+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-07",
+   "values": 39,
+   "stored": 39,
+   "exact": 39,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 0,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-10-07T11:00:11+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-07",
+   "values": 41,
+   "stored": 41,
+   "exact": 41,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 5,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "metamorphic complex",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "morphic complex of slate, schist, gneiss, and granite;",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "metamorphic",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "lithology": {
+    "value": "slate, schist, gneiss, and granite",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "morphic complex of slate, schist, gneiss, and granite;",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "probable Precambrian or Paleozoic",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "rocks, of probable Precambrian or Paleozoic age; and the Coastal",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "Piedmont rocks as a group: 'of probable Precambrian or Paleozoic age'",
+    "normalized": {
+     "younger_ma": 251.902,
+     "older_ma": 4567.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "includes areas of both high and low radiometric intensity",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "with the granites, The metamorphic complex includes areas of both",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Carolina slate belt",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "slate, schist, and quartzite of the Carolina slate belt; (3) granite in",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "slate",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "lithology": {
+    "value": "argillite, slate, schist, and quartzite",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "slate, schist, and quartzite of the Carolina slate belt; (3) granite in",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "probable Precambrian or Paleozoic",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "rocks, of probable Precambrian or Paleozoic age; and the Coastal",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "Piedmont rocks as a group: 'of probable Precambrian or Paleozoic age'",
+    "normalized": {
+     "younger_ma": 251.902,
+     "older_ma": 4567.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "relatively low aeroradioactivity (generally 300 to 600 cps); in Saluda County composition is uniform, and colors, textures, and metamorphic grade appear similar throughout",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "(generally 300 to 600 cps) is associated with the Carolina slate belt,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "granite in plutons",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "plutons; and (4) porphyritic granite. Relatively low aeroradioactivity",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "granite in",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "lithology": {
+    "value": "granite",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "plutons; and (4) porphyritic granite. Relatively low aeroradioactivity",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "probable Precambrian or Paleozoic",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "rocks, of probable Precambrian or Paleozoic age; and the Coastal",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "Piedmont rocks as a group: 'of probable Precambrian or Paleozoic age'",
+    "normalized": {
+     "younger_ma": 251.902,
+     "older_ma": 4567.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "high aeroradioactivity (generally 700 to 1800 cps) is associated with the granites",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "and high aeroradioactivity (generally 700 to 1800 eps) is associated",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "porphyritic granite",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "plutons; and (4) porphyritic granite. Relatively low aeroradioactivity",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "lithology": {
+    "value": "porphyritic granite",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "plutons; and (4) porphyritic granite. Relatively low aeroradioactivity",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "large mass of porphyritic granite 6 miles south of Clark Hill Reservoir, in Columbia County, Ga., aeroradioactivity chiefly 800 to 1100 cps",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "of a large mass of porphyritic granite is chiefly 800 to 1100 cps, and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Tuscaloosa formation",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.63,
+    "inferred": false,
+    "locator": null,
+    "quote": "are generally underlain by the Tuscaloosa formation of Late Creta-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "tuscaloosa",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Late Cretaceous",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "are generally underlain by the Tuscaloosa formation of Late Creta-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 66.0,
+     "older_ma": 100.5,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "arkosic sand with lenses of clay",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "ceous age, which consists of arkosic sand with lenses of clay.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "contacts": {
+    "value": "near McTier Creek in northern Aiken County, highly radioactive gravelly sand at the base of the Tuscaloosa formation rests on a radioactive granite",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.63,
+    "inferred": false,
+    "locator": null,
+    "quote": "active gravelly sand at the base of the Tuscaloosa formation resting",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "description": {
+    "value": "radioactive layers seem to occur at different positions throughout the thickness of the formation; certain gravelly layers near the base generally 700 to 1300 cps; elsewhere generally 400 to 700 cps",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "certain gravelly layers near the base of the Tuscaloosa formation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Claiborne group",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Claiborne group of middle Eocene age is extensively",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "claiborne",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "group",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Claiborne group of middle Eocene age is extensively",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "middle Eocene",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Claiborne group of middle Eocene age is extensively",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 37.71,
+     "older_ma": 47.8,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "variable: massive sands, thin layers of marl and glauconitic marl, fuller's earth, limestone, and siltstone",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "thin layers of marl and glauconitic marl, fuller's earth, limestone,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "extensively exposed in the east-central part of the SRP area, where it provides a broad radiometric high (350 to 800 cps)",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "exposed in the east-central part of the SRP area, where it provides",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Hawthorn formation",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "& Hawthorn formation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Hawthorn",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "description": {
+    "value": "May include Duplin marl locally",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.63,
+    "inferred": false,
+    "locator": null,
+    "quote": "May include Duplin mart locally",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "OCR prints 'mart'"
+   },
+   "rank": {
+    "value": "formation",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "& Hawthorn formation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "from the unit name"
+   }
+  },
+  {
+   "name": {
+    "value": "Barnwell formation",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "3 Barnwell formation F co component,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Barnwell",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "description": {
+    "value": "Includes some younger and some older strata",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "§| Includes some younger and some +e",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Pamlico, Talbot, Penholoway, and Wicomico formations, undivided",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "s Pamlico, Talbot, Penholoway, and E calibrations at 2,000 feet above the ground,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Wicomico",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "description": {
+    "value": "map unit of the generalized geologic map",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "ty Wicomico formations, undivided J 2 and is removed from the radiation data.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "observations": [],
+ "structures": [
+  {
+   "kind": "contact",
+   "name": {
+    "value": "slate belt-granite contact",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "miles southwest of Lake Murray, a slate belt-granite contact is clearly a ‘",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "location": {
+    "value": "Lexington County, S. C., along a line extending about 6 miles southwest of Lake Murray",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "miles southwest of Lake Murray, a slate belt-granite contact is clearly a ‘",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "clearly defined by aeroradioactivity: slate belt rocks 400 to 600 cps, granite 900 to 1800 cps",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "rocks is 400 to 600 cps, and of the granite, 900 to 1800 cps. A linear",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "kind": "bedding",
+   "location": {
+    "value": "Coastal Plain",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Plain, underlain by gently dipping sedimentary rocks, Late Cretaceous",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "gently dipping sedimentary rocks, Late Cretaceous to Quaternary in age",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Plain, underlain by gently dipping sedimentary rocks, Late Cretaceous",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "kind": "other",
+   "location": {
+    "value": "Piedmont",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "the Piedmont, underlain by steeply inclined metamorphic and igneous",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "description": {
+    "value": "steeply inclined metamorphic and igneous rocks",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "the Piedmont, underlain by steeply inclined metamorphic and igneous",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "groundwater": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Schmidt, R. G., 1961, Aeroradioactivity survey and areal geology of the Savannah River Plant area, South Carolina and Georgia: U. S. Atomic Energy Comm., Rept. CEX-58.4.2, available from Office of Technical Services, Dept. of Commerce, Wash. 25, D. C.",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "i/Schmidt, R. G., 1961, Aeroradioactivity survey and areal geology",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Davis, F. J., and Reinhardt, P. W., 1957, Instrumentation in aircraft for radiation measurements: Nuclear Sci. and Eng., v. 4, no. 6, p. 713-727.",
+    "source_id": "ngmdb:3237",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Vpavis, F. J., and Reinhardt, P. W., 1957,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "surfaces": [],
+ "contours": [],
+ "sections": []
+}
