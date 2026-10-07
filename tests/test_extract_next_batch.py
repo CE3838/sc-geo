@@ -134,3 +134,20 @@ def test_excluded_records_are_never_handed_out(tmp_path, monkeypatch):
                                   extracted_dir=tmp_path / "data" / "extracted",
                                   review_dir=tmp_path / "data" / "review", log=lambda *a: None)
     assert "ngmdb:1" not in [b["id"] for b in batch]
+
+
+def test_records_marked_not_applicable_are_skipped_unless_asked_for(tmp_path, monkeypatch):
+    monkeypatch.setattr(next_batch.pdfs, "process", fake_process)
+    review = tmp_path / "data" / "review"
+    review.mkdir(parents=True)
+    (review / "not_applicable.json").write_text(json.dumps({"records": [
+        {"id": "ngmdb:1", "status": "read: not applicable", "reason": "score 3 below 30: not geologic"}]}))
+    logs = []
+    batch = next_batch.next_batch(n=5, catalog=CAT, pilot_bbox=PILOT, cache_dir=tmp_path / ".cache",
+                                  checkpoint_dir=tmp_path / ".checkpoints" / "pdfs",
+                                  extracted_dir=tmp_path / "data" / "extracted", review_dir=review,
+                                  log=lambda *a: logs.append(" ".join(map(str, a))))
+    assert "ngmdb:1" not in [b["id"] for b in batch]
+    assert any("not applicable" in l and "1" in l for l in logs)  # said, not skipped silently
+    asked = _batch(tmp_path, n=1, ids=["ngmdb:1"])
+    assert [b["id"] for b in asked] == ["ngmdb:1"]

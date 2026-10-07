@@ -30,7 +30,7 @@ them carry the image URL as their locator.
 
 To pick specific documents, take them from `config/reading_list.json`
 (online records ranked by South Carolina geologic relevance, Charleston County
-first; `python -m extract.reading_list` rebuilds it, and
+first, plus every record whose GIS is merged, read for its map-sheet text; `python -m extract.reading_list` rebuilds it, and
 `config/reading_list_scores.json` gives each record's score and, for records
 left out, the reason): `python -m extract.prep --todo` lists the
 ones not yet read, and `python -m extract.next_batch --id <ID> --n 1` hands
