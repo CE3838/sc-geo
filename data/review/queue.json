@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 86,
+ "count": 108,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -1142,6 +1142,292 @@
     "verdict": "unclear",
     "value": "4 to 50 feet",
     "note": "digit misread in OCR ('Deposits form linear, sub-parallel ridges. Thickness 4 to 5) feet'); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:9253",
+   "path": "units[0].age",
+   "problem": "verify_unclear",
+   "value": "Holocene (modern at the coast; 0-4,000 years)",
+   "page": 1,
+   "quote": "Silver Bluff? Qi (0-4,000)",
+   "added_at": "2026-10-07T10:58:53+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Qi'; the 'i' was read as '1' (Q1); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:9253",
+   "path": "sections[1].units_along[0].unit",
+   "problem": "verify_unclear",
+   "value": "Q5b",
+   "page": 2,
+   "quote": "“|O5b",
+   "added_at": "2026-10-07T10:58:53+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'O5b'; read as 'Q5b' by correcting an OCR character; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:9253",
+   "path": "sections[1].units_along[1].unit",
+   "problem": "verify_unclear",
+   "value": "Q5o",
+   "page": 2,
+   "quote": ".|Q50",
+   "added_at": "2026-10-07T10:58:53+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Q50'; read as 'Q5o' by correcting an OCR character; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:9253",
+   "path": "sections[2].units_along[1].unit",
+   "problem": "verify_unclear",
+   "value": "Q2l",
+   "page": 2,
+   "quote": "Q2i {Q2b",
+   "added_at": "2026-10-07T10:58:53+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Q2i'; read as 'Q2l' by correcting an OCR character; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:9253",
+   "path": "sections[2].units_along[3].unit",
+   "problem": "verify_unclear",
+   "value": "Q3l",
+   "page": 2,
+   "quote": "Q2b Q3i",
+   "added_at": "2026-10-07T10:58:53+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Q3i'; read as 'Q3l' by correcting an OCR character; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:9253",
+   "path": "sections[2].units_along[4].unit",
+   "problem": "verify_unclear",
+   "value": "Q3o",
+   "page": 2,
+   "quote": "Q30",
+   "added_at": "2026-10-07T10:58:53+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Q30'; read as 'Q3o' by correcting an OCR character; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:97582",
+   "path": "units[5].map_symbol",
+   "problem": "verify_unclear",
+   "value": "QPsbs",
+   "page": 1,
+   "quote": "apsbs | Barrier-island deposits",
+   "added_at": "2026-10-07T10:59:56+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'apsbs'; read as 'QPsbs' by correcting OCR characters; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:97582",
+   "path": "units[6].map_symbol",
+   "problem": "verify_unclear",
+   "value": "QPpae",
+   "page": 1,
+   "quote": "@Ppae ew sand",
+   "added_at": "2026-10-07T10:59:56+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads '@Ppae'; read as 'QPpae' by correcting OCR characters; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:97582",
+   "path": "units[9].map_symbol",
+   "problem": "verify_unclear",
+   "value": "QPpam",
+   "page": 1,
+   "quote": "@Ppam Estuarine deposits",
+   "added_at": "2026-10-07T10:59:56+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads '@Ppam'; read as 'QPpam' by correcting OCR characters; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:97582",
+   "path": "units[11].map_symbol",
+   "problem": "verify_unclear",
+   "value": "QPps",
+   "page": 1,
+   "quote": "Pps Barrier island deposits",
+   "added_at": "2026-10-07T10:59:56+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Pps'; read as 'QPps' by correcting OCR characters; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:97582",
+   "path": "units[12].map_symbol",
+   "problem": "verify_unclear",
+   "value": "QPpm",
+   "page": 1,
+   "quote": "@Ppm Muds",
+   "added_at": "2026-10-07T10:59:56+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads '@Ppm'; read as 'QPpm' by correcting OCR characters; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100342",
+   "path": "units[5].map_symbol",
+   "problem": "verify_unclear",
+   "value": "QPph",
+   "page": 1,
+   "quote": "@Pph Penholoway Formation",
+   "added_at": "2026-10-07T10:59:56+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads '@Pph'; read as 'QPph' by correcting OCR characters; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100342",
+   "path": "units[10].map_symbol",
+   "problem": "verify_unclear",
+   "value": "QPwr",
+   "page": 1,
+   "quote": "Qpwr | Fluvial deposits of the Wicomico Formation",
+   "added_at": "2026-10-07T10:59:56+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Qpwr'; read as 'QPwr' by correcting OCR characters; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100342",
+   "path": "units[11].map_symbol",
+   "problem": "verify_unclear",
+   "value": "QPmt",
+   "page": 1,
+   "quote": "aPmt Fluvial",
+   "added_at": "2026-10-07T10:59:56+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'aPmt'; read as 'QPmt' by correcting OCR characters; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99140",
+   "path": "units[14].map_symbol",
+   "problem": "verify_unclear",
+   "value": "QPphr",
+   "page": 1,
+   "quote": "@Pphr Flood plain deposits",
+   "added_at": "2026-10-07T10:59:56+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads '@Pphr'; read as 'QPphr' by correcting OCR characters; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99140",
+   "path": "units[18].map_symbol",
+   "problem": "verify_unclear",
+   "value": "QPwr",
+   "page": 1,
+   "quote": "[ aPwr | Fluvial deposits",
+   "added_at": "2026-10-07T10:59:56+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'aPwr'; read as 'QPwr' by correcting OCR characters; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99141",
+   "path": "units[13].map_symbol",
+   "problem": "verify_unclear",
+   "value": "QPpas",
+   "page": 1,
+   "quote": "[ oF pas | Barrier-island deposits",
+   "added_at": "2026-10-07T10:59:56+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'oF pas'; read as 'QPpas' by correcting OCR characters; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:103893",
+   "path": "units[10].map_symbol",
+   "problem": "verify_unclear",
+   "value": "QPpas",
+   "page": 1,
+   "quote": "[ aFpas | Barrier-island deposits",
+   "added_at": "2026-10-07T10:59:56+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'aFpas'; read as 'QPpas' by correcting OCR characters; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:103394",
+   "path": "units[12].name",
+   "problem": "verify_unclear",
+   "value": "Barrier-island deposits",
+   "page": 1,
+   "quote": "Barrier-istand deposits — Light-gray (N7) to dark-gray (N3), poorly to moderately",
+   "added_at": "2026-10-07T10:59:56+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Barrier-istand'; read as 'Barrier-island' by correcting OCR characters; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:103394",
+   "path": "units[12].map_symbol",
+   "problem": "verify_unclear",
+   "value": "QPpas",
+   "page": 1,
+   "quote": "[ oPpas | Barrier-istand deposits",
+   "added_at": "2026-10-07T10:59:56+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'oPpas'; read as 'QPpas' by correcting OCR characters; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:103394",
+   "path": "units[16].map_symbol",
+   "problem": "verify_unclear",
+   "value": "QPpm",
+   "page": 1,
+   "quote": "Pm | amounts of very fine quartz and phosphorite sands.",
+   "added_at": "2026-10-07T10:59:56+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Pm'; read as 'QPpm' by correcting OCR characters; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:104800",
+   "path": "units[4].map_symbol",
+   "problem": "verify_unclear",
+   "value": "Qcbs",
+   "page": 1,
+   "quote": "Qebs",
+   "added_at": "2026-10-07T10:59:56+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Qebs'; read as 'Qcbs' by correcting OCR characters; check against the map image"
    }
   }
  ]

@@ -8,7 +8,7 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-07T04:19:21+00:00",
- "updated_at": "2026-10-07T04:19:21+00:00",
+ "updated_at": "2026-10-07T10:59:56+00:00",
  "reader": "Claude, scheduled Claude Code session 2026-10-07",
  "packets": [
   "packet-01"
@@ -18,7 +18,7 @@
  ],
  "blocks_total": 1,
  "complete": true,
- "notes": "Single OCR map sheet with text in several interleaved columns; quotes are short single-line fragments. Units under a terrace heading are tied to it from the layout and flagged inferred. Legend symbols corrected from the text layer ('apsbs', '@Ppae', '@Ppam', 'Pps', '@Ppm') are flagged inferred; symbols known only from the correlation chart or photo captions (QHfw, QHsm, QPpas) were not assigned. The freshwater marsh heading is garbled. The eolian sand thickness is garbled and skipped. One '|' thickness and the Chicora 'Im above' elevation are flagged inferred and marked unclear. Legend-only features (contact line type, drill-hole symbol) not recorded. Photos 1-9 captions not recorded. The sheet text has no reference list.\nSUBSURFACE: not held by the schema: margin elevations (Holocene below 10 ft; Silver Bluff 6-10 ft; Princess Anne 12-17 ft; Pamlico 17-22 ft) and maximum relative sea-level elevations (Pamlico +6.7 m, Princess Anne +5.2 m, Silver Bluff +3 m), all p. 1, kept in unit descriptions; total relief 11.5 m (38 ft). Section A-A' (100x) is a scattered face: no distances, unit elevations or boring labels legible. Drill holes (22-0xxx series; GS-8 and GS-9 with paleochannel fill) are plotted without depths; augered borings typically bottom in the Williamsburg Formation. Datum: 1927 North American Datum (horizontal); elevations are given relative to 'sea level' with no named vertical datum.",
+ "notes": "Single OCR map sheet with text in several interleaved columns; quotes are short single-line fragments. Units under a terrace heading are tied to it from the layout and flagged inferred. Legend symbols corrected from the text layer ('apsbs', '@Ppae', '@Ppam', 'Pps', '@Ppm') are flagged inferred; symbols known only from the correlation chart or photo captions (QHfw, QHsm, QPpas) were not assigned. The freshwater marsh heading is garbled. The eolian sand thickness is garbled and skipped. One '|' thickness and the Chicora 'Im above' elevation are flagged inferred and marked unclear. Legend-only features (contact line type, drill-hole symbol) not recorded. Photos 1-9 captions not recorded. The sheet text has no reference list.\nSUBSURFACE: not held by the schema: margin elevations (Holocene below 10 ft; Silver Bluff 6-10 ft; Princess Anne 12-17 ft; Pamlico 17-22 ft) and maximum relative sea-level elevations (Pamlico +6.7 m, Princess Anne +5.2 m, Silver Bluff +3 m), all p. 1, kept in unit descriptions; total relief 11.5 m (38 ft). Section A-A' (100x) is a scattered face: no distances, unit elevations or boring labels legible. Drill holes (22-0xxx series; GS-8 and GS-9 with paleochannel fill) are plotted without depths; augered borings typically bottom in the Williamsburg Formation. Datum: 1927 North American Datum (horizontal); elevations are given relative to 'sea level' with no named vertical datum.\nSingle OCR map sheet with text in several interleaved columns; quotes are short single-line fragments. Units under a terrace heading are tied to it from the layout and flagged inferred. Legend symbols corrected from the text layer ('apsbs', '@Ppae', '@Ppam', 'Pps', '@Ppm') are flagged inferred; symbols known only from the correlation chart or photo captions (QHfw, QHsm, QPpas) were not assigned. The freshwater marsh heading is garbled. The eolian sand thickness is garbled and skipped. One '|' thickness and the Chicora 'Im above' elevation are flagged inferred and marked unclear. Legend-only features (contact line type, drill-hole symbol) not recorded. Photos 1-9 captions not recorded. The sheet text has no reference list.\nSUBSURFACE: not held by the schema: margin elevations (Holocene below 10 ft; Silver Bluff 6-10 ft; Princess Anne 12-17 ft; Pamlico 17-22 ft) and maximum relative sea-level elevations (Pamlico +6.7 m, Princess Anne +5.2 m, Silver Bluff +3 m), all p. 1, kept in unit descriptions; total relief 11.5 m (38 ft). Section A-A' (100x) is a scattered face: no distances, unit elevations or boring labels legible. Drill holes (22-0xxx series; GS-8 and GS-9 with paleochannel fill) are plotted without depths; augered borings typically bottom in the Williamsburg Formation. Datum: 1927 North American Datum (horizontal); elevations are given relative to 'sea level' with no named vertical datum.",
  "files": [
   {
    "url": "https://ngmdb.usgs.gov/img2/97000_97999/97582_1",
@@ -34,8 +34,8 @@
    "exact": 114
   },
   "verification": {
-   "unclear": 2,
-   "agree": 32
+   "agree": 31,
+   "unclear": 7
   },
   "inferred": 21
  },
@@ -57,6 +57,24 @@
    "disagree": 0,
    "unclear": 2,
    "review_items": 2
+  },
+  {
+   "at": "2026-10-07T10:59:56+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-07",
+   "values": 114,
+   "stored": 114,
+   "exact": 114,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 31,
+   "disagree": 0,
+   "unclear": 7,
+   "review_items": 7
   }
  ],
  "units": [
@@ -422,13 +440,13 @@
     "source_id": "ngmdb:97582",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.581,
+    "confidence": 0.479,
     "inferred": true,
     "locator": "https://ngmdb.usgs.gov/img2/97000_97999/97582_1",
     "quote": "apsbs | Barrier-island deposits",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
+    "verification": "unclear",
     "note": "text layer reads 'apsbs'; correlation chart reads 'QPsbs'"
    },
    "age": {
@@ -516,13 +534,13 @@
     "source_id": "ngmdb:97582",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.581,
+    "confidence": 0.479,
     "inferred": true,
     "locator": "https://ngmdb.usgs.gov/img2/97000_97999/97582_1",
     "quote": "@Ppae ew sand",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
+    "verification": "unclear",
     "note": "text layer reads '@Ppae'"
    },
    "age": {
@@ -754,13 +772,13 @@
     "source_id": "ngmdb:97582",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.581,
+    "confidence": 0.479,
     "inferred": true,
     "locator": "https://ngmdb.usgs.gov/img2/97000_97999/97582_1",
     "quote": "@Ppam Estuarine deposits",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
+    "verification": "unclear",
     "note": "text layer reads '@Ppam'"
    },
    "age": {
@@ -925,13 +943,13 @@
     "source_id": "ngmdb:97582",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.684,
+    "confidence": 0.479,
     "inferred": true,
     "locator": "https://ngmdb.usgs.gov/img2/97000_97999/97582_1",
     "quote": "Pps Barrier island deposits",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree",
+    "verification": "unclear",
     "note": "text layer reads 'Pps'"
    },
    "age": {
@@ -1018,13 +1036,13 @@
     "source_id": "ngmdb:97582",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.581,
+    "confidence": 0.479,
     "inferred": true,
     "locator": "https://ngmdb.usgs.gov/img2/97000_97999/97582_1",
     "quote": "@Ppm Muds",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
+    "verification": "unclear",
     "note": "text layer reads '@Ppm'"
    },
    "age": {

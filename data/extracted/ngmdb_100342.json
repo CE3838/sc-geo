@@ -8,7 +8,7 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-07T04:17:11+00:00",
- "updated_at": "2026-10-07T04:17:11+00:00",
+ "updated_at": "2026-10-07T10:59:56+00:00",
  "reader": "Claude, scheduled Claude Code session 2026-10-07",
  "packets": [
   "packet-01"
@@ -18,7 +18,7 @@
  ],
  "blocks_total": 1,
  "complete": true,
- "notes": "Single OCR map sheet; the map face is garbled. Units under a terrace or unit heading are tied to it from the layout and flagged inferred. Legend symbols: QPphr and QPwsr are on the same line as their descriptions; QPph ('@Pph'), QPwr ('Qpwr') and QPmt ('aPmt') corrected from the text layer (inferred). One thickness read '|' for 1 is flagged inferred and marked unclear for a check against the map image. Legend-only features (contact line type, drill-hole symbol) not recorded. Bodies of standing water and disturbed ground not recorded as units. The sheet says its products are provided 'as is' without warranty.\nSUBSURFACE: p. 1 margin elevations not held by the schema: Holocene terrace sediments below 10 ft at the landward margin; Dean Swamp member tied to a shoreline 90 ft above modern sea level. Penholoway uppermost elevation (75 ft) is stored as a surface. Drill holes (e.g. 25-156, 27-309) are plotted with SCGS log numbers but no depths or logs; logs on file at SCGS. No cross section or structure-contour map. Datum: horizontal 1927 North American Datum, contour interval 5 feet; vertical datum for the elevations not stated.",
+ "notes": "Single OCR map sheet; the map face is garbled. Units under a terrace or unit heading are tied to it from the layout and flagged inferred. Legend symbols: QPphr and QPwsr are on the same line as their descriptions; QPph ('@Pph'), QPwr ('Qpwr') and QPmt ('aPmt') corrected from the text layer (inferred). One thickness read '|' for 1 is flagged inferred and marked unclear for a check against the map image. Legend-only features (contact line type, drill-hole symbol) not recorded. Bodies of standing water and disturbed ground not recorded as units. The sheet says its products are provided 'as is' without warranty.\nSUBSURFACE: p. 1 margin elevations not held by the schema: Holocene terrace sediments below 10 ft at the landward margin; Dean Swamp member tied to a shoreline 90 ft above modern sea level. Penholoway uppermost elevation (75 ft) is stored as a surface. Drill holes (e.g. 25-156, 27-309) are plotted with SCGS log numbers but no depths or logs; logs on file at SCGS. No cross section or structure-contour map. Datum: horizontal 1927 North American Datum, contour interval 5 feet; vertical datum for the elevations not stated.\nSingle OCR map sheet; the map face is garbled. Units under a terrace or unit heading are tied to it from the layout and flagged inferred. Legend symbols: QPphr and QPwsr are on the same line as their descriptions; QPph ('@Pph'), QPwr ('Qpwr') and QPmt ('aPmt') corrected from the text layer (inferred). One thickness read '|' for 1 is flagged inferred and marked unclear for a check against the map image. Legend-only features (contact line type, drill-hole symbol) not recorded. Bodies of standing water and disturbed ground not recorded as units. The sheet says its products are provided 'as is' without warranty.\nSUBSURFACE: p. 1 margin elevations not held by the schema: Holocene terrace sediments below 10 ft at the landward margin; Dean Swamp member tied to a shoreline 90 ft above modern sea level. Penholoway uppermost elevation (75 ft) is stored as a surface. Drill holes (e.g. 25-156, 27-309) are plotted with SCGS log numbers but no depths or logs; logs on file at SCGS. No cross section or structure-contour map. Datum: horizontal 1927 North American Datum, contour interval 5 feet; vertical datum for the elevations not stated.",
  "files": [
   {
    "url": "https://ngmdb.usgs.gov/img2/100000_100999/100342_1",
@@ -35,7 +35,7 @@
   },
   "verification": {
    "agree": 12,
-   "unclear": 1
+   "unclear": 4
   },
   "inferred": 10
  },
@@ -57,6 +57,24 @@
    "disagree": 0,
    "unclear": 1,
    "review_items": 1
+  },
+  {
+   "at": "2026-10-07T10:59:56+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-07",
+   "values": 65,
+   "stored": 65,
+   "exact": 65,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 12,
+   "disagree": 0,
+   "unclear": 4,
+   "review_items": 4
   }
  ],
  "units": [
@@ -416,13 +434,13 @@
     "source_id": "ngmdb:100342",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.581,
+    "confidence": 0.479,
     "inferred": true,
     "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100342_1",
     "quote": "@Pph Penholoway Formation",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
+    "verification": "unclear",
     "note": "text layer reads '@Pph'"
    },
    "rank": {
@@ -795,13 +813,13 @@
     "source_id": "ngmdb:100342",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.581,
+    "confidence": 0.479,
     "inferred": true,
     "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100342_1",
     "quote": "Qpwr | Fluvial deposits of the Wicomico Formation",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
+    "verification": "unclear",
     "note": "text layer reads 'Qpwr'"
    },
    "age": {
@@ -889,13 +907,13 @@
     "source_id": "ngmdb:100342",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.581,
+    "confidence": 0.479,
     "inferred": true,
     "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100342_1",
     "quote": "aPmt Fluvial",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
+    "verification": "unclear",
     "note": "text layer reads 'aPmt'"
    },
    "lithology": {
