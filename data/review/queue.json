@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 72,
+ "count": 74,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -956,6 +956,34 @@
    "verify": {
     "verdict": "unclear",
     "note": "section end labels OCR'd as 'A' and 'Al'; reading as A-A' is likely but should be checked on the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:77565",
+   "path": "units[7].thickness",
+   "problem": "verify_unclear",
+   "value": "less than 1 foot to 12 feet",
+   "page": 1,
+   "quote": "layers. Thickness less than | foot to 12 feet",
+   "added_at": "2026-10-07T10:57:52+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "less than 1 foot to 12 feet",
+    "note": "digit misread in OCR ('layers. Thickness less than | foot to 12 feet'); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:77565",
+   "path": "units[25].thickness",
+   "problem": "verify_unclear",
+   "value": "4 to 50 feet",
+   "page": 1,
+   "quote": "Deposits form linear, sub-parallel ridges. Thickness 4 to 5) feet",
+   "added_at": "2026-10-07T10:57:52+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "4 to 50 feet",
+    "note": "digit misread in OCR ('Deposits form linear, sub-parallel ridges. Thickness 4 to 5) feet'); check against the map image"
    }
   }
  ]
