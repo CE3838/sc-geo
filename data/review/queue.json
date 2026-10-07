@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 68,
+ "count": 70,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -900,6 +900,32 @@
     "verdict": "disagree",
     "value": "River terrace deposits",
     "note": "the source name is 'River terrace deposits'; '(Tertiary)' is the age, added by the first pass to tell it apart from the Quaternary terrace unit"
+   }
+  },
+  {
+   "source_id": "ngmdb:6386",
+   "path": "sections[0].name",
+   "problem": "verify_unclear",
+   "value": "A",
+   "page": 1,
+   "quote": "Edisto U.S. K",
+   "added_at": "2026-10-07T10:57:36+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "the letter A is printed on its own line above 'Edisto U.S.'; value right but the quote does not show it"
+   }
+  },
+  {
+   "source_id": "ngmdb:6386",
+   "path": "sections[2].vertical_exaggeration",
+   "problem": "verify_unclear",
+   "value": "X 53",
+   "page": 1,
+   "quote": "VERTICAL EXAGGERATION X 53",
+   "added_at": "2026-10-07T10:57:36+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "this 'VERTICAL EXAGGERATION X 53' line is printed above section A in the OCR order; which section it labels is not clear (all three show x 53)"
    }
   }
  ]

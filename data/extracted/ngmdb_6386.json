@@ -1,0 +1,725 @@
+{
+ "source_id": "ngmdb:6386",
+ "title": "Geological studies of the Charleston, South Carolina, area--thickness of overburden map",
+ "citation": "Force, L.M., 1978, Geological studies of the Charleston, South Carolina, area--thickness of overburden map: U.S. Geological Survey Miscellaneous Field Studies Map MF-1021-B, map scale 1:250,000.",
+ "year": 1978,
+ "scale": 250000,
+ "publisher": "U.S. Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-10-07T10:57:36+00:00",
+ "updated_at": "2026-10-07T10:57:36+00:00",
+ "reader": "Claude, scheduled Claude Code session 2026-10-07",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1"
+ ],
+ "blocks_total": 1,
+ "complete": true,
+ "notes": "Single OCR sheet: overburden-thickness (isopach) map, explanatory text and three cross sections. Map face garbled: isopach contour labels and drill-site labels cannot be read or tied to contours, so no contour values or observations recorded. Section names, vertical exaggerations and units are read from the OCR layout (inferred). Map compiled from several hundred drill logs (USGS, SCGS, private firms); none are in the document.\nSUBSURFACE: the three sections (p.1) have vertical scales in ft and m (about -150 ft/-45 m to 300 ft/90 m) with a zero line whose datum is not printed in the OCR; distances and unit elevations along them are not legible. Top of bedrock (Cooper Formation) is very irregular in the southwest, with discontinuous limestone ledges; no elevations given. Map vertical datum not stated.",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=17176_6386_2",
+   "via": "ngmdb_scan",
+   "sha256": "c09a0eb07143ea903b11b6b635b30a074d10328bc59ad98c437b736cd92445ef",
+   "pages": 1,
+   "first_page": 1
+  }
+ ],
+ "summary": {
+  "stored": 38,
+  "quote_match": {
+   "exact": 38
+  },
+  "verification": {
+   "agree": 18,
+   "unclear": 2
+  },
+  "inferred": 14
+ },
+ "ingests": [
+  {
+   "at": "2026-10-07T10:57:36+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-07",
+   "values": 38,
+   "stored": 38,
+   "exact": 38,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 18,
+   "disagree": 0,
+   "unclear": 2,
+   "review_items": 2
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "Overburden",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Overburden in the Charleston area includes weakly",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "informal; the mapped material"
+   },
+   "lithology": {
+    "value": "weakly consolidated to unconsolidated sand and clay",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "consolidated to unconsolidated sand and clay ranging in",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene to Miocene and possibly to late Oligocene",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "age from Holocene to Miocene and possibly to late",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 27.82,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "maximum more than 60 m in the southwestern part of the map; belts between 15 and 25 m thick parallel the modern coast; less than 5 m southeast and southwest of Lake Moultrie",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.63,
+    "inferred": false,
+    "locator": null,
+    "quote": "western part of the map, is more than 60 m. Belts of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "min_ft": 16.404199475065614,
+     "max_ft": 196.85039370078738,
+     "values_ft": [
+      196.85039370078738,
+      82.02099737532808,
+      16.404199475065614
+     ],
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "contacts": {
+    "value": "rests mainly on the Cooper Formation and Santee Limestone",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The overburden rests mainly on the Cooper",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "Belts of sediment between 15 and 25 m thick parallel the modern coast and generally coincide with the beaches and sand ridges of old shorelines; the ancestral Edisto and Ashley Rivers may have scoured the area during the Pleistocene while sea level was lower",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "sediment between 15 and 25 m thick parallel the modern",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Cooper Formation",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Cooper Formation is considered bedrock on this map",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Cooper",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.504,
+    "inferred": true,
+    "locator": null,
+    "quote": "The Cooper Formation is considered bedrock on this map",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "from the unit name"
+   },
+   "age": {
+    "value": "early Miocene(?) to Eocene",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Miocene(?) to Eocene age, which are moderately consolidated",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "age given jointly for the Cooper Formation and Santee Limestone",
+    "normalized": {
+     "younger_ma": 15.98,
+     "older_ma": 56.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "calcareous, moderately consolidated to lithified",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Formation and Santee Limestone, calcareous units of early",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "considered bedrock on this map because it is stronger and less compressible than overlying sediments; engineers prefer this formation for the foundations of large buildings; little of the Cooper is recrystallized",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "because it is stronger and less compressible than overlying",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Santee Limestone",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Formation and Santee Limestone, calcareous units of early",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Santee",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "early Miocene(?) to Eocene",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Miocene(?) to Eocene age, which are moderately consolidated",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "age given jointly for the Cooper Formation and Santee Limestone",
+    "normalized": {
+     "younger_ma": 15.98,
+     "older_ma": 56.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "calcareous, moderately consolidated to lithified",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Formation and Santee Limestone, calcareous units of early",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Black Mingo Formation",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Black Mingo Formation (lower Eocene and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Black Mingo",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "lower Eocene and Paleocene",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Black Mingo Formation (lower Eocene and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 47.8,
+     "older_ma": 66.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "contacts": {
+    "value": "underlies the surficial deposits north of the Santee River",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "underlie the surficial deposits north of the Santee River.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Peedee Formation",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Paleocene) and the Peedee Formation (Upper Cretaceous)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Peedee",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Upper Cretaceous",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Paleocene) and the Peedee Formation (Upper Cretaceous)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 66.0,
+     "older_ma": 100.5,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "contacts": {
+    "value": "underlies the surficial deposits north of the Santee River",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "underlie the surficial deposits north of the Santee River.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "observations": [],
+ "structures": [],
+ "groundwater": [],
+ "references": [],
+ "surfaces": [],
+ "contours": [
+  {
+   "kind": "isopach",
+   "surface": {
+    "value": "thickness of overburden",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "Contour of overburden thickness— 4",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "unit": {
+    "value": "overburden",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "Contour of overburden thickness— 4",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "interval": {
+    "value": "5m",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "Contour interval, 5m",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "min_ft": 16.404199475065614,
+     "max_ft": 16.404199475065614,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "units": {
+    "value": "m",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "Contour interval, 5m",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "area": {
+    "value": "Charleston, South Carolina, area",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "GEOLOGICAL STUDIES OF THE CHARLESTON, SOUTH CAROLINA, AREA -THICKNESS OF OVERBURDEN MAP",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  }
+ ],
+ "sections": [
+  {
+   "name": {
+    "value": "A",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "Edisto U.S. K",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "unclear",
+    "note": "only the letter A is legible at the start of this section; the end label is not legible"
+   },
+   "vertical_exaggeration": {
+    "value": "x 53",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": null,
+    "quote": "VERTICAL EXAGGERATION x 53",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "read from layout",
+    "normalized": 53.0
+   },
+   "units_along": [
+    {
+     "unit": {
+      "value": "Santee Formation",
+      "source_id": "ngmdb:6386",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.612,
+      "inferred": true,
+      "locator": null,
+      "quote": "Santee Formation | Cooper Formation",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "agree",
+      "note": "position along the section not legible",
+      "normalized": {
+       "canonical": "Santee",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "unit": {
+      "value": "Cooper Formation",
+      "source_id": "ngmdb:6386",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.612,
+      "inferred": true,
+      "locator": null,
+      "quote": "Santee Formation | Cooper Formation",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "agree",
+      "note": "position along the section not legible",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": {
+    "value": "B-B",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": null,
+    "quote": "B. Swamp Swamp Swamp River River River B",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "letters B at both ends; crosses Providence, Dean and Wassamassaw Swamps and the Back, Cooper and Wando Rivers"
+   },
+   "vertical_exaggeration": {
+    "value": "X 53",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": null,
+    "quote": "VERTICAL EXAGGERATION X 53 *",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "read from layout",
+    "normalized": 53.0
+   },
+   "units_along": [
+    {
+     "unit": {
+      "value": "Santee Formation",
+      "source_id": "ngmdb:6386",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.612,
+      "inferred": true,
+      "locator": null,
+      "quote": "Santee Formation | Cooper Formation",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "agree",
+      "note": "position along the section not legible",
+      "normalized": {
+       "canonical": "Santee",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "unit": {
+      "value": "Cooper Formation",
+      "source_id": "ngmdb:6386",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.612,
+      "inferred": true,
+      "locator": null,
+      "quote": "Santee Formation | Cooper Formation",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "agree",
+      "note": "position along the section not legible",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
+  },
+  {
+   "start": {
+    "location": {
+     "value": "South Broad River",
+     "source_id": "ngmdb:6386",
+     "page": 1,
+     "extraction_method": "llm",
+     "confidence": 0.612,
+     "inferred": true,
+     "locator": null,
+     "quote": "Broad Combahee Edisto Ashley Cooper Santee",
+     "quote_match": "exact",
+     "text_method": "ocr",
+     "verification": "agree",
+     "note": "first river named along a coast-parallel section"
+    }
+   },
+   "end": {
+    "location": {
+     "value": "Winyah Bay",
+     "source_id": "ngmdb:6386",
+     "page": 1,
+     "extraction_method": "llm",
+     "confidence": 0.612,
+     "inferred": true,
+     "locator": null,
+     "quote": "River River River River River River Winyah",
+     "quote_match": "exact",
+     "text_method": "ocr",
+     "verification": "agree",
+     "note": "last feature named along the section"
+    }
+   },
+   "vertical_exaggeration": {
+    "value": "X 53",
+    "source_id": "ngmdb:6386",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "VERTICAL EXAGGERATION X 53",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "unclear",
+    "note": "read from layout",
+    "normalized": 53.0
+   },
+   "units_along": [
+    {
+     "unit": {
+      "value": "Cooper Formation",
+      "source_id": "ngmdb:6386",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.612,
+      "inferred": true,
+      "locator": null,
+      "quote": "Cooper Formation | Santee Formation ?",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "agree",
+      "note": "position along the section not legible",
+      "normalized": {
+       "canonical": "Cooper",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    },
+    {
+     "unit": {
+      "value": "Santee Formation ?",
+      "source_id": "ngmdb:6386",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.612,
+      "inferred": true,
+      "locator": null,
+      "quote": "Cooper Formation | Santee Formation ?",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "agree",
+      "note": "queried on the section; position not legible",
+      "normalized": {
+       "canonical": "Santee",
+       "in_geolex": true,
+       "inferred": true
+      }
+     }
+    }
+   ]
+  }
+ ]
+}
