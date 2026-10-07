@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 69,
+ "count": 70,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -911,6 +911,19 @@
    "verify": {
     "verdict": "unclear",
     "note": "the sentence may apply only to the marine deposits located away from the Santee River floodplain; extent of the 75 ft value is ambiguous"
+   }
+  },
+  {
+   "source_id": "ngmdb:15292",
+   "path": "references[0].citation",
+   "problem": "verify_unclear",
+   "value": "U.S. Geological Survey, 1978, Aeromagnetic map of Charleston and vicinity, South Carolina: U.S. Geol. Survey Open-File Rept. 75-590",
+   "page": 1,
+   "quote": "U.S. Geological Survey, 1978, Aeromagnetic map of Charleston",
+   "added_at": "2026-10-07T10:57:55+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "page reads '1978' but the report number is 75-590; OCR may have misread the year; rest of the entry is interleaved with map-face noise"
    }
   }
  ]
