@@ -11,7 +11,8 @@ yourself.
 
        python -m extract.ingest .cache/results/<id>.<packet>.json --plan-verify > .cache/results/<id>.<packet>.plan.json
 
-   It lists every value read from a table plus a random 10% of the others:
+   It lists every value read from a table, every subsurface value, plus a
+   random 10% of the others:
    `path`, `value`, `page`, `quote`.
 2. The packet file the values were read from (`.cache/packets/<id>/packet-NN.md`).
 
@@ -26,6 +27,15 @@ For each listed value, open the cited page in the packet and decide:
   to the wrong thing (for example, a depth from the next row of a log). Give
   the value the page actually supports in `value`, and explain in `note`.
 - `unclear` -- the page is garbled or ambiguous and you cannot tell.
+
+Subsurface values (`surfaces`, `contours`, `sections`, and an observation's
+`datum` and `depth_reference`) are always in the plan. For these, also check:
+the sign of an elevation and whether it is an elevation or a depth below land
+surface; that the `datum` is the one printed for that value (not one from
+another table or figure); that `boundary` (top or base) and `method` match
+the page; that a contour label or a section's unit belongs to the line or
+interval it is attached to. A reading that depends on the layout of a map
+face and is not flagged `inferred` is `disagree`, with a note.
 
 Judge the value against the page, not against your own knowledge of the
 geology. A value flagged `inferred` is `agree` if the inference is sound and
@@ -43,7 +53,8 @@ Write `.cache/results/<id>.<packet>.verify.json`:
     {"path": "units[0].thickness", "verdict": "agree"},
     {"path": "observations[2].intervals[1].bottom", "verdict": "disagree",
      "value": "12 ft", "note": "the 10 ft value is the top of the next layer"},
-    {"path": "units[3].age", "verdict": "unclear", "note": "OCR garbled"}
+    {"path": "units[3].age", "verdict": "unclear", "note": "OCR garbled"},
+    {"path": "surfaces[0].datum", "verdict": "agree"}
   ]
 }
 ```

@@ -45,9 +45,13 @@ Each file matches `extract/schema.json`:
   "packets": ["packet-01"],
   "reader": "Claude, scheduled Claude Code session <date>",
   "notes": "optional remarks for a reviewer",
-  "units": [], "observations": [], "structures": [], "groundwater": [], "references": []
+  "units": [], "observations": [], "structures": [], "groundwater": [], "references": [],
+  "surfaces": [], "contours": [], "sections": []
 }
 ```
+
+`surfaces`, `contours` and `sections` are optional; leave them out when the
+packet has none.
 
 Every value is an object:
 
@@ -92,7 +96,11 @@ test_pit, cpt, other -- this is a plain string, not a value object), `label`
 (the source's identifier), `location` EXACTLY as stated (coordinates, State
 Plane values, a road intersection, "0.5 mi N of Ladson" -- never compute or
 look up coordinates; if no location is given, leave it out), `elevation`,
-`total_depth`, `date`, `water_level`, `water_level_date`, and `intervals`:
+`datum` (the vertical datum of that elevation exactly as printed: "NGVD 29",
+"mean sea level"...), `depth_reference` ("land surface" when interval tops and
+bottoms are depths below land surface, "elevation" when they are elevations;
+quote the log header that says so, or flag it `inferred`), `total_depth`,
+`date`, `water_level`, `water_level_date`, and `intervals`:
 each with `top` and `bottom` depth (with units as stated), `unit` (stratigraphic
 unit named for that interval), `description`, `uscs`, `munsell`, `spt_n`,
 `liquid_limit`, `plasticity_index`, `moisture_content`. One interval per
@@ -109,6 +117,48 @@ strike-slip...), `sense` (of movement), `certainty` (as the source says:
 in), `head` (water level/potentiometric head with units and datum as stated),
 `location`, `date`, `transmissivity`, `hydraulic_conductivity`, `description`.
 
+**surfaces** -- one entry per elevation or depth of a geologic surface at one
+place, for later cross sections: the top or base of a unit in a well table, a
+"top of the Cooper Marl is at -62 ft" sentence, a point read off a
+structure-contour map. `surface` (as printed, e.g. "top of Cooper Marl"),
+`unit`, `boundary` ("top" or "base"), `elevation` (relative to a datum; keep
+the sign as printed, e.g. -62 with `"units": "ft"`, or "120 ft below sea
+level") or `depth` (below land surface), `datum` exactly as printed (our code
+maps it to NGVD29, NAVD88, MSL, land surface or unknown; never convert
+between datums), `location` as printed, `observation` (the `label` of a
+boring or well in this result when the value belongs to one), and `method`:
+"measured" (in a boring, well or outcrop), "contour" (read from a contour
+map), "interpolated" (between points, by the source) or "stated" (given in
+text without saying how). A unit's thickness is NOT a surface: "the Ashley
+is 40 ft thick" goes in the unit's `thickness`; "the base of the Ashley is
+at -110 ft in CHN-14" is a surface. A depth to a unit in a log row is an
+interval `top`; record a surface as well only when the source names it as
+the top or base of a unit.
+
+**contours** -- each structure-contour or isopach map: `kind` ("structure"
+for elevations of a surface, "isopach" for thickness; a plain string like an
+observation's kind), `surface`, `unit`, `interval` (contour interval as
+printed), `datum`, `units`, `area` (as printed), `values` (a list of
+contour labels you can read, each its own value with its page and quote --
+only labels that are legible in the text; skip the rest), and `figure`
+(figure or plate id).
+
+**sections** -- each published cross section: `name` (e.g. "A-A'"),
+`figure`, `start` and `end` (each with `location` as printed and, only if
+the source prints them, `coordinates`), `vertical_exaggeration`, `datum`,
+`length`, `observations` (a list of the labels of borings and wells shown on
+it, each its own value), and `units_along`: one entry per unit where the
+section's text or labels are legible, with `unit`, `from_distance`,
+`to_distance` (along the section, as printed), `top_elevation` and
+`base_elevation`.
+
+Map and section faces are OCRed as scattered text. A value that depends on
+reading the layout (which label belongs to which contour line, which unit
+lies between two distances, which well a number sits beside) is `inferred`.
+Record contour labels and section units only where they are legible; never
+estimate an elevation between contours, and never compute coordinates from a
+map's grid or a place name.
+
 **references** -- each reference cited, one `citation` value per entry with
 the page of the reference list. For long reference lists, include references
 relevant to South Carolina geology; you may skip general references. Say in
@@ -118,7 +168,8 @@ relevant to South Carolina geology; you may skip general references. Say in
 
 1. Only report what this document says. Do not add knowledge from elsewhere.
 2. Quote every value; flag every inference.
-3. Never invent coordinates, depths, or names. Never convert units.
+3. Never invent coordinates, depths, elevations or names. Never convert units
+   or datums; record each datum exactly as printed.
 4. Keep the source's own unit names and spelling.
 5. A value repeated on several pages: record it once, from the most specific
    place (description of map units, a log, a table), unless the pages disagree --
