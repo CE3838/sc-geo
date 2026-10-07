@@ -16,7 +16,10 @@
     "observations": {"type": "array", "items": {"$ref": "#/$defs/observation"}},
     "structures": {"type": "array", "items": {"$ref": "#/$defs/structure"}},
     "groundwater": {"type": "array", "items": {"$ref": "#/$defs/groundwater"}},
-    "references": {"type": "array", "items": {"$ref": "#/$defs/reference"}}
+    "references": {"type": "array", "items": {"$ref": "#/$defs/reference"}},
+    "surfaces": {"type": "array", "items": {"$ref": "#/$defs/surface"}, "description": "Optional. Elevation or depth of the top or base of a unit at one place"},
+    "contours": {"type": "array", "items": {"$ref": "#/$defs/contour"}, "description": "Optional. Structure-contour and isopach maps"},
+    "sections": {"type": "array", "items": {"$ref": "#/$defs/section"}, "description": "Optional. Published cross sections"}
   },
   "$defs": {
     "value": {
@@ -34,6 +37,28 @@
       }
     },
     "field": {"anyOf": [{"$ref": "#/$defs/value"}, {"const": "not stated"}]},
+    "elevation_field": {
+      "description": "An elevation or depth: a number or the text as printed; units given separately are ft or m",
+      "anyOf": [{"allOf": [{"$ref": "#/$defs/value"},
+                           {"properties": {"value": {"type": ["number", "string"]}, "units": {"enum": ["ft", "m"]}}}]},
+                {"const": "not stated"}]
+    },
+    "boundary_field": {
+      "description": "Which boundary of the unit the surface is",
+      "anyOf": [{"allOf": [{"$ref": "#/$defs/value"}, {"properties": {"value": {"enum": ["top", "base"]}}}]},
+                {"const": "not stated"}]
+    },
+    "surface_method_field": {
+      "description": "Measured in a boring or well, read from a contour map, interpolated between points, or stated in text",
+      "anyOf": [{"allOf": [{"$ref": "#/$defs/value"},
+                           {"properties": {"value": {"enum": ["measured", "contour", "interpolated", "stated"]}}}]},
+                {"const": "not stated"}]
+    },
+    "depth_reference_field": {
+      "description": "Whether interval tops and bottoms are depths below land surface or elevations",
+      "anyOf": [{"allOf": [{"$ref": "#/$defs/value"}, {"properties": {"value": {"enum": ["land surface", "elevation"]}}}]},
+                {"const": "not stated"}]
+    },
     "unit": {
       "type": "object",
       "additionalProperties": false,
@@ -77,6 +102,8 @@
         "label": {"$ref": "#/$defs/field"},
         "location": {"$ref": "#/$defs/field"},
         "elevation": {"$ref": "#/$defs/field"},
+        "datum": {"$ref": "#/$defs/field", "description": "Vertical datum of the elevation, as printed"},
+        "depth_reference": {"$ref": "#/$defs/depth_reference_field"},
         "total_depth": {"$ref": "#/$defs/field"},
         "date": {"$ref": "#/$defs/field"},
         "intervals": {"type": "array", "items": {"$ref": "#/$defs/interval"}},
@@ -113,6 +140,71 @@
         "transmissivity": {"$ref": "#/$defs/field"},
         "hydraulic_conductivity": {"$ref": "#/$defs/field"},
         "description": {"$ref": "#/$defs/field"}
+      }
+    },
+    "surface": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "surface": {"$ref": "#/$defs/field"},
+        "unit": {"$ref": "#/$defs/field"},
+        "boundary": {"$ref": "#/$defs/boundary_field"},
+        "elevation": {"$ref": "#/$defs/elevation_field"},
+        "depth": {"$ref": "#/$defs/elevation_field", "description": "Below land surface, instead of an elevation"},
+        "datum": {"$ref": "#/$defs/field", "description": "As printed: NGVD 29, NAVD 88, sea level, land surface..."},
+        "location": {"$ref": "#/$defs/field"},
+        "observation": {"$ref": "#/$defs/field", "description": "Label of a boring or well in this result"},
+        "method": {"$ref": "#/$defs/surface_method_field"}
+      }
+    },
+    "contour": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind"],
+      "properties": {
+        "kind": {"enum": ["structure", "isopach"]},
+        "surface": {"$ref": "#/$defs/field"},
+        "unit": {"$ref": "#/$defs/field"},
+        "interval": {"$ref": "#/$defs/field"},
+        "datum": {"$ref": "#/$defs/field"},
+        "units": {"$ref": "#/$defs/field"},
+        "area": {"$ref": "#/$defs/field"},
+        "values": {"type": "array", "items": {"$ref": "#/$defs/value"}, "description": "Contour labels read, where legible"},
+        "figure": {"$ref": "#/$defs/field"}
+      }
+    },
+    "section_end": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "location": {"$ref": "#/$defs/field"},
+        "coordinates": {"$ref": "#/$defs/field"}
+      }
+    },
+    "section_unit": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "unit": {"$ref": "#/$defs/field"},
+        "from_distance": {"$ref": "#/$defs/field"},
+        "to_distance": {"$ref": "#/$defs/field"},
+        "top_elevation": {"$ref": "#/$defs/elevation_field"},
+        "base_elevation": {"$ref": "#/$defs/elevation_field"}
+      }
+    },
+    "section": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {"$ref": "#/$defs/field"},
+        "figure": {"$ref": "#/$defs/field"},
+        "start": {"$ref": "#/$defs/section_end"},
+        "end": {"$ref": "#/$defs/section_end"},
+        "vertical_exaggeration": {"$ref": "#/$defs/field"},
+        "datum": {"$ref": "#/$defs/field"},
+        "length": {"$ref": "#/$defs/field"},
+        "observations": {"type": "array", "items": {"$ref": "#/$defs/value"}, "description": "Labels of borings and wells shown"},
+        "units_along": {"type": "array", "items": {"$ref": "#/$defs/section_unit"}}
       }
     },
     "reference": {

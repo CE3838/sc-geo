@@ -98,6 +98,10 @@ Guidance for Claude (and humans) working in this repository.
   Records that are one chapter of a multi-paper volume PDF are limited to
   their own pages by `config/catalog_scope.json` (`extract/scope.py`):
   packets hold only those pages and ingest refuses values citing others.
+  Results may also hold subsurface data for cross sections (`surfaces`,
+  `contours`, `sections`, observation `datum`/`depth_reference`); printed
+  locations are converted by `model/coords.py` into a separate
+  `derived_coordinates` value flagged inferred.
 - Goal: merge all sources into one GeMS-aligned result. Where maps overlap,
   the most detailed and recent map wins; confidence comes from scale, the
   mapper's identity confidence, agreement among other maps and published

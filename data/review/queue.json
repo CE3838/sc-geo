@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 19,
+ "count": 64,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -159,6 +159,73 @@
    }
   },
   {
+   "source_id": "ngmdb:48826",
+   "path": "units[7].rank",
+   "problem": "verify_disagree",
+   "value": "Limestone",
+   "page": 14,
+   "quote": "The Santee Limestone consists of moderately",
+   "added_at": "2026-10-06T01:44:02+00:00",
+   "verify": {
+    "verdict": "disagree",
+    "value": "Formation",
+    "note": "p.13: Cooke (1936) coined the term Santee Limestone with formational status; the rank is formation, not 'Limestone'"
+   }
+  },
+  {
+   "source_id": "ngmdb:48826",
+   "path": "references[34].citation",
+   "problem": "verify_unclear",
+   "value": "Nystrom, P.G., Jr., Willoughby, R.H., and Price, L.K., 1989, The Cretaceous and Tertiary stratigraphy of the upper Coastal Plain of South Carolina, in Upper Cretaceous and Cenozoic geology of the southeastern Atlantic Coastal Plain: International Geological Congress, 28th, Field Trip Guidebook T172, p. 23-42.",
+   "page": 28,
+   "quote": "The Cretaceous and Tertiary stratigraphy of the upper",
+   "added_at": "2026-10-06T01:44:02+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "year printed as '198k' in the text layer (OCR); 1989 is likely from the text citations but not legible in the entry"
+   }
+  },
+  {
+   "source_id": "ngmdb:47117",
+   "path": "groundwater[11].description",
+   "problem": "verify_disagree",
+   "value": "field bulk density 96 to 120 lb per ft3 and porosity 26 to 46 percent (D'Appolonia, 1981, 1982); laboratory salt-solution column tests reduced permeability to about 4 to 10 percent of baseline",
+   "page": 64,
+   "quote": "bulk density ranged from 96 to 120 Ib.",
+   "added_at": "2026-10-06T01:43:08+00:00",
+   "verify": {
+    "verdict": "disagree",
+    "value": "field bulk density 96 to 120 lb per ft3 and porosity 26 to 46 percent (D'Appolonia, 1981, 1982)",
+    "note": "page 64 gives the field bulk density and porosity; the 4 to 10 percent permeability result is on page 66, not page 64"
+   }
+  },
+  {
+   "source_id": "ngmdb:48337",
+   "path": "observations[1].intervals[1].description",
+   "problem": "verify_unclear",
+   "value": "Gray to white sandy fill material,",
+   "page": 10,
+   "quote": "Gray to white sandy fill material,",
+   "added_at": "2026-10-05T21:58:39+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "description ends with a comma and the next lines of the log are garbled text-layer characters; it may continue"
+   }
+  },
+  {
+   "source_id": "ngmdb:100555",
+   "path": "groundwater[1].aquifer",
+   "problem": "verify_unclear",
+   "value": "upper unit",
+   "page": 63,
+   "quote": "Discharge areas, such as in Cedar Creek Basin, tend to be",
+   "added_at": "2026-10-06T01:45:08+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "page 63 does not name the aquifer for the Cedar Creek Basin discharge areas; 'upper unit' rests on p. 31 (springs discharge the upper unit), not on the cited page"
+   }
+  },
+  {
    "source_id": "ngmdb:104799",
    "path": "units[15].name",
    "problem": "verify_unclear",
@@ -169,6 +236,45 @@
    "verify": {
     "verdict": "unclear",
     "note": "this description is printed after the disclaimer in OCR column order; its alloformation (Ten Mile Hill vs. another) cannot be confirmed from the text alone"
+   }
+  },
+  {
+   "source_id": "ngmdb:103894",
+   "path": "units[3].thickness",
+   "problem": "verify_unclear",
+   "value": "less than 1 foot",
+   "page": 1,
+   "quote": "any of the subaqueous beach face. Thickness less than | foot.",
+   "added_at": "2026-10-06T10:58:24+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit; read as 1, needs a check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:103894",
+   "path": "units[4].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "salinity, and rising tides importing high salinity waters. Thickness | to 40 feet.",
+   "added_at": "2026-10-06T10:58:24+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit; read as 1, needs a check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:103894",
+   "path": "units[13].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 15 feet",
+   "page": 1,
+   "quote": "fine quartz and phosphorite sands. Thickness is | to 15 feet.",
+   "added_at": "2026-10-06T10:58:24+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit; read as 1, needs a check against the map image"
    }
   },
   {
@@ -212,6 +318,420 @@
    }
   },
   {
+   "source_id": "ngmdb:103892",
+   "path": "units[3].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "Thickness | to 40 feet.",
+   "added_at": "2026-10-06T10:58:33+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "1 to 40 feet",
+    "note": "digit OCR'd as '|' ('Thickness | to 40 feet.'); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:103892",
+   "path": "units[11].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 15 feet",
+   "page": 1,
+   "quote": "Thickness is | to 15 feet.",
+   "added_at": "2026-10-06T10:58:33+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "1 to 15 feet",
+    "note": "digit OCR'd as '|' ('Thickness is | to 15 feet.'); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:103896",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "Thickness | to 40 feet.",
+   "added_at": "2026-10-06T10:58:34+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "1 to 40 feet",
+    "note": "digit OCR'd as '|' ('Thickness | to 40 feet.'); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:103896",
+   "path": "units[3].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 12 feet",
+   "page": 1,
+   "quote": "Thickness is | to 12 feet.",
+   "added_at": "2026-10-06T10:58:34+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "1 to 12 feet",
+    "note": "digit OCR'd as '|' ('Thickness is | to 12 feet.'); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:103896",
+   "path": "units[4].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 44 feet",
+   "page": 1,
+   "quote": "Thickness is | to 44 feet.",
+   "added_at": "2026-10-06T10:58:34+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "1 to 44 feet",
+    "note": "digit OCR'd as '|' ('Thickness is | to 44 feet.'); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:103893",
+   "path": "units[3].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "Thickness | to 40 feet.",
+   "added_at": "2026-10-06T10:58:14+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Thickness | to 40 feet.'; value read as '1 to 40 feet' with '|' taken as '1'; check the digit against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:103893",
+   "path": "units[5].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 20 feet",
+   "page": 1,
+   "quote": "(Kaczorowski, 1977). Thickness | to 20 feet.",
+   "added_at": "2026-10-06T10:58:14+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads '(Kaczorowski, 1977). Thickness | to 20 feet.'; value read as '1 to 20 feet' with '|' taken as '1'; check the digit against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99137",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 60 feet",
+   "page": 1,
+   "quote": "Thickness | to 60 feet.",
+   "added_at": "2026-10-06T10:58:15+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Thickness | to 60 feet.'; value read as '1 to 60 feet' with '|' taken as '1'; check the digit against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99137",
+   "path": "units[3].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "Thickness | to 40 feet.",
+   "added_at": "2026-10-06T10:58:15+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Thickness | to 40 feet.'; value read as '1 to 40 feet' with '|' taken as '1'; check the digit against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:104800",
+   "path": "units[3].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 6 feet",
+   "page": 1,
+   "quote": "Thickness is | to 6 feet.",
+   "added_at": "2026-10-06T10:58:45+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Thickness is | to 6 feet.'; value read as '1 to 6 feet' with '|' taken as '1'; check the digit against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:103394",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "less than 1 foot",
+   "page": 1,
+   "quote": "Thickness less than | foot.",
+   "added_at": "2026-10-06T10:58:45+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Thickness less than | foot.'; value read as 'less than 1 foot' with '|' taken as '1'; check the digit against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:103394",
+   "path": "units[3].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 12 feet",
+   "page": 1,
+   "quote": "Thickness | to 12 feet.",
+   "added_at": "2026-10-06T10:58:45+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Thickness | to 12 feet.'; value read as '1 to 12 feet' with '|' taken as '1'; check the digit against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:103394",
+   "path": "units[7].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 6 feet",
+   "page": 1,
+   "quote": "Thickness is | to 6 feet.",
+   "added_at": "2026-10-06T10:58:45+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Thickness is | to 6 feet.'; value read as '1 to 6 feet' with '|' taken as '1'; check the digit against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:103394",
+   "path": "units[16].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 15 feet",
+   "page": 1,
+   "quote": "Thickness is | to 15 feet.",
+   "added_at": "2026-10-06T10:58:45+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Thickness is | to 15 feet.'; value read as '1 to 15 feet' with '|' taken as '1'; check the digit against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99139",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 60 feet",
+   "page": 1,
+   "quote": "Thickness | to 60 feet.",
+   "added_at": "2026-10-06T11:02:10+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "1 to 60 feet",
+    "note": "digit OCR'd as '|' ('Thickness | to 60 feet.'); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99139",
+   "path": "units[3].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "Thickness | to 40 feet.",
+   "added_at": "2026-10-06T11:02:10+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "1 to 40 feet",
+    "note": "digit OCR'd as '|' ('Thickness | to 40 feet.'); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99142",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 50 feet",
+   "page": 1,
+   "quote": "Thickness | to 50 feet.",
+   "added_at": "2026-10-06T22:57:56+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "1 to 50 feet",
+    "note": "digit OCR'd as '|' ('Thickness | to 50 feet.'); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99142",
+   "path": "units[8].description",
+   "problem": "verify_unclear",
+   "value": "upper part 1 to 10 feet thick",
+   "page": 1,
+   "quote": "The upper part is | to 10 feet thick.",
+   "added_at": "2026-10-06T22:57:56+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "upper part 1 to 10 feet thick",
+    "note": "digit OCR'd as '|' ('The upper part is | to 10 feet thick.'); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99143",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "less than 1 foot",
+   "page": 1,
+   "quote": "the subaqueous beach face. Thickness less than 1| foot.",
+   "added_at": "2026-10-06T22:58:35+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "less than 1 foot",
+    "note": "digit OCR'd as '|' ('the subaqueous beach face. Thickness less than 1| foot.'); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99143",
+   "path": "units[4].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "Thickness | to 40 feet.",
+   "added_at": "2026-10-06T22:58:35+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "1 to 40 feet",
+    "note": "digit OCR'd as '|' ('Thickness | to 40 feet.'); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99138",
+   "path": "units[1].map_symbol",
+   "problem": "verify_unclear",
+   "value": "QHtw",
+   "page": 1,
+   "quote": "QHtw Freshwater marsh and swamp deposits (Holocene) — Black (N1), silty clay and peat",
+   "added_at": "2026-10-06T10:59:45+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints 'QHtw' in the description and 'QHiw' on the map face; check the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99138",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 6 feet",
+   "page": 1,
+   "quote": "as well as Carolina bays that formed more recently. Thickness | to 6 feet.",
+   "added_at": "2026-10-06T10:59:45+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit; read as 1, needs a check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99138",
+   "path": "units[7].lithology",
+   "problem": "verify_unclear",
+   "value": "Light gray (N7) to pale yellowish orange (10YR 8/6), well sorted, commonly fining upward, quartz sand and minor opaque minerals and phosphatic",
+   "page": 1,
+   "quote": "Sand —- Light gray (N7) to pale yellowish orange (LOYR 8/6), well sorted, commonly",
+   "added_at": "2026-10-06T10:59:45+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints 'LOYR 8/6'; read as 10YR 8/6, needs a check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100324",
+   "path": "units[2].lithology",
+   "problem": "verify_unclear",
+   "value": "White (N9) to medium-gray (N35), well-sorted, subrounded to well-rounded, fine to medium quartz sand with lenses of very coarse shell fragments and very angular, very fine heavy mineral sand",
+   "page": 1,
+   "quote": "to well-rounded, fine to medium quartz sand with lenses of very coarse shell fragments",
+   "added_at": "2026-10-06T22:58:14+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "value kept as printed; 'N35' is likely an OCR misread of a Munsell code (N5?); check the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100324",
+   "path": "units[3].lithology",
+   "problem": "verify_unclear",
+   "value": "White (N9) to yellowish-gray (SY 8/1) and medium-gray (N5), bimodal, subrounded to well-rounded, fine and medium quartz sand",
+   "page": 1,
+   "quote": "(N5), bimodal, subrounded to well-rounded, fine and medium quartz sand.",
+   "added_at": "2026-10-06T22:58:14+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "value kept as printed; 'SY 8/1' is likely an OCR misread of a Munsell code (5Y 8/1?); check the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100324",
+   "path": "units[6].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "drainages of streams. Thickness | to 40 feet.",
+   "added_at": "2026-10-06T22:58:14+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit; read as 1, needs a check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100324",
+   "path": "units[7].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 15 feet",
+   "page": 1,
+   "quote": "parallel to the dominant direction of longshore transport. Thickness is | to 15 feet.",
+   "added_at": "2026-10-06T22:58:14+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit; read as 1, needs a check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100325",
+   "path": "units[3].thickness",
+   "problem": "verify_unclear",
+   "value": "less than 1 foot",
+   "page": 1,
+   "quote": "the subaqueous beach face. Thickness less than | foot.",
+   "added_at": "2026-10-06T22:59:23+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit; read as 1, needs a check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100325",
+   "path": "units[4].lithology",
+   "problem": "verify_unclear",
+   "value": "Black (N1) to 5GY 2/1 (Dark greenish-black), soupy, organic-rich (peaty) muds and fine quartz sand",
+   "page": 1,
+   "quote": "Freshwater marsh (Holocene) — Black (N1) to SGY 2/1 (Dark greenish-black), soupy,",
+   "added_at": "2026-10-06T22:59:23+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints 'SGY 2/1'; read as 5GY 2/1, needs a check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100325",
+   "path": "units[6].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "salinity, and rising tides importing high salinity waters. Thickness | to 40 feet.",
+   "added_at": "2026-10-06T22:59:23+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit; read as 1, needs a check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100325",
+   "path": "units[7].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 15 feet",
+   "page": 1,
+   "quote": "system if enough material is accreted to remain above high tide. Thickness | to 15 feet.",
+   "added_at": "2026-10-06T22:59:23+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit; read as 1, needs a check against the map image"
+   }
+  },
+  {
    "source_id": "ngmdb:100326",
    "path": "units[3].thickness",
    "problem": "verify_unclear",
@@ -248,6 +768,84 @@
    "verify": {
     "verdict": "unclear",
     "note": "OCR text 'Thickness is | to 15 feet.'; first digit read as 1, needs confirmation"
+   }
+  },
+  {
+   "source_id": "ngmdb:99140",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 60 feet",
+   "page": 1,
+   "quote": "deposited by colian processes. Thickness | to 60 feet.",
+   "added_at": "2026-10-06T22:59:54+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'deposited by colian processes. Thickness | to 60 feet.'; value read as '1 to 60 feet' with '|' taken as '1'; check the digit against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99140",
+   "path": "units[3].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "salinity, and rising tides importing high salinity waters. Thickness | to 40 feet.",
+   "added_at": "2026-10-06T22:59:54+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'salinity, and rising tides importing high salinity waters. Thickness | to 40 feet.'; value read as '1 to 40 feet' with '|' taken as '1'; check the digit against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99140",
+   "path": "units[5].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 6 feet",
+   "page": 1,
+   "quote": "as well as Carolina bays that formed more recently. Thickness | to 6 feet.",
+   "added_at": "2026-10-06T22:59:54+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'as well as Carolina bays that formed more recently. Thickness | to 6 feet.'; value read as '1 to 6 feet' with '|' taken as '1'; check the digit against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99141",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "less than 1 foot",
+   "page": 1,
+   "quote": "any of the subaqueous beach face. Thickness less than | foot.",
+   "added_at": "2026-10-06T22:59:54+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'any of the subaqueous beach face. Thickness less than | foot.'; value read as 'less than 1 foot' with '|' taken as '1'; check the digit against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99141",
+   "path": "units[5].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 50 feet",
+   "page": 1,
+   "quote": "brackish water bodies inland of the saltwater wedge. Thickness | to 50 feet.",
+   "added_at": "2026-10-06T22:59:54+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'brackish water bodies inland of the saltwater wedge. Thickness | to 50 feet.'; value read as '1 to 50 feet' with '|' taken as '1'; check the digit against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:99141",
+   "path": "units[10].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 20 feet",
+   "page": 1,
+   "quote": "as well as Carolina bays that formed more recently. Thickness | to 20 feet.",
+   "added_at": "2026-10-06T22:59:54+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'as well as Carolina bays that formed more recently. Thickness | to 20 feet.'; value read as '1 to 20 feet' with '|' taken as '1'; check the digit against the map image"
    }
   }
  ]

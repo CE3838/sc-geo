@@ -29,7 +29,10 @@ minutes of OCR, so `next_batch` can take a while on them. Values read from
 them carry the image URL as their locator.
 
 To pick specific documents, take them from `config/reading_list.json`
-(records whose titles are geology): `python -m extract.prep --todo` lists the
+(online records ranked by South Carolina geologic relevance, Charleston County
+first; `python -m extract.reading_list` rebuilds it, and
+`config/reading_list_scores.json` gives each record's score and, for records
+left out, the reason): `python -m extract.prep --todo` lists the
 ones not yet read, and `python -m extract.next_batch --id <ID> --n 1` hands
 out one of them. OCR can run ahead as a background job with no reading
 (`python -m extract.prep --next 10`, one document at a time, resumable); it
@@ -67,7 +70,11 @@ scope. When a scope changes, `next_batch` rebuilds that record's packets.
 For each packet, in order:
 
 1. Read `extract/prompts/extract.md` (once per session) and `extract/schema.json`.
-2. Read the packet file completely.
+2. Read the packet file completely. Besides units, observations, structures,
+   groundwater and references, record subsurface data where the packet has
+   it: tops and bases of units (`surfaces`), structure-contour and isopach
+   maps (`contours`) and cross sections (`sections`), with each datum as
+   printed.
 3. Write the result JSON to its `write:` path
    (`.cache/results/<id>.<packet>.json`), with `"packets": ["<packet>"]`.
 4. Check it:
@@ -87,8 +94,9 @@ For each packet result:
 python -m extract.ingest .cache/results/<id>.<packet>.json --plan-verify > .cache/results/<id>.<packet>.plan.json
 ```
 
-Then follow `extract/prompts/verify.md`: re-read the cited pages for every
-value in the plan, independently of your first reading, and write
+The plan holds every table value and every subsurface value, plus a sample
+of the rest. Then follow `extract/prompts/verify.md`: re-read the cited pages
+for every value in the plan, independently of your first reading, and write
 `.cache/results/<id>.<packet>.verify.json`.
 
 ## 4. Ingest
