@@ -31,7 +31,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Callable, Iterable
 
-from harvest.sgmc import _contact_headers
+from harvest.net import contact_headers
 from model.provenance import ExtractionMethod, StoredValue
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -322,7 +322,7 @@ def _get(url: str, params: dict | None = None, raw: bool = False, tries: int = 4
         url = f"{url}{'&' if '?' in url else '?'}{urllib.parse.urlencode(params, doseq=True)}"
     for attempt in range(tries):
         try:
-            req = urllib.request.Request(url, headers=_contact_headers())
+            req = urllib.request.Request(url, headers=contact_headers())
             with urllib.request.urlopen(req, timeout=120) as r:
                 body = r.read()
             return body.decode("utf-8", "replace") if raw else json.loads(body)
