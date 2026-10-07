@@ -1,0 +1,885 @@
+{
+ "source_id": "ngmdb:5651",
+ "title": "High-resolution multichannel seismic-reflection profiles across the Helena Banks strike-slip fault zone offshore of the Charleston, South Carolina, earthquake area",
+ "citation": "Yuan, Annette, and Behrendt, J.C., 1988, High-resolution multichannel seismic-reflection profiles across the Helena Banks strike-slip fault zone offshore of the Charleston, South Carolina, earthquake area: U.S. Geological Survey Miscellaneous Field Studies Map MF-2056, map scale 1:740,000.",
+ "year": 1988,
+ "scale": 740000,
+ "publisher": "U.S. Geological Survey",
+ "kind": "publication",
+ "schema_version": 1,
+ "extracted_at": "2026-10-07T22:57:00+00:00",
+ "updated_at": "2026-10-07T22:57:00+00:00",
+ "reader": "Claude, scheduled Claude Code session 2026-10-07",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1"
+ ],
+ "blocks_total": 1,
+ "complete": true,
+ "notes": "Single OCR plate: text, trackline map (fig. 1), seismic sections (figs. 2-4). Seismic record sections OCR as noise; nothing read from them. Fault data from the text and figure captions; Cretaceous and Triassic(?) faults and epicenters known only from the fig. 1 explanation not recorded. References: South Carolina items recorded; general margin-wide references (Behrendt and Grim 1983, Behrendt and Klitgord 1979, Dillon and others 1979, Grow and others 1979, Klitgord and Behrendt 1977, 1979, Zoback and others 1986) skipped. OCR typos in citations ('Tectonies', 'Seismie') corrected in values only.\nSUBSURFACE: J reflection (top of Jurassic basalt under Upper Cretaceous sediments) lies at 0.8-1.2 s two-way traveltime across the survey area; schema elevation fields need ft or m, so it is not stored as a surface (the text gives 1 s ~ 1 km for the upper second, at 2.0 km/s). Seismic sections are in two-way time with no depth or elevation datum. Water depth about 20 m in the fault zone.",
+ "files": [
+  {
+   "url": "https://pubs.usgs.gov/mf/2056/plate-1.pdf",
+   "via": "pubs_usgs",
+   "sha256": "d15107506b476f1db4d65f292ffab7e6f4b6a161bdf5786e8231633cbb980417",
+   "pages": 1,
+   "first_page": 1
+  }
+ ],
+ "summary": {
+  "stored": 56,
+  "quote_match": {
+   "exact": 56
+  },
+  "verification": {
+   "agree": 17
+  },
+  "inferred": 0
+ },
+ "ingests": [
+  {
+   "at": "2026-10-07T22:57:00+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-07",
+   "values": 56,
+   "stored": 56,
+   "exact": 56,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 17,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "basalt flows",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.344,
+    "inferred": false,
+    "locator": null,
+    "quote": "impedance contrast between a series of Jurassic (Lanphere, 1983) basalt",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "the J reflection is attributed to the top of these flows"
+   },
+   "age": {
+    "value": "Jurassic (Lanphere, 1983)",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.344,
+    "inferred": false,
+    "locator": null,
+    "quote": "impedance contrast between a series of Jurassic (Lanphere, 1983) basalt",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 145.0,
+     "older_ma": 201.4,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "basalt",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.344,
+    "inferred": false,
+    "locator": null,
+    "quote": "impedance contrast between a series of Jurassic (Lanphere, 1983) basalt",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "contacts": {
+    "value": "overlain by Upper Cretaceous sediments; the contact produces the J reflection, which occurs between 0.8 and 1.2 s (two-way traveltime) throughout the Gyre survey area",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.344,
+    "inferred": false,
+    "locator": null,
+    "quote": "flows and overlying Upper Cretaceous sediments, provided an easily",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Coastal Plain sediments",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.344,
+    "inferred": false,
+    "locator": null,
+    "quote": "because the unconsolidated Coastal Plain sediments seen in the reflection",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "lithology": {
+    "value": "unconsolidated sediments",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.344,
+    "inferred": false,
+    "locator": null,
+    "quote": "because the unconsolidated Coastal Plain sediments seen in the reflection",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "contacts": {
+    "value": "only warped or draped over actual breaks in the deeper crystalline rocks at and below the J reflector",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.344,
+    "inferred": false,
+    "locator": null,
+    "quote": "data are only warped or draped over actual breaks (which would cause",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "observations": [],
+ "structures": [
+  {
+   "kind": "fault",
+   "name": {
+    "value": "Helena Banks fault zone",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Helena Banks fault zone",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "fault_type": {
+    "value": "strike-slip",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "now interpreted to be more complex--actually a strike- slip zone, that is",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "sense": {
+    "value": "strike-slip with apparent reverse movement on seismic sections; a ratio of as much as 10:1 strike-slip to reverse movement is compatible with the magnetic data",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "as much as 10:1 strike-slip to reverse movement is compatible with the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "strike_dip": {
+    "value": "N. 66° E. (zone); segments N. 62° E. to N. 77° E.",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "offshore, striking (as a zone) N. 66° E., roughly parallel to the coastline",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "location": {
+    "value": "5 km or more offshore of Charleston, roughly parallel to the coastline; limited to the area between lines G2 and G24",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "offshore, striking (as a zone) N. 66° E., roughly parallel to the coastline",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "age": {
+    "value": "apparent reverse faulting contemporaneous with deposition of Coastal Plain sediments",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Helena Banks fault is reverse faulting contemporaneous with deposition of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "approximately 110 km long and 15 km wide; at least five en echelon 11- to 30-km-long fault segments; probably a reactivated fault zone that bounds the narrow Kiawah Triassic(?) basin; single-channel profiles showed deformation as shallow as 10 m below the sea bottom; no seismicity observed along it",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "approximately 110 km in length and, 15 km in width, and is 5 km or more",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "kind": "fault",
+   "name": {
+    "value": "normal fault Y",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cenozoic normal faults Y and Z are interpreted from tracklines CH1 and CH2",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "fault_type": {
+    "value": "normal",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cenozoic normal faults Y and Z are interpreted from tracklines CH1 and CH2",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Cenozoic",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cenozoic normal faults Y and Z are interpreted from tracklines CH1 and CH2",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 66.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "location": {
+    "value": "perpendicular to the main Helena Banks fault trend from CH1, in the transition area between two main branches of the Helena Banks fault",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "area between two main branches of the Helena Banks fault; note normal fault Y perpendicular to the main Helena Banks fault",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "certainty": {
+    "value": "interpreted from trackline CH1",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cenozoic normal faults Y and Z are interpreted from tracklines CH1 and CH2",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "kind": "fault",
+   "name": {
+    "value": "normal fault Z",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cenozoic normal faults Y and Z are interpreted from tracklines CH1 and CH2",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "fault_type": {
+    "value": "normal",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cenozoic normal faults Y and Z are interpreted from tracklines CH1 and CH2",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "age": {
+    "value": "Cenozoic",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cenozoic normal faults Y and Z are interpreted from tracklines CH1 and CH2",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 66.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "certainty": {
+    "value": "possibly; interpreted from trackline CH2",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "two, normal faults perpendicular to the Helena Banks fault trend and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "perpendicular to the Helena Banks fault trend, connecting individual fault segments",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "two, normal faults perpendicular to the Helena Banks fault trend and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "groundwater": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Ackermann, H.D., 1983, Seismic-refraction study in the area of the Charleston, South Carolina, 1886 earthquake, in Gohn, G.S., ed., Studies related to the Charleston, South Carolina, earthquake of 1886--Tectonics and seismicity: U.S. Geological Survey Professional Paper 1313-F, p. F1-F20.",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Ackermann, H.D., 1983, Seismic-refraction study in the area of the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Behrendt, J.C., Hamilton, R.M., Ackermann, H.D., and Henry, V.J., 1981, Cenozoic faulting in the vicinity of the Charleston, South Carolina, 1886 earthquake: Geology, v. 9, no. 3, p. 117-122.",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Behrendt, J.C., Hamilton, R.M., Ackermann, H.D., and Henry, V.J., 1981,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Behrendt, J.C., Hamilton, R.M., Ackermann, H.D., Henry, V.J., and Bayer, K.C., 1983, Marine multichannel seismic-reflection evidence for Cenozoic faulting and deep crustal structure near Charleston, South Carolina, in Gohn, G.S., ed., Studies related to the Charleston, South Carolina, earthquake of 1886--Tectonics and seismicity: U.S. Geological Survey Professional Paper 1313-J, p. J1-J29.",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Behrendt, J.C., Hamilton, R.M., Ackermann, H.D., Henry, V.J., and Bayer,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Behrendt, J.C., and Yuan, Annette, 1986, Strike slip on reactivated Triassic(?) basin boundary fault zones as sources of earthquakes near Charleston, S.C.: Earthquake Engineering Research Institute, Proceedings of the Third U.S. National Conference on Earthquake Engineering, v. 1, p. 43-54.",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Behrendt, J.C., and Yuan, Annette, 1986, Strike slip on reactivated",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Behrendt, J.C., and Yuan, Annette, 1987, The Helena Banks strike-slip (?) fault zone in the Charleston, South Carolina, earthquake area--Results from a marine, high-resolution, multichannel, seismic-reflection survey: Geological Society of America Bulletin, v. 98, no. 5, p. 591-601.",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "1987, The Helena Banks strike-slip (?) fault zone in the Charleston,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Bollinger, G.A., 1977, Reinterpretation of the intensity data for the 1886 Charleston, South Carolina, earthquake, in Rankin, D.W., ed., Studies related to the Charleston, South Carolina, earthquake of 1886--A preliminary report: U.S. Geological Survey Professional Paper 1028, p. 17-32.",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Bollinger, G.A., 1977, Reinterpretation of the intensity data for the 1886",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Dewey, J.W., 1983, Relocation of instrumentally recorded pre-1974 earthquakes in the South Carolina region, in Gohn, G.S., ed., Studies related to the Charleston, South Carolina, earthquake of 1886--Tectonics and seismicity: U.S. Geological Survey Professional Paper 1313-Q, p. Q1-Q9.",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "Dewey, J.W., 1983, Relocation of instrumentally recorded pre-1974",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Dewey, J.W., 1985, A review of recent research on the seismotectonics of the southeastern seaboard and an evaluation of hypotheses on the source of the 1886 Charleston, South Carolina, earthquake: Washington, D.C., U.S. Nuclear Regulatory Commission report NUREG/CR-4339, 44 p.",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "1985, A review of recent research on the seismotectonics of the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Gohn, G.S., ed., 1983, Studies related to the Charleston, South Carolina, earthquake of 1886--Tectonics and seismicity: U.S. Geological Survey Professional Paper 1313, p. A1-T11.",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gohn, G.S., ed., 1983, Studies related to the Charleston, South Carolina,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Gohn, G.S., Gottfried, David, Lanphere, M.A., and Higgins, B.B., 1978, Regional implications of Triassic or Jurassic age for basalt and sedimentary red beds in the South Carolina Coastal Plain: Science, v. 202, no. 4370, p. 887-890.",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gohn, G.S., Gottfried, David, Lanphere, M.A., and Higgins, B.B., 1978,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Gohn, G.S., Higgins, B.B., Smith, C.C., and Owens, J.P., 1977, Lithostratigraphy of the deep corehole (Clubhouse Crossroads corehole 1) near Charleston, South Carolina, in Rankin, D.W., ed., Studies related to the Charleston, South Carolina, earthquake of 1886--A preliminary report: U.S. Geological Survey Professional Paper 1028, p. 59-70.",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gohn, G.S., Higgins, B.B., Smith, C.C., and Owens, J.P., 1977,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Gottfried, David, Annell, C.S., and Byerly, G.R., 1983, Geochemistry and tectonic significance of subsurface basalts near Charleston, South Carolina; Clubhouse Crossroads test holes #2 and #3, in Gohn, G.S., ed., Studies related to the Charleston, South Carolina, earthquake of 1886--Tectonics and seismicity: U.S. Geological Survey Professional Paper 1313-A, p. A1-A19.",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gottfried, David, Annell, C.S., and Byerly, G.R., 1983, Geochemistry and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Gottfried, David, Annell, C.S., and Schwarz, L.J., 1977, Geochemistry of subsurface basalt from the deep corehole (Clubhouse Crossroads corehole 1) near Charleston, South Carolina--Magma type and tectonic implications, in Rankin, D.W., ed., Studies related to the Charleston, South Carolina, earthquake of 1886--A preliminary report: U. S. Geological Survey Professional Paper 1028-G, p. 91-113.",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gottfried, David, Annell, C.S., and Schwarz, L.J., 1977, Geochemistry of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Hamilton, R.M., Behrendt, J.C., and Ackermann, H.D., 1983, Land multichannel seismic-reflection evidence for tectonic features near Charleston, South Carolina, in Gohn, G.S., ed., Studies related to the Charleston, South Carolina, earthquake of 1886--Tectonics and seismicity: U.S. Geological Survey Professional Paper 1313-I, p. I1-I18.",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Hamilton, R.M., Behrendt, J.C., and Ackermann, H.D., 1983, Land",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Lanphere, M.A., 1983, 40Ar/39Ar ages of basalt from Clubhouse Crossroads test hole #2, near Charleston, South Carolina, in Gohn, G.S., ed., Studies related to the Charleston, South Carolina, earthquake of 1886--Tectonics and seismicity: U.S. Geological Survey Professional Paper 1313-B, p. B1-B8.",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "test hole #2, near Charleston, South Carolina, in Gohn, G.S., ed.,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Rankin, D.W., ed., 1977, Studies related to the Charleston, South Carolina, earthquake of 1886--A preliminary report: U.S. Geological Survey Professional Paper 1028, 204 p.",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Rankin, D.W., ed., 1977, Studies related to the Charleston, South Carolina,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Schilt, F.S., Brown, L.D., Oliver, J.E., and Kaufman, Sidney, 1983, Subsurface structure near Charleston, South Carolina: Results of COCORP reflection profiling in the Atlantic Coastal Plain, in Gohn, G.S., ed., Studies related to the Charleston, South Carolina, earthquake of 1886--Tectonics and seismicity: U.S. Geological Survey Professional Paper 1313-H, p. H1-H19.",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "Schilt, F.S., Brown, L.D., Oliver, J.E., and Kaufman, Sidney, 1983,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Schneider, R.R., Gohn, G.S., Force, L.M., and King, S.L., 1979, Lithologic log for a deep stratigraphic test hole, Clubhouse Crossroads No. 3, Dorchester County, South Carolina: U.S. Geological Survey Open-File Report 79-449, 23 p.",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "log for a deep stratigraphic test hole, Clubhouse Crossroads No. 3,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Tarr, A.C., and Rhea, Susan, 1983, Seismicity near Charleston, South Carolina, March 1973 to December 1979, in Gohn, G.S., ed., Studies related to the Charleston, South Carolina, earthquake of 1886--Tectonics and seismicity: U.S. Geological Survey Professional Paper 1313-R, p. R1-R17.",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Tarr, A.C., and Rhea, Susan, 1983, Seismicity near Charleston, South",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Yantis, B.R., Costain, J.K., and Ackermann, H.D., 1983, A reflection seismic study near Charleston, South Carolina, in Gohn, G.S., ed., Studies related to the Charleston, South Carolina, earthquake of 1886--Tectonics and seismicity: U.S. Geological Survey Professional Paper 1313-G, p. G1-G20.",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Yantis, B.R., Costain, J.K., and Ackermann, H.D., 1983, A reflection",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "surfaces": [],
+ "contours": [],
+ "sections": [
+  {
+   "name": {
+    "value": "CH4",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "Figure 2.--Section of seismic profile from CH4",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "figure": {
+    "value": "Figure 2",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "Figure 2.--Section of seismic profile from CH4",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "vertical_exaggeration": {
+    "value": "x6",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "Vertical exaggeration x6.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": 6.0
+   },
+   "datum": {
+    "value": "two-way traveltime, in seconds",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "Vertical axis is two-way traveltime, in",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "time section; not an elevation datum"
+   }
+  },
+  {
+   "name": {
+    "value": "G2, G5, G7, G9, G10, G12, G14, G18, G16, G20, G22, G23, and G24",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "G16, G20, G22, G23, and G24 in relative spatial order. Arrow shows location of Helena Banks fault, which is",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "figure": {
+    "value": "Figure 3",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "Figure 3.--Seismie sections crossing the Helena Banks fault zone from RV Gyre lines G2, G5, G7, G9, G10, G12, G14, G18,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "vertical_exaggeration": {
+    "value": "x6",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "respectively, on G12 and G14. Vertical exaggeration x6. Vertical axis is two-way traveltime, in seconds.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": 6.0
+   },
+   "datum": {
+    "value": "two-way traveltime, in seconds",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "respectively, on G12 and G14. Vertical exaggeration x6. Vertical axis is two-way traveltime, in seconds.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "time sections"
+   }
+  },
+  {
+   "name": {
+    "value": "G9",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "Figure 4.--Seismie section crossing the Helena Banks fault from line G9, plotted at",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "figure": {
+    "value": "Figure 4",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "Figure 4.--Seismie section crossing the Helena Banks fault from line G9, plotted at",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "vertical_exaggeration": {
+    "value": "3:1",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "3:1 vertical exaggeration to show deformation detail. Arrow indicates fault.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": 3.0
+   },
+   "datum": {
+    "value": "two-way traveltime, in seconds",
+    "source_id": "ngmdb:5651",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "Vertical axis is two-way traveltime, in seconds.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "time section"
+   }
+  }
+ ]
+}
