@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 67,
+ "count": 73,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -885,6 +885,84 @@
    "verify": {
     "verdict": "unclear",
     "note": "text layer reads 'between Im above, and 10 m below, sea level'; 'I' read as '1'; check the digit against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:9253",
+   "path": "units[0].age",
+   "problem": "verify_unclear",
+   "value": "Holocene (modern at the coast; 0-4,000 years)",
+   "page": 1,
+   "quote": "Silver Bluff? Qi (0-4,000)",
+   "added_at": "2026-10-07T10:58:53+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Qi'; the 'i' was read as '1' (Q1); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:9253",
+   "path": "sections[1].units_along[0].unit",
+   "problem": "verify_unclear",
+   "value": "Q5b",
+   "page": 2,
+   "quote": "“|O5b",
+   "added_at": "2026-10-07T10:58:53+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'O5b'; read as 'Q5b' by correcting an OCR character; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:9253",
+   "path": "sections[1].units_along[1].unit",
+   "problem": "verify_unclear",
+   "value": "Q5o",
+   "page": 2,
+   "quote": ".|Q50",
+   "added_at": "2026-10-07T10:58:53+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Q50'; read as 'Q5o' by correcting an OCR character; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:9253",
+   "path": "sections[2].units_along[1].unit",
+   "problem": "verify_unclear",
+   "value": "Q2l",
+   "page": 2,
+   "quote": "Q2i {Q2b",
+   "added_at": "2026-10-07T10:58:53+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Q2i'; read as 'Q2l' by correcting an OCR character; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:9253",
+   "path": "sections[2].units_along[3].unit",
+   "problem": "verify_unclear",
+   "value": "Q3l",
+   "page": 2,
+   "quote": "Q2b Q3i",
+   "added_at": "2026-10-07T10:58:53+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Q3i'; read as 'Q3l' by correcting an OCR character; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:9253",
+   "path": "sections[2].units_along[4].unit",
+   "problem": "verify_unclear",
+   "value": "Q3o",
+   "page": 2,
+   "quote": "Q30",
+   "added_at": "2026-10-07T10:58:53+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Q30'; read as 'Q3o' by correcting an OCR character; check against the map image"
    }
   }
  ]

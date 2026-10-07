@@ -1,0 +1,1107 @@
+{
+ "source_id": "ngmdb:9253",
+ "title": "Geologic map of the area between Charleston and Orangeburg, South Carolina",
+ "citation": "McCartan, Lucy, Lemon, E.M., and Weems, R.E., 1984, Geologic map of the area between Charleston and Orangeburg, South Carolina: U.S. Geological Survey Miscellaneous Investigations Series Map I-1472, map scale 1:250,000.",
+ "year": 1984,
+ "scale": 250000,
+ "publisher": "U.S. Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-10-07T10:58:53+00:00",
+ "updated_at": "2026-10-07T10:58:53+00:00",
+ "reader": "Claude, scheduled Claude Code session 2026-10-07",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1",
+  "2"
+ ],
+ "blocks_total": 2,
+ "complete": true,
+ "notes": "Two OCR sheets: sheet 1 has interleaved text columns, tables 1-3 and three cross sections; sheet 2 has graphic lithologic logs. Informal units Q1-Q6, Tp, Tu recorded with ages and correlations from the text; facies suffixes b (beach), l (backbarrier), o (offshore/shelf), r (river), s (swamp) are explained in the text. Table 3 (characteristics of map units) is too garbled to tie rows to unit symbols, so its textures, mineralogy, colors and coral dates were not recorded. References partly garbled (Colquhoun 1965 and 1974, Cooke 1936, Gohn 1983, Pooser 1965 skipped; some citations truncated). Legend-only symbols (drill-hole localities) not recorded.\nSUBSURFACE: not held: table 3 lists top and base altitudes (m, relative to sea level, e.g. '+5 to -10', '+19 to +14') for each unit and facies, but row labels are garbled (p. 1). Sheet 2 graphic lithologic logs (logs 1-104; asterisked logs on file at SCGS) give approximate altitudes in meters, depths estimated from 5-foot drill stems; unit boundaries are not legible as numbers. Drill-log index by county: 63-64 Williamsburg, 65-70 Georgetown, 71-78 Colleton, 79 Beaufort, 80-93 Dorchester, 94-104 Charleston; grid references on the map's north and west margins. Section distances and unit elevations are not legible. Datum: sea level; surface altitudes from USGS 1:24,000 and 1:62,500 topographic maps.",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=389_9253_2",
+   "via": "ngmdb_scan",
+   "sha256": "7a2603dfaf92231ca8d81155e1dbc46e323f3907e1fbd91fc11daf6c0f44cb7e",
+   "pages": 1,
+   "first_page": 1
+  },
+  {
+   "url": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=80787_9253_2",
+   "via": "ngmdb_scan",
+   "sha256": "b8413e01bcf8f598e556a79d25677d437f020ea1574d2d0491c4d63a0b75cddd",
+   "pages": 1,
+   "first_page": 2
+  }
+ ],
+ "summary": {
+  "stored": 69,
+  "quote_match": {
+   "exact": 69
+  },
+  "verification": {
+   "unclear": 6,
+   "agree": 23
+  },
+  "inferred": 18
+ },
+ "ingests": [
+  {
+   "at": "2026-10-07T10:58:53+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-07",
+   "values": 69,
+   "stored": 69,
+   "exact": 69,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 23,
+   "disagree": 0,
+   "unclear": 6,
+   "review_items": 6
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "Q1",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "and Silver Bluff deposits, and Q2 is approximately equal to the Princess Anne",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "rank": {
+    "value": "informal unit",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Informal unit*",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene (modern at the coast; 0-4,000 years)",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.353,
+    "inferred": true,
+    "locator": null,
+    "quote": "Silver Bluff? Qi (0-4,000)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "unclear",
+    "note": "table 1 row; 'Qi' read as Q1",
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "includes Colquhoun's Holocene and Silver Bluff deposits",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "stratigraphic nomenclature is shown in table 1. Q1 includes Colquhoun's Holocene",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Q2",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "and Silver Bluff deposits, and Q2 is approximately equal to the Princess Anne",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "rank": {
+    "value": "informal unit",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Informal unit*",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "about 100,000 years",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "complex ages are, from the coast, about 100,000 years (Q2) (Wando Formation,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "approximately equal to the Princess Anne Formation; Wando Formation (McCartan and others, 1980)",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "and Silver Bluff deposits, and Q2 is approximately equal to the Princess Anne",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Q3",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Formation; Q3 includes all the Pamlico Formation and the Talbot Formation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "rank": {
+    "value": "informal unit",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Informal unit*",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "200,000 years",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.63,
+    "inferred": false,
+    "locator": null,
+    "quote": "200,000 years (Q3), 450,000 years (Q4), over",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "description": {
+    "value": "includes all the Pamlico Formation and the Talbot Formation deposits seaward of the Bethera Scarp",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Formation; Q3 includes all the Pamlico Formation and the Talbot Formation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Q4",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "deposits seaward of the Bethera Scarp; Q4 is the landward part of the Talbot; Q5",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "rank": {
+    "value": "informal unit",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Informal unit*",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "450,000 years",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "200,000 years (Q3), 450,000 years (Q4), over",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "the landward part of the Talbot",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "deposits seaward of the Bethera Scarp; Q4 is the landward part of the Talbot; Q5",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Q5",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "deposits seaward of the Bethera Scarp; Q4 is the landward part of the Talbot; Q5",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "rank": {
+    "value": "informal unit",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Informal unit*",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "over 700,000 years",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "700,000 years (Q5), and over 1,000,000 years (Q6).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "the Wicomico Formation on the Penholoway Terrace",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "is the Wicomico Formation on the Penholoway Terrace, and Q6 is the Wicomico",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "sentence continues across columns of the OCR text"
+   }
+  },
+  {
+   "name": {
+    "value": "Q6",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "is the Wicomico Formation on the Penholoway Terrace, and Q6 is the Wicomico",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "rank": {
+    "value": "informal unit",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Informal unit*",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "over 1,000,000 years",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "700,000 years (Q5), and over 1,000,000 years (Q6).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "the Wicomico Formation on the Wicomico Terrace",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "Formation icomico Terrace.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "text layer reads 'Formation icomico Terrace.' after 'Q6 is the Wicomico'"
+   }
+  },
+  {
+   "name": {
+    "value": "Tp",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "(Pliocene, Tp) in the northwest part of the map area. Intervening strandline-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Pliocene, about 3 million years",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "(Pliocene, Tp) in the northwest part of the map area. Intervening strandline-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 2.58,
+     "older_ma": 5.333,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "well-exposed marine unit in the northwest part of the map area",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "(Pliocene, Tp) in the northwest part of the map area. Intervening strandline-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Tu",
+    "source_id": "ngmdb:9253",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "*=~|Tu—pre—Pliocene undifferentiated deposits",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "map_symbol": {
+    "value": "Tu",
+    "source_id": "ngmdb:9253",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.63,
+    "inferred": false,
+    "locator": null,
+    "quote": "*=~|Tu—pre—Pliocene undifferentiated deposits",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "pre-Pliocene",
+    "source_id": "ngmdb:9253",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.63,
+    "inferred": false,
+    "locator": null,
+    "quote": "*=~|Tu—pre—Pliocene undifferentiated deposits",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 2.58,
+     "older_ma": 5.333,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "pre-Pliocene undifferentiated deposits",
+    "source_id": "ngmdb:9253",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.63,
+    "inferred": false,
+    "locator": null,
+    "quote": "*=~|Tu—pre—Pliocene undifferentiated deposits",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   }
+  },
+  {
+   "name": {
+    "value": "colluvium",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.63,
+    "inferred": false,
+    "locator": null,
+    "quote": "Steep stream banks maj be partly covered by colluvium of variable age and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "age": {
+    "value": "variable age",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Steep stream banks maj be partly covered by colluvium of variable age and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "usually less than 1 m thick",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "composition, Colluvium is usually less than 1 m thick and is generally contained in",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 3.280839895013123,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "description": {
+    "value": "covers steep stream banks in bands too narrow to show at the map scale",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "bands too narrow to show separately at the map scale (1:250,000).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "observations": [],
+ "structures": [
+  {
+   "kind": "other",
+   "name": {
+    "value": "Orangeburg Scarp",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "burg. The most prominent surface feature, the Orangeburg Scarp (Colquhoun,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "ranges from about 60 to 65 m in altitude; separates pre-Pliocene sediment to the northwest from younger surficial sediment to the southeast",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "1965), ranges from about 60 to 65 m in altitude and trends northeastward from just",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "location": {
+    "value": "trends northeastward from just south of Orangeburg",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "1965), ranges from about 60 to 65 m in altitude and trends northeastward from just",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "groundwater": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Colquhoun, D. J., Herrick, S. M., and Richards, H. G., 1968, A fossil assemblage from the Wicomico Formation in Berkeley County, South Carolina",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "Colquhoun, D. J., Herrick, S. M., and Richards, H. G., 1968, A fossil assemblage",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "DuBar, J. R., 1971, Neogene stratigraphy of the lower Coastal Plain of the Carolinas, in Atlantic Coastal Plain Geological Association Field Conference guidebook, 12th, Myrtle Beach, S.C.: Columbia, S.C., University of South Carolina, 128 p.",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "DuBar, J. R., 1971, Neogene stratigraphy of the lower Coastal Plain of the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "DuBar, J. R., Johnson, H. S., Thom, Bruce, and Hatchel, W. O., 1974, Neogene stratigraphy and morphology, south flank of the Cape Fear Arch, North and South Carolina, in Oaks, R. Q., Jr., and DuBar, J. R., eds., Post-Miocene stratigraphy central and southern Atlantic Coastal Plain: Logan, Utah, Utah State University Press, p. 139-173.",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "DuBar, J. R., Johnson, H. S., Thom, Bruce, and Hatchel, W. O., 1974, Neogene",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Force, L. M., 1978a, Geological studies of the Charleston, South Carolina area—Elevation contours on the top of the Cooper Formation: U.S. Geological Survey Miscellaneous Field Studies Map MF-1021-A, scale 1:250,000.",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Force, L. M., 1978a, Geological studies of the Charleston, South Carolina area—",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Force, L. M., 1978b, Geological studies of the Charleston, South Carolina area—thickness of overburden map: U.S. Geological Survey Miscellaneous Field Studies Map",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "1978b, Geological studies of the Charleston, South Carolina area—",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Liddicoat, J. C., McCartan, Lucy, Weems, R. E., and Lemon, E. M., Jr., 1981, Paleomagnetic investigation of Pliocene and Pleistocene sediments in the Charleston, South Carolina, area: Geological Society of America Abstracts with Programs, v. 13, no. 1, p. 12, 13.",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Liddicoat, J. C., McCartan, Lucy, Weems, R. E., and Lemon, E. M., Jr., 1981,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Malde, H. E., 1959, Geology of the Charleston phosphate area, South Carolina: U.S. Geological Survey Bulletin 1079, 105 p.",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Malde, H. E., 1959, Geology of the Charleston phosphate area, South Carolina:",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "McCartan, Lucy, Weems, R. E., and Lemon, E. M., Jr., 1980, The Wando Formation (Upper Pleistocene) in the Charleston, South Carolina, area",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "McCartan, Lucy, Weems, R. E., and Lemon, E. M., Jr., 1980, The Wando",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Rankin, D. W., ed, 1977, Studies related to the Charleston, South Carolina, earthquake of 1886—A preliminary report: U.S. Geological Survey Professional Paper 1028, 204 p.",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Rankin, D. W., ed, 1977, Studies related to the Charleston, South Carolina,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Sloan, Earle, 1908, Catalogue of the mineral localities of South Carolina: South Carolina Geological Survey Bulletin 2, series 4, 505 p.",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Sloan, Earle, 1908, Catalogue of the mineral localities of South Carolina: South",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Wentworth, W. K., 1930, Sand and gravel resources of the Coastal Plain province of Virginia: Virginia Geological Survey Bulletin 32.",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Wentworth, W. K., 1930, Sand and gravel resources of the Coastal Plain province",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "surfaces": [],
+ "contours": [],
+ "sections": [
+  {
+   "name": {
+    "value": "A-A'",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cross sections A—A’, B—B’, and C—C’ were compiled from various sources of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "vertical_exaggeration": {
+    "value": "X250",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": null,
+    "quote": "VERTICAL EXAGGERATION X250",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "exaggeration label matched to the section by layout",
+    "normalized": 250.0
+   },
+   "datum": {
+    "value": "sea level",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": null,
+    "quote": "SEA LEVEL SEA LEVEL SEA LEVEL SEA LEVEL",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "'SEA LEVEL' printed at the zero line of the section scales",
+    "normalized": "MSL"
+   },
+   "observations": [
+    {
+     "value": "drill logs 1-11",
+     "source_id": "ngmdb:9253",
+     "page": 1,
+     "extraction_method": "llm",
+     "confidence": 0.765,
+     "inferred": false,
+     "locator": null,
+     "quote": "1-11 Cross section A—A’",
+     "quote_match": "exact",
+     "text_method": "ocr",
+     "verification": "agree",
+     "table": true
+    }
+   ]
+  },
+  {
+   "name": {
+    "value": "B-B'",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cross sections A—A’, B—B’, and C—C’ were compiled from various sources of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "vertical_exaggeration": {
+    "value": "X250",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": null,
+    "quote": "VERTICAL EXAGGERATION X250",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "exaggeration label matched to the section by layout",
+    "normalized": 250.0
+   },
+   "datum": {
+    "value": "sea level",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": null,
+    "quote": "SEA LEVEL SEA LEVEL SEA LEVEL SEA LEVEL",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "'SEA LEVEL' printed at the zero line of the section scales",
+    "normalized": "MSL"
+   },
+   "observations": [
+    {
+     "value": "drill logs 12-27",
+     "source_id": "ngmdb:9253",
+     "page": 1,
+     "extraction_method": "llm",
+     "confidence": 0.765,
+     "inferred": false,
+     "locator": null,
+     "quote": "12-27 Cross section B—B’",
+     "quote_match": "exact",
+     "text_method": "ocr",
+     "verification": "agree",
+     "table": true
+    }
+   ],
+   "units_along": [
+    {
+     "unit": {
+      "value": "Q5b",
+      "source_id": "ngmdb:9253",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.428,
+      "inferred": true,
+      "locator": null,
+      "quote": "“|O5b",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "unclear",
+      "note": "label from the sheet 2 logs for this section; read from the layout; text layer reads 'O5b'"
+     }
+    },
+    {
+     "unit": {
+      "value": "Q5o",
+      "source_id": "ngmdb:9253",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.428,
+      "inferred": true,
+      "locator": null,
+      "quote": ".|Q50",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "unclear",
+      "note": "label from the sheet 2 logs for this section; read from the layout; text layer reads 'Q50'"
+     }
+    },
+    {
+     "unit": {
+      "value": "Tu",
+      "source_id": "ngmdb:9253",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.612,
+      "inferred": true,
+      "locator": null,
+      "quote": "=1|Tu",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "agree",
+      "note": "label from the sheet 2 logs for this section; read from the layout"
+     }
+    }
+   ]
+  },
+  {
+   "name": {
+    "value": "C-C'",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cross sections A—A’, B—B’, and C—C’ were compiled from various sources of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "vertical_exaggeration": {
+    "value": "X500",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": null,
+    "quote": "VERTICAL EXAGGERATION X500",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "exaggeration label matched to the section by layout",
+    "normalized": 500.0
+   },
+   "datum": {
+    "value": "sea level",
+    "source_id": "ngmdb:9253",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": null,
+    "quote": "SEA LEVEL SEA LEVEL SEA LEVEL SEA LEVEL",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "'SEA LEVEL' printed at the zero line of the section scales",
+    "normalized": "MSL"
+   },
+   "units_along": [
+    {
+     "unit": {
+      "value": "Q2b",
+      "source_id": "ngmdb:9253",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.612,
+      "inferred": true,
+      "locator": null,
+      "quote": "Q2i {Q2b",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "agree",
+      "note": "label from the sheet 2 logs for this section; read from the layout"
+     }
+    },
+    {
+     "unit": {
+      "value": "Q2l",
+      "source_id": "ngmdb:9253",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.428,
+      "inferred": true,
+      "locator": null,
+      "quote": "Q2i {Q2b",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "unclear",
+      "note": "label from the sheet 2 logs for this section; read from the layout; text layer reads 'Q2i' (l, backbarrier)"
+     }
+    },
+    {
+     "unit": {
+      "value": "Q3b",
+      "source_id": "ngmdb:9253",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.612,
+      "inferred": true,
+      "locator": null,
+      "quote": "Q2b Q3b",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "agree",
+      "note": "label from the sheet 2 logs for this section; read from the layout"
+     }
+    },
+    {
+     "unit": {
+      "value": "Q3l",
+      "source_id": "ngmdb:9253",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.428,
+      "inferred": true,
+      "locator": null,
+      "quote": "Q2b Q3i",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "unclear",
+      "note": "label from the sheet 2 logs for this section; read from the layout; text layer reads 'Q3i'"
+     }
+    },
+    {
+     "unit": {
+      "value": "Q3o",
+      "source_id": "ngmdb:9253",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.428,
+      "inferred": true,
+      "locator": null,
+      "quote": "Q30",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "unclear",
+      "note": "label from the sheet 2 logs for this section; read from the layout; text layer reads 'Q30'"
+     }
+    },
+    {
+     "unit": {
+      "value": "Tu",
+      "source_id": "ngmdb:9253",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.612,
+      "inferred": true,
+      "locator": null,
+      "quote": "=| Tu",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "agree",
+      "note": "label from the sheet 2 logs for this section; read from the layout"
+     }
+    }
+   ]
+  }
+ ]
+}
