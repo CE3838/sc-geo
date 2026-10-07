@@ -63,5 +63,16 @@
     "Carolina Geological Society", "American Journal of Science", "North Carolina Geological Survey",
     "Environmental Protection Division, Georgia Department of Natural Resources", "Geological Survey of Canada",
     "South Carolina Department of Natural Resources", "South Carolina Water Resources Commission"
-  ]
+  ],
+  "vertical_datum": {
+    "_comment": "Elevations to NAVD88 (model/vdatum.py). The NGVD29-to-NAVD88 grid is NGS VERTCON (eastern US) as PROJ-data distributes it: GeoTIFF, metres, NAVD88 minus NGVD29. python -m harvest.vertcon downloads it once into grid_path (.cache, never committed) and records its sha256 next to it; set grid_sha256 after the first download to pin it. Without the grid, NGVD29 values get no NAVD88 value unless fallback_ngvd29_to_navd88_ft is set to a cited constant (then marked approximate). 'Sea level' counts as NGVD29 only in documents published before msl_as_ngvd29_before.",
+    "grid_source": "NOAA NGS VERTCON 2.1 grid (eastern US), via PROJ-data us_noaa_vertcone.tif; U.S. Government work, public domain",
+    "grid_url": "https://cdn.proj.org/us_noaa_vertcone.tif",
+    "grid_path": ".cache/grids/us_noaa_vertcone.tif",
+    "grid_sha256": null,
+    "msl_as_ngvd29_before": 1991,
+    "fallback_ngvd29_to_navd88_ft": null,
+    "fallback_source": null,
+    "approximate_factor": 0.9
+  }
 }

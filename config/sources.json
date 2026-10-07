@@ -59,5 +59,12 @@
     "title": "County parcel services (property lines and tax map parcel IDs)",
     "registry": "config/parcel_registry.json",
     "license": "Each county's own terms; parcels are queried live and never copied (several counties restrict redistribution)."
+  },
+  "ngs-vertcon": {
+    "title": "VERTCON: NGVD 29 to NAVD 88 vertical datum transformation grid (eastern United States)",
+    "citation": "National Geodetic Survey, NOAA, VERTCON version 2.1; distributed as us_noaa_vertcone.tif in PROJ-data",
+    "url": "https://cdn.proj.org/us_noaa_vertcone.tif",
+    "license": "Public domain (U.S. Government work)",
+    "use": "Downloaded once by harvest/vertcon.py into .cache/grids/; shifts NGVD29 elevations to NAVD88 (model/vdatum.py)"
   }
 }
