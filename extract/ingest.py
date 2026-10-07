@@ -247,8 +247,6 @@ def normalized(path: str, val: dict, lexicon: Lexicon | None):
         return patterns.number(x)
     if field == "strike_dip":
         return patterns.strike_dip(x)
-    if field == "location":
-        return patterns.coordinates(x)
     if field == "age":
         return patterns.age_ma(x)
     if field in ("date", "water_level_date"):

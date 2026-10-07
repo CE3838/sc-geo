@@ -163,6 +163,7 @@ def test_parsed_coordinates_are_a_separate_inferred_value(env):
     _, out, _ = env()
     loc = out["surfaces"][0]["location"]
     assert loc["value"] == "lat 324512, long 0795841" and loc["inferred"] is False  # the value as printed is kept
+    assert "normalized" not in loc  # no second, lenient parse
     d = loc["derived_coordinates"]
     sv = StoredValue.from_dict(d)
     assert sv.inferred is True and sv.extraction_method is ExtractionMethod.INFERENCE

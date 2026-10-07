@@ -27,7 +27,7 @@ extract/ingest.py   validate, check every quote on its page, normalize,
 | `triage.py` | Page kinds (blank, title, toc, index, references, content) used only to skip or rank pages, never to decide values |
 | `packets.py` | One or more Markdown packets per document with the catalog header and `=== PAGE n (method) ===` blocks |
 | `schema.json`, `schema.py` | What one document's extraction contains; standard-library validator |
-| `patterns.py` | Deterministic normalizers used after the model: Munsell, lengths to feet, signed elevations, vertical datums, USCS, SPT N, strike/dip, coordinates (decimal, DMS, SC State Plane NAD83), ages to Ma, unit names to Geolex |
+| `patterns.py` | Deterministic normalizers used after the model: Munsell, lengths to feet, signed elevations, vertical datums, USCS, SPT N, strike/dip, ages to Ma, unit names to Geolex |
 | `ingest.py` | `python -m extract.ingest result.json [--verify verify.json]` |
 | `renormalize.py` | `python -m extract.renormalize [--write]`: recompute normalized fields of committed files (dry run by default) |
 | `next_batch.py` | `python -m extract.next_batch --n 5`: next pending documents, building text and packets on the fly |
@@ -182,9 +182,7 @@ value unverified 0.81; from an OCR page, unverified, 0.73. All factors are in
 `ingest` adds a `normalized` object where a normalizer applies: lengths
 (`top`, `bottom`, `thickness`, `total_depth`, `water_level`, `elevation`,
 `head`) as `min_ft`/`max_ft`; Munsell parts; USCS symbols; SPT N; liquid limit,
-plasticity index and moisture as numbers; strike azimuth and dip; coordinates
-as latitude/longitude (SC State Plane assumed NAD83 international feet unless
-stated, flagged `datum_inferred`); dates as ISO; ages as Ma ranges and unit
+plasticity index and moisture as numbers; strike azimuth and dip; dates as ISO; ages as Ma ranges and unit
 names as Geolex names, both flagged `inferred: true` (CLAUDE.md rule 2). The
 value as stated is always kept.
 
@@ -221,7 +219,9 @@ is approximate (NAD27 shifted with a 3-parameter shift, or datum not
 stated) and every assumption made (such as a western longitude with no sign).
 Ambiguous text (State Plane without a datum, NAD27 without its zone, two
 places, two latitudes) gives no derived value. The value as printed is
-unchanged.
+unchanged. (Files written before this may still carry an older lenient
+`normalized` parse on locations; it is ignored, and `extract.renormalize`
+removes it.)
 
 ## Re-normalizing committed files
 

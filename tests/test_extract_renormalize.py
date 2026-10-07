@@ -29,7 +29,8 @@ DOC = {
         {"head": stored("about 2 feet below sea level",
                         normalized={"min_ft": 2.0, "max_ft": 2.0, "unit": "ft", "approximate": True})},
     ],
-    "observations": [{"kind": "well", "location": stored("lat 324512, long 0795841")}],
+    "observations": [{"kind": "well", "location": stored("lat 324512, long 0795841", normalized={
+        "lat": 32.7533, "lon": -79.9781, "format": "dms", "hemisphere_inferred": True})}],
 }
 
 
@@ -52,6 +53,9 @@ def test_recomputes_normalized_and_reports_changes():
     assert ("groundwater[0].head", "normalized") in got and ("groundwater[1].head", "normalized") in got
     assert ("observations[0].location", "derived_coordinates") in got
     assert ("groundwater[0].aquifer", "normalized") not in got
+    # The old lenient parse of a location is dropped; derived_coordinates replaces it.
+    assert ("observations[0].location", "normalized") in got
+    assert "normalized" not in new["observations"][0]["location"]
     c = next(c for c in changes if c["path"] == "groundwater[1].head")
     assert c["old"]["min_ft"] == 2.0 and c["new"]["min_ft"] == -2.0 and c["value"] == "about 2 feet below sea level"
 

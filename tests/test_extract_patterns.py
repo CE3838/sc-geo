@@ -112,44 +112,18 @@ def test_strike_dip_rejects_garbage():
 
 
 # --- coordinates -------------------------------------------------------------
+# Printed locations are parsed by model/coords.py (tests/test_coords.py); patterns keeps only
+# the State Plane projection, used as an independent check there.
 
-def test_decimal_coordinates():
-    r = p.coordinates("32.7765, -79.9311")
-    assert r["lat"] == pytest.approx(32.7765) and r["lon"] == pytest.approx(-79.9311)
-    r = p.coordinates("32.7765 N, 79.9311 W")
-    assert r["lon"] == pytest.approx(-79.9311)
-
-
-def test_dms_coordinates():
-    r = p.coordinates("lat 32°46'35\" N, long 79°55'52\" W")
-    assert r["lat"] == pytest.approx(32 + 46 / 60 + 35 / 3600)
-    assert r["lon"] == pytest.approx(-(79 + 55 / 60 + 52 / 3600))
-    assert r["format"] == "dms"
-    r = p.coordinates("32 46 35 N 79 55 52 W")
-    assert r["lat"] == pytest.approx(32.776389, abs=1e-5)
+def test_lenient_coordinate_parse_is_gone():
+    assert not hasattr(p, "coordinates")
 
 
-def test_west_longitude_sign_assumed_in_sc():
-    r = p.coordinates("32.5, 80.1")
-    assert r["lon"] == pytest.approx(-80.1)
-    assert r["hemisphere_inferred"] is True
-
-
-def test_state_plane_origin_and_known_point():
-    origin = p.coordinates("E 2,000,000 ft, N 0 ft (SC State Plane)")
-    assert origin["lat"] == pytest.approx(31.8333333, abs=1e-6)
-    assert origin["lon"] == pytest.approx(-81.0, abs=1e-6)
-    assert origin["format"] == "sc_state_plane"
-    # Round trip through the forward projection.
+def test_state_plane_projection_round_trip():
     e, n = p.sc_state_plane_forward(32.7765, -79.9311)
     back = p.sc_state_plane_inverse(e, n)
     assert back[0] == pytest.approx(32.7765, abs=1e-8) and back[1] == pytest.approx(-79.9311, abs=1e-8)
-    # Charleston is roughly 2.32M ft east, 0.37M ft north.
-    assert 2.25e6 < e < 2.4e6 and 3.3e5 < n < 4.2e5
-
-
-def test_coordinates_none():
-    assert p.coordinates("near the bridge") is None
+    assert 2.25e6 < e < 2.4e6 and 3.3e5 < n < 4.2e5  # Charleston: about 2.32M ft east, 0.37M ft north
 
 
 # --- ages and names ----------------------------------------------------------

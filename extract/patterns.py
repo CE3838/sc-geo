@@ -2,10 +2,11 @@
 
 These never decide what a document says; they only convert a value the model
 quoted into a standard form (feet, Munsell parts, USCS symbols, SPT N, strike
-azimuth, WGS84-ish decimal degrees, Ma ranges, Geolex names). Each returns
+azimuth, Ma ranges, Geolex names). Each returns
 None when the text does not parse, so the original text is kept as stated.
 Results that rest on an assumption carry a flag saying so (`inferred`,
-`hemisphere_inferred`, `convention_inferred`, `datum_inferred`).
+`convention_inferred`). Printed locations are parsed by model/coords.py; the
+SC State Plane projection here is kept as an independent check of it.
 """
 
 from __future__ import annotations
@@ -305,61 +306,6 @@ def sc_state_plane_inverse(easting: float, northing: float, unit: float = FOOT) 
         es = _E * math.sin(phi)
         phi = math.pi / 2 - 2 * math.atan(t * ((1 - es) / (1 + es)) ** (_E / 2))
     return math.degrees(phi), math.degrees(lon)
-
-
-_DMS = re.compile(r"(\d{1,3})\s*(?:°|º|deg\.?|\s)\s*(\d{1,2}(?:\.\d+)?)\s*(?:'|′|’|min\.?|\s)\s*"
-                  r"(?:(\d{1,2}(?:\.\d+)?)\s*(?:\"|″|''|”|sec\.?)?)?\s*([NSEW])?", re.I)
-
-
-def _sign_lon(lon: float, hemi: str | None) -> tuple[float, bool]:
-    if hemi:
-        return (-abs(lon) if hemi.upper() == "W" else abs(lon)), False
-    if lon > 0 and 75 <= lon <= 85:  # South Carolina is west of Greenwich
-        return -lon, True
-    return lon, False
-
-
-def _latlon(a: float, ha: str | None, b: float, hb: str | None) -> tuple[float, float, bool]:
-    # Latitude is the one in SC's latitude band or tagged N/S.
-    if (ha and ha.upper() in "EW") or (hb and hb.upper() in "NS") or (abs(a) > 60 and abs(b) < 60):
-        a, ha, b, hb = b, hb, a, ha
-    lat = -abs(a) if ha and ha.upper() == "S" else a
-    lon, inferred = _sign_lon(b, hb)
-    return lat, lon, inferred
-
-
-def coordinates(text) -> dict | None:
-    """Decimal degrees, DMS, or SC State Plane (NAD83, international feet unless stated) to lat/lon."""
-    s = str(text or "")
-    e = re.search(rf"(?i)(?:\bE\b|easting|\bx\b)\s*[:=]?\s*({_NUM})", s)
-    n = re.search(rf"(?i)(?:\bN\b|northing|\by\b)\s*[:=]?\s*({_NUM})", s)
-    plane = re.search(r"(?i)state\s*plane|spcs|fips\s*3900", s)
-    if e and n and (plane or (_f(e.group(1)) >= 10000 and _f(n.group(1)) >= 10000)):
-        if re.search(r"(?i)survey\s*f(ee|oo)t|us\s*ft|usft", s):
-            unit, label = US_SURVEY_FOOT, "us_survey_ft"
-        elif re.search(rf"(?i)({_NUM})\s*(m|meters?|metres?)\b", s):
-            unit, label = 1.0, "m"
-        else:
-            unit, label = FOOT, "ft"
-        lat, lon = sc_state_plane_inverse(_f(e.group(1)), _f(n.group(1)), unit)
-        return {"lat": lat, "lon": lon, "format": "sc_state_plane", "unit": label,
-                "datum_inferred": not re.search(r"(?i)nad\s*83", s), "hemisphere_inferred": False}
-    if re.search(r"[°º′'″\"]|\bdeg", s) or re.search(r"\d+\s+\d+\s+\d+(?:\.\d+)?\s*[NS]\b", s):
-        parts = [m for m in _DMS.finditer(s) if m.group(2) is not None]
-        if len(parts) >= 2:
-            vals = []
-            for m in parts[:2]:
-                v = int(m.group(1)) + _f(m.group(2)) / 60 + (_f(m.group(3)) / 3600 if m.group(3) else 0)
-                vals.append((v, m.group(4)))
-            lat, lon, inf = _latlon(vals[0][0], vals[0][1], vals[1][0], vals[1][1])
-            return {"lat": lat, "lon": lon, "format": "dms", "hemisphere_inferred": inf}
-    nums = list(re.finditer(r"(-?\d{1,3}\.\d+)\s*°?\s*([NSEW])?", s))
-    if len(nums) >= 2:
-        a, b = nums[0], nums[1]
-        lat, lon, inf = _latlon(float(a.group(1)), a.group(2), float(b.group(1)), b.group(2))
-        if -90 <= lat <= 90 and -180 <= lon <= 180:
-            return {"lat": lat, "lon": lon, "format": "decimal", "hemisphere_inferred": inf}
-    return None
 
 
 # --- ages and names ----------------------------------------------------------
