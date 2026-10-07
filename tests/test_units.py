@@ -102,3 +102,14 @@ def test_lexicon_follows_first_of_several_replacements():
         {"name": "Battleground", "status": "current", "replaced_by": None, "age": "Neoproterozoic"},
     ])
     assert lex.resolve("Kings Mountain belt")["name"] == "Battleground"
+
+
+def test_age_range_and_name_key_are_memoized_and_stable():
+    from model import units
+    units.age_range.cache_clear()
+    units.name_key.cache_clear()
+    first = (units.age_range("early Tertiary (early Oligocene)"), units.name_key("Wando Fm."))
+    again = (units.age_range("early Tertiary (early Oligocene)"), units.name_key("Wando Fm."))
+    assert first == again == ((27.82, 33.9), ("wando", "formation"))
+    assert units.age_range.cache_info().hits == 1 and units.name_key.cache_info().hits == 1
+    assert units.age_range(None) is None and units.name_key(None) == (None, None)
