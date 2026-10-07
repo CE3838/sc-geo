@@ -1,0 +1,834 @@
+{
+ "source_id": "ngmdb:13673",
+ "title": "Generalized geologic map of the Charleston, South Carolina, area",
+ "citation": "McCartan, Lucy, Lemon, E.M., and Weems, R.E., 1982, Generalized geologic map of the Charleston, South Carolina, area: U.S. Geological Survey Open-File Report OF-82-187, map scale 1:575,000.",
+ "year": 1982,
+ "scale": 575000,
+ "publisher": "U.S. Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-10-07T10:57:14+00:00",
+ "updated_at": "2026-10-07T10:57:14+00:00",
+ "reader": "Claude, Claude Code reading session 2026-10-07",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1"
+ ],
+ "blocks_total": 1,
+ "complete": true,
+ "notes": "Single OCR sheet with a 1:575,000 generalized map and a time-stratigraphic map; map faces are noise. Units are time-stratigraphic (Q1-Q6) with facies suffixes b, l, r, s; OCR renders the letter l as 1 (e.g. 'Q21' = Q2l), corrected and flagged inferred. Coral dates for Q4/Q5 (~450,000) and Q6 (OCR '21,000,000') could not be tied to a unit reliably and are skipped. Shelf/offshore facies description garbled and skipped. Note text says Q3b-Q3l complexes north of the Santee River, the more seaward possibly Q2 age.\nSUBSURFACE: highest backbarrier-flat altitudes are recorded as surfaces with no datum stated (page 1); no cross section, structure contours or logs on this sheet.",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=28745_13673_2",
+   "via": "ngmdb_scan",
+   "sha256": "ad4454d540048e1deb58b262a322ffd4d966296531217832993804e871c7b0f4",
+   "pages": 1,
+   "first_page": 1
+  }
+ ],
+ "summary": {
+  "stored": 53,
+  "quote_match": {
+   "exact": 53
+  },
+  "verification": {
+   "agree": 27
+  },
+  "inferred": 22
+ },
+ "ingests": [
+  {
+   "at": "2026-10-07T10:57:14+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, Claude Code reading session 2026-10-07",
+   "values": 53,
+   "stored": 53,
+   "exact": 53,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 27,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "b (beach facies)",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.405,
+    "inferred": false,
+    "locator": null,
+    "quote": "b = beach facies; clean fine to medium sand; includes",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "rank": {
+    "value": "lithofacies",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.324,
+    "inferred": true,
+    "locator": null,
+    "quote": "Lithofacies and depositional environment",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "lithology": {
+    "value": "clean fine to medium sand",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.344,
+    "inferred": false,
+    "locator": null,
+    "quote": "b = beach facies; clean fine to medium sand; includes",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "beach",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.344,
+    "inferred": false,
+    "locator": null,
+    "quote": "b = beach facies; clean fine to medium sand; includes",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "l (backbarrier facies)",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.275,
+    "inferred": true,
+    "locator": null,
+    "quote": "1 = backbarrier facies; muddy fine to medium sand;",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR reads '1 =' for the facies letter l"
+   },
+   "rank": {
+    "value": "lithofacies",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.275,
+    "inferred": true,
+    "locator": null,
+    "quote": "Lithofacies and depositional environment",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "lithology": {
+    "value": "muddy fine to medium sand",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.344,
+    "inferred": false,
+    "locator": null,
+    "quote": "1 = backbarrier facies; muddy fine to medium sand;",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "backbarrier",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.344,
+    "inferred": false,
+    "locator": null,
+    "quote": "1 = backbarrier facies; muddy fine to medium sand;",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "r (fluvial facies)",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.344,
+    "inferred": false,
+    "locator": null,
+    "quote": "r = fluvial facies; muddy fine to coarse sand with",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "rank": {
+    "value": "lithofacies",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.275,
+    "inferred": true,
+    "locator": null,
+    "quote": "Lithofacies and depositional environment",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "lithology": {
+    "value": "muddy fine to coarse sand with pebbles",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.344,
+    "inferred": false,
+    "locator": null,
+    "quote": "r = fluvial facies; muddy fine to coarse sand with",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "'pebbles' on a later OCR line"
+   },
+   "depositional_environment": {
+    "value": "fluvial",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.344,
+    "inferred": false,
+    "locator": null,
+    "quote": "r = fluvial facies; muddy fine to coarse sand with",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "s (swamp facies)",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.344,
+    "inferred": false,
+    "locator": null,
+    "quote": "s = swamp facies; muck or clean fine sand",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "rank": {
+    "value": "lithofacies",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.275,
+    "inferred": true,
+    "locator": null,
+    "quote": "Lithofacies and depositional environment",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "lithology": {
+    "value": "muck or clean fine sand",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.344,
+    "inferred": false,
+    "locator": null,
+    "quote": "s = swamp facies; muck or clean fine sand",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "swamp",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.344,
+    "inferred": false,
+    "locator": null,
+    "quote": "s = swamp facies; muck or clean fine sand",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Q2",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.344,
+    "inferred": false,
+    "locator": null,
+    "quote": "Q2 ~“100 ,000 1 = backbarrier facies",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "coral date ~100,000 years",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.275,
+    "inferred": true,
+    "locator": null,
+    "quote": "Q2 ~“100 ,000 1 = backbarrier facies",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "coral-date column of the explanation; association from OCR layout"
+   }
+  },
+  {
+   "name": {
+    "value": "Q3",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.344,
+    "inferred": false,
+    "locator": null,
+    "quote": "Q3 4 ~ 200 ,000 s = swamp facies",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "coral date ~200,000 years",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.275,
+    "inferred": true,
+    "locator": null,
+    "quote": "Q3 4 ~ 200 ,000 s = swamp facies",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "coral-date column of the explanation; association from OCR layout"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Q4-5r",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.344,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fluvial deposits associate with Q4 and Q5 ages were mapped as one unit (Q4-5r).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "name": {
+    "value": "Q4-5r",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.344,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fluvial deposits associate with Q4 and Q5 ages were mapped as one unit (Q4-5r).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "Fluvial deposits associated with Q4 and Q5 ages, mapped as one unit",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.344,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fluvial deposits associate with Q4 and Q5 ages were mapped as one unit (Q4-5r).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "fluvial",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.344,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fluvial deposits associate with Q4 and Q5 ages were mapped as one unit (Q4-5r).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Q1l",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.275,
+    "inferred": true,
+    "locator": null,
+    "quote": "intertidal, muddy sand flat (Q11)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR reads 'Q11'"
+   },
+   "name": {
+    "value": "Q1l",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.324,
+    "inferred": true,
+    "locator": null,
+    "quote": "intertidal, muddy sand flat (Q11)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "OCR reads 'Q11'"
+   },
+   "description": {
+    "value": "Just south of the mouth of the Santee River is a large, intertidal, muddy sand flat between two beach ridges (both Q1b)",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.344,
+    "inferred": false,
+    "locator": null,
+    "quote": "the Santee River, for example, is a large, intertidal, muddy sand flat (Q11)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "intertidal muddy sand flat",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.344,
+    "inferred": false,
+    "locator": null,
+    "quote": "the Santee River, for example, is a large, intertidal, muddy sand flat (Q11)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "observations": [],
+ "structures": [],
+ "groundwater": [],
+ "references": [
+  {
+   "citation": {
+    "value": "McCartan, L., Owens, J. P., Blackwelder, B. W., Szabo, B. J., Belknap, D. F., Kriausakul, N., Mitterer, R. M., and Wehmiller, J. F., Comparison of amino acid racemization geochronometry with lithostratigraphy, biostratigraphy, and uranium-series coral dating, and magnetostratigraphy, in the Atlantic Coastal Plain of the southeastern United States, Earth and Planetary Science Letters, in press.",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.52,
+    "inferred": true,
+    "locator": null,
+    "quote": "Belknap, D. F., Kriausakul, N., Mitterer, R. M., and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "first author OCR'd as 'Ivccartan, L.'; entry interleaved with other OCR text"
+   }
+  }
+ ],
+ "surfaces": [
+  {
+   "surface": {
+    "value": "highest backbarrier flats",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "barrier flats are about 26 m",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "text: 'the highest back- barrier flats are about ...'"
+   },
+   "unit": {
+    "value": "Q6l, Q5l",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": null,
+    "quote": "barrier flats are about 26 m (Q61, Q51), 15 m (Q41), 11 m (Q31), and 8 m (Q21).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "OCR reads 'Q61, Q51'"
+   },
+   "boundary": {
+    "value": "top",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": null,
+    "quote": "barrier flats are about 26 m (Q61, Q51), 15 m (Q41), 11 m (Q31), and 8 m (Q21).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "altitude of the highest backbarrier flats, taken as the top surface of the unit"
+   },
+   "elevation": {
+    "value": 26,
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "barrier flats are about 26 m (Q61, Q51), 15 m (Q41), 11 m (Q31), and 8 m (Q21).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "units": "m",
+    "normalized": {
+     "min_ft": 85.3018372703412,
+     "max_ft": 85.3018372703412,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "location": {
+    "value": "Charleston, South Carolina, area",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": null,
+    "quote": "Quaternary deposits in the vicinity of Charleston,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "method": {
+    "value": "stated",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "barrier flats are about 26 m (Q61, Q51), 15 m (Q41), 11 m (Q31), and 8 m (Q21).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "surface": {
+    "value": "highest backbarrier flats",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "barrier flats are about 26 m",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "text: 'the highest back- barrier flats are about ...'"
+   },
+   "unit": {
+    "value": "Q4l",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": null,
+    "quote": "barrier flats are about 26 m (Q61, Q51), 15 m (Q41), 11 m (Q31), and 8 m (Q21).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "OCR reads 'Q41'"
+   },
+   "boundary": {
+    "value": "top",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": null,
+    "quote": "barrier flats are about 26 m (Q61, Q51), 15 m (Q41), 11 m (Q31), and 8 m (Q21).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "altitude of the highest backbarrier flats, taken as the top surface of the unit"
+   },
+   "elevation": {
+    "value": 15,
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "barrier flats are about 26 m (Q61, Q51), 15 m (Q41), 11 m (Q31), and 8 m (Q21).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "units": "m",
+    "normalized": {
+     "min_ft": 49.212598425196845,
+     "max_ft": 49.212598425196845,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "location": {
+    "value": "Charleston, South Carolina, area",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": null,
+    "quote": "Quaternary deposits in the vicinity of Charleston,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "method": {
+    "value": "stated",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "barrier flats are about 26 m (Q61, Q51), 15 m (Q41), 11 m (Q31), and 8 m (Q21).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "surface": {
+    "value": "highest backbarrier flats",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "barrier flats are about 26 m",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "text: 'the highest back- barrier flats are about ...'"
+   },
+   "unit": {
+    "value": "Q3l",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": null,
+    "quote": "barrier flats are about 26 m (Q61, Q51), 15 m (Q41), 11 m (Q31), and 8 m (Q21).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "OCR reads 'Q31'"
+   },
+   "boundary": {
+    "value": "top",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": null,
+    "quote": "barrier flats are about 26 m (Q61, Q51), 15 m (Q41), 11 m (Q31), and 8 m (Q21).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "altitude of the highest backbarrier flats, taken as the top surface of the unit"
+   },
+   "elevation": {
+    "value": 11,
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "barrier flats are about 26 m (Q61, Q51), 15 m (Q41), 11 m (Q31), and 8 m (Q21).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "units": "m",
+    "normalized": {
+     "min_ft": 36.08923884514435,
+     "max_ft": 36.08923884514435,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "location": {
+    "value": "Charleston, South Carolina, area",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": null,
+    "quote": "Quaternary deposits in the vicinity of Charleston,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "method": {
+    "value": "stated",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "barrier flats are about 26 m (Q61, Q51), 15 m (Q41), 11 m (Q31), and 8 m (Q21).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "surface": {
+    "value": "highest backbarrier flats",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "barrier flats are about 26 m",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "text: 'the highest back- barrier flats are about ...'"
+   },
+   "unit": {
+    "value": "Q2l",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": null,
+    "quote": "barrier flats are about 26 m (Q61, Q51), 15 m (Q41), 11 m (Q31), and 8 m (Q21).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "OCR reads 'Q21'"
+   },
+   "boundary": {
+    "value": "top",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": null,
+    "quote": "barrier flats are about 26 m (Q61, Q51), 15 m (Q41), 11 m (Q31), and 8 m (Q21).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "altitude of the highest backbarrier flats, taken as the top surface of the unit"
+   },
+   "elevation": {
+    "value": 8,
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "barrier flats are about 26 m (Q61, Q51), 15 m (Q41), 11 m (Q31), and 8 m (Q21).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "units": "m",
+    "normalized": {
+     "min_ft": 26.246719160104984,
+     "max_ft": 26.246719160104984,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "location": {
+    "value": "Charleston, South Carolina, area",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": null,
+    "quote": "Quaternary deposits in the vicinity of Charleston,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "method": {
+    "value": "stated",
+    "source_id": "ngmdb:13673",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "barrier flats are about 26 m (Q61, Q51), 15 m (Q41), 11 m (Q31), and 8 m (Q21).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  }
+ ],
+ "contours": [],
+ "sections": []
+}

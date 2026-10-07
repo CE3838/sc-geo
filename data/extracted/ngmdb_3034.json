@@ -1,0 +1,259 @@
+{
+ "source_id": "ngmdb:3034",
+ "title": "Airborne radioactivity survey of the Edisto Island area, Berkeley, Charleston, Colleton, and Dorchester Counties, South Carolina",
+ "citation": "Meuschke, J.L., 1955, Airborne radioactivity survey of the Edisto Island area, Berkeley, Charleston, Colleton, and Dorchester Counties, South Carolina: U.S. Geological Survey Geophysical Investigations Map GP-123, map scale 1:62,500.",
+ "year": 1955,
+ "scale": 62500,
+ "publisher": "U.S. Geological Survey",
+ "kind": "publication",
+ "schema_version": 1,
+ "extracted_at": "2026-10-07T10:58:37+00:00",
+ "updated_at": "2026-10-07T10:58:37+00:00",
+ "reader": "Claude, Claude Code reading session 2026-10-07",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1",
+  "2"
+ ],
+ "blocks_total": 2,
+ "complete": true,
+ "notes": "Airborne radioactivity survey map (1:62,500) of 322 square miles, flown April 22 to 29, 1954; scintillation equipment, traverse lines at quarter-mile spacing about 500 feet above ground (page 1). Not a geologic map; units are those the text names as sources of uraniferous phosphatic material. Abnormal radioactivity along the Atlantic Ocean beach may be due in part to thorium-bearing heavy-mineral deposits; some anomalies come from phosphate mining remnants and phosphatic highway material. Anomaly locations and intensities on the map face are illegible noise and not recorded. Page 2 is a title page only.\nSUBSURFACE: none; no cross section, structure contours or logs. Base map from Corps of Engineers quadrangle sheets with contour intervals 10 and 20 feet; no vertical datum stated (page 1).",
+ "files": [
+  {
+   "url": "https://pubs.usgs.gov/gp/0123/plate-1.pdf",
+   "via": "pubs_usgs",
+   "sha256": "e281fb92b1ed633db89c12886e503e112327429ef5f75e2fddcd413ecf2fd33e",
+   "pages": 1,
+   "first_page": 1
+  },
+  {
+   "url": "https://pubs.usgs.gov/gp/0123/report.pdf",
+   "via": "pubs_usgs",
+   "sha256": "b2ad50aaa9890de8aac8afba578b3d66c4ef181fc1bb3b126ffed209c79b1eec",
+   "pages": 1,
+   "first_page": 2
+  }
+ ],
+ "summary": {
+  "stored": 11,
+  "quote_match": {
+   "exact": 11
+  },
+  "verification": {
+   "agree": 2
+  },
+  "inferred": 0
+ },
+ "ingests": [
+  {
+   "at": "2026-10-07T10:58:37+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, Claude Code reading session 2026-10-07",
+   "values": 11,
+   "stored": 11,
+   "exact": 11,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 2,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "Cooper marl",
+    "source_id": "ngmdb:3034",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.81,
+    "inferred": false,
+    "locator": null,
+    "quote": "associated with the Cooper marl (Eocene), the Hawthorn formation (Miocene), and Pleisto-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "Cooper",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Eocene",
+    "source_id": "ngmdb:3034",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "associated with the Cooper marl (Eocene), the Hawthorn formation (Miocene), and Pleisto-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 56.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "anomalies apparently resulted from uraniferous phosphatic materials associated with this unit",
+    "source_id": "ngmdb:3034",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "The anomalies shown have apparently resulted from uraniferous phosphatic materials",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Hawthorn formation",
+    "source_id": "ngmdb:3034",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "associated with the Cooper marl (Eocene), the Hawthorn formation (Miocene), and Pleisto-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Hawthorn",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "formation",
+    "source_id": "ngmdb:3034",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "associated with the Cooper marl (Eocene), the Hawthorn formation (Miocene), and Pleisto-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Miocene",
+    "source_id": "ngmdb:3034",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.81,
+    "inferred": false,
+    "locator": null,
+    "quote": "associated with the Cooper marl (Eocene), the Hawthorn formation (Miocene), and Pleisto-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 5.333,
+     "older_ma": 23.03,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "anomalies apparently resulted from uraniferous phosphatic materials associated with this unit",
+    "source_id": "ngmdb:3034",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "The anomalies shown have apparently resulted from uraniferous phosphatic materials",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Pleistocene terrace and alluvial deposits",
+    "source_id": "ngmdb:3034",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "cene terrace and alluvial deposits?",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "hyphenated across lines: 'Pleisto- cene'"
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:3034",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "cene terrace and alluvial deposits?",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "anomalies apparently resulted from uraniferous phosphatic materials associated with this unit",
+    "source_id": "ngmdb:3034",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "The anomalies shown have apparently resulted from uraniferous phosphatic materials",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "observations": [],
+ "structures": [],
+ "groundwater": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Cooke, C. W., 1936, Geology of the coastal plain of South Carolina: U. S. Geol. Survey Bull. 867.",
+    "source_id": "ngmdb:3034",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cooke, C. W., 1936, Geology of the coastal plain of South Carolina: U. S. Geol. Survey",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "surfaces": [],
+ "contours": [],
+ "sections": []
+}
