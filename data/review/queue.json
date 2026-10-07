@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 64,
+ "count": 66,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -846,6 +846,32 @@
    "verify": {
     "verdict": "unclear",
     "note": "text layer reads 'as well as Carolina bays that formed more recently. Thickness | to 20 feet.'; value read as '1 to 20 feet' with '|' taken as '1'; check the digit against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100339",
+   "path": "units[1].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "of streams. Thickness | to 40 feet.",
+   "added_at": "2026-10-07T04:18:00+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit; read as 1, needs a check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100339",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 24 ft",
+   "page": 1,
+   "quote": "deposits of the Coosawhatchie River flood plain. Thickness is | to 24 ft.",
+   "added_at": "2026-10-07T04:18:00+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit; read as 1, needs a check against the map image"
    }
   }
  ]
