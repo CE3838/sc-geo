@@ -41,6 +41,9 @@ def test_extracted_values_have_provenance_and_short_quotes(path):
         if "derived_coordinates" in v:  # a converted location is an inference, never a reading
             d = StoredValue.from_dict(v["derived_coordinates"])
             assert d.inferred and d.extraction_method is ExtractionMethod.INFERENCE and d.page == sv.page
+        if "navd88" in v:  # a datum conversion is an inference too
+            d = StoredValue.from_dict(v["navd88"])
+            assert d.inferred and d.extraction_method is ExtractionMethod.DATUM_CONVERSION and d.page == sv.page
     assert all("path" not in f for f in doc["files"])  # no local paths
 
 

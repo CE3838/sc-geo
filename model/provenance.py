@@ -23,6 +23,7 @@ class ExtractionMethod(str, Enum):
     GIS_IMPORT = "gis_import"
     CATALOG_IMPORT = "catalog_import"
     INFERENCE = "inference"
+    DATUM_CONVERSION = "datum_conversion"
 
 
 @dataclass(frozen=True)

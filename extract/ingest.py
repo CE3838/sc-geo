@@ -39,10 +39,10 @@ import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
 
-from extract import packets, patterns, schema, scope
+from extract import elevations, packets, patterns, schema, scope
 from extract.packets import safe_id
 from merge.score import scale_weight
-from model import coords
+from model import coords, vdatum
 from model.provenance import ExtractionMethod, StoredValue
 from model.units import Lexicon
 
@@ -57,6 +57,17 @@ PACKETS_DIR = ROOT / ".cache" / "packets"
 
 class IngestError(Exception):
     pass
+
+
+_GRID: dict = {}
+
+
+def default_grid():
+    """The NGVD29-to-NAVD88 grid from config (downloaded by harvest.vertcon), or None; read once."""
+    if "grid" not in _GRID:
+        path = Path(CONFIG["vertical_datum"]["grid_path"])
+        _GRID["grid"] = vdatum.load_grid(path if path.is_absolute() else ROOT / path)
+    return _GRID["grid"]
 
 
 # --- quote matching ----------------------------------------------------------
@@ -346,7 +357,8 @@ def _now() -> str:
 def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: Path = TEXT_DIR,
            out_dir: Path = OUT_DIR, review_dir: Path = REVIEW_DIR, catalog: dict | None = None,
            lexicon: Lexicon | None = None, done_dir: Path = DONE_DIR, cfg: dict = CONFIG,
-           packets_dir: Path = PACKETS_DIR, scopes: dict | None = None) -> dict:
+           packets_dir: Path = PACKETS_DIR, scopes: dict | None = None, vgrid=None) -> dict:
+    """vgrid: a model.vdatum.ShiftGrid; None loads the configured grid; False means no grid."""
     results = [_load_json(p, "result") for p in result_paths]
     for p, r in zip(result_paths, results):
         errs = schema.validate(r)
@@ -453,6 +465,9 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
 
     ctx = {"values": stored}
     new_sections = {key: _store(result[key], key, ctx) or [] for key in SECTIONS}
+    grid = default_grid() if vgrid is None else (vgrid or None)
+    navd88 = elevations.attach_navd88(new_sections, rec.get("year"), grid, cfg["vertical_datum"],
+                                      cfg["confidence"]["inferred_factor"])
 
     # Which part of the document this result covers (packet blocks, see extract/packets.py).
     all_blocks = index["blocks"] if index else [str(n) for n in sorted(pages)]
@@ -518,7 +533,7 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
         done_dir.mkdir(parents=True, exist_ok=True)
         (done_dir / f"{safe_id(sid)}.json").write_text(json.dumps({"id": sid, "done_at": _now(),
                                                                    "summary": out["summary"]}, indent=1))
-    return counts | {"review_items": len(review), "complete": complete, "blocks_done": len(done),
+    return counts | {"navd88": navd88, "review_items": len(review), "complete": complete, "blocks_done": len(done),
                      "blocks_total": len(all_blocks)}
 
 
