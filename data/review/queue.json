@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 70,
+ "count": 72,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -926,6 +926,32 @@
    "verify": {
     "verdict": "unclear",
     "note": "this 'VERTICAL EXAGGERATION X 53' line is printed above section A in the OCR order; which section it labels is not clear (all three show x 53)"
+   }
+  },
+  {
+   "source_id": "ngmdb:74876",
+   "path": "contours[0].figure",
+   "problem": "verify_unclear",
+   "value": "FIGURE 1",
+   "page": 1,
+   "quote": "FIGURE |",
+   "added_at": "2026-10-07T10:58:34+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit; read as 1 (p.4 text refers to Figure 1), needs a check against the plate image"
+   }
+  },
+  {
+   "source_id": "ngmdb:74876",
+   "path": "contours[0].values[0]",
+   "problem": "verify_unclear",
+   "value": "-40",
+   "page": 1,
+   "quote": "-- -40-—>_",
+   "added_at": "2026-10-07T10:58:34+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "'-40' is printed beside the legend entries in the OCR; cannot confirm it labels a contour line; check the plate image"
    }
   }
  ]
