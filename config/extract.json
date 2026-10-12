@@ -76,5 +76,14 @@
     "fallback_ngvd29_to_navd88_ft": null,
     "fallback_source": null,
     "approximate_factor": 0.9
+  },
+  "agreement": {
+    "_comment": "extract/agreement.py: a measured surface (top or base of a unit) and a value for the same unit and boundary from another source within distance_ft agree when their NAVD88 elevations differ by at most tolerance_ft (or unit_tolerance_ft for that unit, by Geolex name in lower case), plus approximate_extra_ft when either NAVD88 value is approximate. Each agreeing independent source raises confidence c to 1 - (1 - c)(1 - boost)^k, at most cap. Disagreeing values are kept as alternatives.",
+    "distance_ft": 1000.0,
+    "tolerance_ft": 5.0,
+    "unit_tolerance_ft": {},
+    "approximate_extra_ft": 1.0,
+    "boost": 0.25,
+    "cap": 0.98
   }
 }

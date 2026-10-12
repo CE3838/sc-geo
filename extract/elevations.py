@@ -77,7 +77,8 @@ def attach_navd88(sections: dict, year: int | None, grid, cfg: dict, inferred_fa
         if res is None:
             stats["skipped"][why] += 1
             return
-        conf = entry["confidence"] * inferred_factor * (cfg.get("approximate_factor", 0.9) if res["approximate"] else 1)
+        base = (entry.get("agreement") or {}).get("confidence_before", entry["confidence"])  # not a boosted value
+        conf = base * inferred_factor * (cfg.get("approximate_factor", 0.9) if res["approximate"] else 1)
         sv = StoredValue(value={"min_ft": res["min_ft"], "max_ft": res["max_ft"]}, source_id=entry["source_id"],
                          page=entry["page"], extraction_method=ExtractionMethod.DATUM_CONVERSION,
                          confidence=round(min(1.0, conf), 3), inferred=True, locator=entry.get("locator"))

@@ -231,3 +231,22 @@ value's own value and units, with ingest's functions. It never changes a
 value as read, its quote, page, provenance, confidence or verification, and
 re-reads nothing. It is a dry run by default (a JSON report of every change);
 `--write` writes the files.
+
+## NAVD88 and agreement between sources
+
+Every elevation with a usable datum gets a `navd88` value (extract/elevations.py,
+model/vdatum.py): its own StoredValue, `extraction_method` "datum_conversion",
+`inferred: true`, naming the conversion, the datum it came from and anything
+assumed. NGVD29 is shifted with the NGS VERTCON grid that
+`python -m harvest.vertcon` downloads once into `.cache/grids/`; "sea level"
+counts as NGVD29 only in documents published before 1991; land surface stays
+relative; no stated datum is kept as printed and marked approximate.
+
+`python -m extract.agreement` (dry run; `--write` to record) pairs surface
+points from different sources: same unit and boundary, within `distance_ft`,
+at least one measured. Agreeing values are raised to
+`1 - (1 - c)(1 - boost)^k` (at most `cap`) and list each other in
+`agreement.agrees_with`; disagreeing values are kept and list each other as
+alternatives. Run it after ingest and after `extract.renormalize`, which
+rebuild confidences from ingest.
+
