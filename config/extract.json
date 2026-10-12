@@ -55,7 +55,9 @@
     "verify_agree": 1.0,
     "verify_unchecked": 0.85,
     "verify_unclear": 0.7,
-    "verify_disagree": 0.4
+    "verify_disagree": 0.4,
+    "contour_scale_weight": true,
+    "_contour_scale_weight": "Values from contour maps (contours, and surfaces with method contour) take the map scale weight of merge.score.scale_weight: more detailed maps weigh more (1:24,000 0.95 ... 1:500,000 0.55). Confirmed by the user 2026-10; false falls back to the publisher weight."
   },
   "trusted_publishers": [
     "U.S. Geological Survey", "USGS", "South Carolina Geological Survey", "South Carolina Division of Geology",

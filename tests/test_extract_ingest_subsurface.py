@@ -309,3 +309,28 @@ def test_ingest_without_grid_skips_ngvd29(env):
     summary, out, _ = env(vgrid=False)
     assert "navd88" not in out["surfaces"][0]["elevation"]
     assert any("harvest.vertcon" in r for r in summary["navd88"]["skipped"])
+
+
+# --- contour-derived values: weighted by their map's scale ---------------------------
+
+def test_contour_weight_follows_map_scale_more_detailed_higher():
+    rec = {**RECORD, "scale": 24000}
+    assert ingest.source_weight(rec, "contours", contour=True) == 0.95
+    assert ingest.source_weight({**RECORD, "scale": 250000}, "contours", contour=True) == 0.7
+    assert ingest.source_weight({**RECORD, "scale": 500000}, "contours", contour=True) == 0.55
+    assert ingest.source_weight(RECORD, "contours", contour=True) == 0.85        # no scale: publisher weight
+    assert ingest.source_weight({**RECORD, "scale": 500000}, "surfaces") == 0.85  # a measured value
+    assert ingest.source_weight({**RECORD, "scale": 500000, "status": "draft"}, "contours", contour=True) == 0.55
+    off = {**ingest.CONFIG, "confidence": {**ingest.CONFIG["confidence"], "contour_scale_weight": False}}
+    assert ingest.source_weight({**RECORD, "scale": 500000}, "contours", off, contour=True) == 0.85
+
+
+def test_ingest_weights_contour_surfaces_and_contour_maps_by_scale(env):
+    res = json.loads(json.dumps(RESULT))
+    res["surfaces"][1]["method"] = v("contour", 2, "is about 35 ft below land surface", inferred=True)
+    _, out, _ = env(res, catalog={SID: {**RECORD, "scale": 500000}})
+    unchecked = ingest.CONFIG["confidence"]["verify_unchecked"]
+    assert out["surfaces"][0]["observation"]["confidence"] == round(0.85 * unchecked, 3)   # measured: publisher
+    assert out["surfaces"][1]["boundary"]["confidence"] == round(0.55 * unchecked, 3)      # contour: 1:500,000
+    assert out["contours"][0]["interval"]["confidence"] == round(0.55 * unchecked, 3)
+    assert out["sections"][0]["name"]["confidence"] == round(0.85 * unchecked, 3)

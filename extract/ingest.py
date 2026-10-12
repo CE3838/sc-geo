@@ -184,7 +184,8 @@ def image_locators(doc: dict) -> dict[int, str]:
     return out
 
 
-def source_weight(rec: dict, section: str | None = None, cfg: dict = CONFIG, map_sheet: bool = False) -> float:
+def source_weight(rec: dict, section: str | None = None, cfg: dict = CONFIG, map_sheet: bool = False,
+                  contour: bool = False) -> float:
     """S: map scale for map-unit descriptions read from a map sheet; otherwise the publisher's weight.
 
     Unit descriptions on a map are generalized to its scale. Report text, a boring log,
@@ -192,6 +193,10 @@ def source_weight(rec: dict, section: str | None = None, cfg: dict = CONFIG, map
     """
     c = cfg["confidence"]
     if section == "units" and map_sheet and rec.get("scale"):
+        w = scale_weight(int(rec["scale"]))
+    elif contour and rec.get("scale") and c.get("contour_scale_weight", True):
+        # Values read from a contour map are as good as the map: more detailed (larger-scale) maps
+        # weigh more, as in the merge's ranking (1:24,000 0.95 ... 1:500,000 0.55).
         w = scale_weight(int(rec["scale"]))
     elif (rec.get("publisher") or "").strip() in cfg["trusted_publishers"]:
         w = c["agency_or_journal"]
@@ -203,9 +208,9 @@ def source_weight(rec: dict, section: str | None = None, cfg: dict = CONFIG, map
 
 
 def confidence(rec: dict, method: str, match: str, verdict: str | None, inferred: bool, cfg: dict = CONFIG,
-               section: str | None = None, map_sheet: bool = False) -> float:
+               section: str | None = None, map_sheet: bool = False, contour: bool = False) -> float:
     c = cfg["confidence"]
-    s = source_weight(rec, section, cfg, map_sheet)
+    s = source_weight(rec, section, cfg, map_sheet, contour)
     m = c["ocr_factor"] if method == "ocr" else 1.0
     q = {"exact": 1.0, "ocr": 0.95, "fuzzy": c["fuzzy_quote_factor"]}[match]
     v = {"agree": c["verify_agree"], "disagree": c["verify_disagree"], "unclear": c["verify_unclear"],
@@ -423,6 +428,12 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
         review.append({"source_id": sid, "path": path, "problem": problem, "value": val.get("value"),
                        "page": val.get("page"), "quote": val.get("quote"), "added_at": _now(), **extra})
 
+    contour_surfaces = {f"surfaces[{i}]" for i, r in enumerate(result.get("surfaces", []))
+                        if isinstance(r.get("method"), dict) and r["method"].get("value") == "contour"}
+
+    def from_contour(path: str) -> bool:
+        return path.startswith("contours[") or path.split(".", 1)[0] in contour_surfaces
+
     for path, val in schema.iter_values(result):
         counts["values"] += 1
         pg = pages.get(val["page"])
@@ -447,7 +458,8 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
             queue(path, val, f"verify_{verdict}", verify={k: v for k, v in check.items() if k != "path"})
         sv = StoredValue(value=val["value"], source_id=sid, page=val["page"], extraction_method=ExtractionMethod.LLM,
                          confidence=confidence(rec, pg.get("method", "pdf_text"), match, verdict, val["inferred"], cfg,
-                                                    section=path.split("[", 1)[0], map_sheet=val["page"] in sheets),
+                                                    section=path.split("[", 1)[0], map_sheet=val["page"] in sheets,
+                                                    contour=from_contour(path)),
                          inferred=bool(val["inferred"]), locator=locators.get(val["page"]))
         entry = sv.to_dict() | {"quote": val["quote"], "quote_match": match, "text_method": pg.get("method"),
                                 "verification": verdict}
