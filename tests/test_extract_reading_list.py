@@ -118,10 +118,25 @@ def test_build_is_deterministic_and_lists_every_exclusion(ctx):
 def test_merged_gis_sources_are_listed_for_their_text(ctx):
     out = rl.build(CATALOG, ctx)
     online_merged = {i for i in ctx.merged if i in BY_ID and BY_ID[i]["availability"].get("online")}
-    assert len(online_merged) >= 50 and online_merged <= set(out["ids"])
+    national = {"ngmdb:77647", "ngmdb:112670"}
+    assert len(online_merged) >= 50 and online_merged - national <= set(out["ids"])
     assert "ngmdb:117526" in out["ids"]  # Pond Branch
     assert rl.GIS_REASON in out["scores"]["ngmdb:117526"]["reasons"]
     assert rl.GIS_REASON == "GIS merged; text read for unit descriptions"
+
+
+def test_merged_national_compilations_keep_their_gis_but_their_text_is_not_applicable(ctx):
+    # Continent-scale maps with a sliver of SC: their polygons stay in the merge as a
+    # low-confidence fallback, but their text has no SC subsurface content to read.
+    out = rl.build(CATALOG, ctx)
+    for rid in ("ngmdb:77647", "ngmdb:112670"):  # Gulf of Mexico region; North America
+        assert rid in ctx.merged
+        assert rid not in out["ids"]
+        assert out["excluded"][rid].startswith(rl.GIS_NATIONAL_REASON)
+        assert "national or global compilation" in out["excluded"][rid]
+    na = {r["id"]: r for r in rl.not_applicable(out)["records"]}
+    assert na["ngmdb:77647"]["status"] == "read: not applicable"
+    assert "ngmdb:112670" in na
 
 
 def test_threshold_is_30_and_brings_in_regional_aquifer_geology(ctx):
