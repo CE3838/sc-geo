@@ -46,6 +46,10 @@ Where things live:
 - `data/review/queue.json`: values that need a person (committed).
 - `data/review/needs_access.json`: records with no open full text, metadata
   only, for library access (committed).
+- `data/review/not_applicable.json`: online records left off the reading list
+  as low value for SC geology, marked "read: not applicable" with the reason
+  (`already_read` for documents read before; their values stay). Written by
+  `python -m extract.reading_list`; `next_batch` skips them unless asked by id.
 
 ## Where full text comes from
 
@@ -54,8 +58,11 @@ Publications Warehouse; Unpaywall (`CONTACT_EMAIL`), OpenAlex and
 open-licensed Crossref links for catalog DOIs; then, for records still
 without text, a Crossref DOI lookup (`harvest/openaccess.py`), followed by
 the same open-access sources for the DOI it finds (or the Publications
-Warehouse for a USGS DOI); NGMDB PDF scans; NGMDB browse images
-(`harvest/ngmdb_images.py`); SCDNR FTP zips. Records still without open text
+Warehouse for a USGS DOI); for records whose GIS is merged, the map-sheet
+PDFs inside their GeMS package (from `merge.build`'s `.cache/sources/` copy,
+downloaded there once if missing; the GIS files are never read as text);
+NGMDB PDF scans; NGMDB browse images
+(`harvest/ngmdb_images.py`); SCDNR FTP zips (never the GIS shapefile zips). Records still without open text
 go to `data/review/needs_access.json`, with the Crossref DOI and match score
 when there is one, for library access.
 

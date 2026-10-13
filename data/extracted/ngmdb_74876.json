@@ -1,0 +1,396 @@
+{
+ "source_id": "ngmdb:74876",
+ "title": "Preliminary contour map on the top of the Eocene Series, Charleston area, South Carolina",
+ "citation": "Higgins, B.B., Gohn, G.S., and Bybell, L.M., 1978, Preliminary contour map on the top of the Eocene Series, Charleston area, South Carolina: U.S. Geological Survey Open-File Report OF-78-548, map scale 1:250,000.",
+ "year": 1978,
+ "scale": 250000,
+ "publisher": "U.S. Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-10-07T10:58:34+00:00",
+ "updated_at": "2026-10-07T10:58:34+00:00",
+ "reader": "Claude, scheduled Claude Code session 2026-10-07",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6"
+ ],
+ "blocks_total": 6,
+ "complete": true,
+ "notes": "Map plate (p.1, OCR) plus short report (pp.2-6). Contour map of the top of the Eocene defined by 167 data points (p.4), mostly from gamma logs of water wells; contours dashed where control is sparse; stippled areas where the Oligocene Cooper is absent. Only one contour label (-40) legible; '50-' and 'B0' are garbled and not recorded. Legend symbols (auger holes, exposures, water wells) not recorded. Authors report no clearly defined tectonic elements such as faults have been proved (p.4).\nSUBSURFACE: Fig. 2 (p.5) is a gamma log with picks for the tops of the Oligocene, Eocene, Santee Ls., Macrofossil Ls. and Black Mingo Fm. against a depth scale (20-130), but the well is not identified and the depth of each pick cannot be read from the OCR; contour datum not stated; the 167 control points are not listed.",
+ "files": [
+  {
+   "url": "https://pubs.usgs.gov/of/1978/0548/plate-1.pdf",
+   "via": "pubs_usgs",
+   "sha256": "03c5fabed8d742469ef7a080750b3a27bd1e258cf5413426ff40517226972ee8",
+   "pages": 1,
+   "first_page": 1
+  },
+  {
+   "url": "https://pubs.usgs.gov/of/1978/0548/report.pdf",
+   "via": "pubs_usgs",
+   "sha256": "66f1fab6b5d0b7bdf4bdefb59b656f5cff60183953f35832f4de4b22bafb62da",
+   "pages": 5,
+   "first_page": 2
+  }
+ ],
+ "summary": {
+  "stored": 21,
+  "quote_match": {
+   "exact": 21
+  },
+  "verification": {
+   "agree": 7,
+   "unclear": 2
+  },
+  "inferred": 1
+ },
+ "ingests": [
+  {
+   "at": "2026-10-07T10:58:34+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-07",
+   "values": 21,
+   "stored": 21,
+   "exact": 21,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 7,
+   "disagree": 0,
+   "unclear": 2,
+   "review_items": 2
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "Oligocene part of the Cooper Formation",
+    "source_id": "ngmdb:74876",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "general, the Oligocene part of the Cooper Formation is olive green to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "age": {
+    "value": "Oligocene",
+    "source_id": "ngmdb:74876",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "general, the Oligocene part of the Cooper Formation is olive green to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 23.03,
+     "older_ma": 33.9,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "olive green to olive brown, phosphatic, sandy textured, and quartzose; always contains visible, dark brown, rounded, sand to pebble size grains of phosphate",
+    "source_id": "ngmdb:74876",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "olive brown, phosphatic, sandy textured, and quartzose.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "Sloan (1908) called the Oligocene portion the Ashley Marl; higher radiation levels on gamma logs than Eocene Cooper",
+    "source_id": "ngmdb:74876",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Oligocene portion the Ashley Marl and the Eocene portion the Cooper",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "contacts": {
+    "value": "separated from the Eocene part by a hiatus; in parts of the area the Oligocene part is not present",
+    "source_id": "ngmdb:74876",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "In parts of the area, the Oligocene part of the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Eocene part of the Cooper Formation",
+    "source_id": "ngmdb:74876",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Texturally, the Eocene Cooper is usually a stiff plastic clay, although",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Eocene",
+    "source_id": "ngmdb:74876",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Texturally, the Eocene Cooper is usually a stiff plastic clay, although",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 56.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "typically light grayish green, non-phosphatic, clayey textured, less quartzose and more calcareous than the Oligocene part; usually a stiff plastic clay, with other lithofacies such as biocalcarenite and soft sandy textured sediment",
+    "source_id": "ngmdb:74876",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "part is typically light grayish green, non-phosphatic, clayey textured,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "visible phosphate is rare to absent; Sloan (1908) called the Eocene portion the Cooper Marl",
+    "source_id": "ngmdb:74876",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "phosphate is rare to absent in the Eocene part of the Cooper.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "contacts": {
+    "value": "where the Oligocene part is not present, Eocene Cooper directly underlies post-Oligocene sediments",
+    "source_id": "ngmdb:74876",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cooper Formation is not present and Eocene Cooper directly underlies",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  }
+ ],
+ "observations": [],
+ "structures": [],
+ "groundwater": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Cooke, C. Wythe, 1936, Geology of the Coastal Plain of South Carolina: U.S. Geological Survey Bulletin 867, 196 p.",
+    "source_id": "ngmdb:74876",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cooke, C. Wythe, 1936, Geology of the Coastal Plain of South Carolina:",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Hazel, J.E., Bybell, L.M., Christopher, R.A., Frederiksen, N.O., May, F.E., McLean, D.M., Poore, R.F., Smith, C.C., Sohl, N.F., Valentine, P.C., and Witmer, R.J., 1977, Biostratigraphy of the deep corehole (Clubhouse Crossroads corehole 1) near Charleston, South Carolina, in Rankin, Douglas, ed., Studies related to the Charleston, South Carolina, earthquake of 1886 - a preliminary report: U.S. Geological Survey Professional Paper 1028-F, p. F71-F89.",
+    "source_id": "ngmdb:74876",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Hazel, J.E., Bybell, L.M., Christopher, R.A., Frederiksen, N.O.,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Sloan, Earle, 1908, Catalogue of the mineral localities of South Carolina: South Carolina Geological Survey, series 4, Bulletin 2.",
+    "source_id": "ngmdb:74876",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Sloan, Earle, 1908, Catalogue of the mineral localities of South",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Uchupi, Elazar, 1968, Atlantic continental shelf and slope of the United States - physiography: U.S. Geological Survey Professional Paper 529-C, p. C1-C30.",
+    "source_id": "ngmdb:74876",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Uchupi, Elazar, 1968, Atlantic continental shelf and slope of the United",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ],
+ "surfaces": [],
+ "contours": [
+  {
+   "kind": "structure",
+   "surface": {
+    "value": "top of the Eocene Series",
+    "source_id": "ngmdb:74876",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "TOP OF THE EOCENE’ SERIES",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "unit": {
+    "value": "Eocene Series",
+    "source_id": "ngmdb:74876",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "TOP OF THE EOCENE’ SERIES",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "interval": {
+    "value": "5 M",
+    "source_id": "ngmdb:74876",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "CONTOUR INTERVAL 5 M",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "min_ft": 16.404199475065614,
+     "max_ft": 16.404199475065614,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "units": {
+    "value": "M",
+    "source_id": "ngmdb:74876",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "CONTOUR INTERVAL 5 M",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "area": {
+    "value": "near Charleston, South Carolina",
+    "source_id": "ngmdb:74876",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "NEAR CHARLESTON, SOUTH CAROLINA",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "figure": {
+    "value": "FIGURE 1",
+    "source_id": "ngmdb:74876",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "FIGURE |",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "unclear",
+    "note": "OCR prints 'FIGURE |'; text on p.4 calls the contour map Figure 1"
+   },
+   "values": [
+    {
+     "value": "-40",
+     "source_id": "ngmdb:74876",
+     "page": 1,
+     "extraction_method": "llm",
+     "confidence": 0.535,
+     "inferred": false,
+     "locator": null,
+     "quote": "-- -40-—>_",
+     "quote_match": "exact",
+     "text_method": "ocr",
+     "verification": "unclear",
+     "note": "only legible contour label in the OCR",
+     "normalized": -40.0
+    }
+   ]
+  }
+ ],
+ "sections": []
+}
