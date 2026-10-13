@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 114,
+ "count": 115,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -1506,6 +1506,20 @@
    "verify": {
     "verdict": "unclear",
     "note": "text layer reads 'QI'; read as 'Ql' by correcting an OCR character; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:109156",
+   "path": "units[10].name",
+   "problem": "verify_disagree",
+   "value": "Dacitic to Andesitic Tuff (Persimmon Fork Formation)",
+   "page": 1,
+   "quote": "Dacitic to Andesitic Tuff — Mesocratic (Color Index=35), weathered brownish gray,",
+   "added_at": "2026-10-13T22:58:56+00:00",
+   "verify": {
+    "verdict": "disagree",
+    "value": "Dacitic to Andesitic Tuff",
+    "note": "the page prints the description before the 'Persimmon Fork Formation (Neoproterozoic)' heading; the Persimmon Fork assignment comes from the Zpf symbol prefix and layout and is not flagged inferred"
    }
   }
  ]
