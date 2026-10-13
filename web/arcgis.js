@@ -2,6 +2,17 @@
 // MapServer), for layers that are read from their owners for the area on
 // screen instead of copied into this repo (roads, parcels). Pure helpers,
 // free of DOM and MapLibre, so they can be tested with `node --test`.
+import { tileForLngLat } from './geo.js';
+
+// A live service that never answers must not leave a layer "loading…" forever:
+// the request is given up after this long and the layer shows its "unavailable" note.
+export const FETCH_TIMEOUT_MS = 30000;
+
+export async function fetchJson(url, { timeoutMs = FETCH_TIMEOUT_MS, fetchImpl = fetch } = {}) {
+  const r = await fetchImpl(url, { signal: AbortSignal.timeout(timeoutMs) });
+  if (!r.ok) throw new Error(`HTTP ${r.status}`);
+  return r.json();
+}
 
 const round6 = (v) => Number(v.toFixed(6));
 
@@ -35,9 +46,7 @@ const clampLat = (lat) => Math.max(-85.0511, Math.min(85.0511, lat));
 
 function tileXY(lng, lat, z) {
   const n = 2 ** z;
-  const rad = (clampLat(lat) * Math.PI) / 180;
-  const x = Math.floor(((lng + 180) / 360) * n);
-  const y = Math.floor(((1 - Math.log(Math.tan(rad) + 1 / Math.cos(rad)) / Math.PI) / 2) * n);
+  const { x, y } = tileForLngLat(lng, clampLat(lat), z);
   return [Math.min(n - 1, Math.max(0, x)), Math.min(n - 1, Math.max(0, y))];
 }
 

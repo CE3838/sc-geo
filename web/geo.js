@@ -77,6 +77,15 @@ export const NAIP_SOURCES = [
 
 const HALF_WORLD = 20037508.342789244; // Web Mercator half-width in meters
 
+// The map view clipped to a [[west, south], [east, north]] limit as [w, s, e, n], or null
+// when the view is outside it (live layers query only this box).
+export function viewBox(map, limit = IMAGERY_BOUNDS) {
+  const b = map.getBounds();
+  const box = [Math.max(b.getWest(), limit[0][0]), Math.max(b.getSouth(), limit[0][1]),
+    Math.min(b.getEast(), limit[1][0]), Math.min(b.getNorth(), limit[1][1])];
+  return box[0] < box[2] && box[1] < box[3] ? box : null;
+}
+
 // Slippy-map tile containing a lon/lat at zoom z.
 export function tileForLngLat(lng, lat, z) {
   const n = 2 ** z;
