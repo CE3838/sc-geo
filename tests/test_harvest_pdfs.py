@@ -30,10 +30,10 @@ PIEDMONT = rec("ngmdb:5", [-82.5, 34.75, -82.25, 35.0])
 MERGED = rec("ngmdb:6", [-80.0, 32.75, -79.75, 33.0], gems_download="https://x/gems.zip")
 
 
-def test_queue_order_and_merged_excluded():
+def test_queue_order_includes_merged_gis_records():
     q = pdfs.queue([PIEDMONT, STATE, COASTAL, MERGED, CHS_BIG, CHS], PILOT)
     ids = [r["id"] for r in q]
-    assert "ngmdb:6" not in ids
+    assert "ngmdb:6" in ids  # its GIS is merged, but its map sheet text is still read
     assert ids[0] == "ngmdb:1"
     assert ids.index("ngmdb:4") < ids.index("ngmdb:5")
     tiers = {r["id"]: r["_tier"] for r in q}
@@ -294,16 +294,92 @@ def test_needs_access_keeps_entries_from_earlier_runs(tmp_path):
     assert ids == ["ngmdb:20", "ngmdb:99"]
 
 
-def test_needs_access_drops_records_that_are_now_merged(tmp_path):
+def test_needs_access_drops_excluded_records_but_lists_merged_ones_without_text(tmp_path, monkeypatch):
+    monkeypatch.setattr(pdfs, "excluded_ids", lambda: {"ngmdb:22"})
     merged = rec("ngmdb:21", CHS["bbox"], publisher="Some Society", gems_download="https://x/gems.zip")
     paths = _setup(tmp_path, [rec("ngmdb:20", CHS["bbox"], publisher="Some Society"), merged])
     review = paths["review_dir"]
     review.mkdir(parents=True)
-    (review / "needs_access.json").write_text(json.dumps({"records": [{"id": "ngmdb:21", "title": "now merged"}]}))
-    f = FakeFetcher({"https://ngmdb.usgs.gov/Prodesc/": "<html></html>"})
+    (review / "needs_access.json").write_text(json.dumps({"records": [{"id": "ngmdb:22", "title": "excluded"}]}))
+    f = FakeFetcher({"https://ngmdb.usgs.gov/Prodesc/": "<html></html>",
+                     "https://x/gems.zip": _zip_bytes({"gdb/units.csv": b"MapUnit,Name"})})
     pdfs.run(fetcher=f, ocr=None, log=lambda *a: None, resolve_only=True, **paths)
     ids = [r["id"] for r in json.loads((review / "needs_access.json").read_text())["records"]]
-    assert ids == ["ngmdb:20"]
+    assert ids == ["ngmdb:20", "ngmdb:21"]
+
+
+# --- merged GIS records: text from the map sheet, never from the GIS data ----------
+
+def _zip_bytes(members: dict) -> bytes:
+    import io
+    import zipfile
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w") as zf:
+        for name, data in members.items():
+            zf.writestr(name, data)
+    return buf.getvalue()
+
+
+def test_resolve_takes_map_sheet_pdfs_from_a_cached_gis_package_without_downloading(tmp_path, pdf_bytes):
+    gis = tmp_path / ".cache" / "sources"
+    gis.mkdir(parents=True)
+    (gis / "ngmdb_6.zip").write_bytes(_zip_bytes({"sheet/map.pdf": pdf_bytes, "shp/MapUnitPolys.shp": b"x"}))
+    f = FakeFetcher({"https://ngmdb.usgs.gov/Prodesc/": NGMDB_PAGE.replace("pubs.usgs", "x"),
+                     "https://pubs.usgs.gov/pubs-services/publication/?": {"records": []}})
+    r = pdfs.resolve(MERGED, f, email=None, gis_cache=gis)
+    assert [c["via"] for c in r["candidates"]] == ["gis_package"]
+    assert r["candidates"][0]["members"] == ["sheet/map.pdf"]
+    assert "https://x/gems.zip" not in f.calls  # cached GIS is never downloaded again
+    assert "gis_package" in r["checked"]
+
+
+def test_resolve_downloads_a_gis_package_once_into_the_merge_cache(tmp_path, pdf_bytes):
+    gis = tmp_path / ".cache" / "sources"
+    f = FakeFetcher({"https://ngmdb.usgs.gov/Prodesc/": "<html></html>",
+                     "https://pubs.usgs.gov/pubs-services/publication/?": {"records": []},
+                     "https://x/gems.zip": _zip_bytes({"map.pdf": pdf_bytes, "units.csv": b"a"})})
+    r = pdfs.resolve(MERGED, f, email=None, gis_cache=gis)
+    assert [c["via"] for c in r["candidates"]] == ["gis_package"]
+    assert (gis / "ngmdb_6.zip").exists()  # the path merge.build uses, so it is not fetched twice
+    pdfs.resolve(MERGED, f, email=None, gis_cache=gis)
+    assert f.calls.count("https://x/gems.zip") == 1
+
+
+def test_gis_package_without_pdf_falls_back_to_scans(tmp_path):
+    gis = tmp_path / ".cache" / "sources"
+    gis.mkdir(parents=True)
+    (gis / "ngmdb_6.zip").write_bytes(_zip_bytes({"shp/MapUnitPolys.shp": b"x"}))
+    f = FakeFetcher({"https://ngmdb.usgs.gov/Prodesc/": NGMDB_PAGE.replace("pubs.usgs", "x"),
+                     "https://pubs.usgs.gov/pubs-services/publication/?": {"records": []}})
+    r = pdfs.resolve(MERGED, f, email=None, gis_cache=gis)
+    assert [c["via"] for c in r["candidates"]] == ["ngmdb_scan", "ngmdb_scan"]
+
+
+def test_gis_shapefile_zips_are_never_text_candidates():
+    shp = rec("ngmdb:8", CHS["bbox"], publisher="Some Society",
+              scgs_ftp=["ftp://h/glc/rockv06glc_line.zip", "ftp://h/glc/rockv06glc_poly.zip", "ftp://h/rep.zip"])
+    r = pdfs.resolve(shp, FakeFetcher({"https://ngmdb.usgs.gov/Prodesc/": "<html></html>"}), email=None)
+    assert [c["url"] for c in r["candidates"]] == ["ftp://h/rep.zip"]
+
+
+@pytest.mark.skipif(not shutil.which("pdftotext"), reason="poppler-utils not installed")
+def test_run_reads_the_map_sheet_of_a_merged_record_and_keeps_the_gis_cache(tmp_path, pdf_bytes):
+    paths = _setup(tmp_path, [MERGED])
+    gis = paths["cache_dir"] / "sources"
+    gis.mkdir(parents=True)
+    package = _zip_bytes({"sheet/map.pdf": pdf_bytes, "shp/MapUnitPolys.shp": b"x"})
+    (gis / "ngmdb_6.zip").write_bytes(package)
+    f = FakeFetcher({"https://ngmdb.usgs.gov/Prodesc/": "<html></html>",
+                     "https://pubs.usgs.gov/pubs-services/publication/?": {"records": []}})
+    pdfs.run(fetcher=f, ocr=None, log=lambda *a: None, **paths)
+    ck = json.loads((paths["checkpoint_dir"] / "ngmdb_6.json").read_text())
+    assert ck["status"] == "text"
+    text = json.loads((paths["cache_dir"] / "text" / "ngmdb_6.json").read_text())
+    assert "Wando Formation" in text["pages"][0]["text"]
+    assert (gis / "ngmdb_6.zip").read_bytes() == package  # merge's copy is left as it was
+    pdf_dir = paths["cache_dir"] / "pdfs" / "ngmdb_6"
+    assert [p.suffix for p in pdf_dir.iterdir()] == [".pdf"]  # only the sheet, never the GIS files
+    assert "https://x/gems.zip" not in f.calls
 
 
 @pytest.mark.skipif(not shutil.which("pdftotext"), reason="poppler-utils not installed")

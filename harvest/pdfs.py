@@ -1,7 +1,7 @@
-"""Find, download and read the full text of every catalog record not yet merged.
+"""Find, download and read the full text of every catalog record.
 
-For each record in data/catalog/sc_catalog.json whose GIS was not merged
-(see merge.build.source_list), look for LEGAL open full text, in this order:
+For each record in data/catalog/sc_catalog.json, look for LEGAL open full
+text, in this order:
 
 * PDF links already in the catalog (from NGMDB product pages);
 * the USGS Publications Warehouse (pubs.usgs.gov): publisher links on the
@@ -9,9 +9,14 @@ For each record in data/catalog/sc_catalog.json whose GIS was not merged
   USGS records; its Document/Plate/Chapter PDFs, or PDFs on its index page;
 * Unpaywall for other DOIs (open-access copies only), when CONTACT_EMAIL is
   set; the email is never logged or written to disk;
+* for a record whose GIS is merged (merge.build), the map-sheet PDFs inside
+  its GeMS package, taken from merge.build's cache (.cache/sources/<id>.zip;
+  downloaded there once if missing, so neither job fetches it twice). The
+  GIS files themselves are never read as text;
 * NGMDB scanned map sheets (download.pl, screen- or print-optimized PDF),
   used only when nothing above was found;
-* SCDNR FTP zips (PDFs inside them), last.
+* SCDNR FTP zips (PDFs inside them), last; GIS shapefile zips (*_poly.zip,
+  *_line.zip) are never text candidates.
 
 No shadow libraries. Records with no open full text are listed with their
 metadata in data/review/needs_access.json for library access.
@@ -58,7 +63,7 @@ UNPAYWALL = "https://api.unpaywall.org/v2/"
 CONFIG: dict = json.loads((ROOT / "config" / "extract.json").read_text())
 DONE = {"text", "needs_access"}
 RESOLVER_VERSION = 5  # bump when resolve() finds new kinds of sources; unread records are resolved again
-VIA_ORDER = ["catalog_pdf", "pubs_usgs", "publisher_pdf", "unpaywall", "openalex", "crossref_oa", "pubs_index", "ngmdb_scan", "ngmdb_image", "scgs_ftp"]
+VIA_ORDER = ["catalog_pdf", "pubs_usgs", "publisher_pdf", "unpaywall", "openalex", "crossref_oa", "pubs_index", "gis_package", "ngmdb_scan", "ngmdb_image", "scgs_ftp"]
 
 
 def safe_id(source_id: str) -> str:
@@ -128,10 +133,13 @@ def relevance(rec: dict) -> int:
 
 
 def queue(catalog: list[dict], pilot_bbox=None, cfg: dict = CONFIG, exclude: set[str] | None = None) -> list[dict]:
-    """Records not merged or excluded, in processing order: tier, geology first, smaller area, newer, id."""
+    """Records not excluded, in processing order: tier, geology first, smaller area, newer, id.
+
+    Records whose GIS is merged are queued too: their map sheets and reports are read for unit
+    descriptions, explanations, cross sections and references."""
     if pilot_bbox is None:
         pilot_bbox = json.loads((ROOT / "config" / "pilot_area.json").read_text())["bbox"]
-    skip = merged_ids(catalog) | (excluded_ids() if exclude is None else set(exclude))
+    skip = excluded_ids() if exclude is None else set(exclude)
     out = []
     for r in catalog:
         if r["id"] in skip:
@@ -311,8 +319,32 @@ def _doi(rec: dict) -> str | None:
     return m.group(1) if m else None
 
 
+_GIS_ZIP = re.compile(r"_(?:poly|line|point|pts)\.zip$", re.I)
+
+
+def gis_package_pdfs(rec: dict, fetcher, gis_cache: Path, log: Callable[..., None] = lambda *a: None) -> list[str]:
+    """PDF members of the record's GeMS package in merge.build's cache, downloading it there once if missing."""
+    url = (rec.get("availability") or {}).get("gems_download")
+    if not url:
+        return []
+    path = Path(gis_cache) / f"{safe_id(rec['id'])}.zip"
+    if not (path.exists() and zipfile.is_zipfile(path)):
+        tmp = path.with_name(path.name + ".part")
+        try:
+            fetcher.download(url, tmp)
+            if not zipfile.is_zipfile(tmp):
+                raise OSError("GIS package is not a zip file")
+            tmp.replace(path)
+        except (OSError, ValueError) as err:
+            tmp.unlink(missing_ok=True)
+            log(f"  {rec['id']}: GIS package failed: {type(err).__name__}")
+            return []
+    with zipfile.ZipFile(path) as zf:
+        return [m for m in zf.namelist() if m.lower().endswith(".pdf")]
+
+
 def resolve(rec: dict, fetcher, email: str | None = None, log: Callable[..., None] = lambda *a: None,
-            cfg: dict = CONFIG, api_cache: Path | None = None) -> dict:
+            cfg: dict = CONFIG, api_cache: Path | None = None, gis_cache: Path | None = None) -> dict:
     """Candidate full-text URLs for one record and which sources were checked."""
     cands: list[dict] = []
     checked: list[str] = ["catalog"]
@@ -392,6 +424,14 @@ def resolve(rec: dict, fetcher, email: str | None = None, log: Callable[..., Non
             for c in openaccess.open_copies(found, crossref, fetcher, email, api_cache, log):
                 add(c)
 
+    # A merged GIS record's map sheets inside its GeMS package (from merge.build's cache).
+    if not cands and gis_cache is not None and (rec.get("availability") or {}).get("gems_download"):
+        checked.append("gis_package")
+        members = gis_package_pdfs(rec, fetcher, gis_cache, log)
+        if members:
+            add({"url": rec["availability"]["gems_download"], "via": "gis_package", "members": members,
+                 "path": str(Path(gis_cache) / f"{safe_id(rec['id'])}.zip")})
+
     # Scanned sheets only when nothing else was found, or for a map whose Warehouse
     # entry has a text Document (often just a cover) but no Plate.
     map_without_plates = (rec.get("kind") == "map" and not plates and cands
@@ -406,7 +446,8 @@ def resolve(rec: dict, fetcher, email: str | None = None, log: Callable[..., Non
             add({"url": url, "via": "ngmdb_image"})
     if not cands:
         for url in rec.get("availability", {}).get("scgs_ftp", []):
-            add({"url": url, "via": "scgs_ftp"})
+            if not _GIS_ZIP.search(url):  # GIS shapefile packages hold no text to read
+                add({"url": url, "via": "scgs_ftp"})
     cands.sort(key=lambda c: VIA_ORDER.index(c["via"]))
     out = {"candidates": cands[: cfg["max_files_per_document"]], "checked": checked}
     if crossref is not None:
@@ -452,6 +493,19 @@ def download_files(rec: dict, cands: list[dict], fetcher, pdf_dir: Path, log) ->
                                            workers=opts.get("tile_workers", 4))
                 files.append({"url": c["url"], "via": c["via"], "path": str(dest), "bytes": dest.stat().st_size})
                 continue
+            if c["via"] == "gis_package":
+                zpath = Path(c["path"])
+                if not (zpath.exists() and zipfile.is_zipfile(zpath)):  # merge cache cleared: fetch it again once
+                    gis_package_pdfs(rec, fetcher, zpath.parent, log)
+                with zipfile.ZipFile(zpath) as zf:
+                    for j, m in enumerate(c["members"], 1):
+                        dest = pdf_dir / f"{i:02d}-{j:02d}.pdf"
+                        if not dest.exists():
+                            dest.parent.mkdir(parents=True, exist_ok=True)
+                            with zf.open(m) as src, open(dest, "wb") as out:
+                                shutil.copyfileobj(src, out)
+                        files.append({"url": c["url"], "member": m, "via": c["via"], "path": str(dest)})
+                continue  # the package stays in merge.build's cache
             if c["url"].lower().endswith(".zip"):
                 zpath = fetcher.download(c["url"], pdf_dir / f"{i:02d}.zip")
                 with zipfile.ZipFile(zpath) as zf:
@@ -534,7 +588,8 @@ def process(rec: dict, fetcher, ckpt_dir: Path, cache_dir: Path, email: str | No
     ck = _load(path) or {"id": rec["id"]}
     ck.update(tier=rec.get("_tier"), kind=rec.get("kind"))
     if _stale(ck, email):
-        r = resolve(rec, fetcher, email=email, log=log, api_cache=Path(cache_dir) / "api")
+        r = resolve(rec, fetcher, email=email, log=log, api_cache=Path(cache_dir) / "api",
+                    gis_cache=Path(cache_dir) / "sources")
         ck.pop("crossref", None)
         ck.update(r, resolved_at=_now(), resolver_version=RESOLVER_VERSION)
         ck.pop("files", None)
@@ -630,7 +685,7 @@ def write_needs_access(ordered: list[dict], cks: dict[str, dict], review_dir: Pa
         out.append({**{k: rec.get(k) for k in _META}, "doi": (rec.get("availability") or {}).get("doi"),
                     "tier": rec.get("_tier"), "checked": ck.get("checked", []), "reason": ck.get("reason"),
                     **({"crossref": ck["crossref"]} if ck.get("crossref") else {})})
-    out += [old[k] for k in sorted(old) if k not in drop]  # drop: records now merged as GIS, or excluded
+    out += [old[k] for k in sorted(old) if k not in drop]  # drop: records now excluded
     review_dir.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps({
         "about": "Catalog records with no legal open full text found. Metadata only; for library access. "
@@ -688,7 +743,7 @@ def run(catalog_path: Path = ROOT / "data" / "catalog" / "sc_catalog.json",
     work = [r for r in todo if needs_work(r)]
     if limit is not None:
         work = work[:limit]
-    safe_log(f"queue: {len(ordered)} records not merged; {len(work)} to process this run")
+    safe_log(f"queue: {len(ordered)} records; {len(work)} to process this run")
     done = 0
     lock = threading.Lock()
 
@@ -715,7 +770,7 @@ def run(catalog_path: Path = ROOT / "data" / "catalog" / "sc_catalog.json",
             list(pool.map(one, work))
 
     cks = {r["id"]: ck for r in ordered if (ck := _load(checkpoint_dir / f"{safe_id(r['id'])}.json"))}
-    n_need = write_needs_access(ordered, cks, review_dir, drop=merged_ids(catalog) | excluded_ids())
+    n_need = write_needs_access(ordered, cks, review_dir, drop=excluded_ids())
     status = status_counts(ordered, cks) | {"processed_this_run": done, "needs_access_listed": n_need,
                                             "minutes": round((time.monotonic() - start) / 60, 1), "at": _now()}
     _save(checkpoint_dir / "status.json", status)
