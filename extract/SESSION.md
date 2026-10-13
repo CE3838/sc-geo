@@ -116,6 +116,17 @@ values were not found on their pages, re-read the packet: you probably
 paraphrased instead of quoting, or cited the wrong page. Fix the result and
 ingest it again (re-ingesting a packet replaces that packet's values).
 
+When every packet of the session is ingested, record agreement between
+sources on surface elevations (ingest resets confidences, so this comes after
+it):
+
+```sh
+python -m extract.agreement --write
+```
+
+It only changes `data/extracted/` files that hold surfaces with a partner
+from another source, and prints how many values it raised.
+
 ## 5. Test and commit
 
 ```sh

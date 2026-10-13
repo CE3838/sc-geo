@@ -101,7 +101,14 @@ Guidance for Claude (and humans) working in this repository.
   Results may also hold subsurface data for cross sections (`surfaces`,
   `contours`, `sections`, observation `datum`/`depth_reference`); printed
   locations are converted by `model/coords.py` into a separate
-  `derived_coordinates` value flagged inferred.
+  `derived_coordinates` value flagged inferred. Elevations get a derived
+  `navd88` value (`extract/elevations.py`, `model/vdatum.py`; NGVD29 needs
+  the NGS VERTCON grid that `python -m harvest.vertcon` downloads once into
+  `.cache/grids/`); `python -m extract.agreement --write` raises the
+  confidence of surface elevations that independent sources agree on, and
+  `model/surfaces.py` interpolates a surface from NAVD88 points (kriging,
+  else natural neighbour/IDW) with an uncertainty for every estimate and no
+  estimate beyond a maximum distance.
 - Goal: merge all sources into one GeMS-aligned result. Where maps overlap,
   the most detailed and recent map wins; confidence comes from scale, the
   mapper's identity confidence, agreement among other maps and published
@@ -117,7 +124,7 @@ Guidance for Claude (and humans) working in this repository.
 | `config/` | Pilot area, `sources.json` (data sources and URLs), `catalog_scope.json` (chapter page ranges), other settings |
 | `harvest/` | Resumable jobs that discover and download public sources |
 | `extract/` | Parsers and prompts that pull values out of sources |
-| `model/` | Data model: provenance (`StoredValue`), ages and unit names (`units.py`), shapefile/projection reader (`gisio.py`) |
+| `model/` | Data model: provenance (`StoredValue`), ages and unit names (`units.py`), shapefile/projection reader (`gisio.py`), printed coordinates (`coords.py`), vertical datums (`vdatum.py`), surface interpolation (`surfaces.py`) |
 | `data/` | Small public derived data only: `catalog/`, `lexicon/` (no PDFs, no internal data) |
 | `merge/` | Merge all GIS sources into one surficial and one bedrock layer with confidence (`python -m merge.build`); pack the public data package (`python -m merge.package`) |
 | `review/` | Tools for human review of extracted and inferred values |
