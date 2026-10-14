@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 115,
+ "count": 120,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -1520,6 +1520,71 @@
     "verdict": "disagree",
     "value": "Dacitic to Andesitic Tuff",
     "note": "the page prints the description before the 'Persimmon Fork Formation (Neoproterozoic)' heading; the Persimmon Fork assignment comes from the Zpf symbol prefix and layout and is not flagged inferred"
+   }
+  },
+  {
+   "source_id": "ngmdb:109531",
+   "path": "units[3].map_symbol",
+   "problem": "verify_unclear",
+   "value": "TQc",
+   "page": 1,
+   "quote": "TOc Colluvium — On the north side of the Broad River, in the south central part of the map",
+   "added_at": "2026-10-14T10:57:37+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints 'TOc' in the description; read as TQc from the correlation chart; check the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:109531",
+   "path": "units[13].lithology",
+   "problem": "verify_unclear",
+   "value": "graded sequence of thin bedded siltstone and mudstone, in layers 1 - 10 mm thick, locally interlayered with graded wacke in beds up to a few meters thick",
+   "page": 1,
+   "quote": "d \\ N d graded sequence of thin bedded siltstone and mudstone, in layers | - 10 mm thick, locally ———— kilometer",
+   "added_at": "2026-10-14T10:57:37+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit ('layers | - 10 mm'); read as 1, check the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:109532",
+   "path": "units[1].map_symbol",
+   "problem": "verify_unclear",
+   "value": "TQc",
+   "page": 1,
+   "quote": "Toc Colluvium — On the north side of the Broad River, in the south central part of the map Winnsboro granite.",
+   "added_at": "2026-10-14T10:59:13+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints 'Toc' in the description and 'Tac' in the correlation chart; read as TQc; check the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:109532",
+   "path": "units[4].age",
+   "problem": "verify_unclear",
+   "value": "309 +/- 1 Ma (U-Pb monazite; Samson and Secor, 2000)",
+   "page": 1,
+   "quote": "the south (see map and cross sections). U-Pb monazite dating indicates an age of 309 +/- | Ma for niylonitic, phylonidc totiatiogs",
+   "added_at": "2026-10-14T10:59:13+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit; read as 1, check the map image ('309 +/- | Ma')"
+   }
+  },
+  {
+   "source_id": "ngmdb:109532",
+   "path": "units[7].lithology",
+   "problem": "verify_unclear",
+   "value": "graded thin bedded siltstone and mudstone in layers typically 1 - 10 mm thick, interlayered with about equal amounts of graded wacke in beds up to a few meters thick",
+   "page": 1,
+   "quote": "sequence of thin bedded siltstone and mudstone, in layers typically | - 10 mm thick,",
+   "added_at": "2026-10-14T10:59:13+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit; read as 1, check the map image ('typically | - 10 mm')"
    }
   }
  ]
