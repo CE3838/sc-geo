@@ -92,7 +92,7 @@ def test_catalog_examples_included(ctx, rid):
 
 
 @pytest.mark.parametrize("rid", ["ngmdb:114301", "ngmdb:118515", "ngmdb:105281", "ngmdb:71847", "ngmdb:118087",
-                                 "ngmdb:110819"])
+                                 "ngmdb:110819", "ngmdb:106622", "ngmdb:76352"])
 def test_catalog_examples_excluded(ctx, rid):
     s = rl.score(BY_ID[rid], ctx)
     assert not s["include"], (rid, s)
@@ -115,11 +115,47 @@ def test_build_is_deterministic_and_lists_every_exclusion(ctx):
     assert len(a["ids"]) == len(set(a["ids"]))
 
 
-def test_merged_gis_sources_are_excluded_with_reason(ctx):
-    merged = sorted(ctx.merged)[0]
+def test_merged_gis_sources_are_listed_for_their_text(ctx):
     out = rl.build(CATALOG, ctx)
-    assert merged not in out["ids"]
-    assert "merged" in out["excluded"][merged]
+    online_merged = {i for i in ctx.merged if i in BY_ID and BY_ID[i]["availability"].get("online")}
+    assert len(online_merged) >= 50 and online_merged <= set(out["ids"])
+    assert "ngmdb:117526" in out["ids"]  # Pond Branch
+    assert rl.GIS_REASON in out["scores"]["ngmdb:117526"]["reasons"]
+    assert rl.GIS_REASON == "GIS merged; text read for unit descriptions"
+
+
+def test_threshold_is_30_and_brings_in_regional_aquifer_geology(ctx):
+    assert rl.THRESHOLD == 30
+    out = rl.build(CATALOG, ctx)
+    assert {"ngmdb:11908", "ngmdb:11910"} <= set(out["ids"])
+    assert "ngmdb:114301" not in out["ids"] and "ngmdb:118515" not in out["ids"]
+
+
+def test_not_applicable_marks_read_documents_off_the_list_without_touching_them(ctx, tmp_path):
+    out = rl.build(CATALOG, ctx)
+    low = sorted(i for i in out["excluded"] if i in out["scores"])
+    extracted = tmp_path / "extracted"
+    extracted.mkdir()
+    body = json.dumps({"source_id": low[0], "complete": True, "values": [{"x": 1}]})
+    (extracted / f"{next_batch.packets.safe_id(low[0])}.json").write_text(body)
+    (extracted / f"{next_batch.packets.safe_id(out['ids'][0])}.json").write_text(json.dumps({"complete": True}))
+    na = rl.not_applicable(out, extracted)
+    by_id = {r["id"]: r for r in na["records"]}
+    assert set(by_id) == set(low)  # every online record left out, none on the list
+    assert by_id[low[0]]["status"] == "read: not applicable" and by_id[low[0]]["already_read"] is True
+    assert by_id[low[0]]["reason"] == out["excluded"][low[0]]
+    assert by_id[low[1]]["already_read"] is False
+    assert (extracted / f"{next_batch.packets.safe_id(low[0])}.json").read_text() == body
+
+
+def test_committed_not_applicable_file_matches(ctx):
+    out = rl.build(CATALOG, ctx)
+    committed = json.loads(rl.NOT_APPLICABLE_PATH.read_text())
+    ids = {r["id"] for r in committed["records"]}
+    assert ids == {i for i in out["excluded"] if i in out["scores"]}
+    done = {i for i in ids if (p := next_batch.progress(rl.ROOT / "data" / "extracted",
+                                                         next_batch.packets.safe_id(i))) and p["complete"]}
+    assert {r["id"] for r in committed["records"] if r["already_read"]} <= done
 
 
 def test_committed_files_match_the_builder(ctx):
