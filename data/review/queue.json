@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 113,
+ "count": 115,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -1493,6 +1493,32 @@
    "verify": {
     "verdict": "unclear",
     "note": "page reads '1978' but the report number is 75-590; OCR may have misread the year; rest of the entry is interleaved with map-face noise"
+   }
+  },
+  {
+   "source_id": "ngmdb:109531",
+   "path": "units[3].map_symbol",
+   "problem": "verify_unclear",
+   "value": "TQc",
+   "page": 1,
+   "quote": "TOc Colluvium — On the north side of the Broad River, in the south central part of the map",
+   "added_at": "2026-10-14T10:57:37+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints 'TOc' in the description; read as TQc from the correlation chart; check the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:109531",
+   "path": "units[13].lithology",
+   "problem": "verify_unclear",
+   "value": "graded sequence of thin bedded siltstone and mudstone, in layers 1 - 10 mm thick, locally interlayered with graded wacke in beds up to a few meters thick",
+   "page": 1,
+   "quote": "d \\ N d graded sequence of thin bedded siltstone and mudstone, in layers | - 10 mm thick, locally ———— kilometer",
+   "added_at": "2026-10-14T10:57:37+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit ('layers | - 10 mm'); read as 1, check the map image"
    }
   }
  ]
