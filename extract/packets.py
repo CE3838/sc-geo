@@ -39,7 +39,7 @@ def compact(text: str) -> str:
 
 
 def header(record: dict, doc: dict, part: int | None = None, of: int | None = None,
-           pages: set[int] | None = None, scope_note: str | None = None) -> str:
+           pages: set[int] | None = None, scope_note: str | None = None, reread: dict | None = None) -> str:
     scale = record.get("scale")
     lines = [
         f"# Packet {part} of {of} for {record['id']}" if part else f"# Packet for {record['id']}",
@@ -54,7 +54,14 @@ def header(record: dict, doc: dict, part: int | None = None, of: int | None = No
         f"- Files: " + "; ".join(f"{f.get('url')} (pages {f['first_page']}-{f['first_page'] + f['pages'] - 1})"
                                  for f in doc.get("files", [])),
     ]
-    if pages is not None:
+    if reread is not None:
+        lines += [f"- Re-read of pages {scope_mod.describe(reread['pages'])} only. Reason: {reread['reason']}",
+                  "- This document was read before. Every value already stored from these pages is replaced by "
+                  "this reading (the old values are kept in the file's history), so record EVERYTHING on these "
+                  "pages again, not only what the reason names."]
+        if reread.get("scope_note"):
+            lines += [f"- Scope: {reread['scope_note']}. Cite only the pages above."]
+    elif pages is not None:
         lines += [f"- Scope: PDF pages {scope_mod.describe(sorted(pages))} only"
                   + (f" ({scope_note})" if scope_note else "")
                   + ". This record is one paper of a larger volume; the other papers are left out."]
@@ -75,16 +82,19 @@ def is_part(block: str) -> bool:
     return "." in str(block)
 
 
-def _blocks(doc: dict, budget: int, pages: set[int] | None = None) -> tuple[list[tuple[int, str, str]], dict]:
-    """(page, block id, text) for every kept page or page part (only `pages` when given), and the skipped pages by kind."""
+def _blocks(doc: dict, budget: int, pages: set[int] | None = None,
+            force: bool = False) -> tuple[list[tuple[int, str, str]], dict]:
+    """(page, block id, text) for every kept page or page part (only `pages` when given), and the skipped pages by kind.
+
+    With force (a re-read of chosen pages), triage is not asked: every chosen page is kept."""
     n_pages = len(doc["pages"])
     blocks: list[tuple[int, str, str]] = []
     skipped: dict[str, list[int]] = defaultdict(list)
     for p in doc["pages"]:
         if pages is not None and p["page"] not in pages:
             continue
-        t = triage.classify(p.get("text", ""), p["page"], n_pages, method=p.get("method", "pdf_text"))
-        if not t["keep"]:
+        t = None if force else triage.classify(p.get("text", ""), p["page"], n_pages, method=p.get("method", "pdf_text"))
+        if t is not None and not t["keep"]:
             skipped[t["kind"]].append(p["page"])
             continue
         text = compact(p["text"])
@@ -107,11 +117,16 @@ def _blocks(doc: dict, budget: int, pages: set[int] | None = None) -> tuple[list
 
 
 def build(doc: dict, record: dict, max_tokens: int = 40000, chars_per_token: float = 2.5,
-          pages: set[int] | None = None, scope_note: str | None = None) -> list[dict]:
-    """Packets for a document; with `pages` (a record's scope, see extract/scope.py) only those pages."""
+          pages: set[int] | None = None, scope_note: str | None = None, reread: dict | None = None) -> list[dict]:
+    """Packets for a document; with `pages` (a record's scope, see extract/scope.py) only those pages.
+
+    reread ({"pages", "reason", "scope_note"}, see extract/reread.py): packets of exactly those pages, triage
+    not asked, with a header that says they replace what was stored from them."""
     limit = int(max_tokens * chars_per_token)
-    head_room = len(header(record, doc, 99, 99, pages, scope_note)) + 10
-    blocks, skipped = _blocks(doc, limit - head_room, pages)
+    if reread is not None:
+        pages = set(reread["pages"])
+    head_room = len(header(record, doc, 99, 99, pages, scope_note, reread)) + 10
+    blocks, skipped = _blocks(doc, limit - head_room, pages, force=reread is not None)
     groups: list[list[tuple[int, str, str]]] = [[]]
     size = 0
     for page, block, text in blocks:
@@ -124,7 +139,7 @@ def build(doc: dict, record: dict, max_tokens: int = 40000, chars_per_token: flo
         groups.pop()
     out = []
     for i, g in enumerate(groups, 1):
-        text = header(record, doc, i, len(groups), pages, scope_note) + "".join(t for _, _, t in g)
+        text = header(record, doc, i, len(groups), pages, scope_note, reread) + "".join(t for _, _, t in g)
         out.append({"source_id": record["id"], "packet": f"packet-{i:02d}", "of": len(groups),
                     "pages": sorted({p for p, _, _ in g}), "blocks": [b for _, b, _ in g],
                     "skipped": skipped, "text": text,
@@ -152,3 +167,16 @@ def write(packets: list[dict], record: dict, cache: Path = CACHE, scope: dict | 
              "estimated_tokens": sum(p["estimated_tokens"] for p in packets)}
     (d / "index.json").write_text(json.dumps(index, indent=1))
     return paths
+
+
+REREAD_DIR = "reread"
+
+
+def reread_index(doc_dir: Path) -> dict[str, dict]:
+    """{packet name: entry} of a document's re-read packets (<packets>/<id>/reread/index.json, extract/reread.py)."""
+    path = Path(doc_dir) / REREAD_DIR / "index.json"
+    try:
+        entries = json.loads(path.read_text())["packets"]
+    except (OSError, ValueError, KeyError):
+        return {}
+    return {e["file"].removesuffix(".md"): e for e in entries}
