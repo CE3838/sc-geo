@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 113,
+ "count": 122,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -1493,6 +1493,123 @@
    "verify": {
     "verdict": "unclear",
     "note": "page reads '1978' but the report number is 75-590; OCR may have misread the year; rest of the entry is interleaved with map-face noise"
+   }
+  },
+  {
+   "source_id": "ngmdb:109534",
+   "path": "units[2].age",
+   "problem": "verify_unclear",
+   "value": "309 ± 1 Ma (U-Pb monazite)",
+   "page": 1,
+   "quote": "indicates an age of 309 + 1 Ma for the Winnsboro quartz monzonite (Samson and Secor, 2000).The",
+   "added_at": "2026-10-14T22:57:34+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR text reads '309 + 1 Ma'; '+' read as '±'"
+   }
+  },
+  {
+   "source_id": "ngmdb:109534",
+   "path": "units[4].age",
+   "problem": "verify_unclear",
+   "value": "314 ± 2 Ma (U-Pb zircon)",
+   "page": 1,
+   "quote": "314+2 Ma has been reported for the Dutchmans Creek gabbro by Mobely and others (2014).",
+   "added_at": "2026-10-14T22:57:34+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR text reads '314+2 Ma'; '+' read as '±'"
+   }
+  },
+  {
+   "source_id": "ngmdb:109534",
+   "path": "units[6].map_symbol",
+   "problem": "verify_unclear",
+   "value": "Dgm",
+   "page": 1,
+   "quote": "| Dgrn | Fine to Medium Grained Quartz Monzonite",
+   "added_at": "2026-10-14T22:57:34+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR text reads 'Dgrn'; 'rn' read as 'm'"
+   }
+  },
+  {
+   "source_id": "ngmdb:109534",
+   "path": "units[6].age",
+   "problem": "verify_unclear",
+   "value": "older than the Winnsboro quartz monzonite; may be co-magmatic with the 414 ± 8 Ma Newberry granite",
+   "page": 1,
+   "quote": "monzonite, but rather it may be co-magmatic with the 414 + 8 Ma Newberry granite (Samson and",
+   "added_at": "2026-10-14T22:57:34+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR text reads '414 + 8 Ma'; '+' read as '±'"
+   }
+  },
+  {
+   "source_id": "ngmdb:109534",
+   "path": "units[12].map_symbol",
+   "problem": "verify_unclear",
+   "value": "Z€rs1",
+   "page": 1,
+   "quote": "Zers1 Richtex Formation: Lower Metasedimentary Member",
+   "added_at": "2026-10-14T22:57:34+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR text reads 'Zers1'; 'e' read as '€' (Cambrian), as in 'Z€rs1' on cross section B-B'"
+   }
+  },
+  {
+   "source_id": "ngmdb:109534",
+   "path": "units[14].map_symbol",
+   "problem": "verify_unclear",
+   "value": "Zpft1",
+   "page": 1,
+   "quote": "[ Zpftt | Persimmon Fork Formation: Felsic Lapilli Metatuff Member",
+   "added_at": "2026-10-14T22:57:34+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR text reads 'Zpftt'; second 't' read as '1' (lower member)"
+   }
+  },
+  {
+   "source_id": "ngmdb:109534",
+   "path": "references[2].citation",
+   "problem": "verify_unclear",
+   "value": "Bell, H., III, 1988, Map showing Mesozoic diabase dikes in South Carolina described since 1960: U. S. Geological Survey, Miscellaneous Field Studies Map, MF-2030, scale 1:250,000, 1 sheet.",
+   "page": 1,
+   "quote": "1988, Map showing Mesozoic diabase dikes in South Carolina described since 1960:",
+   "added_at": "2026-10-14T22:57:34+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR text reads 'Bell, H., Ill'; read as 'III'"
+   }
+  },
+  {
+   "source_id": "ngmdb:109534",
+   "path": "references[10].citation",
+   "problem": "verify_unclear",
+   "value": "Smith, W. A., Jr., 1982, The bedrock geology of the Jenkinsville 7 1/2' quadrangle, South Carolina [M. S. thesis]: Columbia, University of South Carolina, 46 p., map scale 1:24,000.",
+   "page": 1,
+   "quote": "Smith, W. A., Jr., 1982, The bedrock geology of the Jenkinsville 7/2 quadrangle, South Carolina",
+   "added_at": "2026-10-14T22:57:34+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR text reads 'Jenkinsville 7/2 quadrangle'; read as 7 1/2'"
+   }
+  },
+  {
+   "source_id": "ngmdb:109534",
+   "path": "sections[1].units_along[2].unit",
+   "problem": "verify_unclear",
+   "value": "Z€rs2",
+   "page": 1,
+   "quote": "gt\" Lo ey wy Ers2",
+   "added_at": "2026-10-14T22:57:34+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR text reads 'Ers2'; read as Z€rs2"
    }
   }
  ]
