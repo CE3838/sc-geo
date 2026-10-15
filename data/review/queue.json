@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 113,
+ "count": 118,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -1493,6 +1493,76 @@
    "verify": {
     "verdict": "unclear",
     "note": "page reads '1978' but the report number is 75-590; OCR may have misread the year; rest of the entry is interleaved with map-face noise"
+   }
+  },
+  {
+   "source_id": "ngmdb:100310",
+   "path": "units[3].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 7 feet",
+   "page": 1,
+   "quote": "Thickness | to 7 feet.",
+   "added_at": "2026-10-15T10:57:35+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "1 to 7 feet",
+    "note": "digit misread in OCR ('Thickness | to 7 feet.'); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100310",
+   "path": "units[5].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 15 feet",
+   "page": 1,
+   "quote": "Thickness | to 15\nfeet.",
+   "added_at": "2026-10-15T10:57:35+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "1 to 15 feet",
+    "note": "digit misread in OCR ('Thickness | to 15\nfeet.'); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100310",
+   "path": "units[6].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "Thickness | to 40 feet.",
+   "added_at": "2026-10-15T10:57:35+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "1 to 40 feet",
+    "note": "digit misread in OCR ('Thickness | to 40 feet.'); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100310",
+   "path": "units[9].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 20 feet",
+   "page": 1,
+   "quote": "Thickness is | to 20 feet.",
+   "added_at": "2026-10-15T10:57:35+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "1 to 20 feet",
+    "note": "digit misread in OCR ('Thickness is | to 20 feet.'); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100310",
+   "path": "units[13].map_symbol",
+   "problem": "verify_unclear",
+   "value": "TEmu",
+   "page": 1,
+   "quote": "TEmy | Calcareous sediments of middle and upper Eocene age",
+   "added_at": "2026-10-15T10:57:35+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "value": "TEmu",
+    "note": "digit misread in OCR ('TEmy | Calcareous sediments of middle and upper Eocene age'); check against the map image"
    }
   }
  ]
