@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 144,
+ "count": 154,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -1905,6 +1905,136 @@
     "verdict": "unclear",
     "value": "A-A'",
     "note": "digit misread in OCR ('A |\nFEET'); check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100312",
+   "path": "units[1].map_symbol",
+   "problem": "verify_unclear",
+   "value": "QHfw",
+   "page": 1,
+   "quote": "QHiw | Freshwater marsh and swamp deposits",
+   "added_at": "2026-10-15T22:57:19+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'QHiw'; read as 'QHfw' by correcting an OCR character; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100312",
+   "path": "units[7].map_symbol",
+   "problem": "verify_unclear",
+   "value": "QPwtb",
+   "page": 1,
+   "quote": "QPwib Wicomico terrace - Toney Bay Member",
+   "added_at": "2026-10-15T22:57:19+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'QPwib'; read as 'QPwtb' by correcting an OCR character; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100343",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "less than 1 foot",
+   "page": 1,
+   "quote": "include any of the subaqueous beach face. Thickness less than | foot.",
+   "added_at": "2026-10-15T22:58:55+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'less than | foot'; '|' read as '1'; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100343",
+   "path": "units[4].map_symbol",
+   "problem": "verify_unclear",
+   "value": "QHfw",
+   "page": 1,
+   "quote": "- QHiw",
+   "added_at": "2026-10-15T22:58:55+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'QHiw'; read as QHfw; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100343",
+   "path": "units[6].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 15 feet",
+   "page": 1,
+   "quote": "system if enough material is accreted to remain above high tide. Thickness | to 15 feet.",
+   "added_at": "2026-10-15T22:58:55+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Thickness | to 15 feet'; '|' read as '1'; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100343",
+   "path": "units[9].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 30 feet",
+   "page": 1,
+   "quote": "subaerial during part of the tidal cycle. Thickness | to 30 feet.",
+   "added_at": "2026-10-15T22:58:55+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'Thickness | to 30 feet'; '|' read as '1'; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100343",
+   "path": "units[15].map_symbol",
+   "problem": "verify_unclear",
+   "value": "QPsbe",
+   "page": 1,
+   "quote": "OPsbe Eolian deposits",
+   "added_at": "2026-10-15T22:58:55+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'OPsbe'; read as QPsbe; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100343",
+   "path": "units[17].map_symbol",
+   "problem": "verify_unclear",
+   "value": "QPpas",
+   "page": 1,
+   "quote": "[ oFpas | Barrier-island deposits",
+   "added_at": "2026-10-15T22:58:55+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'oFpas'; read as QPpas; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100343",
+   "path": "sections[0].start.location",
+   "problem": "verify_unclear",
+   "value": "Bohicket Creek",
+   "page": 1,
+   "quote": "Bohicket Creek",
+   "added_at": "2026-10-15T22:58:55+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "Bohicket Creek is labelled on the section face but the page does not show it is the A end; cannot confirm"
+   }
+  },
+  {
+   "source_id": "ngmdb:100343",
+   "path": "sections[0].observations[3]",
+   "problem": "verify_unclear",
+   "value": "10-209",
+   "page": 1,
+   "quote": "al 0-209 B",
+   "added_at": "2026-10-15T22:58:55+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads '0-209'; read as 10-209; check against the map image"
    }
   }
  ]
