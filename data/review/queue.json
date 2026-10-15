@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 115,
+ "count": 117,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -1520,6 +1520,32 @@
     "verdict": "disagree",
     "value": "Dacitic to Andesitic Tuff",
     "note": "the page prints the description before the 'Persimmon Fork Formation (Neoproterozoic)' heading; the Persimmon Fork assignment comes from the Zpf symbol prefix and layout and is not flagged inferred"
+   }
+  },
+  {
+   "source_id": "ngmdb:100312",
+   "path": "units[1].map_symbol",
+   "problem": "verify_unclear",
+   "value": "QHfw",
+   "page": 1,
+   "quote": "QHiw | Freshwater marsh and swamp deposits",
+   "added_at": "2026-10-15T22:57:19+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'QHiw'; read as 'QHfw' by correcting an OCR character; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:100312",
+   "path": "units[7].map_symbol",
+   "problem": "verify_unclear",
+   "value": "QPwtb",
+   "page": 1,
+   "quote": "QPwib Wicomico terrace - Toney Bay Member",
+   "added_at": "2026-10-15T22:57:19+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer reads 'QPwib'; read as 'QPwtb' by correcting an OCR character; check against the map image"
    }
   }
  ]
