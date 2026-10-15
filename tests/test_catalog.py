@@ -211,3 +211,107 @@ def test_committed_catalog_has_no_excluded_records():
     assert not {r["id"] for r in records} & catalog.excluded_ids()
     summary = json.loads((ROOT / "data" / "catalog" / "summary.json").read_text())
     assert summary["records"] == len(records)
+
+
+# --- corrections (config/catalog_corrections.json) -----------------------------
+
+CORRECTIONS = [
+    {"id": "ngmdb:1", "field": "authors", "old": "Weems, R.E.", "new": "Weems, R.E., Jr.",
+     "reason": "typo", "inferred": False},
+    {"id": "ngmdb:77448", "field": "themes", "old": ["bedrock", "surficial"], "new": [],
+     "reason": "water report", "inferred": True},
+    {"id": "ngmdb:115922", "field": "kind", "old": "map", "new": "publication", "reason": "a report"},
+]
+
+
+def test_corrections_are_applied_with_provenance():
+    recs = by_id(catalog.build_catalog(NGMDB_ROWS, THEMES, PAGES, SCGS_INDEX, SCGS_GIS, FTP, "t",
+                                       corrections=CORRECTIONS))
+    paper = recs["ngmdb:1"]
+    assert paper["authors"] == "Weems, R.E., Jr."
+    assert paper["corrections"] == [{"field": "authors", "old": "Weems, R.E.", "new": "Weems, R.E., Jr.",
+                                     "reason": "typo", "inferred": False}]
+    prov = paper["provenance"][-1]
+    assert prov["source_id"] == "catalog-corrections"
+    assert prov["locator"] == "config/catalog_corrections.json: authors"
+    assert prov["extraction_method"] == "manual" and prov["confidence"] == 1.0
+    assert prov["inferred"] is False
+    fp = recs["ngmdb:77448"]
+    assert fp["themes"] == []
+    assert fp["kind"] == "map"  # still a map: it lists a quadrangle
+    assert fp["provenance"][-1]["inferred"] is True
+    assert recs["ngmdb:115922"]["kind"] == "publication"
+
+
+def test_removing_themes_recomputes_kind():
+    rows = NGMDB_ROWS + [{"id": 3, "title": "Streamflow of selected rivers", "authors": "A", "year": 1990,
+                          "series": "", "published_by": "U.S. Geological Survey", "scale": "",
+                          "online": "True", "gis": None, "formats": ""}]
+    themes = THEMES | {"engineering": {3}}
+    fix = [{"id": "ngmdb:3", "field": "themes", "old": ["engineering"], "new": [], "reason": "streamflow"}]
+    assert by_id(catalog.build_catalog(rows, themes, PAGES, [], [], [], "t"))["ngmdb:3"]["kind"] == "map"
+    assert by_id(catalog.build_catalog(rows, themes, PAGES, [], [], [], "t", corrections=fix))["ngmdb:3"]["kind"] \
+        == "publication"
+
+
+def test_corrections_are_idempotent_and_skip_changed_values():
+    recs = catalog.build_catalog(NGMDB_ROWS, THEMES, PAGES, SCGS_INDEX, SCGS_GIS, FTP, "t", corrections=CORRECTIONS)
+    before = json.dumps(recs, sort_keys=True)
+    assert catalog.apply_corrections(recs, CORRECTIONS) == []  # already applied: nothing to do, nothing stale
+    assert json.dumps(recs, sort_keys=True) == before
+    stale = [{"id": "ngmdb:1", "field": "title", "old": "Something else", "new": "X", "reason": "r"},
+             {"id": "ngmdb:404", "field": "title", "old": "a", "new": "b", "reason": "r"}]
+    assert [s["id"] for s in catalog.apply_corrections(recs, stale)] == ["ngmdb:1", "ngmdb:404"]
+    assert by_id(recs)["ngmdb:1"]["title"] == "A research paper on the Cooper Group"
+
+
+def test_correction_list_is_well_formed():
+    fixes = catalog.load_corrections()
+    assert fixes
+    seen = set()
+    for c in fixes:
+        assert set(c) <= {"id", "field", "old", "new", "reason", "inferred"}, c
+        assert c["reason"] and c["old"] != c["new"], c
+        assert c["field"] in ("authors", "citation", "title", "themes", "kind"), c
+        assert (c["id"], c["field"]) not in seen, c
+        seen.add((c["id"], c["field"]))
+    assert catalog.load_corrections(Path("/nonexistent/corrections.json")) == []
+
+
+def test_committed_catalog_has_corrections_applied():
+    records = by_id(json.loads((ROOT / "data" / "catalog" / "sc_catalog.json").read_text()))
+    for c in catalog.load_corrections():
+        rec = records.get(c["id"])
+        assert rec is not None, c["id"]  # corrections never delete a record
+        assert rec[c["field"]] == c["new"], c
+        assert {k: c[k] for k in ("field", "old", "new")} in [
+            {k: x[k] for k in ("field", "old", "new")} for x in rec["corrections"]]
+    assert records["ngmdb:25572"]["authors"].startswith("Dennehy, K.F.")
+    assert "Wiloughby" not in records["ngmdb:100308"]["authors"]
+    assert records["ngmdb:49178"]["kind"] == "publication"
+    summary = json.loads((ROOT / "data" / "catalog" / "summary.json").read_text())
+    fresh = json.loads(json.dumps(catalog.summarize(list(records.values()))))
+    assert summary == fresh | {"retrieved_at": summary["retrieved_at"]}
+
+
+def test_theme_corrections_follow_the_reading_list_rules():
+    """Geology themes removed only from USGS reports the reading list already calls non-geologic."""
+    from extract import reading_list
+
+    records = by_id(json.loads((ROOT / "data" / "catalog" / "sc_catalog.json").read_text()))
+    themed = [c for c in catalog.load_corrections() if c["field"] == "themes"]
+    assert themed
+    for c in themed:
+        rec = records[c["id"]]
+        assert c["new"] == [] and c["inferred"] is True, c
+        assert rec["publisher"] == "U.S. Geological Survey", c["id"]
+        assert reading_list.non_geologic_subject(rec["title"]), c["id"]
+
+
+def test_non_geologic_subject():
+    from extract import reading_list
+
+    assert reading_list.non_geologic_subject("Magnitude and frequency of rural floods in South Carolina") == "floods"
+    assert reading_list.non_geologic_subject("Water quality of the Coastal Plain aquifers") == "water quality"
+    assert reading_list.non_geologic_subject("Geologic map of the water-quality site") is None
+    assert reading_list.non_geologic_subject("Geologic map of the Bonneau quadrangle") is None
