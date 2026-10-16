@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 154,
+ "count": 160,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -2035,6 +2035,84 @@
    "verify": {
     "verdict": "unclear",
     "note": "text layer reads '0-209'; read as 10-209; check against the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:77462",
+   "path": "units[2].map_symbol",
+   "problem": "verify_unclear",
+   "value": "QHfw",
+   "page": 1,
+   "quote": "“QHiw | Freshwater marsh and swamp deposits (Holocene) — Silty clay and peat, black (N1),",
+   "added_at": "2026-10-16T10:57:20+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints 'QHiw'; read as QHfw, check the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:77462",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "the content of organic materials, sediment type, water salinity and ecozones. Thickness | to 40",
+   "added_at": "2026-10-16T10:57:20+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit; read as 1, check the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:77462",
+   "path": "units[4].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 15 feet",
+   "page": 1,
+   "quote": "the dominant direction of longshore transport. Thickness | to 15 feet.",
+   "added_at": "2026-10-16T10:57:20+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit; read as 1, check the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:77462",
+   "path": "units[5].thickness",
+   "problem": "verify_unclear",
+   "value": "less than 1 foot to 12 feet",
+   "page": 1,
+   "quote": "in dense, imbricate layers. Thickness less than | foot to 12 feet.",
+   "added_at": "2026-10-16T10:57:20+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit; read as 1, check the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:77462",
+   "path": "units[11].map_symbol",
+   "problem": "verify_unclear",
+   "value": "QPsbe",
+   "page": 1,
+   "quote": "ae Ne < at @Psbe Eolian deposits (Pleistocene or Holocene) — Quartz sand, very pale brown (10YR 8/4)",
+   "added_at": "2026-10-16T10:57:20+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '@Psbe'; read as QPsbe, check the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:77462",
+   "path": "sections[0].units_along[0].unit",
+   "problem": "verify_unclear",
+   "value": "QPps",
+   "page": 1,
+   "quote": "Pps ~",
+   "added_at": "2026-10-16T10:57:20+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints 'Pps' on the section; read as QPps, check the map image"
    }
   }
  ]
