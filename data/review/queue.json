@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 160,
+ "count": 163,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -2113,6 +2113,45 @@
    "verify": {
     "verdict": "unclear",
     "note": "OCR prints 'Pps' on the section; read as QPps, check the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:77463",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "less than 1 foot",
+   "page": 1,
+   "quote": "include any of the subaqueous beach face. Thickness less than | foot.",
+   "added_at": "2026-10-16T10:58:56+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit; read as 1, check the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:77463",
+   "path": "units[6].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 15 feet",
+   "page": 1,
+   "quote": "the dominant direction of longshore transport. Thickness | to 15 feet.",
+   "added_at": "2026-10-16T10:58:56+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit; read as 1, check the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:77463",
+   "path": "units[7].thickness",
+   "problem": "verify_unclear",
+   "value": "less than 1 foot to 12 feet",
+   "page": 1,
+   "quote": "in dense, imbricate layers. Thickness less than | foot to 12 feet.",
+   "added_at": "2026-10-16T10:58:56+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' in place of a digit; read as 1, check the map image"
    }
   }
  ]
