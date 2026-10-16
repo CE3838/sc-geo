@@ -19,7 +19,9 @@
     "references": {"type": "array", "items": {"$ref": "#/$defs/reference"}},
     "surfaces": {"type": "array", "items": {"$ref": "#/$defs/surface"}, "description": "Optional. Elevation or depth of the top or base of a unit at one place"},
     "contours": {"type": "array", "items": {"$ref": "#/$defs/contour"}, "description": "Optional. Structure-contour and isopach maps"},
-    "sections": {"type": "array", "items": {"$ref": "#/$defs/section"}, "description": "Optional. Published cross sections"}
+    "sections": {"type": "array", "items": {"$ref": "#/$defs/section"}, "description": "Optional. Published cross sections"},
+    "water_tests": {"type": "array", "items": {"$ref": "#/$defs/water_test"}, "description": "Optional. One entry per water-sample result, field measurement or hydraulic-test value, linked to a well, boring or spring"},
+    "rock_tests": {"type": "array", "items": {"$ref": "#/$defs/rock_test"}, "description": "Optional. One entry per rock specimen or core test result, linked to a boring or core and depth, or to an outcrop"}
   },
   "$defs": {
     "value": {
@@ -98,7 +100,7 @@
       "additionalProperties": false,
       "required": ["kind"],
       "properties": {
-        "kind": {"enum": ["boring", "well", "outcrop", "auger_hole", "core", "test_pit", "cpt", "other"]},
+        "kind": {"enum": ["boring", "well", "outcrop", "auger_hole", "core", "test_pit", "cpt", "spring", "other"]},
         "label": {"$ref": "#/$defs/field"},
         "location": {"$ref": "#/$defs/field"},
         "elevation": {"$ref": "#/$defs/field"},
@@ -205,6 +207,64 @@
         "length": {"$ref": "#/$defs/field"},
         "observations": {"type": "array", "items": {"$ref": "#/$defs/value"}, "description": "Labels of borings and wells shown"},
         "units_along": {"type": "array", "items": {"$ref": "#/$defs/section_unit"}}
+      }
+    },
+    "water_test": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["parameter"],
+      "properties": {
+        "kind": {"enum": ["boring", "well", "outcrop", "auger_hole", "core", "test_pit", "cpt", "spring", "other"], "description": "Kind of site sampled or tested (a plain string, like an observation's kind)"},
+        "observation": {"$ref": "#/$defs/field", "description": "Label of the well, boring, core, spring or outcrop as printed (the label of an observation in this result when there is one)"},
+        "location": {"$ref": "#/$defs/field", "description": "Location of the site as printed, when the test row or text gives one"},
+        "sample_id": {"$ref": "#/$defs/field", "description": "Sample, specimen or lab number as printed"},
+        "date": {"$ref": "#/$defs/field", "description": "Sample or test date as printed"},
+        "top": {"$ref": "#/$defs/field", "description": "Top of the sampled or tested interval"},
+        "bottom": {"$ref": "#/$defs/field", "description": "Bottom of the sampled or tested interval"},
+        "depth": {"$ref": "#/$defs/field", "description": "A single sample or test depth, instead of top and bottom"},
+        "depth_reference": {"$ref": "#/$defs/depth_reference_field"},
+        "datum": {"$ref": "#/$defs/field", "description": "Vertical datum when depths are elevations, as printed"},
+        "unit": {"$ref": "#/$defs/field", "description": "Stratigraphic unit sampled or tested, as printed"},
+        "aquifer": {"$ref": "#/$defs/field", "description": "Aquifer sampled or tested, as printed"},
+        "parameter": {"$ref": "#/$defs/field", "description": "Parameter or constituent exactly as printed (pH; Chloride, dissolved; Transmissivity)"},
+        "value": {"$ref": "#/$defs/field", "description": "The result as printed, with a qualifier printed with it (<0.5, ND, 1,200 ft2/d)"},
+        "units": {"$ref": "#/$defs/field", "description": "Units as printed (column or table header); never guessed"},
+        "qualifier": {"$ref": "#/$defs/field", "description": "A remark printed apart from the value: <, >, ND, E"},
+        "fraction": {"$ref": "#/$defs/field", "description": "Dissolved, total, filtered or unfiltered, as printed"},
+        "method": {"$ref": "#/$defs/field", "description": "Field or laboratory method, or the kind of hydraulic test (pumping test, slug test), as printed"},
+        "lab": {"$ref": "#/$defs/field", "description": "Laboratory or agency that analyzed the sample, as printed"},
+        "source_table": {"$ref": "#/$defs/field", "description": "Table or figure the value is from, e.g. Table 3"}
+      }
+    },
+    "rock_test": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["test_type"],
+      "properties": {
+        "kind": {"enum": ["boring", "well", "outcrop", "auger_hole", "core", "test_pit", "cpt", "spring", "other"], "description": "Kind of site sampled or tested (a plain string, like an observation's kind)"},
+        "observation": {"$ref": "#/$defs/field", "description": "Label of the well, boring, core, spring or outcrop as printed (the label of an observation in this result when there is one)"},
+        "location": {"$ref": "#/$defs/field", "description": "Location of the site as printed, when the test row or text gives one"},
+        "sample_id": {"$ref": "#/$defs/field", "description": "Sample, specimen or lab number as printed"},
+        "date": {"$ref": "#/$defs/field", "description": "Sample or test date as printed"},
+        "top": {"$ref": "#/$defs/field", "description": "Top of the sampled or tested interval"},
+        "bottom": {"$ref": "#/$defs/field", "description": "Bottom of the sampled or tested interval"},
+        "depth": {"$ref": "#/$defs/field", "description": "A single sample or test depth, instead of top and bottom"},
+        "depth_reference": {"$ref": "#/$defs/depth_reference_field"},
+        "datum": {"$ref": "#/$defs/field", "description": "Vertical datum when depths are elevations, as printed"},
+        "unit": {"$ref": "#/$defs/field", "description": "Stratigraphic unit sampled or tested, as printed"},
+        "rock_type": {"$ref": "#/$defs/field", "description": "Rock type of the specimen as printed"},
+        "test_type": {"$ref": "#/$defs/field", "description": "The test as printed (UCS, point load, Brazilian tensile, triaxial, slake durability, RQD, core recovery, unit weight, absorption, modulus, Poisson's ratio)"},
+        "parameter": {"$ref": "#/$defs/field", "description": "The quantity reported when a test gives several (Is(50), peak strength, tangent modulus)"},
+        "value": {"$ref": "#/$defs/field", "description": "The result as printed"},
+        "units": {"$ref": "#/$defs/field", "description": "Units as printed; never guessed"},
+        "qualifier": {"$ref": "#/$defs/field", "description": "A remark printed apart from the value: <, >, E"},
+        "specimen_dimensions": {"$ref": "#/$defs/field", "description": "Specimen length, diameter or L/D as printed"},
+        "specimen_condition": {"$ref": "#/$defs/field", "description": "Moisture condition as tested (dry, saturated, as received), as printed"},
+        "confining_pressure": {"$ref": "#/$defs/field", "description": "Confining pressure of a triaxial test, as printed"},
+        "failure_mode": {"$ref": "#/$defs/field", "description": "Failure mode as printed"},
+        "standard": {"$ref": "#/$defs/field", "description": "Method or standard as printed (ASTM D7012 method C, D2938, D5731, D3967, D4644)"},
+        "lab": {"$ref": "#/$defs/field", "description": "Laboratory that ran the test, as printed"},
+        "source_table": {"$ref": "#/$defs/field", "description": "Table or figure the value is from"}
       }
     },
     "reference": {

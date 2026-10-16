@@ -74,7 +74,13 @@ For each packet, in order:
    groundwater and references, record subsurface data where the packet has
    it: tops and bases of units (`surfaces`), structure-contour and isopach
    maps (`contours`) and cross sections (`sections`), with each datum as
-   printed.
+   printed. Record every water test (`water_tests`: field measurements,
+   major ions, nutrients, metals, organics and pesticides, isotopes and
+   ages, pumping and slug tests) and every rock test (`rock_tests`: UCS,
+   point load, Brazilian tensile, triaxial, slake durability, RQD and core
+   recovery, unit weight, absorption, modulus, Poisson's ratio), one entry
+   per result, linked to its well, boring, core or spring label, with units
+   only as printed.
 3. Write the result JSON to its `write:` path
    (`.cache/results/<id>.<packet>.json`), with `"packets": ["<packet>"]`.
 4. Check it:
@@ -94,8 +100,8 @@ For each packet result:
 python -m extract.ingest .cache/results/<id>.<packet>.json --plan-verify > .cache/results/<id>.<packet>.plan.json
 ```
 
-The plan holds every table value and every subsurface value, plus a sample
-of the rest. Then follow `extract/prompts/verify.md`: re-read the cited pages
+The plan holds every table value, every subsurface value and every water
+and rock test value, plus a sample of the rest. Then follow `extract/prompts/verify.md`: re-read the cited pages
 for every value in the plan, independently of your first reading, and write
 `.cache/results/<id>.<packet>.verify.json`.
 
@@ -121,7 +127,8 @@ ingest it again (re-ingesting a packet replaces that packet's values).
 Some documents marked complete need chosen pages read again: image pages
 that were not OCRed, logs whose text layer holds only a caption, misread
 digits, or pages read before the subsurface fields (`surfaces`, `contours`,
-`sections`, observation `datum`) existed. They are listed in
+`sections`, observation `datum`) or the test sections (`water_tests`,
+`rock_tests`; queue reasons `water_tests` and `rock_tests`) existed. They are listed in
 `data/review/reread_queue.json` (document, pages, reason, status). When a
 session has budget left after its new packets, or is asked to do re-reads:
 
@@ -150,7 +157,12 @@ python -m extract.reread --queue
 ```
 
 To queue a page found wrong while reading: `python -m extract.reread --add
-<ID> --pages 4 --reason "OCR misread digits in table 2"`.
+<ID> --pages 4 --reason "OCR misread digits in table 2"` (add `--detail
+"..."` to say what to read there).
+
+Review items specific to tests: `missing_units` (no units printed for a
+value; never fill them in), `ocr_digit` (a "|" in the quote where a digit
+belongs) and `unclear_value`. Mention their counts in the PR body.
 
 ## 5. Test and commit
 

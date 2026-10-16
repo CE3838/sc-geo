@@ -73,3 +73,15 @@ def test_manifest_says_sources_are_cited_and_there_is_no_warranty(tmp_path):
     manifest = package.build(root, tmp_path / "p.zip", tag="data-20261003-0905", commit="")
     assert "without warranty" in manifest["notes"]
     assert "terms" in manifest["notes"]
+
+
+def test_build_includes_the_site_tests_export(tmp_path):
+    root = _tree(tmp_path / "repo")
+    sites = root / "web" / "data" / "sites"
+    sites.mkdir(parents=True)
+    (sites / "site-tests.json").write_text('{"format": "sc-geo site tests", "sites": []}')
+    out = tmp_path / "p.zip"
+    manifest = package.build(root, out, tag="data-20261003-0905", commit="")
+    with zipfile.ZipFile(out) as zf:
+        assert "data/sites/site-tests.json" in zf.namelist()
+    assert any(f["path"] == "data/sites/site-tests.json" for f in manifest["files"])
