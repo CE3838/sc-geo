@@ -1,8 +1,8 @@
 """Validate extraction results against extract/schema.json (standard library only).
 
 Implements the subset of JSON Schema the file uses: type, const, enum,
-properties, required, additionalProperties, items, minimum, minLength,
-maxLength, anyOf, allOf and local $ref. Errors are 'path: message' strings, with
+properties, required, additionalProperties, items, minItems, maxItems, minimum,
+minLength, maxLength, anyOf, allOf and local $ref. Errors are 'path: message' strings, with
 paths like units[0].name.page.
 """
 
@@ -88,6 +88,11 @@ def _check(x: Any, s: dict, path: str, root: dict, errs: list[str]) -> None:
                 _check(val, props[key], _join(path, key), root, errs)
             elif s.get("additionalProperties") is False:
                 errs.append(f"{_join(path, key)}: unexpected field '{key}'")
+    if isinstance(x, list):
+        if len(x) < s.get("minItems", 0):
+            errs.append(f"{path or '$'}: needs at least {s['minItems']} items")
+        if "maxItems" in s and len(x) > s["maxItems"]:
+            errs.append(f"{path or '$'}: more than {s['maxItems']} items")
     if isinstance(x, list) and "items" in s:
         for i, item in enumerate(x):
             _check(item, s["items"], _join(path, i), root, errs)

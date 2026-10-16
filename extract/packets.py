@@ -61,6 +61,14 @@ def header(record: dict, doc: dict, part: int | None = None, of: int | None = No
                   "pages again, not only what the reason names."]
         if reread.get("scope_note"):
             lines += [f"- Scope: {reread['scope_note']}. Cite only the pages above."]
+        if reread.get("images"):
+            im = reread["images"]
+            lines += [f"- Image tiles of these pages ({im['manifest']}): view each PNG with the Read tool. Read "
+                      "what the text below garbles or leaves out (cross sections, map-face labels, digits) from the "
+                      "tiles, and give each such value the tile and its pixel box (extract/prompts/extract.md, "
+                      "Image packets):"]
+            lines += [f"  - {t['tile']}: page {t['page']}, {t['size_px'][0]}x{t['size_px'][1]} px, PDF points "
+                      f"{t['pt_box']}: {Path(im['dir']) / t['file']}" for t in im["tiles"]]
     elif pages is not None:
         lines += [f"- Scope: PDF pages {scope_mod.describe(sorted(pages))} only"
                   + (f" ({scope_note})" if scope_note else "")

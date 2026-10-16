@@ -206,7 +206,7 @@ def confidence(rec: dict, method: str, match: str, verdict: str | None, inferred
 # --- normalizing ---------------------------------------------------------------
 
 _LENGTH = {"top", "bottom", "thickness", "total_depth", "water_level", "depth", "interval", "length",
-           "from_distance", "to_distance"}
+           "from_distance", "to_distance", "distance"}
 _ELEVATION = {"elevation", "top_elevation", "base_elevation"}
 SUBSURFACE = ("surfaces", "contours", "sections")
 
@@ -287,7 +287,7 @@ def verify_sample(result: dict, fraction: float = CONFIG["verify_sample_fraction
     others = [p for p, v in values if not must(p, v)]
     seed = int(hashlib.sha256(str(result.get("source_id")).encode()).hexdigest()[:12], 16)
     k = math.ceil(fraction * len(others)) if others else 0
-    chosen = set(random.Random(seed).sample(others, k)) | set(table)
+    chosen = set(random.Random(seed).sample(others, k)) | set(table) | {p for p, v in values if v.get("image")}
     return [p for p, _ in values if p in chosen]
 
 
@@ -394,6 +394,8 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
             raise IngestError(f"{sid} has no {', '.join(unknown)} in {index_path} (packets: {sorted(packet_blocks)})")
     sheets = map_sheet_pages(doc)
     locators = image_locators(doc)
+    from extract.images import IngestImages
+    tiles = IngestImages(sid, Path(text_dir).parent / "images", cfg)  # values read from page images
 
     verdicts: dict[str, dict] = {}
     if verify_path:
@@ -416,8 +418,18 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
 
     for path, val in schema.iter_values(result):
         counts["values"] += 1
+        tiles.prepare(path, val)
         pg = pages.get(val["page"])
         match = find_quote(val["quote"], pg) if pg else None
+        if match is None and val.get("image"):  # not in the text layer: checked against its tile instead
+            entry = tiles.entry(path, val, rec, verdicts.get(path), counts, queue, map_sheet=val["page"] in sheets)
+            norm = normalized(path, val, lexicon) if entry else None
+            if norm not in (None, [], {}):
+                entry["normalized"] = norm
+            if entry:
+                stored[path] = entry
+                counts["stored"] += 1
+            continue
         if match is None:
             near = [n for n in (val["page"] - 1, val["page"] + 1) if n in pages and find_quote(val["quote"], pages[n])]
             if near:
@@ -469,6 +481,7 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
         whole_pages |= set(reread["pages"])  # a re-read covers every part of its pages
     new_keys = {_vkey(f, v) for f, v in _walk_values(new_sections)}
 
+    tiles.annotate(stored, result)
     out_dir, review_dir = Path(out_dir), Path(review_dir)
     out_path = out_dir / f"{safe_id(sid)}.json"
     prev = _load_json(out_path, "extracted file") if out_path.exists() else {}
