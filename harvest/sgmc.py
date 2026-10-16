@@ -19,7 +19,6 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-import os
 import shutil
 import time
 import urllib.parse
@@ -28,6 +27,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable
 
+from harvest.net import contact_headers, write_json_atomic
 from model.provenance import ExtractionMethod, StoredValue
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -82,10 +82,8 @@ def lith_class(generalized: str | None) -> str:
     return generalized.split(",")[0].strip() or "Unknown"
 
 
-def _contact_headers() -> dict[str, str]:
-    agent = "sc-geo-harvest/0.1 (+https://github.com/CE3838/sc-geo"
-    email = os.environ.get("CONTACT_EMAIL", "").strip()
-    return {"User-Agent": f"{agent}; {email})" if email else f"{agent})"}
+# Kept under its old name: other modules and the desktop pipeline import it from here.
+_contact_headers = contact_headers
 
 
 def http_fetch(url: str, params: dict[str, str], headers: dict[str, str], tries: int = 4) -> Any:
@@ -191,10 +189,7 @@ def _normalize(feature: dict, oid_field: str, units: dict[str, dict] | None = No
 
 
 def _write_json(path: Path, data: Any) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    tmp = path.with_suffix(path.suffix + ".tmp")
-    tmp.write_text(json.dumps(data, separators=(",", ":")))
-    tmp.replace(path)
+    write_json_atomic(path, data, separators=(",", ":"))
 
 
 def _harvest_from(url, state, ckpt_root, fetch, headers, log):

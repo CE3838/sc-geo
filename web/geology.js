@@ -1,5 +1,6 @@
 // Pure helpers for the geology layer (USGS SGMC units). No DOM or MapLibre
 // here so they can be tested with `node --test`.
+import { legendFor } from './merged.js';
 
 // Youngest to oldest. Colors follow the usual geologic time-scale scheme.
 export const AGE_CLASSES = [
@@ -62,14 +63,7 @@ export function colorExpression(name) {
 
 export function legendEntries(features, name) {
   const { property, classes } = mode(name);
-  const known = new Set(classes.map((c) => c.id));
-  const counts = new Map();
-  for (const f of features) {
-    let id = f.properties[property];
-    if (!known.has(id)) id = 'Unknown';
-    counts.set(id, (counts.get(id) ?? 0) + 1);
-  }
-  return classes.filter((c) => counts.has(c.id)).map((c) => ({ ...c, count: counts.get(c.id) }));
+  return legendFor(features, property, classes);
 }
 
 const finest = (age) => (age ? age.split(' - ').pop().trim() : null);

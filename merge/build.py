@@ -38,7 +38,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Callable
 
-from harvest.sgmc import _contact_headers
+from harvest.net import contact_headers
 from merge import classes, references, scgs, sources
 from model import gisio
 from model.units import Lexicon
@@ -94,7 +94,7 @@ def download(url: str, dest: Path, log: Callable[..., None] = print, tries: int 
     tmp = dest.with_suffix(".part")
     for attempt in range(tries):
         try:
-            req = urllib.request.Request(url, headers=_contact_headers())
+            req = urllib.request.Request(url, headers=contact_headers())
             with urllib.request.urlopen(req, timeout=300) as r, open(tmp, "wb") as f:
                 shutil.copyfileobj(r, f)
             if not zipfile.is_zipfile(tmp):

@@ -51,7 +51,7 @@ def header(record: dict, doc: dict, part: int | None = None, of: int | None = No
         f"- Scale: {f'1:{scale:,}' if scale else 'not stated'}",
         f"- Publisher: {record.get('publisher') or 'not stated'}",
         f"- Kind: {record.get('kind') or 'not stated'}",
-        f"- Files: " + "; ".join(f"{f.get('url')} (pages {f['first_page']}-{f['first_page'] + f['pages'] - 1})"
+        "- Files: " + "; ".join(f"{f.get('url')} (pages {f['first_page']}-{f['first_page'] + f['pages'] - 1})"
                                  for f in doc.get("files", [])),
     ]
     if reread is not None:
