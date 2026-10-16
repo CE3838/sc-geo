@@ -1,8 +1,9 @@
 """Packs the public data into one zip for the desktop app and other users.
 
 The package holds the merged geology (and the SGMC layer) built into
-web/data/geology, the source catalog, the Geolex lexicon and the South
-Carolina outline, plus a manifest with a SHA-256 for each file. Deploy
+web/data/geology, the source catalog, the Geolex lexicon, the South
+Carolina outline and the water and rock tests per site (web/data/sites, from
+python -m merge.site_tests), plus a manifest with a SHA-256 for each file. Deploy
 publishes it as a GitHub Release tagged data-YYYYMMDD-HHMM (UTC).
 
 Run: python -m merge.package [--out sc-geo-data.zip]
@@ -24,6 +25,7 @@ SOURCES = [
     ("web/data/geology", "data/geology"),
     ("data/catalog", "data/catalog"),
     ("data/lexicon", "data/lexicon"),
+    ("web/data/sites", "data/sites"),
 ]
 SINGLE_FILES = [("web/data/sc-region.geojson", "data/sc-region.geojson")]
 SUFFIXES = {".json", ".geojson", ".md"}

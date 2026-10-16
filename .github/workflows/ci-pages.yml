@@ -75,6 +75,8 @@ jobs:
           else
             echo "::warning::No geology data; deploying without it"
           fi
+      - name: Export water and rock tests per site
+        run: python -m merge.site_tests
       - name: Pack the public data package
         id: package
         if: hashFiles('web/data/geology/merged-surficial.geojson') != ''

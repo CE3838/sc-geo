@@ -46,12 +46,13 @@ Each file matches `extract/schema.json`:
   "reader": "Claude, scheduled Claude Code session <date>",
   "notes": "optional remarks for a reviewer",
   "units": [], "observations": [], "structures": [], "groundwater": [], "references": [],
-  "surfaces": [], "contours": [], "sections": []
+  "surfaces": [], "contours": [], "sections": [],
+  "water_tests": [], "rock_tests": []
 }
 ```
 
-`surfaces`, `contours` and `sections` are optional; leave them out when the
-packet has none.
+`surfaces`, `contours`, `sections`, `water_tests` and `rock_tests` are
+optional; leave them out when the packet has none.
 
 Every value is an object:
 
@@ -91,8 +92,8 @@ beds, informal unit...), `group`, `age` (as stated, e.g. "late Pleistocene"),
 `fossils`.
 
 **observations** -- borings, wells, outcrops, auger holes, cores, test pits,
-CPT soundings. `kind` (one of boring, well, outcrop, auger_hole, core,
-test_pit, cpt, other -- this is a plain string, not a value object), `label`
+CPT soundings, springs. `kind` (one of boring, well, outcrop, auger_hole, core,
+test_pit, cpt, spring, other -- this is a plain string, not a value object), `label`
 (the source's identifier), `location` EXACTLY as stated (coordinates, State
 Plane values, a road intersection, "0.5 mi N of Ladson" -- never compute or
 look up coordinates; if no location is given, leave it out), `elevation`,
@@ -159,6 +160,64 @@ Record contour labels and section units only where they are legible; never
 estimate an elevation between contours, and never compute coordinates from a
 map's grid or a place name.
 
+**water_tests** -- every water test the packet prints: one entry per
+sample result or measurement (one table cell is one entry). Include field
+measurements (pH, specific conductance, temperature, dissolved oxygen, water
+level at sampling), major ions, nutrients, metals and trace elements,
+organics and pesticides, isotopes and apparent ages, and hydraulic tests
+(pumping and slug tests, transmissivity, hydraulic conductivity,
+storativity, specific capacity). Fields: `kind` (the site: well, boring,
+spring, core, other; a plain string), `observation` (the well, boring or
+spring label exactly as printed; when the same packet has that site as an
+observation, use the same label so the test links to it), `location` (as
+printed, only when the test row or text gives one; never computed),
+`sample_id`, `date` (sample date), the sampled interval as `top` and
+`bottom` or one `depth`, `depth_reference` ("land surface" or "elevation",
+as for observations), `datum`, `aquifer`, `unit`, `parameter` (exactly as
+printed, e.g. "Chloride, dissolved"; our code adds a normalized name, flagged
+inferred, only when it is unambiguous -- do not normalize it yourself),
+`value` (as printed, e.g. 12.5, "<0.5", "ND", "1,200 ft2/d"), `units` (from
+the column or table header, quoted from it; if no units are printed
+anywhere, leave `units` out: our code sends the value to review, and units
+are never guessed), `qualifier` (a remark printed in its own column or
+next to the value: "<", ">", "ND", "E"), `fraction` (dissolved, total,
+filtered), `method` (the field or laboratory method, or the kind of
+hydraulic test: "pumping test", "slug test"), `lab`, and `source_table`
+("Table 4"). A table of many wells and many parameters gives one entry per
+well and parameter; repeat the well's `observation`, `date` and interval in
+each, quoting the row. Do not record a water test from a map symbol, a
+graph or a Piper diagram unless its number is printed and legible; do not
+record simulated or model values; do record a statistic (mean, median) only
+when the table prints it per site, and say so in `parameter` as printed.
+
+**rock_tests** -- every rock test on a specimen, core or outcrop: one entry
+per test result. Test types: unconfined (uniaxial) compressive strength
+(UCS; ASTM D7012 or the older D2938), point load index (D5731), Brazilian
+(splitting) tensile strength (D3967), triaxial compression, slake
+durability (D4644), RQD and core recovery, unit weight and density,
+absorption, elastic modulus and Poisson's ratio. Fields: `kind` (boring,
+core, outcrop, other; a plain string), `observation` (the boring, core or
+outcrop label as printed), `location` (as printed), `sample_id` (the
+specimen number), `date`, `top` and `bottom` or `depth` of the specimen or
+core run, `depth_reference`, `datum`, `unit`, `rock_type`, `test_type` (as
+printed: "UCS", "Point load", "RQD"; our code maps it to a test type,
+flagged inferred), `parameter` (the quantity, when a test reports several:
+"Is(50)", "peak strength", "tangent modulus"), `value`, `units` (as printed;
+never guessed), `qualifier`, `specimen_dimensions` (length, diameter or L/D
+as printed), `specimen_condition` (dry, saturated, as received),
+`confining_pressure` (triaxial tests), `failure_mode`, `standard` (the
+method or standard exactly as printed, e.g. "ASTM D7012, method C"), `lab`
+and `source_table`. RQD and recovery per core run are rock tests with the
+run's `top` and `bottom`.
+
+What not to record as a test: symbols that appear only in a legend or
+explanation (a well symbol, "water-quality sampling site" in a map key, a
+column heading with no values under it), a test that the text only says
+was done ("samples were analyzed for nutrients") without a value, a
+detection limit listed in a methods table, or values from other studies
+quoted only as a range for comparison (record those only when the source
+gives the site they belong to).
+
 **references** -- each reference cited, one `citation` value per entry with
 the page of the reference list. For long reference lists, include references
 relevant to South Carolina geology; you may skip general references. Say in
@@ -175,6 +234,13 @@ relevant to South Carolina geology; you may skip general references. Say in
    place (description of map units, a log, a table), unless the pages disagree --
    then record each with its own page and say so in `notes`.
 6. Skip what you cannot read (garbled OCR); say so in `notes`.
+   OCR often prints "|" (or "l", "I", "O") where a digit belongs: "| to 6
+   feet", "0.|2". Copy the quote exactly as it is on the page, with the "|".
+   Write the digit in `value` only when the context leaves no doubt (one
+   possible digit, as a "1" in "| to 6 feet"), flag the value `inferred` and
+   say what you read in `note`; our code sends every such quote to review.
+   When the digit is not certain, leave the value out and say so in `notes`.
+   Never repair a number in a table of test results by guessing.
 7. Do not assign confidence; our code does.
 8. Prefer fewer, correct values over many doubtful ones.
 
