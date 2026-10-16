@@ -70,12 +70,23 @@ def _kind(rec: dict) -> str:
     return "map" if is_map else "publication"
 
 
+def _refresh(rec: dict, c: dict, inferred: bool) -> None:
+    """Bring an applied correction's reason and inferred flag up to date with the corrections file."""
+    for x in rec.get("corrections", []):
+        if x["field"] == c["field"] and x["old"] == c["old"] and x["new"] == c["new"]:
+            x["reason"], x["inferred"] = c["reason"], inferred
+    for p in rec.get("provenance", []):
+        if p["source_id"] == "catalog-corrections" and p["locator"] == f"config/catalog_corrections.json: {c['field']}":
+            p["inferred"] = inferred
+
+
 def apply_corrections(records: list[dict], corrections: Iterable[dict]) -> list[dict]:
     """Apply corrections in place; return the ones that could not be applied.
 
     A correction applies only while the record still holds the old value, so a fix made upstream
     is never overwritten, and applying twice changes nothing. Each applied correction is listed
-    in the record's "corrections" with its reason and adds a provenance entry. Removing themes
+    in the record's "corrections" with its reason and adds a provenance entry; re-applying updates
+    the reason and inferred flag of a correction already applied. Removing themes
     recomputes the record's kind unless the kind is corrected too. Records are never deleted."""
     by_id = {r["id"]: r for r in records}
     stale = []
@@ -85,10 +96,11 @@ def apply_corrections(records: list[dict], corrections: Iterable[dict]) -> list[
         if rec is None or rec.get(c["field"]) not in (c["old"], c["new"]):
             stale.append(c)
             continue
+        inferred = bool(c.get("inferred", False))
         if rec[c["field"]] == c["new"]:
+            _refresh(rec, c, inferred)
             continue
         rec[c["field"]] = c["new"]
-        inferred = bool(c.get("inferred", False))
         rec.setdefault("corrections", []).append(
             {"field": c["field"], "old": c["old"], "new": c["new"], "reason": c["reason"], "inferred": inferred})
         v = StoredValue(value=c["new"], source_id="catalog-corrections", page=None,
