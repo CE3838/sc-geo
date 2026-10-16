@@ -27,7 +27,7 @@ extract/ingest.py   validate, check every quote on its page, normalize,
 | `triage.py` | Page kinds (blank, title, toc, index, references, content) used only to skip or rank pages, never to decide values |
 | `packets.py` | One or more Markdown packets per document with the catalog header and `=== PAGE n (method) ===` blocks |
 | `schema.json`, `schema.py` | What one document's extraction contains; standard-library validator |
-| `patterns.py` | Deterministic normalizers used after the model: Munsell, lengths to feet, signed elevations, vertical datums, USCS, SPT N, strike/dip, coordinates (decimal, DMS, SC State Plane NAD83), ages to Ma, unit names to Geolex |
+| `patterns.py` | Deterministic normalizers used after the model: Munsell, lengths to feet, signed elevations, vertical datums, USCS, SPT N, strike/dip, ages to Ma, unit names to Geolex |
 | `ingest.py` | `python -m extract.ingest result.json [--verify verify.json]` |
 | `renormalize.py` | `python -m extract.renormalize [--write]`: recompute normalized fields of committed files (dry run by default) |
 | `reread.py` | `python -m extract.reread <ID> --pages 1`: re-read chosen pages of a document already read, from `.cache` only; `--next` hands out the re-read queue, `--queue` rebuilds it |
@@ -177,7 +177,7 @@ The model never assigns confidence. `ingest.confidence` computes it as
 
 | Factor | Value |
 | --- | --- |
-| S, source | Map-unit values (`units`) read from a map sheet (an NGMDB scan, or a file whose name contains plate, sheet or map) of a record with a scale: `merge.score.scale_weight` (1:24,000 or larger 0.95; 1:62,500 0.9; 1:100,000 0.85; 1:250,000 0.7; 1:500,000 0.55; 1:1,000,000 0.45; smaller 0.35), because map-unit descriptions are generalized to the map's scale. Everything else (report text, observations, structures, groundwater, references): 0.85 for agencies, state surveys and journals listed in `config/extract.json` `trusted_publishers`, else 0.7; a boring log is not less reliable because the report's index map is small-scale. Drafts at most 0.6 |
+| S, source | Map-unit values (`units`) read from a map sheet (an NGMDB scan, or a file whose name contains plate, sheet or map) of a record with a scale: `merge.score.scale_weight` (1:24,000 or larger 0.95; 1:62,500 0.9; 1:100,000 0.85; 1:250,000 0.7; 1:500,000 0.55; 1:1,000,000 0.45; smaller 0.35), because map-unit descriptions are generalized to the map's scale. Everything else (report text, observations, structures, groundwater, references): 0.85 for agencies, state surveys and journals listed in `config/extract.json` `trusted_publishers`, else 0.7; a boring log is not less reliable because the report's index map is small-scale. Values read from contour maps (`contours`, and `surfaces` with method contour) of a record with a scale take its scale weight: more detailed maps weigh more (`contour_scale_weight`). Drafts at most 0.6 |
 | M, text method | 1.0 for the PDF text layer; 0.9 for OCR text |
 | Q, quote match | `exact` 1.0; `ocr` 0.95; `fuzzy` 0.85 |
 | V, second pass | `agree` 1.0; not checked 0.85; `unclear` 0.7; `disagree` 0.4 (and queued for review) |
@@ -192,9 +192,7 @@ value unverified 0.81; from an OCR page, unverified, 0.73. All factors are in
 `ingest` adds a `normalized` object where a normalizer applies: lengths
 (`top`, `bottom`, `thickness`, `total_depth`, `water_level`, `elevation`,
 `head`) as `min_ft`/`max_ft`; Munsell parts; USCS symbols; SPT N; liquid limit,
-plasticity index and moisture as numbers; strike azimuth and dip; coordinates
-as latitude/longitude (SC State Plane assumed NAD83 international feet unless
-stated, flagged `datum_inferred`); dates as ISO; ages as Ma ranges and unit
+plasticity index and moisture as numbers; strike azimuth and dip; dates as ISO; ages as Ma ranges and unit
 names as Geolex names, both flagged `inferred: true` (CLAUDE.md rule 2). The
 value as stated is always kept.
 
@@ -231,7 +229,9 @@ is approximate (NAD27 shifted with a 3-parameter shift, or datum not
 stated) and every assumption made (such as a western longitude with no sign).
 Ambiguous text (State Plane without a datum, NAD27 without its zone, two
 places, two latitudes) gives no derived value. The value as printed is
-unchanged.
+unchanged. (Files written before this may still carry an older lenient
+`normalized` parse on locations; it is ignored, and `extract.renormalize`
+removes it.)
 
 ## Re-reads
 
@@ -286,3 +286,22 @@ value's own value and units, with ingest's functions. It never changes a
 value as read, its quote, page, provenance, confidence or verification, and
 re-reads nothing. It is a dry run by default (a JSON report of every change);
 `--write` writes the files.
+
+## NAVD88 and agreement between sources
+
+Every elevation with a usable datum gets a `navd88` value (extract/elevations.py,
+model/vdatum.py): its own StoredValue, `extraction_method` "datum_conversion",
+`inferred: true`, naming the conversion, the datum it came from and anything
+assumed. NGVD29 is shifted with the NGS VERTCON grid that
+`python -m harvest.vertcon` downloads once into `.cache/grids/`; "sea level"
+counts as NGVD29 only in documents published before 1991; land surface stays
+relative; no stated datum is kept as printed and marked approximate.
+
+`python -m extract.agreement` (dry run; `--write` to record) pairs surface
+points from different sources: same unit and boundary, within `distance_ft`,
+at least one measured. Agreeing values are raised to
+`1 - (1 - c)(1 - boost)^k` (at most `cap`) and list each other in
+`agreement.agrees_with`; disagreeing values are kept and list each other as
+alternatives. Run it after ingest and after `extract.renormalize`, which
+rebuild confidences from ingest.
+

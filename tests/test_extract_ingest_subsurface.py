@@ -163,6 +163,7 @@ def test_parsed_coordinates_are_a_separate_inferred_value(env):
     _, out, _ = env()
     loc = out["surfaces"][0]["location"]
     assert loc["value"] == "lat 324512, long 0795841" and loc["inferred"] is False  # the value as printed is kept
+    assert "normalized" not in loc  # no second, lenient parse
     d = loc["derived_coordinates"]
     sv = StoredValue.from_dict(d)
     assert sv.inferred is True and sv.extraction_method is ExtractionMethod.INFERENCE
@@ -286,3 +287,50 @@ def test_head_above_land_surface_says_so():
 def test_head_printed_relative_to_land_surface_keeps_the_printed_sign():
     n = ingest.normalized("groundwater[0].head", v("-15.04 feet with reference to land surface", 1, "q"), None)
     assert n["min_ft"] == -15.04 and n["relative_to"] == "land surface" and n["direction"] is None  # signed
+
+
+# --- NAVD88 at ingest -------------------------------------------------------------
+
+def test_ingest_attaches_navd88_from_the_grid(env, tmp_path):
+    from model import vdatum
+    from tests import geotiff_writer
+    g = tmp_path / "grid.tif"
+    geotiff_writer.write(g, [[-0.3] * 5 for _ in range(5)], -81.0, 34.0, 0.5, 0.5)
+    summary, out, _ = env(vgrid=vdatum.read_geotiff(g))
+    n = out["surfaces"][0]["elevation"]["navd88"]
+    assert n["value"]["min_ft"] == pytest.approx(-62 - 0.3 / 0.3048) and n["from_datum"] == "NGVD29"
+    assert StoredValue.from_dict(n).extraction_method is ExtractionMethod.DATUM_CONVERSION
+    assert out["observations"][0]["elevation"]["navd88"]["value"]["min_ft"] == 42.0  # NAVD 88 already
+    assert summary["navd88"]["converted"] >= 3
+    assert out["summary"]["stored"] == summary["stored"]  # derived values are not counted as readings
+
+
+def test_ingest_without_grid_skips_ngvd29(env):
+    summary, out, _ = env(vgrid=False)
+    assert "navd88" not in out["surfaces"][0]["elevation"]
+    assert any("harvest.vertcon" in r for r in summary["navd88"]["skipped"])
+
+
+# --- contour-derived values: weighted by their map's scale ---------------------------
+
+def test_contour_weight_follows_map_scale_more_detailed_higher():
+    rec = {**RECORD, "scale": 24000}
+    assert ingest.source_weight(rec, "contours", contour=True) == 0.95
+    assert ingest.source_weight({**RECORD, "scale": 250000}, "contours", contour=True) == 0.7
+    assert ingest.source_weight({**RECORD, "scale": 500000}, "contours", contour=True) == 0.55
+    assert ingest.source_weight(RECORD, "contours", contour=True) == 0.85        # no scale: publisher weight
+    assert ingest.source_weight({**RECORD, "scale": 500000}, "surfaces") == 0.85  # a measured value
+    assert ingest.source_weight({**RECORD, "scale": 500000, "status": "draft"}, "contours", contour=True) == 0.55
+    off = {**ingest.CONFIG, "confidence": {**ingest.CONFIG["confidence"], "contour_scale_weight": False}}
+    assert ingest.source_weight({**RECORD, "scale": 500000}, "contours", off, contour=True) == 0.85
+
+
+def test_ingest_weights_contour_surfaces_and_contour_maps_by_scale(env):
+    res = json.loads(json.dumps(RESULT))
+    res["surfaces"][1]["method"] = v("contour", 2, "is about 35 ft below land surface", inferred=True)
+    _, out, _ = env(res, catalog={SID: {**RECORD, "scale": 500000}})
+    unchecked = ingest.CONFIG["confidence"]["verify_unchecked"]
+    assert out["surfaces"][0]["observation"]["confidence"] == round(0.85 * unchecked, 3)   # measured: publisher
+    assert out["surfaces"][1]["boundary"]["confidence"] == round(0.55 * unchecked, 3)      # contour: 1:500,000
+    assert out["contours"][0]["interval"]["confidence"] == round(0.55 * unchecked, 3)
+    assert out["sections"][0]["name"]["confidence"] == round(0.85 * unchecked, 3)

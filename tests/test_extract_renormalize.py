@@ -10,7 +10,7 @@ from extract import ingest, renormalize
 from model.units import Lexicon
 
 ROOT = Path(__file__).resolve().parent.parent
-DERIVED = ("normalized", "derived_coordinates")
+DERIVED = ("normalized", "derived_coordinates", "navd88")
 
 
 def stored(value, page=3, **kw):
@@ -20,7 +20,7 @@ def stored(value, page=3, **kw):
 
 
 DOC = {
-    "source_id": "ngmdb:9", "title": "T", "schema_version": 1, "updated_at": "2026-10-01T00:00:00+00:00",
+    "source_id": "ngmdb:9", "title": "T", "year": 1985, "schema_version": 1, "updated_at": "2026-10-01T00:00:00+00:00",
     "summary": {"stored": 4}, "units": [], "structures": [], "references": [],
     "groundwater": [
         {"aquifer": stored("Floridan aquifer"),
@@ -29,7 +29,8 @@ DOC = {
         {"head": stored("about 2 feet below sea level",
                         normalized={"min_ft": 2.0, "max_ft": 2.0, "unit": "ft", "approximate": True})},
     ],
-    "observations": [{"kind": "well", "location": stored("lat 324512, long 0795841")}],
+    "observations": [{"kind": "well", "location": stored("lat 324512, long 0795841", normalized={
+        "lat": 32.7533, "lon": -79.9781, "format": "dms", "hemisphere_inferred": True})}],
 }
 
 
@@ -51,7 +52,16 @@ def test_recomputes_normalized_and_reports_changes():
     got = {(c["path"], c["key"]) for c in changes}
     assert ("groundwater[0].head", "normalized") in got and ("groundwater[1].head", "normalized") in got
     assert ("observations[0].location", "derived_coordinates") in got
+    # Heads get a derived NAVD88 value (no datum stated: kept as printed, approximate).
+    assert ("groundwater[0].head", "navd88") in got
+    h = new["groundwater"][0]["head"]["navd88"]
+    assert (h["value"]["min_ft"], h["value"]["max_ft"]) == (-97.0, None) and h["approximate"] is True
+    # "below sea level" (1985: NGVD29) needs a location and the grid: no NAVD88 value here.
+    assert "navd88" not in new["groundwater"][1]["head"]
     assert ("groundwater[0].aquifer", "normalized") not in got
+    # The old lenient parse of a location is dropped; derived_coordinates replaces it.
+    assert ("observations[0].location", "normalized") in got
+    assert "normalized" not in new["observations"][0]["location"]
     c = next(c for c in changes if c["path"] == "groundwater[1].head")
     assert c["old"]["min_ft"] == 2.0 and c["new"]["min_ft"] == -2.0 and c["value"] == "about 2 feet below sea level"
 
@@ -59,6 +69,7 @@ def test_recomputes_normalized_and_reports_changes():
 def test_never_changes_readings_quotes_pages_or_provenance():
     new, _ = renormalize.renormalize_doc(DOC, Lexicon([]))
     assert strip(new) == strip(DOC)
+    assert new["groundwater"][0]["head"]["navd88"]["extraction_method"] == "datum_conversion"
     d = new["observations"][0]["location"]["derived_coordinates"]
     assert d["inferred"] is True and d["extraction_method"] == "inference" and d["page"] == 3
 
