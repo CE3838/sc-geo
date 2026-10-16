@@ -194,3 +194,14 @@ def test_guess_projection_from_coordinates_and_expected_extent():
     assert name.startswith("geographic")
     with pytest.raises(ValueError, match="projection"):
         gisio.guess_transformer([1.0, 2.0, 3.0, 4.0], quad)
+
+
+def test_many_point_ring_and_lcc_inverse_are_exact():
+    ring = [(2_100_000.0 + 10.5 * k, 400_000.0 + 3.25 * (k % 7)) for k in range(300)] + [(2_100_000.0, 400_000.0)]
+    feats = list(gisio.read_shapefile(io.BytesIO(_shp([[ring]])), None))
+    assert feats[0]["geometry"]["coordinates"][0] == [list(p) for p in ring]
+    to_ll = gisio.transformer(SC_SPCS_FT)
+    for x, y in ring[:50]:
+        lng, lat = to_ll(x, y)
+        e, n = gisio.lcc_forward(lng, lat, -81.0, 31 + 50 / 60, 32.5, 34 + 50 / 60, 609600.0, 0.0)
+        assert e == pytest.approx(x * 0.3048, abs=1e-6) and n == pytest.approx(y * 0.3048, abs=1e-6)

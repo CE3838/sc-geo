@@ -236,6 +236,18 @@ _OUTREACH = re.compile(r"Fact Sheet|General Information Product|Techniques and M
                        r"Mineral commodity|Circum-Pacific|Digital Data Series", re.I)
 
 
+def non_geologic_subject(title: str) -> str | None:
+    """The non-geologic subject of a title (water quality, streamflow, water use...), or None.
+
+    Province and age names (Coastal Plain, Piedmont, Cretaceous) only say where or when: with a
+    non-geologic subject such as water quality they do not make the report geologic. harvest.catalog's
+    theme corrections (config/catalog_corrections.json) use the same rule."""
+    non = _NONGEO.search(title or "")
+    if not non or any(not _SETTING.fullmatch(m.group(0)) for m in _GEOLOGY.finditer(title)):
+        return None
+    return non.group(0).lower()
+
+
 def _series_points(rec: dict) -> tuple[int, str | None]:
     pub = rec.get("publisher") or ""
     key = rec.get("series_key") or ""
@@ -311,11 +323,8 @@ def score(rec: dict, ctx: Context) -> dict:
             add(5, f"subsurface data ({sub.group(0).lower()})")
     elif sub:
         add(12, f"subsurface or hydrogeology ({sub.group(0).lower()})")
-    # Province and age names (Coastal Plain, Piedmont, Cretaceous) only say where or when: with a
-    # non-geologic subject such as water quality they do not make the report geologic.
-    subject = [m.group(0) for m in _GEOLOGY.finditer(title) if not _SETTING.fullmatch(m.group(0))]
-    if non and not subject:
-        add(-30, f"not geologic ({non.group(0).lower()})")
+    if nongeo := non_geologic_subject(title):
+        add(-30, f"not geologic ({nongeo})")
         why.append("+0 themes, keywords and map scale not counted for a non-geologic subject")
     else:
         if non:

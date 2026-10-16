@@ -1,35 +1,21 @@
 // Roads layer: US Census Bureau TIGER roads read live for the area on screen
 // (roads.js), drawn above the geology with casings for aerial imagery,
 // route shields and street names, and a row in the Layers panel.
-import { LiveTiles, debounce, fetchAllPages, queryUrl, tileBounds } from './arcgis.js';
+import { LiveTiles, debounce, fetchAllPages, fetchJson, queryUrl, tileBounds } from './arcgis.js';
 import { LIVE_ON_AT_START } from './live.js';
 import {
   ROAD_ATTRIBUTION, ROAD_CLICK_LAYER_IDS, ROAD_FIELDS, ROAD_ORDER_BY, ROAD_TIERS, describeRoad, normalizeRoad, roadLayers,
   shieldSpec, tiersForZoom,
 } from './roads.js';
 import { el } from './dom.js';
-import { IMAGERY_BOUNDS, onStyleReady } from './geo.js';
+import { onStyleReady, viewBox } from './geo.js';
 
 const EMPTY = { type: 'FeatureCollection', features: [] };
 const PAGE = 2000;
 
-// A live service that never answers must not leave a layer "loading…" forever:
-// the request is given up after this long and the layer shows its "unavailable" note.
-export const FETCH_TIMEOUT_MS = 30000;
-
-export async function fetchJson(url, { timeoutMs = FETCH_TIMEOUT_MS, fetchImpl = fetch } = {}) {
-  const r = await fetchImpl(url, { signal: AbortSignal.timeout(timeoutMs) });
-  if (!r.ok) throw new Error(`HTTP ${r.status}`);
-  return r.json();
-}
-
-// The view clipped to the area roads exist in (SC and a margin), or null.
-export function viewBox(map, limit = IMAGERY_BOUNDS) {
-  const b = map.getBounds();
-  const box = [Math.max(b.getWest(), limit[0][0]), Math.max(b.getSouth(), limit[0][1]),
-    Math.min(b.getEast(), limit[1][0]), Math.min(b.getNorth(), limit[1][1])];
-  return box[0] < box[2] && box[1] < box[3] ? box : null;
-}
+// Kept here for modules that imported them from this file.
+export { FETCH_TIMEOUT_MS, fetchJson } from './arcgis.js';
+export { viewBox } from './geo.js';
 
 function shieldPath(ctx, w, h, r) {
   ctx.beginPath();

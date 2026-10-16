@@ -344,10 +344,5 @@ export function createWaterClient({
   };
 }
 
-export function debounce(fn, ms, clock = globalThis) {
-  let timer = null;
-  return (...args) => {
-    if (timer !== null) clock.clearTimeout(timer);
-    timer = clock.setTimeout(() => { timer = null; fn(...args); }, ms);
-  };
-}
+// The live layers' debounce (it also has cancel()), re-exported for water-ui.js.
+export { debounce } from './arcgis.js';

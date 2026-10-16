@@ -3,8 +3,6 @@
 import json
 from pathlib import Path
 
-import pytest
-
 from harvest import openaccess as oa
 from harvest import pdfs
 
