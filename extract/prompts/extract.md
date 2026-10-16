@@ -180,3 +180,76 @@ relevant to South Carolina geology; you may skip general references. Say in
 
 When done, check that the file parses as JSON and that every `page` is a
 page you saw in the packet.
+
+## Image packets
+
+A re-read packet may list **image tiles** of its pages in its header
+(`python -m extract.images` rendered them from the cached PDF into
+`.cache/images/<id>/`; `manifest.json` gives each tile's page and boxes).
+View each tile with the Read tool, starting with the page's overview tile
+to find the cross sections, the legend and the scales. Use the tiles for
+what the text layer garbles or leaves out: positions of units along a
+cross section, distances and elevations, drill-hole depths, contour labels,
+digits OCR read as "|" or "l". Everything else is still quoted from the
+text as above.
+
+A value read from a tile gets an `image` object:
+
+```json
+{"value": "-40", "page": 1, "quote": "-40", "inferred": false, "units": "ft",
+ "image": {"tile": "p1-144dpi-3x4-r4c2", "box": [812, 240, 860, 262]}}
+```
+
+- `tile`: the tile id from the header or the manifest (not the file name).
+- `box`: `[x0, y0, x1, y1]` in that tile's pixels, from its top-left
+  corner, around the label or feature you read. The same feature seen in
+  two overlapping tiles: cite one.
+- `quote`: the text as you transcribe it from the image ("-40", "8-161",
+  "TD 208"), not an excerpt of the text layer. Our code first looks for it
+  in the page text; when it is there, the value is checked like any other.
+- `unclear`: `true` when a digit or character is uncertain in the image.
+  Give the value as a range that covers the readings ("110-170 ft" when the
+  second digit is 1 or 7) or as you read it, and say what is uncertain in
+  `note`. Never pick one reading silently. Skip what you cannot read at all.
+- The page cited is the tile's page.
+
+Rules for images:
+
+1. Read only what is drawn and labelled: printed numbers and labels, lines
+   and symbols the section or map actually draws. Never extend a contact
+   beyond where it is drawn, and never fill in a unit where the drawing
+   shows none.
+2. Legend-only symbols are still excluded: a symbol, line type or pattern
+   shown only in the explanation is not a value on the map.
+3. Never measure a map's grid or a scale bar to make coordinates. On a
+   section, reading a position off its own distance and elevation scales is
+   allowed, but such a value is `inferred: true`.
+4. Values read only from an image are stored with `extraction_method`
+   "llm-image", only after the verify pass re-views the tile, and with a
+   confidence capped below text-checked values. Prefer the text layer when
+   it holds the value legibly.
+
+**Sections from images.** Besides `name`, `start`/`end`, `datum` and
+`vertical_exaggeration` (as printed, e.g. "Vertical exaggeration 20x"),
+record for each section:
+
+- `horizontal_scale` (as printed, or the map's scale when the section says
+  it is the same) and the units of its axes: `distance_units`,
+  `elevation_units`.
+- `label` of each end point (`start.label` "A", `end.label` "A'").
+- `contacts`: one entry per line drawn on the section, with `kind`
+  ("contact" between `unit` above and `lower_unit` below, "top" or "base"
+  of `unit`, or "polygon" for a unit's closed outline, a plain string like
+  an observation's kind), `certainty` as drawn (solid, dashed, queried), and
+  `points`: the line's bends and ends in order, each a `distance` along the
+  section from its start and an `elevation` relative to the section's
+  datum, both in the section's own units as its scales give them, never
+  converted. Points read off a drawing are always stored as inferred.
+- `holes`: each drill hole, well or boring drawn on the section, with its
+  `label`, `observation` (the label of a boring or well in this result),
+  `distance` along the section, `elevation` of land surface, `total_depth`,
+  `depth_reference`, and `intervals` (top, bottom and unit of each interval
+  drawn or labelled in the hole).
+
+A section's `units_along` and `observations` are still recorded where the
+text gives them.

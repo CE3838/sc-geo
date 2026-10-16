@@ -30,6 +30,7 @@ extract/ingest.py   validate, check every quote on its page, normalize,
 | `patterns.py` | Deterministic normalizers used after the model: Munsell, lengths to feet, signed elevations, vertical datums, USCS, SPT N, strike/dip, coordinates (decimal, DMS, SC State Plane NAD83), ages to Ma, unit names to Geolex |
 | `ingest.py` | `python -m extract.ingest result.json [--verify verify.json]` |
 | `renormalize.py` | `python -m extract.renormalize [--write]`: recompute normalized fields of committed files (dry run by default) |
+| `images.py` | `python -m extract.images <ID> --pages 1 [--dpi 250] [--grid 3x3] [--crop x0,y0,x1,y1] [--reread]`: page overview and overlapping PNG tiles from the cached PDF into `.cache/images/<id>/` with a manifest of boxes; the image side of ingest (locators, confidence cap) |
 | `reread.py` | `python -m extract.reread <ID> --pages 1`: re-read chosen pages of a document already read, from `.cache` only; `--next` hands out the re-read queue, `--queue` rebuilds it |
 | `next_batch.py` | `python -m extract.next_batch --n 5`: next pending documents, building text and packets on the fly |
 | `reading_list.py` | `python -m extract.reading_list`: ranks online catalog records by South Carolina geologic relevance into `config/reading_list.json`, with scores and exclusion reasons in `config/reading_list_scores.json` |
@@ -277,6 +278,54 @@ Each item has `id`, `source_id`, `pages`, `reason`, `detail`, `origin`,
 `ocr` and `status`; it is `done` (with `done_at`) once ingests carrying its
 queue id cover all its pages. `python -m extract.reread --next` hands out the
 pending items in order (known re-reads first) as `next_batch` does.
+
+## Page images
+
+Map faces, cross sections and logs drawn as figures often OCR as scattered
+or garbled text: unit positions along a section, distances, elevations,
+drill-hole depths, contour labels, "|" for a digit. A reading session can
+view a rendered page image instead (`extract/images.py`).
+
+- `python -m extract.images <ID> --pages 1` renders, from the cached PDF only
+  (never downloads; with none cached it points to `python -m harvest.pdfs
+  --id <ID>`), an overview of the page and overlapping tiles of at most
+  `images.max_tile_px` (1,500) pixels a side, so the Read tool shows them
+  unscaled. Default 250 dpi (`--dpi`), never above a scan's own resolution
+  (NGMDB browse images are assembled at 144 ppi) or `max_dpi`. `--grid 3x3`
+  sets columns x rows; `--crop x0,y0,x1,y1` tiles one region given in PDF
+  points. Tiles go to `.cache/images/<id>/` (never committed) with
+  `manifest.json`: per tile its id, page, file page, dpi, `px_box` (pixels
+  of the whole page at that dpi), `pt_box` (PDF points from the page's
+  top-left corner), size, estimated tokens, and the file's URL and sha256.
+  Tiles already rendered are not rendered again.
+- Re-reads: `python -m extract.reread <ID> --pages 1 --images` (or
+  `extract.images ... --reread`) also renders tiles and lists them in the
+  packet header; pages with no text are then kept. `--next` does this for
+  queue items with reason `map_face`, `image_pages` or `subsurface_fields`,
+  or whose detail names a cross section (each queue item has `images`); if
+  the render fails, the text packet is still handed out.
+
+**Provenance of image values.** A value read from a tile carries
+`"image": {"tile", "box"}` (box in the tile's pixels) and, as its quote,
+the text as transcribed from the image. Ingest first looks for the quote in
+the page text: when found, the value is text-checked and stored as usual
+(`extraction_method` "llm"), keeping the tile. Otherwise:
+
+| Step | Rule |
+| --- | --- |
+| Locator | The tile must be in the manifest, on the page the value cites, and the box inside it; else `image_locator_invalid` (not stored) |
+| Verify | Every image value is in the verify plan; one with no verdict is not stored (`image_not_verified`). The verify pass re-views the tile: agree, disagree or unclear |
+| Stored | `extraction_method` "llm-image", `quote_match` "image", `text_method` "image", `image` {tile, box, dpi, page_px_box, pt_box, pdf_sha256, unclear}; `locator` `<file url>#page=N&viewrect=left,top,width,height` (PDF points of the cached PDF's page) |
+| Confidence | `min(images.confidence.max, S x images.confidence.factor) x V x I`, times `unclear_factor` when the reader marked digits unclear (also queued `image_unclear`). With the defaults (max 0.6, factor 0.8, unclear 0.7) an image value never exceeds 0.6, below verified text values from the same source |
+| Inferred | Section contact points, and a hole's distance read from a tile, are always stored `inferred: true` |
+
+**Section geometry** (all optional, in `sections`): `horizontal_scale`,
+`distance_units`, `elevation_units`, end-point `label`s, `contacts` (kind
+contact, top, base or polygon; `unit`, `lower_unit`, `certainty`, and
+`points` of `distance` and `elevation` in the section's own units against
+its `datum`), and `holes` (label, observation, distance, land-surface
+elevation, total depth, depth reference and intervals). Distances
+normalize to feet like other lengths; elevations keep their sign.
 
 ## Re-normalizing committed files
 

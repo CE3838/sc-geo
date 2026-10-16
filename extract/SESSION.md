@@ -137,6 +137,32 @@ skipped (`no cached text`); get the text with `python -m harvest.pdfs --id
 first. One document by hand: `python -m extract.reread <ID> --pages 79-82
 [--ocr] --reason "..."` (or `--packets packet-02`).
 
+### Image re-reads (map faces and cross sections)
+
+Items whose reason is `map_face`, `image_pages` or `subsurface_fields`, or
+whose detail names a cross section, also get **page images**: `--next`
+renders them from the cached PDF (never downloads) and prints an `images:`
+manifest and one `view:` line per tile under the packet's `read:` and
+`write:` lines. One document by hand: `python -m extract.reread <ID>
+--pages 1 --images [--dpi 250] [--grid 3x3]`, or just the tiles with
+`python -m extract.images <ID> --pages 1 [--crop x0,y0,x1,y1]` (a region in
+PDF points, for a section strip). With no cached PDF it says to run
+`python -m harvest.pdfs --id <ID>` first.
+
+1. Read the packet's text as usual, then view the overview tile and the
+   tiles that hold the sections, labels and digits the text garbles, with
+   the Read tool. Each tile costs about 1,500-3,000 tokens; view only the
+   tiles you need.
+2. Record values read from a tile with an `image` object (tile id and pixel
+   box; `unclear` for uncertain digits), as `extract/prompts/extract.md`
+   (Image packets) says, including section scales, contacts and holes.
+3. The verify plan lists every image value: re-view each tile at its box
+   (`extract/prompts/verify.md`, Image values). Ingest stores an image
+   value only when it is verified, as `extraction_method` "llm-image" with
+   a locator naming the file, page and box, and queues the rest
+   (`image_not_verified`, `image_locator_invalid`, `image_unclear`).
+4. Never commit the PNG tiles or the manifest; they stay in `.cache/images/`.
+
 Read, check, verify and ingest a re-read packet exactly as in steps 2-4,
 with `"packets": ["reread-01"]` in the result. **Record everything on those
 pages again**, not only what the reason names: ingest replaces every value
