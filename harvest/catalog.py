@@ -14,7 +14,13 @@ Records found in more than one catalog are merged by publication number
 (for example "SCGS GQM-5"). The job is resumable: product pages are cached
 under the checkpoint directory and skipped on the next run.
 
+Known errors in the source catalogs (author typos, wrong record kind, geology
+themes on water reports) are fixed by config/catalog_corrections.json, which
+records each corrected field with its old value and the reason; every build
+applies it, so the fixes survive a rebuild.
+
     python -m harvest.catalog [--out data/catalog] [--checkpoints .checkpoints/catalog]
+    python -m harvest.catalog --apply-corrections   # re-apply the corrections only, offline
 """
 
 from __future__ import annotations
@@ -31,7 +37,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Callable, Iterable
 
-from harvest.sgmc import _contact_headers
+from harvest.net import contact_headers
 from model.provenance import ExtractionMethod, StoredValue
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -39,6 +45,8 @@ NGMDB = "https://ngmdb.usgs.gov"
 SCGS_INDEX_URL = "https://services.arcgis.com/acgZYxoN5Oj8pDLa/arcgis/rest/services/24K_Quads/FeatureServer"
 SCDNR_DIGITAL_DATA = "https://www.dnr.sc.gov/geology/digital-data.html"
 EXCLUDE = ROOT / "config" / "catalog_exclude.json"
+CORRECTIONS = ROOT / "config" / "catalog_corrections.json"
+CATALOG = ROOT / "data" / "catalog"
 THEMES = {"bedrock": "geolgenbed", "surficial": "geolgensur", "structural": "geolstruc", "engineering": "geoleng"}
 
 def excluded_ids(path: Path = EXCLUDE) -> set[str]:
@@ -47,6 +55,52 @@ def excluded_ids(path: Path = EXCLUDE) -> set[str]:
     if not path.exists():
         return set()
     return {e["id"] for e in json.loads(path.read_text()).get("exclude", [])}
+
+
+def load_corrections(path: Path = CORRECTIONS) -> list[dict]:
+    """Field corrections (config/catalog_corrections.json): id, field, old value, new value, reason."""
+    path = Path(path)
+    if not path.exists():
+        return []
+    return json.loads(path.read_text()).get("corrections", [])
+
+
+def _kind(rec: dict) -> str:
+    is_map = rec["themes"] or rec["quadrangles"] or re.search(r"\bmaps?\b", rec["title"], re.I)
+    return "map" if is_map else "publication"
+
+
+def apply_corrections(records: list[dict], corrections: Iterable[dict]) -> list[dict]:
+    """Apply corrections in place; return the ones that could not be applied.
+
+    A correction applies only while the record still holds the old value, so a fix made upstream
+    is never overwritten, and applying twice changes nothing. Each applied correction is listed
+    in the record's "corrections" with its reason and adds a provenance entry. Removing themes
+    recomputes the record's kind unless the kind is corrected too. Records are never deleted."""
+    by_id = {r["id"]: r for r in records}
+    stale = []
+    corrections = list(corrections)
+    for c in sorted(corrections, key=lambda c: c["field"] == "kind"):  # kind last
+        rec = by_id.get(c["id"])
+        if rec is None or rec.get(c["field"]) not in (c["old"], c["new"]):
+            stale.append(c)
+            continue
+        if rec[c["field"]] == c["new"]:
+            continue
+        rec[c["field"]] = c["new"]
+        inferred = bool(c.get("inferred", False))
+        rec.setdefault("corrections", []).append(
+            {"field": c["field"], "old": c["old"], "new": c["new"], "reason": c["reason"], "inferred": inferred})
+        v = StoredValue(value=c["new"], source_id="catalog-corrections", page=None,
+                        locator=f"config/catalog_corrections.json: {c['field']}",
+                        extraction_method=ExtractionMethod.MANUAL, confidence=1.0, inferred=inferred)
+        rec["provenance"].append({k: v.to_dict()[k] for k in
+                                  ("source_id", "locator", "extraction_method", "confidence", "inferred")})
+        if c["field"] in ("themes", "quadrangles", "title") and not any(
+                x["id"] == c["id"] and x["field"] == "kind" for x in corrections):
+            rec["kind"] = _kind(rec)
+    records.sort(key=lambda r: (r["kind"], r["id"]))
+    return stale
 
 
 # --- parsing ---------------------------------------------------------------
@@ -174,7 +228,8 @@ def _is_draft(row: dict) -> bool:
 
 def build_catalog(ngmdb_rows: Iterable[dict], themes: dict[str, set], pages: dict[int, dict],
                   scgs_index: Iterable[dict], scgs_gis: Iterable[dict], ftp_links: Iterable[str],
-                  retrieved_at: str, exclude: Iterable[str] = ()) -> list[dict]:
+                  retrieved_at: str, exclude: Iterable[str] = (), corrections: Iterable[dict] = (),
+                  log: Callable[..., None] | None = None) -> list[dict]:
     exclude = set(exclude)
     records: dict[str, dict] = {}
     by_key: dict[str, dict] = {}
@@ -293,10 +348,13 @@ def build_catalog(ngmdb_rows: Iterable[dict], themes: dict[str, set], pages: dic
 
     for rec in records.values():
         rec.setdefault("status", "published")
-        is_map = rec["themes"] or rec["quadrangles"] or re.search(r"\bmaps?\b", rec["title"], re.I)
-        rec["kind"] = "map" if is_map else "publication"
-    kept = (r for r in records.values() if r["id"] not in exclude)
-    return sorted(kept, key=lambda r: (r["kind"], r["id"]))
+        rec["kind"] = _kind(rec)
+    kept = [r for r in records.values() if r["id"] not in exclude]
+    stale = apply_corrections(kept, corrections)
+    if stale and log:
+        log(f"catalog corrections not applied (value changed upstream or record missing): "
+            f"{', '.join(c['id'] + ' ' + c['field'] for c in stale)}")
+    return kept
 
 
 def summarize(records: list[dict]) -> dict:
@@ -322,7 +380,7 @@ def _get(url: str, params: dict | None = None, raw: bool = False, tries: int = 4
         url = f"{url}{'&' if '?' in url else '?'}{urllib.parse.urlencode(params, doseq=True)}"
     for attempt in range(tries):
         try:
-            req = urllib.request.Request(url, headers=_contact_headers())
+            req = urllib.request.Request(url, headers=contact_headers())
             with urllib.request.urlopen(req, timeout=120) as r:
                 body = r.read()
             return body.decode("utf-8", "replace") if raw else json.loads(body)
@@ -398,7 +456,23 @@ def run(out_dir: Path, checkpoint_dir: Path, log: Callable[..., None] = print) -
     scgs_gis = arcgis_rows(f"{SCGS_INDEX_URL}/1")
     ftp = sorted(set(re.findall(r"ftp://ftpdata\.dnr\.sc\.gov/[^\"'\s<>]+\.zip", _get(SCDNR_DIGITAL_DATA, raw=True))))
     log(f"SCGS index: {len(scgs_index)} quadrangles; GIS table: {len(scgs_gis)}; FTP files: {len(ftp)}")
-    records = build_catalog(rows, themes, pages, scgs_index, scgs_gis, ftp, retrieved_at, exclude=excluded_ids())
+    records = build_catalog(rows, themes, pages, scgs_index, scgs_gis, ftp, retrieved_at, exclude=excluded_ids(),
+                            corrections=load_corrections(), log=log)
+    return _write(records, out_dir, retrieved_at, log)
+
+
+def reapply_corrections(out_dir: Path = CATALOG, log: Callable[..., None] = print) -> dict:
+    """Apply config/catalog_corrections.json to the committed catalog, offline (no requests)."""
+    out = Path(out_dir)
+    records = json.loads((out / "sc_catalog.json").read_text())
+    retrieved_at = json.loads((out / "summary.json").read_text())["retrieved_at"]
+    stale = apply_corrections(records, load_corrections())
+    for c in stale:
+        log(f"not applied: {c['id']} {c['field']}")
+    return _write(records, out, retrieved_at, log)
+
+
+def _write(records: list[dict], out_dir: Path, retrieved_at: str, log: Callable[..., None]) -> dict:
     summary = summarize(records) | {"retrieved_at": retrieved_at}
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
@@ -410,10 +484,15 @@ def run(out_dir: Path, checkpoint_dir: Path, log: Callable[..., None] = print) -
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--out", type=Path, default=ROOT / "data" / "catalog")
+    parser.add_argument("--out", type=Path, default=CATALOG)
     parser.add_argument("--checkpoints", type=Path, default=ROOT / ".checkpoints" / "catalog")
+    parser.add_argument("--apply-corrections", action="store_true",
+                        help="only apply config/catalog_corrections.json to the catalog in --out (no network)")
     args = parser.parse_args()
-    run(args.out, args.checkpoints)
+    if args.apply_corrections:
+        reapply_corrections(args.out)
+    else:
+        run(args.out, args.checkpoints)
 
 
 if __name__ == "__main__":

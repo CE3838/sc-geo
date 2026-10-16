@@ -6,7 +6,7 @@ session starts from a fresh clone with an empty `.cache`.
 
 Follow CLAUDE.md. In particular: never commit PDFs, page text, packets or
 raw results (everything under `.cache/` stays local); never print the
-`CONTACT_EMAIL` secret; commit only `data/extracted/` and `data/review/`.
+`CONTACT_EMAIL` secret; commit only `data/extracted/` and `data/review/` (including `reread_queue.json`).
 
 ## 0. Set up
 
@@ -115,6 +115,42 @@ values not found, review items, and `complete`. If more than a quarter of the
 values were not found on their pages, re-read the packet: you probably
 paraphrased instead of quoting, or cited the wrong page. Fix the result and
 ingest it again (re-ingesting a packet replaces that packet's values).
+
+## 4b. Re-reads (pages of documents already read)
+
+Some documents marked complete need chosen pages read again: image pages
+that were not OCRed, logs whose text layer holds only a caption, misread
+digits, or pages read before the subsurface fields (`surfaces`, `contours`,
+`sections`, observation `datum`) existed. They are listed in
+`data/review/reread_queue.json` (document, pages, reason, status). When a
+session has budget left after its new packets, or is asked to do re-reads:
+
+```sh
+python -m extract.reread --next --n 3 --max-tokens 120000
+```
+
+It prints `read:` and `write:` lines like `next_batch`, for re-read packets
+(`reread-01`, ...) in `.cache/packets/<id>/reread/`. It builds them from
+`.cache` only and never downloads: an item whose text is not cached is
+skipped (`no cached text`); get the text with `python -m harvest.pdfs --id
+<ID>` first if you want it. Items marked `ocr` are OCRed from the cached PDF
+first. One document by hand: `python -m extract.reread <ID> --pages 79-82
+[--ocr] --reason "..."` (or `--packets packet-02`).
+
+Read, check, verify and ingest a re-read packet exactly as in steps 2-4,
+with `"packets": ["reread-01"]` in the result. **Record everything on those
+pages again**, not only what the reason names: ingest replaces every value
+stored from those pages with the new reading. The replaced values are kept
+in the extracted file's `history` (date, reason, packets, pages), and the
+review queue drops the items for those pages and adds the new ones. Then
+refresh the queue so finished items show `done`:
+
+```sh
+python -m extract.reread --queue
+```
+
+To queue a page found wrong while reading: `python -m extract.reread --add
+<ID> --pages 4 --reason "OCR misread digits in table 2"`.
 
 ## 5. Test and commit
 

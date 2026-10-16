@@ -30,6 +30,7 @@ extract/ingest.py   validate, check every quote on its page, normalize,
 | `patterns.py` | Deterministic normalizers used after the model: Munsell, lengths to feet, signed elevations, vertical datums, USCS, SPT N, strike/dip, coordinates (decimal, DMS, SC State Plane NAD83), ages to Ma, unit names to Geolex |
 | `ingest.py` | `python -m extract.ingest result.json [--verify verify.json]` |
 | `renormalize.py` | `python -m extract.renormalize [--write]`: recompute normalized fields of committed files (dry run by default) |
+| `reread.py` | `python -m extract.reread <ID> --pages 1`: re-read chosen pages of a document already read, from `.cache` only; `--next` hands out the re-read queue, `--queue` rebuilds it |
 | `next_batch.py` | `python -m extract.next_batch --n 5`: next pending documents, building text and packets on the fly |
 | `reading_list.py` | `python -m extract.reading_list`: ranks online catalog records by South Carolina geologic relevance into `config/reading_list.json`, with scores and exclusion reasons in `config/reading_list_scores.json` |
 | `prep.py` | `python -m extract.prep --todo`: reading-list documents not yet read; `--next N` builds their text and packets ahead of a session |
@@ -44,6 +45,8 @@ Where things live:
 - `data/extracted/<id>.json`: stored values (committed). Each value is short:
   the value, its page, a quote of at most 400 characters, and provenance.
 - `data/review/queue.json`: values that need a person (committed).
+- `data/review/reread_queue.json`: pages of documents already read that need a
+  re-read, with the reason and status (committed; see Re-reads below).
 - `data/review/needs_access.json`: records with no open full text, metadata
   only, for library access (committed).
 - `data/review/not_applicable.json`: online records left off the reading list
@@ -229,6 +232,51 @@ stated) and every assumption made (such as a western longitude with no sign).
 Ambiguous text (State Plane without a datum, NAD27 without its zone, two
 places, two latitudes) gives no derived value. The value as printed is
 unchanged.
+
+## Re-reads
+
+A document marked complete can have chosen pages read again
+(`extract/reread.py`): image pages that were never OCRed, log pages whose
+text layer holds only a caption, misread digits, or pages read before the
+subsurface fields existed.
+
+- `python -m extract.reread <ID> --pages 1,3-5` (or `--packets packet-02`)
+  builds re-read packets `reread-NN` of exactly those pages (triage is not
+  asked) in `.cache/packets/<id>/reread/`, with their own `index.json`
+  (pages, blocks, reason, queue ids). The normal packets are untouched.
+  The packet header names the reason and says the pages replace what was
+  stored. Re-read names are never reused; the same request is served the
+  same packets until they are ingested.
+- It uses `.cache/text` only and never downloads. `--ocr` OCRs the chosen
+  pages from the cached PDF (`pdftext.ocr_page`) and adds the OCR text to the
+  page (any caption text layer is kept), marking it `ocr`. Pages with no
+  text are left out and listed. Scoped records (`config/catalog_scope.json`)
+  refuse pages outside their scope.
+- The result (`"packets": ["reread-01"]`) is validated, quote-checked,
+  verified (`--plan-verify`, `--verify`) and normalized exactly like any
+  other. Ingest replaces every earlier value on the re-read pages (all parts
+  of a split page). `complete`, `blocks_done` and `packets` are unchanged;
+  the ingest entry gets `reread` (packets, pages, reason, queue ids).
+- Nothing is silently lost: each ingest that replaces earlier values (a
+  re-read, or a packet ingested again) appends to the file's `history`:
+  `{at, reason, packets, pages, replaced: [{section, record}]}`, where
+  `record` is the earlier record holding only the replaced values. The
+  review queue drops the items for those pages and adds the new ones. Notes
+  lines are stored once.
+
+The re-read queue, `data/review/reread_queue.json`, is rebuilt by
+`python -m extract.reread --queue` from:
+
+| Origin | Reason | What |
+| --- | --- | --- |
+| `notes` | `subsurface_fields` | each `SUBSURFACE:` notes line in `data/extracted` (not `SUBSURFACE: none`) on pages with no `surfaces`, `contours` or `sections` stored; pages from the line (`p. 1`, `pages 3-10`), else the pages read |
+| `ROADMAP 1.9` | `image_pages`, `logs`, `map_face` | known re-reads (`reread.KNOWN`) |
+| `manual` | from `--reason` | `python -m extract.reread --add <ID> --pages 4 --reason "..."` |
+
+Each item has `id`, `source_id`, `pages`, `reason`, `detail`, `origin`,
+`ocr` and `status`; it is `done` (with `done_at`) once ingests carrying its
+queue id cover all its pages. `python -m extract.reread --next` hands out the
+pending items in order (known re-reads first) as `next_batch` does.
 
 ## Re-normalizing committed files
 

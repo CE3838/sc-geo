@@ -20,6 +20,7 @@ import math
 import re
 import struct
 import zipfile
+from functools import lru_cache
 from typing import Callable, Iterator
 
 A = 6378137.0
@@ -84,6 +85,7 @@ def utm_forward(lng, lat, lon0):
     return tm_forward(lng, lat, lon0)
 
 
+@lru_cache(maxsize=64)  # one zone per layer: computed once, not per point
 def _lcc_constants(lat0, lat1, lat2, a, e2):
     e = math.sqrt(e2)
     m = lambda p: math.cos(p) / math.sqrt(1 - e2 * math.sin(p) ** 2)
@@ -377,7 +379,8 @@ def read_shapefile(shp, dbf) -> Iterator[dict]:
         nparts, npts = struct.unpack("<2i", content[36:44])
         parts = list(struct.unpack(f"<{nparts}i", content[44:44 + 4 * nparts]))
         off = 44 + 4 * nparts
-        pts = [list(struct.unpack("<2d", content[off + 16 * k: off + 16 * k + 16])) for k in range(npts)]
+        flat = struct.unpack_from(f"<{2 * npts}d", content, off)
+        pts = [[flat[k], flat[k + 1]] for k in range(0, 2 * npts, 2)]
         rings = [pts[a:b] for a, b in zip(parts, parts[1:] + [npts])]
         if stype in (5, 15, 25):
             geom = _polygon(rings)

@@ -26,7 +26,6 @@ import argparse
 import hashlib
 import html
 import json
-import os
 import re
 import shutil
 import socket
@@ -37,6 +36,7 @@ from datetime import date
 from pathlib import Path
 from typing import Any, Callable
 
+from harvest.net import contact_headers, write_json_atomic
 from model.provenance import ExtractionMethod, StoredValue
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -71,9 +71,7 @@ class Unreachable(OSError):
 
 
 def _headers() -> dict[str, str]:
-    agent = "sc-geo-parcel-registry/0.1 (+https://github.com/CE3838/sc-geo"
-    email = os.environ.get("CONTACT_EMAIL", "").strip()
-    return {"User-Agent": f"{agent}; {email})" if email else f"{agent})", "Origin": ORIGIN}
+    return {**contact_headers("sc-geo-parcel-registry/0.1"), "Origin": ORIGIN}
 
 
 def http_fetch(url: str, headers: dict[str, str], tries: int = 3) -> Response:
@@ -233,10 +231,7 @@ def web_registry(registry: dict) -> dict:
 
 
 def _write_json(path: Path, data: Any) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    tmp = path.with_suffix(path.suffix + ".tmp")
-    tmp.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
-    tmp.replace(path)
+    write_json_atomic(path, data, newline=True, indent=2, ensure_ascii=False)
 
 
 def run(registry_path: Path = REGISTRY, web_path: Path = WEB_COPY, checkpoint_dir: Path = CHECKPOINTS,

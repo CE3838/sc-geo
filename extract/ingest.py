@@ -388,6 +388,7 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
         if index is None or "blocks" not in index:
             raise IngestError(f"no packet index for {sid} at {index_path}; run python -m extract.next_batch --id {sid}")
         packet_blocks = {p["file"].removesuffix(".md"): p["blocks"] for p in index["packets"]}
+        packet_blocks |= {n: p["blocks"] for n, p in packets.reread_index(index_path.parent).items()}
         unknown = [n for n in result["packets"] if n not in packet_blocks]
         if unknown:
             raise IngestError(f"{sid} has no {', '.join(unknown)} in {index_path} (packets: {sorted(packet_blocks)})")
@@ -463,6 +464,9 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
     else:
         covered = list(all_blocks)
     whole_pages = {packets.block_page(b) for b in covered if not packets.is_part(b)}
+    reread = _reread_info(result, packets.reread_index(index_path.parent))
+    if reread:
+        whole_pages |= set(reread["pages"])  # a re-read covers every part of its pages
     new_keys = {_vkey(f, v) for f, v in _walk_values(new_sections)}
 
     out_dir, review_dir = Path(out_dir), Path(review_dir)
@@ -473,8 +477,10 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
         """An earlier value re-read now: on a whole page this result covers, or the same quote."""
         return val.get("page") in whole_pages or _vkey(field, val) in new_keys
 
-    merged = {}
+    merged, replaced = {}, []
     for key in SECTIONS:
+        replaced += [{"section": key, "record": r} for r in (_prune(r, lambda f, v: not stale(f, v))
+                                                               for r in prev.get(key, [])) if r is not None]
         kept = [r for r in (_prune(r, stale) for r in prev.get(key, [])) if r is not None]
         have = {_vkey(f, v) for f, v in _walk_values(kept)}
         fresh = [r for r in (_prune(r, lambda f, v: _vkey(f, v) in have) for r in new_sections[key]) if r is not None]
@@ -484,7 +490,8 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
     complete = set(all_blocks) <= set(done)
     history = (prev.get("ingests") or [])[-49:] + [{"at": _now(), "packets": result.get("packets", []),
                                                      "reader": result.get("reader"), **counts,
-                                                     "review_items": len(review)}]
+                                                     "review_items": len(review),
+                                                     **({"reread": reread} if reread else {})}]
     out = {
         "source_id": sid,
         **{k: rec.get(k) for k in ("title", "citation", "year", "scale", "publisher", "kind")},
@@ -492,14 +499,16 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
         "extracted_at": prev.get("extracted_at") or _now(),
         "updated_at": _now(),
         "reader": result.get("reader"),
-        "packets": list(dict.fromkeys((prev.get("packets") or []) + result.get("packets", []))),
+        "packets": list(dict.fromkeys((prev.get("packets") or []) +
+                                      [n for n in result.get("packets", []) if not reread or n not in reread["packets"]])),
         "blocks_done": done,
         "blocks_total": len(all_blocks),
         "complete": complete,
-        "notes": "\n".join(n for n in (prev.get("notes"), result.get("notes")) if n) or None,
+        "notes": _join_notes(prev.get("notes"), result.get("notes")),
         "files": [{k: f.get(k) for k in ("url", "via", "sha256", "pages", "first_page")} for f in doc.get("files", [])],
         "summary": _totals(merged),
         "ingests": history,
+        **_history(prev, replaced, result, reread, whole_pages),
         **merged,
     }
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -567,6 +576,34 @@ def _prune(node, drop):
             return [x for x in items if x not in (None, [], {})]
         return n
     return walk(node, "")
+
+
+def _reread_info(result: dict, rereads: dict[str, dict]) -> dict | None:
+    """What a re-read result covers (extract/reread.py): its packets, pages, reason and re-read queue ids."""
+    names = [n for n in result.get("packets", []) if n in rereads]
+    if not names:
+        return None
+    entries = [rereads[n] for n in names]
+    return {"packets": names, "pages": sorted({pg for e in entries for pg in e["pages"]}),
+            "reason": "; ".join(dict.fromkeys(e.get("reason") or "re-read" for e in entries)),
+            "queue_ids": list(dict.fromkeys(q for e in entries for q in e.get("queue_ids", [])))}
+
+
+def _history(prev: dict, replaced: list[dict], result: dict, reread: dict | None, pages: set[int]) -> dict:
+    """{"history": [...]}: the earlier values this ingest replaced, with the date and the reason; {} when none ever."""
+    history = list(prev.get("history") or [])
+    if replaced:
+        names = result.get("packets", [])
+        reason = reread["reason"] if reread else (f"re-ingest of {', '.join(names)}" if names else "re-ingest")
+        history.append({"at": _now(), "reason": reason, "packets": names,
+                        "pages": sorted(pages), "replaced": replaced})
+    return {"history": history} if history else {}
+
+
+def _join_notes(*notes: str | None) -> str | None:
+    """Notes of all ingests, each line once."""
+    lines = [ln for n in notes if n for ln in n.splitlines()]
+    return "\n".join(dict.fromkeys(lines)) or None
 
 
 def _totals(sections: dict) -> dict:

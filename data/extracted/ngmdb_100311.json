@@ -1,0 +1,1094 @@
+{
+ "source_id": "ngmdb:100311",
+ "title": "Geologic Map of the Eutawville Quadrangle, Clarendon and Orangeburg Counties, South Carolina",
+ "citation": "Doar, W.R., III, 2010, Geologic Map of the Eutawville Quadrangle, Clarendon and Orangeburg Counties, South Carolina: South Carolina Geological Survey Open-File Report OFR-170, map scale 1:24,000.",
+ "year": 2010,
+ "scale": 24000,
+ "publisher": "South Carolina Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-10-15T10:58:49+00:00",
+ "updated_at": "2026-10-15T10:58:49+00:00",
+ "reader": "Claude, scheduled Claude Code session 2026-10-15",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1"
+ ],
+ "blocks_total": 1,
+ "complete": true,
+ "notes": "Single map sheet read from OCR (page 1). Map symbols beside unit names are garbled or blank ('[ oxtw |', '7]', '[™ ]', '[ 1 |') and were not recorded. The Water unit was not recorded. Legend-only features (contact, drill-hole symbol) were not recorded as values. Two thicknesses printed with '|' for a digit are read as 1, flagged inferred and sent to review. The Toney Bay Member description begins 'The Waccamaw formation is ...' as printed. Low Falls beds have no description. Santee Limestone, Warley Hill formation and Lang Syne formation are listed as units in the cross section only.\nSUBSURFACE: cross section A-A' (page 1) is recorded with its vertical exaggeration and sea-level datum; its end labels are OCR'd as 'A |' and 'A!' (name inferred, sent to review), and its elevation scale (95 ft; 29 to 12 m), the Santee National Wildlife Refuge label and any unit labels can't be tied to distances, so no units or drill holes along it were recorded. Uppermost elevations of the Toney Bay Member (95 ft) and Marietta unit (135 ft) and the 80-ft river-terrace elevation are not tied to a place and stay in unit descriptions. A map-face label 'ELEVATION 77' could not be tied to a feature. Datum: horizontal 1927 North American Datum; contour interval 5 feet on the 1979 base map (page 1).",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+   "via": "ngmdb_image",
+   "sha256": "dd97cde3b4fb45f5cbf12e9e4b3f2dd430d9a7a6d113676b614b2eb97be3602d",
+   "pages": 1,
+   "first_page": 1
+  }
+ ],
+ "summary": {
+  "stored": 65,
+  "quote_match": {
+   "exact": 65
+  },
+  "verification": {
+   "unclear": 3,
+   "agree": 9
+  },
+  "inferred": 5
+ },
+ "ingests": [
+  {
+   "at": "2026-10-15T10:58:49+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-15",
+   "values": 65,
+   "stored": 65,
+   "exact": 65,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 9,
+   "disagree": 0,
+   "unclear": 3,
+   "review_items": 3
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "Moved earth",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Moved earth (Holocene) — Earth material moved in bulk by humans.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Moved earth (Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Earth material moved in bulk by humans. Color is highly variable and dependent on source location.",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Earth material moved in bulk by humans. Color is highly",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "up to 18 feet",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "variable and dependent on source location. Thickness up to 18 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 18.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Sink holes",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Sink holes (Holocene or older)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "age": {
+    "value": "Holocene or older",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Sink holes (Holocene or older)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Shallow topographic depressions typically in-filled with debris, surrounding sediments, or water; formed by the collapse of underlying rocks or sediments, typically lime or shell material, from dissolution by groundwater",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "or sediments, typically lime or shell material, from dissolution by groundwater.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Freshwater marsh and swamp deposits",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Freshwater marsh and swamp deposits (Holocene) — Black (N1), silty clay and peat",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Freshwater marsh and swamp deposits (Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Black (N1), silty clay and peat",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Black (N1), silty clay and peat",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "stream valleys and areas of locally low elevation; areas of poor drainage",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "deposited in stream valleys and areas of locally low elevation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "1 to 40 feet",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.479,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "salinity and rising tides importing high salinity waters. Thickness | to 40 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "unclear",
+    "note": "OCR text: 'salinity and rising tides importing high salinity waters. Thickness | to 40 feet.'; '|' read as the digit 1",
+    "normalized": {
+     "min_ft": 1.0,
+     "max_ft": 40.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Carolina bay deposits",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Carolina bay deposits (Holocene, and Holocene to upper Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene, and Holocene to upper Pleistocene",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Carolina bay deposits (Holocene, and Holocene to upper Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.129,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Light gray (N-7) to black (N-1), quartzose clay to clayey quartz sand; quartzose sand in lake beds; and quartzose sand in eolian rims of bays",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "(N-7) to black (N-1), quartzose clay to clayey quartz and: quartzose sand in lake beds; and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR reads 'clayey quartz and'"
+   },
+   "description": {
+    "value": "Maximum ages are poorly constrained but are older than the range of reliable radiocarbon dates (approximately 25,000 - 30,000 years)",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "older than the range of reliable radiocarbon dates (approximately 25,000 - 30,000 years; after",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Eolian sands",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Eolian sands (Pleistocene-Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene-Holocene",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Eolian sands (Pleistocene-Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Yellow orange (10 YR 6/6 to 7/6), moderately to well sorted, subangular to subrounded, medium quartz sand",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "well sorted, subangular to subrounded, medium quartz sand.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "contacts": {
+    "value": "overlies a Santee River terrace with a typical elevation of 80 feet",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "expression and overlies a Santee River terrace with a typical elevation of 80 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "1 to 15 feet",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Thickness 1 to 15\nfeet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 1.0,
+     "max_ft": 15.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "River terrace",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "River terrace (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "River terrace (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "moderately sorted, subrounded, fine to coarse quartz sands with minor amounts of fine opaque minerals and silt; discontinuous layers of coarse quartz sand and pebbles (less than 1.5 cm) of quartz and scattered feldspar",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "5/6), moderately sorted, subrounded, fine to course quartz sands with minor amounts of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "typical upper elevation of 80 feet",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "It has a typical upper elevation of 80 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "1 to 40 feet",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.479,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Thickness | to 40 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "unclear",
+    "note": "OCR text: 'Thickness | to 40 feet.'; '|' read as the digit 1",
+    "normalized": {
+     "min_ft": 1.0,
+     "max_ft": 40.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Wicomico terrace - Toney Bay Member",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Wicomico terrace - Toney Bay Member (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Toney Bay",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Member",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Wicomico terrace - Toney Bay Member (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "rank taken from the unit name"
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Wicomico terrace - Toney Bay Member (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "At its base poorly sorted, subrounded, sandy quartz gravel fining upward into poorly sorted fine to very coarse quartz sand, then silty clay or silt matrix-supported fine quartz sand, then clay matrix-supported fine to very coarse quartz sand",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "sandy quartz gravel. Basal gravels fine upward into poorly sorted, sub- to very-angular, fine to very",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "coastal marine origin",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "This overall fining upward sequence is coastal marine",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "maximum thickness drilled is 35 feet",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "The maximum thickness drilled is 35 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 35.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "description": {
+    "value": "Uppermost elevation is 95 feet.",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Uppermost elevation is 95 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Marietta unit",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Marietta unit (Pliocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "marietta",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Pliocene",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Marietta unit (Pliocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 2.58,
+     "older_ma": 5.333,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "A silty clay with subangular, fine phosphorite sand at its base, overlain by silty, well-sorted, sub- to well-rounded, medium to very coarse or fine to medium quartz sand, overlain by poorly sorted, silt matrix-supported, fine to very coarse quartz sand with scattered quartz granules",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "8/1 to 5Y5/6) in color. A silty clay, with subangular, fine phosphorite sand is at its base.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "marine origin",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "These sediments are of marine origin.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "5 to 40 feet",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Thickness is 5 to 40 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 5.0,
+     "max_ft": 40.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "description": {
+    "value": "Uppermost elevation is 135 feet.",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Uppermost elevation is 135 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Low Falls beds",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Low Falls beds (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "low falls",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "beds",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Low Falls beds (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Low Falls beds (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Santee Limestone",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Santee Limestone (Eocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Santee",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Limestone",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Santee Limestone (Eocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "rank word taken from the unit name"
+   },
+   "age": {
+    "value": "Eocene",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Santee Limestone (Eocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 56.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "poorly sorted, very angular, calcareous mud matrix-supported, fine to very coarse calciclastic sand (shell fragments?) with minor amounts of fine quartz, phosphate, and glauconite sands",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "angular, calcareous mud matrix-supported, fine to very coarse calciclastic sand (shell fragments?)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "fossils": {
+    "value": "Cubitostrea sellaeformis shells at or near the current top of the formation along the south shore of Lake Marion",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Cubitostrea sellaeformis shells are exposed at or near the current top of the formation along south",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "depositional_environment": {
+    "value": "marine origin; discontinuous distribution resulting from erosion",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Limestone is of marine origin and has a discontinuous distribution resulting from erosion.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "shown in the cross section only; very stiff, difficult to drill; karst development of the upper surface exposed along Lake Marion",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "calcareous formation is typically very stiff, difficult to drill, and can be seen exposed along the south",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "not established during drilling",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Thickness not established\nduring drilling.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Warley Hill formation",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Warley Hill formation (Eocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "Warley Hill",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "formation",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Warley Hill formation (Eocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Eocene",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Warley Hill formation (Eocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 56.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "calcareous silt or clayey silt matrix supported, moderately well to well sorted, sub to well rounded, fine to very coarse, calcareous or quartz sand with minor amounts of fine phosphorite and glauconite sands and scattered fine micas",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "matrix supported, moderately well to well sorted, sub to well rounded, fine to very coarse,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "subsurface unit (shown in the cross section only)",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Warley Hill formation (Eocene) — This subsurface unit is a yellow, moderate yellowish",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Lang Syne formation",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Lang Syne formation (Paleocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Lang Syne",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "formation",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Lang Syne formation (Paleocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Paleocene",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Lang Syne formation (Paleocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 56.0,
+     "older_ma": 66.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "silty clay layered with slightly clayey, very well sorted, subrounded to subangular, very fine to fine quartz sand with minor amounts of very fine to fine phosphorite and other opaque minerals; commonly layers or pieces of lignite in the sands",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "10YR 7/6), when weathered, and a gray to blue gray (N2 to N8), when fresh, silty clay",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "description": {
+    "value": "subsurface unit (shown in the cross section only); yellow orange when weathered, gray to blue gray when fresh",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Lang Syne formation (Paleocene) — This subsurface unit is a yellow orange (SY 8/4 to",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "observations": [],
+ "structures": [],
+ "groundwater": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Brooks, M. J., Taylor, B. E., Stone, P. A., and Gardner, L. R., 2001, Pleistocene encroachment of the Wateree River sand sheet into Big Bay on the Middle Coastal Plain of South Carolina. Southeastern Geology, v. 40, pp. 241-257.",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Brooks, M. J., Taylor, B. E., Stone, P. A., and Gardner, L. R., 2001, Pleistocene encroachment of the Wateree",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Kaczorowski, R. T., 1977, The Carolina Bays: a Comparison with Modern Oriented Lakes Technical Report no. 13-CRD, Coastal research Division, Department of Geology, University of South Carolina; Columbia, South Carolina; 124 pp.",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Kaczorowski, R. T., 1977, The Carolina Bays: a Comparison with Modern Oriented Lakes Technical Report no.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "surfaces": [],
+ "contours": [],
+ "sections": [
+  {
+   "name": {
+    "value": "A-A'",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "A |\nFEET",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "unclear",
+    "note": "section end labels OCR'd as 'A |' and 'A!'"
+   },
+   "vertical_exaggeration": {
+    "value": "50",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "Vertical exaggeration is 50",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": 50.0
+   },
+   "datum": {
+    "value": "SEA LEVEL",
+    "source_id": "ngmdb:100311",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100311_1",
+    "quote": "SEA LEVEL",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": "MSL"
+   }
+  }
+ ]
+}

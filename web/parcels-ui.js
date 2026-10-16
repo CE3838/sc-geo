@@ -2,15 +2,14 @@
 // own public service, queried live for the view from zoom 15 (parcels.js),
 // with a row and a status note in the Layers panel. Counties without a
 // public service, or whose service fails or blocks browsers, get a note.
-import { LiveTiles, debounce, fetchAllPages, tileBounds } from './arcgis.js';
+import { LiveTiles, debounce, fetchAllPages, fetchJson, tileBounds } from './arcgis.js';
 import { LIVE_ON_AT_START } from './live.js';
 import {
   PARCEL_LAYER_IDS, PARCEL_MINZOOM, PARCEL_TILE_ZOOM, countiesForBounds, countyBoxes, describeParcel, normalizeParcel,
   parcelLayers, parcelPlan, parcelQueryUrl,
 } from './parcels.js';
-import { fetchJson, viewBox } from './roads-ui.js';
 import { el } from './dom.js';
-import { onStyleReady } from './geo.js';
+import { onStyleReady, viewBox } from './geo.js';
 
 const EMPTY = { type: 'FeatureCollection', features: [] };
 

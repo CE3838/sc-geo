@@ -10,6 +10,7 @@ These conversions are derived values: callers store them flagged inferred.
 from __future__ import annotations
 
 import re
+from functools import lru_cache
 
 AGE_SOURCE = "International Chronostratigraphic Chart v2023/09"
 
@@ -106,8 +107,10 @@ def _interval(modifier: str | None, name: str) -> tuple[float, float] | None:
     return (young + part * third, young + (part + 1) * third)
 
 
+@lru_cache(maxsize=65536)
 def age_range(text: str | None) -> tuple[float, float] | None:
-    """(younger, older) in Ma for age text, or None when it names no interval."""
+    """(younger, older) in Ma for age text, or None when it names no interval (memoized: merges repeat
+    the same few age texts on every polygon)."""
     if not text:
         return None
     t = text.lower().replace("precambrian-proterozoic", "proterozoic")
@@ -171,8 +174,9 @@ def _words(text: str) -> list[str]:
     return [_ABBREV.get(w, _PLURALS.get(w, w)) for w in words]
 
 
+@lru_cache(maxsize=65536)
 def name_key(name: str | None) -> tuple[str | None, str | None]:
-    """(geographic name, rank) for a unit name; (None, None) for informal units."""
+    """(geographic name, rank) for a unit name; (None, None) for informal units (memoized)."""
     if not name:
         return (None, None)
     text = re.sub(r"\([^)]*\)", " ", name)
