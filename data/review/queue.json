@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 163,
+ "count": 164,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -2152,6 +2152,19 @@
    "verify": {
     "verdict": "unclear",
     "note": "OCR prints '|' in place of a digit; read as 1, check the map image"
+   }
+  },
+  {
+   "source_id": "ngmdb:111807",
+   "path": "units[4].description",
+   "problem": "verify_unclear",
+   "value": "grayish red (5R 4/2) to dark yellowish orange (10YR 6/6) sandstone; medium to coarse sand; poorly to moderately sorted; kaolinite matrix; <1 m beds or lenses of kaolinite clay; most common facies",
+   "page": 1,
+   "quote": "dark yellowish orange (1OYR 6/6) sandstone (sand, where poorly indurated)",
+   "added_at": "2026-10-16T22:57:37+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints 'Facies |', '(SR 4/2)' and '1OYR 6/6'; value reads them as Facies 1, 5R 4/2, 10YR 6/6, flagged inferred"
    }
   }
  ]
