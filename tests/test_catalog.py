@@ -315,3 +315,42 @@ def test_non_geologic_subject():
     assert reading_list.non_geologic_subject("Water quality of the Coastal Plain aquifers") == "water quality"
     assert reading_list.non_geologic_subject("Geologic map of the water-quality site") is None
     assert reading_list.non_geologic_subject("Geologic map of the Bonneau quadrangle") is None
+
+
+def test_reapplying_refreshes_reason_and_inferred_flag():
+    recs = catalog.build_catalog(NGMDB_ROWS, THEMES, PAGES, SCGS_INDEX, SCGS_GIS, FTP, "t", corrections=CORRECTIONS)
+    changed = [dict(CORRECTIONS[0], reason="typo; title page shows Jr.", inferred=True)]
+    assert catalog.apply_corrections(recs, changed) == []
+    paper = by_id(recs)["ngmdb:1"]
+    assert paper["corrections"] == [{"field": "authors", "old": "Weems, R.E.", "new": "Weems, R.E., Jr.",
+                                     "reason": "typo; title page shows Jr.", "inferred": True}]
+    fixes = [p for p in paper["provenance"] if p["source_id"] == "catalog-corrections"]
+    assert len(fixes) == 1 and fixes[0]["inferred"] is True
+
+
+@pytest.mark.parametrize("rid,wrong,right", [
+    ("ngmdb:6377", "Smth, C.C.", "Smith, C.C."),
+    ("ngmdb:94281", "Niwendorp, C.A.", "Niewendorp, C.A."),
+    ("ngmdb:33345", "O'brien, T.F.", "O'Brien, T.F."),
+    ("ngmdb:4863", "Renkin, R.A.", "Renken, R.A."),
+    ("ngmdb:42981", "Wagner, H.D.", "Wagener, H.D."),
+    ("ngmdb:74872", "Clark, J.W.", "Clarke, J.W."),
+    ("ngmdb:77556", "Ransom, W.A.", "Ranson, W.A."),
+    ("ngmdb:77560", "Ransom, W.A.", "Ranson, W.A."),
+    ("ngmdb:83395", "van Stall, C.R.", "van Staal, C.R."),
+    ("ngmdb:13597", "Welch, L.O.", "Wilch, L.O."),
+    ("ngmdb:43718", "Weise, D.S.", "Wiese, D.S."),
+    ("ngmdb:7374", "Hooper, M.G.", "Hopper, M.G."),
+    ("ngmdb:74709", "Gorsz, A.E.", "Grosz, A.E."),
+])
+def test_committed_catalog_has_author_name_fixes(rid, wrong, right):
+    rec = by_id(json.loads((ROOT / "data" / "catalog" / "sc_catalog.json").read_text()))[rid]
+    for field in ("authors", "citation"):
+        assert wrong not in rec[field] and right in rec[field], (rid, field)
+
+
+def test_unconfirmed_names_are_left_alone():
+    records = by_id(json.loads((ROOT / "data" / "catalog" / "sc_catalog.json").read_text()))
+    assert "Wyrik, R.F." in records["ngmdb:56440"]["authors"]
+    assert "Stockl, D.F." in records["ngmdb:113142"]["authors"]
+    assert "Books, K.G." in records["ngmdb:74376"]["authors"]
