@@ -13,7 +13,9 @@ compilations whose box is mostly outside SC, and non-geologic subjects
 outreach), are penalized. Records at or above THRESHOLD are listed, the
 Charleston County pilot area first, then by score. Records whose GIS is
 merged (merge.build) are always listed: their map sheets and reports are
-read for unit descriptions, explanations, cross sections and references.
+read for unit descriptions, explanations, cross sections and references,
+except national or global compilations, whose GIS stays merged as a
+fallback but whose text is marked not applicable.
 Online records left out are also written to data/review/not_applicable.json
 as "read: not applicable" with the reason. Every other catalog
 record is listed in the scores file with the reason it was left out
@@ -44,6 +46,7 @@ NOT_APPLICABLE_PATH = ROOT / "data" / "review" / "not_applicable.json"
 
 THRESHOLD = 30
 GIS_REASON = "GIS merged; text read for unit descriptions"
+GIS_NATIONAL_REASON = "GIS merged as a low-confidence fallback; text not read (no SC subsurface detail)"
 # Atlantic off the Georgia, SC and southern NC coast (lon/lat). Inside it, whatever is not GA, SC or NC
 # land is open sea, which does not count against a coastal record's share inside SC.
 OFFSHORE = (-81.6, 30.75, -75.5, 34.7)
@@ -364,6 +367,10 @@ def build(catalog: list[dict], ctx: Context) -> dict:
         scores[rid] = s
         if rid in ctx.excluded:
             excluded[rid] = "left out in config/catalog_exclude.json"
+        elif rid in ctx.merged and any("national or global compilation" in r for r in s["reasons"]):
+            # continent-scale map: its GIS stays merged as a fallback, its text has no SC detail
+            neg = [r.split(" ", 1)[1] for r in s["reasons"] if r.startswith("-")]
+            excluded[rid] = f"{GIS_NATIONAL_REASON}: " + "; ".join(neg)
         elif rid in ctx.merged:  # its GIS is merged; its map sheet is read whatever the score
             s["reasons"].insert(0, GIS_REASON)
             s["include"] = True
