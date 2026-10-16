@@ -39,12 +39,14 @@ import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
 
-from extract import labtests, packets, patterns, schema, scope
+from extract import packets, patterns, schema, scope
 from extract.packets import safe_id
 from merge.score import scale_weight
 from model import coords
 from model.provenance import ExtractionMethod, StoredValue
 from model.units import Lexicon
+
+from extract import labtests  # water and rock tests
 
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG: dict = json.loads((ROOT / "config" / "extract.json").read_text())

@@ -27,10 +27,10 @@ extract/ingest.py   validate, check every quote on its page, normalize,
 | `triage.py` | Page kinds (blank, title, toc, index, references, content) used only to skip or rank pages, never to decide values |
 | `packets.py` | One or more Markdown packets per document with the catalog header and `=== PAGE n (method) ===` blocks |
 | `schema.json`, `schema.py` | What one document's extraction contains; standard-library validator |
-| `labtests.py` | Water-test parameter names and rock-test types (normalized only when unambiguous, flagged inferred), values with qualifiers, and the review checks for test values (missing units, a "\|" read as a digit, unread values) |
 | `patterns.py` | Deterministic normalizers used after the model: Munsell, lengths to feet, signed elevations, vertical datums, USCS, SPT N, strike/dip, coordinates (decimal, DMS, SC State Plane NAD83), ages to Ma, unit names to Geolex |
 | `ingest.py` | `python -m extract.ingest result.json [--verify verify.json]` |
 | `renormalize.py` | `python -m extract.renormalize [--write]`: recompute normalized fields of committed files (dry run by default) |
+| `labtests.py` | Water-test parameter names and rock-test types (normalized only when unambiguous, flagged inferred), values with qualifiers, and the review checks for test values (missing units, a "\|" read as a digit, unread values) |
 | `reread.py` | `python -m extract.reread <ID> --pages 1`: re-read chosen pages of a document already read, from `.cache` only; `--next` hands out the re-read queue, `--queue` rebuilds it |
 | `next_batch.py` | `python -m extract.next_batch --n 5`: next pending documents, building text and packets on the fly |
 | `reading_list.py` | `python -m extract.reading_list`: ranks online catalog records by South Carolina geologic relevance into `config/reading_list.json`, with scores and exclusion reasons in `config/reading_list_scores.json` |
