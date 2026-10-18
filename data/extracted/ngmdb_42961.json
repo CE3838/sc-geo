@@ -8,7 +8,7 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-05T21:26:52+00:00",
- "updated_at": "2026-10-18T16:24:48+00:00",
+ "updated_at": "2026-10-18T22:56:09+00:00",
  "reader": "Claude, Claude Code re-read session 2026-10-18",
  "packets": [
   "packet-01"
@@ -29,16 +29,15 @@
   }
  ],
  "summary": {
-  "stored": 533,
+  "stored": 525,
   "quote_match": {
-   "image": 150,
-   "exact": 383
+   "exact": 378,
+   "image": 147
   },
   "verification": {
-   "unclear": 2,
-   "agree": 510
+   "agree": 504
   },
-  "inferred": 503
+  "inferred": 495
  },
  "ingests": [
   {
@@ -60,23 +59,23 @@
    "review_items": 0
   },
   {
-   "at": "2026-10-18T16:24:48+00:00",
+   "at": "2026-10-18T22:56:09+00:00",
    "packets": [
     "reread-02"
    ],
    "reader": "Claude, Claude Code re-read session 2026-10-18",
-   "values": 533,
-   "stored": 533,
-   "exact": 383,
+   "values": 525,
+   "stored": 525,
+   "exact": 378,
    "ocr": 0,
    "fuzzy": 0,
    "quote_not_found": 0,
    "wrong_page": 0,
-   "agree": 510,
+   "agree": 504,
    "disagree": 0,
-   "unclear": 2,
-   "image": 150,
-   "review_items": 3,
+   "unclear": 0,
+   "image": 147,
+   "review_items": 1,
    "reread": {
     "packets": [
      "reread-02"
@@ -93,7 +92,7 @@
  ],
  "history": [
   {
-   "at": "2026-10-18T16:24:48+00:00",
+   "at": "2026-10-18T22:56:09+00:00",
    "reason": "map_face",
    "packets": [
     "reread-02"
@@ -6271,163 +6270,6 @@
     "verification": "agree"
    },
    "elevation": {
-    "value": -10,
-    "source_id": "ngmdb:42961",
-    "page": 1,
-    "extraction_method": "llm-image",
-    "confidence": 0.336,
-    "inferred": true,
-    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1#page=1&viewrect=1459.5,697,22,12",
-    "quote": "-10'",
-    "quote_match": "image",
-    "text_method": "image",
-    "verification": "unclear",
-    "image": {
-     "tile": "p1-144dpi-3x4-r2c3",
-     "box": [
-      698,
-      340,
-      742,
-      364
-     ],
-     "dpi": 144,
-     "page_px_box": [
-      2919,
-      1394,
-      2963,
-      1418
-     ],
-     "pt_box": [
-      1459.5,
-      697.0,
-      1481.5,
-      709.0
-     ],
-     "pdf_sha256": "dfa435c4dbc71adce2bd9f32eb7fa1c215d21a08a01b748e33a4ae83e402c1c1"
-    },
-    "units": "ft",
-    "note": "value printed beside the symbol",
-    "normalized": {
-     "min_ft": -10.0,
-     "max_ft": -10.0,
-     "unit": "ft",
-     "approximate": false
-    }
-   },
-   "datum": {
-    "value": "mean sea level",
-    "source_id": "ngmdb:42961",
-    "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.612,
-    "inferred": true,
-    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1",
-    "quote": "DATUM IS MEAN SEA LEVEL",
-    "quote_match": "exact",
-    "text_method": "ocr",
-    "verification": "agree",
-    "note": "the map's datum; the explanation gives the Cooper Marl contours datum mean sea level",
-    "normalized": "MSL"
-   },
-   "method": {
-    "value": "stated",
-    "source_id": "ngmdb:42961",
-    "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.612,
-    "inferred": true,
-    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1",
-    "quote": "Control from miscellaneous data.",
-    "quote_match": "exact",
-    "text_method": "ocr",
-    "verification": "agree",
-    "note": "control from miscellaneous data (symbol per the explanation)"
-   },
-   "observation": {
-    "value": "SHAFT 2",
-    "source_id": "ngmdb:42961",
-    "page": 1,
-    "extraction_method": "llm-image",
-    "confidence": 0.48,
-    "inferred": true,
-    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1#page=1&viewrect=1427,653.5,37,13.5",
-    "quote": "SHAFT 2",
-    "quote_match": "image",
-    "text_method": "image",
-    "verification": "agree",
-    "image": {
-     "tile": "p1-144dpi-3x4-r2c3",
-     "box": [
-      633,
-      253,
-      707,
-      280
-     ],
-     "dpi": 144,
-     "page_px_box": [
-      2854,
-      1307,
-      2928,
-      1334
-     ],
-     "pt_box": [
-      1427.0,
-      653.5,
-      1464.0,
-      667.0
-     ],
-     "pdf_sha256": "dfa435c4dbc71adce2bd9f32eb7fa1c215d21a08a01b748e33a4ae83e402c1c1"
-    },
-    "note": "control from miscellaneous data label on the map face"
-   }
-  },
-  {
-   "surface": {
-    "value": "top of Cooper Marl",
-    "source_id": "ngmdb:42961",
-    "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.612,
-    "inferred": true,
-    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1",
-    "quote": "top of Cooper Marl.",
-    "quote_match": "exact",
-    "text_method": "ocr",
-    "verification": "agree",
-    "note": "map-face control from miscellaneous data; the explanation gives its number as the elevation of the top of the Cooper Marl"
-   },
-   "unit": {
-    "value": "Cooper Marl",
-    "source_id": "ngmdb:42961",
-    "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.612,
-    "inferred": true,
-    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1",
-    "quote": "top of Cooper Marl.",
-    "quote_match": "exact",
-    "text_method": "ocr",
-    "verification": "agree",
-    "normalized": {
-     "canonical": "Cooper",
-     "in_geolex": true,
-     "inferred": true
-    }
-   },
-   "boundary": {
-    "value": "top",
-    "source_id": "ngmdb:42961",
-    "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.612,
-    "inferred": true,
-    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1",
-    "quote": "top of Cooper Marl.",
-    "quote_match": "exact",
-    "text_method": "ocr",
-    "verification": "agree"
-   },
-   "elevation": {
     "value": -17,
     "source_id": "ngmdb:42961",
     "page": 1,
@@ -12365,45 +12207,6 @@
       ],
       "pdf_sha256": "dfa435c4dbc71adce2bd9f32eb7fa1c215d21a08a01b748e33a4ae83e402c1c1"
      }
-    },
-    {
-     "value": -5,
-     "source_id": "ngmdb:42961",
-     "page": 1,
-     "extraction_method": "llm-image",
-     "confidence": 0.336,
-     "inferred": true,
-     "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1#page=1&viewrect=1034,956,22,32",
-     "quote": "-5",
-     "quote_match": "image",
-     "text_method": "image",
-     "verification": "unclear",
-     "image": {
-      "tile": "p1-144dpi-3x4-r2c2",
-      "box": [
-       958,
-       858,
-       1002,
-       922
-      ],
-      "dpi": 144,
-      "page_px_box": [
-       2068,
-       1912,
-       2112,
-       1976
-      ],
-      "pt_box": [
-       1034.0,
-       956.0,
-       1056.0,
-       988.0
-      ],
-      "pdf_sha256": "dfa435c4dbc71adce2bd9f32eb7fa1c215d21a08a01b748e33a4ae83e402c1c1"
-     },
-     "units": "ft",
-     "note": "contour label on the map face",
-     "normalized": -5.0
     },
     {
      "value": -10,
