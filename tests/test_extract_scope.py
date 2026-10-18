@@ -55,3 +55,11 @@ def test_config_entries_are_well_formed():
         chapters.sort()
         for a, b in zip(chapters, chapters[1:]):
             assert a[1] < b[0], (a[2], b[2])
+
+
+def test_professional_paper_1300_wilderness_chapters_are_scoped():
+    # PP 1300 vol. 2 is one 634-page PDF of many authors' chapters; each SC record gets its own pages.
+    scopes = scope.load()
+    url = "https://pubs.usgs.gov/pp/1300/report.pdf"
+    assert scopes["ngmdb:76127"]["url"] == url and scopes["ngmdb:76127"]["pdf_pages"] == [386, 388]
+    assert scopes["ngmdb:76128"]["url"] == url and scopes["ngmdb:76128"]["pdf_pages"] == [389, 391]
