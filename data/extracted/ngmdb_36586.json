@@ -910,13 +910,7 @@
     "quote": "The well is located in Dorchester County, South Carolina at 33 09'25\"N lati-",
     "quote_match": "exact",
     "text_method": "pdf_text",
-    "verification": null,
-    "normalized": {
-     "lat": 33.15694444444444,
-     "lon": -80.52166666666666,
-     "format": "dms",
-     "hemisphere_inferred": false
-    }
+    "verification": null
    },
    "elevation": {
     "value": "40 feet (Topo)",
@@ -936,6 +930,28 @@
      "max_ft": 40.0,
      "unit": "feet",
      "approximate": false
+    },
+    "navd88": {
+     "value": {
+      "min_ft": 40.0,
+      "max_ft": 40.0
+     },
+     "source_id": "ngmdb:36586",
+     "page": 11,
+     "extraction_method": "datum_conversion",
+     "confidence": 0.52,
+     "inferred": true,
+     "locator": null,
+     "from_datum": null,
+     "shift_ft": 0.0,
+     "conversion": "none (datum not stated)",
+     "approximate": true,
+     "assumptions": [
+      "vertical datum not stated; kept as printed (NGVD29 and NAVD88 differ by about a foot here)"
+     ],
+     "datum_from": "not stated",
+     "datum_page": null,
+     "location_from": null
     }
    },
    "total_depth": {
@@ -8612,6 +8628,28 @@
      "max_ft": 78.03,
      "unit": "feet",
      "approximate": false
+    },
+    "navd88": {
+     "value": {
+      "min_ft": 78.03,
+      "max_ft": 78.03
+     },
+     "source_id": "ngmdb:36586",
+     "page": 22,
+     "extraction_method": "datum_conversion",
+     "confidence": 0.612,
+     "inferred": true,
+     "locator": null,
+     "from_datum": null,
+     "shift_ft": 0.0,
+     "conversion": "none (datum not stated)",
+     "approximate": true,
+     "assumptions": [
+      "vertical datum not stated; kept as printed (NGVD29 and NAVD88 differ by about a foot here)"
+     ],
+     "datum_from": "not stated",
+     "datum_page": null,
+     "location_from": null
     }
    }
   }
@@ -8647,10 +8685,12 @@
     "verification": "agree",
     "table": true,
     "normalized": {
-     "min_ft": 15.04,
-     "max_ft": 15.04,
+     "min_ft": -15.04,
+     "max_ft": -15.04,
      "unit": "feet",
-     "approximate": false
+     "approximate": false,
+     "relative_to": "land surface",
+     "direction": null
     }
    },
    "date": {
@@ -8729,7 +8769,9 @@
      "min_ft": 12.0,
      "max_ft": 12.0,
      "unit": "feet",
-     "approximate": false
+     "approximate": false,
+     "relative_to": "land surface",
+     "direction": null
     }
    },
    "date": {
@@ -8807,7 +8849,9 @@
      "min_ft": 61.4,
      "max_ft": 61.4,
      "unit": "feet",
-     "approximate": false
+     "approximate": false,
+     "relative_to": "land surface",
+     "direction": null
     }
    },
    "date": {
@@ -8885,7 +8929,9 @@
      "min_ft": 83.0,
      "max_ft": 83.0,
      "unit": "feet",
-     "approximate": false
+     "approximate": false,
+     "relative_to": "land surface",
+     "direction": null
     }
    },
    "date": {
@@ -8963,7 +9009,9 @@
      "min_ft": 81.1,
      "max_ft": 81.1,
      "unit": "feet",
-     "approximate": false
+     "approximate": false,
+     "relative_to": "land surface",
+     "direction": null
     }
    },
    "date": {

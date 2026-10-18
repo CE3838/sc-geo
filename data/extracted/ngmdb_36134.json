@@ -1828,7 +1828,9 @@
      "min_ft": 4.0,
      "max_ft": 8.0,
      "unit": "feet",
-     "approximate": true
+     "approximate": true,
+     "relative_to": "land surface",
+     "direction": "below"
     }
    }
   },
@@ -1929,7 +1931,9 @@
       2.0
      ],
      "unit": "feet",
-     "approximate": false
+     "approximate": false,
+     "relative_to": "land surface",
+     "direction": "below"
     }
    },
    "date": {
@@ -2082,8 +2086,8 @@
     "text_method": "pdf_text",
     "verification": null,
     "normalized": {
-     "min_ft": 2.0,
-     "max_ft": 2.0,
+     "min_ft": -2.0,
+     "max_ft": -2.0,
      "unit": "feet",
      "approximate": true
     }

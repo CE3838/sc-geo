@@ -1089,11 +1089,24 @@
     "text_method": "pdf_text",
     "verification": null,
     "note": "about three miles southeast of the town of St. George near the village of Byrd, northern Dorchester County",
-    "normalized": {
-     "lat": 33.15694444444444,
-     "lon": -80.52166666666666,
+    "derived_coordinates": {
+     "value": {
+      "lat": 33.156944,
+      "lon": -80.521667
+     },
+     "source_id": "ngmdb:40025",
+     "page": 2,
+     "extraction_method": "inference",
+     "confidence": 0.578,
+     "inferred": true,
+     "locator": null,
      "format": "dms",
-     "hemisphere_inferred": false
+     "datum": null,
+     "approximate": true,
+     "assumptions": [
+      "horizontal datum not stated"
+     ],
+     "conversion": "model.coords: degrees, minutes and seconds to decimal degrees"
     }
    },
    "elevation": {
@@ -1113,6 +1126,28 @@
      "max_ft": 78.0,
      "unit": "feet",
      "approximate": false
+    },
+    "navd88": {
+     "value": {
+      "min_ft": 78.0,
+      "max_ft": 78.0
+     },
+     "source_id": "ngmdb:40025",
+     "page": 2,
+     "extraction_method": "datum_conversion",
+     "confidence": 0.52,
+     "inferred": true,
+     "locator": null,
+     "from_datum": null,
+     "shift_ft": 0.0,
+     "conversion": "none (datum not stated)",
+     "approximate": true,
+     "assumptions": [
+      "vertical datum not stated; kept as printed (NGVD29 and NAVD88 differ by about a foot here)"
+     ],
+     "datum_from": "not stated",
+     "datum_page": null,
+     "location_from": null
     }
    },
    "total_depth": {
