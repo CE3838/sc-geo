@@ -8,7 +8,7 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-18T16:05:52+00:00",
- "updated_at": "2026-10-18T16:05:52+00:00",
+ "updated_at": "2026-10-18T16:12:51+00:00",
  "reader": "Claude, Claude Code session 2026-10-18",
  "packets": [
   "packet-01"
@@ -31,12 +31,11 @@
  "summary": {
   "stored": 160,
   "quote_match": {
-   "exact": 97,
-   "image": 63
+   "image": 63,
+   "exact": 97
   },
   "verification": {
-   "disagree": 2,
-   "agree": 88
+   "agree": 90
   },
   "inferred": 72
  },
@@ -59,6 +58,4563 @@
    "unclear": 0,
    "image": 63,
    "review_items": 2
+  },
+  {
+   "at": "2026-10-18T16:12:51+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, Claude Code session 2026-10-18",
+   "values": 160,
+   "stored": 160,
+   "exact": 97,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 90,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 63,
+   "review_items": 0
+  }
+ ],
+ "history": [
+  {
+   "at": "2026-10-18T16:12:51+00:00",
+   "reason": "re-ingest of packet-01",
+   "packets": [
+    "packet-01"
+   ],
+   "pages": [
+    1
+   ],
+   "replaced": [
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Moved earth",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Moved earth (Modern)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Modern",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Moved earth (Modern)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "description": {
+       "value": "artificial (man-made) ground; earthen material worked, infilled, landscaped, or otherwise disturbed by humans, including embankments for road structures and reservoirs and excavated areas of sand quarries",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "consists of earthen material worked, infilled, landscaped, or otherwise disturbed by",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "QHfw",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "QHfw",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "symbol printed after the description; matched by layout"
+      },
+      "name": {
+       "value": "Freshwater swamp and marsh",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Freshwater swamp and marsh (Holocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Holocene",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Freshwater swamp and marsh (Holocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.0117,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "sand, organic and inorganic clay, and sometimes peat",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Deposits consist of sand, organic and inorganic clay, and sometimes peat.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "Low-lying areas of water-logged ground in modern stream valleys",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Low-lying areas of water-logged ground",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "df",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "df",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "symbol printed after the description; matched by layout"
+      },
+      "name": {
+       "value": "Recent dune field",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Recent dune field (Pleistocene to Holocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Pleistocene to Holocene",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Recent dune field (Pleistocene to Holocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "Yellow orange (10YR 8/6), well sorted, subangular, fine- to medium-grained quartz sand with minor fine opaque minerals along cross-bedding planes",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "subangular, fine- to medium-grained quartz sand with minor fine opaque minerals along",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "eolian",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "This eolian sand is sourced from underlying, older stratigraphic units.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "Qal",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Qal",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "symbol printed after the description; matched by layout"
+      },
+      "name": {
+       "value": "Modern alluvium",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Modern alluvium (Pleistocene to Holocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      },
+      "age": {
+       "value": "Pleistocene to Holocene",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Modern alluvium (Pleistocene to Holocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "typically well-sorted, medium- or coarse-grained quartz-rich sand with organic material",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "coarse-grained quartz-rich sand with organic material",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "Freshwater stream deposits in active flood plains of first- and second-order streams",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Freshwater stream deposits in active",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "Maximum thickness is 30 feet",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Maximum thickness is 30 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": null,
+        "max_ft": 30.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Pinehurst Formation",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Pinehurst Formation (Pliocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Pinehurst",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.684,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Pinehurst Formation (Pliocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      },
+      "age": {
+       "value": "Pliocene",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Pinehurst Formation (Pliocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 2.58,
+        "older_ma": 5.333,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "eolian sand of subangular to subrounded, well- to very well sorted fine and bimodal fine- to coarse-grained quartz sand with minor silt, clay, and fine mica",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "eolian sand consisting of subangular to subrounded, well- to very well sorted fine and",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "up to 80 feet around Camp Clark",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Thicknesses up to 80 feet are",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": null,
+        "max_ft": 80.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      },
+      "depositional_environment": {
+       "value": "terrestrial eolian sand",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Formation and the recent dune fields are terrestrial colian sand deposits",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "OCR 'colian'"
+      },
+      "description": {
+       "value": "Yellow-orange-brown (10YR 8/6 - 6/6 to 5YR 6/6); bedding planes defined by layers of coarse quartz sand and quartz granules; more topographically subdued than the recent dune field unit; an excellent sand resource mined extensively",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "are defined by layers of coarse quartz sand and quartz granules",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Altamaha Formation",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Altamaha Formation (Miocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Altamaha",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.684,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Altamaha Formation (Miocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      },
+      "age": {
+       "value": "Miocene",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Altamaha Formation (Miocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 5.333,
+        "older_ma": 23.03,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "Red-brown (10R 4/2), fine- to coarse-grained quartz sand supported by a clay matrix; poorly sorted, mostly subangular grains; quartz granules and pebbles sub- to well rounded",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "sand supported by a clay matrix; it is poorly sorted consisting mostly of subangular",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "Maximum thickness seen in exposure is 12 feet",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "exposure is 12 feet",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "normalized": {
+        "min_ft": null,
+        "max_ft": 12.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      },
+      "depositional_environment": {
+       "value": "fluvial",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "exposure is 12 feet. The unit is fluvial in origin.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Tobacco Road Sand",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Tobacco Road Sand (Upper Eocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Tobacco Road",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "Upper Eocene",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Tobacco Road Sand (Upper Eocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 33.9,
+        "older_ma": 37.71,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "Brick red (approximately 5R 4/6), clayey silty matrix supporting moderately well sorted, very angular, fine- to medium-grained quartz sand with clasts of white clay",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "matrix supporting moderately well sorted, very angular, fine- to medium-grained quartz",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "less than 7 feet",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Maximum thickness less than 7 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": null,
+        "max_ft": 7.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      },
+      "depositional_environment": {
+       "value": "marine",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Maximum thickness less than 7 feet. The unit is marine in origin.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "contacts": {
+       "value": "Overlain by the Altamaha Formation: gently dipping sand layers overlie near horizontal clayey sands of Tobacco Road Sand; streaks of white kaolinitic clay define top of Tobacco Road Sand",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Streaks of white kaolinitic clay",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "Tdb",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Tdb",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "symbol printed after the description; matched by layout"
+      },
+      "name": {
+       "value": "Dry Branch Formation",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Dry Branch Formation (Upper Eocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Dry Branch",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Dry Branch Formation (Upper Eocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Upper Eocene",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Dry Branch Formation (Upper Eocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "normalized": {
+        "younger_ma": 33.9,
+        "older_ma": 37.71,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "poorly to moderately well sorted, subangular to subrounded, fine- to coarse-grained quartz sand; matrix of silt and clay, the latter possibly kaolinite",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "The matrix consists of silt and clay, with the latter possibly kaolinite.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      },
+      "thickness": {
+       "value": "no more than 15 feet",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "no more than 15 feet",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": null,
+        "max_ft": 15.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      },
+      "depositional_environment": {
+       "value": "marine",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "no more than 15 feet. The unit is marine in origin.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "Th",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Th",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "symbol printed after the description; matched by layout"
+      },
+      "name": {
+       "value": "Huber Formation",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Huber Formation (Middle Eocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Huber",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Huber Formation (Middle Eocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Middle Eocene",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Huber Formation (Middle Eocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 37.71,
+        "older_ma": 47.8,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "variably sorted, subangular, very fine to very coarse quartz sand with some very fine opaque minerals; silt and clay common",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "sand with some very fine opaque minerals. Silt and clay are common.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "greater than 50 feet thick in the southern portion of the quadrangle",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "the quadrangle, the Huber is greater than 50 feet thick.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": 50.0,
+        "max_ft": null,
+        "unit": "feet",
+        "approximate": false
+       }
+      },
+      "fossils": {
+       "value": "Ophiomorpha casts perpendicular to bedding",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "The presence of Ophiomorpha casts",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "near-marine environment",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "perpendicular to bedding indicates deposition in a near-marine environment.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "UKs",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "UKs Upper Cretaceous sediment",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "name": {
+       "value": "Upper Cretaceous sediment",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "UKs Upper Cretaceous sediment",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Upper Cretaceous",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "UKs Upper Cretaceous sediment",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 66.0,
+        "older_ma": 100.5,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "very poorly to well sorted, very fine to very coarse quartz sand with quartz granules and sparse quartz pebbles with thin interlayers of silty clay; clay-rich silt with a trace of medium-sized micas; and silty clay to clayey silt",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "coarse quartz sand with quartz granules and sparse quartz pebbles with thin interlayers of silty",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "approximately 20 feet in the north; thicker than 146 feet in the southern part of the quadrangle (near Goose Platter Creek)",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "drilling indicates the Cretaceous is thicker than 146",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": 20.0,
+        "max_ft": 146.0,
+        "values_ft": [
+         20.0,
+         146.0
+        ],
+        "unit": "feet",
+        "approximate": true
+       }
+      },
+      "depositional_environment": {
+       "value": "fluvial",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "feet. The unit is fluvial in origin.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "Pu",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Pu Piedmont undifferentiated",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "name": {
+       "value": "Piedmont undifferentiated",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Pu Piedmont undifferentiated (Latest Proterozoic to early Paleozoic)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Latest Proterozoic to early Paleozoic",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Pu Piedmont undifferentiated (Latest Proterozoic to early Paleozoic)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 443.1673333333333,
+        "older_ma": 2500.0,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "deeply weathered rock (saprolite) and nearly pristine crystalline rock; parent material most likely medium-grained biotite-feldspar-quartz gneiss and felsic feldspar-quartz gneiss with magnetite",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "likely is medium-grained biotite-feldspar-quartz gneiss and felsic feldspar-quartz gneiss with",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "description": {
+       "value": "Fresh rock exposures are felsic gneiss consisting almost entirely of quartz and feldspar with little to no mica; magnetite forms small (1 mm) octahedra; resembles a meta-arenite and is a paragneiss",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "In fresh exposures, the Piedmont resembles a meta-arenite and is a paragneiss.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "structures",
+     "record": {
+      "kind": "fault",
+      "name": {
+       "value": "Barr Lake fault",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "the location of the northeast-striking Barr Lake fault",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "fault_type": {
+       "value": "normal",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.765,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Offset along Barr Lake fault indicates normal",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      },
+      "sense": {
+       "value": "north side up relative to the south side",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "movement with north side up relative to the south side",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "description": {
+       "value": "northeast-striking; identified from drilling studies in Steedman and field investigations in Barr Lake quadrangle as offset in the basement; no distinctive offsets in Coastal Plain stratigraphy recognized",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "have identified offset in the basement and the location of",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "structures",
+     "record": {
+      "kind": "fault",
+      "name": {
+       "value": "Augusta fault",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "The position of the Augusta fault is inferred from drilling",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "certainty": {
+       "value": "position inferred from drilling studies and interpretation of the regional aeromagnetic intensity map",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "The position of the Augusta fault is inferred from drilling",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "sense": {
+       "value": "Similar motion (normal, north side up) as the Barr Lake fault",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.52,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Similar motion is indicated for the Augusta",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "'similar motion' refers to the Barr Lake fault's normal, north-side-up movement"
+      },
+      "description": {
+       "value": "Depth to basement increases abruptly south of the Augusta fault trace, except for a small window along Chinquapin Creek interpreted as an uplifted wedge of basement",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.765,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Drilling studies in Steedman indicate that depth to basement increases abruptly south of the",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      }
+     }
+    },
+    {
+     "section": "structures",
+     "record": {
+      "kind": "foliation",
+      "strike_dip": {
+       "value": "N83°E, dips 70° SE",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Foliation strikes N83°E, dips 70° SE.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "strike": 83,
+        "dip": 70,
+        "dip_direction": "SE",
+        "convention_inferred": false
+       }
+      },
+      "location": {
+       "value": "Weathered felsic gneiss exposed along creek (Photo 1)",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Photo 1. Weathered felsic gneiss exposed along creek.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "references",
+     "record": {
+      "citation": {
+       "value": "Daniels, D. L., 2005, South Carolina aeromagnetic and gravity maps and data: a web site for distribution of data: U.S. Geological Survey Open-File Report 2005-1022, online only.",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Daniels, D. L., 2005 South Carolina aeromagnetic and gravity maps and data: a web site for",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "references",
+     "record": {
+      "citation": {
+       "value": "Howard, C. S., 2010, Observations of the 1886 Charleston earthquake in central South Carolina, evidence for fault reactivation: South Carolina Geology, v. 47, p. 33-44.",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Howard, C. S., 2010, Observations of the 1886 Charleston earthquake in central South Carolina,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "references",
+     "record": {
+      "citation": {
+       "value": "Maybin, A.H., III, Clendenin, C.W., Jr, and Daniels, D.L., 1998, Structural features of South Carolina: South Carolina Geological Survey, General Geologic Map Series 4, scale 1:500,000.",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Maybin, A.H., III, Clendenin, C.W., Jr, and Daniels, D.L., 1998, Structural features of South",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "references",
+     "record": {
+      "citation": {
+       "value": "Secor, D. T., Jr. and A. W. Snoke, 2002, Explanatory notes to accompany the geologic map of the Batesburg and Emory quadrangles, Lexington and Saluda Counties, South Carolina: Geological Society of America Map and Chart Series MCH091, 32 p.",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Secor, D. T., Jr. and A. W. Snoke, 2002, Explanatory notes to accompany the geologic map of the",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "sections",
+     "record": {
+      "name": {
+       "value": "A-A'",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.612,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "A A!",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "note": "section end labels A and A' (OCR 'A A!')"
+      },
+      "start": {
+       "label": {
+        "value": "A",
+        "source_id": "ngmdb:95418",
+        "page": 1,
+        "extraction_method": "llm",
+        "confidence": 0.765,
+        "inferred": false,
+        "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+        "quote": "A",
+        "quote_match": "exact",
+        "text_method": "ocr",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-144dpi-crop30_2070_2430_2260-r1c1",
+         "box": [
+          180,
+          35,
+          205,
+          60
+         ],
+         "dpi": 144,
+         "page_px_box": [
+          240,
+          4175,
+          265,
+          4200
+         ],
+         "pt_box": [
+          120.0,
+          2087.5,
+          132.5,
+          2100.0
+         ],
+         "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+        }
+       }
+      },
+      "end": {
+       "label": {
+        "value": "A'",
+        "source_id": "ngmdb:95418",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.6,
+        "inferred": false,
+        "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=2342.5,2085,17.5,14",
+        "quote": "A'",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-144dpi-crop30_2070_2430_2260-r1c4",
+         "box": [
+          1115,
+          30,
+          1150,
+          58
+         ],
+         "dpi": 144,
+         "page_px_box": [
+          4685,
+          4170,
+          4720,
+          4198
+         ],
+         "pt_box": [
+          2342.5,
+          2085.0,
+          2360.0,
+          2099.0
+         ],
+         "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+        }
+       }
+      },
+      "vertical_exaggeration": {
+       "value": "25",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.765,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "Vertical exaggeration is 25",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "normalized": 25.0
+      },
+      "elevation_units": {
+       "value": "FEET (left), METERS (right)",
+       "source_id": "ngmdb:95418",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.765,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+       "quote": "FEET METERS",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      },
+      "observations": [
+       {
+        "value": "32-233",
+        "source_id": "ngmdb:95418",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.6,
+        "inferred": false,
+        "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=419,2139,28,9",
+        "quote": "32-233",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+         "box": [
+          778,
+          78,
+          834,
+          96
+         ],
+         "dpi": 144,
+         "page_px_box": [
+          838,
+          4278,
+          894,
+          4296
+         ],
+         "pt_box": [
+          419.0,
+          2139.0,
+          447.0,
+          2148.0
+         ],
+         "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+        },
+        "note": "drill hole on the section"
+       },
+       {
+        "value": "32-234",
+        "source_id": "ngmdb:95418",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.6,
+        "inferred": false,
+        "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=448,2133,28,9",
+        "quote": "32-234",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+         "box": [
+          836,
+          66,
+          892,
+          84
+         ],
+         "dpi": 144,
+         "page_px_box": [
+          896,
+          4266,
+          952,
+          4284
+         ],
+         "pt_box": [
+          448.0,
+          2133.0,
+          476.0,
+          2142.0
+         ],
+         "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+        },
+        "note": "drill hole on the section"
+       },
+       {
+        "value": "32-241",
+        "source_id": "ngmdb:95418",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.6,
+        "inferred": false,
+        "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=647.5,2188,27.5,9",
+        "quote": "32-241",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+         "box": [
+          1235,
+          176,
+          1290,
+          194
+         ],
+         "dpi": 144,
+         "page_px_box": [
+          1295,
+          4376,
+          1350,
+          4394
+         ],
+         "pt_box": [
+          647.5,
+          2188.0,
+          675.0,
+          2197.0
+         ],
+         "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+        },
+        "note": "drill hole on the section"
+       },
+       {
+        "value": "32-221",
+        "source_id": "ngmdb:95418",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.6,
+        "inferred": false,
+        "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=1110,2158,28,9",
+        "quote": "32-221",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-144dpi-crop30_2100_2430_2340-r1c2",
+         "box": [
+          990,
+          116,
+          1046,
+          134
+         ],
+         "dpi": 144,
+         "page_px_box": [
+          2220,
+          4316,
+          2276,
+          4334
+         ],
+         "pt_box": [
+          1110.0,
+          2158.0,
+          1138.0,
+          2167.0
+         ],
+         "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+        },
+        "note": "drill hole on the section"
+       },
+       {
+        "value": "32-225",
+        "source_id": "ngmdb:95418",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.6,
+        "inferred": false,
+        "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=1510,2225,28,10",
+        "quote": "32-225",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-144dpi-crop30_2100_2430_2340-r1c3",
+         "box": [
+          620,
+          250,
+          676,
+          270
+         ],
+         "dpi": 144,
+         "page_px_box": [
+          3020,
+          4450,
+          3076,
+          4470
+         ],
+         "pt_box": [
+          1510.0,
+          2225.0,
+          1538.0,
+          2235.0
+         ],
+         "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+        },
+        "note": "drill hole on the section"
+       },
+       {
+        "value": "32-224",
+        "source_id": "ngmdb:95418",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.6,
+        "inferred": false,
+        "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=1748,2163,28,9",
+        "quote": "32-224",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-144dpi-crop30_2100_2430_2340-r1c3",
+         "box": [
+          1096,
+          126,
+          1152,
+          144
+         ],
+         "dpi": 144,
+         "page_px_box": [
+          3496,
+          4326,
+          3552,
+          4344
+         ],
+         "pt_box": [
+          1748.0,
+          2163.0,
+          1776.0,
+          2172.0
+         ],
+         "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+        },
+        "note": "drill hole on the section"
+       },
+       {
+        "value": "32-227",
+        "source_id": "ngmdb:95418",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.6,
+        "inferred": false,
+        "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=1997,2129,28,9",
+        "quote": "32-227",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-144dpi-crop30_2100_2430_2340-r1c4",
+         "box": [
+          424,
+          58,
+          480,
+          76
+         ],
+         "dpi": 144,
+         "page_px_box": [
+          3994,
+          4258,
+          4050,
+          4276
+         ],
+         "pt_box": [
+          1997.0,
+          2129.0,
+          2025.0,
+          2138.0
+         ],
+         "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+        },
+        "note": "drill hole on the section"
+       },
+       {
+        "value": "32-228",
+        "source_id": "ngmdb:95418",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.6,
+        "inferred": false,
+        "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=2107,2199,28,9",
+        "quote": "32-228",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-144dpi-crop30_2100_2430_2340-r1c4",
+         "box": [
+          644,
+          198,
+          700,
+          216
+         ],
+         "dpi": 144,
+         "page_px_box": [
+          4214,
+          4398,
+          4270,
+          4416
+         ],
+         "pt_box": [
+          2107.0,
+          2199.0,
+          2135.0,
+          2208.0
+         ],
+         "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+        },
+        "note": "drill hole on the section"
+       }
+      ],
+      "holes": [
+       {
+        "label": {
+         "value": "32-233",
+         "source_id": "ngmdb:95418",
+         "page": 1,
+         "extraction_method": "llm-image",
+         "confidence": 0.6,
+         "inferred": false,
+         "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=419,2139,28,9",
+         "quote": "32-233",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+          "box": [
+           778,
+           78,
+           834,
+           96
+          ],
+          "dpi": 144,
+          "page_px_box": [
+           838,
+           4278,
+           894,
+           4296
+          ],
+          "pt_box": [
+           419.0,
+           2139.0,
+           447.0,
+           2148.0
+          ],
+          "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+         },
+         "note": "drill hole label on the section face"
+        },
+        "elevation": {
+         "value": 516,
+         "source_id": "ngmdb:95418",
+         "page": 1,
+         "extraction_method": "llm-image",
+         "confidence": 0.192,
+         "inferred": true,
+         "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=432.5,2138,15,7",
+         "quote": "32-233",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "disagree",
+         "image": {
+          "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+          "box": [
+           805,
+           76,
+           835,
+           90
+          ],
+          "dpi": 144,
+          "page_px_box": [
+           865,
+           4276,
+           895,
+           4290
+          ],
+          "pt_box": [
+           432.5,
+           2138.0,
+           447.5,
+           2145.0
+          ],
+          "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+         },
+         "units": "ft",
+         "note": "land surface at the hole (top of drawn hole), read off the section's own elevation scale (feet), about +/-3 ft",
+         "normalized": {
+          "min_ft": 516.0,
+          "max_ft": 516.0,
+          "unit": "ft",
+          "approximate": false
+         }
+        },
+        "depth_reference": {
+         "value": "elevation",
+         "source_id": "ngmdb:95418",
+         "page": 1,
+         "extraction_method": "llm-image",
+         "confidence": 0.48,
+         "inferred": true,
+         "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=419,2139,28,9",
+         "quote": "32-233",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+          "box": [
+           778,
+           78,
+           834,
+           96
+          ],
+          "dpi": 144,
+          "page_px_box": [
+           838,
+           4278,
+           894,
+           4296
+          ],
+          "pt_box": [
+           419.0,
+           2139.0,
+           447.0,
+           2148.0
+          ],
+          "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+         },
+         "note": "interval tops and bottoms are elevations read off the section scale"
+        },
+        "intervals": [
+         {
+          "unit": {
+           "value": "UKs",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm",
+           "confidence": 0.612,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+           "quote": "UKs",
+           "quote_match": "exact",
+           "text_method": "ocr",
+           "verification": "agree",
+           "note": "unit drawn in the hole on the section",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+            "box": [
+             805,
+             82,
+             835,
+             198
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             865,
+             4282,
+             895,
+             4398
+            ],
+            "pt_box": [
+             432.5,
+             2141.0,
+             447.5,
+             2199.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           }
+          },
+          "top": {
+           "value": "516 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.192,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=432.5,2141,15,58",
+           "quote": "32-233",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "disagree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+            "box": [
+             805,
+             82,
+             835,
+             198
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             865,
+             4282,
+             895,
+             4398
+            ],
+            "pt_box": [
+             432.5,
+             2141.0,
+             447.5,
+             2199.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 516.0,
+            "max_ft": 516.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          },
+          "bottom": {
+           "value": "456 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=432.5,2141,15,58",
+           "quote": "32-233",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+            "box": [
+             805,
+             82,
+             835,
+             198
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             865,
+             4282,
+             895,
+             4398
+            ],
+            "pt_box": [
+             432.5,
+             2141.0,
+             447.5,
+             2199.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 456.0,
+            "max_ft": 456.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          }
+         },
+         {
+          "unit": {
+           "value": "Pu",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm",
+           "confidence": 0.612,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+           "quote": "Pu",
+           "quote_match": "exact",
+           "text_method": "ocr",
+           "verification": "agree",
+           "note": "unit drawn in the hole on the section",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+            "box": [
+             805,
+             190,
+             835,
+             212
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             865,
+             4390,
+             895,
+             4412
+            ],
+            "pt_box": [
+             432.5,
+             2195.0,
+             447.5,
+             2206.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           }
+          },
+          "top": {
+           "value": "456 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=432.5,2195,15,11",
+           "quote": "32-233",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+            "box": [
+             805,
+             190,
+             835,
+             212
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             865,
+             4390,
+             895,
+             4412
+            ],
+            "pt_box": [
+             432.5,
+             2195.0,
+             447.5,
+             2206.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 456.0,
+            "max_ft": 456.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          },
+          "bottom": {
+           "value": "450 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=432.5,2195,15,11",
+           "quote": "32-233",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+            "box": [
+             805,
+             190,
+             835,
+             212
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             865,
+             4390,
+             895,
+             4412
+            ],
+            "pt_box": [
+             432.5,
+             2195.0,
+             447.5,
+             2206.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 450.0,
+            "max_ft": 450.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          }
+         }
+        ]
+       },
+       {
+        "label": {
+         "value": "32-234",
+         "source_id": "ngmdb:95418",
+         "page": 1,
+         "extraction_method": "llm-image",
+         "confidence": 0.6,
+         "inferred": false,
+         "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=448,2133,28,9",
+         "quote": "32-234",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+          "box": [
+           836,
+           66,
+           892,
+           84
+          ],
+          "dpi": 144,
+          "page_px_box": [
+           896,
+           4266,
+           952,
+           4284
+          ],
+          "pt_box": [
+           448.0,
+           2133.0,
+           476.0,
+           2142.0
+          ],
+          "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+         },
+         "note": "drill hole label on the section face"
+        },
+        "elevation": {
+         "value": 513,
+         "source_id": "ngmdb:95418",
+         "page": 1,
+         "extraction_method": "llm-image",
+         "confidence": 0.48,
+         "inferred": true,
+         "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=449,2141,12,6",
+         "quote": "32-234",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+          "box": [
+           838,
+           82,
+           862,
+           94
+          ],
+          "dpi": 144,
+          "page_px_box": [
+           898,
+           4282,
+           922,
+           4294
+          ],
+          "pt_box": [
+           449.0,
+           2141.0,
+           461.0,
+           2147.0
+          ],
+          "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+         },
+         "units": "ft",
+         "note": "land surface at the hole (top of drawn hole), read off the section's own elevation scale (feet), about +/-3 ft",
+         "normalized": {
+          "min_ft": 513.0,
+          "max_ft": 513.0,
+          "unit": "ft",
+          "approximate": false
+         }
+        },
+        "depth_reference": {
+         "value": "elevation",
+         "source_id": "ngmdb:95418",
+         "page": 1,
+         "extraction_method": "llm-image",
+         "confidence": 0.48,
+         "inferred": true,
+         "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=448,2133,28,9",
+         "quote": "32-234",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+          "box": [
+           836,
+           66,
+           892,
+           84
+          ],
+          "dpi": 144,
+          "page_px_box": [
+           896,
+           4266,
+           952,
+           4284
+          ],
+          "pt_box": [
+           448.0,
+           2133.0,
+           476.0,
+           2142.0
+          ],
+          "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+         },
+         "note": "interval tops and bottoms are elevations read off the section scale"
+        },
+        "intervals": [
+         {
+          "unit": {
+           "value": "UKs",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm",
+           "confidence": 0.612,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+           "quote": "UKs",
+           "quote_match": "exact",
+           "text_method": "ocr",
+           "verification": "agree",
+           "note": "unit drawn in the hole on the section",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+            "box": [
+             838,
+             88,
+             862,
+             226
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             898,
+             4288,
+             922,
+             4426
+            ],
+            "pt_box": [
+             449.0,
+             2144.0,
+             461.0,
+             2213.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           }
+          },
+          "top": {
+           "value": "513 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=449,2144,12,69",
+           "quote": "32-234",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+            "box": [
+             838,
+             88,
+             862,
+             226
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             898,
+             4288,
+             922,
+             4426
+            ],
+            "pt_box": [
+             449.0,
+             2144.0,
+             461.0,
+             2213.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 513.0,
+            "max_ft": 513.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          },
+          "bottom": {
+           "value": "441 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=449,2144,12,69",
+           "quote": "32-234",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+            "box": [
+             838,
+             88,
+             862,
+             226
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             898,
+             4288,
+             922,
+             4426
+            ],
+            "pt_box": [
+             449.0,
+             2144.0,
+             461.0,
+             2213.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 441.0,
+            "max_ft": 441.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          }
+         },
+         {
+          "unit": {
+           "value": "Pu",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm",
+           "confidence": 0.612,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+           "quote": "Pu",
+           "quote_match": "exact",
+           "text_method": "ocr",
+           "verification": "agree",
+           "note": "unit drawn in the hole on the section",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+            "box": [
+             838,
+             216,
+             862,
+             244
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             898,
+             4416,
+             922,
+             4444
+            ],
+            "pt_box": [
+             449.0,
+             2208.0,
+             461.0,
+             2222.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           }
+          },
+          "top": {
+           "value": "441 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=449,2208,12,14",
+           "quote": "32-234",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+            "box": [
+             838,
+             216,
+             862,
+             244
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             898,
+             4416,
+             922,
+             4444
+            ],
+            "pt_box": [
+             449.0,
+             2208.0,
+             461.0,
+             2222.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 441.0,
+            "max_ft": 441.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          },
+          "bottom": {
+           "value": "432 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=449,2208,12,14",
+           "quote": "32-234",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+            "box": [
+             838,
+             216,
+             862,
+             244
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             898,
+             4416,
+             922,
+             4444
+            ],
+            "pt_box": [
+             449.0,
+             2208.0,
+             461.0,
+             2222.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 432.0,
+            "max_ft": 432.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          }
+         }
+        ]
+       },
+       {
+        "label": {
+         "value": "32-241",
+         "source_id": "ngmdb:95418",
+         "page": 1,
+         "extraction_method": "llm-image",
+         "confidence": 0.6,
+         "inferred": false,
+         "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=647.5,2188,27.5,9",
+         "quote": "32-241",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+          "box": [
+           1235,
+           176,
+           1290,
+           194
+          ],
+          "dpi": 144,
+          "page_px_box": [
+           1295,
+           4376,
+           1350,
+           4394
+          ],
+          "pt_box": [
+           647.5,
+           2188.0,
+           675.0,
+           2197.0
+          ],
+          "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+         },
+         "note": "drill hole label on the section face"
+        },
+        "elevation": {
+         "value": 453,
+         "source_id": "ngmdb:95418",
+         "page": 1,
+         "extraction_method": "llm-image",
+         "confidence": 0.48,
+         "inferred": true,
+         "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=654,2197,12,6",
+         "quote": "32-241",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+          "box": [
+           1248,
+           194,
+           1272,
+           206
+          ],
+          "dpi": 144,
+          "page_px_box": [
+           1308,
+           4394,
+           1332,
+           4406
+          ],
+          "pt_box": [
+           654.0,
+           2197.0,
+           666.0,
+           2203.0
+          ],
+          "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+         },
+         "units": "ft",
+         "note": "land surface at the hole (top of drawn hole), read off the section's own elevation scale (feet), about +/-3 ft",
+         "normalized": {
+          "min_ft": 453.0,
+          "max_ft": 453.0,
+          "unit": "ft",
+          "approximate": false
+         }
+        },
+        "depth_reference": {
+         "value": "elevation",
+         "source_id": "ngmdb:95418",
+         "page": 1,
+         "extraction_method": "llm-image",
+         "confidence": 0.48,
+         "inferred": true,
+         "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=647.5,2188,27.5,9",
+         "quote": "32-241",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+          "box": [
+           1235,
+           176,
+           1290,
+           194
+          ],
+          "dpi": 144,
+          "page_px_box": [
+           1295,
+           4376,
+           1350,
+           4394
+          ],
+          "pt_box": [
+           647.5,
+           2188.0,
+           675.0,
+           2197.0
+          ],
+          "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+         },
+         "note": "interval tops and bottoms are elevations read off the section scale"
+        },
+        "intervals": [
+         {
+          "unit": {
+           "value": "UKs",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm",
+           "confidence": 0.612,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+           "quote": "UKs",
+           "quote_match": "exact",
+           "text_method": "ocr",
+           "verification": "agree",
+           "note": "unit drawn in the hole on the section",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+            "box": [
+             1248,
+             200,
+             1272,
+             316
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             1308,
+             4400,
+             1332,
+             4516
+            ],
+            "pt_box": [
+             654.0,
+             2200.0,
+             666.0,
+             2258.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           }
+          },
+          "top": {
+           "value": "453 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=654,2200,12,58",
+           "quote": "32-241",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+            "box": [
+             1248,
+             200,
+             1272,
+             316
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             1308,
+             4400,
+             1332,
+             4516
+            ],
+            "pt_box": [
+             654.0,
+             2200.0,
+             666.0,
+             2258.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 453.0,
+            "max_ft": 453.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          },
+          "bottom": {
+           "value": "394 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=654,2200,12,58",
+           "quote": "32-241",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
+            "box": [
+             1248,
+             200,
+             1272,
+             316
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             1308,
+             4400,
+             1332,
+             4516
+            ],
+            "pt_box": [
+             654.0,
+             2200.0,
+             666.0,
+             2258.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 394.0,
+            "max_ft": 394.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          }
+         }
+        ]
+       },
+       {
+        "label": {
+         "value": "32-221",
+         "source_id": "ngmdb:95418",
+         "page": 1,
+         "extraction_method": "llm-image",
+         "confidence": 0.6,
+         "inferred": false,
+         "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=1110,2158,28,9",
+         "quote": "32-221",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p1-144dpi-crop30_2100_2430_2340-r1c2",
+          "box": [
+           990,
+           116,
+           1046,
+           134
+          ],
+          "dpi": 144,
+          "page_px_box": [
+           2220,
+           4316,
+           2276,
+           4334
+          ],
+          "pt_box": [
+           1110.0,
+           2158.0,
+           1138.0,
+           2167.0
+          ],
+          "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+         },
+         "note": "drill hole label on the section face"
+        },
+        "elevation": {
+         "value": 500,
+         "source_id": "ngmdb:95418",
+         "page": 1,
+         "extraction_method": "llm-image",
+         "confidence": 0.48,
+         "inferred": true,
+         "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=1134,2153,12,6",
+         "quote": "32-221",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p1-144dpi-crop30_2100_2430_2340-r1c2",
+          "box": [
+           1038,
+           106,
+           1062,
+           118
+          ],
+          "dpi": 144,
+          "page_px_box": [
+           2268,
+           4306,
+           2292,
+           4318
+          ],
+          "pt_box": [
+           1134.0,
+           2153.0,
+           1146.0,
+           2159.0
+          ],
+          "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+         },
+         "units": "ft",
+         "note": "land surface at the hole (top of drawn hole), read off the section's own elevation scale (feet), about +/-3 ft",
+         "normalized": {
+          "min_ft": 500.0,
+          "max_ft": 500.0,
+          "unit": "ft",
+          "approximate": false
+         }
+        },
+        "depth_reference": {
+         "value": "elevation",
+         "source_id": "ngmdb:95418",
+         "page": 1,
+         "extraction_method": "llm-image",
+         "confidence": 0.48,
+         "inferred": true,
+         "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=1110,2158,28,9",
+         "quote": "32-221",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p1-144dpi-crop30_2100_2430_2340-r1c2",
+          "box": [
+           990,
+           116,
+           1046,
+           134
+          ],
+          "dpi": 144,
+          "page_px_box": [
+           2220,
+           4316,
+           2276,
+           4334
+          ],
+          "pt_box": [
+           1110.0,
+           2158.0,
+           1138.0,
+           2167.0
+          ],
+          "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+         },
+         "note": "interval tops and bottoms are elevations read off the section scale"
+        },
+        "intervals": [
+         {
+          "unit": {
+           "value": "Th",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm",
+           "confidence": 0.612,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+           "quote": "Th",
+           "quote_match": "exact",
+           "text_method": "ocr",
+           "verification": "agree",
+           "note": "unit drawn in the hole on the section",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c2",
+            "box": [
+             1038,
+             112,
+             1062,
+             216
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             2268,
+             4312,
+             2292,
+             4416
+            ],
+            "pt_box": [
+             1134.0,
+             2156.0,
+             1146.0,
+             2208.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           }
+          },
+          "top": {
+           "value": "500 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=1134,2156,12,52",
+           "quote": "32-221",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c2",
+            "box": [
+             1038,
+             112,
+             1062,
+             216
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             2268,
+             4312,
+             2292,
+             4416
+            ],
+            "pt_box": [
+             1134.0,
+             2156.0,
+             1146.0,
+             2208.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 500.0,
+            "max_ft": 500.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          },
+          "bottom": {
+           "value": "446 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=1134,2156,12,52",
+           "quote": "32-221",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c2",
+            "box": [
+             1038,
+             112,
+             1062,
+             216
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             2268,
+             4312,
+             2292,
+             4416
+            ],
+            "pt_box": [
+             1134.0,
+             2156.0,
+             1146.0,
+             2208.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 446.0,
+            "max_ft": 446.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          }
+         },
+         {
+          "unit": {
+           "value": "UKs",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm",
+           "confidence": 0.612,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+           "quote": "UKs",
+           "quote_match": "exact",
+           "text_method": "ocr",
+           "verification": "agree",
+           "note": "unit drawn in the hole on the section",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c2",
+            "box": [
+             1038,
+             208,
+             1062,
+             246
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             2268,
+             4408,
+             2292,
+             4446
+            ],
+            "pt_box": [
+             1134.0,
+             2204.0,
+             1146.0,
+             2223.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           }
+          },
+          "top": {
+           "value": "446 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=1134,2204,12,19",
+           "quote": "32-221",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c2",
+            "box": [
+             1038,
+             208,
+             1062,
+             246
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             2268,
+             4408,
+             2292,
+             4446
+            ],
+            "pt_box": [
+             1134.0,
+             2204.0,
+             1146.0,
+             2223.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 446.0,
+            "max_ft": 446.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          },
+          "bottom": {
+           "value": "431 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=1134,2204,12,19",
+           "quote": "32-221",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c2",
+            "box": [
+             1038,
+             208,
+             1062,
+             246
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             2268,
+             4408,
+             2292,
+             4446
+            ],
+            "pt_box": [
+             1134.0,
+             2204.0,
+             1146.0,
+             2223.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 431.0,
+            "max_ft": 431.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          }
+         }
+        ]
+       },
+       {
+        "label": {
+         "value": "32-225",
+         "source_id": "ngmdb:95418",
+         "page": 1,
+         "extraction_method": "llm-image",
+         "confidence": 0.6,
+         "inferred": false,
+         "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=1510,2225,28,10",
+         "quote": "32-225",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p1-144dpi-crop30_2100_2430_2340-r1c3",
+          "box": [
+           620,
+           250,
+           676,
+           270
+          ],
+          "dpi": 144,
+          "page_px_box": [
+           3020,
+           4450,
+           3076,
+           4470
+          ],
+          "pt_box": [
+           1510.0,
+           2225.0,
+           1538.0,
+           2235.0
+          ],
+          "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+         },
+         "note": "drill hole label on the section face"
+        },
+        "elevation": {
+         "value": 437,
+         "source_id": "ngmdb:95418",
+         "page": 1,
+         "extraction_method": "llm-image",
+         "confidence": 0.48,
+         "inferred": true,
+         "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=1503,2213,12,6",
+         "quote": "32-225",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p1-144dpi-crop30_2100_2430_2340-r1c3",
+          "box": [
+           606,
+           226,
+           630,
+           238
+          ],
+          "dpi": 144,
+          "page_px_box": [
+           3006,
+           4426,
+           3030,
+           4438
+          ],
+          "pt_box": [
+           1503.0,
+           2213.0,
+           1515.0,
+           2219.0
+          ],
+          "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+         },
+         "units": "ft",
+         "note": "land surface at the hole (top of drawn hole), read off the section's own elevation scale (feet), about +/-3 ft",
+         "normalized": {
+          "min_ft": 437.0,
+          "max_ft": 437.0,
+          "unit": "ft",
+          "approximate": false
+         }
+        },
+        "depth_reference": {
+         "value": "elevation",
+         "source_id": "ngmdb:95418",
+         "page": 1,
+         "extraction_method": "llm-image",
+         "confidence": 0.48,
+         "inferred": true,
+         "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=1510,2225,28,10",
+         "quote": "32-225",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p1-144dpi-crop30_2100_2430_2340-r1c3",
+          "box": [
+           620,
+           250,
+           676,
+           270
+          ],
+          "dpi": 144,
+          "page_px_box": [
+           3020,
+           4450,
+           3076,
+           4470
+          ],
+          "pt_box": [
+           1510.0,
+           2225.0,
+           1538.0,
+           2235.0
+          ],
+          "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+         },
+         "note": "interval tops and bottoms are elevations read off the section scale"
+        },
+        "intervals": [
+         {
+          "unit": {
+           "value": "UKs",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm",
+           "confidence": 0.612,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+           "quote": "UKs",
+           "quote_match": "exact",
+           "text_method": "ocr",
+           "verification": "agree",
+           "note": "unit drawn in the hole on the section",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c3",
+            "box": [
+             606,
+             231,
+             630,
+             404
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             3006,
+             4431,
+             3030,
+             4604
+            ],
+            "pt_box": [
+             1503.0,
+             2215.5,
+             1515.0,
+             2302.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           }
+          },
+          "top": {
+           "value": "437 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=1503,2215.5,12,86.5",
+           "quote": "32-225",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c3",
+            "box": [
+             606,
+             231,
+             630,
+             404
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             3006,
+             4431,
+             3030,
+             4604
+            ],
+            "pt_box": [
+             1503.0,
+             2215.5,
+             1515.0,
+             2302.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 437.0,
+            "max_ft": 437.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          },
+          "bottom": {
+           "value": "347 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=1503,2215.5,12,86.5",
+           "quote": "32-225",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c3",
+            "box": [
+             606,
+             231,
+             630,
+             404
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             3006,
+             4431,
+             3030,
+             4604
+            ],
+            "pt_box": [
+             1503.0,
+             2215.5,
+             1515.0,
+             2302.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 347.0,
+            "max_ft": 347.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          }
+         }
+        ]
+       },
+       {
+        "label": {
+         "value": "32-224",
+         "source_id": "ngmdb:95418",
+         "page": 1,
+         "extraction_method": "llm-image",
+         "confidence": 0.6,
+         "inferred": false,
+         "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=1748,2163,28,9",
+         "quote": "32-224",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p1-144dpi-crop30_2100_2430_2340-r1c3",
+          "box": [
+           1096,
+           126,
+           1152,
+           144
+          ],
+          "dpi": 144,
+          "page_px_box": [
+           3496,
+           4326,
+           3552,
+           4344
+          ],
+          "pt_box": [
+           1748.0,
+           2163.0,
+           1776.0,
+           2172.0
+          ],
+          "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+         },
+         "note": "drill hole label on the section face"
+        },
+        "elevation": {
+         "value": 478,
+         "source_id": "ngmdb:95418",
+         "page": 1,
+         "extraction_method": "llm-image",
+         "confidence": 0.48,
+         "inferred": true,
+         "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=1756,2174,13,6",
+         "quote": "32-224",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p1-144dpi-crop30_2100_2430_2340-r1c3",
+          "box": [
+           1112,
+           148,
+           1138,
+           160
+          ],
+          "dpi": 144,
+          "page_px_box": [
+           3512,
+           4348,
+           3538,
+           4360
+          ],
+          "pt_box": [
+           1756.0,
+           2174.0,
+           1769.0,
+           2180.0
+          ],
+          "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+         },
+         "units": "ft",
+         "note": "land surface at the hole (top of drawn hole), read off the section's own elevation scale (feet), about +/-3 ft",
+         "normalized": {
+          "min_ft": 478.0,
+          "max_ft": 478.0,
+          "unit": "ft",
+          "approximate": false
+         }
+        },
+        "depth_reference": {
+         "value": "elevation",
+         "source_id": "ngmdb:95418",
+         "page": 1,
+         "extraction_method": "llm-image",
+         "confidence": 0.48,
+         "inferred": true,
+         "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=1748,2163,28,9",
+         "quote": "32-224",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p1-144dpi-crop30_2100_2430_2340-r1c3",
+          "box": [
+           1096,
+           126,
+           1152,
+           144
+          ],
+          "dpi": 144,
+          "page_px_box": [
+           3496,
+           4326,
+           3552,
+           4344
+          ],
+          "pt_box": [
+           1748.0,
+           2163.0,
+           1776.0,
+           2172.0
+          ],
+          "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+         },
+         "note": "interval tops and bottoms are elevations read off the section scale"
+        },
+        "intervals": [
+         {
+          "unit": {
+           "value": "Th",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm",
+           "confidence": 0.612,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+           "quote": "Th",
+           "quote_match": "exact",
+           "text_method": "ocr",
+           "verification": "agree",
+           "note": "unit drawn in the hole on the section",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c3",
+            "box": [
+             1112,
+             154,
+             1138,
+             214
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             3512,
+             4354,
+             3538,
+             4414
+            ],
+            "pt_box": [
+             1756.0,
+             2177.0,
+             1769.0,
+             2207.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           }
+          },
+          "top": {
+           "value": "478 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=1756,2177,13,30",
+           "quote": "32-224",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c3",
+            "box": [
+             1112,
+             154,
+             1138,
+             214
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             3512,
+             4354,
+             3538,
+             4414
+            ],
+            "pt_box": [
+             1756.0,
+             2177.0,
+             1769.0,
+             2207.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 478.0,
+            "max_ft": 478.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          },
+          "bottom": {
+           "value": "448 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=1756,2177,13,30",
+           "quote": "32-224",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c3",
+            "box": [
+             1112,
+             154,
+             1138,
+             214
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             3512,
+             4354,
+             3538,
+             4414
+            ],
+            "pt_box": [
+             1756.0,
+             2177.0,
+             1769.0,
+             2207.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 448.0,
+            "max_ft": 448.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          }
+         },
+         {
+          "unit": {
+           "value": "UKs",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm",
+           "confidence": 0.612,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+           "quote": "UKs",
+           "quote_match": "exact",
+           "text_method": "ocr",
+           "verification": "agree",
+           "note": "unit drawn in the hole on the section",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c3",
+            "box": [
+             1112,
+             206,
+             1138,
+             272
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             3512,
+             4406,
+             3538,
+             4472
+            ],
+            "pt_box": [
+             1756.0,
+             2203.0,
+             1769.0,
+             2236.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           }
+          },
+          "top": {
+           "value": "448 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=1756,2203,13,33",
+           "quote": "32-224",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c3",
+            "box": [
+             1112,
+             206,
+             1138,
+             272
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             3512,
+             4406,
+             3538,
+             4472
+            ],
+            "pt_box": [
+             1756.0,
+             2203.0,
+             1769.0,
+             2236.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 448.0,
+            "max_ft": 448.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          },
+          "bottom": {
+           "value": "417 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=1756,2203,13,33",
+           "quote": "32-224",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c3",
+            "box": [
+             1112,
+             206,
+             1138,
+             272
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             3512,
+             4406,
+             3538,
+             4472
+            ],
+            "pt_box": [
+             1756.0,
+             2203.0,
+             1769.0,
+             2236.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 417.0,
+            "max_ft": 417.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          }
+         }
+        ]
+       },
+       {
+        "label": {
+         "value": "32-227",
+         "source_id": "ngmdb:95418",
+         "page": 1,
+         "extraction_method": "llm-image",
+         "confidence": 0.6,
+         "inferred": false,
+         "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=1997,2129,28,9",
+         "quote": "32-227",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p1-144dpi-crop30_2100_2430_2340-r1c4",
+          "box": [
+           424,
+           58,
+           480,
+           76
+          ],
+          "dpi": 144,
+          "page_px_box": [
+           3994,
+           4258,
+           4050,
+           4276
+          ],
+          "pt_box": [
+           1997.0,
+           2129.0,
+           2025.0,
+           2138.0
+          ],
+          "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+         },
+         "note": "drill hole label on the section face"
+        },
+        "elevation": {
+         "value": 504,
+         "source_id": "ngmdb:95418",
+         "page": 1,
+         "extraction_method": "llm-image",
+         "confidence": 0.48,
+         "inferred": true,
+         "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=2005,2149,12,7",
+         "quote": "32-227",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p1-144dpi-crop30_2100_2430_2340-r1c4",
+          "box": [
+           440,
+           98,
+           464,
+           112
+          ],
+          "dpi": 144,
+          "page_px_box": [
+           4010,
+           4298,
+           4034,
+           4312
+          ],
+          "pt_box": [
+           2005.0,
+           2149.0,
+           2017.0,
+           2156.0
+          ],
+          "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+         },
+         "units": "ft",
+         "note": "land surface at the hole (top of drawn hole), read off the section's own elevation scale (feet), about +/-3 ft",
+         "normalized": {
+          "min_ft": 504.0,
+          "max_ft": 504.0,
+          "unit": "ft",
+          "approximate": false
+         }
+        },
+        "depth_reference": {
+         "value": "elevation",
+         "source_id": "ngmdb:95418",
+         "page": 1,
+         "extraction_method": "llm-image",
+         "confidence": 0.48,
+         "inferred": true,
+         "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=1997,2129,28,9",
+         "quote": "32-227",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p1-144dpi-crop30_2100_2430_2340-r1c4",
+          "box": [
+           424,
+           58,
+           480,
+           76
+          ],
+          "dpi": 144,
+          "page_px_box": [
+           3994,
+           4258,
+           4050,
+           4276
+          ],
+          "pt_box": [
+           1997.0,
+           2129.0,
+           2025.0,
+           2138.0
+          ],
+          "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+         },
+         "note": "interval tops and bottoms are elevations read off the section scale"
+        },
+        "intervals": [
+         {
+          "unit": {
+           "value": "Tdb",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm",
+           "confidence": 0.612,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+           "quote": "Tdb",
+           "quote_match": "exact",
+           "text_method": "ocr",
+           "verification": "agree",
+           "note": "unit drawn in the hole on the section",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c4",
+            "box": [
+             440,
+             105,
+             464,
+             156
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             4010,
+             4305,
+             4034,
+             4356
+            ],
+            "pt_box": [
+             2005.0,
+             2152.5,
+             2017.0,
+             2178.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           }
+          },
+          "top": {
+           "value": "504 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=2005,2152.5,12,25.5",
+           "quote": "32-227",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c4",
+            "box": [
+             440,
+             105,
+             464,
+             156
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             4010,
+             4305,
+             4034,
+             4356
+            ],
+            "pt_box": [
+             2005.0,
+             2152.5,
+             2017.0,
+             2178.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 504.0,
+            "max_ft": 504.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          },
+          "bottom": {
+           "value": "479 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=2005,2152.5,12,25.5",
+           "quote": "32-227",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c4",
+            "box": [
+             440,
+             105,
+             464,
+             156
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             4010,
+             4305,
+             4034,
+             4356
+            ],
+            "pt_box": [
+             2005.0,
+             2152.5,
+             2017.0,
+             2178.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 479.0,
+            "max_ft": 479.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          }
+         },
+         {
+          "unit": {
+           "value": "Th",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm",
+           "confidence": 0.612,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+           "quote": "Th",
+           "quote_match": "exact",
+           "text_method": "ocr",
+           "verification": "agree",
+           "note": "unit drawn in the hole on the section",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c4",
+            "box": [
+             440,
+             148,
+             464,
+             244
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             4010,
+             4348,
+             4034,
+             4444
+            ],
+            "pt_box": [
+             2005.0,
+             2174.0,
+             2017.0,
+             2222.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           }
+          },
+          "top": {
+           "value": "479 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=2005,2174,12,48",
+           "quote": "32-227",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c4",
+            "box": [
+             440,
+             148,
+             464,
+             244
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             4010,
+             4348,
+             4034,
+             4444
+            ],
+            "pt_box": [
+             2005.0,
+             2174.0,
+             2017.0,
+             2222.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 479.0,
+            "max_ft": 479.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          },
+          "bottom": {
+           "value": "432 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=2005,2174,12,48",
+           "quote": "32-227",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c4",
+            "box": [
+             440,
+             148,
+             464,
+             244
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             4010,
+             4348,
+             4034,
+             4444
+            ],
+            "pt_box": [
+             2005.0,
+             2174.0,
+             2017.0,
+             2222.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 432.0,
+            "max_ft": 432.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          }
+         },
+         {
+          "unit": {
+           "value": "UKs",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm",
+           "confidence": 0.612,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+           "quote": "UKs",
+           "quote_match": "exact",
+           "text_method": "ocr",
+           "verification": "agree",
+           "note": "unit drawn in the hole on the section",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c4",
+            "box": [
+             440,
+             236,
+             464,
+             258
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             4010,
+             4436,
+             4034,
+             4458
+            ],
+            "pt_box": [
+             2005.0,
+             2218.0,
+             2017.0,
+             2229.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           }
+          },
+          "top": {
+           "value": "432 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=2005,2218,12,11",
+           "quote": "32-227",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c4",
+            "box": [
+             440,
+             236,
+             464,
+             258
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             4010,
+             4436,
+             4034,
+             4458
+            ],
+            "pt_box": [
+             2005.0,
+             2218.0,
+             2017.0,
+             2229.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 432.0,
+            "max_ft": 432.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          },
+          "bottom": {
+           "value": "424 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=2005,2218,12,11",
+           "quote": "32-227",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c4",
+            "box": [
+             440,
+             236,
+             464,
+             258
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             4010,
+             4436,
+             4034,
+             4458
+            ],
+            "pt_box": [
+             2005.0,
+             2218.0,
+             2017.0,
+             2229.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 424.0,
+            "max_ft": 424.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          }
+         }
+        ]
+       },
+       {
+        "label": {
+         "value": "32-228",
+         "source_id": "ngmdb:95418",
+         "page": 1,
+         "extraction_method": "llm-image",
+         "confidence": 0.6,
+         "inferred": false,
+         "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=2107,2199,28,9",
+         "quote": "32-228",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p1-144dpi-crop30_2100_2430_2340-r1c4",
+          "box": [
+           644,
+           198,
+           700,
+           216
+          ],
+          "dpi": 144,
+          "page_px_box": [
+           4214,
+           4398,
+           4270,
+           4416
+          ],
+          "pt_box": [
+           2107.0,
+           2199.0,
+           2135.0,
+           2208.0
+          ],
+          "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+         },
+         "note": "drill hole label on the section face"
+        },
+        "elevation": {
+         "value": 443,
+         "source_id": "ngmdb:95418",
+         "page": 1,
+         "extraction_method": "llm-image",
+         "confidence": 0.48,
+         "inferred": true,
+         "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=2115,2206,13,7",
+         "quote": "32-228",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p1-144dpi-crop30_2100_2430_2340-r1c4",
+          "box": [
+           660,
+           212,
+           686,
+           226
+          ],
+          "dpi": 144,
+          "page_px_box": [
+           4230,
+           4412,
+           4256,
+           4426
+          ],
+          "pt_box": [
+           2115.0,
+           2206.0,
+           2128.0,
+           2213.0
+          ],
+          "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+         },
+         "units": "ft",
+         "note": "land surface at the hole (top of drawn hole), read off the section's own elevation scale (feet), about +/-3 ft",
+         "normalized": {
+          "min_ft": 443.0,
+          "max_ft": 443.0,
+          "unit": "ft",
+          "approximate": false
+         }
+        },
+        "depth_reference": {
+         "value": "elevation",
+         "source_id": "ngmdb:95418",
+         "page": 1,
+         "extraction_method": "llm-image",
+         "confidence": 0.48,
+         "inferred": true,
+         "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=2107,2199,28,9",
+         "quote": "32-228",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p1-144dpi-crop30_2100_2430_2340-r1c4",
+          "box": [
+           644,
+           198,
+           700,
+           216
+          ],
+          "dpi": 144,
+          "page_px_box": [
+           4214,
+           4398,
+           4270,
+           4416
+          ],
+          "pt_box": [
+           2107.0,
+           2199.0,
+           2135.0,
+           2208.0
+          ],
+          "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+         },
+         "note": "interval tops and bottoms are elevations read off the section scale"
+        },
+        "intervals": [
+         {
+          "unit": {
+           "value": "Th",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm",
+           "confidence": 0.612,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+           "quote": "Th",
+           "quote_match": "exact",
+           "text_method": "ocr",
+           "verification": "agree",
+           "note": "unit drawn in the hole on the section",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c4",
+            "box": [
+             660,
+             219,
+             686,
+             266
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             4230,
+             4419,
+             4256,
+             4466
+            ],
+            "pt_box": [
+             2115.0,
+             2209.5,
+             2128.0,
+             2233.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           }
+          },
+          "top": {
+           "value": "443 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=2115,2209.5,13,23.5",
+           "quote": "32-228",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c4",
+            "box": [
+             660,
+             219,
+             686,
+             266
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             4230,
+             4419,
+             4256,
+             4466
+            ],
+            "pt_box": [
+             2115.0,
+             2209.5,
+             2128.0,
+             2233.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 443.0,
+            "max_ft": 443.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          },
+          "bottom": {
+           "value": "420 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=2115,2209.5,13,23.5",
+           "quote": "32-228",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c4",
+            "box": [
+             660,
+             219,
+             686,
+             266
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             4230,
+             4419,
+             4256,
+             4466
+            ],
+            "pt_box": [
+             2115.0,
+             2209.5,
+             2128.0,
+             2233.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 420.0,
+            "max_ft": 420.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          }
+         },
+         {
+          "unit": {
+           "value": "UKs",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm",
+           "confidence": 0.612,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1",
+           "quote": "UKs",
+           "quote_match": "exact",
+           "text_method": "ocr",
+           "verification": "agree",
+           "note": "unit drawn in the hole on the section",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c4",
+            "box": [
+             660,
+             258,
+             686,
+             316
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             4230,
+             4458,
+             4256,
+             4516
+            ],
+            "pt_box": [
+             2115.0,
+             2229.0,
+             2128.0,
+             2258.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           }
+          },
+          "top": {
+           "value": "420 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=2115,2229,13,29",
+           "quote": "32-228",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c4",
+            "box": [
+             660,
+             258,
+             686,
+             316
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             4230,
+             4458,
+             4256,
+             4516
+            ],
+            "pt_box": [
+             2115.0,
+             2229.0,
+             2128.0,
+             2258.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 420.0,
+            "max_ft": 420.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          },
+          "bottom": {
+           "value": "394 ft",
+           "source_id": "ngmdb:95418",
+           "page": 1,
+           "extraction_method": "llm-image",
+           "confidence": 0.48,
+           "inferred": true,
+           "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=2115,2229,13,29",
+           "quote": "32-228",
+           "quote_match": "image",
+           "text_method": "image",
+           "verification": "agree",
+           "image": {
+            "tile": "p1-144dpi-crop30_2100_2430_2340-r1c4",
+            "box": [
+             660,
+             258,
+             686,
+             316
+            ],
+            "dpi": 144,
+            "page_px_box": [
+             4230,
+             4458,
+             4256,
+             4516
+            ],
+            "pt_box": [
+             2115.0,
+             2229.0,
+             2128.0,
+             2258.0
+            ],
+            "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
+           },
+           "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
+           "normalized": {
+            "min_ft": 394.0,
+            "max_ft": 394.0,
+            "unit": "ft",
+            "approximate": false
+           }
+          }
+         }
+        ]
+       }
+      ]
+     }
+    }
+   ]
   }
  ],
  "units": [
@@ -1722,48 +6278,48 @@
        ],
        "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
       },
-      "note": "drill hole label on the section face"
+      "note": "drill hole label on the section face; top cap of the hole at about 509 ft (verify pass)"
      },
      "elevation": {
-      "value": 516,
+      "value": 509,
       "source_id": "ngmdb:95418",
       "page": 1,
       "extraction_method": "llm-image",
-      "confidence": 0.192,
+      "confidence": 0.48,
       "inferred": true,
-      "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=432.5,2138,15,7",
+      "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=432.5,2144.5,15,6",
       "quote": "32-233",
       "quote_match": "image",
       "text_method": "image",
-      "verification": "disagree",
+      "verification": "agree",
       "image": {
        "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
        "box": [
         805,
-        76,
+        89,
         835,
-        90
+        101
        ],
        "dpi": 144,
        "page_px_box": [
         865,
-        4276,
+        4289,
         895,
-        4290
+        4301
        ],
        "pt_box": [
         432.5,
-        2138.0,
+        2144.5,
         447.5,
-        2145.0
+        2150.5
        ],
        "pdf_sha256": "1a73e78942b3cb0f7de6aa9d84b67fd8bc3f0a9640260502f360feca219fc030"
       },
       "units": "ft",
       "note": "land surface at the hole (top of drawn hole), read off the section's own elevation scale (feet), about +/-3 ft",
       "normalized": {
-       "min_ft": 516.0,
-       "max_ft": 516.0,
+       "min_ft": 509.0,
+       "max_ft": 509.0,
        "unit": "ft",
        "approximate": false
       }
@@ -1845,17 +6401,17 @@
         }
        },
        "top": {
-        "value": "516 ft",
+        "value": "509 ft",
         "source_id": "ngmdb:95418",
         "page": 1,
         "extraction_method": "llm-image",
-        "confidence": 0.192,
+        "confidence": 0.48,
         "inferred": true,
         "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95418_1#page=1&viewrect=432.5,2141,15,58",
         "quote": "32-233",
         "quote_match": "image",
         "text_method": "image",
-        "verification": "disagree",
+        "verification": "agree",
         "image": {
          "tile": "p1-144dpi-crop30_2100_2430_2340-r1c1",
          "box": [
@@ -1881,8 +6437,8 @@
         },
         "note": "elevation, read off the section's own elevation scale (feet), about +/-3 ft",
         "normalized": {
-         "min_ft": 516.0,
-         "max_ft": 516.0,
+         "min_ft": 509.0,
+         "max_ft": 509.0,
          "unit": "ft",
          "approximate": false
         }
