@@ -1,14 +1,14 @@
 {
  "about": "Documents already read whose chosen pages need a re-read (python -m extract.reread; see extract/SESSION.md).",
  "count": 48,
- "pending": 44,
+ "pending": 43,
  "by_reason": {
   "logs": 2,
-  "map_face": 1,
   "image_pages": 2,
   "water_tests": 13,
   "rock_tests": 1,
-  "subsurface_fields": 29
+  "subsurface_fields": 29,
+  "map_face": 1
  },
  "items": [
   {
@@ -33,20 +33,6 @@
    "ocr": true,
    "detail": "Field logs and geosummary logs had no text in the first reading; these are the pages left out of it. Record the lithologic intervals.",
    "images": false,
-   "added_at": "2026-10-14T23:00:22+00:00",
-   "status": "pending"
-  },
-  {
-   "id": "ngmdb:42961:map_face:p1",
-   "origin": "ROADMAP 1.9",
-   "source_id": "ngmdb:42961",
-   "pages": [
-    1
-   ],
-   "reason": "map_face",
-   "detail": "Contour values and power/hand auger-hole and seismic-station elevations on the map face (OCR garbled in the first reading): record them as surfaces and contours where legible.",
-   "ocr": false,
-   "images": true,
    "added_at": "2026-10-14T23:00:22+00:00",
    "status": "pending"
   },
@@ -890,6 +876,21 @@
    "images": true,
    "added_at": "2026-10-14T23:00:22+00:00",
    "status": "pending"
+  },
+  {
+   "id": "ngmdb:42961:map_face:p1",
+   "origin": "ROADMAP 1.9",
+   "source_id": "ngmdb:42961",
+   "pages": [
+    1
+   ],
+   "reason": "map_face",
+   "detail": "Contour values and power/hand auger-hole and seismic-station elevations on the map face (OCR garbled in the first reading): record them as surfaces and contours where legible.",
+   "ocr": false,
+   "images": true,
+   "added_at": "2026-10-14T23:00:22+00:00",
+   "status": "done",
+   "done_at": "2026-10-18T16:24:48+00:00"
   },
   {
    "id": "ngmdb:46513:water_tests:p11-18",

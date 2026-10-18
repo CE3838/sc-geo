@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 177,
+ "count": 180,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -2334,6 +2334,65 @@
    "verify": {
     "verdict": "unclear",
     "note": "text layer <-1; page image shows <.1"
+   }
+  },
+  {
+   "source_id": "ngmdb:42961",
+   "path": "surfaces[7].elevation",
+   "problem": "image_unclear",
+   "value": "-2 to 2",
+   "page": 1,
+   "quote": "2'",
+   "added_at": "2026-10-18T16:24:47+00:00",
+   "image": {
+    "tile": "p1-144dpi-3x4-r1c3",
+    "box": [
+     715,
+     398,
+     750,
+     428
+    ],
+    "dpi": 144,
+    "page_px_box": [
+     2936,
+     398,
+     2971,
+     428
+    ],
+    "pt_box": [
+     1468.0,
+     199.0,
+     1485.5,
+     214.0
+    ],
+    "pdf_sha256": "dfa435c4dbc71adce2bd9f32eb7fa1c215d21a08a01b748e33a4ae83e402c1c1",
+    "unclear": true
+   }
+  },
+  {
+   "source_id": "ngmdb:42961",
+   "path": "surfaces[27].elevation",
+   "problem": "verify_unclear",
+   "value": -10,
+   "page": 1,
+   "quote": "-10'",
+   "added_at": "2026-10-18T16:24:47+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "sign not clear: the triangle overprints whatever precedes 10' (re-viewed r2c3)"
+   }
+  },
+  {
+   "source_id": "ngmdb:42961",
+   "path": "contours[0].values[13]",
+   "problem": "verify_unclear",
+   "value": -5,
+   "page": 1,
+   "quote": "-5",
+   "added_at": "2026-10-18T16:24:47+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "the dash before 5 may be the contour line itself; -5 fits the 0'/-10 sequence (re-viewed r2c2)"
    }
   }
  ]
