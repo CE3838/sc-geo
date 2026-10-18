@@ -3,7 +3,8 @@
     python -m extract.renormalize                      # dry run over data/extracted: report what would change
     python -m extract.renormalize data/extracted/x.json --write
 
-Only `normalized`, `derived_coordinates` and `navd88` (extract/elevations.py,
+Only `normalized`, `derived_coordinates` (with `coordinates_not_derived`, why an unlabelled
+State Plane location was left blank) and `navd88` (extract/elevations.py,
 with the configured datum grid when it has been downloaded) are recomputed, from each stored
 value's own `value` and `units`, with the same functions ingest uses
 (`ingest.normalized`, `ingest.derived_coordinates`). The value as read, its
@@ -23,7 +24,7 @@ from pathlib import Path
 from extract import elevations, ingest
 from model.units import Lexicon
 
-DERIVED = ("normalized", "derived_coordinates", "navd88")
+DERIVED = ("normalized", "derived_coordinates", "navd88", "coordinates_not_derived")
 
 
 def dumps(doc: dict) -> str:
@@ -45,10 +46,13 @@ def _walk(node, path: str):
 
 
 def renormalize_doc(doc: dict, lexicon: Lexicon | None, cfg: dict = ingest.CONFIG,
-                    grid=None) -> tuple[dict, list[dict]]:
+                    grid=None, catalog_rec: dict | None = None) -> tuple[dict, list[dict]]:
     """(a recomputed copy of doc, [{path, key, value, old, new}]); doc itself is not modified.
 
-    grid: the NGVD29-to-NAVD88 grid (model.vdatum.ShiftGrid) or None for none."""
+    grid: the NGVD29-to-NAVD88 grid (model.vdatum.ShiftGrid) or None for none.
+    catalog_rec: the document's catalog record (year, bbox) for unlabelled State Plane; None uses doc's year."""
+    rec = catalog_rec if catalog_rec is not None else {"year": doc.get("year")}
+    context = {"year": rec.get("year"), "bbox": rec.get("bbox")}
     out = copy.deepcopy(doc)
     for key in ingest.SECTIONS:
         for path, entry in _walk(out.get(key, []), key):
@@ -56,8 +60,9 @@ def renormalize_doc(doc: dict, lexicon: Lexicon | None, cfg: dict = ingest.CONFI
             norm = ingest.normalized(path, val, lexicon)
             fresh = {"normalized": norm if norm not in (None, [], {}) else None}
             base = {k: v for k, v in entry.items() if k not in DERIVED}
-            fresh["derived_coordinates"] = ingest.derived_coordinates(path, val, base, cfg)
-            for k in ("normalized", "derived_coordinates"):
+            fresh["derived_coordinates"], fresh["coordinates_not_derived"] = ingest.derive_coordinates(
+                path, val, base, cfg, context)
+            for k in ("normalized", "derived_coordinates", "coordinates_not_derived"):
                 if fresh[k] is None:
                     entry.pop(k, None)
                 else:
@@ -84,10 +89,11 @@ def main(argv: list[str] | None = None) -> int:
     files = args.files or sorted(ingest.OUT_DIR.glob("*.json"))
     lexicon = ingest._lexicon()
     grid = ingest.default_grid()
+    catalog = ingest._catalog()
     report = {"write": args.write, "files_changed": 0, "changes": 0, "by_key": {}, "files": {}}
     for f in files:
         doc = json.loads(Path(f).read_text())
-        new, changes = renormalize_doc(doc, lexicon, grid=grid)
+        new, changes = renormalize_doc(doc, lexicon, grid=grid, catalog_rec=catalog.get(doc.get("source_id")))
         if not changes:
             continue
         report["files_changed"] += 1
