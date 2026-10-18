@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 168,
+ "count": 170,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -2217,6 +2217,32 @@
    "verify": {
     "verdict": "unclear",
     "note": "OCR prints \"| to 40 feet\"; the first digit is read as 1 but is not printed legibly"
+   }
+  },
+  {
+   "source_id": "ngmdb:94270",
+   "path": "units[6].lithology",
+   "problem": "verify_unclear",
+   "value": "gray, fine- to medium-crystalline, locally leucocratic, moderately well layered biotite-microcline augen gneiss with subhedral to ovoid to rounded microcline augen 1 to 4 cm in size; variably mylonitic",
+   "page": 1,
+   "quote": "Biotite-microcline augen gneiss is gray, fine- to medium-crystalline, locally leucocratic, and moderately well layered compositionally. Subhedral to ovoid to rounded microcline augen are | to 4 cm in size.",
+   "added_at": "2026-10-18T22:57:59+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '| to 4 cm'; the first digit is read as 1 but is not printed legibly"
+   }
+  },
+  {
+   "source_id": "ngmdb:94276",
+   "path": "units[6].lithology",
+   "problem": "verify_unclear",
+   "value": "Brownish gray garnet schist characterized by large garnets 1 to 2 cm in diameter; associated with quartzite",
+   "page": 1,
+   "quote": "Garnet-mica schist — Brownish gray, garnet schist characterized by large garnets | to 2",
+   "added_at": "2026-10-18T22:57:59+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '| to 2 cm'; the first digit is read as 1 but is not printed legibly"
    }
   }
  ]
