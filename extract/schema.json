@@ -35,7 +35,19 @@
         "inferred": {"type": "boolean", "description": "true when the value was reasoned out rather than read directly"},
         "units": {"type": "string", "maxLength": 40, "description": "Measurement units when stated separately from the value (e.g. a table header)"},
         "table": {"type": "boolean", "description": "true when read from a table or log"},
-        "note": {"type": "string", "maxLength": 300}
+        "note": {"type": "string", "maxLength": 300},
+        "image": {"$ref": "#/$defs/image_locator"}
+      }
+    },
+    "image_locator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tile", "box"],
+      "description": "Where on a page image (python -m extract.images) the value was read: the tile id from .cache/images/<id>/manifest.json and the box in that tile's pixels. The quote is then the text as transcribed from the image",
+      "properties": {
+        "tile": {"type": "string", "minLength": 1},
+        "box": {"type": "array", "items": {"type": "number", "minimum": 0}, "minItems": 4, "maxItems": 4, "description": "[x0, y0, x1, y1] in the tile's pixels, from its top-left corner"},
+        "unclear": {"type": "boolean", "description": "true when a digit or character is uncertain in the image (give the value as a range, or as read)"}
       }
     },
     "field": {"anyOf": [{"$ref": "#/$defs/value"}, {"const": "not stated"}]},
@@ -180,7 +192,8 @@
       "additionalProperties": false,
       "properties": {
         "location": {"$ref": "#/$defs/field"},
-        "coordinates": {"$ref": "#/$defs/field"}
+        "coordinates": {"$ref": "#/$defs/field"},
+        "label": {"$ref": "#/$defs/field", "description": "End-point label as printed, e.g. A or A'"}
       }
     },
     "section_unit": {
@@ -192,6 +205,43 @@
         "to_distance": {"$ref": "#/$defs/field"},
         "top_elevation": {"$ref": "#/$defs/elevation_field"},
         "base_elevation": {"$ref": "#/$defs/elevation_field"}
+      }
+    },
+    "section_point": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["distance", "elevation"],
+      "description": "One point of a drawn line, in the section's own units: distance along the section from its start, and elevation relative to the section's datum",
+      "properties": {
+        "distance": {"$ref": "#/$defs/value"},
+        "elevation": {"$ref": "#/$defs/value"}
+      }
+    },
+    "section_contact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind"],
+      "description": "A contact, the top or base of a unit, or a unit's outline as drawn on a section; its points are always stored as inferred",
+      "properties": {
+        "kind": {"enum": ["contact", "top", "base", "polygon"], "description": "contact: between unit (above) and lower_unit; top or base of unit; polygon: unit's closed outline (a plain string)"},
+        "unit": {"$ref": "#/$defs/field"},
+        "lower_unit": {"$ref": "#/$defs/field"},
+        "certainty": {"$ref": "#/$defs/field", "description": "As drawn or labelled: solid, dashed, queried"},
+        "points": {"type": "array", "items": {"$ref": "#/$defs/section_point"}}
+      }
+    },
+    "section_hole": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "A drill hole, well or boring drawn on a section",
+      "properties": {
+        "label": {"$ref": "#/$defs/field"},
+        "observation": {"$ref": "#/$defs/field", "description": "Label of a boring or well in this result"},
+        "distance": {"$ref": "#/$defs/field", "description": "Position along the section from its start, in the section's units"},
+        "elevation": {"$ref": "#/$defs/elevation_field", "description": "Land-surface elevation at the hole"},
+        "total_depth": {"$ref": "#/$defs/field"},
+        "depth_reference": {"$ref": "#/$defs/depth_reference_field"},
+        "intervals": {"type": "array", "items": {"$ref": "#/$defs/interval"}}
       }
     },
     "section": {
@@ -206,6 +256,11 @@
         "datum": {"$ref": "#/$defs/field"},
         "length": {"$ref": "#/$defs/field"},
         "observations": {"type": "array", "items": {"$ref": "#/$defs/value"}, "description": "Labels of borings and wells shown"},
+        "horizontal_scale": {"$ref": "#/$defs/field", "description": "As printed: a ratio, a bar scale's label, or the map's scale when the section says it is the same"},
+        "distance_units": {"$ref": "#/$defs/field", "description": "Units of distances along the section (feet, meters, miles)"},
+        "elevation_units": {"$ref": "#/$defs/field", "description": "Units of the elevation scale"},
+        "contacts": {"type": "array", "items": {"$ref": "#/$defs/section_contact"}},
+        "holes": {"type": "array", "items": {"$ref": "#/$defs/section_hole"}},
         "units_along": {"type": "array", "items": {"$ref": "#/$defs/section_unit"}}
       }
     },

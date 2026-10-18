@@ -75,3 +75,26 @@ Include every path from the plan, in the same order. Then run
 
 Disagreements lower the value's confidence and go to `data/review/queue.json`
 for a person to settle; they are not silently corrected.
+
+## Image values
+
+A value with an `image` object was read from a page image tile
+(`.cache/images/<id>/`, listed in `manifest.json` and in the packet
+header). Its quote is a transcription, not text of the page, so it is
+stored (as `extraction_method` "llm-image") only when this pass checks it.
+Every such value is in the plan. For each one, re-view the tile named in
+`image.tile` with the Read tool, look at the `box` (pixels from the tile's
+top-left corner), and decide:
+
+- `agree` -- the box shows this label or feature, drawn and labelled, and
+  the value matches it (same digits, sign and units; a point on a section
+  agrees with the drawing at the scale's precision).
+- `disagree` -- the box shows something else, the value comes from a
+  legend-only symbol, or it belongs to another line, hole or unit. Give the
+  reading you see in `value` and explain in `note`.
+- `unclear` -- the image does not settle it (faint, overprinted, cut by the
+  tile edge: then look at the neighbouring tile too).
+
+A value marked `unclear` by the first pass is `agree` when its range or
+reading is faithful to what the image shows. Note in `note` which tile you
+viewed when it was not the one cited.

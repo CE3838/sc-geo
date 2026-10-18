@@ -19,6 +19,7 @@ class ExtractionMethod(str, Enum):
     OCR = "ocr"
     TABLE_PARSER = "table_parser"
     LLM = "llm"
+    LLM_IMAGE = "llm-image"  # read by a model from a page image (extract/images.py)
     CAD_IMPORT = "cad_import"
     GIS_IMPORT = "gis_import"
     CATALOG_IMPORT = "catalog_import"

@@ -32,6 +32,20 @@
     "threads": 1,
     "max_attempts": 3
   },
+  "images": {
+    "_comment": "Page images for reading map faces and cross sections (python -m extract.images). Rendered from the cached PDF into .cache/images (never committed), never above a scan's own resolution nor max_dpi. Tiles are at most max_tile_px on a side and overlap by overlap_px, so the Read tool shows them unscaled (it scales the long side to view_px). Values read only from an image get min(confidence.max, S x factor) x V x I, times unclear_factor when the reader marks digits unclear: always below text-checked values. They are stored only after a verify pass.",
+    "dpi": 250,
+    "max_dpi": 400,
+    "max_tile_px": 1500,
+    "overlap_px": 120,
+    "view_px": 1568,
+    "render_timeout_seconds": 300,
+    "confidence": {
+      "max": 0.6,
+      "factor": 0.8,
+      "unclear_factor": 0.7
+    }
+  },
   "packet_max_tokens": 40000,
   "_chars_per_token": "Measured on a USGS report packet (layout text, tables, OCR noise): about 2.0-2.2 characters per token, not 4. 2.5 keeps packets near the token budget.",
   "chars_per_token": 2.5,

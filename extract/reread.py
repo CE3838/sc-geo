@@ -3,6 +3,7 @@
     python -m extract.reread ngmdb:42961 --pages 1 --reason "contour values on the map face"
     python -m extract.reread ngmdb:27394 --packets packet-02 --reason "new subsurface fields"
     python -m extract.reread ngmdb:96652 --pages 79-82 --ocr --reason "piezometer logs are images"
+    python -m extract.reread ngmdb:100312 --pages 1 --images [--dpi 250 --grid 3x3] --reason "section A-A'"
     python -m extract.reread --next [--n 3] [--max-tokens 120000] [--json]   # next items of the re-read queue
     python -m extract.reread --queue                                          # rebuild data/review/reread_queue.json
     python -m extract.reread --add ngmdb:X --pages 4 --reason "OCR misread digits"   # add a queue item
@@ -46,6 +47,17 @@ CACHE = ROOT / ".cache"
 EXTRACTED = ROOT / "data" / "extracted"
 QUEUE_PATH = ROOT / "data" / "review" / "reread_queue.json"
 SUBSURFACE_SECTIONS = ("surfaces", "contours", "sections")
+# Queue items read from page images as well as text (extract/images.py): map faces, image-only pages,
+# subsurface fields, and anything about cross sections.
+IMAGE_REASONS = ("map_face", "image_pages", "subsurface_fields")
+_SECTION_WORDS = re.compile(r"\bsections?\b|\b([A-H])\s*[-–]\s*\1\s*['′’]", re.I)
+
+
+def wants_images(item: dict) -> bool:
+    """Whether a re-read queue item calls for page images (an explicit "images" key wins)."""
+    if "images" in item:
+        return bool(item["images"])
+    return item.get("reason") in IMAGE_REASONS or bool(_SECTION_WORDS.search(item.get("detail") or ""))
 
 # Re-reads already known (ROADMAP 1.9). Pages are the document's page numbers (as cited in data/extracted).
 KNOWN = [
@@ -132,8 +144,13 @@ def _default_ocr(cache_dir: Path) -> Callable[[Path, int], tuple[str, str]]:
 def build(sid: str, pages: list[int] | None = None, packet_names: list[str] | None = None, reason: str = "re-read",
           queue_ids: list[str] | tuple = (), ocr: Callable | bool = False, cache_dir: Path = CACHE,
           catalog: dict | None = None, extracted_dir: Path = EXTRACTED, scopes: dict | None = None,
-          max_tokens: int | None = None) -> dict:
-    """Re-read packets for chosen pages (or the pages of chosen packets) of one document, from the cache only."""
+          max_tokens: int | None = None, images: bool | dict = False, image_render: Callable | None = None,
+          images_optional: bool = False) -> dict:
+    """Re-read packets for chosen pages (or the pages of chosen packets) of one document, from the cache only.
+
+    images (True, or {"dpi", "grid", "crop", "overview"}) also renders page tiles from the cached PDF
+    (extract/images.py), keeps pages with no text, and lists the tiles in the packet header. With
+    images_optional, a failed render is reported in "image_error" and the text packets are built anyway."""
     cache_dir = Path(cache_dir)
     safe = packets.safe_id(sid)
     text_path = cache_dir / "text" / f"{safe}.json"
@@ -174,7 +191,9 @@ def build(sid: str, pages: list[int] | None = None, packet_names: list[str] | No
         fn = _default_ocr(cache_dir) if ocr is True else ocr
         ocred = _ocr_pages(doc, text_path, sorted(chosen), fn, cache_dir)
     no_text = sorted(p["page"] for p in doc["pages"] if p["page"] in chosen and not pdftext.has_text(p.get("text", "")))
-    chosen -= set(no_text)
+    img, image_error = _render_images(sid, sorted(chosen), images, image_render, cache_dir, images_optional)
+    if not img:
+        chosen -= set(no_text)
     if not chosen:
         raise RereadError(f"pages {scope.describe(no_text)} of {sid} have no text; OCR them with --ocr "
                           "(from the cached PDF) or wait for image reading")
@@ -185,11 +204,13 @@ def build(sid: str, pages: list[int] | None = None, packet_names: list[str] | No
     index = json.loads(index_path.read_text()) if index_path.exists() else {"source_id": sid, "packets": []}
     ingested = _ingested_rereads(Path(extracted_dir) / f"{safe}.json")
     request = {"request_pages": want, "reason": reason, "queue_ids": list(queue_ids)}
+    if img:
+        request["images"] = img["request"]
     reuse = [p for p in index["packets"] if {k: p.get(k) for k in request} == request
              and p["file"].removesuffix(".md") not in ingested and (rdir / p["file"]).exists() and not ocred]
     if not reuse:
         info = {"pages": want, "reason": reason,
-                "scope_note": rec_scope.get("note") if rec_scope else None}
+                "scope_note": rec_scope.get("note") if rec_scope else None, "images": img}
         built = packets.build(doc, rec, max_tokens or CONFIG["packet_max_tokens"], CONFIG["chars_per_token"],
                               reread=info)
         n0 = max([int(re.sub(r"\D", "", p["file"]) or 0) for p in index["packets"]] or [0])
@@ -211,7 +232,25 @@ def build(sid: str, pages: list[int] | None = None, packet_names: list[str] | No
            for p in reuse]
     return {"id": sid, "citation": rec.get("citation"), "reason": reason, "pages": want, "no_text": no_text,
             "ocred": ocred, "queue_ids": list(queue_ids), "packets": out,
-            "estimated_tokens": sum(p["estimated_tokens"] for p in out)}
+            "estimated_tokens": sum(p["estimated_tokens"] for p in out) + (img["estimated_tokens"] if img else 0),
+            **({"images": img} if img else {}), **({"image_error": image_error} if image_error else {})}
+
+
+def _render_images(sid: str, pages: list[int], images, image_render, cache_dir: Path,
+                   optional: bool) -> tuple[dict | None, str | None]:
+    """Tiles of the chosen pages (extract.images.render), or (None, error) when optional and it fails."""
+    if not images:
+        return None, None
+    from extract import images as image_mod
+    opts = {k: v for k, v in (images if isinstance(images, dict) else {}).items() if v is not None}
+    try:
+        m = (image_render or image_mod.render)(sid, pages, cache_dir=cache_dir, **opts)
+    except image_mod.ImagesError as err:
+        if optional:
+            return None, str(err)
+        raise RereadError(f"images: {err}") from None
+    req = {k: (list(v) if isinstance(v, tuple) else v) for k, v in opts.items()}
+    return m | {"request": req}, None
 
 
 def _ingested_rereads(extracted_path: Path) -> set[str]:
@@ -290,6 +329,7 @@ def build_queue(extracted_dir: Path = EXTRACTED, known: list[dict] | None = None
     for iid, item in items.items():
         item = {k: v for k, v in item.items() if k not in ("status", "done_at")}
         item.setdefault("ocr", False)
+        item.setdefault("images", wants_images(item))
         item["added_at"] = old_items.get(iid, {}).get("added_at") or _now()
         out.append(item | _status(item, docs.get(item["source_id"])))
     order = {"ROADMAP 1.9": 0, "manual": 1, "notes": 2}
@@ -336,10 +376,13 @@ def next_rereads(queue: dict, n: int = 3, max_tokens: int | None = None, ids: li
             continue
         try:
             b = build(item["source_id"], pages=item["pages"], reason=item.get("detail") or item["reason"],
-                      queue_ids=[item["id"]], ocr=bool(item.get("ocr")), **kw)
+                      queue_ids=[item["id"]], ocr=bool(item.get("ocr")), images=wants_images(item),
+                      images_optional=True, **kw)
         except RereadError as err:
             log(f"skip {item['source_id']} pages {scope.describe(item['pages'])}: {err}")
             continue
+        if b.get("image_error"):
+            log(f"no images for {item['source_id']} pages {scope.describe(item['pages'])}: {b['image_error']}")
         if max_tokens and out and tokens + b["estimated_tokens"] > max_tokens:
             break
         tokens += b["estimated_tokens"]
@@ -362,6 +405,11 @@ def _print(batch: list[dict]) -> None:
         for p in b["packets"]:
             print(f"    read:  {p['path']}  (pages {scope.describe(p['pages'])}, ~{p['estimated_tokens']:,} tokens)")
             print(f"    write: {p['result_path']}")
+        if b.get("images"):
+            im = b["images"]
+            print(f"    images: {im['manifest']}  ({len(im['tiles'])} tiles, ~{im['estimated_tokens']:,} tokens)")
+            for t in im["tiles"]:
+                print(f"    view:  {Path(im['dir']) / t['file']}  ({t['tile']}, page {t['page']})")
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -371,6 +419,10 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--packets", help="packets whose pages to re-read, e.g. packet-02,packet-03")
     ap.add_argument("--reason", help="why (goes into the packet and the history of replaced values)")
     ap.add_argument("--ocr", action="store_true", help="OCR the chosen pages from the cached PDF first")
+    ap.add_argument("--images", action="store_true", help="also render page tiles from the cached PDF "
+                    "(extract/images.py); --next does this for map-face, image-page, subsurface and section items")
+    ap.add_argument("--dpi", type=float, help="with --images: render resolution")
+    ap.add_argument("--grid", help="with --images: COLSxROWS tiles, e.g. 3x3")
     ap.add_argument("--next", action="store_true", help="hand out the next pending items of the re-read queue")
     ap.add_argument("--n", type=int, default=3)
     ap.add_argument("--max-tokens", type=int)
@@ -404,7 +456,15 @@ def main(argv: list[str] | None = None) -> int:
             qids = [i["id"] for i in q["items"] if i["source_id"] == args.id and i["status"] == "pending"
                     and want and set(i["pages"]) <= want]
             reason = args.reason or "; ".join(i["detail"] for i in q["items"] if i["id"] in qids) or "re-read"
-            batch = [build(args.id, pages=pages, packet_names=names, reason=reason, queue_ids=qids, ocr=args.ocr)]
+            imgs = False
+            if args.images or args.dpi or args.grid:
+                from extract.images import ImagesError, parse_grid
+                try:
+                    imgs = {"dpi": args.dpi, "grid": parse_grid(args.grid) if args.grid else None}
+                except ImagesError as err:
+                    raise RereadError(str(err)) from None
+            batch = [build(args.id, pages=pages, packet_names=names, reason=reason, queue_ids=qids, ocr=args.ocr,
+                           images=imgs)]
     except RereadError as err:
         print(f"re-read refused: {err}", file=sys.stderr)
         return 1
