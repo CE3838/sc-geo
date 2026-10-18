@@ -79,3 +79,10 @@ def test_missing_page_needs_a_locator(locator):
 
 def test_catalog_import_method_exists():
     assert ExtractionMethod("catalog_import") is ExtractionMethod.CATALOG_IMPORT
+
+
+def test_datum_conversion_is_a_method():
+    from model.provenance import ExtractionMethod, StoredValue
+    sv = StoredValue(value={"min_ft": 1.0}, source_id="ngmdb:1", page=2,
+                     extraction_method=ExtractionMethod.DATUM_CONVERSION, confidence=0.5, inferred=True)
+    assert StoredValue.from_dict(sv.to_dict()) == sv and sv.to_dict()["extraction_method"] == "datum_conversion"

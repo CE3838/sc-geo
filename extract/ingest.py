@@ -39,10 +39,10 @@ import unicodedata
 from datetime import datetime, timezone
 from pathlib import Path
 
-from extract import packets, patterns, schema, scope
+from extract import elevations, packets, patterns, schema, scope
 from extract.packets import safe_id
 from merge.score import scale_weight
-from model import coords
+from model import coords, vdatum
 from model.provenance import ExtractionMethod, StoredValue
 from model.units import Lexicon
 
@@ -57,6 +57,17 @@ PACKETS_DIR = ROOT / ".cache" / "packets"
 
 class IngestError(Exception):
     pass
+
+
+_GRID: dict = {}
+
+
+def default_grid():
+    """The NGVD29-to-NAVD88 grid from config (downloaded by harvest.vertcon), or None; read once."""
+    if "grid" not in _GRID:
+        path = Path(CONFIG["vertical_datum"]["grid_path"])
+        _GRID["grid"] = vdatum.load_grid(path if path.is_absolute() else ROOT / path)
+    return _GRID["grid"]
 
 
 # --- quote matching ----------------------------------------------------------
@@ -173,7 +184,8 @@ def image_locators(doc: dict) -> dict[int, str]:
     return out
 
 
-def source_weight(rec: dict, section: str | None = None, cfg: dict = CONFIG, map_sheet: bool = False) -> float:
+def source_weight(rec: dict, section: str | None = None, cfg: dict = CONFIG, map_sheet: bool = False,
+                  contour: bool = False) -> float:
     """S: map scale for map-unit descriptions read from a map sheet; otherwise the publisher's weight.
 
     Unit descriptions on a map are generalized to its scale. Report text, a boring log,
@@ -181,6 +193,10 @@ def source_weight(rec: dict, section: str | None = None, cfg: dict = CONFIG, map
     """
     c = cfg["confidence"]
     if section == "units" and map_sheet and rec.get("scale"):
+        w = scale_weight(int(rec["scale"]))
+    elif contour and rec.get("scale") and c.get("contour_scale_weight", True):
+        # Values read from a contour map are as good as the map: more detailed (larger-scale) maps
+        # weigh more, as in the merge's ranking (1:24,000 0.95 ... 1:500,000 0.55).
         w = scale_weight(int(rec["scale"]))
     elif (rec.get("publisher") or "").strip() in cfg["trusted_publishers"]:
         w = c["agency_or_journal"]
@@ -192,9 +208,9 @@ def source_weight(rec: dict, section: str | None = None, cfg: dict = CONFIG, map
 
 
 def confidence(rec: dict, method: str, match: str, verdict: str | None, inferred: bool, cfg: dict = CONFIG,
-               section: str | None = None, map_sheet: bool = False) -> float:
+               section: str | None = None, map_sheet: bool = False, contour: bool = False) -> float:
     c = cfg["confidence"]
-    s = source_weight(rec, section, cfg, map_sheet)
+    s = source_weight(rec, section, cfg, map_sheet, contour)
     m = c["ocr_factor"] if method == "ocr" else 1.0
     q = {"exact": 1.0, "ocr": 0.95, "fuzzy": c["fuzzy_quote_factor"]}[match]
     v = {"agree": c["verify_agree"], "disagree": c["verify_disagree"], "unclear": c["verify_unclear"],
@@ -247,8 +263,6 @@ def normalized(path: str, val: dict, lexicon: Lexicon | None):
         return patterns.number(x)
     if field == "strike_dip":
         return patterns.strike_dip(x)
-    if field == "location":
-        return patterns.coordinates(x)
     if field == "age":
         return patterns.age_ma(x)
     if field in ("date", "water_level_date"):
@@ -348,7 +362,8 @@ def _now() -> str:
 def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: Path = TEXT_DIR,
            out_dir: Path = OUT_DIR, review_dir: Path = REVIEW_DIR, catalog: dict | None = None,
            lexicon: Lexicon | None = None, done_dir: Path = DONE_DIR, cfg: dict = CONFIG,
-           packets_dir: Path = PACKETS_DIR, scopes: dict | None = None) -> dict:
+           packets_dir: Path = PACKETS_DIR, scopes: dict | None = None, vgrid=None) -> dict:
+    """vgrid: a model.vdatum.ShiftGrid; None loads the configured grid; False means no grid."""
     results = [_load_json(p, "result") for p in result_paths]
     for p, r in zip(result_paths, results):
         errs = schema.validate(r)
@@ -414,6 +429,12 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
         review.append({"source_id": sid, "path": path, "problem": problem, "value": val.get("value"),
                        "page": val.get("page"), "quote": val.get("quote"), "added_at": _now(), **extra})
 
+    contour_surfaces = {f"surfaces[{i}]" for i, r in enumerate(result.get("surfaces", []))
+                        if isinstance(r.get("method"), dict) and r["method"].get("value") == "contour"}
+
+    def from_contour(path: str) -> bool:
+        return path.startswith("contours[") or path.split(".", 1)[0] in contour_surfaces
+
     for path, val in schema.iter_values(result):
         counts["values"] += 1
         pg = pages.get(val["page"])
@@ -438,7 +459,8 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
             queue(path, val, f"verify_{verdict}", verify={k: v for k, v in check.items() if k != "path"})
         sv = StoredValue(value=val["value"], source_id=sid, page=val["page"], extraction_method=ExtractionMethod.LLM,
                          confidence=confidence(rec, pg.get("method", "pdf_text"), match, verdict, val["inferred"], cfg,
-                                                    section=path.split("[", 1)[0], map_sheet=val["page"] in sheets),
+                                                    section=path.split("[", 1)[0], map_sheet=val["page"] in sheets,
+                                                    contour=from_contour(path)),
                          inferred=bool(val["inferred"]), locator=locators.get(val["page"]))
         entry = sv.to_dict() | {"quote": val["quote"], "quote_match": match, "text_method": pg.get("method"),
                                 "verification": verdict}
@@ -456,6 +478,9 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
 
     ctx = {"values": stored}
     new_sections = {key: _store(result[key], key, ctx) or [] for key in SECTIONS}
+    grid = default_grid() if vgrid is None else (vgrid or None)
+    navd88 = elevations.attach_navd88(new_sections, rec.get("year"), grid, cfg["vertical_datum"],
+                                      cfg["confidence"]["inferred_factor"])
 
     # Which part of the document this result covers (packet blocks, see extract/packets.py).
     all_blocks = index["blocks"] if index else [str(n) for n in sorted(pages)]
@@ -529,7 +554,7 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
         done_dir.mkdir(parents=True, exist_ok=True)
         (done_dir / f"{safe_id(sid)}.json").write_text(json.dumps({"id": sid, "done_at": _now(),
                                                                    "summary": out["summary"]}, indent=1))
-    return counts | {"review_items": len(review), "complete": complete, "blocks_done": len(done),
+    return counts | {"navd88": navd88, "review_items": len(review), "complete": complete, "blocks_done": len(done),
                      "blocks_total": len(all_blocks)}
 
 
