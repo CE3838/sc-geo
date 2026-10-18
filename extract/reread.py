@@ -6,6 +6,7 @@
     python -m extract.reread --next [--n 3] [--max-tokens 120000] [--json]   # next items of the re-read queue
     python -m extract.reread --queue                                          # rebuild data/review/reread_queue.json
     python -m extract.reread --add ngmdb:X --pages 4 --reason "OCR misread digits"   # add a queue item
+    python -m extract.reread --add ngmdb:X --pages 11-18 --reason water_tests --detail "Tables 3-6: chemistry"
 
 A re-read builds packets of exactly the chosen pages (triage is not asked)
 in .cache/packets/<id>/reread/ (names reread-01, reread-02, ... never
@@ -375,6 +376,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--max-tokens", type=int)
     ap.add_argument("--queue", action="store_true", help="rebuild data/review/reread_queue.json")
     ap.add_argument("--add", action="store_true", help="add the id, --pages and --reason to the re-read queue")
+    ap.add_argument("--detail", help="with --add: what to read on those pages (default: the reason)")
     ap.add_argument("--json", action="store_true")
     args = ap.parse_args(argv)
     try:
@@ -383,7 +385,7 @@ def main(argv: list[str] | None = None) -> int:
             if args.add:
                 if not (args.id and args.pages and args.reason):
                     ap.error("--add needs an id, --pages and --reason")
-                q = add_item(q, args.id, parse_pages(args.pages), args.reason, args.reason, args.ocr)
+                q = add_item(q, args.id, parse_pages(args.pages), args.reason, args.detail or args.reason, args.ocr)
             q = build_queue(old=q)
             write_queue(q)
             print(json.dumps({k: q[k] for k in ("count", "pending", "by_reason")}, indent=1))

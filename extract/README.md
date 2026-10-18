@@ -30,6 +30,7 @@ extract/ingest.py   validate, check every quote on its page, normalize,
 | `patterns.py` | Deterministic normalizers used after the model: Munsell, lengths to feet, signed elevations, vertical datums, USCS, SPT N, strike/dip, ages to Ma, unit names to Geolex |
 | `ingest.py` | `python -m extract.ingest result.json [--verify verify.json]` |
 | `renormalize.py` | `python -m extract.renormalize [--write]`: recompute normalized fields of committed files (dry run by default) |
+| `labtests.py` | Water-test parameter names and rock-test types (normalized only when unambiguous, flagged inferred), values with qualifiers, and the review checks for test values (missing units, a "\|" read as a digit, unread values) |
 | `reread.py` | `python -m extract.reread <ID> --pages 1`: re-read chosen pages of a document already read, from `.cache` only; `--next` hands out the re-read queue, `--queue` rebuilds it |
 | `next_batch.py` | `python -m extract.next_batch --n 5`: next pending documents, building text and packets on the fly |
 | `reading_list.py` | `python -m extract.reading_list`: ranks online catalog records by South Carolina geologic relevance into `config/reading_list.json`, with scores and exclusion reasons in `config/reading_list_scores.json` |
@@ -217,6 +218,100 @@ surface stays as printed, marked `relative_to: "land surface"` and
 (`patterns.vertical_datum`; the value as printed is kept, and no datum is
 converted to another); contour labels and vertical exaggeration are numbers.
 
+## Water tests and rock tests
+
+`water_tests` and `rock_tests` (optional, so earlier results still
+validate) hold one entry per test result, each a value with page and
+quote like every other value:
+
+- **water_tests**: water-sample results, field measurements and hydraulic
+  tests. `kind` (well, boring, spring...; a plain string), `observation` (the
+  site label), `location`, `sample_id`, `date`, `top`/`bottom` or `depth` with
+  `depth_reference` and `datum`, `aquifer`, `unit`, `parameter` (as printed),
+  `value`, `units`, `qualifier`, `fraction`, `method`, `lab`, `source_table`.
+- **rock_tests**: specimen and core tests (UCS, point load, Brazilian
+  tensile, triaxial, slake durability, RQD and core recovery, unit weight and
+  density, absorption, elastic modulus, Poisson's ratio). The site and depth
+  fields as above, plus `rock_type`, `test_type` (as printed), `parameter`,
+  `value`, `units`, `qualifier`, `specimen_dimensions`, `specimen_condition`,
+  `confining_pressure`, `failure_mode`, `standard` (as printed, e.g. "ASTM
+  D7012, method C"), `lab`, `source_table`.
+
+A test links to its site the way a surface does: `observation` is the
+label of a well, boring, core or spring (an observation of the same
+document when there is one; observations may now be `spring`s).
+
+Ingest quote-checks, verifies and stores them like everything else, and
+every test value is in the verify plan. `labtests.py` adds `normalized`
+forms: a parameter name and category (field, major_ion, nutrient,
+metal_trace, organic, pesticide, isotope_age, dissolved_gas, hydraulic) or a
+rock-test type, both `inferred: true` and only when exactly one name fits
+("Calcium and magnesium" gets none; "ASTM D7012" alone, which covers
+unconfined and triaxial tests, gets none); `value` as `{number, qualifier}`
+or `{min, max, qualifier}` ("<0.5", "ND", "1.2E-04", "2.0x10-9", "0.09 to
+0.21"); `qualifier` as <, >, ND or E; depths as feet. The review queue gets:
+
+| Problem | When |
+| --- | --- |
+| `missing_units` | no units in `units`, in the value object's `units` or in the value text; units are never guessed (pH, Poisson's ratio, specific gravity and not-detected values are exempt) |
+| `ocr_digit` | the quote shows a "\|" where a digit belongs ("\| to 6 feet", "0.\|2") |
+| `unclear_value` | the value is not a number, a range or a qualifier |
+
+## Site tests export
+
+`python -m merge.site_tests` writes `web/data/sites/site-tests.json` (not
+committed; deploy builds it before `merge.package`, which ships it as
+`data/sites/site-tests.json` in the data package). It holds the water and
+rock tests of `data/extracted`, public catalog records only, grouped by
+site, for the viewer's click callout and the cross-section tool:
+
+```json
+{
+ "format": "sc-geo site tests", "version": 1, "generated": "...", "notes": "... without warranty ...",
+ "counts": {"sites": 1, "water_tests": 1, "rock_tests": 0, "sources": 1},
+ "sources": {"ngmdb:46513": {"citation": "...", "title": "...", "year": 1999, "publisher": "..."}},
+ "sites": [{
+  "id": "ngmdb:46513#BFT1234", "source_id": "ngmdb:46513", "label": "BFT-1234", "site_key": "BFT1234",
+  "kind": "well", "observation_matches": 1,
+  "location": {"lat": 32.4, "lon": -80.7, "as_printed": "...", "from": "observation", "page": 11,
+               "inferred": true, "confidence": 0.6, "conversion": "...", "datum": "NAD83",
+               "approximate": false, "assumptions": []},
+  "elevation": {"as_printed": 12, "units": "ft", "ft": 12.0, "datum": "NGVD29", "datum_as_printed": "NGVD of 1929",
+                "page": 11, "confidence": 0.8},
+  "total_depth": "25 ft",
+  "water_tests": [{
+   "source_id": "ngmdb:46513", "pages": [13],
+   "parameter": {"as_printed": "Chloride", "name": "chloride", "category": "major_ion", "inferred": true},
+   "value": {"as_printed": "<0.5", "number": 0.5, "qualifier": "<", "units": "milligrams per liter"},
+   "date": "1997-06-10", "depth": {"top_ft": 15.0, "bottom_ft": 25.0, "reference": "land surface"},
+   "method": "...", "source_table": "Table 3",
+   "fields": {"value": {"value": "<0.5", "page": 13, "quote": "...", "confidence": 0.81, "inferred": false,
+                        "verification": "agree", "locator": null}}
+  }],
+  "rock_tests": []
+ }]
+}
+```
+
+- A site is one label in one document (labels compared without case,
+  spaces or dashes: `site_key`); tests with no label are grouped by their
+  printed location, and tests with neither are one `unplaced` site.
+  Sites of different documents are not merged; the same `site_key` in two
+  documents marks a possible match.
+- `location` is the inferred `derived_coordinates` of the test's own
+  location, or else of the first observation with that label
+  (`observation_matches` says how many there were). Without one, `lat` and
+  `lon` are null and the printed location is kept. `elevation` is the
+  observation's (with `navd88` when the conversion has added one).
+- `depth` is in feet: depths below land surface when `reference` is "land
+  surface", signed elevations when it is "elevation" (then in the site's or
+  the test's datum). No elevation is computed from a depth here.
+- `fields` holds every stored field of the test with its page, quote,
+  confidence, inferred flag, verification and locator, so each number can
+  be cited; `sources` gives the citation of each document.
+- `units` is null when the source prints none (the value is in the review
+  queue).
+
 ## Derived coordinates
 
 Every `location` or `coordinates` value that `model/coords.py` can read
@@ -271,7 +366,7 @@ The re-read queue, `data/review/reread_queue.json`, is rebuilt by
 | --- | --- | --- |
 | `notes` | `subsurface_fields` | each `SUBSURFACE:` notes line in `data/extracted` (not `SUBSURFACE: none`) on pages with no `surfaces`, `contours` or `sections` stored; pages from the line (`p. 1`, `pages 3-10`), else the pages read |
 | `ROADMAP 1.9` | `image_pages`, `logs`, `map_face` | known re-reads (`reread.KNOWN`) |
-| `manual` | from `--reason` | `python -m extract.reread --add <ID> --pages 4 --reason "..."` |
+| `manual` | from `--reason` | `python -m extract.reread --add <ID> --pages 4 --reason "..." [--detail "..."]`; `water_tests` and `rock_tests` mark documents read before those sections existed whose notes name water-quality tables, aquifer tests or rock tests |
 
 Each item has `id`, `source_id`, `pages`, `reason`, `detail`, `origin`,
 `ocr` and `status`; it is `done` (with `done_at`) once ingests carrying its

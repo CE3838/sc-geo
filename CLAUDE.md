@@ -46,7 +46,8 @@ Guidance for Claude (and humans) working in this repository.
   repo, its workflows, or GitHub Pages. The app reuses `web/` at build time and
   adds its panels through `window.scGeo.popupItems` (see `web/app.js`).
 - Each deploy publishes the public data package (`python -m merge.package`:
-  merged geology, SGMC, catalog, lexicon, SC outline, with a SHA-256 manifest)
+  merged geology, SGMC, catalog, lexicon, SC outline, water and rock tests per
+  site from `python -m merge.site_tests`, with a SHA-256 manifest)
   as a GitHub Release tagged `data-YYYYMMDD-HHMM`; the desktop app bundles the
   newest one. Only `data-*` releases are published here.
 - The pilot area is **Charleston County** (see `config/pilot_area.json`).

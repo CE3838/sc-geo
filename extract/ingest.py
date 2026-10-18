@@ -46,6 +46,8 @@ from model import coords, vdatum
 from model.provenance import ExtractionMethod, StoredValue
 from model.units import Lexicon
 
+from extract import labtests  # water and rock tests
+
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG: dict = json.loads((ROOT / "config" / "extract.json").read_text())
 TEXT_DIR = ROOT / ".cache" / "text"
@@ -233,6 +235,8 @@ def normalized(path: str, val: dict, lexicon: Lexicon | None):
     x = val.get("value")
     if x is None:
         return None
+    if top in labtests.TESTS and field in labtests.FIELDS:
+        return labtests.normalized(top, field, x)
     if field in _LENGTH:
         return patterns.length_ft(x, default_unit=val.get("units"))
     if field in _ELEVATION:
@@ -294,9 +298,10 @@ def derived_coordinates(path: str, val: dict, stored: dict, cfg: dict = CONFIG) 
 
 def verify_sample(result: dict, fraction: float = CONFIG["verify_sample_fraction"]) -> list[str]:
     """Paths the second pass re-reads: every table value, every subsurface value (surfaces, contours,
-    sections, observation datums) plus a seeded random share of the rest."""
+    sections, observation datums), every water and rock test value, plus a seeded random share of the rest."""
     values = list(schema.iter_values(result))
-    must = lambda p, v: v.get("table") or p.split("[", 1)[0] in SUBSURFACE or p.endswith((".datum", ".depth_reference"))
+    must = lambda p, v: v.get("table") or p.split("[", 1)[0] in SUBSURFACE + labtests.TESTS \
+        or p.endswith((".datum", ".depth_reference"))
     table = [p for p, v in values if must(p, v)]
     others = [p for p, v in values if not must(p, v)]
     seed = int(hashlib.sha256(str(result.get("source_id")).encode()).hexdigest()[:12], 16)
@@ -475,6 +480,9 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
             entry["derived_coordinates"] = derived
         stored[path] = entry
         counts["stored"] += 1
+        if path.split("[", 1)[0] in labtests.TESTS:  # units never guessed, "|" read as a digit, unread values
+            for problem, extra in labtests.review(path, val, schema.get_path(result, path.split(".", 1)[0])):
+                queue(path, val, problem, **extra)
 
     ctx = {"values": stored}
     new_sections = {key: _store(result[key], key, ctx) or [] for key in SECTIONS}
@@ -558,7 +566,7 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
                      "blocks_total": len(all_blocks)}
 
 
-SECTIONS = ("units", "observations", "structures", "groundwater", "references") + SUBSURFACE
+SECTIONS = ("units", "observations", "structures", "groundwater", "references") + SUBSURFACE + labtests.TESTS
 
 
 def _is_stored(x) -> bool:

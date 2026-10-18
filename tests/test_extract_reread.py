@@ -367,3 +367,17 @@ def test_committed_queue_lists_the_known_rereads():
     assert ("ngmdb:96652", (79, 80, 81, 82)) in keys
     assert any(s == "ngmdb:42961" for s, _ in keys) and any(s == "ngmdb:27394" for s, _ in keys)
     assert q["count"] == len(q["items"])
+
+
+def test_add_from_the_command_line_keeps_a_separate_detail(monkeypatch):
+    saved = {}
+    monkeypatch.setattr(reread, "load_queue", lambda path=None: {"items": []})
+    monkeypatch.setattr(reread, "build_queue", lambda old=None, **kw: {**old, "count": len(old["items"]),
+                                                                        "pending": len(old["items"]), "by_reason": {}})
+    monkeypatch.setattr(reread, "write_queue", lambda q, path=None: saved.update(q=q))
+    assert reread.main(["ngmdb:46513", "--add", "--pages", "11-18", "--reason", "water_tests",
+                        "--detail", "Tables 2-6: field properties and water chemistry per well"]) == 0
+    item = saved["q"]["items"][0]
+    assert item["reason"] == "water_tests" and item["pages"] == list(range(11, 19))
+    assert item["detail"] == "Tables 2-6: field properties and water chemistry per well"
+    assert item["id"] == "ngmdb:46513:water_tests:p11-18"

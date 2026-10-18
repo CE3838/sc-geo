@@ -11,8 +11,8 @@ yourself.
 
        python -m extract.ingest .cache/results/<id>.<packet>.json --plan-verify > .cache/results/<id>.<packet>.plan.json
 
-   It lists every value read from a table, every subsurface value, plus a
-   random 10% of the others:
+   It lists every value read from a table, every subsurface value, every
+   water and rock test value, plus a random 10% of the others:
    `path`, `value`, `page`, `quote`.
 2. The packet file the values were read from (`.cache/packets/<id>/packet-NN.md`).
 
@@ -36,6 +36,16 @@ another table or figure); that `boundary` (top or base) and `method` match
 the page; that a contour label or a section's unit belongs to the line or
 interval it is attached to. A reading that depends on the layout of a map
 face and is not flagged `inferred` is `disagree`, with a note.
+
+Water and rock tests (`water_tests`, `rock_tests`) are always in the plan.
+For these, also check: that the value belongs to the right well or
+specimen and the right parameter or test (the right row and column of the
+table); that the `units` are the ones printed for that column, and that
+no units were filled in where none are printed; that a `qualifier` ("<",
+">", "ND", "E") is printed for that value; that the sample date, interval
+and `depth_reference` are those of that sample; and that a digit read from
+a "|" (or another OCR misread) is flagged `inferred`. A value with a digit
+the page does not clearly show is `unclear`.
 
 Judge the value against the page, not against your own knowledge of the
 geology. A value flagged `inferred` is `agree` if the inference is sound and
