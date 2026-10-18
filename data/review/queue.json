@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 167,
+ "count": 172,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -2204,6 +2204,71 @@
    "verify": {
     "verdict": "unclear",
     "note": "OCR places this label between the A-A and B-B section scales; which section it belongs to depends on layout"
+   }
+  },
+  {
+   "source_id": "ngmdb:46513",
+   "path": "water_tests[82].value",
+   "problem": "verify_unclear",
+   "value": "0.5",
+   "page": 11,
+   "quote": "0.5'",
+   "added_at": "2026-10-18T16:17:30+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer garbles this cell; page image shows 0.5 (re-viewed p11 tile r2c1)"
+   }
+  },
+  {
+   "source_id": "ngmdb:46513",
+   "path": "water_tests[154].value",
+   "problem": "verify_unclear",
+   "value": "3.2",
+   "page": 13,
+   "quote": "BAM079 7.4 11 _3.2 1.1 15 0.4 ND 6.3",
+   "added_at": "2026-10-18T16:17:30+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR-garbled cell (text layer prints _3.2; page image (p13 tile r1c1) shows 3.2); reading from the page image"
+   }
+  },
+  {
+   "source_id": "ngmdb:46513",
+   "path": "water_tests[207].value",
+   "problem": "verify_unclear",
+   "value": "4.6",
+   "page": 13,
+   "quote": "1 \"' 4.6' :",
+   "added_at": "2026-10-18T16:17:30+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR-garbled cell (text layer prints 4.6' on the line below the COL356 row; page image (p13 tile r1c1) shows 4.6 under Silica); reading from the page image"
+   }
+  },
+  {
+   "source_id": "ngmdb:46513",
+   "path": "water_tests[345].value",
+   "problem": "verify_unclear",
+   "value": "1",
+   "page": 13,
+   "quote": "ORG400 58 I 9.7 0.42 8.6 18 0.13 16",
+   "added_at": "2026-10-18T16:17:30+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR-garbled cell (text layer prints I; page image (p13 tile r2c1) shows 1); reading from the page image"
+   }
+  },
+  {
+   "source_id": "ngmdb:46513",
+   "path": "water_tests[600].value",
+   "problem": "verify_unclear",
+   "value": "0.011",
+   "page": 15,
+   "quote": "DOR326 Deethyl atrazine (0.019), atrazine (0.01 1), prometon (0.009)",
+   "added_at": "2026-10-18T16:17:30+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "printed (0.01 1) in the text layer; 0.011 is the likely reading"
    }
   }
  ]
