@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 167,
+ "count": 168,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -2204,6 +2204,19 @@
    "verify": {
     "verdict": "unclear",
     "note": "OCR places this label between the A-A and B-B section scales; which section it belongs to depends on layout"
+   }
+  },
+  {
+   "source_id": "ngmdb:100345",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "waters. Thickness | to 40 feet.",
+   "added_at": "2026-10-18T16:23:07+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints \"| to 40 feet\"; the first digit is read as 1 but is not printed legibly"
    }
   }
  ]
