@@ -338,14 +338,15 @@ class IngestImages:
             queue(path, val, "image_locator_invalid", detail=str(err), image=val["image"])
             return None
         verdict = check["verdict"] if check else None
-        if verdict is None:
+        if verdict is not None:
+            bump(verdict)
+        if verdict != "agree":  # held back: fix the reading (or the tile) and ingest again
             bump("image_not_verified")
-            queue(path, val, "image_not_verified", image=self._info(val, r),
-                  detail="values read from an image are stored only after a verify pass re-views the tile")
+            extra = {"verdict": verdict, "note": check.get("note"),
+                     "verify": {k: v for k, v in check.items() if k != "path"}} if check else {}
+            queue(path, val, "image_not_verified", image=self._info(val, r), **extra,
+                  detail="values read from an image are stored only after a verify pass re-views the tile and agrees")
             return None
-        bump(verdict)
-        if verdict in ("disagree", "unclear"):
-            queue(path, val, f"verify_{verdict}", verify={k: v for k, v in check.items() if k != "path"})
         unclear = bool(val["image"].get("unclear"))
         if unclear:
             queue(path, val, "image_unclear", image=self._info(val, r))

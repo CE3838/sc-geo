@@ -35,9 +35,13 @@ def test_extracted_values_have_provenance_and_short_quotes(path):
     for v in values:
         sv = StoredValue.from_dict(v)
         assert sv.source_id == doc["source_id"]
-        assert sv.extraction_method is ExtractionMethod.LLM and sv.page is not None
+        assert sv.extraction_method in (ExtractionMethod.LLM, ExtractionMethod.LLM_IMAGE) and sv.page is not None
         assert 0 < len(v["quote"]) <= 400
-        assert v["quote_match"] in ("exact", "ocr", "fuzzy")
+        if sv.extraction_method is ExtractionMethod.LLM_IMAGE:  # read from a page image (extract/images.py)
+            assert v["quote_match"] == "image" and v.get("image", {}).get("box") and sv.locator
+            assert v.get("verification") == "agree" and sv.confidence <= 0.6
+        else:
+            assert v["quote_match"] in ("exact", "ocr", "fuzzy")
         if "derived_coordinates" in v:  # a converted location is an inference, never a reading
             d = StoredValue.from_dict(v["derived_coordinates"])
             assert d.inferred and d.extraction_method is ExtractionMethod.INFERENCE and d.page == sv.page

@@ -409,7 +409,7 @@ the page text: when found, the value is text-checked and stored as usual
 | Step | Rule |
 | --- | --- |
 | Locator | The tile must be in the manifest, on the page the value cites, and the box inside it; else `image_locator_invalid` (not stored) |
-| Verify | Every image value is in the verify plan; one with no verdict is not stored (`image_not_verified`). The verify pass re-views the tile: agree, disagree or unclear |
+| Verify | Every image value is in the verify plan; one without an agree verdict (none, disagree or unclear) is not stored but queued with the verdict and note (`image_not_verified`). The verify pass re-views the tile: agree, disagree or unclear |
 | Stored | `extraction_method` "llm-image", `quote_match` "image", `text_method` "image", `image` {tile, box, dpi, page_px_box, pt_box, pdf_sha256, unclear}; `locator` `<file url>#page=N&viewrect=left,top,width,height` (PDF points of the cached PDF's page) |
 | Confidence | `min(images.confidence.max, S x images.confidence.factor) x V x I`, times `unclear_factor` when the reader marked digits unclear (also queued `image_unclear`). With the defaults (max 0.6, factor 0.8, unclear 0.7) an image value never exceeds 0.6, below verified text values from the same source |
 | Inferred | Section contact points, and a hole's distance read from a tile, are always stored `inferred: true` |

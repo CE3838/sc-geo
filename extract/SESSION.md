@@ -176,9 +176,11 @@ PDF points, for a section strip). With no cached PDF it says to run
    (Image packets) says, including section scales, contacts and holes.
 3. The verify plan lists every image value: re-view each tile at its box
    (`extract/prompts/verify.md`, Image values). Ingest stores an image
-   value only when it is verified, as `extraction_method` "llm-image" with
-   a locator naming the file, page and box, and queues the rest
-   (`image_not_verified`, `image_locator_invalid`, `image_unclear`).
+   value only when the verify pass agrees, as `extraction_method` "llm-image"
+   with a locator naming the file, page and box, and queues the rest
+   (`image_not_verified`, `image_locator_invalid`, `image_unclear`). A value
+   held back as `image_not_verified` (no verdict, disagree or unclear) carries
+   the verdict and the verifier's note: fix the reading and ingest again.
 4. Never commit the PNG tiles or the manifest; they stay in `.cache/images/`.
 
 Read, check, verify and ingest a re-read packet exactly as in steps 2-4,

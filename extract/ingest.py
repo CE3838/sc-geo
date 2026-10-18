@@ -430,7 +430,7 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
     review: list[dict] = []
     stored: dict[str, dict] = {}
     counts = {"values": 0, "stored": 0, "exact": 0, "ocr": 0, "fuzzy": 0, "quote_not_found": 0, "wrong_page": 0,
-              "agree": 0, "disagree": 0, "unclear": 0}
+              "agree": 0, "disagree": 0, "unclear": 0, "image": 0, "image_not_verified": 0}
 
     def queue(path, val, problem, **extra):
         review.append({"source_id": sid, "path": path, "problem": problem, "value": val.get("value"),

@@ -194,9 +194,21 @@ def test_unclear_digits_lower_confidence_and_go_to_review(env):
     assert next(i for i in env.review() if i["path"] == PATH)["problem"] == "image_unclear"
 
 
-def test_disagreeing_image_value_is_queued(env):
-    env.run(result([_hole(env)]), verify=[{"path": PATH, "verdict": "disagree", "value": "48 ft", "note": "8 not 5"}])
-    assert any(i["path"] == PATH and i["problem"] == "verify_disagree" for i in env.review())
+@pytest.mark.parametrize("verdict", ["disagree", "unclear"])
+def test_image_value_the_verify_pass_does_not_agree_with_is_held_for_review(env, verdict):
+    summary = env.run(result([_hole(env)]), verify=[{"path": PATH, "verdict": verdict, "value": "48 ft",
+                                                     "note": "8 not 5"}])
+    assert summary["image_not_verified"] == 1 and summary["image"] == 0 and summary["stored"] == 2
+    assert "intervals" not in env.out()["sections"][0]["holes"][0]  # not stored as a value
+    item = next(i for i in env.review() if i["path"] == PATH)
+    assert item["problem"] == "image_not_verified" and item["verdict"] == verdict and item["note"] == "8 not 5"
+    assert item["image"]["tile"] == env.tile["tile"] and item["verify"]["value"] == "48 ft"
+    assert [i["problem"] for i in env.review() if i["path"] == PATH] == ["image_not_verified"]
+
+
+def test_summary_counts_held_back_image_values_even_when_none(env):
+    summary = env.run(result([_hole(env)]), verify=[{"path": PATH, "verdict": "agree"}])
+    assert summary["image_not_verified"] == 0 and summary["image"] == 1
 
 
 def test_section_geometry_is_always_flagged_inferred(env):
