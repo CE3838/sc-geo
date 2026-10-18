@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 164,
+ "count": 165,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -2165,6 +2165,19 @@
    "verify": {
     "verdict": "unclear",
     "note": "OCR prints 'Facies |', '(SR 4/2)' and '1OYR 6/6'; value reads them as Facies 1, 5R 4/2, 10YR 6/6, flagged inferred"
+   }
+  },
+  {
+   "source_id": "ngmdb:100315",
+   "path": "sections[0].observations[0]",
+   "problem": "verify_unclear",
+   "value": "38-279",
+   "page": 1,
+   "quote": "38-279",
+   "added_at": "2026-10-18T10:56:29+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR'd label on the section face; reading 38-279 and its role on the section cannot be confirmed"
    }
   }
  ]
