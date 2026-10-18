@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 165,
+ "count": 167,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -2178,6 +2178,32 @@
    "verify": {
     "verdict": "unclear",
     "note": "OCR'd label on the section face; reading 38-279 and its role on the section cannot be confirmed"
+   }
+  },
+  {
+   "source_id": "ngmdb:94273",
+   "path": "sections[0].units_along[0].unit",
+   "problem": "verify_unclear",
+   "value": "TFa",
+   "page": 1,
+   "quote": "3000 900 3000 900 3000 — - ay 900 TFa |",
+   "added_at": "2026-10-18T16:05:23+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR places this label between the A-A and B-B section scales; which section it belongs to depends on layout"
+   }
+  },
+  {
+   "source_id": "ngmdb:94273",
+   "path": "sections[0].units_along[1].unit",
+   "problem": "verify_unclear",
+   "value": "TRag",
+   "page": 1,
+   "quote": "1000 300 1000 300 1000 = TRag TF [— 300",
+   "added_at": "2026-10-18T16:05:23+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR places this label between the A-A and B-B section scales; which section it belongs to depends on layout"
    }
   }
  ]
