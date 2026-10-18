@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 165,
+ "count": 167,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -2178,6 +2178,34 @@
    "verify": {
     "verdict": "unclear",
     "note": "OCR'd label on the section face; reading 38-279 and its role on the section cannot be confirmed"
+   }
+  },
+  {
+   "source_id": "ngmdb:95418",
+   "path": "sections[0].holes[0].elevation",
+   "problem": "verify_disagree",
+   "value": 516,
+   "page": 1,
+   "quote": "32-233",
+   "added_at": "2026-10-18T16:05:50+00:00",
+   "verify": {
+    "verdict": "disagree",
+    "value": 509,
+    "note": "re-viewed tile r1c1: the hole's top cap is at about 509 ft on the section scale (axis ticks 530 at y55, 490 at y130); 516 ft is the profile line above the label"
+   }
+  },
+  {
+   "source_id": "ngmdb:95418",
+   "path": "sections[0].holes[0].intervals[0].top",
+   "problem": "verify_disagree",
+   "value": "516 ft",
+   "page": 1,
+   "quote": "32-233",
+   "added_at": "2026-10-18T16:05:51+00:00",
+   "verify": {
+    "verdict": "disagree",
+    "value": "509 ft",
+    "note": "re-viewed tile r1c1: the hole's top cap is at about 509 ft on the section scale (axis ticks 530 at y55, 490 at y130); 516 ft is the profile line above the label"
    }
   }
  ]
