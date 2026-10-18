@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 167,
+ "count": 168,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -2206,6 +2206,20 @@
     "verdict": "disagree",
     "value": "509 ft",
     "note": "re-viewed tile r1c1: the hole's top cap is at about 509 ft on the section scale (axis ticks 530 at y55, 490 at y130); 516 ft is the profile line above the label"
+   }
+  },
+  {
+   "source_id": "ngmdb:95419",
+   "path": "sections[2].holes[3].intervals[1].bottom",
+   "problem": "verify_disagree",
+   "value": "66 ft",
+   "page": 1,
+   "quote": "Lex 147",
+   "added_at": "2026-10-18T16:11:13+00:00",
+   "verify": {
+    "verdict": "disagree",
+    "value": "below 50 ft",
+    "note": "re-viewed tile r1c3: the hole continues as a dashed line below about 66 ft to the base of the section (50 ft) with no bottom cap; total depth not shown"
    }
   }
  ]
