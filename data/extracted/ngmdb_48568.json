@@ -8,10 +8,11 @@
  "kind": "publication",
  "schema_version": 1,
  "extracted_at": "2026-10-18T10:56:59+00:00",
- "updated_at": "2026-10-18T10:56:59+00:00",
+ "updated_at": "2026-10-18T10:57:01+00:00",
  "reader": "Claude, scheduled Claude Code session 2026-10-18",
  "packets": [
-  "packet-01"
+  "packet-01",
+  "packet-02"
  ],
  "blocks_done": [
   "1",
@@ -63,11 +64,16 @@
   "49",
   "50",
   "51",
-  "52"
+  "52",
+  "53",
+  "54",
+  "55",
+  "56",
+  "57"
  ],
  "blocks_total": 55,
- "complete": false,
- "notes": "Surface-water modeling report (water level, streamflow and salinity transport, Cooper and Wando Rivers). Pages 1-52 hold no geologic units, borings, wells, structures or aquifer data. Gaging stations are surface-water stations, and gage datums (for example -17.12 ft and -6.99 ft relative to sea level, NGVD 29) are water-level references, not geologic surfaces; none recorded. Clayey soils of the area mentioned only in passing. No reference list in this packet. SUBSURFACE: none.",
+ "complete": true,
+ "notes": "Surface-water modeling report (water level, streamflow and salinity transport, Cooper and Wando Rivers). Pages 1-52 hold no geologic units, borings, wells, structures or aquifer data. Gaging stations are surface-water stations, and gage datums (for example -17.12 ft and -6.99 ft relative to sea level, NGVD 29) are water-level references, not geologic surfaces; none recorded. Clayey soils of the area mentioned only in passing. No reference list in this packet. SUBSURFACE: none.\nPages 53-57: summary and reference list. Only references on Charleston Harbor sedimentation and physical setting are recorded; modeling, water-data and regulatory references skipped. No geologic data. SUBSURFACE: none.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/wri/1996/4237/report.pdf",
@@ -78,9 +84,13 @@
   }
  ],
  "summary": {
-  "stored": 0,
-  "quote_match": {},
-  "verification": {},
+  "stored": 5,
+  "quote_match": {
+   "exact": 5
+  },
+  "verification": {
+   "agree": 1
+  },
   "inferred": 0
  },
  "ingests": [
@@ -101,13 +111,107 @@
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
+  },
+  {
+   "at": "2026-10-18T10:57:01+00:00",
+   "packets": [
+    "packet-02"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-18",
+   "values": 5,
+   "stored": 5,
+   "exact": 5,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 1,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
   }
  ],
  "units": [],
  "observations": [],
  "structures": [],
  "groundwater": [],
- "references": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Kjerfve, Bjorn, 1976, The Santee-Cooper: A study of estuarine manipulations, in M.L. Wiley, ed., Estuarine Processes, v. 1, Academic Press, New York, p. 44-56.",
+    "source_id": "ngmdb:48568",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Kjerfve, Bjorn, 1976, The Santee-Cooper: A study of estuarine manipulations, in M.L. Wiley, ed.,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Patterson, G.G., 1983, Effect of the proposed Cooper River Rediversion on sedimentation in Charleston Harbor, South Carolina: U.S. Geological Survey Water-Resources Investigations Report 83-4198, 65 p.",
+    "source_id": "ngmdb:48568",
+    "page": 56,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Patterson, G.G., 1983, Effect of the proposed Cooper River Rediversion on sedimentation in",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Teeter, A.M., 1989, Effects of Cooper River rediversion flows on shoaling conditions at Charleston Harbor, Charleston, South Carolina: U.S. Army Corps of Engineers Technical Report HL-89-3, 113 p.",
+    "source_id": "ngmdb:48568",
+    "page": 56,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Teeter, A.M., 1989, Effects of Cooper River rediversion flows on shoaling conditions at",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Teeter, A.M., and Pankov, Walter, 1989, Schematic numerical modeling of harbor deepening effects on sedimentation Charleston, South Carolina: U.S. Army Corps of Engineers Technical Report HL-89-7, 90 p.",
+    "source_id": "ngmdb:48568",
+    "page": 56,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Teeter, A.M., and Pankov, Walter, 1989, Schematic numerical modeling of harbor deepening",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Van Dolah, R.F., Wendt, P. H., and Wenner, E.L., eds., 1990, Physical and ecological characterization of the Charleston Harbor estuarine system, Final Report: South Carolina Coastal Council, Charleston, South Carolina, 634 p.",
+    "source_id": "ngmdb:48568",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Van Dolah, R.F., Wendt, P. H., and Wenner, E.L., eds., 1990, Physical and ecological",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ],
  "surfaces": [],
  "contours": [],
  "sections": []
