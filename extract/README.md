@@ -402,9 +402,9 @@ view a rendered page image instead (`extract/images.py`).
 
 **Provenance of image values.** A value read from a tile carries
 `"image": {"tile", "box"}` (box in the tile's pixels) and, as its quote,
-the text as transcribed from the image. Ingest first looks for the quote in
-the page text: when found, the value is text-checked and stored as usual
-(`extraction_method` "llm"), keeping the tile. Otherwise:
+the text as transcribed from the image. A value with an `image` box is always
+an image value, even when its quote is also in the page text (then it gets
+`text_match: true`, which changes nothing else):
 
 | Step | Rule |
 | --- | --- |
