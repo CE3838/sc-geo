@@ -8,7 +8,7 @@
  "kind": "publication",
  "schema_version": 1,
  "extracted_at": "2026-10-13T10:57:35+00:00",
- "updated_at": "2026-10-18T16:17:31+00:00",
+ "updated_at": "2026-10-20T00:49:48+00:00",
  "reader": "Claude, Claude Code re-read session 2026-10-18",
  "packets": [
   "packet-01"
@@ -45,15 +45,16 @@
   }
  ],
  "summary": {
-  "stored": 8368,
+  "stored": 8364,
   "quote_match": {
-   "exact": 8368
+   "exact": 8361,
+   "image": 3
   },
   "verification": {
-   "agree": 8292,
-   "unclear": 5
+   "unclear": 1,
+   "agree": 8292
   },
-  "inferred": 832
+  "inferred": 829
  },
  "ingests": [
   {
@@ -90,6 +91,48 @@
    "agree": 8287,
    "disagree": 0,
    "unclear": 5,
+   "review_items": 5,
+   "reread": {
+    "packets": [
+     "reread-01"
+    ],
+    "pages": [
+     6,
+     8,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     18
+    ],
+    "reason": "water_tests; subsurface_fields",
+    "queue_ids": [
+     "ngmdb:46513:water_tests:p11-18",
+     "ngmdb:46513:subsurface_fields:p6,8,11,13-18"
+    ]
+   }
+  },
+  {
+   "at": "2026-10-20T00:49:48+00:00",
+   "packets": [
+    "reread-01"
+   ],
+   "reader": "Claude, Claude Code re-read session 2026-10-18",
+   "values": 8319,
+   "stored": 8315,
+   "exact": 8312,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 8287,
+   "disagree": 0,
+   "unclear": 5,
+   "image": 3,
+   "image_not_verified": 4,
    "review_items": 5,
    "reread": {
     "packets": [
@@ -5506,6 +5549,748 @@
      }
     }
    ]
+  },
+  {
+   "at": "2026-10-20T00:49:48+00:00",
+   "reason": "water_tests; subsurface_fields",
+   "packets": [
+    "reread-01"
+   ],
+   "pages": [
+    6,
+    8,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+   ],
+   "replaced": [
+    {
+     "section": "water_tests",
+     "record": {
+      "kind": "well",
+      "observation": {
+       "value": "HAM224",
+       "source_id": "ngmdb:46513",
+       "page": 11,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "HAM224 324507081061901 11 13 3-13 10.2 22.5 48 5.1",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree",
+       "table": true
+      },
+      "date": {
+       "value": "summer of 1997",
+       "source_id": "ngmdb:46513",
+       "page": 12,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "during the summer of 1997 and analyzed for field",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree"
+      },
+      "top": {
+       "value": "3",
+       "source_id": "ngmdb:46513",
+       "page": 11,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "HAM224 324507081061901 11 13 3-13 10.2 22.5 48 5.1",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree",
+       "units": "feet below land surface",
+       "table": true,
+       "note": "screened interval",
+       "normalized": {
+        "min_ft": 3.0,
+        "max_ft": 3.0,
+        "unit": "feet below land surface",
+        "approximate": false
+       }
+      },
+      "bottom": {
+       "value": "13",
+       "source_id": "ngmdb:46513",
+       "page": 11,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "HAM224 324507081061901 11 13 3-13 10.2 22.5 48 5.1",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree",
+       "units": "feet below land surface",
+       "table": true,
+       "note": "screened interval",
+       "normalized": {
+        "min_ft": 13.0,
+        "max_ft": 13.0,
+        "unit": "feet below land surface",
+        "approximate": false
+       }
+      },
+      "depth_reference": {
+       "value": "land surface",
+       "source_id": "ngmdb:46513",
+       "page": 11,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "number below land below land below land",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree",
+       "table": true,
+       "note": "table header: well depth, screened interval and water depth in feet below land surface"
+      },
+      "parameter": {
+       "value": "Dissolved oxygen",
+       "source_id": "ngmdb:46513",
+       "page": 11,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "oxygen,",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree",
+       "table": true,
+       "note": "column header",
+       "normalized": {
+        "name": "dissolved oxygen",
+        "category": "field",
+        "inferred": true
+       }
+      },
+      "value": {
+       "value": "0.5",
+       "source_id": "ngmdb:46513",
+       "page": 11,
+       "extraction_method": "llm",
+       "confidence": 0.595,
+       "inferred": false,
+       "locator": null,
+       "quote": "0.5'",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "unclear",
+       "table": true,
+       "note": "text layer prints 0.5' on the line above the HAM224 row; page image (p11 tile r2c1) shows 0.5 in the dissolved-oxygen column",
+       "normalized": {
+        "number": 0.5,
+        "qualifier": null
+       },
+       "image": {
+        "tile": "p11-250dpi-1x2-r2c1",
+        "box": [
+         1610,
+         535,
+         1680,
+         578
+        ],
+        "dpi": 250,
+        "page_px_box": [
+         1610,
+         1800,
+         1680,
+         1843
+        ],
+        "pt_box": [
+         463.68,
+         518.4,
+         483.84,
+         530.78
+        ],
+        "pdf_sha256": "be83fb6816d3f8863bf1eb1dd02074fa8ec57d67b36b1e8f26af3cc982b43f11"
+       }
+      },
+      "source_table": {
+       "value": "Table 2",
+       "source_id": "ngmdb:46513",
+       "page": 11,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "Table 2. Well characteristics and field properties",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree"
+      },
+      "units": {
+       "value": "mg/L",
+       "source_id": "ngmdb:46513",
+       "page": 11,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "mg/L, milligram per liter",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree"
+      }
+     }
+    },
+    {
+     "section": "water_tests",
+     "record": {
+      "kind": "well",
+      "observation": {
+       "value": "BAM079",
+       "source_id": "ngmdb:46513",
+       "page": 13,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "BAM079 7.4 11 _3.2 1.1 15 0.4 ND 6.3",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree",
+       "table": true
+      },
+      "date": {
+       "value": "summer of 1997",
+       "source_id": "ngmdb:46513",
+       "page": 12,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "during the summer of 1997 and analyzed for field",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree"
+      },
+      "parameter": {
+       "value": "Sodium",
+       "source_id": "ngmdb:46513",
+       "page": 13,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "number Calcium Magnesium Sodium Potassium Chloride Sulfate Fluoride Silica",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree",
+       "table": true,
+       "note": "column header",
+       "normalized": {
+        "name": "sodium",
+        "category": "major_ion",
+        "inferred": true
+       }
+      },
+      "value": {
+       "value": "3.2",
+       "source_id": "ngmdb:46513",
+       "page": 13,
+       "extraction_method": "llm",
+       "confidence": 0.476,
+       "inferred": true,
+       "locator": null,
+       "quote": "BAM079 7.4 11 _3.2 1.1 15 0.4 ND 6.3",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "unclear",
+       "table": true,
+       "note": "text layer prints _3.2; page image (p13 tile r1c1) shows 3.2",
+       "normalized": {
+        "number": 3.2,
+        "qualifier": null
+       },
+       "image": {
+        "tile": "p13-250dpi-1x2-r1c1",
+        "box": [
+         800,
+         712,
+         855,
+         752
+        ],
+        "dpi": 250,
+        "page_px_box": [
+         800,
+         712,
+         855,
+         752
+        ],
+        "pt_box": [
+         230.4,
+         205.06,
+         246.24,
+         216.58
+        ],
+        "pdf_sha256": "be83fb6816d3f8863bf1eb1dd02074fa8ec57d67b36b1e8f26af3cc982b43f11"
+       }
+      },
+      "units": {
+       "value": "milligrams per liter",
+       "source_id": "ngmdb:46513",
+       "page": 13,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "Concentrations in milligrams per liter",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree"
+      },
+      "source_table": {
+       "value": "Table 3",
+       "source_id": "ngmdb:46513",
+       "page": 13,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "Table 3. Concentrations of major ions in ground-water samples",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree"
+      },
+      "top": {
+       "value": "20",
+       "source_id": "ngmdb:46513",
+       "page": 11,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "BAM079 331043081022101 15 30 20-30 20.0 22.0 238 8.8 4.0",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree",
+       "units": "feet below land surface",
+       "table": true,
+       "note": "screened interval (Table 2)",
+       "normalized": {
+        "min_ft": 20.0,
+        "max_ft": 20.0,
+        "unit": "feet below land surface",
+        "approximate": false
+       }
+      },
+      "bottom": {
+       "value": "30",
+       "source_id": "ngmdb:46513",
+       "page": 11,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "BAM079 331043081022101 15 30 20-30 20.0 22.0 238 8.8 4.0",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree",
+       "units": "feet below land surface",
+       "table": true,
+       "note": "screened interval (Table 2)",
+       "normalized": {
+        "min_ft": 30.0,
+        "max_ft": 30.0,
+        "unit": "feet below land surface",
+        "approximate": false
+       }
+      },
+      "depth_reference": {
+       "value": "land surface",
+       "source_id": "ngmdb:46513",
+       "page": 11,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "number below land below land below land",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree",
+       "table": true,
+       "note": "table header: well depth, screened interval and water depth in feet below land surface"
+      }
+     }
+    },
+    {
+     "section": "water_tests",
+     "record": {
+      "kind": "well",
+      "observation": {
+       "value": "COL356",
+       "source_id": "ngmdb:46513",
+       "page": 13,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "COL356 39 3.9 2.9 0.82 12 3.3 0.21",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree",
+       "table": true
+      },
+      "date": {
+       "value": "summer of 1997",
+       "source_id": "ngmdb:46513",
+       "page": 12,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "during the summer of 1997 and analyzed for field",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree"
+      },
+      "parameter": {
+       "value": "Silica",
+       "source_id": "ngmdb:46513",
+       "page": 13,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "number Calcium Magnesium Sodium Potassium Chloride Sulfate Fluoride Silica",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree",
+       "table": true,
+       "note": "column header",
+       "normalized": {
+        "name": "silica",
+        "category": "major_ion",
+        "inferred": true
+       }
+      },
+      "value": {
+       "value": "4.6",
+       "source_id": "ngmdb:46513",
+       "page": 13,
+       "extraction_method": "llm",
+       "confidence": 0.476,
+       "inferred": true,
+       "locator": null,
+       "quote": "1 \"' 4.6' :",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "unclear",
+       "table": true,
+       "note": "text layer prints 4.6' on the line below the COL356 row; page image (p13 tile r1c1) shows 4.6 under Silica",
+       "normalized": {
+        "number": 4.6,
+        "qualifier": null
+       },
+       "image": {
+        "tile": "p13-250dpi-1x2-r1c1",
+        "box": [
+         1690,
+         1048,
+         1740,
+         1088
+        ],
+        "dpi": 250,
+        "page_px_box": [
+         1690,
+         1048,
+         1740,
+         1088
+        ],
+        "pt_box": [
+         486.72,
+         301.82,
+         501.12,
+         313.34
+        ],
+        "pdf_sha256": "be83fb6816d3f8863bf1eb1dd02074fa8ec57d67b36b1e8f26af3cc982b43f11"
+       }
+      },
+      "units": {
+       "value": "milligrams per liter",
+       "source_id": "ngmdb:46513",
+       "page": 13,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "Concentrations in milligrams per liter",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree"
+      },
+      "source_table": {
+       "value": "Table 3",
+       "source_id": "ngmdb:46513",
+       "page": 13,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "Table 3. Concentrations of major ions in ground-water samples",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree"
+      },
+      "top": {
+       "value": "13",
+       "source_id": "ngmdb:46513",
+       "page": 11,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "COL356 330540080490701 10 18 13-18 7.1 18.5 8.3 7.3 7.7",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree",
+       "units": "feet below land surface",
+       "table": true,
+       "note": "screened interval (Table 2)",
+       "normalized": {
+        "min_ft": 13.0,
+        "max_ft": 13.0,
+        "unit": "feet below land surface",
+        "approximate": false
+       }
+      },
+      "bottom": {
+       "value": "18",
+       "source_id": "ngmdb:46513",
+       "page": 11,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "COL356 330540080490701 10 18 13-18 7.1 18.5 8.3 7.3 7.7",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree",
+       "units": "feet below land surface",
+       "table": true,
+       "note": "screened interval (Table 2)",
+       "normalized": {
+        "min_ft": 18.0,
+        "max_ft": 18.0,
+        "unit": "feet below land surface",
+        "approximate": false
+       }
+      },
+      "depth_reference": {
+       "value": "land surface",
+       "source_id": "ngmdb:46513",
+       "page": 11,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "number below land below land below land",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree",
+       "table": true,
+       "note": "table header: well depth, screened interval and water depth in feet below land surface"
+      }
+     }
+    },
+    {
+     "section": "water_tests",
+     "record": {
+      "kind": "well",
+      "observation": {
+       "value": "ORG400",
+       "source_id": "ngmdb:46513",
+       "page": 13,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "ORG400 58 I 9.7 0.42 8.6 18 0.13 16",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree",
+       "table": true
+      },
+      "date": {
+       "value": "summer of 1997",
+       "source_id": "ngmdb:46513",
+       "page": 12,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "during the summer of 1997 and analyzed for field",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree"
+      },
+      "parameter": {
+       "value": "Magnesium",
+       "source_id": "ngmdb:46513",
+       "page": 13,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "number Calcium Magnesium Sodium Potassium Chloride Sulfate Fluoride Silica",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree",
+       "table": true,
+       "note": "column header",
+       "normalized": {
+        "name": "magnesium",
+        "category": "major_ion",
+        "inferred": true
+       }
+      },
+      "value": {
+       "value": "1",
+       "source_id": "ngmdb:46513",
+       "page": 13,
+       "extraction_method": "llm",
+       "confidence": 0.476,
+       "inferred": true,
+       "locator": null,
+       "quote": "ORG400 58 I 9.7 0.42 8.6 18 0.13 16",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "unclear",
+       "table": true,
+       "note": "text layer prints I; page image (p13 tile r2c1) shows 1",
+       "normalized": {
+        "number": 1.0,
+        "qualifier": null
+       },
+       "image": {
+        "tile": "p13-250dpi-1x2-r2c1",
+        "box": [
+         605,
+         783,
+         640,
+         822
+        ],
+        "dpi": 250,
+        "page_px_box": [
+         605,
+         2048,
+         640,
+         2087
+        ],
+        "pt_box": [
+         174.24,
+         589.82,
+         184.32,
+         601.06
+        ],
+        "pdf_sha256": "be83fb6816d3f8863bf1eb1dd02074fa8ec57d67b36b1e8f26af3cc982b43f11"
+       }
+      },
+      "units": {
+       "value": "milligrams per liter",
+       "source_id": "ngmdb:46513",
+       "page": 13,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "Concentrations in milligrams per liter",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree"
+      },
+      "source_table": {
+       "value": "Table 3",
+       "source_id": "ngmdb:46513",
+       "page": 13,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "Table 3. Concentrations of major ions in ground-water samples",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree"
+      },
+      "top": {
+       "value": "22",
+       "source_id": "ngmdb:46513",
+       "page": 11,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "ORG400 331303080464101 14 27 22-27 5.9 20.0 322 0.4 7.5",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree",
+       "units": "feet below land surface",
+       "table": true,
+       "note": "screened interval (Table 2)",
+       "normalized": {
+        "min_ft": 22.0,
+        "max_ft": 22.0,
+        "unit": "feet below land surface",
+        "approximate": false
+       }
+      },
+      "bottom": {
+       "value": "27",
+       "source_id": "ngmdb:46513",
+       "page": 11,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "ORG400 331303080464101 14 27 22-27 5.9 20.0 322 0.4 7.5",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree",
+       "units": "feet below land surface",
+       "table": true,
+       "note": "screened interval (Table 2)",
+       "normalized": {
+        "min_ft": 27.0,
+        "max_ft": 27.0,
+        "unit": "feet below land surface",
+        "approximate": false
+       }
+      },
+      "depth_reference": {
+       "value": "land surface",
+       "source_id": "ngmdb:46513",
+       "page": 11,
+       "extraction_method": "llm",
+       "confidence": 0.85,
+       "inferred": false,
+       "locator": null,
+       "quote": "number below land below land below land",
+       "quote_match": "exact",
+       "text_method": "pdf_text",
+       "verification": "agree",
+       "table": true,
+       "note": "table header: well depth, screened interval and water depth in feet below land surface"
+      }
+     }
+    }
+   ],
+   "note": "re-ingest under the image-provenance rule; only records whose values changed are kept here"
   }
  ],
  "units": [],
@@ -24130,48 +24915,6 @@
      "inferred": true
     }
    },
-   "value": {
-    "value": "0.5",
-    "source_id": "ngmdb:46513",
-    "page": 11,
-    "extraction_method": "llm",
-    "confidence": 0.595,
-    "inferred": false,
-    "locator": null,
-    "quote": "0.5'",
-    "quote_match": "exact",
-    "text_method": "pdf_text",
-    "verification": "unclear",
-    "table": true,
-    "note": "text layer prints 0.5' on the line above the HAM224 row; page image (p11 tile r2c1) shows 0.5 in the dissolved-oxygen column",
-    "normalized": {
-     "number": 0.5,
-     "qualifier": null
-    },
-    "image": {
-     "tile": "p11-250dpi-1x2-r2c1",
-     "box": [
-      1610,
-      535,
-      1680,
-      578
-     ],
-     "dpi": 250,
-     "page_px_box": [
-      1610,
-      1800,
-      1680,
-      1843
-     ],
-     "pt_box": [
-      463.68,
-      518.4,
-      483.84,
-      530.78
-     ],
-     "pdf_sha256": "be83fb6816d3f8863bf1eb1dd02074fa8ec57d67b36b1e8f26af3cc982b43f11"
-    }
-   },
    "source_table": {
     "value": "Table 2",
     "source_id": "ngmdb:46513",
@@ -34991,48 +35734,6 @@
      "inferred": true
     }
    },
-   "value": {
-    "value": "3.2",
-    "source_id": "ngmdb:46513",
-    "page": 13,
-    "extraction_method": "llm",
-    "confidence": 0.476,
-    "inferred": true,
-    "locator": null,
-    "quote": "BAM079 7.4 11 _3.2 1.1 15 0.4 ND 6.3",
-    "quote_match": "exact",
-    "text_method": "pdf_text",
-    "verification": "unclear",
-    "table": true,
-    "note": "text layer prints _3.2; page image (p13 tile r1c1) shows 3.2",
-    "normalized": {
-     "number": 3.2,
-     "qualifier": null
-    },
-    "image": {
-     "tile": "p13-250dpi-1x2-r1c1",
-     "box": [
-      800,
-      712,
-      855,
-      752
-     ],
-     "dpi": 250,
-     "page_px_box": [
-      800,
-      712,
-      855,
-      752
-     ],
-     "pt_box": [
-      230.4,
-      205.06,
-      246.24,
-      216.58
-     ],
-     "pdf_sha256": "be83fb6816d3f8863bf1eb1dd02074fa8ec57d67b36b1e8f26af3cc982b43f11"
-    }
-   },
    "units": {
     "value": "milligrams per liter",
     "source_id": "ngmdb:46513",
@@ -43122,48 +43823,6 @@
      "name": "silica",
      "category": "major_ion",
      "inferred": true
-    }
-   },
-   "value": {
-    "value": "4.6",
-    "source_id": "ngmdb:46513",
-    "page": 13,
-    "extraction_method": "llm",
-    "confidence": 0.476,
-    "inferred": true,
-    "locator": null,
-    "quote": "1 \"' 4.6' :",
-    "quote_match": "exact",
-    "text_method": "pdf_text",
-    "verification": "unclear",
-    "table": true,
-    "note": "text layer prints 4.6' on the line below the COL356 row; page image (p13 tile r1c1) shows 4.6 under Silica",
-    "normalized": {
-     "number": 4.6,
-     "qualifier": null
-    },
-    "image": {
-     "tile": "p13-250dpi-1x2-r1c1",
-     "box": [
-      1690,
-      1048,
-      1740,
-      1088
-     ],
-     "dpi": 250,
-     "page_px_box": [
-      1690,
-      1048,
-      1740,
-      1088
-     ],
-     "pt_box": [
-      486.72,
-      301.82,
-      501.12,
-      313.34
-     ],
-     "pdf_sha256": "be83fb6816d3f8863bf1eb1dd02074fa8ec57d67b36b1e8f26af3cc982b43f11"
     }
    },
    "units": {
@@ -64388,48 +65047,6 @@
      "name": "magnesium",
      "category": "major_ion",
      "inferred": true
-    }
-   },
-   "value": {
-    "value": "1",
-    "source_id": "ngmdb:46513",
-    "page": 13,
-    "extraction_method": "llm",
-    "confidence": 0.476,
-    "inferred": true,
-    "locator": null,
-    "quote": "ORG400 58 I 9.7 0.42 8.6 18 0.13 16",
-    "quote_match": "exact",
-    "text_method": "pdf_text",
-    "verification": "unclear",
-    "table": true,
-    "note": "text layer prints I; page image (p13 tile r2c1) shows 1",
-    "normalized": {
-     "number": 1.0,
-     "qualifier": null
-    },
-    "image": {
-     "tile": "p13-250dpi-1x2-r2c1",
-     "box": [
-      605,
-      783,
-      640,
-      822
-     ],
-     "dpi": 250,
-     "page_px_box": [
-      605,
-      2048,
-      640,
-      2087
-     ],
-     "pt_box": [
-      174.24,
-      589.82,
-      184.32,
-      601.06
-     ],
-     "pdf_sha256": "be83fb6816d3f8863bf1eb1dd02074fa8ec57d67b36b1e8f26af3cc982b43f11"
     }
    },
    "units": {
@@ -110595,20 +111212,14 @@
     "value": "0.1",
     "source_id": "ngmdb:46513",
     "page": 16,
-    "extraction_method": "llm",
-    "confidence": 0.68,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
     "inferred": true,
-    "locator": null,
+    "locator": "https://pubs.usgs.gov/of/2001/0377/report.pdf#page=16&viewrect=283.68,339.84,14.4,11.52",
     "quote": "0.1",
-    "quote_match": "exact",
-    "text_method": "pdf_text",
+    "quote_match": "image",
+    "text_method": "image",
     "verification": "agree",
-    "table": true,
-    "note": "text layer garbles the Sulfate row (\"0.1 \"\" and 5.1 0.1); page image shows 0.1 in each column",
-    "normalized": {
-     "number": 0.1,
-     "qualifier": null
-    },
     "image": {
      "tile": "p16-250dpi-1x2-r1c1",
      "box": [
@@ -110631,6 +111242,13 @@
       351.36
      ],
      "pdf_sha256": "be83fb6816d3f8863bf1eb1dd02074fa8ec57d67b36b1e8f26af3cc982b43f11"
+    },
+    "text_match": true,
+    "table": true,
+    "note": "text layer garbles the Sulfate row (\"0.1 \"\" and 5.1 0.1); page image shows 0.1 in each column",
+    "normalized": {
+     "number": 0.1,
+     "qualifier": null
     }
    },
    "qualifier": {
@@ -110741,20 +111359,14 @@
     "value": "0.1",
     "source_id": "ngmdb:46513",
     "page": 16,
-    "extraction_method": "llm",
-    "confidence": 0.68,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
     "inferred": true,
-    "locator": null,
+    "locator": "https://pubs.usgs.gov/of/2001/0377/report.pdf#page=16&viewrect=336.96,339.84,14.4,11.52",
     "quote": "0.1",
-    "quote_match": "exact",
-    "text_method": "pdf_text",
+    "quote_match": "image",
+    "text_method": "image",
     "verification": "agree",
-    "table": true,
-    "note": "text layer garbles the Sulfate row (\"0.1 \"\" and 5.1 0.1); page image shows 0.1 in each column",
-    "normalized": {
-     "number": 0.1,
-     "qualifier": null
-    },
     "image": {
      "tile": "p16-250dpi-1x2-r1c1",
      "box": [
@@ -110777,6 +111389,13 @@
       351.36
      ],
      "pdf_sha256": "be83fb6816d3f8863bf1eb1dd02074fa8ec57d67b36b1e8f26af3cc982b43f11"
+    },
+    "text_match": true,
+    "table": true,
+    "note": "text layer garbles the Sulfate row (\"0.1 \"\" and 5.1 0.1); page image shows 0.1 in each column",
+    "normalized": {
+     "number": 0.1,
+     "qualifier": null
     }
    },
    "qualifier": {
@@ -110888,20 +111507,14 @@
     "value": "0.1",
     "source_id": "ngmdb:46513",
     "page": 16,
-    "extraction_method": "llm",
-    "confidence": 0.68,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
     "inferred": true,
-    "locator": null,
+    "locator": "https://pubs.usgs.gov/of/2001/0377/report.pdf#page=16&viewrect=443.52,339.84,14.4,11.52",
     "quote": "0.1",
-    "quote_match": "exact",
-    "text_method": "pdf_text",
+    "quote_match": "image",
+    "text_method": "image",
     "verification": "agree",
-    "table": true,
-    "note": "text layer garbles the Sulfate row (\"0.1 \"\" and 5.1 0.1); page image shows 0.1 in each column",
-    "normalized": {
-     "number": 0.1,
-     "qualifier": null
-    },
     "image": {
      "tile": "p16-250dpi-1x2-r1c1",
      "box": [
@@ -110924,6 +111537,13 @@
       351.36
      ],
      "pdf_sha256": "be83fb6816d3f8863bf1eb1dd02074fa8ec57d67b36b1e8f26af3cc982b43f11"
+    },
+    "text_match": true,
+    "table": true,
+    "note": "text layer garbles the Sulfate row (\"0.1 \"\" and 5.1 0.1); page image shows 0.1 in each column",
+    "normalized": {
+     "number": 0.1,
+     "qualifier": null
     }
    },
    "qualifier": {
