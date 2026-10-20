@@ -323,8 +323,21 @@ State Plane NAD83 in feet or metres, NAD27 North/South zone in feet) gets a
 inference factor. It names the conversion, the horizontal datum, whether it
 is approximate (NAD27 shifted with a 3-parameter shift, or datum not
 stated) and every assumption made (such as a western longitude with no sign).
-Ambiguous text (State Plane without a datum, NAD27 without its zone, two
-places, two latitudes) gives no derived value. The value as printed is
+Ambiguous text (NAD27 without its zone, two places, two latitudes) gives no
+derived value.
+
+SC State Plane with no horizontal datum printed (NAD27 and NAD83 grid
+values differ by hundreds of feet) is converted only for sources whose
+catalog `year` is after 1990: NAD83 (FIPS 3900) is assumed, the value is
+marked approximate with `datum_assumed: true` and the note "datum not
+printed; NAD83 assumed (published after 1990)", and its confidence is the
+printed-datum conversion's times 0.75, **capped at 0.5**
+(`ingest.ASSUMED_DATUM_FACTOR`, `ingest.ASSUMED_DATUM_CAP`), so it is always
+below a printed-datum conversion. It is kept only when the point falls
+inside the document's catalog `bbox` widened by 0.05° (`BBOX_MARGIN_DEG`).
+Otherwise (1990 or earlier, no year, no bbox, outside the bbox) there is no
+derived value and `coordinates_not_derived` says why. Printed NAD83 and
+NAD27 are unchanged by this rule. The value as printed is
 unchanged. (Files written before this may still carry an older lenient
 `normalized` parse on locations; it is ignored, and `extract.renormalize`
 removes it.)

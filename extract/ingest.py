@@ -276,22 +276,63 @@ def normalized(path: str, val: dict, lexicon: Lexicon | None):
     return None
 
 
-def derived_coordinates(path: str, val: dict, stored: dict, cfg: dict = CONFIG) -> dict | None:
+# Unlabelled SC State Plane (no horizontal datum printed): NAD83 is assumed only for sources published
+# after ASSUMED_DATUM_AFTER_YEAR, and kept only when the point falls inside the document's catalog bbox
+# widened by BBOX_MARGIN_DEG. Its confidence is the printed-datum conversion's times ASSUMED_DATUM_FACTOR,
+# capped at ASSUMED_DATUM_CAP (always below a printed-datum conversion). Rule set by the user, 2026-10.
+ASSUMED_DATUM_AFTER_YEAR = 1990
+ASSUMED_DATUM_FACTOR = 0.75
+ASSUMED_DATUM_CAP = 0.5
+BBOX_MARGIN_DEG = 0.05
+
+
+def _in_bbox(lat: float, lon: float, bbox, margin: float = BBOX_MARGIN_DEG) -> bool:
+    w, s, e, n = bbox
+    return w - margin <= lon <= e + margin and s - margin <= lat <= n + margin
+
+
+def derive_coordinates(path: str, val: dict, stored: dict, cfg: dict = CONFIG,
+                       context: dict | None = None) -> tuple[dict | None, str | None]:
+    """(derived coordinate or None, why an unlabelled State Plane location was left blank or None).
+
+    context: the catalog record's {"year", "bbox"}; without it unlabelled State Plane stays blank, silently."""
+    field = re.sub(r"\[\d+\]", "", path).split(".")[-1]
+    if field not in ("location", "coordinates") or not isinstance(val.get("value"), str):
+        return None, None
+    c = coords.parse(val["value"])
+    conf = stored["confidence"] * cfg["confidence"]["inferred_factor"]
+    if c is None:
+        if context is None:
+            return None, None
+        c = coords.parse(val["value"], assume_state_plane_nad83=True)
+        if c is None or not c.get("datum_assumed"):
+            return None, None
+        year, bbox = context.get("year"), context.get("bbox")
+        if not isinstance(year, int) or year <= ASSUMED_DATUM_AFTER_YEAR:
+            return None, (f"State Plane datum not printed; NAD83 is assumed only for sources published after "
+                          f"{ASSUMED_DATUM_AFTER_YEAR} (this one: {year if year is not None else 'no year'})")
+        if not bbox or len(bbox) != 4:
+            return None, "State Plane datum not printed; NAD83 assumed, but the document has no catalog bbox to check"
+        if not _in_bbox(c["lat"], c["lon"], bbox):
+            return None, (f"State Plane datum not printed; with NAD83 assumed the point ({c['lat']:.5f}, "
+                          f"{c['lon']:.5f}) falls outside the catalog bbox (margin {BBOX_MARGIN_DEG} deg)")
+        conf = min(conf * ASSUMED_DATUM_FACTOR, ASSUMED_DATUM_CAP)
+    sv = StoredValue(value={"lat": round(c["lat"], 6), "lon": round(c["lon"], 6)}, source_id=stored["source_id"],
+                     page=stored["page"], extraction_method=ExtractionMethod.INFERENCE,
+                     confidence=round(conf, 3), inferred=True, locator=stored.get("locator"))
+    out = sv.to_dict() | {k: c[k] for k in ("format", "datum", "approximate", "assumptions", "conversion")}
+    if c.get("datum_assumed"):
+        out |= {"datum_assumed": True, "note": coords.ASSUMED_NAD83_NOTE}
+    return out, None
+
+
+def derived_coordinates(path: str, val: dict, stored: dict, cfg: dict = CONFIG,
+                        context: dict | None = None) -> dict | None:
     """A printed location converted to latitude/longitude by model.coords, as its own stored value.
 
     The value as printed stays the reading; the conversion is an inference (extraction_method
     'inference', inferred=True, confidence lowered by the inference factor) and names what it assumed."""
-    field = re.sub(r"\[\d+\]", "", path).split(".")[-1]
-    if field not in ("location", "coordinates") or not isinstance(val.get("value"), str):
-        return None
-    c = coords.parse(val["value"])
-    if c is None:
-        return None
-    sv = StoredValue(value={"lat": round(c["lat"], 6), "lon": round(c["lon"], 6)}, source_id=stored["source_id"],
-                     page=stored["page"], extraction_method=ExtractionMethod.INFERENCE,
-                     confidence=round(stored["confidence"] * cfg["confidence"]["inferred_factor"], 3),
-                     inferred=True, locator=stored.get("locator"))
-    return sv.to_dict() | {k: c[k] for k in ("format", "datum", "approximate", "assumptions", "conversion")}
+    return derive_coordinates(path, val, stored, cfg, context)[0]
 
 
 # --- ingest ----------------------------------------------------------------------
@@ -487,9 +528,11 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
         norm = normalized(path, val, lexicon)
         if norm not in (None, [], {}):
             entry["normalized"] = norm
-        derived = derived_coordinates(path, val, entry, cfg)
+        derived, why = derive_coordinates(path, val, entry, cfg, {"year": rec.get("year"), "bbox": rec.get("bbox")})
         if derived:
             entry["derived_coordinates"] = derived
+        elif why:
+            entry["coordinates_not_derived"] = why
         stored[path] = entry
         counts["stored"] += 1
         if path.split("[", 1)[0] in labtests.TESTS:  # units never guessed, "|" read as a digit, unread values

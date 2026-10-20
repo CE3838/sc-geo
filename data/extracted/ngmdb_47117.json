@@ -3343,7 +3343,27 @@
     "text_method": "pdf_text",
     "verification": "agree",
     "table": true,
-    "note": "OCR symbols in the coordinates are copied as printed"
+    "note": "OCR symbols in the coordinates are copied as printed",
+    "derived_coordinates": {
+     "value": {
+      "lat": 33.0,
+      "lon": -81.633333
+     },
+     "source_id": "ngmdb:47117",
+     "page": 53,
+     "extraction_method": "inference",
+     "confidence": 0.68,
+     "inferred": true,
+     "locator": null,
+     "format": "dms",
+     "datum": null,
+     "approximate": true,
+     "assumptions": [
+      "western longitude assumed (no sign or W printed)",
+      "horizontal datum not stated"
+     ],
+     "conversion": "model.coords: degrees, minutes and seconds to decimal degrees"
+    }
    },
    "elevation": {
     "value": "168 feet above sea level (from topographic map)",
@@ -3363,6 +3383,28 @@
      "max_ft": 168.0,
      "unit": "feet",
      "approximate": false
+    },
+    "navd88": {
+     "value": {
+      "min_ft": 167.18795638008243,
+      "max_ft": 167.18795638008243
+     },
+     "source_id": "ngmdb:47117",
+     "page": 53,
+     "extraction_method": "datum_conversion",
+     "confidence": 0.612,
+     "inferred": true,
+     "locator": null,
+     "from_datum": "NGVD29",
+     "shift_ft": -0.8120436199175661,
+     "conversion": "NGVD29 to NAVD88 by the us_noaa_vertcone.tif grid (bilinear)",
+     "approximate": true,
+     "assumptions": [
+      "sea level read as NGVD29 (document published 1989, before NAVD88)"
+     ],
+     "datum_from": "value text",
+     "datum_page": 53,
+     "location_from": "location"
     }
    },
    "date": {
@@ -3411,11 +3453,25 @@
     "verification": "agree",
     "table": true,
     "note": "OCR symbols in the coordinates are copied as printed",
-    "normalized": {
-     "lat": 33.00472222222222,
-     "lon": -81.01083333333334,
+    "derived_coordinates": {
+     "value": {
+      "lat": 33.004722,
+      "lon": -81.010833
+     },
+     "source_id": "ngmdb:47117",
+     "page": 54,
+     "extraction_method": "inference",
+     "confidence": 0.68,
+     "inferred": true,
+     "locator": null,
      "format": "dms",
-     "hemisphere_inferred": true
+     "datum": null,
+     "approximate": true,
+     "assumptions": [
+      "western longitude assumed (no sign or W printed)",
+      "horizontal datum not stated"
+     ],
+     "conversion": "model.coords: degrees, minutes and seconds to decimal degrees"
     }
    },
    "elevation": {
@@ -3436,6 +3492,28 @@
      "max_ft": 150.0,
      "unit": "feet",
      "approximate": false
+    },
+    "navd88": {
+     "value": {
+      "min_ft": 149.08791859924477,
+      "max_ft": 149.08791859924477
+     },
+     "source_id": "ngmdb:47117",
+     "page": 54,
+     "extraction_method": "datum_conversion",
+     "confidence": 0.612,
+     "inferred": true,
+     "locator": null,
+     "from_datum": "NGVD29",
+     "shift_ft": -0.9120814007552162,
+     "conversion": "NGVD29 to NAVD88 by the us_noaa_vertcone.tif grid (bilinear)",
+     "approximate": true,
+     "assumptions": [
+      "sea level read as NGVD29 (document published 1989, before NAVD88)"
+     ],
+     "datum_from": "value text",
+     "datum_page": 54,
+     "location_from": "location"
     }
    },
    "date": {
@@ -3559,7 +3637,9 @@
      "min_ft": 77.0,
      "max_ft": 77.0,
      "unit": "ft",
-     "approximate": false
+     "approximate": false,
+     "relative_to": "land surface",
+     "direction": "below"
     }
    },
    "location": {
@@ -4072,6 +4152,28 @@
      "max_ft": 172.0,
      "unit": "ft",
      "approximate": false
+    },
+    "navd88": {
+     "value": {
+      "min_ft": 162.0,
+      "max_ft": 172.0
+     },
+     "source_id": "ngmdb:47117",
+     "page": 47,
+     "extraction_method": "datum_conversion",
+     "confidence": 0.52,
+     "inferred": true,
+     "locator": null,
+     "from_datum": null,
+     "shift_ft": 0.0,
+     "conversion": "none (datum not stated)",
+     "approximate": true,
+     "assumptions": [
+      "vertical datum not stated; kept as printed (NGVD29 and NAVD88 differ by about a foot here)"
+     ],
+     "datum_from": "not stated",
+     "datum_page": null,
+     "location_from": null
     }
    },
    "date": {

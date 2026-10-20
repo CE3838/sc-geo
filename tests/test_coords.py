@@ -184,3 +184,29 @@ def test_geographic_datum_is_reported_and_nad27_shifted():
 def test_result_names_the_conversion():
     r = coords.parse("lat 332041, long 0815210")
     assert "packed" in r["conversion"] and r["conversion"].startswith("model.coords")
+
+
+# --- unlabelled State Plane: NAD83 assumed only when the caller asks (post-1990 sources) ---
+
+UNLABELLED_SP = "Northing 405146.969, Easting 2325576.500"
+
+
+def test_unlabelled_state_plane_assumed_nad83_only_on_request():
+    assert coords.parse(UNLABELLED_SP) is None
+    r = coords.parse(UNLABELLED_SP, assume_state_plane_nad83=True)
+    want = coords.parse(UNLABELLED_SP + " NAD83")
+    close(r, want["lat"], want["lon"], 1e-9)
+    assert r["datum"] == "NAD83" and r["datum_assumed"] is True and r["approximate"] is True
+    assert coords.ASSUMED_NAD83_NOTE in r["assumptions"]
+    assert coords.ASSUMED_NAD83_NOTE == "datum not printed; NAD83 assumed (published after 1990)"
+
+
+def test_printed_datum_unchanged_by_assumption_flag():
+    for text in ("NAD83 Northing 405146.969, Easting 2325576.500",
+                 "NAD27 South zone x = 2,312,000 ft, y = 345,000 ft",
+                 "32.776389, -79.931111", "lat 324512, long 0795841"):
+        assert coords.parse(text, assume_state_plane_nad83=True) == coords.parse(text)
+    assert coords.parse("NAD83 Northing 405146.969, Easting 2325576.500")["datum_assumed"] is False
+    # other ambiguities still give nothing
+    for text in ("NAD83 and NAD27 E 2,312,000 N 345,000", "E 2,312,000 ft N 345,000 m"):
+        assert coords.parse(text, assume_state_plane_nad83=True) is None

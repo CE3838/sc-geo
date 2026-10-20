@@ -15,6 +15,12 @@ It returns None whenever the text is ambiguous: no pair or more than one,
 two latitudes, minutes or seconds of 60 or more, State Plane without a datum
 (NAD27 and NAD83 grid values differ by hundreds of feet), NAD27 without its
 zone, mixed units, or a point outside South Carolina and its neighbours.
+The one exception is opt-in: `parse(text, assume_state_plane_nad83=True)`
+reads State Plane without a printed datum as NAD83 (FIPS 3900), marked
+approximate, `datum_assumed: True` and with `ASSUMED_NAD83_NOTE` among its
+assumptions. Callers pass it only for sources published after 1990 (when
+NAD83 State Plane was in general use) and check the point against the
+document's extent (extract/ingest.py `derive_coordinates`).
 Anything it had to assume (western longitude, unstated horizontal datum,
 feet from the easting's size) is listed in `assumptions`. A converted
 coordinate is never a reading: callers store it flagged inferred.
@@ -29,6 +35,7 @@ from model import gisio
 # South Carolina with a margin (Savannah River sites in Georgia, the NC line).
 REGION = {"lat": (31.5, 35.6), "lon": (-84.0, -78.0)}
 CONVERSION = "model.coords"
+ASSUMED_NAD83_NOTE = "datum not printed; NAD83 assumed (published after 1990)"
 
 _NUM = r"\d{1,3}(?:,\d{3})+(?:\.\d+)?|\d+(?:\.\d+)?"
 _LAT_LABEL = re.compile(r"(?i)\blat(?:itude)?\.?\s*[:=]?\s*$")
@@ -57,14 +64,15 @@ def _datum(s: str) -> str | None | bool:
     return found.pop() if found else None
 
 
-def _result(lat, lon, fmt, datum, assumptions, conversion):
+def _result(lat, lon, fmt, datum, assumptions, conversion, datum_assumed=False):
     if datum == "NAD27":
         lon, lat = gisio.nad27_to_nad83(lon, lat)
     if not (REGION["lat"][0] <= lat <= REGION["lat"][1] and REGION["lon"][0] <= lon <= REGION["lon"][1]):
         return None
     if datum is None:
         assumptions = assumptions + ["horizontal datum not stated"]
-    return {"lat": lat, "lon": lon, "format": fmt, "datum": datum, "approximate": datum is None or datum == "NAD27",
+    return {"lat": lat, "lon": lon, "format": fmt, "datum": datum,
+            "approximate": datum is None or datum == "NAD27" or datum_assumed, "datum_assumed": datum_assumed,
             "assumptions": assumptions, "conversion": f"{CONVERSION}: {conversion}"
             + (" (NAD27 shifted to NAD83, about 5 m)" if datum == "NAD27" else "")}
 
@@ -116,13 +124,16 @@ def _labelled(s: str, labels: str) -> list[float]:
     return sorted({_f(m.group(1)) for m in post})
 
 
-def _state_plane(s: str) -> dict | None:
+def _state_plane(s: str, assume_nad83: bool = False) -> dict | None:
     eastings = _labelled(s, r"\beasting\b|\bE\b|\bX\b")
     northings = _labelled(s, r"\bnorthing\b|\bN\b|\bY\b")
     if len(eastings) != 1 or len(northings) != 1:
         return None
     e, n = eastings[0], northings[0]
     datum = _datum(s)
+    assumed = False
+    if datum is None and assume_nad83:
+        datum, assumed = "NAD83", True
     if not datum:
         return None
     zone = None
@@ -134,7 +145,7 @@ def _state_plane(s: str) -> dict | None:
     survey = bool(re.search(r"(?i)\b(?:u\.?s\.?\s*)?survey\s*f(?:ee|oo)t|\busft\b|\bus\s*ft\b", s))
     metres = bool(re.search(r"(?i)\d\s*(?:m|meters?|metres?)\b|\((?:m|meters?|metres?)\)", s))
     feet = bool(re.search(r"(?i)\b(?:ft|feet|foot)\b", s)) or survey
-    assumptions = []
+    assumptions = [ASSUMED_NAD83_NOTE] if assumed else []
     if metres and feet:
         return None
     if datum == "NAD27":
@@ -161,7 +172,7 @@ def _state_plane(s: str) -> dict | None:
     label = {"ft": "international feet", "us_ft": "US survey feet", "m": "metres"}[unit]
     fips = "FIPS 3900" if datum == "NAD83" else f"{zone} zone"
     return _result(lat, lon, "state_plane", datum, assumptions,
-                   f"SC State Plane {datum} ({fips}), {label}, to latitude/longitude")
+                   f"SC State Plane {datum} ({fips}), {label}, to latitude/longitude", datum_assumed=assumed)
 
 
 # --- geographic -----------------------------------------------------------------
@@ -236,8 +247,10 @@ def _dms(d: float, m: str | None, sec: str | None) -> float | None:
     return d + mm / 60 + ss / 3600
 
 
-def parse(text) -> dict | None:
-    """{'lat', 'lon', 'format', 'datum', 'approximate', 'assumptions', 'conversion'} or None."""
+def parse(text, assume_state_plane_nad83: bool = False) -> dict | None:
+    """{'lat', 'lon', 'format', 'datum', 'approximate', 'datum_assumed', 'assumptions', 'conversion'} or None.
+
+    assume_state_plane_nad83: read State Plane without a printed datum as NAD83 (see module docstring)."""
     if not isinstance(text, str):
         return None
     s = re.sub(r"\s+", " ", text)[:500]
@@ -247,7 +260,7 @@ def parse(text) -> dict | None:
                     r"|\b[EN]\s*[:=]?\s*(?:\d{1,3}(?:,\d{3})+|\d{5,})", s)
     big = [x for x in re.findall(_NUM, s) if _f(x) >= 10_000 and not re.fullmatch(r"\d{6,7}(?:\.\d+)?", x)]
     if cue or big:
-        return _state_plane(s)
+        return _state_plane(s, assume_state_plane_nad83)
     sym = list(_SYM.finditer(s))
     if sym:
         angles = []

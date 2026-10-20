@@ -10,7 +10,7 @@ from extract import ingest, renormalize
 from model.units import Lexicon
 
 ROOT = Path(__file__).resolve().parent.parent
-DERIVED = ("normalized", "derived_coordinates", "navd88")
+DERIVED = ("normalized", "derived_coordinates", "navd88", "coordinates_not_derived")
 
 
 def stored(value, page=3, **kw):
