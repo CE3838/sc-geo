@@ -1,0 +1,1355 @@
+{
+ "source_id": "ngmdb:100347",
+ "title": "Geologic Map of the Laurel Bay Quadrangle, Beaufort and Jasper Counties, South Carolina",
+ "citation": "Doar, W.R., III, 2008, Geologic Map of the Laurel Bay Quadrangle, Beaufort and Jasper Counties, South Carolina: South Carolina Geological Survey Open-File Report OFR-206, map scale 1:24,000.",
+ "year": 2008,
+ "scale": 24000,
+ "publisher": "South Carolina Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-10-18T16:23:18+00:00",
+ "updated_at": "2026-10-18T16:23:18+00:00",
+ "reader": "Claude, scheduled Claude Code session 2026-10-18",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1",
+  "2",
+  "3",
+  "4"
+ ],
+ "blocks_total": 4,
+ "complete": true,
+ "notes": "Page 1 is the map sheet (text layer with two interleaved description columns); pages 2-4 are an unrelated FGDC symbol-style note bundled in the download (it contains a personal email, not recorded). No cross section is printed on this sheet. Map symbols are assigned only where printed next to a unit heading (inferred); QPsbem, QPpam, QPpas, QPps, QPpe, QPpm, QPtmhs, QPtmhe and QHsm appear on the map face but their pairing with descriptions depends on layout and is not recorded. Terrace margin elevations (Holocene below 10 ft; Silver Bluff 6/10 ft; Princess Anne 12/18 ft; Pamlico 17/25 ft; Jasper sediments 10-20 ft) are terrace margins, not unit tops. Drill-hole labels (27-221, 27-222, 27-224, 27-253) on the map face carry no data. SUBSURFACE: none.",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2321&pid=100347",
+   "via": "gis_package",
+   "sha256": "61df730e194fccbdcd5d873daa24b3208bbc6a49187a989659d1a7546044d849",
+   "pages": 1,
+   "first_page": 1
+  },
+  {
+   "url": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2321&pid=100347",
+   "via": "gis_package",
+   "sha256": "2a16d6c8acf9cc8b1842b5fb6851751fa60b67948e124a04560df1d8b4361561",
+   "pages": 3,
+   "first_page": 2
+  }
+ ],
+ "summary": {
+  "stored": 80,
+  "quote_match": {
+   "exact": 80
+  },
+  "verification": {
+   "agree": 8
+  },
+  "inferred": 7
+ },
+ "ingests": [
+  {
+   "at": "2026-10-18T16:23:18+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-18",
+   "values": 80,
+   "stored": 80,
+   "exact": 80,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 8,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "Disturbed ground",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Disturbed ground – Any area of excavation for mining or borrow pits.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "map_symbol": {
+    "value": "dg",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "dg   Disturbed ground",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "symbol printed next to the unit heading in the two-column text layer; assignment depends on layout"
+   },
+   "description": {
+    "value": "any area of excavation for mining or borrow pits",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Disturbed ground – Any area of excavation for mining or borrow pits.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "name": {
+    "value": "Moved earth",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Moved earth (Holocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Moved earth (Holocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "up to 18 feet",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "variable and dependent on source location. Thickness up to 18 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 18.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Freshwater marsh and swamp deposits",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Freshwater marsh and swamp deposits (Holocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Freshwater marsh and swamp deposits (Holocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "silty clay and peat",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Black (N1), silty clay and peat",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "1 to 40 feet",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "salinity and rising tides importing high salinity waters. Thickness 1 to 40 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 1.0,
+     "max_ft": 40.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Point bar or spit deposits",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Point bar or spit deposits (Holocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Point bar or spit deposits (Holocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "map_symbol": {
+    "value": "QHps",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "27-222   QHps",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "symbol printed next to the unit heading in the two-column text layer; assignment depends on layout"
+   },
+   "lithology": {
+    "value": "fine to medium, silty, clayey quartz sand",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "well-sorted, subangular to subrounded, ﬁne to medium, silty, clayey quartz sand. Deposits",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "1 to 15 feet",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "enough material is accreted to remain above high tide. Thickness 1 to 15 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "min_ft": 1.0,
+     "max_ft": 15.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Molluscan conglomerate",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Molluscan conglomerate (Holocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Molluscan conglomerate (Holocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "map_symbol": {
+    "value": "QHs",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "QHs",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "symbol printed next to the unit heading in the two-column text layer; assignment depends on layout"
+   },
+   "fossils": {
+    "value": "predominantly intertidal oysters (Crassostrea virginica) and clams (Mercenaria mercenaria or Mercenaria campechiensis)",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "(Crassostrea virginica) and clams (Mercenaria mercenaria or Mercenaria campechiensis).",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "shell banks built by wave action",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Deposits occur as shell banks built by wave action transporting the shells from live grounds, often",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "less than 1 foot to 12 feet",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "emplacing them in dense, imbricate layers. Thickness less than 1 foot to 12 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 1.0,
+     "max_ft": 12.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Saltmarsh deposits",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Saltmarsh deposits (Holocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Saltmarsh deposits (Holocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "soft silty clay with lenses of very fine quartz sand",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Saltmarsh deposits (Holocene) – Black (N1), soft, silty clay with scattered lenses of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "intertidal zone in estuaries",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "intertidal zone in estuaries. Thickness 3 to 30 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "3 to 30 feet",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "intertidal zone in estuaries. Thickness 3 to 30 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "min_ft": 3.0,
+     "max_ft": 30.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Fluvial deposits (Holocene or Pleistocene)",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fluvial deposits (Holocene or Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene or Pleistocene",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fluvial deposits (Holocene or Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "map_symbol": {
+    "value": "QHr",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "QHr",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "symbol printed next to the unit heading in the two-column text layer; assignment depends on layout"
+   },
+   "lithology": {
+    "value": "moderately sorted, medium to very coarse grained quartz sand",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "light-gray (N7), moderately sorted, subangular to subrounded, medium grained to very",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "fluvial, from nonmarine sediments, not heavily altered by marine processes",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "coarse grained. Deposits derived from nonmarine sediments, deposited ﬂuvially, and not heavily",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "5 to 15 feet",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "altered by marine processes. Thickness 5 to 15 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 5.0,
+     "max_ft": 15.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Fringe deposits",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fringe deposits (Holocene or Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene or Pleistocene",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fringe deposits (Holocene or Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "map_symbol": {
+    "value": "QHf",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "QHf",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "symbol printed next to the unit heading in the two-column text layer; assignment depends on layout"
+   },
+   "thickness": {
+    "value": "less than 3 feet",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "in near-infrared photos. Thickness less than 3 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 3.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Estuarine and marine deposits (Silver Bluff terrace)",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Estuarine and marine deposits (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Estuarine and marine deposits (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Sediments Beneath the Silver Bluff Terrace",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Sediments Beneath the Silver Bluff Terrace",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "lithology": {
+    "value": "very fine to fine clayey quartz sand to sandy clay",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "ﬁne clayey quartz sand to sandy clay with minor, very ﬁne heavy minerals. Where silt and clay",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "5 to 30 feet",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "estuarine deposits. Thickness 5 to 30 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 5.0,
+     "max_ft": 30.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Barrier-island deposits (Princess Anne terrace)",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "QPps   Barrier-island deposits (Pleistocene) – Light-gray (N7) to dark-gray (N3), phosphatic,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "QPps   Barrier-island deposits (Pleistocene) – Light-gray (N7) to dark-gray (N3), phosphatic,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Sediments Beneath the Princess Anne Terrace",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Sediments Beneath the Princess Anne Terrace",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "lithology": {
+    "value": "fine quartz sand with abundant fine heavy minerals, shell sand, shell hash and trace mica",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "poorly to moderately well-sorted, subrounded to well-rounded, ﬁne quartz sand with",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "4 to 50 feet",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Deposits form linear to curvate, subparallel ridges. Thickness 4 to 50 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 4.0,
+     "max_ft": 50.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Estuarine deposits or marine deposits or both (Princess Anne terrace)",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Estuarine deposits or marine deposits or both (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Estuarine deposits or marine deposits or both (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "lower part quartz and phosphorite sand; upper part muddy sand to sandy mud, clay, silt and shells",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "coarse quartz and phosphorite sand, with trace amounts of other, very ﬁne heavy minerals. The",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "lower part 10 to 20 feet; upper part 1 to 10 feet",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "lower part is 10 to 20 feet thick. In upper part, this unit is a medium light gray (N6) to medium bluish",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 10.0,
+     "max_ft": 20.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "fossils": {
+    "value": "broken and intact Oliva, Polinices, Terebra, Mercenaria and Dosinia shells",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Mercenaria and Dosinia shells. The upper part is 1 to 10 feet thick. Both parts are deposited in the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "shallow intertidal to shallow offshore zones",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "shallow intertidal to shallow offshore zones.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Eolian sand (Pamlico terrace)",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Eolian sand (Pleistocene or Holocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene or Holocene",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Eolian sand (Pleistocene or Holocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "depositional_environment": {
+    "value": "eolian; sand derived from sediments beneath the Pamlico terrace",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "derived from sediments beneath the Pamlico terrace. Thickness up to 25 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "up to 25 feet",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "derived from sediments beneath the Pamlico terrace. Thickness up to 25 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 25.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Barrier island deposits (Pamlico terrace)",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Barrier island deposits (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Barrier island deposits (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "fine phosphatic quartz sand with minor medium to coarse sand, heavy minerals, shell hash",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "well-sorted, subrounded to well-rounded, ﬁne phosphatic quartz sand, with a minor",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "4 to 50 feet",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "mica. Deposits form linear, sub-parallel ridges. Thickness 4 to 50 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "thickness line printed at the top of the next column; continuation read from layout",
+    "normalized": {
+     "min_ft": 4.0,
+     "max_ft": 50.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Muds",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Muds (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Muds (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "muds with minor very fine quartz and phosphorite sands",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Muds (Pleistocene) – Medium bluish-gray (5B5/1), muds with minor amounts of very",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "1 to 15 feet",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "ﬁne quartz and phosphorite sands. Thickness is 1 to 15 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 1.0,
+     "max_ft": 15.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Fluvial deposits (Jasper sediments)",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fluvial deposits (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fluvial deposits (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Jasper Sediments",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Jasper Sediments",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "map_symbol": {
+    "value": "QPjr",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "QPjr",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "symbol printed next to the unit heading in the two-column text layer; assignment depends on layout"
+   },
+   "lithology": {
+    "value": "lower part very poorly sorted quartz sand with pebbles and granules; upper part phosphatic clayey fine quartz sand, deeply weathered, very stiff",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "grained with scattered quartz and feldspar pebbles and granules; coarse-grained mica; very ﬁne",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "10 to 30 feet",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "heavy minerals. Thickness 10 to 30 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 10.0,
+     "max_ft": 30.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "description": {
+    "value": "sediments generally above 10 feet and below 20 feet elevation; stratigraphic relationship not established",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "of the Jasper sediments is not established.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Barrier-island deposits (Ten Mile Hill beds)",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Barrier-island deposits (Pleistocene) – Quartz sand, pale greenish yellow (10Y 9 or",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Barrier-island deposits (Pleistocene) – Quartz sand, pale greenish yellow (10Y 9 or",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Sediments of the Ten Mile Hill beds/Beneath the Talbot Terrace",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Sediments of the Ten Mile Hill beds/Beneath the Talbot Terrace",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "lithology": {
+    "value": "well-sorted very fine to fine quartz sand with heavy minerals and phosphorite sand",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "subangular, well-sorted, very ﬁne to ﬁne grained with common ﬁne-grained heavy minerals;",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "22 to 50 feet",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "subparallel ridges at surface. Thickness 22 to 50 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 22.0,
+     "max_ft": 50.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Eolian (Ten Mile Hill beds)",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Eolian (Pleistocene or Holocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene or Holocene",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Eolian (Pleistocene or Holocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "depositional_environment": {
+    "value": "eolian; sand from beneath the Port Royal terrace",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "and ﬁne-grained heavy minerals. Composed of sand from beneath the Port Royal terrace.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "3 to 10 feet",
+    "source_id": "ngmdb:100347",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Thickness 3 to 10 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "min_ft": 3.0,
+     "max_ft": 10.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  }
+ ],
+ "observations": [],
+ "structures": [],
+ "groundwater": [],
+ "references": [],
+ "surfaces": [],
+ "contours": [],
+ "sections": [],
+ "water_tests": [],
+ "rock_tests": []
+}

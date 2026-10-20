@@ -1,14 +1,14 @@
 {
  "about": "Documents already read whose chosen pages need a re-read (python -m extract.reread; see extract/SESSION.md).",
  "count": 48,
- "pending": 48,
+ "pending": 43,
  "by_reason": {
   "logs": 2,
-  "map_face": 1,
   "image_pages": 2,
   "water_tests": 13,
   "rock_tests": 1,
-  "subsurface_fields": 29
+  "subsurface_fields": 29,
+  "map_face": 1
  },
  "items": [
   {
@@ -32,19 +32,7 @@
    "reason": "logs",
    "ocr": true,
    "detail": "Field logs and geosummary logs had no text in the first reading; these are the pages left out of it. Record the lithologic intervals.",
-   "added_at": "2026-10-14T23:00:22+00:00",
-   "status": "pending"
-  },
-  {
-   "id": "ngmdb:42961:map_face:p1",
-   "origin": "ROADMAP 1.9",
-   "source_id": "ngmdb:42961",
-   "pages": [
-    1
-   ],
-   "reason": "map_face",
-   "detail": "Contour values and power/hand auger-hole and seismic-station elevations on the map face (OCR garbled in the first reading): record them as surfaces and contours where legible.",
-   "ocr": false,
+   "images": false,
    "added_at": "2026-10-14T23:00:22+00:00",
    "status": "pending"
   },
@@ -58,6 +46,7 @@
    "reason": "image_pages",
    "ocr": true,
    "detail": "Page 18 (figure) had no text and was not OCRed in the first reading.",
+   "images": true,
    "added_at": "2026-10-14T23:00:22+00:00",
    "status": "pending"
   },
@@ -75,6 +64,7 @@
    "reason": "image_pages",
    "ocr": true,
    "detail": "Pages 280-282, 300 and 301 were image-only and not OCRed in the first reading.",
+   "images": true,
    "added_at": "2026-10-14T23:00:22+00:00",
    "status": "pending"
   },
@@ -91,6 +81,7 @@
    "reason": "logs",
    "ocr": true,
    "detail": "Appendix lithologic logs of piezometers: the text layer holds only the captions.",
+   "images": false,
    "added_at": "2026-10-14T23:00:22+00:00",
    "status": "pending"
   },
@@ -128,6 +119,7 @@
    "origin": "manual",
    "ocr": false,
    "added_at": "2026-10-16T00:28:57+00:00",
+   "images": false,
    "status": "pending"
   },
   {
@@ -142,26 +134,7 @@
    "origin": "manual",
    "ocr": false,
    "added_at": "2026-10-16T00:29:00+00:00",
-   "status": "pending"
-  },
-  {
-   "id": "ngmdb:46513:water_tests:p11-18",
-   "source_id": "ngmdb:46513",
-   "pages": [
-    11,
-    12,
-    13,
-    14,
-    15,
-    16,
-    17,
-    18
-   ],
-   "reason": "water_tests",
-   "detail": "Table 2 field properties (water temperature, specific conductance, dissolved oxygen, pH; p. 11) and tables 3-6 (major ions, nutrients, pesticides, QA/QC; pp. 13-18), per well.",
-   "origin": "manual",
-   "ocr": false,
-   "added_at": "2026-10-16T00:28:57+00:00",
+   "images": false,
    "status": "pending"
   },
   {
@@ -181,22 +154,7 @@
    "origin": "manual",
    "ocr": false,
    "added_at": "2026-10-16T00:29:00+00:00",
-   "status": "pending"
-  },
-  {
-   "id": "ngmdb:48337:water_tests:p15-18",
-   "source_id": "ngmdb:48337",
-   "pages": [
-    15,
-    16,
-    17,
-    18
-   ],
-   "reason": "water_tests",
-   "detail": "Tables 1-4: BTEX and naphthalene, field water-chemistry parameters, nitrate and cations per monitoring well.",
-   "origin": "manual",
-   "ocr": false,
-   "added_at": "2026-10-16T00:29:00+00:00",
+   "images": false,
    "status": "pending"
   },
   {
@@ -214,6 +172,7 @@
    "origin": "manual",
    "ocr": false,
    "added_at": "2026-10-16T00:28:58+00:00",
+   "images": false,
    "status": "pending"
   },
   {
@@ -289,6 +248,7 @@
    "origin": "manual",
    "ocr": false,
    "added_at": "2026-10-16T00:28:59+00:00",
+   "images": true,
    "status": "pending"
   },
   {
@@ -316,6 +276,7 @@
    "origin": "manual",
    "ocr": false,
    "added_at": "2026-10-16T00:29:00+00:00",
+   "images": false,
    "status": "pending"
   },
   {
@@ -355,6 +316,7 @@
    "origin": "manual",
    "ocr": false,
    "added_at": "2026-10-16T00:28:59+00:00",
+   "images": false,
    "status": "pending"
   },
   {
@@ -383,6 +345,7 @@
    "origin": "manual",
    "ocr": false,
    "added_at": "2026-10-16T00:29:01+00:00",
+   "images": false,
    "status": "pending"
   },
   {
@@ -428,6 +391,7 @@
    "origin": "manual",
    "ocr": false,
    "added_at": "2026-10-16T00:28:58+00:00",
+   "images": false,
    "status": "pending"
   },
   {
@@ -489,19 +453,7 @@
    "origin": "manual",
    "ocr": false,
    "added_at": "2026-10-16T00:28:58+00:00",
-   "status": "pending"
-  },
-  {
-   "id": "ngmdb:96658:water_tests:p13",
-   "source_id": "ngmdb:96658",
-   "pages": [
-    13
-   ],
-   "reason": "water_tests",
-   "detail": "Table 2: tritium in groundwater at push-point sampling sites, with sample depths.",
-   "origin": "manual",
-   "ocr": false,
-   "added_at": "2026-10-16T00:28:59+00:00",
+   "images": false,
    "status": "pending"
   },
   {
@@ -517,6 +469,7 @@
    "origin": "manual",
    "ocr": false,
    "added_at": "2026-10-16T00:29:06+00:00",
+   "images": false,
    "status": "pending"
   },
   {
@@ -529,6 +482,7 @@
    "detail": "SUBSURFACE: p.1 gives elevation ranges of terrace-sediment margins (Holocene <10 ft landward; Silver Bluff >6/<10 ft; Princess Anne >12/<18 ft; Pamlico terrace landward), stored as contacts; estuarine/marine unit beneath Princess Anne terrace has lower part 10-20 ft and upper part 1-10 ft thick; vertical datum not stated (horizontal 1927 North American Datum; contour interval 20 feet; base map USG",
    "origin": "notes",
    "ocr": false,
+   "images": true,
    "added_at": "2026-10-14T23:00:22+00:00",
    "status": "pending"
   },
@@ -542,6 +496,7 @@
    "detail": "SUBSURFACE: p.1 gives elevation ranges of terrace-sediment margins (Holocene <10 ft landward; Silver Bluff >6/<10 ft; Princess Anne >12/<18 ft; Pamlico >17/<25 ft; Talbot terrace landward), stored as contacts; vertical datum not stated (OCR prints '1973 North American Datum' for the horizontal datum; contour interval 20 feet; base map USGS 1973); SCGS drill-hole locations with log IDs on map (logs",
    "origin": "notes",
    "ocr": false,
+   "images": true,
    "added_at": "2026-10-14T23:00:22+00:00",
    "status": "pending"
   },
@@ -555,6 +510,7 @@
    "detail": "SUBSURFACE: page 1 has no cross section; the explanation shows SCGS drill hole symbol with example number 22-341 (logs on file at SCGS, not printed; legend only, not recorded as an observation). Terrace margins given as elevations: Holocene below 10 ft at landward margin; Silver Bluff 6-10 ft; Princess Anne 12-18 ft (page 1). Vertical datum not stated; base map OCR reads '1973 North American Datum",
    "origin": "notes",
    "ocr": false,
+   "images": true,
    "added_at": "2026-10-14T23:00:22+00:00",
    "status": "pending"
   },
@@ -568,6 +524,7 @@
    "detail": "SUBSURFACE: page 1 has cross section A-A' (vertical exaggeration 50; scale 40 to -40 feet with SEA LEVEL marked); unit labels and drill holes along it are garbled in the OCR and could not be read. Terrace margins given as elevations: Holocene below 10 ft at landward margin; Silver Bluff 6-10 ft (page 1). Section uses sea level; no named vertical datum; base map 1927 North American Datum.",
    "origin": "notes",
    "ocr": false,
+   "images": true,
    "added_at": "2026-10-14T23:00:22+00:00",
    "status": "pending"
   },
@@ -581,6 +538,7 @@
    "detail": "SUBSURFACE: Holocene terrace sediments generally below 10 ft at the landward margin against the Silver Bluff terrace (page 1). No drill holes, cross sections or structure contours appear in the OCR text. Datum: horizontal 1927 North American Datum; contour interval 10 feet on the 1978 base map; the vertical datum is not stated (page 1).",
    "origin": "notes",
    "ocr": false,
+   "images": true,
    "added_at": "2026-10-14T23:00:22+00:00",
    "status": "pending"
   },
@@ -594,6 +552,7 @@
    "detail": "SUBSURFACE: page 1 has no cross section; the explanation shows an SCGS drill hole symbol with example number 25-113 (legend only; logs on file at SCGS, not printed). Holocene sediments generally below 10 feet at their landward margin (page 1). Vertical datum not stated; base map 1927 North American Datum, contour interval 5 feet.",
    "origin": "notes",
    "ocr": false,
+   "images": true,
    "added_at": "2026-10-14T23:00:22+00:00",
    "status": "pending"
   },
@@ -607,6 +566,7 @@
    "detail": "SUBSURFACE: page 1 has cross section A-A' (vertical exaggeration 50, scale 120-220 feet / 18-30 meters) with SCGS drill holes Pi-1, Pi-14, Pi-16, Pi-26, Pi-31 and Pi-35 along it (drill holes within one mile of the line are projected; dashed where farther); units shown along it include Qe, Qcb, QHfw, NPdu and PEs; logs are on file at SCGS and not printed. Map symbols also show drill holes Pi-31 and",
    "origin": "notes",
    "ocr": false,
+   "images": true,
    "added_at": "2026-10-14T23:00:22+00:00",
    "status": "pending"
   },
@@ -620,6 +580,7 @@
    "detail": "SUBSURFACE: page 1 has no cross section on this sheet; the map face shows SCGS drill hole numbers (OCR '26-158', '26-372', '26-3'); logs are on file at SCGS and not printed. Alloformation margins are given as elevations (Silver Bluff 6-10 ft, Princess Anne 10-18 ft, Pamlico 17-25 ft, Ten Mile Hill 25-35 ft, Ladson 35-57 ft; page 1). Vertical datum not stated; base map uses 1927 North American Datu",
    "origin": "notes",
    "ocr": false,
+   "images": true,
    "added_at": "2026-10-14T23:00:22+00:00",
    "status": "pending"
   },
@@ -633,6 +594,7 @@
    "detail": "SUBSURFACE: page 1 has no cross section on this sheet; one SCGS drill hole number is legible only as OCR 'o9-284'; logs on file at SCGS, not printed. Correlation chart (page 1) shows unconformities separating the Holocene, Pleistocene (Qhs), Pliocene, and Eocene (PEodb, PEs, PEc) units. Vertical datum not stated; base map uses 1927 North American Datum, contour interval 20 feet.",
    "origin": "notes",
    "ocr": false,
+   "images": true,
    "added_at": "2026-10-14T23:00:22+00:00",
    "status": "pending"
   },
@@ -646,6 +608,7 @@
    "detail": "SUBSURFACE: margin elevations bounding each alloformation (Silver Bluff above 6 ft seaward, below 10 ft landward; Princess Anne above 10 ft, below 18 ft; Pamlico above 17 ft, below 25 ft; page 1). SCGS drill holes are plotted on the map with log identification numbers (e.g. 22-138); the logs are on file at the SCGS and are not in this document (page 1). No cross sections or structure contours appe",
    "origin": "notes",
    "ocr": false,
+   "images": true,
    "added_at": "2026-10-14T23:00:22+00:00",
    "status": "pending"
   },
@@ -659,6 +622,7 @@
    "detail": "SUBSURFACE: p. 1 gives the elevation range of each alloformation's seaward and landward margins (Silver Bluff 6-10 ft, Princess Anne 10-18 ft, Pamlico 17-25 ft, Ten Mile Hill 25-35 ft, Ladson 35-57 ft), stored as unit descriptions. Drill holes (e.g. 26-373) are plotted with SCGS log numbers but no depths; logs are on file at SCGS. No cross section or structure-contour map on this sheet. Datum: hor",
    "origin": "notes",
    "ocr": false,
+   "images": true,
    "added_at": "2026-10-14T23:00:22+00:00",
    "status": "pending"
   },
@@ -672,6 +636,7 @@
    "detail": "SUBSURFACE: p.1 gives elevation ranges of alloformation margins (Holocene <10 ft landward; Silver Bluff >6 ft seaward, <10 ft landward; Princess Anne >10/<18 ft; Pamlico >17/<25 ft; Ten Mile Hill >25/<35 ft), stored as contacts; vertical datum not stated in the OCR text (horizontal 1927 North American Datum; base map USGS 1973); bathymetric contours from Taylor and others (2008); SCGS drill-hole l",
    "origin": "notes",
    "ocr": false,
+   "images": true,
    "added_at": "2026-10-14T23:00:22+00:00",
    "status": "pending"
   },
@@ -685,6 +650,7 @@
    "detail": "SUBSURFACE: page 1 has no cross section on this sheet; SCGS drill hole number 38-374 shown in the explanation, logs on file at SCGS and not printed. Duplin Formation inland limit at +220 ft (+67.5 m) in the map area (page 1). Correlation chart (page 1) lists Paleocene and Upper Cretaceous units below the Eocene units with unconformities, but their descriptions are not on the sheet (OCR 'PEG:'). Ve",
    "origin": "notes",
    "ocr": false,
+   "images": true,
    "added_at": "2026-10-14T23:00:22+00:00",
    "status": "pending"
   },
@@ -698,6 +664,7 @@
    "detail": "SUBSURFACE: Upper Cretaceous maximum drilled thickness 30 feet (page 1). SCGS drill holes are plotted with log identification numbers (e.g. 09-314); the logs are on file at the SCGS and are not in this document (page 1). Correlation chart with unconformity-bounded units, Upper Cretaceous to Holocene (page 1). No cross sections or structure contours appear in the OCR text. Datum: horizontal 1927 No",
    "origin": "notes",
    "ocr": false,
+   "images": true,
    "added_at": "2026-10-14T23:00:22+00:00",
    "status": "pending"
   },
@@ -718,6 +685,7 @@
    "detail": "SUBSURFACE: AMT apparent-resistivity soundings by station (pp. 3-10) could constrain depth to resistive basement or saline water but are illegible in the text layer; a reading from the original images would be needed. No elevations, datum, cross sections or contour maps.",
    "origin": "notes",
    "ocr": false,
+   "images": true,
    "added_at": "2026-10-14T23:00:22+00:00",
    "status": "pending"
   },
@@ -731,6 +699,7 @@
    "detail": "SUBSURFACE: the cross section A-A' of hypocenter depths named in the catalog title is not legible in the OCR (page 1); no epicenter coordinates, depths or magnitudes readable.",
    "origin": "notes",
    "ocr": false,
+   "images": true,
    "added_at": "2026-10-14T23:00:22+00:00",
    "status": "pending"
   },
@@ -745,8 +714,238 @@
    "detail": "SUBSURFACE: base maps state National Geodetic Vertical Datum of 1929 with contour interval 10 feet and 1927 North American Datum (pages 1-2); cross sections named in the catalog title are not in this packet.",
    "origin": "notes",
    "ocr": false,
+   "images": true,
    "added_at": "2026-10-16T00:28:57+00:00",
    "status": "pending"
+  },
+  {
+   "id": "ngmdb:74876:subsurface_fields:p5",
+   "source_id": "ngmdb:74876",
+   "pages": [
+    5
+   ],
+   "reason": "subsurface_fields",
+   "detail": "SUBSURFACE: Fig. 2 (p.5) is a gamma log with picks for the tops of the Oligocene, Eocene, Santee Ls., Macrofossil Ls. and Black Mingo Fm. against a depth scale (20-130), but the well is not identified and the depth of each pick cannot be read from the OCR; contour datum not stated; the 167 control points are not listed.",
+   "origin": "notes",
+   "ocr": false,
+   "images": true,
+   "added_at": "2026-10-14T23:00:22+00:00",
+   "status": "pending"
+  },
+  {
+   "id": "ngmdb:77565:subsurface_fields:p1",
+   "source_id": "ngmdb:77565",
+   "pages": [
+    1
+   ],
+   "reason": "subsurface_fields",
+   "detail": "SUBSURFACE: Karst area: limestone, calcareous silt and calcareous silty sand less than 40 feet beneath the surface under Beaufort, Port Royal and Ladies Island (an areal statement, not tied to a point; page 1). A schematic diagram of the terrace systems (Port Royal, Pamlico, Princess Anne, Silver Bluff, Modern) and an idealized facies diagram are printed without elevations or distances (page 1). N",
+   "origin": "notes",
+   "ocr": false,
+   "images": true,
+   "added_at": "2026-10-14T23:00:22+00:00",
+   "status": "pending"
+  },
+  {
+   "id": "ngmdb:80608:subsurface_fields:p13-18",
+   "source_id": "ngmdb:80608",
+   "pages": [
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+   ],
+   "reason": "subsurface_fields",
+   "detail": "SUBSURFACE: the seismic profiles themselves are not in this document's text; the handwritten navigation fixes for the seismic lines (pages 13-18) are illegible in OCR and would need the scanned images; no datum stated.",
+   "origin": "notes",
+   "ocr": false,
+   "images": true,
+   "added_at": "2026-10-16T00:28:57+00:00",
+   "status": "pending"
+  },
+  {
+   "id": "ngmdb:95426:subsurface_fields:p1",
+   "source_id": "ngmdb:95426",
+   "pages": [
+    1
+   ],
+   "reason": "subsurface_fields",
+   "detail": "SUBSURFACE: a schematic diagram of portions of the Coastal Plain gives scarp toe elevations (230, 140, 90, 70, 57, 35 ft) and unit upper elevations (<140, <70, <57, <35 ft) without locations or distances (page 1); upper elevations of the River terrace (80 ft), Halfway Swamp (125 ft) and Low Falls Landing (120 ft) fluvial units are statements without a place, kept in unit descriptions. No drill hol",
+   "origin": "notes",
+   "ocr": false,
+   "images": true,
+   "added_at": "2026-10-14T23:00:22+00:00",
+   "status": "pending"
+  },
+  {
+   "id": "ngmdb:99137:subsurface_fields:p1",
+   "source_id": "ngmdb:99137",
+   "pages": [
+    1
+   ],
+   "reason": "subsurface_fields",
+   "detail": "SUBSURFACE: p. 1 gives elevation ranges of each unit's seaward and landward margins (Ten Mile Hill beds 25-35 ft, Ladson Formation 35-57 ft, Penholoway Formation 57-70 ft), stored as unit descriptions. Drill holes 25-186 and 25-187 are plotted with SCGS log numbers but no depths; logs are on file at SCGS. No cross section or structure-contour map. Datum: horizontal 1927 North American Datum, conto",
+   "origin": "notes",
+   "ocr": false,
+   "images": true,
+   "added_at": "2026-10-14T23:00:22+00:00",
+   "status": "pending"
+  },
+  {
+   "id": "ngmdb:99138:subsurface_fields:p1",
+   "source_id": "ngmdb:99138",
+   "pages": [
+    1
+   ],
+   "reason": "subsurface_fields",
+   "detail": "SUBSURFACE: p.1 gives elevation ranges of formation margins (Ladson >35/<57 ft; Penholoway >57/<70 ft; Wicomico >70/<90 ft; Ten Mile Hill beds seaward, Marietta unit landward), stored as contacts; vertical datum not stated (horizontal 1927 North American Datum; contour interval 5 feet; base map USGS 1988); SCGS drill-hole locations with log IDs on map (logs not included). No cross sections or stru",
+   "origin": "notes",
+   "ocr": false,
+   "images": true,
+   "added_at": "2026-10-14T23:00:22+00:00",
+   "status": "pending"
+  },
+  {
+   "id": "ngmdb:99139:subsurface_fields:p1",
+   "source_id": "ngmdb:99139",
+   "pages": [
+    1
+   ],
+   "reason": "subsurface_fields",
+   "detail": "SUBSURFACE: Ladson Formation margin elevations (above 35 ft seaward where overlapped by the Ten Mile Hill beds, below 57 ft landward against the Penholoway Formation; page 1). No drill holes, cross sections or structure contours appear in the OCR text. Datum: horizontal 1927 North American Datum; contour interval 10 feet on the 1978 base map; the vertical datum is not stated (page 1).",
+   "origin": "notes",
+   "ocr": false,
+   "images": true,
+   "added_at": "2026-10-14T23:00:22+00:00",
+   "status": "pending"
+  },
+  {
+   "id": "ngmdb:99140:subsurface_fields:p1",
+   "source_id": "ngmdb:99140",
+   "pages": [
+    1
+   ],
+   "reason": "subsurface_fields",
+   "detail": "SUBSURFACE: p. 1 gives elevation ranges of each unit's seaward and landward margins (Ten Mile Hill beds 25-35 ft, Ladson 35-57 ft, Penholoway 57-70 ft, Wicomico 70-90 ft) and a Dean Swamp member shoreline 90 ft above modern sea level, stored as unit descriptions. Drill holes are plotted with SCGS log numbers (labels garbled) but no depths; logs on file at SCGS. No cross section or structure-contou",
+   "origin": "notes",
+   "ocr": false,
+   "images": true,
+   "added_at": "2026-10-14T23:00:22+00:00",
+   "status": "pending"
+  },
+  {
+   "id": "ngmdb:99141:subsurface_fields:p1",
+   "source_id": "ngmdb:99141",
+   "pages": [
+    1
+   ],
+   "reason": "subsurface_fields",
+   "detail": "SUBSURFACE: p. 1 gives elevation ranges of unit margins (Holocene terrace sediments below 10 ft at the landward margin; Princess Anne Formation 12-18 ft; Pamlico Formation 17-25 ft), stored as unit descriptions; the Princess Anne estuarine/marine unit has a lower part 10-20 ft and an upper part 1-10 ft thick. Drill holes (e.g. 20-437) are plotted with SCGS log numbers but no depths; logs on file a",
+   "origin": "notes",
+   "ocr": false,
+   "images": true,
+   "added_at": "2026-10-14T23:00:22+00:00",
+   "status": "pending"
+  },
+  {
+   "id": "ngmdb:99142:subsurface_fields:p1",
+   "source_id": "ngmdb:99142",
+   "pages": [
+    1
+   ],
+   "reason": "subsurface_fields",
+   "detail": "SUBSURFACE: margin elevations: Holocene terrace sediments below 10 ft landward; Princess Anne Formation above 12 ft seaward, below 18 ft landward; Pamlico Formation above 17 ft seaward, below 25 ft landward (page 1). Princess Anne estuarine/marine unit: lower part 10 to 20 ft, upper part 1 to 10 ft thick (page 1). The legend shows SCGS drill-hole locations with log identification numbers (e.g. 22-",
+   "origin": "notes",
+   "ocr": false,
+   "images": true,
+   "added_at": "2026-10-14T23:00:22+00:00",
+   "status": "pending"
+  },
+  {
+   "id": "ngmdb:99143:subsurface_fields:p1",
+   "source_id": "ngmdb:99143",
+   "pages": [
+    1
+   ],
+   "reason": "subsurface_fields",
+   "detail": "SUBSURFACE: margin elevations: Holocene terrace sediments below 10 ft landward; Princess Anne Formation above 12 ft seaward, below 18 ft landward; Pamlico Formation above 17 ft seaward, below 25 ft landward (page 1). Beach sand lies above mean low water up to the storm tide line (page 1). The legend shows SCGS drill-hole locations with log identification numbers (e.g. 26-332), logs on file at the ",
+   "origin": "notes",
+   "ocr": false,
+   "images": true,
+   "added_at": "2026-10-14T23:00:22+00:00",
+   "status": "pending"
+  },
+  {
+   "id": "ngmdb:42961:map_face:p1",
+   "origin": "ROADMAP 1.9",
+   "source_id": "ngmdb:42961",
+   "pages": [
+    1
+   ],
+   "reason": "map_face",
+   "detail": "Contour values and power/hand auger-hole and seismic-station elevations on the map face (OCR garbled in the first reading): record them as surfaces and contours where legible.",
+   "ocr": false,
+   "images": true,
+   "added_at": "2026-10-14T23:00:22+00:00",
+   "status": "done",
+   "done_at": "2026-10-18T22:56:09+00:00"
+  },
+  {
+   "id": "ngmdb:46513:water_tests:p11-18",
+   "source_id": "ngmdb:46513",
+   "pages": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+   ],
+   "reason": "water_tests",
+   "detail": "Table 2 field properties (water temperature, specific conductance, dissolved oxygen, pH; p. 11) and tables 3-6 (major ions, nutrients, pesticides, QA/QC; pp. 13-18), per well.",
+   "origin": "manual",
+   "ocr": false,
+   "added_at": "2026-10-16T00:28:57+00:00",
+   "images": false,
+   "status": "done",
+   "done_at": "2026-10-18T16:17:31+00:00"
+  },
+  {
+   "id": "ngmdb:48337:water_tests:p15-18",
+   "source_id": "ngmdb:48337",
+   "pages": [
+    15,
+    16,
+    17,
+    18
+   ],
+   "reason": "water_tests",
+   "detail": "Tables 1-4: BTEX and naphthalene, field water-chemistry parameters, nitrate and cations per monitoring well.",
+   "origin": "manual",
+   "ocr": false,
+   "added_at": "2026-10-16T00:29:00+00:00",
+   "images": false,
+   "status": "done",
+   "done_at": "2026-10-18T16:19:14+00:00"
+  },
+  {
+   "id": "ngmdb:96658:water_tests:p13",
+   "source_id": "ngmdb:96658",
+   "pages": [
+    13
+   ],
+   "reason": "water_tests",
+   "detail": "Table 2: tritium in groundwater at push-point sampling sites, with sample depths.",
+   "origin": "manual",
+   "ocr": false,
+   "added_at": "2026-10-16T00:28:59+00:00",
+   "images": false,
+   "status": "done",
+   "done_at": "2026-10-18T16:20:04+00:00"
   },
   {
    "id": "ngmdb:46513:subsurface_fields:p6,8,11,13-18",
@@ -766,156 +965,10 @@
    "detail": "SUBSURFACE: per-well water-quality results (pages 13-18) and field properties (page 11) have no schema field; Figure 1 (page 8) locates the wells but only on a map; no unit tops or bases, contours or cross sections. Datum: NGVD of 1929 (vertical), NAD88 as printed for horizontal (page 6).",
    "origin": "notes",
    "ocr": false,
+   "images": true,
    "added_at": "2026-10-16T00:28:57+00:00",
-   "status": "pending"
-  },
-  {
-   "id": "ngmdb:74876:subsurface_fields:p5",
-   "source_id": "ngmdb:74876",
-   "pages": [
-    5
-   ],
-   "reason": "subsurface_fields",
-   "detail": "SUBSURFACE: Fig. 2 (p.5) is a gamma log with picks for the tops of the Oligocene, Eocene, Santee Ls., Macrofossil Ls. and Black Mingo Fm. against a depth scale (20-130), but the well is not identified and the depth of each pick cannot be read from the OCR; contour datum not stated; the 167 control points are not listed.",
-   "origin": "notes",
-   "ocr": false,
-   "added_at": "2026-10-14T23:00:22+00:00",
-   "status": "pending"
-  },
-  {
-   "id": "ngmdb:77565:subsurface_fields:p1",
-   "source_id": "ngmdb:77565",
-   "pages": [
-    1
-   ],
-   "reason": "subsurface_fields",
-   "detail": "SUBSURFACE: Karst area: limestone, calcareous silt and calcareous silty sand less than 40 feet beneath the surface under Beaufort, Port Royal and Ladies Island (an areal statement, not tied to a point; page 1). A schematic diagram of the terrace systems (Port Royal, Pamlico, Princess Anne, Silver Bluff, Modern) and an idealized facies diagram are printed without elevations or distances (page 1). N",
-   "origin": "notes",
-   "ocr": false,
-   "added_at": "2026-10-14T23:00:22+00:00",
-   "status": "pending"
-  },
-  {
-   "id": "ngmdb:80608:subsurface_fields:p13-18",
-   "source_id": "ngmdb:80608",
-   "pages": [
-    13,
-    14,
-    15,
-    16,
-    17,
-    18
-   ],
-   "reason": "subsurface_fields",
-   "detail": "SUBSURFACE: the seismic profiles themselves are not in this document's text; the handwritten navigation fixes for the seismic lines (pages 13-18) are illegible in OCR and would need the scanned images; no datum stated.",
-   "origin": "notes",
-   "ocr": false,
-   "added_at": "2026-10-16T00:28:57+00:00",
-   "status": "pending"
-  },
-  {
-   "id": "ngmdb:95426:subsurface_fields:p1",
-   "source_id": "ngmdb:95426",
-   "pages": [
-    1
-   ],
-   "reason": "subsurface_fields",
-   "detail": "SUBSURFACE: a schematic diagram of portions of the Coastal Plain gives scarp toe elevations (230, 140, 90, 70, 57, 35 ft) and unit upper elevations (<140, <70, <57, <35 ft) without locations or distances (page 1); upper elevations of the River terrace (80 ft), Halfway Swamp (125 ft) and Low Falls Landing (120 ft) fluvial units are statements without a place, kept in unit descriptions. No drill hol",
-   "origin": "notes",
-   "ocr": false,
-   "added_at": "2026-10-14T23:00:22+00:00",
-   "status": "pending"
-  },
-  {
-   "id": "ngmdb:99137:subsurface_fields:p1",
-   "source_id": "ngmdb:99137",
-   "pages": [
-    1
-   ],
-   "reason": "subsurface_fields",
-   "detail": "SUBSURFACE: p. 1 gives elevation ranges of each unit's seaward and landward margins (Ten Mile Hill beds 25-35 ft, Ladson Formation 35-57 ft, Penholoway Formation 57-70 ft), stored as unit descriptions. Drill holes 25-186 and 25-187 are plotted with SCGS log numbers but no depths; logs are on file at SCGS. No cross section or structure-contour map. Datum: horizontal 1927 North American Datum, conto",
-   "origin": "notes",
-   "ocr": false,
-   "added_at": "2026-10-14T23:00:22+00:00",
-   "status": "pending"
-  },
-  {
-   "id": "ngmdb:99138:subsurface_fields:p1",
-   "source_id": "ngmdb:99138",
-   "pages": [
-    1
-   ],
-   "reason": "subsurface_fields",
-   "detail": "SUBSURFACE: p.1 gives elevation ranges of formation margins (Ladson >35/<57 ft; Penholoway >57/<70 ft; Wicomico >70/<90 ft; Ten Mile Hill beds seaward, Marietta unit landward), stored as contacts; vertical datum not stated (horizontal 1927 North American Datum; contour interval 5 feet; base map USGS 1988); SCGS drill-hole locations with log IDs on map (logs not included). No cross sections or stru",
-   "origin": "notes",
-   "ocr": false,
-   "added_at": "2026-10-14T23:00:22+00:00",
-   "status": "pending"
-  },
-  {
-   "id": "ngmdb:99139:subsurface_fields:p1",
-   "source_id": "ngmdb:99139",
-   "pages": [
-    1
-   ],
-   "reason": "subsurface_fields",
-   "detail": "SUBSURFACE: Ladson Formation margin elevations (above 35 ft seaward where overlapped by the Ten Mile Hill beds, below 57 ft landward against the Penholoway Formation; page 1). No drill holes, cross sections or structure contours appear in the OCR text. Datum: horizontal 1927 North American Datum; contour interval 10 feet on the 1978 base map; the vertical datum is not stated (page 1).",
-   "origin": "notes",
-   "ocr": false,
-   "added_at": "2026-10-14T23:00:22+00:00",
-   "status": "pending"
-  },
-  {
-   "id": "ngmdb:99140:subsurface_fields:p1",
-   "source_id": "ngmdb:99140",
-   "pages": [
-    1
-   ],
-   "reason": "subsurface_fields",
-   "detail": "SUBSURFACE: p. 1 gives elevation ranges of each unit's seaward and landward margins (Ten Mile Hill beds 25-35 ft, Ladson 35-57 ft, Penholoway 57-70 ft, Wicomico 70-90 ft) and a Dean Swamp member shoreline 90 ft above modern sea level, stored as unit descriptions. Drill holes are plotted with SCGS log numbers (labels garbled) but no depths; logs on file at SCGS. No cross section or structure-contou",
-   "origin": "notes",
-   "ocr": false,
-   "added_at": "2026-10-14T23:00:22+00:00",
-   "status": "pending"
-  },
-  {
-   "id": "ngmdb:99141:subsurface_fields:p1",
-   "source_id": "ngmdb:99141",
-   "pages": [
-    1
-   ],
-   "reason": "subsurface_fields",
-   "detail": "SUBSURFACE: p. 1 gives elevation ranges of unit margins (Holocene terrace sediments below 10 ft at the landward margin; Princess Anne Formation 12-18 ft; Pamlico Formation 17-25 ft), stored as unit descriptions; the Princess Anne estuarine/marine unit has a lower part 10-20 ft and an upper part 1-10 ft thick. Drill holes (e.g. 20-437) are plotted with SCGS log numbers but no depths; logs on file a",
-   "origin": "notes",
-   "ocr": false,
-   "added_at": "2026-10-14T23:00:22+00:00",
-   "status": "pending"
-  },
-  {
-   "id": "ngmdb:99142:subsurface_fields:p1",
-   "source_id": "ngmdb:99142",
-   "pages": [
-    1
-   ],
-   "reason": "subsurface_fields",
-   "detail": "SUBSURFACE: margin elevations: Holocene terrace sediments below 10 ft landward; Princess Anne Formation above 12 ft seaward, below 18 ft landward; Pamlico Formation above 17 ft seaward, below 25 ft landward (page 1). Princess Anne estuarine/marine unit: lower part 10 to 20 ft, upper part 1 to 10 ft thick (page 1). The legend shows SCGS drill-hole locations with log identification numbers (e.g. 22-",
-   "origin": "notes",
-   "ocr": false,
-   "added_at": "2026-10-14T23:00:22+00:00",
-   "status": "pending"
-  },
-  {
-   "id": "ngmdb:99143:subsurface_fields:p1",
-   "source_id": "ngmdb:99143",
-   "pages": [
-    1
-   ],
-   "reason": "subsurface_fields",
-   "detail": "SUBSURFACE: margin elevations: Holocene terrace sediments below 10 ft landward; Princess Anne Formation above 12 ft seaward, below 18 ft landward; Pamlico Formation above 17 ft seaward, below 25 ft landward (page 1). Beach sand lies above mean low water up to the storm tide line (page 1). The legend shows SCGS drill-hole locations with log identification numbers (e.g. 26-332), logs on file at the ",
-   "origin": "notes",
-   "ocr": false,
-   "added_at": "2026-10-14T23:00:22+00:00",
-   "status": "pending"
+   "status": "done",
+   "done_at": "2026-10-18T16:17:31+00:00"
   }
  ]
 }

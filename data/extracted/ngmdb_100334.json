@@ -1,0 +1,816 @@
+{
+ "source_id": "ngmdb:100334",
+ "title": "Geologic Map of the Allendale Quadrangle, Allendale and Barnwell Counties, South Carolina",
+ "citation": "Doar, W.R., III, 2010, Geologic Map of the Allendale Quadrangle, Allendale and Barnwell Counties, South Carolina: South Carolina Geological Survey Open-File Report OFR-193, map scale 1:24,000.",
+ "year": 2010,
+ "scale": 24000,
+ "publisher": "South Carolina Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-10-18T14:06:17+00:00",
+ "updated_at": "2026-10-18T14:06:17+00:00",
+ "reader": "Claude, Claude Code session 2026-10-18",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1"
+ ],
+ "blocks_total": 1,
+ "complete": true,
+ "notes": "OCR of a map sheet. Map symbols recorded only where printed on the same line as the unit name; Tal and Ttr are matched by layout (inferred). Symbols for moved earth, freshwater marsh (OCR 'QHtw'), Carolina bay sediments (OCR '[aco]') and sand rims ('Qcbs' printed apart) are garbled or ambiguous and left out. Map-face numbers (drill hole log numbers vs grid ticks) are not distinguishable in the OCR; no drill holes recorded. Orangeburg Scarp and contact appear only in the explanation of map symbols; not recorded.",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+   "via": "ngmdb_image",
+   "sha256": "41c41125cff5f142922417cc2a60627b896299f36315a15062dc2d595d96e4d1",
+   "pages": 1,
+   "first_page": 1
+  }
+ ],
+ "summary": {
+  "stored": 47,
+  "quote_match": {
+   "exact": 47
+  },
+  "verification": {
+   "agree": 5
+  },
+  "inferred": 5
+ },
+ "ingests": [
+  {
+   "at": "2026-10-18T14:06:17+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, Claude Code session 2026-10-18",
+   "values": 47,
+   "stored": 47,
+   "exact": 47,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 5,
+   "disagree": 0,
+   "unclear": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "Moved earth",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Moved earth (Late Holocene) — Earth material moved in bulk by humans.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Late Holocene",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Moved earth (Late Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0039000000000000003,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Earth material moved in bulk by humans. Color is highly variable and dependent on source location.",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Color is highly variable and dependent on source location",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "up to 18 feet",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Thickness up to 18 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 18.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Freshwater marsh and swamp deposits",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Freshwater marsh and swamp deposits (Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Freshwater marsh and swamp deposits (Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Black (N1), silty clay and peat",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Black (N1), silty clay and peat",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "stream valleys and areas of locally low elevation; areas of poor drainage, such as a swale in a dune field or the slow drainage of a stream system",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "of poor drainage, such as a swale in a dune field or the slow drainage of a stream system",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "1 to 40 feet",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "salinity waters. Thickness | to 40 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR reads '| to 40 feet'; the '|' read as 1",
+    "normalized": {
+     "min_ft": 1.0,
+     "max_ft": 40.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Carolina bay sediments and associated sand deposits",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Carolina bay sediments and associated sand deposits (Upper Miocene to Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "associated",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Upper Miocene to Holocene",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Carolina bay sediments and associated sand deposits (Upper Miocene to Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 11.63,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Inside Carolina bay outlines commonly is gray to dark gray, clayey sand or sandy clay with low to moderate amounts of organic material; a veneer of white to tan, loose, fine- to coarse-grained quartz sand with minor dark heavy mineral grains covers hills and low areas outside and adjoining some Carolina bays",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "with low to moderate amounts of organic material",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "lithology": {
+    "value": "gray to dark gray, clayey sand or sandy clay",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Inside Carolina bay outlines commonly is gray to dark gray, clayey sand or sandy clay",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Carolina bay sand rims",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Carolina bay sand rims (Holocene, and Holocene to upper Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene, and Holocene to upper Pleistocene",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Carolina bay sand rims (Holocene, and Holocene to upper Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.129,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Light gray (N-7) to Black (N-1), moderately well sorted, sub to well rounded, med quartz sand with minor very fine opaque sands",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "moderately well sorted, sub to well rounded, med quartz sand with",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "description": {
+    "value": "forming the leeward sides of Carolina bays from the prevailing wind direction",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "minor very fine opaque sands forming the leeward sides of Carolina bay’s from the prevailing",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "Maximum thickness is 12 feet",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Maximum thickness is 12 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 12.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Qe",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Qe | Eolian sands (Pleistocene to Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "name": {
+    "value": "Eolian sands",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Qe | Eolian sands (Pleistocene to Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene to Holocene",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Qe | Eolian sands (Pleistocene to Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Eolian sands with composition related to source material",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Eolian sands with composition related to",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Taf",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Taf Duplin Formation fluvial (Pliocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "name": {
+    "value": "Duplin Formation fluvial",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Taf Duplin Formation fluvial (Pliocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Duplin",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Pliocene",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Taf Duplin Formation fluvial (Pliocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 2.58,
+     "older_ma": 5.333,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "silt or clay matrix, clast supported, subangular to well rounded, very poorly to well sorted, fine to very coarse grained quartz sands with variable quartz granules and pebbles and scattered fine heavy minerals",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "subangular to well rounded, very poorly to well sorted, fine to very coarse grained, Quartz sands",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "White (N10) to Yellowish brown (10YR 5/8) to Red (7.5R 5/6) to Light red (2.5YR 6/8- 5/8- 5/6); assumed to be the fluvial equivalent of the marine Duplin Formation deposits",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Assumed to be the fluvial equivalent of the marine Duplin Formation deposits",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "thickness": {
+    "value": "30 to 40 feet",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Thickness is 30 to 40",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 30.0,
+     "max_ft": 40.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Tal",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Tal",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "symbol printed below the description; matched by layout"
+   },
+   "name": {
+    "value": "Altamaha Formation",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Altamaha Formation (upper Middle Miocene to lower Upper Miocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Altamaha",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "upper Middle Miocene to lower Upper Miocene",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Altamaha Formation (upper Middle Miocene to lower Upper Miocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 5.333,
+     "older_ma": 15.98,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.684,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Altamaha Formation (upper Middle Miocene to lower Upper Miocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "lithology": {
+    "value": "pink, orange, yellow, gray, tan and brown, tough, poorly sorted, medium to very coarse-grained quartz sand and abundant quartz granules, with scattered to common rounded quartz pebbles to at least 5 cm with abundant interstitial clay",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "gray, tan and brown, tough, poorly sorted, medium to very coarse-grained quartz sand and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "formally the Upland Unit; white clay granules (weathered feldspars) and transported clay pebbles common; scattered clay beds; rounded quartz pebbles commonly have rough surfaces and may have quartz overgrowths",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Altamaha Formation, formally the Upland Unit, is composed of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Ttr",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Ttr",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "symbol printed below the description; matched by layout"
+   },
+   "name": {
+    "value": "Tobacco Road sand",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Tobacco Road sand (upper Eocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Tobacco Road",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "upper Eocene",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Tobacco Road sand (upper Eocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 37.71,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Predominantly medium- to very coarse-grained quartz sand, with abundant quartz granules, some very fine- and fine-grained sand, and minor to abundant interstitial clay",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Predominantly medium- to very coarse-grained",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "White feldspar granules and pebbles abundant locally; muscovite very abundant locally; upper part variegated, very fine- to medium-grained quartz sand with moderate interstitial clay; purple to brown crusty iron-oxide-cemented nodules in the upper part near the surface",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Much of the upper",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "fossils": {
+    "value": "Ophiomorpha nodosa burrows with white clay linings; small, pencil-thick, vertical and near vertical burrows (trace fossils)",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Small, pencil-thick, vertical and near vertical burrows (trace fossils)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Tdb",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Tdb Dry Branch Formation (upper Eocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "name": {
+    "value": "Dry Branch Formation",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Tdb Dry Branch Formation (upper Eocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Dry Branch",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Tdb Dry Branch Formation (upper Eocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "upper Eocene",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Tdb Dry Branch Formation (upper Eocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 37.71,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Lower part calcareous: white, cream or light tan, slightly to moderately clayey, slightly calcareous, fine- to medium-grained quartz sand to clayey lime mud; clay beds blue, steel blue or gray-blue, stiff; upper noncalcareous part fairly well sorted fine- to medium-grained quartz sand, commonly clay-rich at top",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Tdb Dry Branch Formation (upper Eocene) — A lower part is calcareous sand and consists",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "40 to 90 feet",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "The formation is 40 to 90 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 40.0,
+     "max_ft": 90.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  }
+ ],
+ "observations": [],
+ "structures": [],
+ "groundwater": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Rogers, V., 1977, Soil survey of Barnwell County, South Carolina, eastern part: U. S. Department of Agriculture, Soil Conservation Service, South Carolina Agricultural Experiment Station, and South Carolina Land Resources Commission, 53 p., 34 pls.",
+    "source_id": "ngmdb:100334",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100334_1",
+    "quote": "Rogers, V., 1977, Soil survey of Barnwell County, South Carolina, eastern part",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "surfaces": [],
+ "contours": [],
+ "sections": [],
+ "water_tests": [],
+ "rock_tests": []
+}
