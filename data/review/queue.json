@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 183,
+ "count": 185,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -2432,6 +2432,32 @@
    "verify": {
     "verdict": "unclear",
     "note": "OCR prints \"| to 4 centimeters\"; the first digit is read as 1 but is not printed legibly"
+   }
+  },
+  {
+   "source_id": "ngmdb:77459",
+   "path": "units[11].lithology",
+   "problem": "verify_unclear",
+   "value": "dark, spotted phyllitic rock with flattened lapilli; clasts up to several centimeters long and 1 to 2 mm thick",
+   "page": 1,
+   "quote": "elliptical shapes up to several centimeters long and | to 2 mm thick, and they are composed of fine 23 oo . ; .",
+   "added_at": "2026-10-20T10:59:50+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints \"| to 2 mm\"; the first digit is read as 1 but is not printed legibly"
+   }
+  },
+  {
+   "source_id": "ngmdb:77459",
+   "path": "units[11].description",
+   "problem": "verify_unclear",
+   "value": "chloritoid schist with chloritoid crystals 2 to 4 mm and minor magnetite octahedra 1 mm; kyanite quartzite around Jefferson Mountain; possible siliceous alteration zone",
+   "page": 1,
+   "quote": "luster: dark-colored chloritoid crystals are 2 to 4 mm, and minor magnetite octahedra are | mm. - . ; -",
+   "added_at": "2026-10-20T10:59:50+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints \"are | mm\"; the digit is read as 1 but is not printed legibly"
    }
   }
  ]
