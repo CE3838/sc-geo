@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 182,
+ "count": 183,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -2419,6 +2419,19 @@
    "verify": {
     "verdict": "unclear",
     "note": "OCR prints '| to 2 cm'; the first digit is read as 1 but is not printed legibly"
+   }
+  },
+  {
+   "source_id": "ngmdb:77477",
+   "path": "units[5].lithology",
+   "problem": "verify_unclear",
+   "value": "gray, fine- to medium-crystalline, moderately well layered augen gneiss with microcline augen 1 to 4 centimeters in size; variably mylonitic",
+   "page": 1,
+   "quote": "and moderately well layered compositionally. Microcline augen are | to 4 centimeters in 7",
+   "added_at": "2026-10-20T10:58:28+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints \"| to 4 centimeters\"; the first digit is read as 1 but is not printed legibly"
    }
   }
  ]
