@@ -175,14 +175,42 @@ def test_image_values_need_the_image_manifest(env):
     assert item["problem"] == "image_locator_invalid" and "python -m extract.images" in item["detail"]
 
 
-def test_value_also_in_the_text_layer_keeps_the_text_check(env):
-    sec = {"name": v("A-A'", 1, "A A'"),
-           "vertical_exaggeration": v("20", 1, "Vertical Exaggeration is 20",
-                                      image=img(env.tile["tile"], [10, 10, 200, 30]))}
-    env.run(result([sec]))
-    val = env.out()["sections"][0]["vertical_exaggeration"]
-    assert val["extraction_method"] == "llm" and val["quote_match"] == "exact"
-    assert val["image"]["tile"] == env.tile["tile"] and "viewrect=" not in (val["locator"] or "")
+LABEL = "sections[0].holes[0].label"
+
+
+def _labelled_hole(env, image=True):
+    """A drill-hole label read from a tile whose quote ("8-161") is also in the page's text layer."""
+    kw = {"image": img(env.tile["tile"], [10, 10, 60, 30])} if image else {}
+    return {"name": v("A-A'", 1, "A A'"), "holes": [{"label": v("8-161", 1, "8-161", **kw)}]}
+
+
+def test_image_value_whose_quote_is_also_in_the_text_layer_is_still_an_image_value(env):
+    summary = env.run(result([_labelled_hole(env)]), verify=[{"path": LABEL, "verdict": "agree"}])
+    val = env.out()["sections"][0]["holes"][0]["label"]
+    assert summary["image"] == 1
+    assert val["extraction_method"] == "llm-image" and val["quote_match"] == "image" and val["text_match"] is True
+    assert val["text_method"] == "image" and val["verification"] == "agree"
+    assert val["locator"].startswith(URL + "#page=1&viewrect=") and val["image"]["tile"] == env.tile["tile"]
+    assert val["confidence"] <= ingest.CONFIG["images"]["confidence"]["max"]
+
+
+@pytest.mark.parametrize("verdict", [None, "disagree", "unclear"])
+def test_image_value_in_the_text_layer_still_needs_an_agreeing_verify_pass(env, verdict):
+    verify = [{"path": LABEL, "verdict": verdict, "note": "n"}] if verdict else None
+    summary = env.run(result([_labelled_hole(env)]), verify=verify)
+    assert summary["image_not_verified"] == 1 and summary["image"] == 0
+    assert "holes" not in env.out()["sections"][0]
+    item = next(i for i in env.review() if i["path"] == LABEL)
+    assert item["problem"] == "image_not_verified" and item.get("verdict") == verdict
+
+
+def test_reingesting_replaces_a_value_stored_before_the_image_gate(env):
+    env.run(result([_labelled_hole(env, image=False)]))  # what an earlier ingest stored as "llm"
+    assert env.out()["sections"][0]["holes"][0]["label"]["extraction_method"] == "llm"
+    env.run(result([_labelled_hole(env)]), verify=[{"path": LABEL, "verdict": "agree"}])
+    out = env.out()
+    assert len(out["sections"]) == 1 and len(out["sections"][0]["holes"]) == 1
+    assert out["sections"][0]["holes"][0]["label"]["extraction_method"] == "llm-image"
 
 
 def test_unclear_digits_lower_confidence_and_go_to_review(env):
@@ -194,9 +222,21 @@ def test_unclear_digits_lower_confidence_and_go_to_review(env):
     assert next(i for i in env.review() if i["path"] == PATH)["problem"] == "image_unclear"
 
 
-def test_disagreeing_image_value_is_queued(env):
-    env.run(result([_hole(env)]), verify=[{"path": PATH, "verdict": "disagree", "value": "48 ft", "note": "8 not 5"}])
-    assert any(i["path"] == PATH and i["problem"] == "verify_disagree" for i in env.review())
+@pytest.mark.parametrize("verdict", ["disagree", "unclear"])
+def test_image_value_the_verify_pass_does_not_agree_with_is_held_for_review(env, verdict):
+    summary = env.run(result([_hole(env)]), verify=[{"path": PATH, "verdict": verdict, "value": "48 ft",
+                                                     "note": "8 not 5"}])
+    assert summary["image_not_verified"] == 1 and summary["image"] == 0 and summary["stored"] == 2
+    assert "intervals" not in env.out()["sections"][0]["holes"][0]  # not stored as a value
+    item = next(i for i in env.review() if i["path"] == PATH)
+    assert item["problem"] == "image_not_verified" and item["verdict"] == verdict and item["note"] == "8 not 5"
+    assert item["image"]["tile"] == env.tile["tile"] and item["verify"]["value"] == "48 ft"
+    assert [i["problem"] for i in env.review() if i["path"] == PATH] == ["image_not_verified"]
+
+
+def test_summary_counts_held_back_image_values_even_when_none(env):
+    summary = env.run(result([_hole(env)]), verify=[{"path": PATH, "verdict": "agree"}])
+    assert summary["image_not_verified"] == 0 and summary["image"] == 1
 
 
 def test_section_geometry_is_always_flagged_inferred(env):

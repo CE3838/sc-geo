@@ -471,7 +471,7 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
     review: list[dict] = []
     stored: dict[str, dict] = {}
     counts = {"values": 0, "stored": 0, "exact": 0, "ocr": 0, "fuzzy": 0, "quote_not_found": 0, "wrong_page": 0,
-              "agree": 0, "disagree": 0, "unclear": 0}
+              "agree": 0, "disagree": 0, "unclear": 0, "image": 0, "image_not_verified": 0}
 
     def queue(path, val, problem, **extra):
         review.append({"source_id": sid, "path": path, "problem": problem, "value": val.get("value"),
@@ -488,8 +488,9 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
         tiles.prepare(path, val)
         pg = pages.get(val["page"])
         match = find_quote(val["quote"], pg) if pg else None
-        if match is None and val.get("image"):  # not in the text layer: checked against its tile instead
-            entry = tiles.entry(path, val, rec, verdicts.get(path), counts, queue, map_sheet=val["page"] in sheets)
+        if val.get("image"):  # read from a page image: always checked against its tile, even if the text has it
+            entry = tiles.entry(path, val, rec, verdicts.get(path), counts, queue, map_sheet=val["page"] in sheets,
+                                text_match=match is not None)
             norm = normalized(path, val, lexicon) if entry else None
             if norm not in (None, [], {}):
                 entry["normalized"] = norm
@@ -557,7 +558,6 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
         whole_pages |= set(reread["pages"])  # a re-read covers every part of its pages
     new_keys = {_vkey(f, v) for f, v in _walk_values(new_sections)}
 
-    tiles.annotate(stored, result)
     out_dir, review_dir = Path(out_dir), Path(review_dir)
     out_path = out_dir / f"{safe_id(sid)}.json"
     prev = _load_json(out_path, "extracted file") if out_path.exists() else {}

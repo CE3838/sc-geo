@@ -319,8 +319,11 @@ class IngestImages:
         return out
 
     def entry(self, path: str, val: dict, rec: dict, check: dict | None, counts: dict, queue: Callable,
-              map_sheet: bool) -> dict | None:
-        """The stored form of a value whose quote is not in the page text but on a tile; None when refused."""
+              map_sheet: bool, text_match: bool = False) -> dict | None:
+        """The stored form of a value read from a tile; None when refused.
+
+        A value with an `image` box is an image value even when its quote is also in the page text
+        (text_match records that); the text match never changes its method, cap or verify gate."""
         from extract.ingest import source_weight
         from model.provenance import ExtractionMethod, StoredValue
 
@@ -338,14 +341,15 @@ class IngestImages:
             queue(path, val, "image_locator_invalid", detail=str(err), image=val["image"])
             return None
         verdict = check["verdict"] if check else None
-        if verdict is None:
+        if verdict is not None:
+            bump(verdict)
+        if verdict != "agree":  # held back: fix the reading (or the tile) and ingest again
             bump("image_not_verified")
-            queue(path, val, "image_not_verified", image=self._info(val, r),
-                  detail="values read from an image are stored only after a verify pass re-views the tile")
+            extra = {"verdict": verdict, "note": check.get("note"),
+                     "verify": {k: v for k, v in check.items() if k != "path"}} if check else {}
+            queue(path, val, "image_not_verified", image=self._info(val, r), **extra,
+                  detail="values read from an image are stored only after a verify pass re-views the tile and agrees")
             return None
-        bump(verdict)
-        if verdict in ("disagree", "unclear"):
-            queue(path, val, f"verify_{verdict}", verify={k: v for k, v in check.items() if k != "path"})
         unclear = bool(val["image"].get("unclear"))
         if unclear:
             queue(path, val, "image_unclear", image=self._info(val, r))
@@ -356,25 +360,13 @@ class IngestImages:
                          inferred=bool(val["inferred"]), locator=locator(r["url"], r))
         entry = sv.to_dict() | {"quote": val["quote"], "quote_match": "image", "text_method": "image",
                                 "verification": verdict, "image": self._info(val, r)}
+        if text_match:
+            entry["text_match"] = True
         for k in ("units", "table", "note"):
             if k in val:
                 entry[k] = val[k]
         bump("image")
         return entry
-
-    def annotate(self, stored: dict, result: dict) -> None:
-        """Values whose quote was found in the text keep the text check; they also keep the tile they cite."""
-        from extract import schema
-        for path, entry in stored.items():
-            if entry.get("extraction_method") == "llm-image":
-                continue
-            val = schema.get_path(result, path)
-            if isinstance(val, dict) and val.get("image"):
-                try:
-                    r = resolve(self.manifest, val["image"]["tile"], val["image"]["box"]) if self.manifest else None
-                except ImagesError:
-                    r = None
-                entry["image"] = self._info(val, r)
 
 
 # --- the command ---------------------------------------------------------------------------------
