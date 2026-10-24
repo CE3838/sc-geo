@@ -1,0 +1,418 @@
+{
+ "source_id": "ngmdb:77564",
+ "title": "Geologic map of the Mauldin quadrangle, Greenville County, South Carolina",
+ "citation": "Maybin, A.D., 2003, Geologic map of the Mauldin quadrangle, Greenville County, South Carolina: South Carolina Geological Survey Open-File Report OFR-149, map scale 1:24,000.",
+ "year": 2003,
+ "scale": 24000,
+ "publisher": "South Carolina Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-10-24T10:57:52+00:00",
+ "updated_at": "2026-10-24T10:57:52+00:00",
+ "reader": "Claude, Claude Code session 2026-10-24",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1"
+ ],
+ "blocks_total": 1,
+ "complete": true,
+ "notes": "Single OCRed map sheet. Map symbols bgn, mg and am are not in the OCR text (only colour boxes), so they are left out. Section A-A' (vertical exaggeration 2) was checked on the whole-page image: it shows no drill holes or faults; unit positions along it depend on the drawing and were not recorded. A thrust fault is drawn in the northwest of the map but its only text is the legend, so it is not recorded. SUBSURFACE: section A-A' shows only Qal, bgn and sch bodies projected above and below land surface.",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/img2/77000_77999/77564_1",
+   "via": "ngmdb_image",
+   "sha256": "f27f35e4ace8843b36507930c207e1e1aea33ab0a3a254041f1064d3ecd8e8ba",
+   "pages": 1,
+   "first_page": 1
+  }
+ ],
+ "summary": {
+  "stored": 22,
+  "quote_match": {
+   "exact": 22
+  },
+  "verification": {
+   "agree": 22
+  },
+  "inferred": 4
+ },
+ "ingests": [
+  {
+   "at": "2026-10-24T10:57:52+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, Claude Code session 2026-10-24",
+   "values": 22,
+   "stored": 22,
+   "exact": 22,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 22,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 0,
+   "image_not_verified": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [
+  {
+   "map_symbol": {
+    "value": "Qal",
+    "source_id": "ngmdb:77564",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77564_1",
+    "quote": "Qal",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   },
+   "name": {
+    "value": "Quaternary alluvium",
+    "source_id": "ngmdb:77564",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77564_1",
+    "quote": "Quaternary alluyium",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "note": "OCR 'alluyium' for alluvium"
+   },
+   "age": {
+    "value": "Quaternary",
+    "source_id": "ngmdb:77564",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.684,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77564_1",
+    "quote": "Quaternary alluyium",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "note": "age taken from the unit name",
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "sch",
+    "source_id": "ngmdb:77564",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.684,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77564_1",
+    "quote": "ach Sillimanite mica schist",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "note": "OCR read the symbol as 'ach'; the map face shows sch"
+   },
+   "name": {
+    "value": "Sillimanite mica schist",
+    "source_id": "ngmdb:77564",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77564_1",
+    "quote": "ach Sillimanite mica schist -- Unit occurs as inner bedded units",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "canonical": "sillimanite mica",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "lithology": {
+    "value": "fine grained sillimanite mica schist, sillimanite biotite schist, sillimanite garnet biotite schist, sillimanite garnet mica schist; layers of garnet biotite gneiss with or without feldspar augen",
+    "source_id": "ngmdb:77564",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77564_1",
+    "quote": "Unit occurs as inner bedded units of fine grained sillimanite\nmica schist, sillimanite biotite schist, sillimanite garnet biotite schist, sillimanite garnet\nmica schist.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   },
+   "description": {
+    "value": "The sillimanite schist have a well developed schistosity and it is generally crenulated and or folded on an outcrop scale.",
+    "source_id": "ngmdb:77564",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77564_1",
+    "quote": "The sillimanite schist have a well developed schistosity and it is generally crenulated",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   }
+  },
+  {
+   "name": {
+    "value": "Biotite gneiss",
+    "source_id": "ngmdb:77564",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77564_1",
+    "quote": "Biotite gneiss — Unit with interlayers of fine grained sillmanite mica schist",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   },
+   "lithology": {
+    "value": "biotite augen gneiss with variable amounts of garnet; well banded garnet biotite gneiss and biotite gneiss; porphyroblastic biotite gneiss",
+    "source_id": "ngmdb:77564",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77564_1",
+    "quote": "The biotite gneiss unit is comprised of biotite augen gneiss with variable",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   },
+   "description": {
+    "value": "medium grained with the aligned augen varying in size from a few millimeters to about 2 centimeters",
+    "source_id": "ngmdb:77564",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77564_1",
+    "quote": "The rock is medium grained with the aligned augen varying in size from a few",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   }
+  },
+  {
+   "name": {
+    "value": "Metagranite",
+    "source_id": "ngmdb:77564",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77564_1",
+    "quote": "Metagranite -- Medium to coarse crystalline leucocratic metagranite",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   },
+   "lithology": {
+    "value": "Medium to coarse crystalline leucocratic metagranite",
+    "source_id": "ngmdb:77564",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77564_1",
+    "quote": "Metagranite -- Medium to coarse crystalline leucocratic metagranite",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   },
+   "description": {
+    "value": "occurs in the north half of the quadrangle; may have a slight foliation",
+    "source_id": "ngmdb:77564",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77564_1",
+    "quote": "half of the quadrangle may have a slight foliation.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   }
+  },
+  {
+   "name": {
+    "value": "Amphibolite",
+    "source_id": "ngmdb:77564",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77564_1",
+    "quote": "Amphibolite -- Comprised almost entirely of plagioclase and amphibole crystals",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   },
+   "lithology": {
+    "value": "Comprised almost entirely of plagioclase and amphibole crystals up to 1 centimeter in length and are aligned",
+    "source_id": "ngmdb:77564",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77564_1",
+    "quote": "Amphibolite -- Comprised almost entirely of plagioclase and amphibole crystals up to 1",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "mgbr",
+    "source_id": "ngmdb:77564",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77564_1",
+    "quote": "mgbr | Coarse crystalline metagabbro",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   },
+   "name": {
+    "value": "Coarse crystalline metagabbro",
+    "source_id": "ngmdb:77564",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77564_1",
+    "quote": "mgbr | Coarse crystalline metagabbro",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "canonical": "crystalline",
+     "in_geolex": false,
+     "inferred": true
+    }
+   }
+  }
+ ],
+ "observations": [],
+ "structures": [],
+ "groundwater": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Buffalo, J., 2002, Geology of the Mauldin 7.5-minute quadrangle, northern half, Greenville County, South Carolina, South Carolina Geological Survey Open-File Report 142.",
+    "source_id": "ngmdb:77564",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77564_1",
+    "quote": "Buffalo, J., 2002, Geology of the Mauldin 7.5-minute quadrangle, northern half, Greenville",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  }
+ ],
+ "surfaces": [],
+ "contours": [],
+ "sections": [
+  {
+   "name": {
+    "value": "A-A'",
+    "source_id": "ngmdb:77564",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77564_1",
+    "quote": "A’",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "section line A to A' drawn on map and below it; only A' is in the OCR text"
+   },
+   "vertical_exaggeration": {
+    "value": "Vertical exaggeration is 2",
+    "source_id": "ngmdb:77564",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77564_1",
+    "quote": "Vertical exaggeration is 2",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": 2.0
+   },
+   "datum": {
+    "value": "sea level",
+    "source_id": "ngmdb:77564",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77564_1",
+    "quote": "SEA LEVEL",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": "MSL"
+   },
+   "elevation_units": {
+    "value": "feet (left scale), meters (right scale)",
+    "source_id": "ngmdb:77564",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77564_1",
+    "quote": "METERS",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "left scale labelled FEET, right scale METERS"
+   }
+  }
+ ],
+ "water_tests": [],
+ "rock_tests": []
+}
