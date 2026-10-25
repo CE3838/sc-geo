@@ -8,8 +8,8 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-07T22:57:15+00:00",
- "updated_at": "2026-10-07T22:57:15+00:00",
- "reader": "Claude, Claude Code reading session 2026-10-07",
+ "updated_at": "2026-10-25T23:47:53+00:00",
+ "reader": "Claude, Claude Code re-read session 2026-10-25",
  "packets": [
   "packet-01"
  ],
@@ -19,7 +19,7 @@
  ],
  "blocks_total": 2,
  "complete": true,
- "notes": "Two OCR map sheets (Part 1 Ropers Crossroads, page 1; Part 2 North Augusta, page 2) on USGS topographic bases. The explanation and cross sections are in an accompanying text that is not in this packet ('For explanation of map symbols see accompanying text'), so no unit descriptions are available. Map faces are mostly noise; only the unit label 'Tuu' is legible (page 2). No references.\nSUBSURFACE: base maps state National Geodetic Vertical Datum of 1929 with contour interval 10 feet and 1927 North American Datum (pages 1-2); cross sections named in the catalog title are not in this packet.",
+ "notes": "Two OCR map sheets (Part 1 Ropers Crossroads, page 1; Part 2 North Augusta, page 2) on USGS topographic bases. The explanation and cross sections are in an accompanying text that is not in this packet ('For explanation of map symbols see accompanying text'), so no unit descriptions are available. Map faces are mostly noise; only the unit label 'Tuu' is legible (page 2). No references.\nSUBSURFACE: base maps state National Geodetic Vertical Datum of 1929 with contour interval 10 feet and 1927 North American Datum (pages 1-2); cross sections named in the catalog title are not in this packet.\nRe-read of the two map sheets (p. 1 Ropers Crossroads, p. 2 North Augusta) from page images. Recorded the map-unit labels legible on the viewed tiles (one per symbol per sheet) and the numbered site labels beside site symbols; the sheets say the explanation of map symbols is in the accompanying text, which is not in this document, so unit names, site kinds and depths are not given. Overprinted site labels (e.g. 19-22, 19-54, 2-149, 2-171 and others) were skipped. Large letters at the sheet corners (A on p. 1, B on p. 2) may mark cross-section lines, but no section is drawn on these sheets, so no section was recorded. Base-map collar: contour interval 10 feet, National Geodetic Vertical Datum of 1929, 1927 North American Datum (topographic base, not a geologic surface). Handwritten margin note on p. 1 ('Ttr', 'Tuu') not recorded.",
  "files": [
   {
    "url": "https://ngmdb.usgs.gov/img1/43000_43999/43013_1",
@@ -37,12 +37,12 @@
   }
  ],
  "summary": {
-  "stored": 1,
+  "stored": 25,
   "quote_match": {
-   "exact": 1
+   "image": 25
   },
   "verification": {
-   "agree": 1
+   "agree": 25
   },
   "inferred": 0
  },
@@ -64,31 +64,1073 @@
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
+  },
+  {
+   "at": "2026-10-25T23:47:53+00:00",
+   "packets": [
+    "reread-01"
+   ],
+   "reader": "Claude, Claude Code re-read session 2026-10-25",
+   "values": 25,
+   "stored": 25,
+   "exact": 0,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 25,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 25,
+   "image_not_verified": 0,
+   "review_items": 0,
+   "reread": {
+    "packets": [
+     "reread-01"
+    ],
+    "pages": [
+     1,
+     2
+    ],
+    "reason": "subsurface_fields",
+    "queue_ids": [
+     "ngmdb:43013:subsurface_fields:p1-2"
+    ]
+   }
+  }
+ ],
+ "history": [
+  {
+   "at": "2026-10-25T23:47:53+00:00",
+   "reason": "subsurface_fields",
+   "packets": [
+    "reread-01"
+   ],
+   "pages": [
+    1,
+    2
+   ],
+   "replaced": [
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "Tuu",
+       "source_id": "ngmdb:43013",
+       "page": 2,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_2",
+       "quote": "Tuu . . \\ cv SA W",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "note": "unit label legible several times on the North Augusta map face; its description is in the accompanying text, not in this packet"
+      }
+     }
+    }
+   ]
   }
  ],
  "units": [
   {
    "map_symbol": {
+    "value": "Pu",
+    "source_id": "ngmdb:43013",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_1#page=1&viewrect=994,684.5,23,10",
+    "quote": "Pu",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-3x4-r2c3",
+     "box": [
+      12,
+      220,
+      58,
+      240
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1988,
+      1369,
+      2034,
+      1389
+     ],
+     "pt_box": [
+      994.0,
+      684.5,
+      1017.0,
+      694.5
+     ],
+     "pdf_sha256": "17f7dddd8d99584567d6ada8de103535a379da25c0834f3dc1eee997723b1964"
+    },
+    "note": "map label on the map face; the unit's explanation is in the accompanying text, not on this sheet"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Tuu",
+    "source_id": "ngmdb:43013",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_1#page=1&viewrect=1428,639.5,25,11",
+    "quote": "Tuu",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-3x4-r2c3",
+     "box": [
+      880,
+      130,
+      930,
+      152
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2856,
+      1279,
+      2906,
+      1301
+     ],
+     "pt_box": [
+      1428.0,
+      639.5,
+      1453.0,
+      650.5
+     ],
+     "pdf_sha256": "17f7dddd8d99584567d6ada8de103535a379da25c0834f3dc1eee997723b1964"
+    },
+    "note": "map label on the map face; the unit's explanation is in the accompanying text, not on this sheet"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Tb",
+    "source_id": "ngmdb:43013",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_1#page=1&viewrect=1302,644.5,21,12.5",
+    "quote": "Tb",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-3x4-r2c3",
+     "box": [
+      628,
+      140,
+      670,
+      165
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2604,
+      1289,
+      2646,
+      1314
+     ],
+     "pt_box": [
+      1302.0,
+      644.5,
+      1323.0,
+      657.0
+     ],
+     "pdf_sha256": "17f7dddd8d99584567d6ada8de103535a379da25c0834f3dc1eee997723b1964"
+    },
+    "note": "map label on the map face; the unit's explanation is in the accompanying text, not on this sheet"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Th",
+    "source_id": "ngmdb:43013",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_1#page=1&viewrect=1262,719.5,15,10",
+    "quote": "Th",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-3x4-r2c3",
+     "box": [
+      548,
+      290,
+      578,
+      310
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2524,
+      1439,
+      2554,
+      1459
+     ],
+     "pt_box": [
+      1262.0,
+      719.5,
+      1277.0,
+      729.5
+     ],
+     "pdf_sha256": "17f7dddd8d99584567d6ada8de103535a379da25c0834f3dc1eee997723b1964"
+    },
+    "note": "map label on the map face; the unit's explanation is in the accompanying text, not on this sheet"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Ql",
+    "source_id": "ngmdb:43013",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_1#page=1&viewrect=1394,828.5,11.5,12",
+    "quote": "Ql",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-3x4-r2c3",
+     "box": [
+      812,
+      508,
+      835,
+      532
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2788,
+      1657,
+      2811,
+      1681
+     ],
+     "pt_box": [
+      1394.0,
+      828.5,
+      1405.5,
+      840.5
+     ],
+     "pdf_sha256": "17f7dddd8d99584567d6ada8de103535a379da25c0834f3dc1eee997723b1964"
+    },
+    "note": "map label on the map face; the unit's explanation is in the accompanying text, not on this sheet"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Tdb",
+    "source_id": "ngmdb:43013",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_1#page=1&viewrect=1430,909.5,24,12.5",
+    "quote": "Tdb",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-3x4-r2c3",
+     "box": [
+      884,
+      670,
+      932,
+      695
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2860,
+      1819,
+      2908,
+      1844
+     ],
+     "pt_box": [
+      1430.0,
+      909.5,
+      1454.0,
+      922.0
+     ],
+     "pdf_sha256": "17f7dddd8d99584567d6ada8de103535a379da25c0834f3dc1eee997723b1964"
+    },
+    "note": "map label on the map face; the unit's explanation is in the accompanying text, not on this sheet"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Ttr",
+    "source_id": "ngmdb:43013",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_1#page=1&viewrect=1415.5,953.5,17.5,10",
+    "quote": "Ttr",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-3x4-r2c3",
+     "box": [
+      855,
+      758,
+      890,
+      778
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2831,
+      1907,
+      2866,
+      1927
+     ],
+     "pt_box": [
+      1415.5,
+      953.5,
+      1433.0,
+      963.5
+     ],
+     "pdf_sha256": "17f7dddd8d99584567d6ada8de103535a379da25c0834f3dc1eee997723b1964"
+    },
+    "note": "map label on the map face; the unit's explanation is in the accompanying text, not on this sheet"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Qal",
+    "source_id": "ngmdb:43013",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_1#page=1&viewrect=1299,992.5,23,11",
+    "quote": "Qal",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-3x4-r2c3",
+     "box": [
+      622,
+      836,
+      668,
+      858
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2598,
+      1985,
+      2644,
+      2007
+     ],
+     "pt_box": [
+      1299.0,
+      992.5,
+      1322.0,
+      1003.5
+     ],
+     "pdf_sha256": "17f7dddd8d99584567d6ada8de103535a379da25c0834f3dc1eee997723b1964"
+    },
+    "note": "map label on the map face; the unit's explanation is in the accompanying text, not on this sheet"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "K",
+    "source_id": "ngmdb:43013",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_1#page=1&viewrect=1289,1498,10,10",
+    "quote": "K",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-3x4-r3c3",
+     "box": [
+      602,
+      698,
+      622,
+      718
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2578,
+      2996,
+      2598,
+      3016
+     ],
+     "pt_box": [
+      1289.0,
+      1498.0,
+      1299.0,
+      1508.0
+     ],
+     "pdf_sha256": "17f7dddd8d99584567d6ada8de103535a379da25c0834f3dc1eee997723b1964"
+    },
+    "note": "map label on the map face; the unit's explanation is in the accompanying text, not on this sheet"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Ttr",
+    "source_id": "ngmdb:43013",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_2#page=1&viewrect=738.5,896.5,25,10",
+    "quote": "Ttr",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-144dpi-3x4-r2c2",
+     "box": [
+      455,
+      648,
+      505,
+      668
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1477,
+      1793,
+      1527,
+      1813
+     ],
+     "pt_box": [
+      738.5,
+      896.5,
+      763.5,
+      906.5
+     ],
+     "pdf_sha256": "bbcd25985663501bb1eaf12f282e692d32a1d88eac03409abd025cd691122c9d"
+    },
+    "note": "map label on the map face; the unit's explanation is in the accompanying text, not on this sheet"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Tdb",
+    "source_id": "ngmdb:43013",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_2#page=1&viewrect=938.5,905,30,11.5",
+    "quote": "Tdb",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-144dpi-3x4-r2c2",
+     "box": [
+      855,
+      665,
+      915,
+      688
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1877,
+      1810,
+      1937,
+      1833
+     ],
+     "pt_box": [
+      938.5,
+      905.0,
+      968.5,
+      916.5
+     ],
+     "pdf_sha256": "bbcd25985663501bb1eaf12f282e692d32a1d88eac03409abd025cd691122c9d"
+    },
+    "note": "map label on the map face; the unit's explanation is in the accompanying text, not on this sheet"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Ql",
+    "source_id": "ngmdb:43013",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_2#page=1&viewrect=867.5,940,17.5,11",
+    "quote": "Ql",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-144dpi-3x4-r2c2",
+     "box": [
+      713,
+      735,
+      748,
+      757
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1735,
+      1880,
+      1770,
+      1902
+     ],
+     "pt_box": [
+      867.5,
+      940.0,
+      885.0,
+      951.0
+     ],
+     "pdf_sha256": "bbcd25985663501bb1eaf12f282e692d32a1d88eac03409abd025cd691122c9d"
+    },
+    "note": "map label on the map face; the unit's explanation is in the accompanying text, not on this sheet"
+   }
+  },
+  {
+   "map_symbol": {
     "value": "Tuu",
     "source_id": "ngmdb:43013",
     "page": 2,
-    "extraction_method": "llm",
-    "confidence": 0.855,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
     "inferred": false,
-    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_2",
-    "quote": "Tuu . . \\ cv SA W",
-    "quote_match": "exact",
-    "text_method": "ocr",
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_2#page=1&viewrect=738.5,782.5,25,11",
+    "quote": "Tuu",
+    "quote_match": "image",
+    "text_method": "image",
     "verification": "agree",
-    "note": "unit label legible several times on the North Augusta map face; its description is in the accompanying text, not in this packet"
+    "image": {
+     "tile": "p2-144dpi-3x4-r2c2",
+     "box": [
+      455,
+      420,
+      505,
+      442
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1477,
+      1565,
+      1527,
+      1587
+     ],
+     "pt_box": [
+      738.5,
+      782.5,
+      763.5,
+      793.5
+     ],
+     "pdf_sha256": "bbcd25985663501bb1eaf12f282e692d32a1d88eac03409abd025cd691122c9d"
+    },
+    "text_match": true,
+    "note": "map label on the map face; the unit's explanation is in the accompanying text, not on this sheet"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Th",
+    "source_id": "ngmdb:43013",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_2#page=1&viewrect=776,989,16,10",
+    "quote": "Th",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-144dpi-3x4-r2c2",
+     "box": [
+      530,
+      833,
+      562,
+      853
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1552,
+      1978,
+      1584,
+      1998
+     ],
+     "pt_box": [
+      776.0,
+      989.0,
+      792.0,
+      999.0
+     ],
+     "pdf_sha256": "bbcd25985663501bb1eaf12f282e692d32a1d88eac03409abd025cd691122c9d"
+    },
+    "text_match": true,
+    "note": "map label on the map face; the unit's explanation is in the accompanying text, not on this sheet"
    }
   }
  ],
- "observations": [],
+ "observations": [
+  {
+   "kind": "other",
+   "label": {
+    "value": "19-60",
+    "source_id": "ngmdb:43013",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_1#page=1&viewrect=1170.5,742,35,15",
+    "quote": "19-60",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-3x4-r2c3",
+     "box": [
+      365,
+      335,
+      435,
+      365
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2341,
+      1484,
+      2411,
+      1514
+     ],
+     "pt_box": [
+      1170.5,
+      742.0,
+      1205.5,
+      757.0
+     ],
+     "pdf_sha256": "17f7dddd8d99584567d6ada8de103535a379da25c0834f3dc1eee997723b1964"
+    },
+    "note": "numbered site symbol on the map face (kind not explained on this sheet; explanation is in the accompanying text); no printed location"
+   }
+  },
+  {
+   "kind": "other",
+   "label": {
+    "value": "19-40",
+    "source_id": "ngmdb:43013",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_1#page=1&viewrect=1233,820.5,45,12",
+    "quote": "19-40",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-3x4-r2c3",
+     "box": [
+      490,
+      492,
+      580,
+      516
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2466,
+      1641,
+      2556,
+      1665
+     ],
+     "pt_box": [
+      1233.0,
+      820.5,
+      1278.0,
+      832.5
+     ],
+     "pdf_sha256": "17f7dddd8d99584567d6ada8de103535a379da25c0834f3dc1eee997723b1964"
+    },
+    "note": "numbered site symbol on the map face (kind not explained on this sheet; explanation is in the accompanying text); no printed location"
+   }
+  },
+  {
+   "kind": "other",
+   "label": {
+    "value": "19-21",
+    "source_id": "ngmdb:43013",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_1#page=1&viewrect=1360.5,994.5,30,11",
+    "quote": "19-21",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-3x4-r2c3",
+     "box": [
+      745,
+      840,
+      805,
+      862
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2721,
+      1989,
+      2781,
+      2011
+     ],
+     "pt_box": [
+      1360.5,
+      994.5,
+      1390.5,
+      1005.5
+     ],
+     "pdf_sha256": "17f7dddd8d99584567d6ada8de103535a379da25c0834f3dc1eee997723b1964"
+    },
+    "note": "numbered site symbol on the map face (kind not explained on this sheet; explanation is in the accompanying text); no printed location"
+   }
+  },
+  {
+   "kind": "other",
+   "label": {
+    "value": "19-51",
+    "source_id": "ngmdb:43013",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_1#page=1&viewrect=1219,1256.5,35,11",
+    "quote": "19-51",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-3x4-r3c3",
+     "box": [
+      462,
+      215,
+      532,
+      237
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2438,
+      2513,
+      2508,
+      2535
+     ],
+     "pt_box": [
+      1219.0,
+      1256.5,
+      1254.0,
+      1267.5
+     ],
+     "pdf_sha256": "17f7dddd8d99584567d6ada8de103535a379da25c0834f3dc1eee997723b1964"
+    },
+    "note": "numbered site symbol on the map face (kind not explained on this sheet; explanation is in the accompanying text); no printed location"
+   }
+  },
+  {
+   "kind": "other",
+   "label": {
+    "value": "19-48",
+    "source_id": "ngmdb:43013",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_1#page=1&viewrect=1225.5,1440.5,36,11",
+    "quote": "19-48",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-3x4-r3c3",
+     "box": [
+      475,
+      583,
+      547,
+      605
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2451,
+      2881,
+      2523,
+      2903
+     ],
+     "pt_box": [
+      1225.5,
+      1440.5,
+      1261.5,
+      1451.5
+     ],
+     "pdf_sha256": "17f7dddd8d99584567d6ada8de103535a379da25c0834f3dc1eee997723b1964"
+    },
+    "note": "numbered site symbol on the map face (kind not explained on this sheet; explanation is in the accompanying text); no printed location"
+   }
+  },
+  {
+   "kind": "other",
+   "label": {
+    "value": "19-50",
+    "source_id": "ngmdb:43013",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_1#page=1&viewrect=1428,1437.5,36,11.5",
+    "quote": "19-50",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-3x4-r3c3",
+     "box": [
+      880,
+      577,
+      952,
+      600
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2856,
+      2875,
+      2928,
+      2898
+     ],
+     "pt_box": [
+      1428.0,
+      1437.5,
+      1464.0,
+      1449.0
+     ],
+     "pdf_sha256": "17f7dddd8d99584567d6ada8de103535a379da25c0834f3dc1eee997723b1964"
+    },
+    "note": "numbered site symbol on the map face (kind not explained on this sheet; explanation is in the accompanying text); no printed location"
+   }
+  },
+  {
+   "kind": "other",
+   "label": {
+    "value": "19-53",
+    "source_id": "ngmdb:43013",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_1#page=1&viewrect=1153,1685,35,11",
+    "quote": "19-53",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-3x4-r3c3",
+     "box": [
+      330,
+      1072,
+      400,
+      1094
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2306,
+      3370,
+      2376,
+      3392
+     ],
+     "pt_box": [
+      1153.0,
+      1685.0,
+      1188.0,
+      1696.0
+     ],
+     "pdf_sha256": "17f7dddd8d99584567d6ada8de103535a379da25c0834f3dc1eee997723b1964"
+    },
+    "note": "numbered site symbol on the map face (kind not explained on this sheet; explanation is in the accompanying text); no printed location"
+   }
+  },
+  {
+   "kind": "other",
+   "label": {
+    "value": "2-143",
+    "source_id": "ngmdb:43013",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_1#page=1&viewrect=1443,1608,34,11",
+    "quote": "2-143",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-3x4-r3c3",
+     "box": [
+      910,
+      918,
+      978,
+      940
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2886,
+      3216,
+      2954,
+      3238
+     ],
+     "pt_box": [
+      1443.0,
+      1608.0,
+      1477.0,
+      1619.0
+     ],
+     "pdf_sha256": "17f7dddd8d99584567d6ada8de103535a379da25c0834f3dc1eee997723b1964"
+    },
+    "note": "numbered site symbol on the map face (kind not explained on this sheet; explanation is in the accompanying text); no printed location"
+   }
+  },
+  {
+   "kind": "other",
+   "label": {
+    "value": "2-144",
+    "source_id": "ngmdb:43013",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_1#page=1&viewrect=1440.5,1650.5,35,10.5",
+    "quote": "2-144",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-3x4-r3c3",
+     "box": [
+      905,
+      1003,
+      975,
+      1024
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2881,
+      3301,
+      2951,
+      3322
+     ],
+     "pt_box": [
+      1440.5,
+      1650.5,
+      1475.5,
+      1661.0
+     ],
+     "pdf_sha256": "17f7dddd8d99584567d6ada8de103535a379da25c0834f3dc1eee997723b1964"
+    },
+    "note": "numbered site symbol on the map face (kind not explained on this sheet; explanation is in the accompanying text); no printed location"
+   }
+  },
+  {
+   "kind": "other",
+   "label": {
+    "value": "19-56",
+    "source_id": "ngmdb:43013",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_2#page=1&viewrect=620,629,37,11.5",
+    "quote": "19-56",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-144dpi-3x4-r2c2",
+     "box": [
+      218,
+      113,
+      292,
+      136
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1240,
+      1258,
+      1314,
+      1281
+     ],
+     "pt_box": [
+      620.0,
+      629.0,
+      657.0,
+      640.5
+     ],
+     "pdf_sha256": "bbcd25985663501bb1eaf12f282e692d32a1d88eac03409abd025cd691122c9d"
+    },
+    "note": "numbered site symbol on the map face (kind not explained on this sheet; explanation is in the accompanying text); no printed location"
+   }
+  },
+  {
+   "kind": "other",
+   "label": {
+    "value": "2-148",
+    "source_id": "ngmdb:43013",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43013_2#page=1&viewrect=630,860,36,11.5",
+    "quote": "2-148",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-144dpi-3x4-r2c2",
+     "box": [
+      238,
+      575,
+      310,
+      598
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1260,
+      1720,
+      1332,
+      1743
+     ],
+     "pt_box": [
+      630.0,
+      860.0,
+      666.0,
+      871.5
+     ],
+     "pdf_sha256": "bbcd25985663501bb1eaf12f282e692d32a1d88eac03409abd025cd691122c9d"
+    },
+    "note": "numbered site symbol on the map face (kind not explained on this sheet; explanation is in the accompanying text); no printed location"
+   }
+  }
+ ],
  "structures": [],
  "groundwater": [],
  "references": [],
  "surfaces": [],
  "contours": [],
- "sections": []
+ "sections": [],
+ "water_tests": [],
+ "rock_tests": []
 }
