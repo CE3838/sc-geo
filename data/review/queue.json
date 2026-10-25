@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 185,
+ "count": 188,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -2458,6 +2458,45 @@
    "verify": {
     "verdict": "unclear",
     "note": "OCR prints \"are | mm\"; the digit is read as 1 but is not printed legibly"
+   }
+  },
+  {
+   "source_id": "ngmdb:77449",
+   "path": "units[2].map_symbol",
+   "problem": "verify_unclear",
+   "value": "QHfw",
+   "page": 1,
+   "quote": "QHiw",
+   "added_at": "2026-10-25T10:57:12+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR 'QHiw'; page image box reads QHfw"
+   }
+  },
+  {
+   "source_id": "ngmdb:77449",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "lowering the salinity and rising tides importing high salinity waters. Thickness | to 40 feet",
+   "added_at": "2026-10-25T10:57:12+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' for the first digit; 1 is the likely reading"
+   }
+  },
+  {
+   "source_id": "ngmdb:77449",
+   "path": "units[4].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "Thickness | to 40 feet.",
+   "added_at": "2026-10-25T10:57:12+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' for the first digit; 1 is the likely reading"
    }
   }
  ]
