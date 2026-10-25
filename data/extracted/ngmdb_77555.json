@@ -1,0 +1,4748 @@
+{
+ "source_id": "ngmdb:77555",
+ "title": "Geologic map of the Spring Island quadrangle, Beaufort and Jasper Counties, South Carolina",
+ "citation": "Doar, W.R., III, 2001, Geologic map of the Spring Island quadrangle, Beaufort and Jasper Counties, South Carolina: South Carolina Geological Survey Open-File Report OFR-140, map scale 1:24,000.",
+ "year": 2001,
+ "scale": 24000,
+ "publisher": "South Carolina Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-10-25T23:35:29+00:00",
+ "updated_at": "2026-10-25T23:35:29+00:00",
+ "reader": "Claude, Claude Code session 2026-10-25",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1",
+  "2",
+  "3",
+  "4"
+ ],
+ "blocks_total": 4,
+ "complete": true,
+ "notes": "Page 1 is the map sheet; pages 2-4 are unrelated symbol-style notes appended to the download (no values taken). Map symbols assigned from description boxes on the page image, flagged inferred. Section A-A' holes read from page-image tiles and checked against colour columns sampled from the PDF; elevations in ft off the feet scale (below-sea-level labels printed without a minus sign; recorded negative). 5-151 and 5-194 continue below the section base (break symbols: 'goes to 110 feet', 'Eocene found 107 ft - 110 ft', 'goes to 80 feet'), so their NMd intervals have no bottom. 5-192 and 5-186 are drawn above the profile and 5-194 starts below it: no land-surface elevation. Hole positions along the section and contacts between holes not recorded (no horizontal scale printed). Map-face drill-hole labels (7-xxx) have no printed locations.",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555",
+   "via": "gis_package",
+   "sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0",
+   "pages": 1,
+   "first_page": 1
+  },
+  {
+   "url": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555",
+   "via": "gis_package",
+   "sha256": "2a16d6c8acf9cc8b1842b5fb6851751fa60b67948e124a04560df1d8b4361561",
+   "pages": 3,
+   "first_page": 2
+  }
+ ],
+ "summary": {
+  "stored": 185,
+  "quote_match": {
+   "image": 64,
+   "exact": 121
+  },
+  "verification": {
+   "agree": 181
+  },
+  "inferred": 91
+ },
+ "ingests": [
+  {
+   "at": "2026-10-25T23:35:29+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, Claude Code session 2026-10-25",
+   "values": 185,
+   "stored": 185,
+   "exact": 121,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 181,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 64,
+   "image_not_verified": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [
+  {
+   "map_symbol": {
+    "value": "me",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "me",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "symbol from the description box beside this unit (layout)"
+   },
+   "name": {
+    "value": "Moved earth",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Moved earth (Holocene) – Bulk earthen material moved by humans. Color is highly",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Moved earth (Holocene) – Bulk earthen material moved by humans. Color is highly",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Bulk earthen material moved by humans",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Moved earth (Holocene) – Bulk earthen material moved by humans. Color is highly",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "thickness": {
+    "value": "up to 18 feet",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "variable and dependent on source location. Thickness up to 18 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 18.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QHfw",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "QHfw",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "symbol from the description box beside this unit (layout)"
+   },
+   "name": {
+    "value": "Freshwater marsh and swamp deposits",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Freshwater marsh and swamp deposits (Holocene) – Silty clay and peat, black (N1),",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Freshwater marsh and swamp deposits (Holocene) – Silty clay and peat, black (N1),",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Silty clay and peat, black (N1), deposited in stream valleys and areas of locally low elevation",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Freshwater marsh and swamp deposits (Holocene) – Silty clay and peat, black (N1),",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "thickness": {
+    "value": "1 to 40 feet",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "the content of organic materials, sediment type, water salinity and ecozones. Thickness 1 to 40",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "min_ft": 1.0,
+     "max_ft": 40.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QHps",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "QHps",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "symbol from the description box beside this unit (layout)"
+   },
+   "name": {
+    "value": "Point bar or spit deposits",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Point bar or spit deposits (Holocene) – Quartz sand, white (N9) to medium-gray (N5),",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Point bar or spit deposits (Holocene) – Quartz sand, white (N9) to medium-gray (N5),",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Quartz sand, white (N9) to medium-gray (N5), fine- to medium-grained, silty, clayey; along a shoreline or projecting into a body of water",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Point bar or spit deposits (Holocene) – Quartz sand, white (N9) to medium-gray (N5),",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "thickness": {
+    "value": "1 to 15 feet",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "the dominant direction of longshore transport. Thickness 1 to 15 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "min_ft": 1.0,
+     "max_ft": 15.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QHs",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "QHs",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "symbol from the description box beside this unit (layout)"
+   },
+   "name": {
+    "value": "Molluscan conglomerate",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Molluscan conglomerate (Holocene) – Disarticulated bivalve shells, little to no silt,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Molluscan conglomerate (Holocene) – Disarticulated bivalve shells, little to no silt,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Disarticulated bivalve shells, little to no silt, some clay, and noncemented, very poorly sorted quartz sand; shells 2.0 to 9.0 cm; shell banks built by wave action",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Molluscan conglomerate (Holocene) – Disarticulated bivalve shells, little to no silt,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "thickness": {
+    "value": "less than 1 foot to 12 feet",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "in dense, imbricate layers. Thickness less than 1 foot to 12 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "min_ft": 1.0,
+     "max_ft": 12.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "fossils": {
+    "value": "predominantly intertidal oysters (Crassostrea virginica) and clams (Mercenaria mercenaria or Mercenaria campechiensis)",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "(Crassostrea virginica) and clams (Mercenaria mercenaria or Mercenaria campechiensis).",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QHsm",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "QHsm",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "symbol from the description box beside this unit (layout)"
+   },
+   "name": {
+    "value": "Saltmarsh deposits",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Saltmarsh deposits (Holocene) – Silty clay, black (N1), high water content, soft,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Saltmarsh deposits (Holocene) – Silty clay, black (N1), high water content, soft,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Silty clay, black (N1), high water content, soft, with lenses of very fine grained quartz sand; intertidal zone in estuaries",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Saltmarsh deposits (Holocene) – Silty clay, black (N1), high water content, soft,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "thickness": {
+    "value": "3 to 30 feet",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Thickness 3 to 30 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "min_ft": 3.0,
+     "max_ft": 30.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QHp",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "QHp",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "symbol from the description box beside this unit (layout)"
+   },
+   "name": {
+    "value": "Mud flat deposits",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Mud ﬂat deposits (Holocene) – Silty clay, black (N1), very high water content, soft.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Mud ﬂat deposits (Holocene) – Silty clay, black (N1), very high water content, soft.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Silty clay, black (N1), very high water content, soft; locally called pluff mud; nonvegetated areas in estuaries",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Mud ﬂat deposits (Holocene) – Silty clay, black (N1), very high water content, soft.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "thickness": {
+    "value": "1 to 30 feet",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "exposed to air during some part of the tidal cycle. Thickness 1 to 30 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "min_ft": 1.0,
+     "max_ft": 30.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QHf",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "QHf",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "symbol from the description box beside this unit (layout)"
+   },
+   "name": {
+    "value": "Fringe deposits",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fringe deposits (Holocene or Pleistocene) – Mud and sand, black (N1) to variegated",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Holocene or Pleistocene",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fringe deposits (Holocene or Pleistocene) – Mud and sand, black (N1) to variegated",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Mud and sand, black (N1) to variegated sediments commonly covered by less than 3 feet of modern estuarine mud and sand",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fringe deposits (Holocene or Pleistocene) – Mud and sand, black (N1) to variegated",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "thickness": {
+    "value": "less than 3 feet",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "occur along the inland edges of intertidal to supertidal deposits. Thickness less than 3 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 3.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QPsbs",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "QPsbs",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "symbol from the description box beside this unit (layout)"
+   },
+   "name": {
+    "value": "Barrier-island deposits",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Barrier-island deposits (Pleistocene) – Quartz sand, light-gray (N7) to dark-gray (N3),",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Barrier-island deposits (Pleistocene) – Quartz sand, light-gray (N7) to dark-gray (N3),",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Quartz sand, light-gray (N7) to dark-gray (N3), fine-grained with heavy minerals, phosphorite sand and shell hash; subparallel ridges (Silver Bluff terrace)",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "poorly to moderately well sorted, subrounded to well-rounded, ﬁne-grained with a minor",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "thickness": {
+    "value": "4 to 50 feet",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "subparallel ridges. Thickness 4 to 50 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "min_ft": 4.0,
+     "max_ft": 50.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QPsbem",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "QPsbem",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "symbol from the description box beside this unit (layout)"
+   },
+   "name": {
+    "value": "Estuarine and marine deposits",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Estuarine and marine deposits (Pleistocene) – Clayey quartz sand to sandy clay,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Estuarine and marine deposits (Pleistocene) – Clayey quartz sand to sandy clay,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Clayey quartz sand to sandy clay, medium bluish gray (5B 5/1) to greenish-gray (5G 6/1)",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Estuarine and marine deposits (Pleistocene) – Clayey quartz sand to sandy clay,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "thickness": {
+    "value": "5 to 30 feet",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "minerals. Where silt and clay occur, the material typically is soft. Thickness 5 to 30 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "min_ft": 5.0,
+     "max_ft": 30.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QPsbe",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "QPsbe",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "symbol from the description box beside this unit (layout)"
+   },
+   "name": {
+    "value": "Eolian deposits",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Eolian deposits (Pleistocene or Holocene) – Quartz sand, very pale brown (10YR 8/4)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Pleistocene or Holocene",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Eolian deposits (Pleistocene or Holocene) – Quartz sand, very pale brown (10YR 8/4)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Quartz sand, very pale brown (10YR 8/4) to very dark brown (10YR 2/2), very well sorted, fine-grained; derived from sediments beneath the Silver Bluff terrace",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Eolian deposits (Pleistocene or Holocene) – Quartz sand, very pale brown (10YR 8/4)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "thickness": {
+    "value": "up to 15 feet",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "beneath the Silver Bluff terrace. Thickness up to 15 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 15.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QPpas",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "QPpas",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "symbol from the description box beside this unit (layout)"
+   },
+   "name": {
+    "value": "Barrier-island deposits",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Barrier-island deposits (Pleistocene) – Quartz sand, light-gray (N7) to dark-gray (N3),",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Barrier-island deposits (Pleistocene) – Quartz sand, light-gray (N7) to dark-gray (N3),",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Quartz sand, light-gray (N7) to dark-gray (N3), phosphatic, fine-grained with abundant heavy minerals and shell hash; subparallel ridges (Princess Anne terrace)",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "phosphatic, poorly to moderately well sorted, subrounded to well-rounded, ﬁne-grained",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "thickness": {
+    "value": "4 to 50 feet",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "amounts of ﬁne-grained mica. Strand deposits form subparallel ridges. Thickness 4 to 50 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "min_ft": 4.0,
+     "max_ft": 50.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QPpam",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "QPpam",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "symbol from the description box beside this unit (layout)"
+   },
+   "name": {
+    "value": "Estuarine deposits or marine deposits or both",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Estuarine deposits or marine deposits or both (Pleistocene) – In lower part- quartz",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Estuarine deposits or marine deposits or both (Pleistocene) – In lower part- quartz",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "lower part quartz and phosphorite sand, medium bluish-gray (5B 5/1); upper part muddy sand to sandy mud, clay, silt and shells",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Estuarine deposits or marine deposits or both (Pleistocene) – In lower part- quartz",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "thickness": {
+    "value": "lower part 10 to 20 feet; upper part 1 to 10 feet",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Lower part 10 to 20 feet thick. In upper part- muddy sand to sandy mud, clay, silt, silty sand,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "min_ft": 10.0,
+     "max_ft": 20.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "fossils": {
+    "value": "Oliva, Polinices, Terebra, Mercenaria and Dosinia",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "bluish gray (5B 5/1). Some zones contain broken and intact Oliva, Polinices, Terebra, Mercenaria",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QPpae",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "QPpae",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "symbol from the description box beside this unit (layout)"
+   },
+   "name": {
+    "value": "Eolian sand",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Eolian sand (Pleistocene or Holocene) – Quartz sand, very pale brown (10YR 8/4) to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Pleistocene or Holocene",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Eolian sand (Pleistocene or Holocene) – Quartz sand, very pale brown (10YR 8/4) to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Quartz sand, very pale brown (10YR 8/4) to very dark brown (10YR 2/2), very well sorted, fine-grained; derived from sediments beneath the Princess Anne terrace",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Eolian sand (Pleistocene or Holocene) – Quartz sand, very pale brown (10YR 8/4) to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "thickness": {
+    "value": "up to 25 feet",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "beneath the Princess Anne terrace. Thickness up to 25 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 25.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QPps",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "QPps",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "symbol from the description box beside this unit (layout)"
+   },
+   "name": {
+    "value": "Barrier island deposits",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Barrier island deposits (Pleistocene) – Phosphatic quartz sand, light-gray (N7) to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Barrier island deposits (Pleistocene) – Phosphatic quartz sand, light-gray (N7) to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Phosphatic quartz sand, light-gray (N7) to dark-gray (N3), fine-grained with heavy minerals and shell hash; sub-parallel ridges (Pamlico terrace)",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Barrier island deposits (Pleistocene) – Phosphatic quartz sand, light-gray (N7) to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "thickness": {
+    "value": "4 to 50 feet",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "hash, and trace coarse-grained micas. Strand deposits form sub-parallel ridges. Thickness 4 to 50",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "min_ft": 4.0,
+     "max_ft": 50.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QPpt",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "QPpt",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "symbol from the description box beside this unit (layout)"
+   },
+   "name": {
+    "value": "Undifferentiated terrace deposits",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Undifferentiated terrace deposits (Pleistocene) – Clayey quartz sand,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Undifferentiated terrace deposits (Pleistocene) – Clayey quartz sand,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Clayey quartz sand, mottled white to yellowish orange, bimodal or poorly sorted; elevation average 20 to 25 feet above sea level",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "well-rounded, very coarse grained, blue quartz sand. Elevation average 20 to 25 feet above sea",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "thickness": {
+    "value": "15 to 40 feet",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "human development. Thickness 15 to 40 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "min_ft": 15.0,
+     "max_ft": 40.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QPpe",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "QPpe",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "symbol from the description box beside this unit (layout)"
+   },
+   "name": {
+    "value": "Eolian sand",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Eolian sand (Pleistocene or Holocene) – Quartz sand, white (N9), moderate",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Pleistocene or Holocene",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Eolian sand (Pleistocene or Holocene) – Quartz sand, white (N9), moderate",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Quartz sand, white (N9), moderate reddish purple (5RP 6/2) and light brown (5YR 5/6); derived from sediments beneath the Pamlico terrace",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "derived from sediments beneath the Pamlico terrace. Thickness up to 25 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "thickness": {
+    "value": "up to 25 feet",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "derived from sediments beneath the Pamlico terrace. Thickness up to 25 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 25.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QPjr",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "QPjr",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "symbol from the description box beside this unit (layout)"
+   },
+   "name": {
+    "value": "Fluvial deposits",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fluvial deposits (Pleistocene) – In lower part, quartz sand, very light gray",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fluvial deposits (Pleistocene) – In lower part, quartz sand, very light gray",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Jasper sediments; lower part very poorly sorted quartz sand with pebbles and granules; upper part mottled phosphatic, clayey, fine-grained quartz sand, deeply weathered, very stiff",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fluvial deposits (Pleistocene) – In lower part, quartz sand, very light gray",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "thickness": {
+    "value": "10 to 30 feet",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "heavy minerals. Thickness 10 to 30 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "min_ft": 10.0,
+     "max_ft": 30.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QPjre",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "QPjre",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "symbol from the description box beside this unit (layout)"
+   },
+   "name": {
+    "value": "Eolian deposits",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Eolian deposits (Pleistocene) – Quartz sand, very pale brown (10YR 8/4) to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Eolian deposits (Pleistocene) – Quartz sand, very pale brown (10YR 8/4) to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Quartz sand, very pale brown (10YR 8/4) to very dark brown (10YR 2/2), very well sorted, fine-grained; derived from nonmarine sediments",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Eolian deposits (Pleistocene) – Quartz sand, very pale brown (10YR 8/4) to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "thickness": {
+    "value": "up to 15 feet",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "sediments. Thickness up to 15 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 15.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "NMd",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "NMd",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "symbol from the description box beside this unit (layout)"
+   },
+   "name": {
+    "value": "Miocene deposits (undifferentiated)",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Miocene deposits (undifferentiated) – Greenish black (5GY 2/1) to dark",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Miocene",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Miocene deposits (undifferentiated) – Greenish black (5GY 2/1) to dark",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 5.333,
+     "older_ma": 23.03,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Greenish black to olive gray, fine to medium phosphorite-quartz sand and mud; stiff or soft; found only in the cross section",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Miocene deposits (undifferentiated) – Greenish black (5GY 2/1) to dark",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "contacts": {
+    "value": "The upper contact is often a phosphorite pebble and cobble zone. The lower contact was not reached with drilling in most areas.",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Sediment is stiff or soft to the touch. The upper contact is often a phosphorite pebble and cobble",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QHr",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "QHr",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "note": "symbol from the description box beside this unit (layout)"
+   },
+   "name": {
+    "value": "Fluvial deposits",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fluvial deposits (Holocene or Pleistocene) – Quartz sand, grayish-yellow (5Y 8/4) to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Holocene or Pleistocene",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fluvial deposits (Holocene or Pleistocene) – Quartz sand, grayish-yellow (5Y 8/4) to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Quartz sand, grayish-yellow (5Y 8/4) to light-gray (N7), moderately sorted, medium to very coarse grained; derived from nonmarine sediments, deposited fluvially",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Fluvial deposits (Holocene or Pleistocene) – Quartz sand, grayish-yellow (5Y 8/4) to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true
+   },
+   "thickness": {
+    "value": "5 to 15 feet",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "altered by marine processes. Thickness 5 to 15 feet.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "min_ft": 5.0,
+     "max_ft": 15.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  }
+ ],
+ "observations": [
+  {
+   "kind": "boring",
+   "label": {
+    "value": "5-151",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "5-151",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "5-192",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "5-192",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "5-152",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "5-152",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "5-186",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "5-186",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "5-194",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "5-194",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ],
+ "structures": [],
+ "groundwater": [],
+ "references": [],
+ "surfaces": [],
+ "contours": [],
+ "sections": [
+  {
+   "name": {
+    "value": "A-A'",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "A   A'",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "end labels A and A' printed on the map and above the section"
+   },
+   "vertical_exaggeration": {
+    "value": "Vertical exagerration is 50",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Vertical exagerration is 50",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": 50.0
+   },
+   "datum": {
+    "value": "SEA LEVEL",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "SEA LEVEL   QHf   QHsm   QHsm   QHf   QHf   Mackay Creek   QHsm   SEA LEVEL",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": "MSL"
+   },
+   "elevation_units": {
+    "value": "feet (left), meters (right)",
+    "source_id": "ngmdb:77555",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "FEET   METERS",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "left scale FEET, right scale METERS"
+   },
+   "observations": [
+    {
+     "value": "5-151",
+     "source_id": "ngmdb:77555",
+     "page": 1,
+     "extraction_method": "llm",
+     "confidence": 0.85,
+     "inferred": false,
+     "locator": null,
+     "quote": "5-151",
+     "quote_match": "exact",
+     "text_method": "pdf_text",
+     "verification": "agree"
+    },
+    {
+     "value": "5-192",
+     "source_id": "ngmdb:77555",
+     "page": 1,
+     "extraction_method": "llm",
+     "confidence": 0.85,
+     "inferred": false,
+     "locator": null,
+     "quote": "5-192",
+     "quote_match": "exact",
+     "text_method": "pdf_text",
+     "verification": "agree"
+    },
+    {
+     "value": "5-152",
+     "source_id": "ngmdb:77555",
+     "page": 1,
+     "extraction_method": "llm",
+     "confidence": 0.85,
+     "inferred": false,
+     "locator": null,
+     "quote": "5-152",
+     "quote_match": "exact",
+     "text_method": "pdf_text",
+     "verification": "agree"
+    },
+    {
+     "value": "5-186",
+     "source_id": "ngmdb:77555",
+     "page": 1,
+     "extraction_method": "llm",
+     "confidence": 0.85,
+     "inferred": false,
+     "locator": null,
+     "quote": "5-186",
+     "quote_match": "exact",
+     "text_method": "pdf_text",
+     "verification": "agree"
+    },
+    {
+     "value": "5-194",
+     "source_id": "ngmdb:77555",
+     "page": 1,
+     "extraction_method": "llm",
+     "confidence": 0.85,
+     "inferred": false,
+     "locator": null,
+     "quote": "5-194",
+     "quote_match": "exact",
+     "text_method": "pdf_text",
+     "verification": "agree"
+    }
+   ],
+   "holes": [
+    {
+     "label": {
+      "value": "5-151",
+      "source_id": "ngmdb:77555",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=617.76,2291.04,19.3,7.2",
+      "quote": "5-151",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-250dpi-crop50_2165_2340_2565-r1c1",
+       "box": [
+        1972,
+        438,
+        2039,
+        463
+       ],
+       "dpi": 250,
+       "page_px_box": [
+        2145,
+        7955,
+        2212,
+        7980
+       ],
+       "pt_box": [
+        617.76,
+        2291.04,
+        637.06,
+        2298.24
+       ],
+       "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+      },
+      "text_match": true
+     },
+     "observation": {
+      "value": "5-151",
+      "source_id": "ngmdb:77555",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "5-151",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "note": "hole label on the section matches this drill hole"
+     },
+     "elevation": {
+      "value": 4,
+      "source_id": "ngmdb:77555",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=620.64,2304.58,14.4,5.76",
+      "quote": "4",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-250dpi-crop50_2165_2340_2565-r1c1",
+       "box": [
+        1982,
+        485,
+        2032,
+        505
+       ],
+       "dpi": 250,
+       "page_px_box": [
+        2155,
+        8002,
+        2205,
+        8022
+       ],
+       "pt_box": [
+        620.64,
+        2304.58,
+        635.04,
+        2310.34
+       ],
+       "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+      },
+      "text_match": true,
+      "units": "ft",
+      "normalized": {
+       "min_ft": 4.0,
+       "max_ft": 4.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "depth_reference": {
+      "value": "elevation",
+      "source_id": "ngmdb:77555",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=619.2,2307.46,17.28,230.68",
+      "quote": "SEA LEVEL",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-250dpi-crop50_2165_2340_2565-r1c1",
+       "box": [
+        1977,
+        495,
+        2037,
+        1296
+       ],
+       "dpi": 250,
+       "page_px_box": [
+        2150,
+        8012,
+        2210,
+        8813
+       ],
+       "pt_box": [
+        619.2,
+        2307.46,
+        636.48,
+        2538.14
+       ],
+       "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+      },
+      "text_match": true,
+      "note": "interval tops and bottoms read as elevations off the feet scale (sea level datum)"
+     },
+     "intervals": [
+      {
+       "unit": {
+        "value": "QHsm",
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=619.2,2307.46,17.28,18.14",
+        "quote": "QHsm",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c1",
+         "box": [
+          1977,
+          495,
+          2037,
+          558
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          2150,
+          8012,
+          2210,
+          8075
+         ],
+         "pt_box": [
+          619.2,
+          2307.46,
+          636.48,
+          2325.6
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true
+       },
+       "top": {
+        "value": 4,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=620.64,2304.58,14.4,5.76",
+        "quote": "4",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c1",
+         "box": [
+          1982,
+          485,
+          2032,
+          505
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          2155,
+          8002,
+          2205,
+          8022
+         ],
+         "pt_box": [
+          620.64,
+          2304.58,
+          635.04,
+          2310.34
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true,
+        "units": "ft",
+        "normalized": {
+         "min_ft": 4.0,
+         "max_ft": 4.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       },
+       "bottom": {
+        "value": -1,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=620.64,2322.72,14.4,5.76",
+        "quote": "-1",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c1",
+         "box": [
+          1982,
+          548,
+          2032,
+          568
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          2155,
+          8065,
+          2205,
+          8085
+         ],
+         "pt_box": [
+          620.64,
+          2322.72,
+          635.04,
+          2328.48
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "units": "ft",
+        "normalized": {
+         "min_ft": -1.0,
+         "max_ft": -1.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       }
+      },
+      {
+       "unit": {
+        "value": "QPpas",
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=619.2,2325.6,17.28,43.2",
+        "quote": "QPpas",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c1",
+         "box": [
+          1977,
+          558,
+          2037,
+          708
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          2150,
+          8075,
+          2210,
+          8225
+         ],
+         "pt_box": [
+          619.2,
+          2325.6,
+          636.48,
+          2368.8
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true
+       },
+       "top": {
+        "value": -1,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=620.64,2322.72,14.4,5.76",
+        "quote": "-1",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c1",
+         "box": [
+          1982,
+          548,
+          2032,
+          568
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          2155,
+          8065,
+          2205,
+          8085
+         ],
+         "pt_box": [
+          620.64,
+          2322.72,
+          635.04,
+          2328.48
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "units": "ft",
+        "normalized": {
+         "min_ft": -1.0,
+         "max_ft": -1.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       },
+       "bottom": {
+        "value": -13,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=620.64,2365.92,14.4,5.76",
+        "quote": "-13",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c1",
+         "box": [
+          1982,
+          698,
+          2032,
+          718
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          2155,
+          8215,
+          2205,
+          8235
+         ],
+         "pt_box": [
+          620.64,
+          2365.92,
+          635.04,
+          2371.68
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "units": "ft",
+        "normalized": {
+         "min_ft": -13.0,
+         "max_ft": -13.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       }
+      },
+      {
+       "unit": {
+        "value": "QPjr",
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=619.2,2368.8,17.28,79.2",
+        "quote": "QPjr",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c1",
+         "box": [
+          1977,
+          708,
+          2037,
+          983
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          2150,
+          8225,
+          2210,
+          8500
+         ],
+         "pt_box": [
+          619.2,
+          2368.8,
+          636.48,
+          2448.0
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true
+       },
+       "top": {
+        "value": -13,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=620.64,2365.92,14.4,5.76",
+        "quote": "-13",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c1",
+         "box": [
+          1982,
+          698,
+          2032,
+          718
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          2155,
+          8215,
+          2205,
+          8235
+         ],
+         "pt_box": [
+          620.64,
+          2365.92,
+          635.04,
+          2371.68
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "units": "ft",
+        "normalized": {
+         "min_ft": -13.0,
+         "max_ft": -13.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       },
+       "bottom": {
+        "value": -35,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=620.64,2445.12,14.4,5.76",
+        "quote": "-35",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c1",
+         "box": [
+          1982,
+          973,
+          2032,
+          993
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          2155,
+          8490,
+          2205,
+          8510
+         ],
+         "pt_box": [
+          620.64,
+          2445.12,
+          635.04,
+          2450.88
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "units": "ft",
+        "normalized": {
+         "min_ft": -35.0,
+         "max_ft": -35.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       }
+      },
+      {
+       "unit": {
+        "value": "NMd",
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=619.2,2448,17.28,90.14",
+        "quote": "NMd",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c1",
+         "box": [
+          1977,
+          983,
+          2037,
+          1296
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          2150,
+          8500,
+          2210,
+          8813
+         ],
+         "pt_box": [
+          619.2,
+          2448.0,
+          636.48,
+          2538.14
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true
+       },
+       "top": {
+        "value": -35,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=620.64,2445.12,14.4,5.76",
+        "quote": "-35",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c1",
+         "box": [
+          1982,
+          973,
+          2032,
+          993
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          2155,
+          8490,
+          2205,
+          8510
+         ],
+         "pt_box": [
+          620.64,
+          2445.12,
+          635.04,
+          2450.88
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "units": "ft",
+        "normalized": {
+         "min_ft": -35.0,
+         "max_ft": -35.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       }
+      },
+      {
+       "description": {
+        "value": "Eocene found 107 ft - 110 ft",
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=643.68,2516.54,46.37,17.86",
+        "quote": "Eocene found",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+         "box": [
+          104,
+          1221,
+          265,
+          1283
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          2235,
+          8738,
+          2396,
+          8800
+         ],
+         "pt_box": [
+          643.68,
+          2516.54,
+          690.05,
+          2534.4
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true,
+        "note": "annotation beside the break symbol of 5-151 (continues from tile r1c1); depths as printed"
+       }
+      }
+     ],
+     "total_depth": {
+      "value": "110 feet",
+      "source_id": "ngmdb:77555",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=588.38,2501.57,29.09,28.51",
+      "quote": "110 feet",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-250dpi-crop50_2165_2340_2565-r1c1",
+       "box": [
+        1870,
+        1169,
+        1971,
+        1268
+       ],
+       "dpi": 250,
+       "page_px_box": [
+        2043,
+        8686,
+        2144,
+        8785
+       ],
+       "pt_box": [
+        588.38,
+        2501.57,
+        617.47,
+        2530.08
+       ],
+       "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+      },
+      "text_match": true,
+      "note": "'Drillhole goes to 110 feet' printed beside the break symbol on this hole; hole continues below the section base",
+      "normalized": {
+       "min_ft": 110.0,
+       "max_ft": 110.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     }
+    },
+    {
+     "label": {
+      "value": "5-192",
+      "source_id": "ngmdb:77555",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=802.94,2280.1,19.3,7.2",
+      "quote": "5-192",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+       "box": [
+        657,
+        400,
+        724,
+        425
+       ],
+       "dpi": 250,
+       "page_px_box": [
+        2788,
+        7917,
+        2855,
+        7942
+       ],
+       "pt_box": [
+        802.94,
+        2280.1,
+        822.24,
+        2287.3
+       ],
+       "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+      },
+      "text_match": true,
+      "note": "top of hole drawn about 2.5 ft above the profile; no land-surface elevation; first top is the land surface at the hole"
+     },
+     "observation": {
+      "value": "5-192",
+      "source_id": "ngmdb:77555",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "5-192",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "note": "hole label on the section matches this drill hole"
+     },
+     "depth_reference": {
+      "value": "elevation",
+      "source_id": "ngmdb:77555",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=803.81,2304,17.28,205.34",
+      "quote": "SEA LEVEL",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+       "box": [
+        660,
+        483,
+        720,
+        1196
+       ],
+       "dpi": 250,
+       "page_px_box": [
+        2791,
+        8000,
+        2851,
+        8713
+       ],
+       "pt_box": [
+        803.81,
+        2304.0,
+        821.09,
+        2509.34
+       ],
+       "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+      },
+      "text_match": true,
+      "note": "interval tops and bottoms read as elevations off the feet scale (sea level datum)"
+     },
+     "intervals": [
+      {
+       "unit": {
+        "value": "QPpas",
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=803.81,2304,17.28,140.26",
+        "quote": "QPpas",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+         "box": [
+          660,
+          483,
+          720,
+          970
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          2791,
+          8000,
+          2851,
+          8487
+         ],
+         "pt_box": [
+          803.81,
+          2304.0,
+          821.09,
+          2444.26
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true
+       },
+       "top": {
+        "value": 5,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=805.25,2301.12,14.4,5.76",
+        "quote": "5",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+         "box": [
+          665,
+          473,
+          715,
+          493
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          2796,
+          7990,
+          2846,
+          8010
+         ],
+         "pt_box": [
+          805.25,
+          2301.12,
+          819.65,
+          2306.88
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true,
+        "units": "ft",
+        "normalized": {
+         "min_ft": 5.0,
+         "max_ft": 5.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       },
+       "bottom": {
+        "value": -34,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=805.25,2441.38,14.4,5.76",
+        "quote": "-34",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+         "box": [
+          665,
+          960,
+          715,
+          980
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          2796,
+          8477,
+          2846,
+          8497
+         ],
+         "pt_box": [
+          805.25,
+          2441.38,
+          819.65,
+          2447.14
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "units": "ft",
+        "normalized": {
+         "min_ft": -34.0,
+         "max_ft": -34.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       }
+      },
+      {
+       "unit": {
+        "value": "QPjr",
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=803.81,2444.26,17.28,32.54",
+        "quote": "QPjr",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+         "box": [
+          660,
+          970,
+          720,
+          1083
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          2791,
+          8487,
+          2851,
+          8600
+         ],
+         "pt_box": [
+          803.81,
+          2444.26,
+          821.09,
+          2476.8
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true
+       },
+       "top": {
+        "value": -34,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=805.25,2441.38,14.4,5.76",
+        "quote": "-34",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+         "box": [
+          665,
+          960,
+          715,
+          980
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          2796,
+          8477,
+          2846,
+          8497
+         ],
+         "pt_box": [
+          805.25,
+          2441.38,
+          819.65,
+          2447.14
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "units": "ft",
+        "normalized": {
+         "min_ft": -34.0,
+         "max_ft": -34.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       },
+       "bottom": {
+        "value": -43,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=805.25,2473.92,14.4,5.76",
+        "quote": "-43",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+         "box": [
+          665,
+          1073,
+          715,
+          1093
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          2796,
+          8590,
+          2846,
+          8610
+         ],
+         "pt_box": [
+          805.25,
+          2473.92,
+          819.65,
+          2479.68
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "units": "ft",
+        "normalized": {
+         "min_ft": -43.0,
+         "max_ft": -43.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       }
+      },
+      {
+       "unit": {
+        "value": "NMd",
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=803.81,2476.8,17.28,32.54",
+        "quote": "NMd",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+         "box": [
+          660,
+          1083,
+          720,
+          1196
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          2791,
+          8600,
+          2851,
+          8713
+         ],
+         "pt_box": [
+          803.81,
+          2476.8,
+          821.09,
+          2509.34
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true
+       },
+       "top": {
+        "value": -43,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=805.25,2473.92,14.4,5.76",
+        "quote": "-43",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+         "box": [
+          665,
+          1073,
+          715,
+          1093
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          2796,
+          8590,
+          2846,
+          8610
+         ],
+         "pt_box": [
+          805.25,
+          2473.92,
+          819.65,
+          2479.68
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "units": "ft",
+        "normalized": {
+         "min_ft": -43.0,
+         "max_ft": -43.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       },
+       "bottom": {
+        "value": -52,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=805.25,2506.46,14.4,5.76",
+        "quote": "-52",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+         "box": [
+          665,
+          1186,
+          715,
+          1206
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          2796,
+          8703,
+          2846,
+          8723
+         ],
+         "pt_box": [
+          805.25,
+          2506.46,
+          819.65,
+          2512.22
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "units": "ft",
+        "normalized": {
+         "min_ft": -52.0,
+         "max_ft": -52.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       }
+      }
+     ]
+    },
+    {
+     "label": {
+      "value": "5-152",
+      "source_id": "ngmdb:77555",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=1118.88,2228.26,19.01,7.2",
+      "quote": "5-152",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+       "box": [
+        1754,
+        220,
+        1820,
+        245
+       ],
+       "dpi": 250,
+       "page_px_box": [
+        3885,
+        7737,
+        3951,
+        7762
+       ],
+       "pt_box": [
+        1118.88,
+        2228.26,
+        1137.89,
+        2235.46
+       ],
+       "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+      },
+      "text_match": true
+     },
+     "observation": {
+      "value": "5-152",
+      "source_id": "ngmdb:77555",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "5-152",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "note": "hole label on the section matches this drill hole"
+     },
+     "elevation": {
+      "value": 22,
+      "source_id": "ngmdb:77555",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=1121.76,2239.78,14.4,5.76",
+      "quote": "22",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+       "box": [
+        1764,
+        260,
+        1814,
+        280
+       ],
+       "dpi": 250,
+       "page_px_box": [
+        3895,
+        7777,
+        3945,
+        7797
+       ],
+       "pt_box": [
+        1121.76,
+        2239.78,
+        1136.16,
+        2245.54
+       ],
+       "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+      },
+      "text_match": true,
+      "units": "ft",
+      "normalized": {
+       "min_ft": 22.0,
+       "max_ft": 22.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "depth_reference": {
+      "value": "elevation",
+      "source_id": "ngmdb:77555",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=1120.32,2242.66,17.28,252.28",
+      "quote": "SEA LEVEL",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+       "box": [
+        1759,
+        270,
+        1819,
+        1146
+       ],
+       "dpi": 250,
+       "page_px_box": [
+        3890,
+        7787,
+        3950,
+        8663
+       ],
+       "pt_box": [
+        1120.32,
+        2242.66,
+        1137.6,
+        2494.94
+       ],
+       "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+      },
+      "text_match": true,
+      "note": "interval tops and bottoms read as elevations off the feet scale (sea level datum)"
+     },
+     "intervals": [
+      {
+       "unit": {
+        "value": "me",
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=1120.32,2242.66,17.28,7.2",
+        "quote": "me",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+         "box": [
+          1759,
+          270,
+          1819,
+          295
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          3890,
+          7787,
+          3950,
+          7812
+         ],
+         "pt_box": [
+          1120.32,
+          2242.66,
+          1137.6,
+          2249.86
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true
+       },
+       "top": {
+        "value": 22,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=1121.76,2239.78,14.4,5.76",
+        "quote": "22",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+         "box": [
+          1764,
+          260,
+          1814,
+          280
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          3895,
+          7777,
+          3945,
+          7797
+         ],
+         "pt_box": [
+          1121.76,
+          2239.78,
+          1136.16,
+          2245.54
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true,
+        "units": "ft",
+        "normalized": {
+         "min_ft": 22.0,
+         "max_ft": 22.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       },
+       "bottom": {
+        "value": 20,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=1121.76,2246.98,14.4,5.76",
+        "quote": "20",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+         "box": [
+          1764,
+          285,
+          1814,
+          305
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          3895,
+          7802,
+          3945,
+          7822
+         ],
+         "pt_box": [
+          1121.76,
+          2246.98,
+          1136.16,
+          2252.74
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true,
+        "units": "ft",
+        "normalized": {
+         "min_ft": 20.0,
+         "max_ft": 20.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       }
+      },
+      {
+       "unit": {
+        "value": "QPpae",
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=1120.32,2249.86,17.28,36",
+        "quote": "QPpae",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+         "box": [
+          1759,
+          295,
+          1819,
+          420
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          3890,
+          7812,
+          3950,
+          7937
+         ],
+         "pt_box": [
+          1120.32,
+          2249.86,
+          1137.6,
+          2285.86
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true
+       },
+       "top": {
+        "value": 20,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=1121.76,2246.98,14.4,5.76",
+        "quote": "20",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+         "box": [
+          1764,
+          285,
+          1814,
+          305
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          3895,
+          7802,
+          3945,
+          7822
+         ],
+         "pt_box": [
+          1121.76,
+          2246.98,
+          1136.16,
+          2252.74
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true,
+        "units": "ft",
+        "normalized": {
+         "min_ft": 20.0,
+         "max_ft": 20.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       },
+       "bottom": {
+        "value": 10,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=1121.76,2282.98,14.4,5.76",
+        "quote": "10",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+         "box": [
+          1764,
+          410,
+          1814,
+          430
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          3895,
+          7927,
+          3945,
+          7947
+         ],
+         "pt_box": [
+          1121.76,
+          2282.98,
+          1136.16,
+          2288.74
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true,
+        "units": "ft",
+        "normalized": {
+         "min_ft": 10.0,
+         "max_ft": 10.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       }
+      },
+      {
+       "unit": {
+        "value": "QPpas",
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=1120.32,2285.86,17.28,198.14",
+        "quote": "QPpas",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+         "box": [
+          1759,
+          420,
+          1819,
+          1108
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          3890,
+          7937,
+          3950,
+          8625
+         ],
+         "pt_box": [
+          1120.32,
+          2285.86,
+          1137.6,
+          2484.0
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true
+       },
+       "top": {
+        "value": 10,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=1121.76,2282.98,14.4,5.76",
+        "quote": "10",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+         "box": [
+          1764,
+          410,
+          1814,
+          430
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          3895,
+          7927,
+          3945,
+          7947
+         ],
+         "pt_box": [
+          1121.76,
+          2282.98,
+          1136.16,
+          2288.74
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true,
+        "units": "ft",
+        "normalized": {
+         "min_ft": 10.0,
+         "max_ft": 10.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       },
+       "bottom": {
+        "value": -45,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=1121.76,2481.12,14.4,5.76",
+        "quote": "-45",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+         "box": [
+          1764,
+          1098,
+          1814,
+          1118
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          3895,
+          8615,
+          3945,
+          8635
+         ],
+         "pt_box": [
+          1121.76,
+          2481.12,
+          1136.16,
+          2486.88
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "units": "ft",
+        "normalized": {
+         "min_ft": -45.0,
+         "max_ft": -45.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       }
+      },
+      {
+       "unit": {
+        "value": "NMd",
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=1120.32,2484,17.28,10.94",
+        "quote": "NMd",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+         "box": [
+          1759,
+          1108,
+          1819,
+          1146
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          3890,
+          8625,
+          3950,
+          8663
+         ],
+         "pt_box": [
+          1120.32,
+          2484.0,
+          1137.6,
+          2494.94
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true
+       },
+       "top": {
+        "value": -45,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=1121.76,2481.12,14.4,5.76",
+        "quote": "-45",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+         "box": [
+          1764,
+          1098,
+          1814,
+          1118
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          3895,
+          8615,
+          3945,
+          8635
+         ],
+         "pt_box": [
+          1121.76,
+          2481.12,
+          1136.16,
+          2486.88
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "units": "ft",
+        "normalized": {
+         "min_ft": -45.0,
+         "max_ft": -45.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       },
+       "bottom": {
+        "value": -48,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=1121.76,2492.06,14.4,5.76",
+        "quote": "-48",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c2",
+         "box": [
+          1764,
+          1136,
+          1814,
+          1156
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          3895,
+          8653,
+          3945,
+          8673
+         ],
+         "pt_box": [
+          1121.76,
+          2492.06,
+          1136.16,
+          2497.82
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "units": "ft",
+        "normalized": {
+         "min_ft": -48.0,
+         "max_ft": -48.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       }
+      }
+     ]
+    },
+    {
+     "label": {
+      "value": "5-186",
+      "source_id": "ngmdb:77555",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=1434.24,2248.13,19.3,7.2",
+      "quote": "5-186",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-250dpi-crop50_2165_2340_2565-r1c3",
+       "box": [
+        891,
+        289,
+        958,
+        314
+       ],
+       "dpi": 250,
+       "page_px_box": [
+        4980,
+        7806,
+        5047,
+        7831
+       ],
+       "pt_box": [
+        1434.24,
+        2248.13,
+        1453.54,
+        2255.33
+       ],
+       "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+      },
+      "text_match": true,
+      "note": "top of hole drawn about 2 ft above the profile; no land-surface elevation; first top is the land surface at the hole"
+     },
+     "observation": {
+      "value": "5-186",
+      "source_id": "ngmdb:77555",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "5-186",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "note": "hole label on the section matches this drill hole"
+     },
+     "depth_reference": {
+      "value": "elevation",
+      "source_id": "ngmdb:77555",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=1435.68,2267.71,17.28,209.09",
+      "quote": "SEA LEVEL",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-250dpi-crop50_2165_2340_2565-r1c3",
+       "box": [
+        896,
+        357,
+        956,
+        1083
+       ],
+       "dpi": 250,
+       "page_px_box": [
+        4985,
+        7874,
+        5045,
+        8600
+       ],
+       "pt_box": [
+        1435.68,
+        2267.71,
+        1452.96,
+        2476.8
+       ],
+       "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+      },
+      "text_match": true,
+      "note": "interval tops and bottoms read as elevations off the feet scale (sea level datum)"
+     },
+     "intervals": [
+      {
+       "unit": {
+        "value": "QPpas",
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=1435.68,2267.71,17.28,173.09",
+        "quote": "QPpas",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c3",
+         "box": [
+          896,
+          357,
+          956,
+          958
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          4985,
+          7874,
+          5045,
+          8475
+         ],
+         "pt_box": [
+          1435.68,
+          2267.71,
+          1452.96,
+          2440.8
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true
+       },
+       "top": {
+        "value": 15,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=1437.12,2264.83,14.4,5.76",
+        "quote": "15",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c3",
+         "box": [
+          901,
+          347,
+          951,
+          367
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          4990,
+          7864,
+          5040,
+          7884
+         ],
+         "pt_box": [
+          1437.12,
+          2264.83,
+          1451.52,
+          2270.59
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true,
+        "units": "ft",
+        "normalized": {
+         "min_ft": 15.0,
+         "max_ft": 15.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       },
+       "bottom": {
+        "value": -33,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=1437.12,2437.92,14.4,5.76",
+        "quote": "-33",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c3",
+         "box": [
+          901,
+          948,
+          951,
+          968
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          4990,
+          8465,
+          5040,
+          8485
+         ],
+         "pt_box": [
+          1437.12,
+          2437.92,
+          1451.52,
+          2443.68
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "units": "ft",
+        "normalized": {
+         "min_ft": -33.0,
+         "max_ft": -33.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       }
+      },
+      {
+       "unit": {
+        "value": "NMd",
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=1435.68,2440.8,17.28,36",
+        "quote": "NMd",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c3",
+         "box": [
+          896,
+          958,
+          956,
+          1083
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          4985,
+          8475,
+          5045,
+          8600
+         ],
+         "pt_box": [
+          1435.68,
+          2440.8,
+          1452.96,
+          2476.8
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true
+       },
+       "top": {
+        "value": -33,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=1437.12,2437.92,14.4,5.76",
+        "quote": "-33",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c3",
+         "box": [
+          901,
+          948,
+          951,
+          968
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          4990,
+          8465,
+          5040,
+          8485
+         ],
+         "pt_box": [
+          1437.12,
+          2437.92,
+          1451.52,
+          2443.68
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "units": "ft",
+        "normalized": {
+         "min_ft": -33.0,
+         "max_ft": -33.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       },
+       "bottom": {
+        "value": -43,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=1437.12,2473.92,14.4,5.76",
+        "quote": "-43",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c3",
+         "box": [
+          901,
+          1073,
+          951,
+          1093
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          4990,
+          8590,
+          5040,
+          8610
+         ],
+         "pt_box": [
+          1437.12,
+          2473.92,
+          1451.52,
+          2479.68
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "units": "ft",
+        "normalized": {
+         "min_ft": -43.0,
+         "max_ft": -43.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       }
+      }
+     ]
+    },
+    {
+     "label": {
+      "value": "5-194",
+      "source_id": "ngmdb:77555",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=2046.53,2272.61,19.01,6.91",
+      "quote": "5-194",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-250dpi-crop50_2165_2340_2565-r1c4",
+       "box": [
+        1059,
+        374,
+        1125,
+        398
+       ],
+       "dpi": 250,
+       "page_px_box": [
+        7106,
+        7891,
+        7172,
+        7915
+       ],
+       "pt_box": [
+        2046.53,
+        2272.61,
+        2065.54,
+        2279.52
+       ],
+       "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+      },
+      "text_match": true,
+      "note": "top of hole drawn about 3 ft below the profile; no land-surface elevation; QPsbe and upper QPsbem above the hole top not recorded"
+     },
+     "observation": {
+      "value": "5-194",
+      "source_id": "ngmdb:77555",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.68,
+      "inferred": true,
+      "locator": null,
+      "quote": "5-194",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree",
+      "note": "hole label on the section matches this drill hole"
+     },
+     "depth_reference": {
+      "value": "elevation",
+      "source_id": "ngmdb:77555",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=2047.97,2300.26,17.28,237.88",
+      "quote": "SEA LEVEL",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-250dpi-crop50_2165_2340_2565-r1c4",
+       "box": [
+        1064,
+        470,
+        1124,
+        1296
+       ],
+       "dpi": 250,
+       "page_px_box": [
+        7111,
+        7987,
+        7171,
+        8813
+       ],
+       "pt_box": [
+        2047.97,
+        2300.26,
+        2065.25,
+        2538.14
+       ],
+       "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+      },
+      "text_match": true,
+      "note": "interval tops and bottoms read as elevations off the feet scale (sea level datum)"
+     },
+     "intervals": [
+      {
+       "unit": {
+        "value": "QPsbem",
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=2047.97,2300.26,17.28,64.8",
+        "quote": "QPsbem",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c4",
+         "box": [
+          1064,
+          470,
+          1124,
+          695
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          7111,
+          7987,
+          7171,
+          8212
+         ],
+         "pt_box": [
+          2047.97,
+          2300.26,
+          2065.25,
+          2365.06
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true
+       },
+       "top": {
+        "value": 6,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=2049.41,2297.38,14.4,5.76",
+        "quote": "6",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c4",
+         "box": [
+          1069,
+          460,
+          1119,
+          480
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          7116,
+          7977,
+          7166,
+          7997
+         ],
+         "pt_box": [
+          2049.41,
+          2297.38,
+          2063.81,
+          2303.14
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true,
+        "units": "ft",
+        "normalized": {
+         "min_ft": 6.0,
+         "max_ft": 6.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       },
+       "bottom": {
+        "value": -12,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=2049.41,2362.18,14.4,5.76",
+        "quote": "-12",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c4",
+         "box": [
+          1069,
+          685,
+          1119,
+          705
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          7116,
+          8202,
+          7166,
+          8222
+         ],
+         "pt_box": [
+          2049.41,
+          2362.18,
+          2063.81,
+          2367.94
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "units": "ft",
+        "normalized": {
+         "min_ft": -12.0,
+         "max_ft": -12.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       }
+      },
+      {
+       "unit": {
+        "value": "QPpam",
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=2047.97,2365.06,17.28,68.54",
+        "quote": "QPpam",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c4",
+         "box": [
+          1064,
+          695,
+          1124,
+          933
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          7111,
+          8212,
+          7171,
+          8450
+         ],
+         "pt_box": [
+          2047.97,
+          2365.06,
+          2065.25,
+          2433.6
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true
+       },
+       "top": {
+        "value": -12,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=2049.41,2362.18,14.4,5.76",
+        "quote": "-12",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c4",
+         "box": [
+          1069,
+          685,
+          1119,
+          705
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          7116,
+          8202,
+          7166,
+          8222
+         ],
+         "pt_box": [
+          2049.41,
+          2362.18,
+          2063.81,
+          2367.94
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "units": "ft",
+        "normalized": {
+         "min_ft": -12.0,
+         "max_ft": -12.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       },
+       "bottom": {
+        "value": -31,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=2049.41,2430.72,14.4,5.76",
+        "quote": "-31",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c4",
+         "box": [
+          1069,
+          923,
+          1119,
+          943
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          7116,
+          8440,
+          7166,
+          8460
+         ],
+         "pt_box": [
+          2049.41,
+          2430.72,
+          2063.81,
+          2436.48
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "units": "ft",
+        "normalized": {
+         "min_ft": -31.0,
+         "max_ft": -31.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       }
+      },
+      {
+       "unit": {
+        "value": "QPpas",
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=2047.97,2433.6,17.28,64.8",
+        "quote": "QPpas",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c4",
+         "box": [
+          1064,
+          933,
+          1124,
+          1158
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          7111,
+          8450,
+          7171,
+          8675
+         ],
+         "pt_box": [
+          2047.97,
+          2433.6,
+          2065.25,
+          2498.4
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true
+       },
+       "top": {
+        "value": -31,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=2049.41,2430.72,14.4,5.76",
+        "quote": "-31",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c4",
+         "box": [
+          1069,
+          923,
+          1119,
+          943
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          7116,
+          8440,
+          7166,
+          8460
+         ],
+         "pt_box": [
+          2049.41,
+          2430.72,
+          2063.81,
+          2436.48
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "units": "ft",
+        "normalized": {
+         "min_ft": -31.0,
+         "max_ft": -31.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       },
+       "bottom": {
+        "value": -49,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=2049.41,2495.52,14.4,5.76",
+        "quote": "-49",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c4",
+         "box": [
+          1069,
+          1148,
+          1119,
+          1168
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          7116,
+          8665,
+          7166,
+          8685
+         ],
+         "pt_box": [
+          2049.41,
+          2495.52,
+          2063.81,
+          2501.28
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "units": "ft",
+        "normalized": {
+         "min_ft": -49.0,
+         "max_ft": -49.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       }
+      },
+      {
+       "unit": {
+        "value": "NMd",
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=2047.97,2498.4,17.28,39.74",
+        "quote": "NMd",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c4",
+         "box": [
+          1064,
+          1158,
+          1124,
+          1296
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          7111,
+          8675,
+          7171,
+          8813
+         ],
+         "pt_box": [
+          2047.97,
+          2498.4,
+          2065.25,
+          2538.14
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "text_match": true
+       },
+       "top": {
+        "value": -49,
+        "source_id": "ngmdb:77555",
+        "page": 1,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
+        "inferred": true,
+        "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=2049.41,2495.52,14.4,5.76",
+        "quote": "-49",
+        "quote_match": "image",
+        "text_method": "image",
+        "verification": "agree",
+        "image": {
+         "tile": "p1-250dpi-crop50_2165_2340_2565-r1c4",
+         "box": [
+          1069,
+          1148,
+          1119,
+          1168
+         ],
+         "dpi": 250,
+         "page_px_box": [
+          7116,
+          8665,
+          7166,
+          8685
+         ],
+         "pt_box": [
+          2049.41,
+          2495.52,
+          2063.81,
+          2501.28
+         ],
+         "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+        },
+        "units": "ft",
+        "normalized": {
+         "min_ft": -49.0,
+         "max_ft": -49.0,
+         "unit": "ft",
+         "approximate": false
+        }
+       }
+      }
+     ],
+     "total_depth": {
+      "value": "80 feet",
+      "source_id": "ngmdb:77555",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2701&pid=77555#page=1&viewrect=2018.3,2510.5,29.09,27.07",
+      "quote": "80 feet",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-250dpi-crop50_2165_2340_2565-r1c4",
+       "box": [
+        961,
+        1200,
+        1062,
+        1294
+       ],
+       "dpi": 250,
+       "page_px_box": [
+        7008,
+        8717,
+        7109,
+        8811
+       ],
+       "pt_box": [
+        2018.3,
+        2510.5,
+        2047.39,
+        2537.57
+       ],
+       "pdf_sha256": "6a832175af338afc8a7b9a41df15c87bea1cb68d0b7b77cbf9bf3e1408274cd0"
+      },
+      "text_match": true,
+      "note": "'Drillhole goes to 80 feet' printed beside the break symbol on this hole; hole continues below the section base",
+      "normalized": {
+       "min_ft": 80.0,
+       "max_ft": 80.0,
+       "unit": "feet",
+       "approximate": false
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "water_tests": [],
+ "rock_tests": []
+}
