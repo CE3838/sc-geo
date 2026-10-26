@@ -239,34 +239,6 @@
    }
   },
   {
-   "source_id": "ngmdb:99139",
-   "path": "units[2].thickness",
-   "problem": "verify_unclear",
-   "value": "1 to 60 feet",
-   "page": 1,
-   "quote": "Thickness | to 60 feet.",
-   "added_at": "2026-10-06T11:02:10+00:00",
-   "verify": {
-    "verdict": "unclear",
-    "value": "1 to 60 feet",
-    "note": "digit OCR'd as '|' ('Thickness | to 60 feet.'); check against the map image"
-   }
-  },
-  {
-   "source_id": "ngmdb:99139",
-   "path": "units[3].thickness",
-   "problem": "verify_unclear",
-   "value": "1 to 40 feet",
-   "page": 1,
-   "quote": "Thickness | to 40 feet.",
-   "added_at": "2026-10-06T11:02:10+00:00",
-   "verify": {
-    "verdict": "unclear",
-    "value": "1 to 40 feet",
-    "note": "digit OCR'd as '|' ('Thickness | to 40 feet.'); check against the map image"
-   }
-  },
-  {
    "source_id": "ngmdb:99142",
    "path": "units[2].thickness",
    "problem": "verify_unclear",
@@ -2618,6 +2590,32 @@
    "verify": {
     "verdict": "unclear",
     "note": "OCR LOYR 8/6 read as 10YR 8/6"
+   }
+  },
+  {
+   "source_id": "ngmdb:99139",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 60 feet",
+   "page": 1,
+   "quote": "Thickness | to 60 feet.",
+   "added_at": "2026-10-26T11:19:02+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:99139",
+   "path": "units[3].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "Thickness | to 40 feet.",
+   "added_at": "2026-10-26T11:19:02+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
    }
   }
  ]
