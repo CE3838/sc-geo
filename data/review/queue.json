@@ -432,20 +432,6 @@
    }
   },
   {
-   "source_id": "ngmdb:103396",
-   "path": "references[1].citation",
-   "problem": "verify_disagree",
-   "value": "Kaczorowski, R. T., 1976, Origin of Carolina bays, in Hayes, M. O., and Kana, T. W. (eds.), Terrigenous clastic depositional environments, some modern examples, a field course sponsored by the American Association of Petroleum Geologists: Columbia, Coastal Research Division, Department of Geology, University of South Carolina, Technical Report 11-CRD, p. II-16 - II-36.",
-   "page": 1,
-   "quote": "Kaczorowski, R. T., 1976. Origin of Carolina bays, in Hayes, M. O., and Kana,",
-   "added_at": "2026-10-06T01:49:48+00:00",
-   "verify": {
-    "verdict": "disagree",
-    "value": "Kaczorowski, R. T., 1976, Origin of Carolina bays, in Hayes, M. O., and Kana, T. W. (eds.), Terrigenous clastic depositional environments, some modern examples, a field course sponsored by the American Association of Petroleum Geologists: Columbia, Coastal Research Division, Department of Geology, University of South Carolina, Technical Report 11-CRD, p. II-16 - I-36.",
-    "note": "page reads 'p. II-16 - I-36.'; the first pass changed it to II-36"
-   }
-  },
-  {
    "source_id": "ngmdb:103895",
    "path": "structures[0].certainty",
    "problem": "verify_unclear",
@@ -2491,6 +2477,19 @@
    "page": 1,
    "quote": "Thickness | to 15 feet.",
    "added_at": "2026-10-25T23:43:51+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:103396",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "waters. Thickness | to 40 feet.",
+   "added_at": "2026-10-26T10:59:03+00:00",
    "verify": {
     "verdict": "unclear",
     "note": "OCR prints | for the first digit"
