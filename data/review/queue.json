@@ -239,34 +239,6 @@
    }
   },
   {
-   "source_id": "ngmdb:99142",
-   "path": "units[2].thickness",
-   "problem": "verify_unclear",
-   "value": "1 to 50 feet",
-   "page": 1,
-   "quote": "Thickness | to 50 feet.",
-   "added_at": "2026-10-06T22:57:56+00:00",
-   "verify": {
-    "verdict": "unclear",
-    "value": "1 to 50 feet",
-    "note": "digit OCR'd as '|' ('Thickness | to 50 feet.'); check against the map image"
-   }
-  },
-  {
-   "source_id": "ngmdb:99142",
-   "path": "units[8].description",
-   "problem": "verify_unclear",
-   "value": "upper part 1 to 10 feet thick",
-   "page": 1,
-   "quote": "The upper part is | to 10 feet thick.",
-   "added_at": "2026-10-06T22:57:56+00:00",
-   "verify": {
-    "verdict": "unclear",
-    "value": "upper part 1 to 10 feet thick",
-    "note": "digit OCR'd as '|' ('The upper part is | to 10 feet thick.'); check against the map image"
-   }
-  },
-  {
    "source_id": "ngmdb:99143",
    "path": "units[2].thickness",
    "problem": "verify_unclear",
@@ -2574,6 +2546,32 @@
    "page": 1,
    "quote": "as well as Carolina bays that formed more recently. Thickness | to 20 feet.",
    "added_at": "2026-10-26T11:22:59+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for a digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:99142",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 50 feet",
+   "page": 1,
+   "quote": "Thickness | to 50 feet.",
+   "added_at": "2026-10-26T11:25:01+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for a digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:99142",
+   "path": "units[8].description",
+   "problem": "verify_unclear",
+   "value": "upper part 1 to 10 feet thick",
+   "page": 1,
+   "quote": "The upper part is | to 10 feet thick.",
+   "added_at": "2026-10-26T11:25:01+00:00",
    "verify": {
     "verdict": "unclear",
     "note": "OCR prints | for a digit"
