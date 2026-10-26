@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 198,
+ "count": 196,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -357,45 +357,6 @@
    "verify": {
     "verdict": "unclear",
     "note": "text layer reads 'Thickness is | to 15 feet.'; value read as '1 to 15 feet' with '|' taken as '1'; check the digit against the map image"
-   }
-  },
-  {
-   "source_id": "ngmdb:99140",
-   "path": "units[2].thickness",
-   "problem": "verify_unclear",
-   "value": "1 to 60 feet",
-   "page": 1,
-   "quote": "deposited by colian processes. Thickness | to 60 feet.",
-   "added_at": "2026-10-06T22:59:54+00:00",
-   "verify": {
-    "verdict": "unclear",
-    "note": "text layer reads 'deposited by colian processes. Thickness | to 60 feet.'; value read as '1 to 60 feet' with '|' taken as '1'; check the digit against the map image"
-   }
-  },
-  {
-   "source_id": "ngmdb:99140",
-   "path": "units[3].thickness",
-   "problem": "verify_unclear",
-   "value": "1 to 40 feet",
-   "page": 1,
-   "quote": "salinity, and rising tides importing high salinity waters. Thickness | to 40 feet.",
-   "added_at": "2026-10-06T22:59:54+00:00",
-   "verify": {
-    "verdict": "unclear",
-    "note": "text layer reads 'salinity, and rising tides importing high salinity waters. Thickness | to 40 feet.'; value read as '1 to 40 feet' with '|' taken as '1'; check the digit against the map image"
-   }
-  },
-  {
-   "source_id": "ngmdb:99140",
-   "path": "units[5].thickness",
-   "problem": "verify_unclear",
-   "value": "1 to 6 feet",
-   "page": 1,
-   "quote": "as well as Carolina bays that formed more recently. Thickness | to 6 feet.",
-   "added_at": "2026-10-06T22:59:54+00:00",
-   "verify": {
-    "verdict": "unclear",
-    "note": "text layer reads 'as well as Carolina bays that formed more recently. Thickness | to 6 feet.'; value read as '1 to 6 feet' with '|' taken as '1'; check the digit against the map image"
    }
   },
   {
@@ -871,32 +832,6 @@
    "verify": {
     "verdict": "unclear",
     "note": "text layer reads 'aPmt'; read as 'QPmt' by correcting OCR characters; check against the map image"
-   }
-  },
-  {
-   "source_id": "ngmdb:99140",
-   "path": "units[14].map_symbol",
-   "problem": "verify_unclear",
-   "value": "QPphr",
-   "page": 1,
-   "quote": "@Pphr Flood plain deposits",
-   "added_at": "2026-10-07T10:59:56+00:00",
-   "verify": {
-    "verdict": "unclear",
-    "note": "text layer reads '@Pphr'; read as 'QPphr' by correcting OCR characters; check against the map image"
-   }
-  },
-  {
-   "source_id": "ngmdb:99140",
-   "path": "units[18].map_symbol",
-   "problem": "verify_unclear",
-   "value": "QPwr",
-   "page": 1,
-   "quote": "[ aPwr | Fluvial deposits",
-   "added_at": "2026-10-07T10:59:56+00:00",
-   "verify": {
-    "verdict": "unclear",
-    "note": "text layer reads 'aPwr'; read as 'QPwr' by correcting OCR characters; check against the map image"
    }
   },
   {
@@ -2613,6 +2548,45 @@
    "page": 1,
    "quote": "Thickness | to 40 feet.",
    "added_at": "2026-10-26T11:19:02+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:99140",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 60 feet",
+   "page": 1,
+   "quote": "deposited by colian processes. Thickness | to 60 feet.",
+   "added_at": "2026-10-26T11:21:02+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:99140",
+   "path": "units[3].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "salinity, and rising tides importing high salinity waters. Thickness | to 40 feet.",
+   "added_at": "2026-10-26T11:21:02+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:99140",
+   "path": "units[5].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 6 feet",
+   "page": 1,
+   "quote": "as well as Carolina bays that formed more recently. Thickness | to 6 feet.",
+   "added_at": "2026-10-26T11:21:02+00:00",
    "verify": {
     "verdict": "unclear",
     "note": "OCR prints | for the first digit"
