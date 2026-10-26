@@ -8,8 +8,8 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-07T10:59:40+00:00",
- "updated_at": "2026-10-07T10:59:40+00:00",
- "reader": "Claude, Claude Code reading session 2026-10-07",
+ "updated_at": "2026-10-26T11:34:35+00:00",
+ "reader": "Claude, re-read session 2026-10-25 (subsurface fields)",
  "packets": [
   "packet-01"
  ],
@@ -18,7 +18,7 @@
  ],
  "blocks_total": 1,
  "complete": true,
- "notes": "Single OCR sheet: seismicity map (earthquake epicenters, May 1974 - December 1977) with a hypocenter-depth cross section; not a geologic map. The OCR is nearly all noise: only fragments of the explanation (earthquake epicenters, size varies according to magnitude; site information of seismograph stations in south-central South Carolina) and garbled station names and dates (e.g. 'Rowman', 'Caweew Swanp', 'Caw Castle Cr.', 'Hares Bluff'; '5/20/14', '10/23/77') are legible. No values could be recorded reliably, so the result is empty.\nSUBSURFACE: the cross section A-A' of hypocenter depths named in the catalog title is not legible in the OCR (page 1); no epicenter coordinates, depths or magnitudes readable.",
+ "notes": "Single OCR sheet: seismicity map (earthquake epicenters, May 1974 - December 1977) with a hypocenter-depth cross section; not a geologic map. The OCR is nearly all noise: only fragments of the explanation (earthquake epicenters, size varies according to magnitude; site information of seismograph stations in south-central South Carolina) and garbled station names and dates (e.g. 'Rowman', 'Caweew Swanp', 'Caw Castle Cr.', 'Hares Bluff'; '5/20/14', '10/23/77') are legible. No values could be recorded reliably, so the result is empty.\nSUBSURFACE: the cross section A-A' of hypocenter depths named in the catalog title is not legible in the OCR (page 1); no epicenter coordinates, depths or magnitudes readable.\nRe-read of page 1 for subsurface fields. Single OCR sheet: seismicity map (earthquake epicenters, May 1974 - December 1977) with a cross section showing hypocenter depths projected into plane A-A'; not a geologic map. The OCR is nearly all noise, so the section's labels were read from a page-image tile: end points A (32.97, 80.66) and A' (33.22, 80.35) as printed, distance in km (0 to 40), depth in km (0 to 15). The section draws only earthquake hypocenters (circles sized by magnitude), with no drill holes, contacts, faults or units, and the schema has no place for hypocenters, so none is recorded. The seismograph-station table (codes, names, coordinates, elevations, dates) is small print and not geologic; not recorded. No units, borings or references on the sheet.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/of/1978/0353/plate-1.pdf",
@@ -29,10 +29,14 @@
   }
  ],
  "summary": {
-  "stored": 0,
-  "quote_match": {},
-  "verification": {},
-  "inferred": 0
+  "stored": 7,
+  "quote_match": {
+   "image": 7
+  },
+  "verification": {
+   "agree": 7
+  },
+  "inferred": 1
  },
  "ingests": [
   {
@@ -52,6 +56,38 @@
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
+  },
+  {
+   "at": "2026-10-26T11:34:35+00:00",
+   "packets": [
+    "reread-01"
+   ],
+   "reader": "Claude, re-read session 2026-10-25 (subsurface fields)",
+   "values": 7,
+   "stored": 7,
+   "exact": 0,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 7,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 7,
+   "image_not_verified": 0,
+   "review_items": 0,
+   "reread": {
+    "packets": [
+     "reread-01"
+    ],
+    "pages": [
+     1
+    ],
+    "reason": "subsurface fields",
+    "queue_ids": [
+     "ngmdb:14697:subsurface_fields:p1"
+    ]
+   }
   }
  ],
  "units": [],
@@ -61,5 +97,270 @@
  "references": [],
  "surfaces": [],
  "contours": [],
- "sections": []
+ "sections": [
+  {
+   "name": {
+    "value": "A-A'",
+    "source_id": "ngmdb:14697",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
+    "inferred": true,
+    "locator": "https://pubs.usgs.gov/of/1978/0353/plate-1.pdf#page=1&viewrect=1662.5,1467.5,615,16.5",
+    "quote": "=A A'=",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1660_1455_2280_1810-r1c1",
+     "box": [
+      5,
+      25,
+      1235,
+      58
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3325,
+      2935,
+      4555,
+      2968
+     ],
+     "pt_box": [
+      1662.5,
+      1467.5,
+      2277.5,
+      1484.0
+     ],
+     "pdf_sha256": "ff3bb56aa66816efd2f6f17cdf8d872c7d9569db22e4bf2e172ff446bd7d6ae6"
+    },
+    "note": "section end labels A and A' printed above the hypocenter cross section"
+   },
+   "start": {
+    "label": {
+     "value": "A",
+     "source_id": "ngmdb:14697",
+     "page": 1,
+     "extraction_method": "llm-image",
+     "confidence": 0.6,
+     "inferred": false,
+     "locator": "https://pubs.usgs.gov/of/1978/0353/plate-1.pdf#page=1&viewrect=1790,1470,20,12.5",
+     "quote": "=A",
+     "quote_match": "image",
+     "text_method": "image",
+     "verification": "agree",
+     "image": {
+      "tile": "p1-144dpi-crop1660_1455_2280_1810-r1c1",
+      "box": [
+       260,
+       30,
+       300,
+       55
+      ],
+      "dpi": 144,
+      "page_px_box": [
+       3580,
+       2940,
+       3620,
+       2965
+      ],
+      "pt_box": [
+       1790.0,
+       1470.0,
+       1810.0,
+       1482.5
+      ],
+      "pdf_sha256": "ff3bb56aa66816efd2f6f17cdf8d872c7d9569db22e4bf2e172ff446bd7d6ae6"
+     }
+    },
+    "coordinates": {
+     "value": "(32.97, 80.66)",
+     "source_id": "ngmdb:14697",
+     "page": 1,
+     "extraction_method": "llm-image",
+     "confidence": 0.6,
+     "inferred": false,
+     "locator": "https://pubs.usgs.gov/of/1978/0353/plate-1.pdf#page=1&viewrect=1662.5,1470,122.5,12.5",
+     "quote": "(32.97, 80.66) =A",
+     "quote_match": "image",
+     "text_method": "image",
+     "verification": "agree",
+     "image": {
+      "tile": "p1-144dpi-crop1660_1455_2280_1810-r1c1",
+      "box": [
+       5,
+       30,
+       250,
+       55
+      ],
+      "dpi": 144,
+      "page_px_box": [
+       3325,
+       2940,
+       3570,
+       2965
+      ],
+      "pt_box": [
+       1662.5,
+       1470.0,
+       1785.0,
+       1482.5
+      ],
+      "pdf_sha256": "ff3bb56aa66816efd2f6f17cdf8d872c7d9569db22e4bf2e172ff446bd7d6ae6"
+     },
+     "note": "latitude, longitude as printed (no hemisphere letters)"
+    }
+   },
+   "end": {
+    "label": {
+     "value": "A'",
+     "source_id": "ngmdb:14697",
+     "page": 1,
+     "extraction_method": "llm-image",
+     "confidence": 0.6,
+     "inferred": false,
+     "locator": "https://pubs.usgs.gov/of/1978/0353/plate-1.pdf#page=1&viewrect=2122.5,1467.5,20,15",
+     "quote": "A'=",
+     "quote_match": "image",
+     "text_method": "image",
+     "verification": "agree",
+     "image": {
+      "tile": "p1-144dpi-crop1660_1455_2280_1810-r1c1",
+      "box": [
+       925,
+       25,
+       965,
+       55
+      ],
+      "dpi": 144,
+      "page_px_box": [
+       4245,
+       2935,
+       4285,
+       2965
+      ],
+      "pt_box": [
+       2122.5,
+       1467.5,
+       2142.5,
+       1482.5
+      ],
+      "pdf_sha256": "ff3bb56aa66816efd2f6f17cdf8d872c7d9569db22e4bf2e172ff446bd7d6ae6"
+     }
+    },
+    "coordinates": {
+     "value": "(33.22, 80.35)",
+     "source_id": "ngmdb:14697",
+     "page": 1,
+     "extraction_method": "llm-image",
+     "confidence": 0.6,
+     "inferred": false,
+     "locator": "https://pubs.usgs.gov/of/1978/0353/plate-1.pdf#page=1&viewrect=2147.5,1470,130,12.5",
+     "quote": "(33.22, 80.35)",
+     "quote_match": "image",
+     "text_method": "image",
+     "verification": "agree",
+     "image": {
+      "tile": "p1-144dpi-crop1660_1455_2280_1810-r1c1",
+      "box": [
+       975,
+       30,
+       1235,
+       55
+      ],
+      "dpi": 144,
+      "page_px_box": [
+       4295,
+       2940,
+       4555,
+       2965
+      ],
+      "pt_box": [
+       2147.5,
+       1470.0,
+       2277.5,
+       1482.5
+      ],
+      "pdf_sha256": "ff3bb56aa66816efd2f6f17cdf8d872c7d9569db22e4bf2e172ff446bd7d6ae6"
+     },
+     "note": "latitude, longitude as printed (no hemisphere letters)"
+    }
+   },
+   "distance_units": {
+    "value": "km",
+    "source_id": "ngmdb:14697",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://pubs.usgs.gov/of/1978/0353/plate-1.pdf#page=1&viewrect=1930,1700,90,12.5",
+    "quote": "Distance ( km )",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1660_1455_2280_1810-r1c1",
+     "box": [
+      540,
+      490,
+      720,
+      515
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3860,
+      3400,
+      4040,
+      3425
+     ],
+     "pt_box": [
+      1930.0,
+      1700.0,
+      2020.0,
+      1712.5
+     ],
+     "pdf_sha256": "ff3bb56aa66816efd2f6f17cdf8d872c7d9569db22e4bf2e172ff446bd7d6ae6"
+    }
+   },
+   "elevation_units": {
+    "value": "km (depth)",
+    "source_id": "ngmdb:14697",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://pubs.usgs.gov/of/1978/0353/plate-1.pdf#page=1&viewrect=1675,1540,16,80",
+    "quote": "Depth ( km )",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1660_1455_2280_1810-r1c1",
+     "box": [
+      30,
+      170,
+      62,
+      330
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3350,
+      3080,
+      3382,
+      3240
+     ],
+     "pt_box": [
+      1675.0,
+      1540.0,
+      1691.0,
+      1620.0
+     ],
+     "pdf_sha256": "ff3bb56aa66816efd2f6f17cdf8d872c7d9569db22e4bf2e172ff446bd7d6ae6"
+    },
+    "note": "vertical axis is depth below the surface, 0.0 to 15.0 km"
+   }
+  }
+ ],
+ "water_tests": [],
+ "rock_tests": []
 }

@@ -8,8 +8,8 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-07T11:00:23+00:00",
- "updated_at": "2026-10-07T11:00:23+00:00",
- "reader": "Claude, scheduled Claude Code session 2026-10-07",
+ "updated_at": "2026-10-26T11:40:46+00:00",
+ "reader": "Claude, re-read session 2026-10-25 (subsurface fields)",
  "packets": [
   "packet-01"
  ],
@@ -18,7 +18,7 @@
  ],
  "blocks_total": 1,
  "complete": true,
- "notes": "Single compilation poster read from OCR (page 1), compiled at 1:75,000 from twenty-two 1:24,000 geologic maps; some units were merged and minor moved earth and water bodies omitted. Most map symbols are garbled in OCR; only QPwtb (also in the correlation chart) was recorded, flagged inferred. The sinkhole unit's name is garbled ('(ere ork holes') and was not recorded. Unit names misread by OCR ('bacson', 'Sanree') are recorded with the evident name, flagged inferred. Ranks for formations and members are taken from the names (inferred). The Macbeth and Bethera scarp elevations are garbled in the table and were not recorded. Shoreline heights above modern sea level for each Pleistocene/Pliocene unit are in depositional_environment. Legend-only features (roads, boundaries) were not recorded. No '|'-digit values.\nSUBSURFACE: a schematic diagram of portions of the Coastal Plain gives scarp toe elevations (230, 140, 90, 70, 57, 35 ft) and unit upper elevations (<140, <70, <57, <35 ft) without locations or distances (page 1); upper elevations of the River terrace (80 ft), Halfway Swamp (125 ft) and Low Falls Landing (120 ft) fluvial units are statements without a place, kept in unit descriptions. No drill holes, structure contours or measured cross sections. Datum: elevations are given relative to modern sea level; no named datum (page 1).",
+ "notes": "Single compilation poster read from OCR (page 1), compiled at 1:75,000 from twenty-two 1:24,000 geologic maps; some units were merged and minor moved earth and water bodies omitted. Most map symbols are garbled in OCR; only QPwtb (also in the correlation chart) was recorded, flagged inferred. The sinkhole unit's name is garbled ('(ere ork holes') and was not recorded. Unit names misread by OCR ('bacson', 'Sanree') are recorded with the evident name, flagged inferred. Ranks for formations and members are taken from the names (inferred). The Macbeth and Bethera scarp elevations are garbled in the table and were not recorded. Shoreline heights above modern sea level for each Pleistocene/Pliocene unit are in depositional_environment. Legend-only features (roads, boundaries) were not recorded. No '|'-digit values.\nSUBSURFACE: a schematic diagram of portions of the Coastal Plain gives scarp toe elevations (230, 140, 90, 70, 57, 35 ft) and unit upper elevations (<140, <70, <57, <35 ft) without locations or distances (page 1); upper elevations of the River terrace (80 ft), Halfway Swamp (125 ft) and Low Falls Landing (120 ft) fluvial units are statements without a place, kept in unit descriptions. No drill holes, structure contours or measured cross sections. Datum: elevations are given relative to modern sea level; no named datum (page 1).\nRe-read of page 1 for subsurface fields (single compilation poster, 1:75,000, from twenty-two 1:24,000 maps, read from OCR). Units as before (OCR-misread names 'bacson', 'Sanree' recorded with the evident name, inferred); map symbols, garbled in the OCR, read from the legend boxes on page-image tiles (the sinkhole unit Qsh is not recorded as its name is garbled). Stated upper elevations of the River terrace (80 ft), Halfway Swamp (125 ft) and Low Falls Landing (120 ft) fluvial units are recorded as unit tops without a location (boundary inferred; elevations relative to modern sea level, no named datum). Shoreline heights above modern sea level stay in depositional_environment. Whole-page image checked: the schematic diagram of the Coastal Plain shows scarp toe elevations and unit elevation limits without locations, distances, holes or contacts, so no section is recorded; scarps stay as structures; Macbeth and Bethera scarp elevations garbled. No drill holes or structure contours. Roads and boundaries not recorded.",
  "files": [
   {
    "url": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
@@ -29,14 +29,15 @@
   }
  ],
  "summary": {
-  "stored": 137,
+  "stored": 184,
   "quote_match": {
-   "exact": 137
+   "exact": 151,
+   "image": 33
   },
   "verification": {
-   "agree": 21
+   "agree": 71
   },
-  "inferred": 19
+  "inferred": 24
  },
  "ingests": [
   {
@@ -56,6 +57,2336 @@
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
+  },
+  {
+   "at": "2026-10-26T11:40:46+00:00",
+   "packets": [
+    "reread-01"
+   ],
+   "reader": "Claude, re-read session 2026-10-25 (subsurface fields)",
+   "values": 184,
+   "stored": 184,
+   "exact": 151,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 71,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 33,
+   "image_not_verified": 0,
+   "review_items": 0,
+   "reread": {
+    "packets": [
+     "reread-01"
+    ],
+    "pages": [
+     1
+    ],
+    "reason": "subsurface fields",
+    "queue_ids": [
+     "ngmdb:95426:subsurface_fields:p1"
+    ]
+   }
+  }
+ ],
+ "history": [
+  {
+   "at": "2026-10-26T11:40:46+00:00",
+   "reason": "subsurface fields",
+   "packets": [
+    "reread-01"
+   ],
+   "pages": [
+    1
+   ],
+   "replaced": [
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Moved earth",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Moved earth - Bulk earthen material",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "description": {
+       "value": "Bulk earthen material (fill) moved by humans",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Moved earth - Bulk earthen material",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Freshwater marsh and tributary deposits",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Freshwater marsh and tributary de-",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Holocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "posits (Holocene) - Sediments de-",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.0117,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Sediments deposited in areas of low elevation, or shallow slope, often saturated, typically high in organic materials",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "high in organic materials.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Carolina bay deposits",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Carolina bay deposits (Pleistocene",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Pleistocene to Holocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Carolina bay deposits (Pleistocene\n\nto Holocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Mixed sands and clays from eolian and lacustrian deposits, shaped by prevailing winds; commonly a rim of eolian sands on the side opposite the prevailing wind direction",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "to Holocene) — Mixed sands and\nclays from eolian and lacustrian deposits,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Quaternary river flood plains",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Quaternary river flood plains",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Pleistocene to Holocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "(Pleistocene to Holocene) — Mixed\nfluvial sediments, undifferentiated, in river",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Mixed fluvial sediments, undifferentiated, in river flood plains such as the Congaree, Santee, and Wateree rivers",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.765,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "fluvial sediments, undifferentiated, in river",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Eolian sands",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Eolian sands (Pleistocene to Holo-",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Pleistocene to Holocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Eolian sands (Pleistocene to Holo-\ncene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Eolian sands with composition related to source material",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "cene) — Eolian sands with composi-",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Sandhills lakebed deposits",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Sandhills lakebed deposits",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Pleistocene to Holocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "(Pleistocene to Holocene) — Sands\nand clays in lakebeds",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Sands and clays in lakebeds or savannahs not related to Carolina Bays",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "and clays in lakebeds or savannahs not",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Packs Landing beds (informal), or alluvium of ancient Santee River terrace",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Packs Landing beds (informal), or",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "packs landing",
+        "in_geolex": false,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "Pleistocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "race (Pleistocene) — Mixed coarse fluvial sedi-",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Mixed coarse fluvial sediments with inter-layered silts and clays; radiocarbon age of ~ 25,000 years",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "carbon age of ~ 25,000 years.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "rank": {
+       "value": "beds (informal)",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Packs Landing beds (informal), or",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "River terrace",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "River terrace (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Pleistocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "River terrace (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Mixed fluvial sediments with little to-no-silt or clay and an upper elevation of 80 feet",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.765,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "or clay and an upper elevation of 80 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Princess Anne estuarine or marine deposits",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Princess Anne estuarine or marine",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Pleistocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.765,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "deposits (Pleistocene) — Fossiliferous",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Fossiliferous mixed sands, silts, and clays overlain by poorly sorted, fine to very coarse Quartz and Phosphorite sands",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "mixed sands, silts, and clays overlain by",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "related to a shoreline 17 feet above modern sea level",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Phosphorite sands related to a shoreline 17\n\nfeet above modern sea level.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Pamlico Muds",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Pamlico Muds (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Pleistocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.765,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Pamlico Muds (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Estuarine muds with some very fine Quartz and Phosphorite sands",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "rine muds with some very fine Quartz",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "related to a shoreline 22 feet above modern sea level",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "22 feet above modern sea level.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Ten Mile Hill beds",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Ten Mile Hill beds (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Ten Mile Hill",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "Pleistocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Ten Mile Hill beds (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Undifferentiated coastal/marine deposits, muds, sands, and pebbles",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "posits, muds, sands, and pebbles, related to a",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "related to a shoreline 35 feet above modern sea level",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "shoreline 35 feet above mocern sea level.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "rank": {
+       "value": "beds",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Ten Mile Hill beds (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Ladson Formation",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.52,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "bacson Formation (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "OCR text 'bacson Formation'; the Ladson Muds, Sands and Eolian units follow",
+       "normalized": {
+        "canonical": "Ladson",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "Pleistocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "bacson Formation (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Fining upward sequence of Quartz pebbles with poorly sorted Quartz sands overlain by fine to medium Quartz sand with minor amounts of other minerals",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Fining upward sequence of Quartz",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "related to a shoreline 57 feet above modern sea level",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.765,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "line 57 feet above modern sea level.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.52,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "bacson Formation (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "rank taken from the unit name"
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Ladson Muds",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Ladson Muds (Pleis‘ocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Pleistocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Ladson Muds (Pleis‘ocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Estuarine muds with minor amounts of very fine Quartz and Phosphorite sands",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.765,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "rine muds with minor amounts of",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      },
+      "depositional_environment": {
+       "value": "related to a shoreline 57 feet above modern sea level",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "related to a shoreline 57 feet above modern\nsea level.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Ladson Sands",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.765,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Ladson Sands (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "normalized": {
+        "canonical": "Ladson",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "Pleistocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.765,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Ladson Sands (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Barrier island deposits of fine Quartz and Phosphatic sands with some medium to coarse Quartz sands, shell fragments, and other minerals",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Phosphatic sands with some medium to",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "related to a shoreline 57 feet above modern sea level",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "other minerals related to a shoreline 57 feet\nabove modern sea level.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Ladson Eolian",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Ladson Eolian (Pleistocene or Holo-",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Pleistocene or Holocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Ladson Eolian (Pleistocene or Holo-\n\ncene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Eolian sands sourced from deposits related to a shoreline 57 feet above modern sea level",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "cene) — Eolian sands sourced from",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Penholoway Formation",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Penholoway Formation(Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Penholoway",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "Pleistocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Penholoway Formation(Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Fining upward sequence of Quartz pebbles with poorly sorted Quartz sands overlain by muddy, poorly sorted Quartz sands, overlain by fine to medium Quartz sand with minor amounts of other minerals",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "lain by muddy, poorly sorted Quartz sands,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "related to a shoreline 70 feet above modern sea level",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "shoreline 70 feet above mocern sea level.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.52,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Penholoway Formation(Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "rank taken from the unit name"
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Penholoway Sands",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Penholoway Sands (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Penholoway",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "Pleistocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Penholoway Sands (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Barrier island deposits of fine Quartz and Phosphatic sands with some medium to coarse Quartz sands, shell fragments, and other minerals",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "and Phosphatic sands with some medium to",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "related to a shoreline 70 feet above modern sea level",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "other minerals related to a shoreline 70 feet\nabove modern sea level.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Wicomico Formation - Toney Bay Member",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.765,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Wicomico Formation - Toney Bay",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "normalized": {
+        "canonical": "Wicomico",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "Pleistocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Member (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Fining upward sequence of Quartz pebbles with poorly sorted Quartz sands overlain by muddy, poorly sorted Quartz sands, overlain by fine to medium Quartz sand with minor amounts of other minerals",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "muddy, poorly sorted Quartz sands, overlain",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "related to a shoreline 90 feet above modern sea level",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "line 90 feet above modern sea level.\n\nQPwtb",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "map_symbol": {
+       "value": "QPwtb",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.52,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "line 90 feet above modern sea level.\n\nQPwtb",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "printed directly below this description; also 'Wicomico QPwtb' in the correlation chart"
+      },
+      "rank": {
+       "value": "Member",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.52,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Wicomico Formation - Toney Bay",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "rank taken from the unit name"
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Wicomico Formation — Sandridge Member",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.765,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Wicomico Formation — Sandridge",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "normalized": {
+        "canonical": "wicomico formation sandridge",
+        "in_geolex": false,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "Pleistocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Member (Pleistocene) — Barrier island",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Barrier island deposits of fine Quartz and Phosphatic sands with some medium to coarse Quartz sands, shell fragments, and other minerals",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.765,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "deposits of fine Quartz and Phosphatic sands",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      },
+      "depositional_environment": {
+       "value": "related to a shoreline 90 feet above modern sea level",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "a shoreline 90 feet above modern sea level.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "rank": {
+       "value": "Member",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.52,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Wicomico Formation — Sandridge",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "rank taken from the unit name"
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Wicomico terrace - Dean Swamp Member",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Wicomico terrace - Dean Swamp",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Dean Swamp",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "Pleistocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.765,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Member (Pleistocene) — Silt and clay",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Silt and clay matrix-supported fine to medium Quartz sand",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "matrix-supported fine to medium Quartz sand",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "related to a shoreline 90 feet above modern sea level",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "related to a shoreline 90 feet above modern\nsea level.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "rank": {
+       "value": "Member",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.52,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Wicomico terrace - Dean Swamp",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "rank taken from the unit name"
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Wicomico Eolian deposits",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Wicomico Eolian deposits",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Pleistocene or Holocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "(Pleistocene or Holocene) — Eolian",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Eolian sands sourced from deposits related to a shoreline 90 feet above modern sea level",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "sands sourced from deposits related to a",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Wicomico Sand bar",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Wicomico Sand bar (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Wicomico",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "Pleistocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Wicomico Sand bar (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Mixed fluvial sands and gravels",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Mixed fluvial sands and gravels",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "related to a shoreline 90 feet above modern sea level",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "related to a shoreline 90 feet above modern\nsea level.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Marietta unit (informal)",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Marietta unit (informal) (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "marietta",
+        "in_geolex": false,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "Pleistocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Marietta unit (informal) (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Quartz sand to granules or pebbles, Quartz-pebble conglomerate, mixed Quartzose sand and clay, and minor clay",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "pebbles, Quartz-pebble conglomerate,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "related to a shoreline 140 feet above modern sea level",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "clay related to a shoreline 140 feet above\nmodern sea level.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "rank": {
+       "value": "informal unit",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Marietta unit (informal) (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Fluvial terrace deposits of Halfway Swamp",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Fluvial terrace deposits of Halfway",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Pliocene to Pleistocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Swamp (Pliocene to Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 5.333,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Mixed fluvial sediments with an upper elevation of 125 feet",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Mixed fluvial sediments with an upper eleva-\ntion of 125 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Fluvial sediments of Low Falls Landing",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Fluvial sediments of Low Falls Land-",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Pliocene to Pleistocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "ing [Pliocene to Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 5.333,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Mixed fluvial sediments with an upper elevation of 120 feet",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "fluvial sedimants with an upper elevation of\n120 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Duplin Formation",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Duplin Formation (Pliocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Duplin",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "Pliocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Duplin Formation (Pliocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 2.58,
+        "older_ma": 5.333,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Mixed shallow marine Quartzose sands and pebbles, calcareous sands, marine shells and shell fragments, and muds; Upper (Tdu) and Lower (Tdl) sections are identified east of Lake Marion",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "sea level. Upper (Tdu) and Lower (Tdl) sec-\ntions are identified east of Lake Marion.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "related to a shoreline 190 feet above modern sea level",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "related to a shoreline 190 feet above modern\nsea level.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.52,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Duplin Formation (Pliocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "rank taken from the unit name"
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Orangeburg District bed",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Orangeburg District bed (upper",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Orangeburg District",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "upper middle Eocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Orangeburg District bed (upper\nmiddle Eocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 37.71,
+        "older_ma": 47.8,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Variable mix of marine Quartz sands, sandy clays, clays, and pebbles with scattered silica-replaced shells",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "marine Quanz sands, sandy clays, clays, and",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "rank": {
+       "value": "bed",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Orangeburg District bed (upper",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Santee Limestone",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.52,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Sanree Limestone (middie Eocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "OCR text 'Sanree Limestone (middie Eocene)'",
+       "normalized": {
+        "canonical": "Santee",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "middle Eocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Sanree Limestone (middie Eocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 37.71,
+        "older_ma": 47.8,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Microfossiliferous lime mudstone to slightly shelly wackestone and moderately to well indurated, shelly, lime wackestone to packstone with minor Quartz, Glauconite, and Phosphorite sands",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Microfossiliferous lime mudstone to",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.52,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Sanree Limestone (middie Eocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "rank taken from the unit name"
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Warley Hill Formation",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Warley Hill Formation (middle",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Warley Hill",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "middle Eocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Warley Hill Formation (middle\nEocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 37.71,
+        "older_ma": 47.8,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Clayey, fine to medium glauconite sand and fine to coarse quartz sand with scattered shells",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Eocene) - Clayey, fine to medium",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.52,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Warley Hill Formation (middle",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "rank taken from the unit name"
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Congaree Formation",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Congaree Formation (middle to",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Congaree",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "middle to lower Eocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Congaree Formation (middle to\n“S)=5 lower Eocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 47.8,
+        "older_ma": 56.0,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Well-sorted, very fine to fine quartz sand and poorly to moderately sorted, medium quartz sand to quartz granules; minor light-green very fine glauconite sand, interstitial clay, kaolin clasts, local clay laminae and rare silica-cemented sediments",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "fine to fine quartz sand and pcorly to moder-",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.52,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Congaree Formation (middle to",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "rank taken from the unit name"
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Williamsburg Formation",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Williamsburg Formation (upper Pa-",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Williamsburg",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "upper Paleocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Williamsburg Formation (upper Pa-",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 56.0,
+        "older_ma": 59.333333333333336,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Clay matrix supported very fine to fine Quartz sand and lignite with locally calcareous sediments, calcite cemented beds, and shells",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "very fine to fine Quartz sand and lignite with",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.52,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Williamsburg Formation (upper Pa-",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "rank taken from the unit name"
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Lang Syne Formation",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Lang Syne Formation (upper Paleo-",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Lang Syne",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "upper Paleocene",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Lang Syne Formation (upper Paleo-",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 56.0,
+        "older_ma": 59.333333333333336,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Silty, micaceous, clay matrix supported, very fine to fine Quartz sand with lignite to clayey, glauconitic, pebbly Quartz sand and Quartz granules; and lime mud sediment",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "supported, very fine to fine Quartz sand with",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.612,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Lang Syne Formation (upper Paleo-",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "note": "rank taken from the unit name"
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Sawdust Landing Formation",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Sawdust Landing Formation (upper",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Sawdust Landing",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "upper Cretaceous",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Cre-aceous)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 66.0,
+        "older_ma": 100.5,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Medium Quartz sand to Quartz granules, with scattered feldspar grains and muscovite flakes; locally very fine to fine dark heavy minerals and white clay",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "to Quartz granules; with scattered feldspar",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.52,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Sawdust Landing Formation (upper",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "rank taken from the unit name"
+      }
+     }
+    },
+    {
+     "section": "structures",
+     "record": {
+      "kind": "other",
+      "name": {
+       "value": "Orangeburg Scarp",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.612,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Orangeburg 230 ft",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true,
+       "note": "scarp name from the 'Approximate scarp name / elevation in feet' table"
+      },
+      "description": {
+       "value": "approximate elevation 230 ft",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.765,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Orangeburg 230 ft",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      }
+     }
+    },
+    {
+     "section": "structures",
+     "record": {
+      "kind": "other",
+      "name": {
+       "value": "Surry Scarp",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.612,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Surry 90 ft",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true,
+       "note": "scarp name from the 'Approximate scarp name / elevation in feet' table"
+      },
+      "description": {
+       "value": "approximate elevation 90 ft",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.765,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Surry 90 ft",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      }
+     }
+    },
+    {
+     "section": "structures",
+     "record": {
+      "kind": "other",
+      "name": {
+       "value": "Summerville Scarp",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.612,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Summerville 70 ft",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true,
+       "note": "scarp name from the 'Approximate scarp name / elevation in feet' table"
+      },
+      "description": {
+       "value": "approximate elevation 70 ft",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.765,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Summerville 70 ft",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      }
+     }
+    },
+    {
+     "section": "structures",
+     "record": {
+      "kind": "other",
+      "name": {
+       "value": "Dorchester Scarp",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.612,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Dorchester 70 ft",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true,
+       "note": "scarp name from the 'Approximate scarp name / elevation in feet' table"
+      },
+      "description": {
+       "value": "approximate elevation 70 ft",
+       "source_id": "ngmdb:95426",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.765,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+       "quote": "Dorchester 70 ft",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      }
+     }
+    }
+   ]
   }
  ],
  "units": [
@@ -85,6 +2416,44 @@
     "quote_match": "exact",
     "text_method": "ocr",
     "verification": null
+   },
+   "map_symbol": {
+    "value": "me",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=3635,899.5,60,30",
+    "quote": "me",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3630_840_3700_2760-r1c1",
+     "box": [
+      10,
+      119,
+      130,
+      179
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      7270,
+      1799,
+      7390,
+      1859
+     ],
+     "pt_box": [
+      3635.0,
+      899.5,
+      3695.0,
+      929.5
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -132,6 +2501,44 @@
     "quote_match": "exact",
     "text_method": "ocr",
     "verification": null
+   },
+   "map_symbol": {
+    "value": "QHfw",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=3635,970.5,60,30.5",
+    "quote": "QHfw",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3630_840_3700_2760-r1c1",
+     "box": [
+      10,
+      261,
+      130,
+      322
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      7270,
+      1941,
+      7390,
+      2002
+     ],
+     "pt_box": [
+      3635.0,
+      970.5,
+      3695.0,
+      1001.0
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -179,6 +2586,44 @@
     "quote_match": "exact",
     "text_method": "ocr",
     "verification": null
+   },
+   "map_symbol": {
+    "value": "Qcb",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=3635,1076,60,29.5",
+    "quote": "Qcb",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3630_840_3700_2760-r1c1",
+     "box": [
+      10,
+      472,
+      130,
+      531
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      7270,
+      2152,
+      7390,
+      2211
+     ],
+     "pt_box": [
+      3635.0,
+      1076.0,
+      3695.0,
+      1105.5
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -219,13 +2664,51 @@
     "source_id": "ngmdb:95426",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.765,
+    "confidence": 0.65,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
     "quote": "fluvial sediments, undifferentiated, in river",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree"
+    "verification": null
+   },
+   "map_symbol": {
+    "value": "Qaf",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=3635,1216.5,60,28.5",
+    "quote": "Qaf",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3630_840_3700_2760-r1c1",
+     "box": [
+      10,
+      753,
+      130,
+      810
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      7270,
+      2433,
+      7390,
+      2490
+     ],
+     "pt_box": [
+      3635.0,
+      1216.5,
+      3695.0,
+      1245.0
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -273,6 +2756,44 @@
     "quote_match": "exact",
     "text_method": "ocr",
     "verification": null
+   },
+   "map_symbol": {
+    "value": "Qe",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=3635,1321.5,60,28",
+    "quote": "Qe",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3630_840_3700_2760-r1c1",
+     "box": [
+      10,
+      963,
+      130,
+      1019
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      7270,
+      2643,
+      7390,
+      2699
+     ],
+     "pt_box": [
+      3635.0,
+      1321.5,
+      3695.0,
+      1349.5
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -320,6 +2841,43 @@
     "quote_match": "exact",
     "text_method": "ocr",
     "verification": null
+   },
+   "map_symbol": {
+    "value": "Qslk",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=3635,1485,60,30",
+    "quote": "Qslk",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3630_840_3700_2760-r1c1",
+     "box": [
+      10,
+      1290,
+      130,
+      1350
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      7270,
+      2970,
+      7390,
+      3030
+     ],
+     "pt_box": [
+      3635.0,
+      1485.0,
+      3695.0,
+      1515.0
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -328,13 +2886,13 @@
     "source_id": "ngmdb:95426",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.65,
+    "confidence": 0.765,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
     "quote": "Packs Landing beds (informal), or",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
+    "verification": "agree",
     "normalized": {
      "canonical": "packs landing",
      "in_geolex": false,
@@ -365,13 +2923,13 @@
     "source_id": "ngmdb:95426",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.65,
+    "confidence": 0.765,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
     "quote": "carbon age of ~ 25,000 years.",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null
+    "verification": "agree"
    },
    "rank": {
     "value": "beds (informal)",
@@ -385,6 +2943,44 @@
     "quote_match": "exact",
     "text_method": "ocr",
     "verification": null
+   },
+   "map_symbol": {
+    "value": "Qpl",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=3635,1583,60,28.5",
+    "quote": "Qpl",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3630_840_3700_2760-r1c1",
+     "box": [
+      10,
+      1486,
+      130,
+      1543
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      7270,
+      3166,
+      7390,
+      3223
+     ],
+     "pt_box": [
+      3635.0,
+      1583.0,
+      3695.0,
+      1611.5
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -406,13 +3002,13 @@
     "source_id": "ngmdb:95426",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.65,
+    "confidence": 0.765,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
     "quote": "River terrace (Pleistocene)",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
+    "verification": "agree",
     "normalized": {
      "younger_ma": 0.0117,
      "older_ma": 2.58,
@@ -425,13 +3021,51 @@
     "source_id": "ngmdb:95426",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.765,
+    "confidence": 0.65,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
     "quote": "or clay and an upper elevation of 80 feet.",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree"
+    "verification": null
+   },
+   "map_symbol": {
+    "value": "Qrt",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=3635,1680,60,30",
+    "quote": "Qrt",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3630_840_3700_2760-r1c1",
+     "box": [
+      10,
+      1680,
+      130,
+      1740
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      7270,
+      3360,
+      7390,
+      3420
+     ],
+     "pt_box": [
+      3635.0,
+      1680.0,
+      3695.0,
+      1710.0
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -453,13 +3087,13 @@
     "source_id": "ngmdb:95426",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.765,
+    "confidence": 0.65,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
     "quote": "deposits (Pleistocene) — Fossiliferous",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree",
+    "verification": null,
     "normalized": {
      "younger_ma": 0.0117,
      "older_ma": 2.58,
@@ -492,6 +3126,44 @@
     "quote_match": "exact",
     "text_method": "ocr",
     "verification": null
+   },
+   "map_symbol": {
+    "value": "QPpam",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=3635,1759.5,60,28.5",
+    "quote": "QPpam",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3630_840_3700_2760-r1c1",
+     "box": [
+      10,
+      1839,
+      130,
+      1896
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      7270,
+      3519,
+      7390,
+      3576
+     ],
+     "pt_box": [
+      3635.0,
+      1759.5,
+      3695.0,
+      1788.0
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -513,13 +3185,13 @@
     "source_id": "ngmdb:95426",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.765,
+    "confidence": 0.65,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
     "quote": "Pamlico Muds (Pleistocene)",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree",
+    "verification": null,
     "normalized": {
      "younger_ma": 0.0117,
      "older_ma": 2.58,
@@ -545,13 +3217,51 @@
     "source_id": "ngmdb:95426",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.65,
+    "confidence": 0.765,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
     "quote": "22 feet above modern sea level.",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null
+    "verification": "agree"
+   },
+   "map_symbol": {
+    "value": "QPpm",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=3635,1882,60,28.5",
+    "quote": "QPpm",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3630_840_3700_2760-r2c1",
+     "box": [
+      10,
+      224,
+      130,
+      281
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      7270,
+      3764,
+      7390,
+      3821
+     ],
+     "pt_box": [
+      3635.0,
+      1882.0,
+      3695.0,
+      1910.5
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -597,13 +3307,13 @@
     "source_id": "ngmdb:95426",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.65,
+    "confidence": 0.765,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
     "quote": "posits, muds, sands, and pebbles, related to a",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null
+    "verification": "agree"
    },
    "depositional_environment": {
     "value": "related to a shoreline 35 feet above modern sea level",
@@ -623,13 +3333,51 @@
     "source_id": "ngmdb:95426",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.65,
+    "confidence": 0.765,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
     "quote": "Ten Mile Hill beds (Pleistocene)",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null
+    "verification": "agree"
+   },
+   "map_symbol": {
+    "value": "QPtmh",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=3635,1968.5,60,29",
+    "quote": "QPtmh",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3630_840_3700_2760-r2c1",
+     "box": [
+      10,
+      397,
+      130,
+      455
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      7270,
+      3937,
+      7390,
+      3995
+     ],
+     "pt_box": [
+      3635.0,
+      1968.5,
+      3695.0,
+      1997.5
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -689,13 +3437,13 @@
     "source_id": "ngmdb:95426",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.765,
+    "confidence": 0.65,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
     "quote": "line 57 feet above modern sea level.",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree"
+    "verification": null
    },
    "rank": {
     "value": "Formation",
@@ -710,6 +3458,43 @@
     "text_method": "ocr",
     "verification": null,
     "note": "rank taken from the unit name"
+   },
+   "map_symbol": {
+    "value": "QPld",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=3635,2054.5,60,30",
+    "quote": "QPld",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3630_840_3700_2760-r2c1",
+     "box": [
+      10,
+      569,
+      130,
+      629
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      7270,
+      4109,
+      7390,
+      4169
+     ],
+     "pt_box": [
+      3635.0,
+      2054.5,
+      3695.0,
+      2084.5
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -750,13 +3535,13 @@
     "source_id": "ngmdb:95426",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.765,
+    "confidence": 0.65,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
     "quote": "rine muds with minor amounts of",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree"
+    "verification": null
    },
    "depositional_environment": {
     "value": "related to a shoreline 57 feet above modern sea level",
@@ -770,6 +3555,44 @@
     "quote_match": "exact",
     "text_method": "ocr",
     "verification": null
+   },
+   "map_symbol": {
+    "value": "QPldm",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=3635,2177.5,60,28.5",
+    "quote": "QPldm",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3630_840_3700_2760-r2c1",
+     "box": [
+      10,
+      815,
+      130,
+      872
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      7270,
+      4355,
+      7390,
+      4412
+     ],
+     "pt_box": [
+      3635.0,
+      2177.5,
+      3695.0,
+      2206.0
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -778,13 +3601,13 @@
     "source_id": "ngmdb:95426",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.765,
+    "confidence": 0.65,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
     "quote": "Ladson Sands (Pleistocene)",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree",
+    "verification": null,
     "normalized": {
      "canonical": "Ladson",
      "in_geolex": true,
@@ -796,13 +3619,13 @@
     "source_id": "ngmdb:95426",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.765,
+    "confidence": 0.65,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
     "quote": "Ladson Sands (Pleistocene)",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree",
+    "verification": null,
     "normalized": {
      "younger_ma": 0.0117,
      "older_ma": 2.58,
@@ -828,13 +3651,50 @@
     "source_id": "ngmdb:95426",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.65,
+    "confidence": 0.765,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
     "quote": "other minerals related to a shoreline 57 feet\nabove modern sea level.",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null
+    "verification": "agree"
+   },
+   "map_symbol": {
+    "value": "QPlds",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=3635,2283.5,60,28",
+    "quote": "QPlds",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3630_840_3700_2760-r2c1",
+     "box": [
+      10,
+      1027,
+      130,
+      1083
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      7270,
+      4567,
+      7390,
+      4623
+     ],
+     "pt_box": [
+      3635.0,
+      2283.5,
+      3695.0,
+      2311.5
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -882,6 +3742,44 @@
     "quote_match": "exact",
     "text_method": "ocr",
     "verification": null
+   },
+   "map_symbol": {
+    "value": "QPlde",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=3635,2382.5,60,37.5",
+    "quote": "QPlde",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3630_840_3700_2760-r2c1",
+     "box": [
+      10,
+      1225,
+      130,
+      1300
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      7270,
+      4765,
+      7390,
+      4840
+     ],
+     "pt_box": [
+      3635.0,
+      2382.5,
+      3695.0,
+      2420.0
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -890,13 +3788,13 @@
     "source_id": "ngmdb:95426",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.65,
+    "confidence": 0.765,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
     "quote": "Penholoway Formation(Pleistocene)",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
+    "verification": "agree",
     "normalized": {
      "canonical": "Penholoway",
      "in_geolex": true,
@@ -927,13 +3825,13 @@
     "source_id": "ngmdb:95426",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.65,
+    "confidence": 0.765,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
     "quote": "lain by muddy, poorly sorted Quartz sands,",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null
+    "verification": "agree"
    },
    "depositional_environment": {
     "value": "related to a shoreline 70 feet above modern sea level",
@@ -961,6 +3859,43 @@
     "text_method": "ocr",
     "verification": null,
     "note": "rank taken from the unit name"
+   },
+   "map_symbol": {
+    "value": "QPph",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=3635,2482.5,60,32.5",
+    "quote": "QPph",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3630_840_3700_2760-r2c1",
+     "box": [
+      10,
+      1425,
+      130,
+      1490
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      7270,
+      4965,
+      7390,
+      5030
+     ],
+     "pt_box": [
+      3635.0,
+      2482.5,
+      3695.0,
+      2515.0
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -969,13 +3904,13 @@
     "source_id": "ngmdb:95426",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.65,
+    "confidence": 0.765,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
     "quote": "Penholoway Sands (Pleistocene)",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
+    "verification": "agree",
     "normalized": {
      "canonical": "Penholoway",
      "in_geolex": true,
@@ -1026,6 +3961,43 @@
     "quote_match": "exact",
     "text_method": "ocr",
     "verification": null
+   },
+   "map_symbol": {
+    "value": "QPphs",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=3635,2633.5,60,28.5",
+    "quote": "QPphs",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3630_840_3700_2760-r2c1",
+     "box": [
+      10,
+      1727,
+      130,
+      1784
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      7270,
+      5267,
+      7390,
+      5324
+     ],
+     "pt_box": [
+      3635.0,
+      2633.5,
+      3695.0,
+      2662.0
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -1034,13 +4006,13 @@
     "source_id": "ngmdb:95426",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.765,
+    "confidence": 0.65,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
     "quote": "Wicomico Formation - Toney Bay",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree",
+    "verification": null,
     "normalized": {
      "canonical": "Wicomico",
      "in_geolex": true,
@@ -1096,15 +4068,39 @@
     "value": "QPwtb",
     "source_id": "ngmdb:95426",
     "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.52,
-    "inferred": true,
-    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
-    "quote": "line 90 feet above modern sea level.\n\nQPwtb",
-    "quote_match": "exact",
-    "text_method": "ocr",
-    "verification": null,
-    "note": "printed directly below this description; also 'Wicomico QPwtb' in the correlation chart"
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=4000,848.5,60,30",
+    "quote": "QPwtb",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3995_840_4065_2700-r1c1",
+     "box": [
+      10,
+      17,
+      130,
+      77
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      8000,
+      1697,
+      8120,
+      1757
+     ],
+     "pt_box": [
+      4000.0,
+      848.5,
+      4060.0,
+      878.5
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    },
    "rank": {
     "value": "Member",
@@ -1127,13 +4123,13 @@
     "source_id": "ngmdb:95426",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.765,
+    "confidence": 0.65,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
     "quote": "Wicomico Formation — Sandridge",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree",
+    "verification": null,
     "normalized": {
      "canonical": "wicomico formation sandridge",
      "in_geolex": false,
@@ -1164,13 +4160,13 @@
     "source_id": "ngmdb:95426",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.765,
+    "confidence": 0.65,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
     "quote": "deposits of fine Quartz and Phosphatic sands",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree"
+    "verification": null
    },
    "depositional_environment": {
     "value": "related to a shoreline 90 feet above modern sea level",
@@ -1198,6 +4194,43 @@
     "text_method": "ocr",
     "verification": null,
     "note": "rank taken from the unit name"
+   },
+   "map_symbol": {
+    "value": "QPwsr",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=4000,1006.5,60,28.5",
+    "quote": "QPwsr",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3995_840_4065_2700-r1c1",
+     "box": [
+      10,
+      333,
+      130,
+      390
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      8000,
+      2013,
+      8120,
+      2070
+     ],
+     "pt_box": [
+      4000.0,
+      1006.5,
+      4060.0,
+      1035.0
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -1224,13 +4257,13 @@
     "source_id": "ngmdb:95426",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.765,
+    "confidence": 0.65,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
     "quote": "Member (Pleistocene) — Silt and clay",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree",
+    "verification": null,
     "normalized": {
      "younger_ma": 0.0117,
      "older_ma": 2.58,
@@ -1277,6 +4310,43 @@
     "text_method": "ocr",
     "verification": null,
     "note": "rank taken from the unit name"
+   },
+   "map_symbol": {
+    "value": "QPwds",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=4000,1127.5,60,30.5",
+    "quote": "QPwds",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3995_840_4065_2700-r1c1",
+     "box": [
+      10,
+      575,
+      130,
+      636
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      8000,
+      2255,
+      8120,
+      2316
+     ],
+     "pt_box": [
+      4000.0,
+      1127.5,
+      4060.0,
+      1158.0
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -1324,6 +4394,43 @@
     "quote_match": "exact",
     "text_method": "ocr",
     "verification": null
+   },
+   "map_symbol": {
+    "value": "QPwe",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=4000,1222.5,60,32.5",
+    "quote": "QPwe",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3995_840_4065_2700-r1c1",
+     "box": [
+      10,
+      765,
+      130,
+      830
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      8000,
+      2445,
+      8120,
+      2510
+     ],
+     "pt_box": [
+      4000.0,
+      1222.5,
+      4060.0,
+      1255.0
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -1389,6 +4496,43 @@
     "quote_match": "exact",
     "text_method": "ocr",
     "verification": null
+   },
+   "map_symbol": {
+    "value": "QPwsb",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=4000,1321.5,60,29.5",
+    "quote": "QPwsb",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3995_840_4065_2700-r1c1",
+     "box": [
+      10,
+      963,
+      130,
+      1022
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      8000,
+      2643,
+      8120,
+      2702
+     ],
+     "pt_box": [
+      4000.0,
+      1321.5,
+      4060.0,
+      1351.0
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -1467,6 +4611,44 @@
     "quote_match": "exact",
     "text_method": "ocr",
     "verification": null
+   },
+   "map_symbol": {
+    "value": "QPm",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=4000,1408,60,29.5",
+    "quote": "QPm",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3995_840_4065_2700-r1c1",
+     "box": [
+      10,
+      1136,
+      130,
+      1195
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      8000,
+      2816,
+      8120,
+      2875
+     ],
+     "pt_box": [
+      4000.0,
+      1408.0,
+      4060.0,
+      1437.5
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -1514,6 +4696,44 @@
     "quote_match": "exact",
     "text_method": "ocr",
     "verification": null
+   },
+   "map_symbol": {
+    "value": "Ths",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=4000,1531.5,60,28.5",
+    "quote": "Ths",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3995_840_4065_2700-r1c1",
+     "box": [
+      10,
+      1383,
+      130,
+      1440
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      8000,
+      3063,
+      8120,
+      3120
+     ],
+     "pt_box": [
+      4000.0,
+      1531.5,
+      4060.0,
+      1560.0
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -1554,13 +4774,50 @@
     "source_id": "ngmdb:95426",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.65,
+    "confidence": 0.765,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
     "quote": "fluvial sedimants with an upper elevation of\n120 feet.",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null
+    "verification": "agree"
+   },
+   "map_symbol": {
+    "value": "Tlf",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=4000,1618.5,60,29",
+    "quote": "Tlf",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3995_840_4065_2700-r1c1",
+     "box": [
+      10,
+      1557,
+      130,
+      1615
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      8000,
+      3237,
+      8120,
+      3295
+     ],
+     "pt_box": [
+      4000.0,
+      1618.5,
+      4060.0,
+      1647.5
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -1632,14 +4889,52 @@
     "source_id": "ngmdb:95426",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.52,
+    "confidence": 0.612,
     "inferred": true,
     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
     "quote": "Duplin Formation (Pliocene)",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
+    "verification": "agree",
     "note": "rank taken from the unit name"
+   },
+   "map_symbol": {
+    "value": "Td",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=4000,1707.5,60,47.5",
+    "quote": "Td",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3995_840_4065_2700-r1c1",
+     "box": [
+      10,
+      1735,
+      130,
+      1830
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      8000,
+      3415,
+      8120,
+      3510
+     ],
+     "pt_box": [
+      4000.0,
+      1707.5,
+      4060.0,
+      1755.0
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -1698,13 +4993,51 @@
     "source_id": "ngmdb:95426",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.65,
+    "confidence": 0.765,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
     "quote": "Orangeburg District bed (upper",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null
+    "verification": "agree"
+   },
+   "map_symbol": {
+    "value": "Todb",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=4000,1863.5,60,29.5",
+    "quote": "Todb",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3995_840_4065_2700-r2c1",
+     "box": [
+      10,
+      247,
+      130,
+      306
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      8000,
+      3727,
+      8120,
+      3786
+     ],
+     "pt_box": [
+      4000.0,
+      1863.5,
+      4060.0,
+      1893.0
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -1772,6 +5105,43 @@
     "text_method": "ocr",
     "verification": null,
     "note": "rank taken from the unit name"
+   },
+   "map_symbol": {
+    "value": "Ts",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=4000,2062.5,60,32.5",
+    "quote": "Ts",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3995_840_4065_2700-r2c1",
+     "box": [
+      10,
+      645,
+      130,
+      710
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      8000,
+      4125,
+      8120,
+      4190
+     ],
+     "pt_box": [
+      4000.0,
+      2062.5,
+      4060.0,
+      2095.0
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -1838,6 +5208,44 @@
     "text_method": "ocr",
     "verification": null,
     "note": "rank taken from the unit name"
+   },
+   "map_symbol": {
+    "value": "Twh",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=4000,2161,60,29",
+    "quote": "Twh",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3995_840_4065_2700-r2c1",
+     "box": [
+      10,
+      842,
+      130,
+      900
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      8000,
+      4322,
+      8120,
+      4380
+     ],
+     "pt_box": [
+      4000.0,
+      2161.0,
+      4060.0,
+      2190.0
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -1904,6 +5312,43 @@
     "text_method": "ocr",
     "verification": null,
     "note": "rank taken from the unit name"
+   },
+   "map_symbol": {
+    "value": "Tc",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=4000,2317,60,30.5",
+    "quote": "Tc",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3995_840_4065_2700-r2c1",
+     "box": [
+      10,
+      1154,
+      130,
+      1215
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      8000,
+      4634,
+      8120,
+      4695
+     ],
+     "pt_box": [
+      4000.0,
+      2317.0,
+      4060.0,
+      2347.5
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -1930,13 +5375,13 @@
     "source_id": "ngmdb:95426",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.65,
+    "confidence": 0.765,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
     "quote": "Williamsburg Formation (upper Pa-",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
+    "verification": "agree",
     "normalized": {
      "younger_ma": 56.0,
      "older_ma": 59.333333333333336,
@@ -1970,6 +5415,44 @@
     "text_method": "ocr",
     "verification": null,
     "note": "rank taken from the unit name"
+   },
+   "map_symbol": {
+    "value": "Twm",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=4000,2424.5,60,28.5",
+    "quote": "Twm",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3995_840_4065_2700-r2c1",
+     "box": [
+      10,
+      1369,
+      130,
+      1426
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      8000,
+      4849,
+      8120,
+      4906
+     ],
+     "pt_box": [
+      4000.0,
+      2424.5,
+      4060.0,
+      2453.0
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -2036,6 +5519,43 @@
     "text_method": "ocr",
     "verification": "agree",
     "note": "rank taken from the unit name"
+   },
+   "map_symbol": {
+    "value": "Tls",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=4000,2546,60,29.5",
+    "quote": "Tls",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3995_840_4065_2700-r2c1",
+     "box": [
+      10,
+      1612,
+      130,
+      1671
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      8000,
+      5092,
+      8120,
+      5151
+     ],
+     "pt_box": [
+      4000.0,
+      2546.0,
+      4060.0,
+      2575.5
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   },
   {
@@ -2102,6 +5622,43 @@
     "text_method": "ocr",
     "verification": null,
     "note": "rank taken from the unit name"
+   },
+   "map_symbol": {
+    "value": "Ksl",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1#page=1&viewrect=4000,2622.5,60,32.5",
+    "quote": "Ksl",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop3995_840_4065_2700-r2c1",
+     "box": [
+      10,
+      1765,
+      130,
+      1830
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      8000,
+      5245,
+      8120,
+      5310
+     ],
+     "pt_box": [
+      4000.0,
+      2622.5,
+      4060.0,
+      2655.0
+     ],
+     "pdf_sha256": "9c6629dd78608def16df8d2d20adea089b399139dc9cc5bf1b9917d348636a08"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled in the OCR text)"
    }
   }
  ],
@@ -2238,7 +5795,304 @@
  ],
  "groundwater": [],
  "references": [],
- "surfaces": [],
+ "surfaces": [
+  {
+   "surface": {
+    "value": "top of River terrace",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+    "quote": "or clay and an upper elevation of 80 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "stated upper elevation of the unit, no location given"
+   },
+   "unit": {
+    "value": "River terrace",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+    "quote": "River terrace (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "boundary": {
+    "value": "top",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+    "quote": "or clay and an upper elevation of 80 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "'upper elevation' read as the top of the unit"
+   },
+   "elevation": {
+    "value": "80 feet",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+    "quote": "or clay and an upper elevation of 80 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "units": "ft",
+    "normalized": {
+     "min_ft": 80.0,
+     "max_ft": 80.0,
+     "unit": "feet",
+     "approximate": false
+    },
+    "navd88": {
+     "value": {
+      "min_ft": 80.0,
+      "max_ft": 80.0
+     },
+     "source_id": "ngmdb:95426",
+     "page": 1,
+     "extraction_method": "datum_conversion",
+     "confidence": 0.551,
+     "inferred": true,
+     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+     "from_datum": null,
+     "shift_ft": 0.0,
+     "conversion": "none (datum not stated)",
+     "approximate": true,
+     "assumptions": [
+      "vertical datum not stated; kept as printed (NGVD29 and NAVD88 differ by about a foot here)"
+     ],
+     "datum_from": "not stated",
+     "datum_page": null,
+     "location_from": null
+    }
+   },
+   "method": {
+    "value": "stated",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+    "quote": "or clay and an upper elevation of 80 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "surface": {
+    "value": "top of Fluvial terrace deposits of Halfway Swamp",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+    "quote": "Mixed fluvial sediments with an upper eleva-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "stated upper elevation of the unit, no location given"
+   },
+   "unit": {
+    "value": "Fluvial terrace deposits of Halfway Swamp",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+    "quote": "Fluvial terrace deposits of Halfway",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "boundary": {
+    "value": "top",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+    "quote": "Mixed fluvial sediments with an upper eleva-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "'upper elevation' read as the top of the unit"
+   },
+   "elevation": {
+    "value": "125 feet",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+    "quote": "tion of 125 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "units": "ft",
+    "normalized": {
+     "min_ft": 125.0,
+     "max_ft": 125.0,
+     "unit": "feet",
+     "approximate": false
+    },
+    "navd88": {
+     "value": {
+      "min_ft": 125.0,
+      "max_ft": 125.0
+     },
+     "source_id": "ngmdb:95426",
+     "page": 1,
+     "extraction_method": "datum_conversion",
+     "confidence": 0.551,
+     "inferred": true,
+     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+     "from_datum": null,
+     "shift_ft": 0.0,
+     "conversion": "none (datum not stated)",
+     "approximate": true,
+     "assumptions": [
+      "vertical datum not stated; kept as printed (NGVD29 and NAVD88 differ by about a foot here)"
+     ],
+     "datum_from": "not stated",
+     "datum_page": null,
+     "location_from": null
+    }
+   },
+   "method": {
+    "value": "stated",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+    "quote": "tion of 125 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "surface": {
+    "value": "top of Fluvial sediments of Low Falls Landing",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+    "quote": "fluvial sedimants with an upper elevation of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "stated upper elevation of the unit, no location given"
+   },
+   "unit": {
+    "value": "Fluvial sediments of Low Falls Landing",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+    "quote": "Fluvial sediments of Low Falls Land-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "boundary": {
+    "value": "top",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+    "quote": "fluvial sedimants with an upper elevation of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "'upper elevation' read as the top of the unit"
+   },
+   "elevation": {
+    "value": "120 feet",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+    "quote": "120 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "units": "ft",
+    "normalized": {
+     "min_ft": 120.0,
+     "max_ft": 120.0,
+     "unit": "feet",
+     "approximate": false
+    },
+    "navd88": {
+     "value": {
+      "min_ft": 120.0,
+      "max_ft": 120.0
+     },
+     "source_id": "ngmdb:95426",
+     "page": 1,
+     "extraction_method": "datum_conversion",
+     "confidence": 0.551,
+     "inferred": true,
+     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+     "from_datum": null,
+     "shift_ft": 0.0,
+     "conversion": "none (datum not stated)",
+     "approximate": true,
+     "assumptions": [
+      "vertical datum not stated; kept as printed (NGVD29 and NAVD88 differ by about a foot here)"
+     ],
+     "datum_from": "not stated",
+     "datum_page": null,
+     "location_from": null
+    }
+   },
+   "method": {
+    "value": "stated",
+    "source_id": "ngmdb:95426",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95426_1",
+    "quote": "120 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  }
+ ],
  "contours": [],
- "sections": []
+ "sections": [],
+ "water_tests": [],
+ "rock_tests": []
 }
