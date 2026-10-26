@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 202,
+ "count": 203,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -2959,6 +2959,19 @@
     ],
     "pdf_sha256": "b3e94f43bfa31fc12b46323e732f715eb6f0e7c96226151d87963ed60b900e29",
     "unclear": true
+   }
+  },
+  {
+   "source_id": "ngmdb:77450",
+   "path": "observations[0].label",
+   "problem": "verify_unclear",
+   "value": "SCGS drill hole 32-129",
+   "page": 1,
+   "quote": "sediment at 34 to 35 ft depth (47 to 48 ft elevation) in SCGS drill hole 32-129 at Packs Landing",
+   "added_at": "2026-10-26T10:58:36+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "Review: this sheet clearly prints \"SCGS drill hole 32-129\" (checked on the page image at 144 ppi, no OCR misread), but the Lone Star sheet ngmdb:77458 prints \"43-129\" twice for the same sample (25,960 yr BP, 34-35 ft depth, Packs Landing). The sheets disagree; a person should check the SCGS log number."
    }
   }
  ]
