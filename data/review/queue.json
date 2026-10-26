@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 422,
+ "count": 424,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -5228,6 +5228,32 @@
    "page": 27,
    "quote": "LB-EX-RW   251.1   BD",
    "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:77450",
+   "path": "observations[0].label",
+   "problem": "verify_unclear",
+   "value": "SCGS drill hole 32-129",
+   "page": 1,
+   "quote": "sediment at 34 to 35 ft depth (47 to 48 ft elevation) in SCGS drill hole 32-129 at Packs Landing",
+   "added_at": "2026-10-26T10:58:36+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "Review: this sheet clearly prints \"SCGS drill hole 32-129\" (checked on the page image at 144 ppi, no OCR misread), but the Lone Star sheet ngmdb:77458 prints \"43-129\" twice for the same sample (25,960 yr BP, 34-35 ft depth, Packs Landing). The sheets disagree; a person should check the SCGS log number."
+   }
+  },
+  {
+   "source_id": "ngmdb:77458",
+   "path": "observations[1].label",
+   "problem": "verify_unclear",
+   "value": "43-129",
+   "page": 1,
+   "quote": "(47 to 48 feet elevation) in SCGS drill hole 43-129 at Packs Landing, Sumter County, in Lone Star",
+   "added_at": "2026-10-26T11:01:09+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "Review: this sheet clearly prints \"43-129\" twice (checked on the page image at 144 ppi, no OCR misread), but the Pinewood sheet ngmdb:77450 prints \"32-129\" for the same sample (25,960 yr BP, 34-35 ft depth, Packs Landing). The sheets disagree; a person should check the SCGS log number. Nearby holes on this sheet's section are numbered 43-132 to 43-135."
+   }
   }
  ]
 }
