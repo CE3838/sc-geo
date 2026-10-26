@@ -8,8 +8,8 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-06T23:01:15+00:00",
- "updated_at": "2026-10-06T23:01:15+00:00",
- "reader": "Claude, scheduled Claude Code session 2026-10-06",
+ "updated_at": "2026-10-25T23:43:51+00:00",
+ "reader": "Claude, re-read session 2026-10-25 (subsurface fields)",
  "packets": [
   "packet-01"
  ],
@@ -18,7 +18,7 @@
  ],
  "blocks_total": 1,
  "complete": true,
- "notes": "Single map sheet read from OCR (page 1). Map symbols are garbled ('[ aHps |', '54,', 'ap ... phr') and were not recorded. The Water unit was not recorded. Legend-only features (contact) were not recorded as values. Three thicknesses printed with '|' for a digit are read as 1, flagged inferred and sent to review. Georgia portions of the quadrangle are not mapped. Units are grouped by the terrace they lie beneath (Holocene, Ladson, Penholoway).\nSUBSURFACE: Holocene terrace sediments generally below 10 ft at the landward margin against the Silver Bluff terrace (page 1). No drill holes, cross sections or structure contours appear in the OCR text. Datum: horizontal 1927 North American Datum; contour interval 10 feet on the 1978 base map; the vertical datum is not stated (page 1).",
+ "notes": "Single map sheet read from OCR (page 1). Map symbols are garbled ('[ aHps |', '54,', 'ap ... phr') and were not recorded. The Water unit was not recorded. Legend-only features (contact) were not recorded as values. Three thicknesses printed with '|' for a digit are read as 1, flagged inferred and sent to review. Georgia portions of the quadrangle are not mapped. Units are grouped by the terrace they lie beneath (Holocene, Ladson, Penholoway).\nSUBSURFACE: Holocene terrace sediments generally below 10 ft at the landward margin against the Silver Bluff terrace (page 1). No drill holes, cross sections or structure contours appear in the OCR text. Datum: horizontal 1927 North American Datum; contour interval 10 feet on the 1978 base map; the vertical datum is not stated (page 1).\nRe-read of page 1 for subsurface fields (single OCR map sheet; map face is noise). Units grouped by the terrace they lie beneath (Holocene, Ladson, Penholoway) as before; map symbols, garbled in the OCR, read from the legend boxes on a page-image tile. Holocene terrace sediments generally below 10 ft at the landward margin: recorded as the unit's contact and as a stated top at that margin (boundary inferred; no vertical datum printed). Three thicknesses printed with '|' for a digit read as 1 (inferred). Whole-page image checked: no cross section, drill holes or structure contours on the sheet. Water unit, the Georgia not-mapped area and the legend-only contact are not recorded.",
  "files": [
   {
    "url": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
@@ -29,15 +29,16 @@
   }
  ],
  "summary": {
-  "stored": 39,
+  "stored": 53,
   "quote_match": {
-   "exact": 39
+   "exact": 45,
+   "image": 8
   },
   "verification": {
    "unclear": 3,
-   "agree": 4
+   "agree": 16
   },
-  "inferred": 3
+  "inferred": 5
  },
  "ingests": [
   {
@@ -57,6 +58,688 @@
    "disagree": 0,
    "unclear": 3,
    "review_items": 3
+  },
+  {
+   "at": "2026-10-25T23:43:51+00:00",
+   "packets": [
+    "reread-01"
+   ],
+   "reader": "Claude, re-read session 2026-10-25 (subsurface fields)",
+   "values": 53,
+   "stored": 53,
+   "exact": 45,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 16,
+   "disagree": 0,
+   "unclear": 3,
+   "image": 8,
+   "image_not_verified": 0,
+   "review_items": 3,
+   "reread": {
+    "packets": [
+     "reread-01"
+    ],
+    "pages": [
+     1
+    ],
+    "reason": "subsurface fields",
+    "queue_ids": [
+     "ngmdb:100340:subsurface_fields:p1"
+    ]
+   }
+  }
+ ],
+ "history": [
+  {
+   "at": "2026-10-25T23:43:51+00:00",
+   "reason": "subsurface fields",
+   "packets": [
+    "reread-01"
+   ],
+   "pages": [
+    1
+   ],
+   "replaced": [
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Moved earth",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Moved earth (Holocene) — Earth material moved in bulk by humans.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Holocene",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Moved earth (Holocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.0117,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Earth material moved in bulk by humans. Color is highly variable and dependent on source location.",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Earth material moved in bulk by humans. Color is highly",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "up to 18 feet",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Thickness up to 18 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "normalized": {
+        "min_ft": null,
+        "max_ft": 18.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Sediments beneath the Holocene terrace",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Sediments Beneath the Holocene Terrace",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      },
+      "description": {
+       "value": "being deposited in response to current sea level",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Sediments beneath the Holocene terrace are being deposited in response to current sea level.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "contacts": {
+       "value": "generally below the elevation of 10 feet at the landward margin, where Holocene sediments overlap, overlie, or abut sediments of the Silver Bluff terrace",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "deposits generally are below the elevation of 10 feet at the landward margin, where Holocene",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Savannah River Floodplain",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Savannah River Floodplain (Holocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Holocene",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Savannah River Floodplain (Holocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.0117,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "Variegated, non-differentiated sand, mud, and organic non-marine material",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Variegated, non-differentiated sand, mud, and",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "commonly deposited by fluvial processes and uncommonly deposited by eolian processes",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "organic non-marine material commonly deposited by fluvial processes and uncommonly",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "1 to 60 feet",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.479,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Thickness | to 60 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "unclear",
+       "note": "OCR text: 'Thickness | to 60 feet.'; '|' read as the digit 1",
+       "normalized": {
+        "min_ft": 1.0,
+        "max_ft": 60.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Freshwater marsh and swamp deposits",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Freshwater marsh and swamp deposits (Holocene) — Black (N1), silty clay and peat",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Holocene",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Freshwater marsh and swamp deposits (Holocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.0117,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "Black (N1), silty clay and peat",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Black (N1), silty clay and peat",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "stream valleys and areas of locally low elevation; areas of poor drainage",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "deposited in stream valleys and areas of locally low elevation",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "1 to 40 feet",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.479,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Thickness | to 40 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "unclear",
+       "note": "OCR text: 'Thickness | to 40 feet.'; '|' read as the digit 1",
+       "normalized": {
+        "min_ft": 1.0,
+        "max_ft": 40.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Point bar or spit deposits",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Point bar or spit deposits (Holocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Holocene",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Point bar or spit deposits (Holocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.0117,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "White (N9) to medium-gray (N5), moderately well-sorted, subangular to subrounded, fine to medium, silty, clayey quartz sand",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "well-sorted, subangular to subrounded, fine to medium, silty, clayey quartz sand.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "along a shoreline or projecting into a body of water; deposition parallel to the dominant direction of longshore transport",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Deposits occur along a shoreline or project into a body of water.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "1 to 15 feet",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.479,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Thickness | to 15 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "unclear",
+       "note": "OCR text: 'Thickness | to 15 feet.'; '|' read as the digit 1",
+       "normalized": {
+        "min_ft": 1.0,
+        "max_ft": 15.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Meander scars",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Meander scars (Holocene) — Geomorphic patterns on the land surface",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      },
+      "age": {
+       "value": "Holocene",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Meander scars (Holocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.0117,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Geomorphic patterns on the land surface resulting from the erosion by migrating river channels into older deposits and the subsequent abandoning and filling of those channels",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Meander scars (Holocene) — Geomorphic patterns on the land surface resulting from the",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "lithology": {
+       "value": "most often medium to coarse sand or silty clay",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Sediments are most often medium to coarse sand or silty clay.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      },
+      "thickness": {
+       "value": "3 to 15 feet",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Thickness 3 to 15 feet.\n\nSediments beneath the Ladson Terrace",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": 3.0,
+        "max_ft": 15.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Wicomico meander scar",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Wicomico meander scar (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Pleistocene",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Wicomico meander scar (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Former river channel cut into Wicomico sediments.",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Former river channel cut into Wicomico",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "group": {
+       "value": "Sediments beneath the Ladson Terrace",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Sediments beneath the Ladson Terrace",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "map-unit heading, not a stratigraphic group"
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Flood plain deposits (beneath the Ladson Terrace)",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Flood plain deposits - Variable color, mix of sand, clay, silt in fluvial deposits along the",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "listed under Sediments beneath the Ladson Terrace"
+      },
+      "lithology": {
+       "value": "Variable color, mix of sand, clay, silt",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Flood plain deposits - Variable color, mix of sand, clay, silt",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "fluvial deposits along the Savannah River, derived from nonmarine sediments that are not altered by marine processes",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "derived from nonmarine sediments that are not altered by marine processes. Thickness 2 to 35 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "2 to 35 feet",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "derived from nonmarine sediments that are not altered by marine processes. Thickness 2 to 35 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": 2.0,
+        "max_ft": 35.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Flood plain deposits (beneath the Penholoway Terrace)",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Flood plain deposits — Variable color, mix of sand, clay, silt in fluvial deposits along",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "listed under Sediments beneath the Penholoway Terrace"
+      },
+      "lithology": {
+       "value": "Variable color, mix of sand, clay, silt",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Flood plain deposits — Variable color, mix of sand, clay, silt",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "fluvial deposits along the Savannah River, derived from nonmarine sediments that are not altered by marine processes",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "deposits are derived from nonmarine sediments that are not altered by marine processes. Thickness",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "2 to 35 feet",
+       "source_id": "ngmdb:100340",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+       "quote": "Thickness\n2 to 35 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": 2.0,
+        "max_ft": 35.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    }
+   ]
   }
  ],
  "units": [
@@ -124,6 +807,44 @@
      "unit": "feet",
      "approximate": false
     }
+   },
+   "map_symbol": {
+    "value": "me",
+    "source_id": "ngmdb:100340",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1#page=1&viewrect=1648.5,250.5,38,19.5",
+    "quote": "me",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1640_240_1700_810-r1c1",
+     "box": [
+      17,
+      21,
+      93,
+      60
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3297,
+      501,
+      3373,
+      540
+     ],
+     "pt_box": [
+      1648.5,
+      250.5,
+      1686.5,
+      270.0
+     ],
+     "pdf_sha256": "60e0f9aea7ca1b38ca3b5ede6296c83d2af929f3d7cf6f00e630ddb7c4c12ca9"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled or missing in the OCR text)"
    }
   },
   {
@@ -132,13 +853,13 @@
     "source_id": "ngmdb:100340",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.855,
+    "confidence": 0.727,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
     "quote": "Sediments Beneath the Holocene Terrace",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree"
+    "verification": null
    },
    "description": {
     "value": "being deposited in response to current sea level",
@@ -245,6 +966,43 @@
      "unit": "feet",
      "approximate": false
     }
+   },
+   "map_symbol": {
+    "value": "Qsvf",
+    "source_id": "ngmdb:100340",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1#page=1&viewrect=1648.5,349.5,38,20.5",
+    "quote": "Qsvf",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1640_240_1700_810-r1c1",
+     "box": [
+      17,
+      219,
+      93,
+      260
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3297,
+      699,
+      3373,
+      740
+     ],
+     "pt_box": [
+      1648.5,
+      349.5,
+      1686.5,
+      370.0
+     ],
+     "pdf_sha256": "60e0f9aea7ca1b38ca3b5ede6296c83d2af929f3d7cf6f00e630ddb7c4c12ca9"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled or missing in the OCR text)"
    }
   },
   {
@@ -325,6 +1083,43 @@
      "unit": "feet",
      "approximate": false
     }
+   },
+   "map_symbol": {
+    "value": "QHfw",
+    "source_id": "ngmdb:100340",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1#page=1&viewrect=1648.5,399.5,38,20.5",
+    "quote": "QHfw",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1640_240_1700_810-r1c1",
+     "box": [
+      17,
+      319,
+      93,
+      360
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3297,
+      799,
+      3373,
+      840
+     ],
+     "pt_box": [
+      1648.5,
+      399.5,
+      1686.5,
+      420.0
+     ],
+     "pdf_sha256": "60e0f9aea7ca1b38ca3b5ede6296c83d2af929f3d7cf6f00e630ddb7c4c12ca9"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled or missing in the OCR text)"
    }
   },
   {
@@ -365,13 +1160,13 @@
     "source_id": "ngmdb:100340",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.727,
+    "confidence": 0.855,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
     "quote": "well-sorted, subangular to subrounded, fine to medium, silty, clayey quartz sand.",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null
+    "verification": "agree"
    },
    "depositional_environment": {
     "value": "along a shoreline or projecting into a body of water; deposition parallel to the dominant direction of longshore transport",
@@ -405,6 +1200,43 @@
      "unit": "feet",
      "approximate": false
     }
+   },
+   "map_symbol": {
+    "value": "QHps",
+    "source_id": "ngmdb:100340",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1#page=1&viewrect=1648.5,499.5,38,19.5",
+    "quote": "QHps",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1640_240_1700_810-r1c1",
+     "box": [
+      17,
+      519,
+      93,
+      558
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3297,
+      999,
+      3373,
+      1038
+     ],
+     "pt_box": [
+      1648.5,
+      499.5,
+      1686.5,
+      519.0
+     ],
+     "pdf_sha256": "60e0f9aea7ca1b38ca3b5ede6296c83d2af929f3d7cf6f00e630ddb7c4c12ca9"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled or missing in the OCR text)"
    }
   },
   {
@@ -413,13 +1245,13 @@
     "source_id": "ngmdb:100340",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.855,
+    "confidence": 0.727,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
     "quote": "Meander scars (Holocene) — Geomorphic patterns on the land surface",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree"
+    "verification": null
    },
    "age": {
     "value": "Holocene",
@@ -458,13 +1290,13 @@
     "source_id": "ngmdb:100340",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.855,
+    "confidence": 0.727,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
     "quote": "Sediments are most often medium to coarse sand or silty clay.",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree"
+    "verification": null
    },
    "thickness": {
     "value": "3 to 15 feet",
@@ -484,6 +1316,43 @@
      "unit": "feet",
      "approximate": false
     }
+   },
+   "map_symbol": {
+    "value": "QHms",
+    "source_id": "ngmdb:100340",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1#page=1&viewrect=1648.5,574,38,20.5",
+    "quote": "QHms",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1640_240_1700_810-r1c1",
+     "box": [
+      17,
+      668,
+      93,
+      709
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3297,
+      1148,
+      3373,
+      1189
+     ],
+     "pt_box": [
+      1648.5,
+      574.0,
+      1686.5,
+      594.5
+     ],
+     "pdf_sha256": "60e0f9aea7ca1b38ca3b5ede6296c83d2af929f3d7cf6f00e630ddb7c4c12ca9"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled or missing in the OCR text)"
    }
   },
   {
@@ -545,6 +1414,43 @@
     "text_method": "ocr",
     "verification": null,
     "note": "map-unit heading, not a stratigraphic group"
+   },
+   "map_symbol": {
+    "value": "QPwms",
+    "source_id": "ngmdb:100340",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1#page=1&viewrect=1648.5,662,38,20",
+    "quote": "QPwms",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1640_240_1700_810-r1c1",
+     "box": [
+      17,
+      844,
+      93,
+      884
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3297,
+      1324,
+      3373,
+      1364
+     ],
+     "pt_box": [
+      1648.5,
+      662.0,
+      1686.5,
+      682.0
+     ],
+     "pdf_sha256": "60e0f9aea7ca1b38ca3b5ede6296c83d2af929f3d7cf6f00e630ddb7c4c12ca9"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled or missing in the OCR text)"
    }
   },
   {
@@ -606,6 +1512,43 @@
      "unit": "feet",
      "approximate": false
     }
+   },
+   "map_symbol": {
+    "value": "QPldr",
+    "source_id": "ngmdb:100340",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1#page=1&viewrect=1648.5,699.5,38,20.5",
+    "quote": "QPldr",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1640_240_1700_810-r1c1",
+     "box": [
+      17,
+      919,
+      93,
+      960
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3297,
+      1399,
+      3373,
+      1440
+     ],
+     "pt_box": [
+      1648.5,
+      699.5,
+      1686.5,
+      720.0
+     ],
+     "pdf_sha256": "60e0f9aea7ca1b38ca3b5ede6296c83d2af929f3d7cf6f00e630ddb7c4c12ca9"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled or missing in the OCR text)"
    }
   },
   {
@@ -667,11 +1610,165 @@
      "unit": "feet",
      "approximate": false
     }
+   },
+   "map_symbol": {
+    "value": "QPphr",
+    "source_id": "ngmdb:100340",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1#page=1&viewrect=1648.5,789,38,20.5",
+    "quote": "QPphr",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1640_240_1700_810-r1c1",
+     "box": [
+      17,
+      1098,
+      93,
+      1139
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3297,
+      1578,
+      3373,
+      1619
+     ],
+     "pt_box": [
+      1648.5,
+      789.0,
+      1686.5,
+      809.5
+     ],
+     "pdf_sha256": "60e0f9aea7ca1b38ca3b5ede6296c83d2af929f3d7cf6f00e630ddb7c4c12ca9"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled or missing in the OCR text)"
    }
   }
  ],
  "observations": [],
  "structures": [],
  "groundwater": [],
- "references": []
+ "references": [],
+ "surfaces": [
+  {
+   "surface": {
+    "value": "top of Sediments beneath the Holocene terrace",
+    "source_id": "ngmdb:100340",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+    "quote": "deposits generally are below the elevation of 10 feet at the landward margin, where Holocene",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "elevation of the unit's upper surface as stated; read as the top of the unit"
+   },
+   "unit": {
+    "value": "Sediments beneath the Holocene terrace",
+    "source_id": "ngmdb:100340",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+    "quote": "Sediments Beneath the Holocene Terrace",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "boundary": {
+    "value": "top",
+    "source_id": "ngmdb:100340",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+    "quote": "deposits generally are below the elevation of 10 feet at the landward margin, where Holocene",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "stated elevation of the deposits' upper surface read as the unit's top"
+   },
+   "elevation": {
+    "value": "below 10 feet",
+    "source_id": "ngmdb:100340",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+    "quote": "deposits generally are below the elevation of 10 feet at the landward margin, where Holocene",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "units": "ft",
+    "normalized": {
+     "min_ft": 10.0,
+     "max_ft": 10.0,
+     "unit": "feet",
+     "approximate": false
+    },
+    "navd88": {
+     "value": {
+      "min_ft": 10.0,
+      "max_ft": 10.0
+     },
+     "source_id": "ngmdb:100340",
+     "page": 1,
+     "extraction_method": "datum_conversion",
+     "confidence": 0.551,
+     "inferred": true,
+     "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+     "from_datum": null,
+     "shift_ft": 0.0,
+     "conversion": "none (datum not stated)",
+     "approximate": true,
+     "assumptions": [
+      "vertical datum not stated; kept as printed (NGVD29 and NAVD88 differ by about a foot here)"
+     ],
+     "datum_from": "not stated",
+     "datum_page": null,
+     "location_from": null
+    }
+   },
+   "method": {
+    "value": "stated",
+    "source_id": "ngmdb:100340",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+    "quote": "deposits generally are below the elevation of 10 feet at the landward margin, where Holocene",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "location": {
+    "value": "landward margin",
+    "source_id": "ngmdb:100340",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100340_1",
+    "quote": "deposits generally are below the elevation of 10 feet at the landward margin, where Holocene",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  }
+ ],
+ "contours": [],
+ "sections": [],
+ "water_tests": [],
+ "rock_tests": []
 }
