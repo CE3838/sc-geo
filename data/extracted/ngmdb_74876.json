@@ -8,8 +8,8 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-07T10:58:34+00:00",
- "updated_at": "2026-10-07T10:58:34+00:00",
- "reader": "Claude, scheduled Claude Code session 2026-10-07",
+ "updated_at": "2026-10-25T23:49:23+00:00",
+ "reader": "Claude, Claude Code re-read session 2026-10-25",
  "packets": [
   "packet-01"
  ],
@@ -23,7 +23,7 @@
  ],
  "blocks_total": 6,
  "complete": true,
- "notes": "Map plate (p.1, OCR) plus short report (pp.2-6). Contour map of the top of the Eocene defined by 167 data points (p.4), mostly from gamma logs of water wells; contours dashed where control is sparse; stippled areas where the Oligocene Cooper is absent. Only one contour label (-40) legible; '50-' and 'B0' are garbled and not recorded. Legend symbols (auger holes, exposures, water wells) not recorded. Authors report no clearly defined tectonic elements such as faults have been proved (p.4).\nSUBSURFACE: Fig. 2 (p.5) is a gamma log with picks for the tops of the Oligocene, Eocene, Santee Ls., Macrofossil Ls. and Black Mingo Fm. against a depth scale (20-130), but the well is not identified and the depth of each pick cannot be read from the OCR; contour datum not stated; the 167 control points are not listed.",
+ "notes": "Map plate (p.1, OCR) plus short report (pp.2-6). Contour map of the top of the Eocene defined by 167 data points (p.4), mostly from gamma logs of water wells; contours dashed where control is sparse; stippled areas where the Oligocene Cooper is absent. Only one contour label (-40) legible; '50-' and 'B0' are garbled and not recorded. Legend symbols (auger holes, exposures, water wells) not recorded. Authors report no clearly defined tectonic elements such as faults have been proved (p.4).\nSUBSURFACE: Fig. 2 (p.5) is a gamma log with picks for the tops of the Oligocene, Eocene, Santee Ls., Macrofossil Ls. and Black Mingo Fm. against a depth scale (20-130), but the well is not identified and the depth of each pick cannot be read from the OCR; contour datum not stated; the 167 control points are not listed.\nRe-read of page 5 (Figure 2, gamma log of hole CC I) from page images. The five picks (tops of Oligocene, Eocene, Santee Ls., Macrofossil Ls., Black Mingo Fm.) are recorded as surfaces with depths read off the figure's depth scale in meters (image values, inferred, approximate). The hole's location, land-surface elevation and datum are not given on this page; gamma counts are not recorded.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/of/1978/0548/plate-1.pdf",
@@ -41,15 +41,16 @@
   }
  ],
  "summary": {
-  "stored": 21,
+  "stored": 53,
   "quote_match": {
-   "exact": 21
+   "exact": 48,
+   "image": 5
   },
   "verification": {
-   "agree": 7,
+   "agree": 39,
    "unclear": 2
   },
-  "inferred": 1
+  "inferred": 18
  },
  "ingests": [
   {
@@ -69,6 +70,38 @@
    "disagree": 0,
    "unclear": 2,
    "review_items": 2
+  },
+  {
+   "at": "2026-10-25T23:49:23+00:00",
+   "packets": [
+    "reread-01"
+   ],
+   "reader": "Claude, Claude Code re-read session 2026-10-25",
+   "values": 32,
+   "stored": 32,
+   "exact": 27,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 32,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 5,
+   "image_not_verified": 0,
+   "review_items": 0,
+   "reread": {
+    "packets": [
+     "reread-01"
+    ],
+    "pages": [
+     5
+    ],
+    "reason": "subsurface_fields",
+    "queue_ids": [
+     "ngmdb:74876:subsurface_fields:p5"
+    ]
+   }
   }
  ],
  "units": [
@@ -219,7 +252,39 @@
    }
   }
  ],
- "observations": [],
+ "observations": [
+  {
+   "kind": "boring",
+   "label": {
+    "value": "CC I",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "CC I",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "label above the gamma log in Figure 2 (may be CC 1)"
+   },
+   "depth_reference": {
+    "value": "land surface",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "GAMMA LOG",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "the log's vertical axis is labelled DEPTH, METERS (image), starting at 0"
+   }
+  }
+ ],
  "structures": [],
  "groundwater": [],
  "references": [
@@ -284,7 +349,593 @@
    }
   }
  ],
- "surfaces": [],
+ "surfaces": [
+  {
+   "surface": {
+    "value": "TOP OF OLIGOCENE",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "TOP OF\n   OLIGOCENE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "pick label on Figure 2"
+   },
+   "unit": {
+    "value": "Oligocene",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "TOP OF\n   OLIGOCENE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "unit named in the pick label"
+   },
+   "boundary": {
+    "value": "top",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "TOP OF\n   OLIGOCENE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "depth": {
+    "value": 4,
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
+    "inferred": true,
+    "locator": "https://pubs.usgs.gov/of/1978/0548/report.pdf#page=4&viewrect=241.92,174.53,58.18,5.76",
+    "quote": "4",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p5-250dpi-2x2-r1c1",
+     "box": [
+      840,
+      606,
+      1042,
+      626
+     ],
+     "dpi": 250,
+     "page_px_box": [
+      840,
+      606,
+      1042,
+      626
+     ],
+     "pt_box": [
+      241.92,
+      174.53,
+      300.1,
+      180.29
+     ],
+     "pdf_sha256": "66f1fab6b5d0b7bdf4bdefb59b656f5cff60183953f35832f4de4b22bafb62da"
+    },
+    "units": "m",
+    "note": "read off the figure's depth scale (DEPTH, METERS) where the pick's leader line meets the log; approximate (about +/-1 m)",
+    "normalized": {
+     "min_ft": 13.123359580052492,
+     "max_ft": 13.123359580052492,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "observation": {
+    "value": "CC I",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "CC I",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "method": {
+    "value": "measured",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "GAMMA LOG",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "pick on the gamma log of hole CC I"
+   }
+  },
+  {
+   "surface": {
+    "value": "TOP OF EOCENE",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "'EOCENE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "pick label on Figure 2"
+   },
+   "unit": {
+    "value": "Eocene",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "'EOCENE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "unit named in the pick label"
+   },
+   "boundary": {
+    "value": "top",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "'EOCENE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "depth": {
+    "value": 55,
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
+    "inferred": true,
+    "locator": "https://pubs.usgs.gov/of/1978/0548/report.pdf#page=4&viewrect=241.92,326.3,58.18,5.76",
+    "quote": "55",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p5-250dpi-2x2-r1c1",
+     "box": [
+      840,
+      1133,
+      1042,
+      1153
+     ],
+     "dpi": 250,
+     "page_px_box": [
+      840,
+      1133,
+      1042,
+      1153
+     ],
+     "pt_box": [
+      241.92,
+      326.3,
+      300.1,
+      332.06
+     ],
+     "pdf_sha256": "66f1fab6b5d0b7bdf4bdefb59b656f5cff60183953f35832f4de4b22bafb62da"
+    },
+    "units": "m",
+    "note": "read off the figure's depth scale (DEPTH, METERS) where the pick's leader line meets the log; approximate (about +/-1 m)",
+    "normalized": {
+     "min_ft": 180.44619422572177,
+     "max_ft": 180.44619422572177,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "observation": {
+    "value": "CC I",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "CC I",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "method": {
+    "value": "measured",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "GAMMA LOG",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "pick on the gamma log of hole CC I"
+   }
+  },
+  {
+   "surface": {
+    "value": "TOP OF SANTEE LS.",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "SANTEE US.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "pick label on Figure 2; OCR text reads 'SANTEE US.', the image shows SANTEE LS."
+   },
+   "unit": {
+    "value": "Santee Ls.",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "SANTEE US.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "unit named in the pick label",
+    "normalized": {
+     "canonical": "Santee",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "boundary": {
+    "value": "top",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "SANTEE US.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "depth": {
+    "value": 70,
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
+    "inferred": true,
+    "locator": "https://pubs.usgs.gov/of/1978/0548/report.pdf#page=4&viewrect=241.92,371.23,58.18,5.76",
+    "quote": "70",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p5-250dpi-2x2-r1c1",
+     "box": [
+      840,
+      1289,
+      1042,
+      1309
+     ],
+     "dpi": 250,
+     "page_px_box": [
+      840,
+      1289,
+      1042,
+      1309
+     ],
+     "pt_box": [
+      241.92,
+      371.23,
+      300.1,
+      376.99
+     ],
+     "pdf_sha256": "66f1fab6b5d0b7bdf4bdefb59b656f5cff60183953f35832f4de4b22bafb62da"
+    },
+    "units": "m",
+    "note": "read off the figure's depth scale (DEPTH, METERS) where the pick's leader line meets the log; approximate (about +/-1 m)",
+    "normalized": {
+     "min_ft": 229.6587926509186,
+     "max_ft": 229.6587926509186,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "observation": {
+    "value": "CC I",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "CC I",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "method": {
+    "value": "measured",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "GAMMA LOG",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "pick on the gamma log of hole CC I"
+   }
+  },
+  {
+   "surface": {
+    "value": "TOP OF MACROFOSSIL LS.",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "MACROFOSSIL LS.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "pick label on Figure 2"
+   },
+   "unit": {
+    "value": "Macrofossil Ls.",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "MACROFOSSIL LS.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "unit named in the pick label",
+    "normalized": {
+     "canonical": "macrofossil",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "boundary": {
+    "value": "top",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "MACROFOSSIL LS.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "depth": {
+    "value": 116,
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
+    "inferred": true,
+    "locator": "https://pubs.usgs.gov/of/1978/0548/report.pdf#page=4&viewrect=241.92,510.05,58.18,5.76",
+    "quote": "116",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p5-250dpi-2x2-r2c1",
+     "box": [
+      840,
+      533,
+      1042,
+      553
+     ],
+     "dpi": 250,
+     "page_px_box": [
+      840,
+      1771,
+      1042,
+      1791
+     ],
+     "pt_box": [
+      241.92,
+      510.05,
+      300.1,
+      515.81
+     ],
+     "pdf_sha256": "66f1fab6b5d0b7bdf4bdefb59b656f5cff60183953f35832f4de4b22bafb62da"
+    },
+    "units": "m",
+    "note": "read off the figure's depth scale (DEPTH, METERS) where the pick's leader line meets the log; approximate (about +/-1 m)",
+    "normalized": {
+     "min_ft": 380.5774278215223,
+     "max_ft": 380.5774278215223,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "observation": {
+    "value": "CC I",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "CC I",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "method": {
+    "value": "measured",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "GAMMA LOG",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "pick on the gamma log of hole CC I"
+   }
+  },
+  {
+   "surface": {
+    "value": "TOP OF BLACK MINGO FM.",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BLACK MINGO FM.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "pick label on Figure 2"
+   },
+   "unit": {
+    "value": "Black Mingo Fm.",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "BLACK MINGO FM.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "unit named in the pick label",
+    "normalized": {
+     "canonical": "Black Mingo",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "boundary": {
+    "value": "top",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BLACK MINGO FM.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "depth": {
+    "value": 125,
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
+    "inferred": true,
+    "locator": "https://pubs.usgs.gov/of/1978/0548/report.pdf#page=4&viewrect=241.92,536.26,58.18,5.76",
+    "quote": "125",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p5-250dpi-2x2-r2c1",
+     "box": [
+      840,
+      624,
+      1042,
+      644
+     ],
+     "dpi": 250,
+     "page_px_box": [
+      840,
+      1862,
+      1042,
+      1882
+     ],
+     "pt_box": [
+      241.92,
+      536.26,
+      300.1,
+      542.02
+     ],
+     "pdf_sha256": "66f1fab6b5d0b7bdf4bdefb59b656f5cff60183953f35832f4de4b22bafb62da"
+    },
+    "units": "m",
+    "note": "read off the figure's depth scale (DEPTH, METERS) where the pick's leader line meets the log; approximate (about +/-1 m)",
+    "normalized": {
+     "min_ft": 410.1049868766404,
+     "max_ft": 410.1049868766404,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "observation": {
+    "value": "CC I",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "CC I",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "method": {
+    "value": "measured",
+    "source_id": "ngmdb:74876",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "GAMMA LOG",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "pick on the gamma log of hole CC I"
+   }
+  }
+ ],
  "contours": [
   {
    "kind": "structure",
@@ -392,5 +1043,7 @@
    ]
   }
  ],
- "sections": []
+ "sections": [],
+ "water_tests": [],
+ "rock_tests": []
 }
