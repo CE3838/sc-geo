@@ -1,7 +1,7 @@
 {
  "about": "Documents already read whose chosen pages need a re-read (python -m extract.reread; see extract/SESSION.md).",
- "count": 50,
- "pending": 44,
+ "count": 49,
+ "pending": 40,
  "by_reason": {
   "logs": 2,
   "image_pages": 2,
@@ -9,7 +9,7 @@
   "hole_label_32_129_vs_43_129_for_the_same": 1,
   "hole_label_43_129_vs_32_129_for_the_same": 1,
   "rock_tests": 1,
-  "subsurface_fields": 29,
+  "subsurface_fields": 28,
   "map_face": 1
  },
  "items": [
@@ -687,27 +687,6 @@
    "status": "pending"
   },
   {
-   "id": "ngmdb:14403:subsurface_fields:p3-10",
-   "source_id": "ngmdb:14403",
-   "pages": [
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10
-   ],
-   "reason": "subsurface_fields",
-   "detail": "SUBSURFACE: AMT apparent-resistivity soundings by station (pp. 3-10) could constrain depth to resistive basement or saline water but are illegible in the text layer; a reading from the original images would be needed. No elevations, datum, cross sections or contour maps.",
-   "origin": "notes",
-   "ocr": false,
-   "images": true,
-   "added_at": "2026-10-14T23:00:22+00:00",
-   "status": "pending"
-  },
-  {
    "id": "ngmdb:14697:subsurface_fields:p1",
    "source_id": "ngmdb:14697",
    "pages": [
@@ -715,35 +694,6 @@
    ],
    "reason": "subsurface_fields",
    "detail": "SUBSURFACE: the cross section A-A' of hypocenter depths named in the catalog title is not legible in the OCR (page 1); no epicenter coordinates, depths or magnitudes readable.",
-   "origin": "notes",
-   "ocr": false,
-   "images": true,
-   "added_at": "2026-10-14T23:00:22+00:00",
-   "status": "pending"
-  },
-  {
-   "id": "ngmdb:43013:subsurface_fields:p1-2",
-   "source_id": "ngmdb:43013",
-   "pages": [
-    1,
-    2
-   ],
-   "reason": "subsurface_fields",
-   "detail": "SUBSURFACE: base maps state National Geodetic Vertical Datum of 1929 with contour interval 10 feet and 1927 North American Datum (pages 1-2); cross sections named in the catalog title are not in this packet.",
-   "origin": "notes",
-   "ocr": false,
-   "images": true,
-   "added_at": "2026-10-16T00:28:57+00:00",
-   "status": "pending"
-  },
-  {
-   "id": "ngmdb:74876:subsurface_fields:p5",
-   "source_id": "ngmdb:74876",
-   "pages": [
-    5
-   ],
-   "reason": "subsurface_fields",
-   "detail": "SUBSURFACE: Fig. 2 (p.5) is a gamma log with picks for the tops of the Oligocene, Eocene, Santee Ls., Macrofossil Ls. and Black Mingo Fm. against a depth scale (20-130), but the well is not identified and the depth of each pick cannot be read from the OCR; contour datum not stated; the 167 control points are not listed.",
    "origin": "notes",
    "ocr": false,
    "images": true,
@@ -762,25 +712,6 @@
    "ocr": false,
    "images": true,
    "added_at": "2026-10-14T23:00:22+00:00",
-   "status": "pending"
-  },
-  {
-   "id": "ngmdb:80608:subsurface_fields:p13-18",
-   "source_id": "ngmdb:80608",
-   "pages": [
-    13,
-    14,
-    15,
-    16,
-    17,
-    18
-   ],
-   "reason": "subsurface_fields",
-   "detail": "SUBSURFACE: the seismic profiles themselves are not in this document's text; the handwritten navigation fixes for the seismic lines (pages 13-18) are illegible in OCR and would need the scanned images; no datum stated.",
-   "origin": "notes",
-   "ocr": false,
-   "images": true,
-   "added_at": "2026-10-16T00:28:57+00:00",
    "status": "pending"
   },
   {
@@ -984,6 +915,44 @@
    "done_at": "2026-10-18T16:20:04+00:00"
   },
   {
+   "id": "ngmdb:14403:subsurface_fields:p3-10",
+   "source_id": "ngmdb:14403",
+   "pages": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "reason": "subsurface_fields",
+   "detail": "SUBSURFACE: AMT apparent-resistivity soundings by station (pp. 3-10) could constrain depth to resistive basement or saline water but are illegible in the text layer; a reading from the original images would be needed. No elevations, datum, cross sections or contour maps.",
+   "origin": "notes",
+   "ocr": false,
+   "images": true,
+   "added_at": "2026-10-14T23:00:22+00:00",
+   "status": "done",
+   "done_at": "2026-10-25T23:45:09+00:00"
+  },
+  {
+   "id": "ngmdb:43013:subsurface_fields:p1-2",
+   "source_id": "ngmdb:43013",
+   "pages": [
+    1,
+    2
+   ],
+   "reason": "subsurface_fields",
+   "detail": "SUBSURFACE: base maps state National Geodetic Vertical Datum of 1929 with contour interval 10 feet and 1927 North American Datum (pages 1-2); cross sections named in the catalog title are not in this packet.",
+   "origin": "notes",
+   "ocr": false,
+   "images": true,
+   "added_at": "2026-10-16T00:28:57+00:00",
+   "status": "done",
+   "done_at": "2026-10-25T23:47:53+00:00"
+  },
+  {
    "id": "ngmdb:46513:subsurface_fields:p6,8,11,13-18",
    "source_id": "ngmdb:46513",
    "pages": [
@@ -1005,6 +974,26 @@
    "added_at": "2026-10-16T00:28:57+00:00",
    "status": "done",
    "done_at": "2026-10-18T16:17:31+00:00"
+  },
+  {
+   "id": "ngmdb:80608:subsurface_fields:p13-18",
+   "source_id": "ngmdb:80608",
+   "pages": [
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+   ],
+   "reason": "subsurface_fields",
+   "detail": "SUBSURFACE: the seismic profiles themselves are not in this document's text; the handwritten navigation fixes for the seismic lines (pages 13-18) are illegible in OCR and would need the scanned images; no datum stated.",
+   "origin": "notes",
+   "ocr": false,
+   "images": true,
+   "added_at": "2026-10-16T00:28:57+00:00",
+   "status": "done",
+   "done_at": "2026-10-26T11:00:16+00:00"
   }
  ]
 }

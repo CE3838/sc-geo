@@ -8,8 +8,8 @@
  "kind": "publication",
  "schema_version": 1,
  "extracted_at": "2026-10-13T10:55:58+00:00",
- "updated_at": "2026-10-13T10:55:58+00:00",
- "reader": "Claude, scheduled Claude Code session 2026-10-13",
+ "updated_at": "2026-10-26T11:00:16+00:00",
+ "reader": "Claude, Claude Code re-read session 2026-10-26",
  "packets": [
   "packet-01"
  ],
@@ -35,7 +35,7 @@
  ],
  "blocks_total": 18,
  "complete": true,
- "notes": "Cruise data archive logs for USGS activity 97CCT01 (pages 1-20): equipment log, crew log and overview log (pages 1, 19, 20, pdf_text) and scanned handwritten logbook pages (2-18, OCR; pages 8 and 9 are absent from the packet). The overview log describes boomer seismic reflection (25 lines) and sidescan (14 lines) surveys offshore of central South Carolina, June 1-4, 1997, from Charleston, SC, for seafloor mapping. No geologic map units, borings, wells, structures, aquifers or references are described, so no values were recorded. The handwritten pages (2-18) are illegible in OCR; they appear to hold line start/end times and navigation fixes (e.g. '32° 47.95' on page 17), which could not be read reliably and were not recorded.\nSUBSURFACE: the seismic profiles themselves are not in this document's text; the handwritten navigation fixes for the seismic lines (pages 13-18) are illegible in OCR and would need the scanned images; no datum stated.",
+ "notes": "Cruise data archive logs for USGS activity 97CCT01 (pages 1-20): equipment log, crew log and overview log (pages 1, 19, 20, pdf_text) and scanned handwritten logbook pages (2-18, OCR; pages 8 and 9 are absent from the packet). The overview log describes boomer seismic reflection (25 lines) and sidescan (14 lines) surveys offshore of central South Carolina, June 1-4, 1997, from Charleston, SC, for seafloor mapping. No geologic map units, borings, wells, structures, aquifers or references are described, so no values were recorded. The handwritten pages (2-18) are illegible in OCR; they appear to hold line start/end times and navigation fixes (e.g. '32° 47.95' on page 17), which could not be read reliably and were not recorded.\nSUBSURFACE: the seismic profiles themselves are not in this document's text; the handwritten navigation fixes for the seismic lines (pages 13-18) are illegible in OCR and would need the scanned images; no datum stated.\nRe-read of pages 13-18 from the page images (72 dpi scans of the handwritten logbook). They are cruise operations notes: start and end times of seismic and sidescan lines, headings, sea state, equipment settings, and waypoint navigation fixes with hand calculations (e.g. sidescan waypoints off Isle of Palms). They hold no geologic units, borings, cores with depths, surfaces, contours, published cross sections, datum, or water or rock tests, so nothing was recorded; navigation fixes of survey lines have no schema field.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/ds/2006/203/facs/equipment.pdf",
@@ -97,6 +97,43 @@
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
+  },
+  {
+   "at": "2026-10-26T11:00:16+00:00",
+   "packets": [
+    "reread-01"
+   ],
+   "reader": "Claude, Claude Code re-read session 2026-10-26",
+   "values": 0,
+   "stored": 0,
+   "exact": 0,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 0,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 0,
+   "image_not_verified": 0,
+   "review_items": 0,
+   "reread": {
+    "packets": [
+     "reread-01"
+    ],
+    "pages": [
+     13,
+     14,
+     15,
+     16,
+     17,
+     18
+    ],
+    "reason": "subsurface_fields",
+    "queue_ids": [
+     "ngmdb:80608:subsurface_fields:p13-18"
+    ]
+   }
   }
  ],
  "units": [],
@@ -106,5 +143,7 @@
  "references": [],
  "surfaces": [],
  "contours": [],
- "sections": []
+ "sections": [],
+ "water_tests": [],
+ "rock_tests": []
 }
