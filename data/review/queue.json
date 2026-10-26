@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 424,
+ "count": 428,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -183,20 +183,6 @@
    "verify": {
     "verdict": "unclear",
     "note": "year printed as '198k' in the text layer (OCR); 1989 is likely from the text citations but not legible in the entry"
-   }
-  },
-  {
-   "source_id": "ngmdb:47117",
-   "path": "groundwater[11].description",
-   "problem": "verify_disagree",
-   "value": "field bulk density 96 to 120 lb per ft3 and porosity 26 to 46 percent (D'Appolonia, 1981, 1982); laboratory salt-solution column tests reduced permeability to about 4 to 10 percent of baseline",
-   "page": 64,
-   "quote": "bulk density ranged from 96 to 120 Ib.",
-   "added_at": "2026-10-06T01:43:08+00:00",
-   "verify": {
-    "verdict": "disagree",
-    "value": "field bulk density 96 to 120 lb per ft3 and porosity 26 to 46 percent (D'Appolonia, 1981, 1982)",
-    "note": "page 64 gives the field bulk density and porosity; the 4 to 10 percent permeability result is on page 66, not page 64"
    }
   },
   {
@@ -5254,6 +5240,51 @@
     "verdict": "unclear",
     "note": "Review: this sheet clearly prints \"43-129\" twice (checked on the page image at 144 ppi, no OCR misread), but the Pinewood sheet ngmdb:77450 prints \"32-129\" for the same sample (25,960 yr BP, 34-35 ft depth, Packs Landing). The sheets disagree; a person should check the SCGS log number. Nearby holes on this sheet's section are numbered 43-132 to 43-135."
    }
+  },
+  {
+   "source_id": "ngmdb:47117",
+   "path": "water_tests[24].value",
+   "problem": "missing_units",
+   "value": "175",
+   "page": 59,
+   "quote": "12A   38.0   1.6   2.7   1.3   1.7   12.0   123.0   8.09   21.2   184.0   175",
+   "added_at": "2026-10-26T11:01:56+00:00"
+  },
+  {
+   "source_id": "ngmdb:47117",
+   "path": "water_tests[35].value",
+   "problem": "missing_units",
+   "value": "35",
+   "page": 59,
+   "quote": "12C   4.8   1.2   1.1   .4   .85   .2   18.0   6.85   21.5   35.0   35",
+   "added_at": "2026-10-26T11:01:56+00:00"
+  },
+  {
+   "source_id": "ngmdb:47117",
+   "path": "water_tests[46].value",
+   "problem": "missing_units",
+   "value": "120",
+   "page": 59,
+   "quote": "20A   31.0   .57   1.8   1.7   2.2   10.0   85.0   7.81   22.7   153.0   120",
+   "added_at": "2026-10-26T11:01:56+00:00"
+  },
+  {
+   "source_id": "ngmdb:47117",
+   "path": "water_tests[57].value",
+   "problem": "missing_units",
+   "value": "92",
+   "page": 59,
+   "quote": "20B   19.0   .52   1.9   .70   1.8   5.5   62.0   8.40   20.7   91.0   92",
+   "added_at": "2026-10-26T11:01:56+00:00"
+  },
+  {
+   "source_id": "ngmdb:47117",
+   "path": "water_tests[68].value",
+   "problem": "missing_units",
+   "value": "21",
+   "page": 59,
+   "quote": "20C   1.6   .42   1.5   .42   2.1   .2   6.0   6.04   20.9   19.0   21",
+   "added_at": "2026-10-26T11:01:56+00:00"
   }
  ]
 }
