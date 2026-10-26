@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 196,
+ "count": 199,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -362,32 +362,6 @@
     "verdict": "unclear",
     "value": "1 to 40 feet",
     "note": "digit OCR'd as '|' ('Thickness | to 40 feet.'); check against the map image"
-   }
-  },
-  {
-   "source_id": "ngmdb:103895",
-   "path": "structures[0].certainty",
-   "problem": "verify_unclear",
-   "value": "Identity and existence certain, location accurate. Location approximate where dashed.",
-   "page": 1,
-   "quote": "Fault — Identity and existence certain, location accurate. Location approximate",
-   "added_at": "2026-10-06T10:57:10+00:00",
-   "verify": {
-    "verdict": "unclear",
-    "note": "legend symbol only, no trace or location readable; the explanation alone does not show a fault exists on this quadrangle"
-   }
-  },
-  {
-   "source_id": "ngmdb:103895",
-   "path": "structures[0].description",
-   "problem": "verify_unclear",
-   "value": "fault shown on the map (map symbol explanation)",
-   "page": 1,
-   "quote": "Fault — Identity and existence certain, location accurate. Location approximate",
-   "added_at": "2026-10-06T10:57:10+00:00",
-   "verify": {
-    "verdict": "unclear",
-    "note": "legend symbol only, no trace or location readable; the explanation alone does not show a fault exists on this quadrangle"
    }
   },
   {
@@ -2595,6 +2569,71 @@
    "verify": {
     "verdict": "unclear",
     "note": "OCR prints | for a digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:103895",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "the salinity, and rising tides importing high salinity waters. Thickness | to 40 feet.",
+   "added_at": "2026-10-26T11:11:28+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:103895",
+   "path": "units[3].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 12 feet",
+   "page": 1,
+   "quote": "reliable radiocarbon dates (Brooks and others, 2001). Thickness is | to 12 feet.",
+   "added_at": "2026-10-26T11:11:28+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:103895",
+   "path": "units[4].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 56 feet",
+   "page": 1,
+   "quote": "in the map area. Thickness is | to 56",
+   "added_at": "2026-10-26T11:11:28+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:103895",
+   "path": "units[5].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 25 feet",
+   "page": 1,
+   "quote": "valleys associated with the Duplin sea-level maximum. Thickness is | to 25 feet.",
+   "added_at": "2026-10-26T11:11:28+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:103895",
+   "path": "units[6].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 50 feet",
+   "page": 1,
+   "quote": "well-sorted, subrounded, fine or medium to coarse-grained quartz sand. Thickness is | to 50 feet.",
+   "added_at": "2026-10-26T11:11:28+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
    }
   }
  ]
