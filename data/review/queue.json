@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 197,
+ "count": 196,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -427,32 +427,6 @@
    "verify": {
     "verdict": "unclear",
     "note": "legend symbol only, no trace or location readable; the explanation alone does not show a fault exists on this quadrangle"
-   }
-  },
-  {
-   "source_id": "ngmdb:103893",
-   "path": "units[3].thickness",
-   "problem": "verify_unclear",
-   "value": "1 to 40 feet",
-   "page": 1,
-   "quote": "Thickness | to 40 feet.",
-   "added_at": "2026-10-06T10:58:14+00:00",
-   "verify": {
-    "verdict": "unclear",
-    "note": "text layer reads 'Thickness | to 40 feet.'; value read as '1 to 40 feet' with '|' taken as '1'; check the digit against the map image"
-   }
-  },
-  {
-   "source_id": "ngmdb:103893",
-   "path": "units[5].thickness",
-   "problem": "verify_unclear",
-   "value": "1 to 20 feet",
-   "page": 1,
-   "quote": "(Kaczorowski, 1977). Thickness | to 20 feet.",
-   "added_at": "2026-10-06T10:58:14+00:00",
-   "verify": {
-    "verdict": "unclear",
-    "note": "text layer reads '(Kaczorowski, 1977). Thickness | to 20 feet.'; value read as '1 to 20 feet' with '|' taken as '1'; check the digit against the map image"
    }
   },
   {
@@ -1136,19 +1110,6 @@
    "verify": {
     "verdict": "unclear",
     "note": "text layer reads 'oF pas'; read as 'QPpas' by correcting OCR characters; check against the map image"
-   }
-  },
-  {
-   "source_id": "ngmdb:103893",
-   "path": "units[10].map_symbol",
-   "problem": "verify_unclear",
-   "value": "QPpas",
-   "page": 1,
-   "quote": "[ aFpas | Barrier-island deposits",
-   "added_at": "2026-10-07T10:59:56+00:00",
-   "verify": {
-    "verdict": "unclear",
-    "note": "text layer reads 'aFpas'; read as 'QPpas' by correcting OCR characters; check against the map image"
    }
   },
   {
@@ -2605,6 +2566,32 @@
    "page": 1,
    "quote": "Thickness is | to 15 feet.",
    "added_at": "2026-10-26T11:05:14+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:103893",
+   "path": "units[3].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "Thickness | to 40 feet.",
+   "added_at": "2026-10-26T11:07:29+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:103893",
+   "path": "units[5].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 20 feet",
+   "page": 1,
+   "quote": "(Kaczorowski, 1977). Thickness | to 20 feet.",
+   "added_at": "2026-10-26T11:07:29+00:00",
    "verify": {
     "verdict": "unclear",
     "note": "OCR prints | for the first digit"
