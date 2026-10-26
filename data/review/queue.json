@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 196,
+ "count": 195,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -357,45 +357,6 @@
    "verify": {
     "verdict": "unclear",
     "note": "text layer reads 'Thickness is | to 15 feet.'; value read as '1 to 15 feet' with '|' taken as '1'; check the digit against the map image"
-   }
-  },
-  {
-   "source_id": "ngmdb:99141",
-   "path": "units[2].thickness",
-   "problem": "verify_unclear",
-   "value": "less than 1 foot",
-   "page": 1,
-   "quote": "any of the subaqueous beach face. Thickness less than | foot.",
-   "added_at": "2026-10-06T22:59:54+00:00",
-   "verify": {
-    "verdict": "unclear",
-    "note": "text layer reads 'any of the subaqueous beach face. Thickness less than | foot.'; value read as 'less than 1 foot' with '|' taken as '1'; check the digit against the map image"
-   }
-  },
-  {
-   "source_id": "ngmdb:99141",
-   "path": "units[5].thickness",
-   "problem": "verify_unclear",
-   "value": "1 to 50 feet",
-   "page": 1,
-   "quote": "brackish water bodies inland of the saltwater wedge. Thickness | to 50 feet.",
-   "added_at": "2026-10-06T22:59:54+00:00",
-   "verify": {
-    "verdict": "unclear",
-    "note": "text layer reads 'brackish water bodies inland of the saltwater wedge. Thickness | to 50 feet.'; value read as '1 to 50 feet' with '|' taken as '1'; check the digit against the map image"
-   }
-  },
-  {
-   "source_id": "ngmdb:99141",
-   "path": "units[10].thickness",
-   "problem": "verify_unclear",
-   "value": "1 to 20 feet",
-   "page": 1,
-   "quote": "as well as Carolina bays that formed more recently. Thickness | to 20 feet.",
-   "added_at": "2026-10-06T22:59:54+00:00",
-   "verify": {
-    "verdict": "unclear",
-    "note": "text layer reads 'as well as Carolina bays that formed more recently. Thickness | to 20 feet.'; value read as '1 to 20 feet' with '|' taken as '1'; check the digit against the map image"
    }
   },
   {
@@ -832,19 +793,6 @@
    "verify": {
     "verdict": "unclear",
     "note": "text layer reads 'aPmt'; read as 'QPmt' by correcting OCR characters; check against the map image"
-   }
-  },
-  {
-   "source_id": "ngmdb:99141",
-   "path": "units[13].map_symbol",
-   "problem": "verify_unclear",
-   "value": "QPpas",
-   "page": 1,
-   "quote": "[ oF pas | Barrier-island deposits",
-   "added_at": "2026-10-07T10:59:56+00:00",
-   "verify": {
-    "verdict": "unclear",
-    "note": "text layer reads 'oF pas'; read as 'QPpas' by correcting OCR characters; check against the map image"
    }
   },
   {
@@ -2590,6 +2538,45 @@
    "verify": {
     "verdict": "unclear",
     "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:99141",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "less than 1 foot",
+   "page": 1,
+   "quote": "any of the subaqueous beach face. Thickness less than | foot.",
+   "added_at": "2026-10-26T11:22:59+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for a digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:99141",
+   "path": "units[5].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 50 feet",
+   "page": 1,
+   "quote": "brackish water bodies inland of the saltwater wedge. Thickness | to 50 feet.",
+   "added_at": "2026-10-26T11:22:59+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for a digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:99141",
+   "path": "units[10].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 20 feet",
+   "page": 1,
+   "quote": "as well as Carolina bays that formed more recently. Thickness | to 20 feet.",
+   "added_at": "2026-10-26T11:22:59+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for a digit"
    }
   }
  ]
