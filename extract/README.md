@@ -121,6 +121,23 @@ chose to use the images anyway, throttled: `enabled: true`, `tier_offset: 1`
 (half resolution), `tile_workers: 2`, with the harvester's pause between
 requests.
 
+### NGMDB holdings behind a data token (since 2026-10)
+
+NGMDB product pages no longer inline the list of sheets and downloads
+(`var holdings`). The page now loads `/dev/ipcheck.js?pub=<id>`, which issues
+a 30-second token tied to the client's address, and sends it as
+`X-Data-Token` to `/connect/product/<id>/holdings/?format=json`. Without the
+holdings the resolver found no scans or images, so these records showed as
+needing access. `HttpFetcher.ngmdb_holdings` (`harvest/pdfs.py`) makes the
+same two requests a browser makes, over one connection so the token stays
+valid behind a rotating proxy address. It sends the project's own User-Agent,
+waits the harvester's pause after each request, makes one attempt (a refusal
+is not retried), and runs only when the page itself has no inline holdings.
+`/dev/` is disallowed in robots.txt like `/img*/` and `/ngm-bin/` above; the
+same limits apply. Decision (2026-10-27): the repository owner chose to
+script the token step. `RESOLVER_VERSION` 6 makes unread records resolve
+again.
+
 ### OCR text is not published from CI
 
 The weekly workflow OCRs scans in CI, but the OCR text stays in its Actions
