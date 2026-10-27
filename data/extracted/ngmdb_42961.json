@@ -8,7 +8,7 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-05T21:26:52+00:00",
- "updated_at": "2026-10-18T22:56:09+00:00",
+ "updated_at": "2026-10-20T00:49:46+00:00",
  "reader": "Claude, Claude Code re-read session 2026-10-18",
  "packets": [
   "packet-01"
@@ -31,8 +31,8 @@
  "summary": {
   "stored": 525,
   "quote_match": {
-   "exact": 378,
-   "image": 147
+   "image": 162,
+   "exact": 363
   },
   "verification": {
    "agree": 504
@@ -75,6 +75,38 @@
    "disagree": 0,
    "unclear": 0,
    "image": 147,
+   "review_items": 1,
+   "reread": {
+    "packets": [
+     "reread-02"
+    ],
+    "pages": [
+     1
+    ],
+    "reason": "map_face",
+    "queue_ids": [
+     "ngmdb:42961:map_face:p1"
+    ]
+   }
+  },
+  {
+   "at": "2026-10-20T00:49:46+00:00",
+   "packets": [
+    "reread-02"
+   ],
+   "reader": "Claude, Claude Code re-read session 2026-10-18",
+   "values": 525,
+   "stored": 525,
+   "exact": 363,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 504,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 162,
+   "image_not_verified": 0,
    "review_items": 1,
    "reread": {
     "packets": [
@@ -455,6 +487,18 @@
      }
     }
    ]
+  },
+  {
+   "at": "2026-10-20T00:49:46+00:00",
+   "reason": "map_face",
+   "packets": [
+    "reread-02"
+   ],
+   "pages": [
+    1
+   ],
+   "replaced": [],
+   "note": "re-ingest under the image-provenance rule; only records whose values changed are kept here"
   }
  ],
  "units": [
@@ -1756,15 +1800,14 @@
     "value": "236",
     "source_id": "ngmdb:42961",
     "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.612,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
     "inferred": true,
-    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1",
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1#page=1&viewrect=896.5,1282.5,13.5,9",
     "quote": "236",
-    "quote_match": "exact",
-    "text_method": "ocr",
+    "quote_match": "image",
+    "text_method": "image",
     "verification": "agree",
-    "note": "hand auger hole label on the map face (hand auger holes after Malde, 1959)",
     "image": {
      "tile": "p1-144dpi-3x4-r3c2",
      "box": [
@@ -1787,7 +1830,9 @@
       1291.5
      ],
      "pdf_sha256": "dfa435c4dbc71adce2bd9f32eb7fa1c215d21a08a01b748e33a4ae83e402c1c1"
-    }
+    },
+    "text_match": true,
+    "note": "hand auger hole label on the map face (hand auger holes after Malde, 1959)"
    }
   },
   {
@@ -2920,22 +2965,14 @@
     "value": 8,
     "source_id": "ngmdb:42961",
     "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.612,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
     "inferred": true,
-    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1",
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1#page=1&viewrect=802.5,202.5,42.5,15",
     "quote": "+8'",
-    "quote_match": "exact",
-    "text_method": "ocr",
+    "quote_match": "image",
+    "text_method": "image",
     "verification": "agree",
-    "units": "ft",
-    "note": "value printed beside the symbol",
-    "normalized": {
-     "min_ft": 8.0,
-     "max_ft": 8.0,
-     "unit": "ft",
-     "approximate": false
-    },
     "image": {
      "tile": "p1-144dpi-3x4-r1c2",
      "box": [
@@ -2958,6 +2995,15 @@
       217.5
      ],
      "pdf_sha256": "dfa435c4dbc71adce2bd9f32eb7fa1c215d21a08a01b748e33a4ae83e402c1c1"
+    },
+    "text_match": true,
+    "units": "ft",
+    "note": "value printed beside the symbol",
+    "normalized": {
+     "min_ft": 8.0,
+     "max_ft": 8.0,
+     "unit": "ft",
+     "approximate": false
     }
    },
    "datum": {
@@ -3475,22 +3521,14 @@
     "value": 8,
     "source_id": "ngmdb:42961",
     "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.612,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
     "inferred": true,
-    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1",
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1#page=1&viewrect=1318,301.5,22.5,13.5",
     "quote": "+8'",
-    "quote_match": "exact",
-    "text_method": "ocr",
+    "quote_match": "image",
+    "text_method": "image",
     "verification": "agree",
-    "units": "ft",
-    "note": "value printed beside the symbol; map-face hole 246 (the explanation also shows a sample 246 +8' symbol, not recorded)",
-    "normalized": {
-     "min_ft": 8.0,
-     "max_ft": 8.0,
-     "unit": "ft",
-     "approximate": false
-    },
     "image": {
      "tile": "p1-144dpi-3x4-r1c3",
      "box": [
@@ -3513,6 +3551,15 @@
       315.0
      ],
      "pdf_sha256": "dfa435c4dbc71adce2bd9f32eb7fa1c215d21a08a01b748e33a4ae83e402c1c1"
+    },
+    "text_match": true,
+    "units": "ft",
+    "note": "value printed beside the symbol; map-face hole 246 (the explanation also shows a sample 246 +8' symbol, not recorded)",
+    "normalized": {
+     "min_ft": 8.0,
+     "max_ft": 8.0,
+     "unit": "ft",
+     "approximate": false
     }
    },
    "datum": {
@@ -4500,22 +4547,14 @@
     "value": 8,
     "source_id": "ngmdb:42961",
     "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.612,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
     "inferred": true,
-    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1",
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1#page=1&viewrect=504,876,22,12",
     "quote": "+8'",
-    "quote_match": "exact",
-    "text_method": "ocr",
+    "quote_match": "image",
+    "text_method": "image",
     "verification": "agree",
-    "units": "ft",
-    "note": "value printed beside the symbol",
-    "normalized": {
-     "min_ft": 8.0,
-     "max_ft": 8.0,
-     "unit": "ft",
-     "approximate": false
-    },
     "image": {
      "tile": "p1-144dpi-3x4-r2c1",
      "box": [
@@ -4538,6 +4577,15 @@
       888.0
      ],
      "pdf_sha256": "dfa435c4dbc71adce2bd9f32eb7fa1c215d21a08a01b748e33a4ae83e402c1c1"
+    },
+    "text_match": true,
+    "units": "ft",
+    "note": "value printed beside the symbol",
+    "normalized": {
+     "min_ft": 8.0,
+     "max_ft": 8.0,
+     "unit": "ft",
+     "approximate": false
     }
    },
    "datum": {
@@ -5959,22 +6007,14 @@
     "value": 8,
     "source_id": "ngmdb:42961",
     "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.612,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
     "inferred": true,
-    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1",
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1#page=1&viewrect=763,1018.5,23,13.5",
     "quote": "+8'",
-    "quote_match": "exact",
-    "text_method": "ocr",
+    "quote_match": "image",
+    "text_method": "image",
     "verification": "agree",
-    "units": "ft",
-    "note": "value printed beside the symbol",
-    "normalized": {
-     "min_ft": 8.0,
-     "max_ft": 8.0,
-     "unit": "ft",
-     "approximate": false
-    },
     "image": {
      "tile": "p1-144dpi-3x4-r2c2",
      "box": [
@@ -5997,6 +6037,15 @@
       1032.0
      ],
      "pdf_sha256": "dfa435c4dbc71adce2bd9f32eb7fa1c215d21a08a01b748e33a4ae83e402c1c1"
+    },
+    "text_match": true,
+    "units": "ft",
+    "note": "value printed beside the symbol",
+    "normalized": {
+     "min_ft": 8.0,
+     "max_ft": 8.0,
+     "unit": "ft",
+     "approximate": false
     }
    },
    "datum": {
@@ -8092,22 +8141,14 @@
     "value": 5,
     "source_id": "ngmdb:42961",
     "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.612,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
     "inferred": true,
-    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1",
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1#page=1&viewrect=874,1106,44.5,17",
     "quote": "+5'",
-    "quote_match": "exact",
-    "text_method": "ocr",
+    "quote_match": "image",
+    "text_method": "image",
     "verification": "agree",
-    "units": "ft",
-    "note": "value printed beside the symbol",
-    "normalized": {
-     "min_ft": 5.0,
-     "max_ft": 5.0,
-     "unit": "ft",
-     "approximate": false
-    },
     "image": {
      "tile": "p1-144dpi-3x4-r3c2",
      "box": [
@@ -8130,6 +8171,15 @@
       1123.0
      ],
      "pdf_sha256": "dfa435c4dbc71adce2bd9f32eb7fa1c215d21a08a01b748e33a4ae83e402c1c1"
+    },
+    "text_match": true,
+    "units": "ft",
+    "note": "value printed beside the symbol",
+    "normalized": {
+     "min_ft": 5.0,
+     "max_ft": 5.0,
+     "unit": "ft",
+     "approximate": false
     }
    },
    "datum": {
@@ -8682,15 +8732,14 @@
     "value": "236",
     "source_id": "ngmdb:42961",
     "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.612,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
     "inferred": true,
-    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1",
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1#page=1&viewrect=896.5,1282.5,13.5,9",
     "quote": "236",
-    "quote_match": "exact",
-    "text_method": "ocr",
+    "quote_match": "image",
+    "text_method": "image",
     "verification": "agree",
-    "note": "hand auger hole label on the map face (hand auger holes after Malde, 1959)",
     "image": {
      "tile": "p1-144dpi-3x4-r3c2",
      "box": [
@@ -8713,7 +8762,9 @@
       1291.5
      ],
      "pdf_sha256": "dfa435c4dbc71adce2bd9f32eb7fa1c215d21a08a01b748e33a4ae83e402c1c1"
-    }
+    },
+    "text_match": true,
+    "note": "hand auger hole label on the map face (hand auger holes after Malde, 1959)"
    }
   },
   {
@@ -10668,22 +10719,14 @@
     "value": 5,
     "source_id": "ngmdb:42961",
     "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.612,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
     "inferred": true,
-    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1",
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1#page=1&viewrect=891.5,1683,44.5,17",
     "quote": "+5'",
-    "quote_match": "exact",
-    "text_method": "ocr",
+    "quote_match": "image",
+    "text_method": "image",
     "verification": "agree",
-    "units": "ft",
-    "note": "value printed beside the symbol",
-    "normalized": {
-     "min_ft": 5.0,
-     "max_ft": 5.0,
-     "unit": "ft",
-     "approximate": false
-    },
     "image": {
      "tile": "p1-144dpi-3x4-r4c2",
      "box": [
@@ -10706,6 +10749,15 @@
       1700.0
      ],
      "pdf_sha256": "dfa435c4dbc71adce2bd9f32eb7fa1c215d21a08a01b748e33a4ae83e402c1c1"
+    },
+    "text_match": true,
+    "units": "ft",
+    "note": "value printed beside the symbol",
+    "normalized": {
+     "min_ft": 5.0,
+     "max_ft": 5.0,
+     "unit": "ft",
+     "approximate": false
     }
    },
    "datum": {
@@ -10908,22 +10960,14 @@
     "value": 8,
     "source_id": "ngmdb:42961",
     "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.612,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
     "inferred": true,
-    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1",
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1#page=1&viewrect=751.5,1813,24.5,13.5",
     "quote": "+8'",
-    "quote_match": "exact",
-    "text_method": "ocr",
+    "quote_match": "image",
+    "text_method": "image",
     "verification": "agree",
-    "units": "ft",
-    "note": "value printed beside the symbol",
-    "normalized": {
-     "min_ft": 8.0,
-     "max_ft": 8.0,
-     "unit": "ft",
-     "approximate": false
-    },
     "image": {
      "tile": "p1-144dpi-3x4-r4c2",
      "box": [
@@ -10946,6 +10990,15 @@
       1826.5
      ],
      "pdf_sha256": "dfa435c4dbc71adce2bd9f32eb7fa1c215d21a08a01b748e33a4ae83e402c1c1"
+    },
+    "text_match": true,
+    "units": "ft",
+    "note": "value printed beside the symbol",
+    "normalized": {
+     "min_ft": 8.0,
+     "max_ft": 8.0,
+     "unit": "ft",
+     "approximate": false
     }
    },
    "datum": {
@@ -11783,17 +11836,14 @@
      "value": 5,
      "source_id": "ngmdb:42961",
      "page": 1,
-     "extraction_method": "llm",
-     "confidence": 0.684,
+     "extraction_method": "llm-image",
+     "confidence": 0.48,
      "inferred": true,
-     "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1",
+     "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1#page=1&viewrect=1249.5,376.5,27,24.5",
      "quote": "+5",
-     "quote_match": "exact",
-     "text_method": "ocr",
+     "quote_match": "image",
+     "text_method": "image",
      "verification": "agree",
-     "units": "ft",
-     "note": "contour label on the map face",
-     "normalized": 5.0,
      "image": {
       "tile": "p1-144dpi-3x4-r1c3",
       "box": [
@@ -11816,7 +11866,11 @@
        401.0
       ],
       "pdf_sha256": "dfa435c4dbc71adce2bd9f32eb7fa1c215d21a08a01b748e33a4ae83e402c1c1"
-     }
+     },
+     "text_match": true,
+     "units": "ft",
+     "note": "contour label on the map face",
+     "normalized": 5.0
     },
     {
      "value": 0,
@@ -11861,17 +11915,14 @@
      "value": 20,
      "source_id": "ngmdb:42961",
      "page": 1,
-     "extraction_method": "llm",
-     "confidence": 0.684,
+     "extraction_method": "llm-image",
+     "confidence": 0.48,
      "inferred": true,
-     "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1",
+     "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1#page=1&viewrect=319,686,39.5,22",
      "quote": "+20'",
-     "quote_match": "exact",
-     "text_method": "ocr",
+     "quote_match": "image",
+     "text_method": "image",
      "verification": "agree",
-     "units": "ft",
-     "note": "contour label on the map face",
-     "normalized": 20.0,
      "image": {
       "tile": "p1-144dpi-3x4-r2c1",
       "box": [
@@ -11894,7 +11945,11 @@
        708.0
       ],
       "pdf_sha256": "dfa435c4dbc71adce2bd9f32eb7fa1c215d21a08a01b748e33a4ae83e402c1c1"
-     }
+     },
+     "text_match": true,
+     "units": "ft",
+     "note": "contour label on the map face",
+     "normalized": 20.0
     },
     {
      "value": 15,
@@ -12017,17 +12072,14 @@
      "value": 20,
      "source_id": "ngmdb:42961",
      "page": 1,
-     "extraction_method": "llm",
-     "confidence": 0.684,
+     "extraction_method": "llm-image",
+     "confidence": 0.48,
      "inferred": true,
-     "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1",
+     "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1#page=1&viewrect=881.5,571,24.5,44.5",
      "quote": "+20",
-     "quote_match": "exact",
-     "text_method": "ocr",
+     "quote_match": "image",
+     "text_method": "image",
      "verification": "agree",
-     "units": "ft",
-     "note": "contour label on the map face",
-     "normalized": 20.0,
      "image": {
       "tile": "p1-144dpi-3x4-r2c2",
       "box": [
@@ -12050,7 +12102,11 @@
        615.5
       ],
       "pdf_sha256": "dfa435c4dbc71adce2bd9f32eb7fa1c215d21a08a01b748e33a4ae83e402c1c1"
-     }
+     },
+     "text_match": true,
+     "units": "ft",
+     "note": "contour label on the map face",
+     "normalized": 20.0
     },
     {
      "value": 15,
@@ -12173,17 +12229,14 @@
      "value": 5,
      "source_id": "ngmdb:42961",
      "page": 1,
-     "extraction_method": "llm",
-     "confidence": 0.684,
+     "extraction_method": "llm-image",
+     "confidence": 0.48,
      "inferred": true,
-     "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1",
+     "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1#page=1&viewrect=799,1026,19.5,32",
      "quote": "+5",
-     "quote_match": "exact",
-     "text_method": "ocr",
+     "quote_match": "image",
+     "text_method": "image",
      "verification": "agree",
-     "units": "ft",
-     "note": "contour label on the map face",
-     "normalized": 5.0,
      "image": {
       "tile": "p1-144dpi-3x4-r2c2",
       "box": [
@@ -12206,7 +12259,11 @@
        1058.0
       ],
       "pdf_sha256": "dfa435c4dbc71adce2bd9f32eb7fa1c215d21a08a01b748e33a4ae83e402c1c1"
-     }
+     },
+     "text_match": true,
+     "units": "ft",
+     "note": "contour label on the map face",
+     "normalized": 5.0
     },
     {
      "value": -10,
@@ -12329,17 +12386,14 @@
      "value": 5,
      "source_id": "ngmdb:42961",
      "page": 1,
-     "extraction_method": "llm",
-     "confidence": 0.684,
+     "extraction_method": "llm-image",
+     "confidence": 0.48,
      "inferred": true,
-     "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1",
+     "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1#page=1&viewrect=1329.5,901,27,24.5",
      "quote": "+5",
-     "quote_match": "exact",
-     "text_method": "ocr",
+     "quote_match": "image",
+     "text_method": "image",
      "verification": "agree",
-     "units": "ft",
-     "note": "contour label on the map face",
-     "normalized": 5.0,
      "image": {
       "tile": "p1-144dpi-3x4-r2c3",
       "box": [
@@ -12362,7 +12416,11 @@
        925.5
       ],
       "pdf_sha256": "dfa435c4dbc71adce2bd9f32eb7fa1c215d21a08a01b748e33a4ae83e402c1c1"
-     }
+     },
+     "text_match": true,
+     "units": "ft",
+     "note": "contour label on the map face",
+     "normalized": 5.0
     },
     {
      "value": 10,
@@ -12563,17 +12621,14 @@
      "value": 5,
      "source_id": "ngmdb:42961",
      "page": 1,
-     "extraction_method": "llm",
-     "confidence": 0.684,
+     "extraction_method": "llm-image",
+     "confidence": 0.48,
      "inferred": true,
-     "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1",
+     "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42961_1#page=1&viewrect=1036.5,1615.5,34.5,17",
      "quote": "+5'",
-     "quote_match": "exact",
-     "text_method": "ocr",
+     "quote_match": "image",
+     "text_method": "image",
      "verification": "agree",
-     "units": "ft",
-     "note": "contour label on the map face",
-     "normalized": 5.0,
      "image": {
       "tile": "p1-144dpi-3x4-r4c2",
       "box": [
@@ -12596,7 +12651,11 @@
        1632.5
       ],
       "pdf_sha256": "dfa435c4dbc71adce2bd9f32eb7fa1c215d21a08a01b748e33a4ae83e402c1c1"
-     }
+     },
+     "text_match": true,
+     "units": "ft",
+     "note": "contour label on the map face",
+     "normalized": 5.0
     }
    ]
   }

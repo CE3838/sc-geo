@@ -8,7 +8,7 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-18T23:39:42+00:00",
- "updated_at": "2026-10-18T23:39:42+00:00",
+ "updated_at": "2026-10-20T00:50:07+00:00",
  "reader": "Claude, scheduled Claude Code session 2026-10-18",
  "packets": [
   "packet-01"
@@ -31,8 +31,8 @@
  "summary": {
   "stored": 250,
   "quote_match": {
-   "image": 100,
-   "exact": 150
+   "exact": 143,
+   "image": 107
   },
   "verification": {
    "agree": 124
@@ -58,6 +58,40 @@
    "unclear": 0,
    "image": 100,
    "review_items": 0
+  },
+  {
+   "at": "2026-10-20T00:50:07+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-18",
+   "values": 250,
+   "stored": 250,
+   "exact": 143,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 124,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 107,
+   "image_not_verified": 0,
+   "review_items": 0
+  }
+ ],
+ "history": [
+  {
+   "at": "2026-10-20T00:50:07+00:00",
+   "reason": "re-ingest of packet-01",
+   "packets": [
+    "packet-01"
+   ],
+   "pages": [
+    1
+   ],
+   "replaced": [],
+   "note": "re-ingest under the image-provenance rule; only records whose values changed are kept here"
   }
  ],
  "units": [
@@ -2222,13 +2256,13 @@
      "value": "A",
      "source_id": "ngmdb:94268",
      "page": 1,
-     "extraction_method": "llm",
-     "confidence": 0.765,
+     "extraction_method": "llm-image",
+     "confidence": 0.6,
      "inferred": false,
-     "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94268_1",
+     "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94268_1#page=1&viewrect=112.5,2375,15,15",
      "quote": "A",
-     "quote_match": "exact",
-     "text_method": "ocr",
+     "quote_match": "image",
+     "text_method": "image",
      "verification": "agree",
      "image": {
       "tile": "p1-144dpi-crop0_2330_2475_2690-r1c1",
@@ -2252,7 +2286,8 @@
        2390.0
       ],
       "pdf_sha256": "08ccb4b83a31377c0e21dbdaf2a496e26c762e68f653efd9b2376da7fb9d5e81"
-     }
+     },
+     "text_match": true
     }
    },
    "end": {
@@ -2836,15 +2871,14 @@
         "value": "Th",
         "source_id": "ngmdb:94268",
         "page": 1,
-        "extraction_method": "llm",
-        "confidence": 0.612,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
         "inferred": true,
-        "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94268_1",
+        "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94268_1#page=1&viewrect=470.5,2447,100,11",
         "quote": "Th",
-        "quote_match": "exact",
-        "text_method": "ocr",
+        "quote_match": "image",
+        "text_method": "image",
         "verification": "agree",
-        "note": "unit drawn and labelled in the hole on the section",
         "image": {
          "tile": "p1-144dpi-crop0_2330_2475_2690-r1c1",
          "box": [
@@ -2867,7 +2901,9 @@
           2458.0
          ],
          "pdf_sha256": "08ccb4b83a31377c0e21dbdaf2a496e26c762e68f653efd9b2376da7fb9d5e81"
-        }
+        },
+        "text_match": true,
+        "note": "unit drawn and labelled in the hole on the section"
        },
        "top": {
         "value": "519 ft",
@@ -3952,15 +3988,14 @@
         "value": "Th",
         "source_id": "ngmdb:94268",
         "page": 1,
-        "extraction_method": "llm",
-        "confidence": 0.612,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
         "inferred": true,
-        "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94268_1",
+        "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94268_1#page=1&viewrect=1003,2464.5,100,2",
         "quote": "Th",
-        "quote_match": "exact",
-        "text_method": "ocr",
+        "quote_match": "image",
+        "text_method": "image",
         "verification": "agree",
-        "note": "unit drawn and labelled in the hole on the section",
         "image": {
          "tile": "p1-144dpi-crop0_2330_2475_2690-r1c2",
          "box": [
@@ -3983,7 +4018,9 @@
           2466.5
          ],
          "pdf_sha256": "08ccb4b83a31377c0e21dbdaf2a496e26c762e68f653efd9b2376da7fb9d5e81"
-        }
+        },
+        "text_match": true,
+        "note": "unit drawn and labelled in the hole on the section"
        },
        "top": {
         "value": "472 ft",
@@ -4492,15 +4529,14 @@
         "value": "Th",
         "source_id": "ngmdb:94268",
         "page": 1,
-        "extraction_method": "llm",
-        "confidence": 0.612,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
         "inferred": true,
-        "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94268_1",
+        "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94268_1#page=1&viewrect=1077,2467,100,20",
         "quote": "Th",
-        "quote_match": "exact",
-        "text_method": "ocr",
+        "quote_match": "image",
+        "text_method": "image",
         "verification": "agree",
-        "note": "unit drawn and labelled in the hole on the section",
         "image": {
          "tile": "p1-144dpi-crop0_2330_2475_2690-r1c2",
          "box": [
@@ -4523,7 +4559,9 @@
           2487.0
          ],
          "pdf_sha256": "08ccb4b83a31377c0e21dbdaf2a496e26c762e68f653efd9b2376da7fb9d5e81"
-        }
+        },
+        "text_match": true,
+        "note": "unit drawn and labelled in the hole on the section"
        },
        "top": {
         "value": "465 ft",
@@ -5032,15 +5070,14 @@
         "value": "Th",
         "source_id": "ngmdb:94268",
         "page": 1,
-        "extraction_method": "llm",
-        "confidence": 0.612,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
         "inferred": true,
-        "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94268_1",
+        "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94268_1#page=1&viewrect=1142,2468.5,100,15",
         "quote": "Th",
-        "quote_match": "exact",
-        "text_method": "ocr",
+        "quote_match": "image",
+        "text_method": "image",
         "verification": "agree",
-        "note": "unit drawn and labelled in the hole on the section",
         "image": {
          "tile": "p1-144dpi-crop0_2330_2475_2690-r1c2",
          "box": [
@@ -5063,7 +5100,9 @@
           2483.5
          ],
          "pdf_sha256": "08ccb4b83a31377c0e21dbdaf2a496e26c762e68f653efd9b2376da7fb9d5e81"
-        }
+        },
+        "text_match": true,
+        "note": "unit drawn and labelled in the hole on the section"
        },
        "top": {
         "value": "461 ft",
@@ -5773,15 +5812,14 @@
         "value": "Ggr",
         "source_id": "ngmdb:94268",
         "page": 1,
-        "extraction_method": "llm",
-        "confidence": 0.612,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
         "inferred": true,
-        "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94268_1",
+        "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94268_1#page=1&viewrect=1764.5,2564,100,5",
         "quote": "Ggr",
-        "quote_match": "exact",
-        "text_method": "ocr",
+        "quote_match": "image",
+        "text_method": "image",
         "verification": "agree",
-        "note": "unit drawn and labelled in the hole on the section",
         "image": {
          "tile": "p1-144dpi-crop0_2330_2475_2690-r1c3",
          "box": [
@@ -5804,7 +5842,9 @@
           2569.0
          ],
          "pdf_sha256": "08ccb4b83a31377c0e21dbdaf2a496e26c762e68f653efd9b2376da7fb9d5e81"
-        }
+        },
+        "text_match": true,
+        "note": "unit drawn and labelled in the hole on the section"
        },
        "top": {
         "value": "206 ft",
@@ -6188,15 +6228,14 @@
         "value": "Ggr",
         "source_id": "ngmdb:94268",
         "page": 1,
-        "extraction_method": "llm",
-        "confidence": 0.612,
+        "extraction_method": "llm-image",
+        "confidence": 0.48,
         "inferred": true,
-        "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94268_1",
+        "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94268_1#page=1&viewrect=2067,2586.5,100,5",
         "quote": "Ggr",
-        "quote_match": "exact",
-        "text_method": "ocr",
+        "quote_match": "image",
+        "text_method": "image",
         "verification": "agree",
-        "note": "unit drawn and labelled in the hole on the section",
         "image": {
          "tile": "p1-144dpi-crop0_2330_2475_2690-r1c4",
          "box": [
@@ -6219,7 +6258,9 @@
           2591.5
          ],
          "pdf_sha256": "08ccb4b83a31377c0e21dbdaf2a496e26c762e68f653efd9b2376da7fb9d5e81"
-        }
+        },
+        "text_match": true,
+        "note": "unit drawn and labelled in the hole on the section"
        },
        "top": {
         "value": "146 ft",

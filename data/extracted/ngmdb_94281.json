@@ -8,7 +8,7 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-18T16:04:02+00:00",
- "updated_at": "2026-10-18T16:04:02+00:00",
+ "updated_at": "2026-10-20T00:50:08+00:00",
  "reader": "Claude, scheduled Claude Code session 2026-10-18",
  "packets": [
   "packet-01"
@@ -31,7 +31,8 @@
  "summary": {
   "stored": 31,
   "quote_match": {
-   "exact": 31
+   "image": 3,
+   "exact": 28
   },
   "verification": {
    "agree": 7
@@ -56,6 +57,40 @@
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
+  },
+  {
+   "at": "2026-10-20T00:50:08+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-18",
+   "values": 31,
+   "stored": 31,
+   "exact": 28,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 7,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 3,
+   "image_not_verified": 0,
+   "review_items": 0
+  }
+ ],
+ "history": [
+  {
+   "at": "2026-10-20T00:50:08+00:00",
+   "reason": "re-ingest of packet-01",
+   "packets": [
+    "packet-01"
+   ],
+   "pages": [
+    1
+   ],
+   "replaced": [],
+   "note": "re-ingest under the image-provenance rule; only records whose values changed are kept here"
   }
  ],
  "units": [
@@ -390,15 +425,14 @@
     "value": "thrust faults with sawteeth drawn on the map face, notably around Paris Mountain; sawteeth on tectonically higher plate",
     "source_id": "ngmdb:94281",
     "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.612,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
     "inferred": true,
-    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94281_1",
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94281_1#page=1&viewrect=1010,950,90,180",
     "quote": "thrust fault",
-    "quote_match": "exact",
-    "text_method": "ocr",
+    "quote_match": "image",
+    "text_method": "image",
     "verification": "agree",
-    "note": "line with sawteeth drawn on the map face (page image); type from the explanation",
     "image": {
      "tile": "p1-72dpi-crop900_800_1500_1400-r1c1",
      "box": [
@@ -421,7 +455,9 @@
       1130.0
      ],
      "pdf_sha256": "90fd97df1056a49196da813a376b10359381a95903d7c580f183d3ed7192c5c3"
-    }
+    },
+    "text_match": true,
+    "note": "line with sawteeth drawn on the map face (page image); type from the explanation"
    }
   },
   {
@@ -457,15 +493,14 @@
     "value": "synform trace drawn across Paris Mountain State Park",
     "source_id": "ngmdb:94281",
     "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.612,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
     "inferred": true,
-    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94281_1",
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94281_1#page=1&viewrect=1150,985,330,40",
     "quote": "synform",
-    "quote_match": "exact",
-    "text_method": "ocr",
+    "quote_match": "image",
+    "text_method": "image",
     "verification": "agree",
-    "note": "blue fold trace drawn on the map face",
     "image": {
      "tile": "p1-72dpi-crop900_800_1500_1400-r1c1",
      "box": [
@@ -488,7 +523,9 @@
       1025.0
      ],
      "pdf_sha256": "90fd97df1056a49196da813a376b10359381a95903d7c580f183d3ed7192c5c3"
-    }
+    },
+    "text_match": true,
+    "note": "blue fold trace drawn on the map face"
    }
   },
   {
@@ -524,15 +561,14 @@
     "value": "antiform trace drawn on the map face",
     "source_id": "ngmdb:94281",
     "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.612,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
     "inferred": true,
-    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94281_1",
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94281_1#page=1&viewrect=1170,800,100,60",
     "quote": "antiform",
-    "quote_match": "exact",
-    "text_method": "ocr",
+    "quote_match": "image",
+    "text_method": "image",
     "verification": "agree",
-    "note": "red fold trace drawn on the map face",
     "image": {
      "tile": "p1-72dpi-crop900_800_1500_1400-r1c1",
      "box": [
@@ -555,7 +591,9 @@
       860.0
      ],
      "pdf_sha256": "90fd97df1056a49196da813a376b10359381a95903d7c580f183d3ed7192c5c3"
-    }
+    },
+    "text_match": true,
+    "note": "red fold trace drawn on the map face"
    }
   }
  ],
