@@ -8,10 +8,11 @@
  "kind": "publication",
  "schema_version": 1,
  "extracted_at": "2026-10-27T11:06:09+00:00",
- "updated_at": "2026-10-27T11:06:09+00:00",
+ "updated_at": "2026-10-27T11:08:41+00:00",
  "reader": "Claude, scheduled Claude Code session 2026-10-27",
  "packets": [
-  "packet-01"
+  "packet-01",
+  "packet-02"
  ],
  "blocks_done": [
   "1",
@@ -49,11 +50,81 @@
   "35",
   "36",
   "37",
-  "38"
+  "38",
+  "39",
+  "40",
+  "41",
+  "42",
+  "43",
+  "44",
+  "45",
+  "46",
+  "47",
+  "48",
+  "49",
+  "50",
+  "51",
+  "52",
+  "53",
+  "54",
+  "55",
+  "56",
+  "57",
+  "58",
+  "60",
+  "61",
+  "62",
+  "63",
+  "64",
+  "65",
+  "66",
+  "67",
+  "68",
+  "69",
+  "70",
+  "71",
+  "72",
+  "73",
+  "74",
+  "75",
+  "76",
+  "77",
+  "78",
+  "79",
+  "80",
+  "81",
+  "82",
+  "83",
+  "84",
+  "85",
+  "86",
+  "87",
+  "88",
+  "89",
+  "90",
+  "91",
+  "92",
+  "93",
+  "94",
+  "95",
+  "96",
+  "97",
+  "98",
+  "99",
+  "100",
+  "101",
+  "102",
+  "103",
+  "104",
+  "105",
+  "106",
+  "107",
+  "108",
+  "109"
  ],
  "blocks_total": 106,
- "complete": false,
- "notes": "Wells from table 1 (pages 18-19) with table 2 water-quality profile averages (page 25). The lithologic logs of wells BH65, BH66 and BH67 (figures 10-12) were not recorded: the page images show the interval boundaries but the lithology patterns are not rendered, so no interval can be tied to a lithology; the legends were not recorded. The EM-induction depths of high conductivity (about 72 ft in BH33/BH34, about 110 ft in BH51) are geophysical, not geologic surfaces, and were not recorded as surfaces. Regolith thickness 28-57 ft is inferred by the authors from casing depths (page 27); no surface recorded. Water-quality ranges in the abstract and text duplicate table 2 and were not recorded again. pH values have no units printed.",
+ "complete": true,
+ "notes": "Wells from table 1 (pages 18-19) with table 2 water-quality profile averages (page 25). The lithologic logs of wells BH65, BH66 and BH67 (figures 10-12) were not recorded: the page images show the interval boundaries but the lithology patterns are not rendered, so no interval can be tied to a lithology; the legends were not recorded. The EM-induction depths of high conductivity (about 72 ft in BH33/BH34, about 110 ft in BH51) are geophysical, not geologic surfaces, and were not recorded as surfaces. Regolith thickness 28-57 ft is inferred by the authors from casing depths (page 27); no surface recorded. Water-quality ranges in the abstract and text duplicate table 2 and were not recorded again. pH values have no units printed.\nPages 39-109. Not recorded: (1) the handwritten groundwater-quality profile field forms (pages 69-79, image only; queued for an image re-read) and the OCR of handwritten logging field notes (pages 61-87, garbled); (2) table 3-1 (page 91) tool-rinse quality-assurance samples, whose station numbers are not tied to any location, and the EPA groundwater ranges in that table, which are ranges over several wells; (3) the downhole camera notes of table 2-1 (casing joints, screens, water surface) as well-construction details; (4) pH and specific conductance numbers printed on the figure 27 map, whose pairing with sampling points depends on the layout; (5) FLASH model input and simulated flows (pages 102-107) as model values; (6) surface EM conductivity and penetration-depth estimates as geophysics; (7) general references (software, methods, NC climate, NOAA, rose diagrams). Summary values (page 56) repeat earlier pages. Foliation in IR-1: page 39 gives 222° (N. 42° E.) while pages 13 and 56 give 221° (N. 41° E.). BH51 water level: figure 4-5 (page 96) 45.28 ft vs table 1 (page 19) 46.28 ft.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/sir/2015/5084/sir20155084.pdf",
@@ -64,14 +135,15 @@
   }
  ],
  "summary": {
-  "stored": 486,
+  "stored": 533,
   "quote_match": {
-   "exact": 486
+   "exact": 533
   },
   "verification": {
-   "agree": 436
+   "agree": 452,
+   "disagree": 1
   },
-  "inferred": 22
+  "inferred": 24
  },
  "ingests": [
   {
@@ -93,6 +165,26 @@
    "image": 0,
    "image_not_verified": 0,
    "review_items": 2
+  },
+  {
+   "at": "2026-10-27T11:08:41+00:00",
+   "packets": [
+    "packet-02"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-27",
+   "values": 47,
+   "stored": 47,
+   "exact": 47,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 16,
+   "disagree": 1,
+   "unclear": 0,
+   "image": 0,
+   "image_not_verified": 0,
+   "review_items": 1
   }
  ],
  "units": [
@@ -3066,6 +3158,114 @@
      }
     }
    ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "BH51",
+    "source_id": "ngmdb:102164",
+    "page": 96,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "regolith   well   BH51,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "water_level": {
+    "value": "45.28 feet below land surface",
+    "source_id": "ngmdb:102164",
+    "page": 96,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Water level 45.28 feet below land surface",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "Table 1 (page 19) gives 46.28 ft for BH51; the figure 4-5 label gives 45.28 ft",
+    "normalized": {
+     "min_ft": 45.28,
+     "max_ft": 45.28,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "water_level_date": {
+    "value": "October 2012",
+    "source_id": "ngmdb:102164",
+    "page": 96,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "October   2012,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": "2012-10"
+   },
+   "depth_reference": {
+    "value": "land surface",
+    "source_id": "ngmdb:102164",
+    "page": 96,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Water level 45.28 feet below land surface",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "kind": "spring",
+   "label": {
+    "value": "seep 0",
+    "source_id": "ngmdb:102164",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "(seep 0, fig. 31) located further downstream and west of the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "further downstream and west of the Main Pit lake",
+    "source_id": "ngmdb:102164",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "(seep 0, fig. 31) located further downstream and west of the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "'Main Pit lake' on the next line"
+   },
+   "date": {
+    "value": "June 2009",
+    "source_id": "ngmdb:102164",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "June2009",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "figure 31 title: seeps identified in June 2009 (Oneida, 2009)",
+    "normalized": "2009-06"
+   }
   }
  ],
  "structures": [
@@ -3404,6 +3604,134 @@
     "text_method": "pdf_text",
     "verification": null
    }
+  },
+  {
+   "kind": "foliation",
+   "location": {
+    "value": "bedrock well IR-1",
+    "source_id": "ngmdb:102164",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "could only be measured from the OTV image of well IR-1",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "strike_dip": {
+    "value": "mean strike azimuth 222° (N. 42° E.), strike azimuths ranging from 146° to 241°",
+    "source_id": "ngmdb:102164",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the bedrock foliation data was 222° (N. 42° E.), with strike",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "range from the next line: 'azimuths ranging from 146° to 241°, southwest or northwest'. The abstract (page 13) and summary (page 56) give 221° (N. 41° E.)"
+   },
+   "description": {
+    "value": "mean dip angle was 78° to the northwest, with dip angles ranging from 53° to 85°",
+    "source_id": "ngmdb:102164",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "the northwest, with dip angles ranging from 53° to 85°. The",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "kind": "joint",
+   "name": {
+    "value": "fracture zones",
+    "source_id": "ngmdb:102164",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "drilling report (South Carolina Department of Health and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "well IR-1, depths of 140 and 250 ft",
+    "source_id": "ngmdb:102164",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "fracture zones at depths of 140 and 250 ft. No measureable",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "two fracture zones indicated by the initial drilling report; no measurable difference noted at these depths during the stressed heat-pulse logging",
+    "source_id": "ngmdb:102164",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "difference was noted at these two depths during the stressed",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "kind": "joint",
+   "name": {
+    "value": "fracture zones resolved by the FLASH model",
+    "source_id": "ngmdb:102164",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The model resolved four fracture zones at 38.5, 50, 100, and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "well IR-1, 38.5, 50, 100, and 125 ft",
+    "source_id": "ngmdb:102164",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "The model resolved four fracture zones at 38.5, 50, 100, and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "125 ft on the next line"
+   },
+   "description": {
+    "value": "shallowest fracture zone at 38.5 ft with a 59-percent contribution, potentially part of the transition zone",
+    "source_id": "ngmdb:102164",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The shallowest fracture zone modeled was at 38.5 ft with a",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
   }
  ],
  "groundwater": [
@@ -3608,9 +3936,305 @@
     "verification": null,
     "normalized": "2012-10"
    }
+  },
+  {
+   "aquifer": {
+    "value": "groundwater discharge to the northern unnamed tributary",
+    "source_id": "ngmdb:102164",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "tributary, four separate locations were delineated as areas of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "about 417, 438, 549, and 645 m (1,370, 1,440, 1,800, and 2,120 ft, respectively) along the fiber-optic cable",
+    "source_id": "ngmdb:102164",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "417, 438, 549, and 645 m (1,370, 1,440, 1,800, and 2,120 ft,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "date": {
+    "value": "March 4, 2013, at 7:34 a.m.",
+    "source_id": "ngmdb:102164",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "on March 4, 2013, at 7:34 a.m., the time of coldest measured",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": "2013-03-04"
+   },
+   "description": {
+    "value": "four areas of groundwater discharge delineated by fiber-optic distributed temperature sensing; they correlate with areas of increased surface electrical conductivity and seeps sampled in previous work",
+    "source_id": "ngmdb:102164",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "of inferred groundwater discharge identified by DTS measure-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
   }
  ],
- "references": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Carpenter, R.H., 1976, General geology of the Carolina slate belt along the Georgia-South Carolina border, in Chowns, T.M., ed., Stratigraphy, structure, and seismicity in slate belt rocks along the Savannah River: Geological Society Guidebook 16, p. 9–12.",
+    "source_id": "ngmdb:102164",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Carpenter, R.H., 1976, General geology of the Carolina",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "citation assembled from lines of a two-column reference list"
+   }
+  },
+  {
+   "citation": {
+    "value": "Chapman, M.J., Bolich, R.E., and Huffman, B.A., 2005, Hydrogeologic setting, ground-water flow, and ground-water quality at the Lake Wheeler Road research station, 2001–03, North Carolina Piedmont and Mountains Resource Evaluation Program: U.S. Geological Survey Scientific Investigations Report 2005–5166, 85 p.",
+    "source_id": "ngmdb:102164",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Chapman, M.J., Bolich, R.E., and Huffman, B.A., 2005,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "citation assembled from lines of a two-column reference list"
+   }
+  },
+  {
+   "citation": {
+    "value": "Clark, S.H.B., 1999a, Geologic maps and block diagrams of the Barite Hill gold-silver deposit and vicinity, South Carolina and Georgia: U.S. Geological Survey Open-File Report 99–148A, 3 p., 3 pls.",
+    "source_id": "ngmdb:102164",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Report 99–148A, 3 p., 3 pls.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "citation assembled from lines of a two-column reference list"
+   }
+  },
+  {
+   "citation": {
+    "value": "Clark, S.H.B., 1999b, Geologic maps and block diagrams of the Barite Hill gold-silver deposit and vicinity, South Carolina and Georgia: U.S. Geological Survey Open-File Report 99–148B, 4 p.",
+    "source_id": "ngmdb:102164",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Report 99–148B, 4 p.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "citation assembled from lines of a two-column reference list"
+   }
+  },
+  {
+   "citation": {
+    "value": "Foley, N.K., and Ayuso, R.A., 2012, Gold deposits of the Carolina Slate Belt, Southeastern United States—Age and origin of the major gold producers: U.S. Geological Survey Open-File Report 2012–1179, 26 p.",
+    "source_id": "ngmdb:102164",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Foley, N.K., and Ayuso, R.A., 2012, Gold deposits of the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "citation assembled from lines of a two-column reference list"
+   }
+  },
+  {
+   "citation": {
+    "value": "GEL Geophysics, LLC, 2012, Results of additional electrical resistivity imaging investigations, EPA Barite Hill/Nevada Goldfields Gold Mine, McCormick County, South Carolina: March, 16 p.",
+    "source_id": "ngmdb:102164",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "GEL Geophysics, LLC, 2012, Results of additional electrical",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "citation assembled from lines of a two-column reference list"
+   }
+  },
+  {
+   "citation": {
+    "value": "Heath, R.C., 1980, Basic elements of ground-water hydrology with reference to conditions in North Carolina: U.S. Geological Survey Open-File Report 80–44, 86 p.",
+    "source_id": "ngmdb:102164",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Heath, R.C., 1980, Basic elements of ground-water hydrology",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "citation assembled from lines of a two-column reference list"
+   }
+  },
+  {
+   "citation": {
+    "value": "Hibbard, J.P., Stoddard, E.F., Secor, D.T., and Dennis, A.J., 2002, The Carolina Zone—Overview of Neoproterozoic to Early Paleozoic peri-Goldwanan terranes along the eastern flank of the southern Appalachians: Earth-Science Reviews, v. 57, no. 3–4, p. 299–339.",
+    "source_id": "ngmdb:102164",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Hibbard, J.P., Stoddard, E.F., Secor, D.T., and Dennis, A.J.,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "citation assembled from lines of a two-column reference list"
+   }
+  },
+  {
+   "citation": {
+    "value": "Hibbard, J.P., van Staal, C.R., Rankin, D.W., and Williams, H., 2006, Lithotectonic map of the Appalachian Orogen, Canada–United States of America: Geological Survey of Canada, Map 2096A, scale 1:1,500,000.",
+    "source_id": "ngmdb:102164",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Hibbard, J.P., van Staal, C.R., Rankin, D.W., and Williams,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "citation assembled from lines of a two-column reference list"
+   }
+  },
+  {
+   "citation": {
+    "value": "Lockheed Martin Technology Services, 2007, Field activities (March 26–30, 2007, and May 22, 2007) EPA Barite Hill/Nevada Goldfields Gold Mine, McCormick, SC, Work Assignment No. 0-247—Trip report: 256 p.",
+    "source_id": "ngmdb:102164",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Lockheed Martin Technology Services, 2007, Field activities",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "citation assembled from lines of a two-column reference list"
+   }
+  },
+  {
+   "citation": {
+    "value": "Oneida Total Integrated Enterprises, 2009, Surface water sampling letter report, EPA Barite Hill/Nevada Goldfields site, McCormick, McCormick County, South Carolina: Contract No. EP-W-05-053, Technical Direction Document No. TNA-05-003-0049, July 16, 2009, 43 p.",
+    "source_id": "ngmdb:102164",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Oneida Total Integrated Enterprises, 2009, Surface water",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "citation assembled from lines of a two-column reference list"
+   }
+  },
+  {
+   "citation": {
+    "value": "South Carolina Department of Health and Environmental Control, 2008, Water Well Record, Bureau of Water, permit no. SCW35097399, April, 1 p.",
+    "source_id": "ngmdb:102164",
+    "page": 57,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Control, 2008, Water Well Record, Bureau of Water, permit",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "citation assembled from lines of a two-column reference list"
+   }
+  },
+  {
+   "citation": {
+    "value": "U.S. Environmental Protection Agency, 2004, Barite Hill/Nevada Goldfields Superfund site: Site investigation final draft, 27 p.",
+    "source_id": "ngmdb:102164",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "U.S. Environmental Protection Agency, 2004, Barite Hill/",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "citation assembled from lines of a two-column reference list"
+   }
+  },
+  {
+   "citation": {
+    "value": "U.S. Environmental Protection Agency Superfund Technical Assessment and Response Team, 2008, Fracture trend analysis letter report, EPA Barite Hill/Nevada Goldfields site, McCormick, McCormick County, South Carolina, 2008: Contract No. EP-W-05-053, Technical Direction Document No. TNA-05-003-0049, 11 p.",
+    "source_id": "ngmdb:102164",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "cal Assessment and Response Team, 2008, Fracture trend",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "citation assembled from lines of a two-column reference list"
+   }
+  },
+  {
+   "citation": {
+    "value": "U.S. Environmental Protection Agency, Region 4, Science and Ecosystem Division, 2013, December 2012 groundwater sampling final report: Athens, Ga., June, 462 p.",
+    "source_id": "ngmdb:102164",
+    "page": 58,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "U.S. Environmental Protection Agency, Region 4, Science and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "citation assembled from lines of a two-column reference list"
+   }
+  }
+ ],
  "surfaces": [],
  "contours": [],
  "sections": [],
@@ -8542,6 +9166,188 @@
     "quote_match": "exact",
     "text_method": "pdf_text",
     "verification": "agree"
+   }
+  },
+  {
+   "kind": "well",
+   "observation": {
+    "value": "IR-1",
+    "source_id": "ngmdb:102164",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "IR-1 by using a heat-pulse flowmeter tool on October 10, 2012",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "date": {
+    "value": "October 10, 2012",
+    "source_id": "ngmdb:102164",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "IR-1 by using a heat-pulse flowmeter tool on October 10, 2012",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": "2012-10-10"
+   },
+   "depth": {
+    "value": "140 ft",
+    "source_id": "ngmdb:102164",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "2 gal/min. Slight upflow (0.01–0.02 gal/min at 140 ft, near",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "min_ft": 140.0,
+     "max_ft": 140.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "depth_reference": {
+    "value": "land surface",
+    "source_id": "ngmdb:102164",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "2 gal/min. Slight upflow (0.01–0.02 gal/min at 140 ft, near",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "depths in this report are below land surface"
+   },
+   "parameter": {
+    "value": "Slight upflow",
+    "source_id": "ngmdb:102164",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "2 gal/min. Slight upflow (0.01–0.02 gal/min at 140 ft, near",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "value": {
+    "value": "0.01–0.02 gal/min",
+    "source_id": "ngmdb:102164",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "2 gal/min. Slight upflow (0.01–0.02 gal/min at 140 ft, near",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "near the minimum resolution of the tool; measured during ambient heat-pulse logging",
+    "normalized": {
+     "min": 0.01,
+     "max": 0.02,
+     "qualifier": null
+    }
+   },
+   "method": {
+    "value": "ambient heat-pulse flowmeter logging",
+    "source_id": "ngmdb:102164",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "IR-1 during the ambient heat-pulse logging (fig. 9). The initial",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "kind": "other",
+   "observation": {
+    "value": "northern unnamed tributary",
+    "source_id": "ngmdb:102164",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Tributary discharge was low and stable",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "date": {
+    "value": "February 28, 2013, at 3:30 p.m.",
+    "source_id": "ngmdb:102164",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "meter per second [m3/s]) on February 28, 2013, at 3:30 p.m.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": "2013-02-28"
+   },
+   "parameter": {
+    "value": "Tributary discharge",
+    "source_id": "ngmdb:102164",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Tributary discharge was low and stable",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "value": {
+    "value": "0.25 cubic foot per second (ft3/s)",
+    "source_id": "ngmdb:102164",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "measuring 0.25 cubic foot per second (ft3/s) (0.0072 cubic",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "number": 0.25,
+     "qualifier": null
+    }
+   },
+   "method": {
+    "value": "acoustic Doppler velocimeter and the mid-point method",
+    "source_id": "ngmdb:102164",
+    "page": 26,
+    "extraction_method": "llm",
+    "confidence": 0.34,
+    "inferred": false,
+    "locator": null,
+    "quote": "the survey line using an acoustic Doppler velocimeter and the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "disagree",
+    "note": "method from the Methods section (page 26)"
    }
   }
  ],
