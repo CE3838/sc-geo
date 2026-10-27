@@ -231,3 +231,9 @@ def test_run_moves_image_records_out_of_needs_access(tmp_path, images_on):
     ck = json.loads((tmp_path / "ck" / "ngmdb_100343.json").read_text())
     assert ck["files"][0]["via"] == "ngmdb_image" and ck["files"][0]["url"] == base
     assert not list((tmp_path / "data").rglob("*.pdf")) and not list((tmp_path / "data").rglob("*.jpg"))
+
+
+def test_browse_images_from_holdings_dict():
+    h = json.loads(HOLDINGS[HOLDINGS.index("{"):HOLDINGS.rindex("}") + 1])
+    assert ni.browse_images(h, ["South Carolina Geological Survey"]) == ni.browse_images(
+        HOLDINGS, ["South Carolina Geological Survey"])

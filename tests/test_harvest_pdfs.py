@@ -491,3 +491,90 @@ def test_scan_without_an_engine_says_so(tmp_path, monkeypatch):
     pdfs.run(fetcher=f, ocr="auto", log=lambda *a: None, **paths)
     ck = _ck(paths)
     assert ck["status"] == "needs_ocr" and "no OCR engine" in ck["reason"]
+
+
+# --- NGMDB holdings behind the product page's data token (2026-10) -----------
+
+HOLDINGS_JSON = NGMDB_PAGE[NGMDB_PAGE.index("{"):NGMDB_PAGE.rindex("}") + 1]
+
+
+def test_holdings_from_page_or_dict():
+    h = pdfs.page_holdings(NGMDB_PAGE)
+    assert h["publication"] == 1 and len(h["images"]) == 3
+    assert pdfs.page_holdings("<html></html>") is None
+    assert pdfs.ngmdb_scans(h, [2, 3]) == pdfs.ngmdb_scans(NGMDB_PAGE, [2, 3])
+
+
+class TokenFetcher(FakeFetcher):
+    """A fetcher whose NGMDB pages no longer inline the holdings; it serves them per publication."""
+
+    def __init__(self, routes, holdings):
+        super().__init__(routes)
+        self.holdings, self.asked = holdings, []
+
+    def ngmdb_holdings(self, pub_id):
+        self.asked.append(pub_id)
+        return self.holdings
+
+
+def test_resolve_asks_for_holdings_when_the_page_has_none():
+    page = NGMDB_PAGE.split("<script")[0].replace("pubs.usgs", "x")
+    f = TokenFetcher({"https://ngmdb.usgs.gov/Prodesc/": page,
+                      "https://pubs.usgs.gov/pubs-services/publication/?": {"records": []}}, json.loads(HOLDINGS_JSON))
+    r = pdfs.resolve(CHS, f, email=None)
+    assert f.asked == [1]
+    assert [c["via"] for c in r["candidates"]] == ["ngmdb_scan", "ngmdb_scan"]
+
+
+def test_resolve_skips_the_holdings_request_when_the_page_has_them():
+    f = TokenFetcher({"https://ngmdb.usgs.gov/Prodesc/": NGMDB_PAGE.replace("pubs.usgs", "x"),
+                      "https://pubs.usgs.gov/pubs-services/publication/?": {"records": []}}, None)
+    pdfs.resolve(CHS, f, email=None)
+    assert f.asked == []
+
+
+class FakeConn:
+    """http.client-like connection: the token and the holdings must come over this one connection."""
+
+    def __init__(self, token="abc.def", status=200, body=HOLDINGS_JSON):
+        self.requests, self.token, self.status, self.body, self.closed = [], token, status, body, False
+
+    def request(self, method, path, headers=None):
+        self.requests.append((method, path, dict(headers or {})))
+
+    def getresponse(self):
+        path = self.requests[-1][1]
+        if path.startswith("/dev/ipcheck.js"):
+            data, status = f"var token = '{self.token}';\nvar pubId = 1;\nvar tokenTTL = 30;".encode(), 200
+        else:
+            data, status = self.body.encode(), self.status
+
+        class R:
+            def read(self_inner):
+                return data
+        R.status = status
+        return R()
+
+    def close(self):
+        self.closed = True
+
+
+def test_http_fetcher_gets_holdings_over_one_connection(monkeypatch):
+    conn = FakeConn()
+    f = pdfs.HttpFetcher({**pdfs.CONFIG, "request_pause_seconds": 0})
+    monkeypatch.setattr(f, "_ngmdb_connection", lambda: conn)
+    h = f.ngmdb_holdings(1)
+    assert h["publication"] == 1
+    (_, p1, h1), (_, p2, h2) = conn.requests
+    assert p1 == "/dev/ipcheck.js?pub=1" and p2 == "/connect/product/1/holdings/?format=json"
+    assert h2["X-Data-Token"] == "abc.def"
+    assert h1["User-Agent"] == h2["User-Agent"] and "sc-geo" in h1["User-Agent"]  # the project's own agent
+    assert conn.closed
+
+
+def test_http_fetcher_holdings_refused_is_none(monkeypatch):
+    conn = FakeConn(status=403, body='{"detail":"fingerprint mismatch"}')
+    f = pdfs.HttpFetcher({**pdfs.CONFIG, "request_pause_seconds": 0})
+    monkeypatch.setattr(f, "_ngmdb_connection", lambda: conn)
+    assert f.ngmdb_holdings(1) is None
+    assert len(conn.requests) == 2  # no retries against a refusal

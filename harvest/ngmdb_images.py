@@ -34,14 +34,28 @@ _HOLDINGS = re.compile(r"var holdings\s*=\s*(\{.*?\})\s*;?\s*</script>", re.S)
 _SOF = {0xC0, 0xC1, 0xC2, 0xC3, 0xC5, 0xC6, 0xC7, 0xC9, 0xCA, 0xCB, 0xCD, 0xCE, 0xCF}
 
 
-def browse_images(page: str, providers: list[str]) -> list[str]:
-    """Image base URLs for sheets that have no PDF download, from the allowed providers."""
+def page_holdings(page: str) -> dict | None:
+    """The holdings a product page used to inline (`var holdings = {...}`); None when it has none.
+
+    Since 2026-10 the pages load them from /connect/product/<id>/holdings/ instead
+    (harvest/pdfs.py HttpFetcher.ngmdb_holdings).
+    """
     m = _HOLDINGS.search(page or "")
     if not m:
-        return []
+        return None
     try:
-        h = json.loads(m.group(1))
+        return json.loads(m.group(1))
     except ValueError:
+        return None
+
+
+def browse_images(holdings: dict | str | None, providers: list[str]) -> list[str]:
+    """Image base URLs for sheets that have no PDF download, from the allowed providers.
+
+    `holdings` is the holdings JSON, or a product page that inlines it.
+    """
+    h = page_holdings(holdings) if isinstance(holdings, str) else holdings
+    if not h:
         return []
     out = []
     for img in h.get("images", []):

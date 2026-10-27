@@ -36,11 +36,14 @@ config "ocr.max_attempts" times.
 from __future__ import annotations
 
 import argparse
+import base64
 import html as htmllib
+import http.client
 import json
 import os
 import re
 import shutil
+import ssl
 import threading
 import time
 import urllib.parse
@@ -62,7 +65,7 @@ PUBS_API = "https://pubs.usgs.gov/pubs-services/publication/"
 UNPAYWALL = "https://api.unpaywall.org/v2/"
 CONFIG: dict = json.loads((ROOT / "config" / "extract.json").read_text())
 DONE = {"text", "needs_access"}
-RESOLVER_VERSION = 5  # bump when resolve() finds new kinds of sources; unread records are resolved again
+RESOLVER_VERSION = 6  # bump when resolve() finds new kinds of sources; unread records are resolved again
 VIA_ORDER = ["catalog_pdf", "pubs_usgs", "publisher_pdf", "unpaywall", "openalex", "crossref_oa", "pubs_index", "gis_package", "ngmdb_scan", "ngmdb_image", "scgs_ftp"]
 
 
@@ -198,6 +201,54 @@ class HttpFetcher:
     def json(self, url: str):
         return json.loads(self.text(url))
 
+    def _ngmdb_connection(self) -> http.client.HTTPSConnection:
+        """One HTTPS connection to NGMDB, tunnelled through HTTPS_PROXY when one is set."""
+        host, timeout = urllib.parse.urlsplit(NGMDB).hostname, self.cfg["timeout_seconds"]
+        proxy = os.environ.get("HTTPS_PROXY") or os.environ.get("https_proxy")
+        if not proxy:
+            return http.client.HTTPSConnection(host, timeout=timeout)
+        p = urllib.parse.urlsplit(proxy)
+        cafile = os.environ.get("SSL_CERT_FILE") or os.environ.get("REQUESTS_CA_BUNDLE")
+        ctx = ssl.create_default_context(cafile=cafile) if cafile else ssl.create_default_context()
+        conn = http.client.HTTPSConnection(p.hostname, p.port or 80, context=ctx, timeout=timeout)
+        auth = {}
+        if p.username:
+            cred = f"{urllib.parse.unquote(p.username)}:{urllib.parse.unquote(p.password or '')}"
+            auth["Proxy-Authorization"] = "Basic " + base64.b64encode(cred.encode()).decode()
+        conn.set_tunnel(host, 443, headers=auth)
+        return conn
+
+    def ngmdb_holdings(self, pub_id: int) -> dict | None:
+        """A product's sheets and downloads, as its NGMDB product page loads them (since 2026-10).
+
+        The page first loads /dev/ipcheck.js, which issues a 30-second token tied to the
+        client's address, then sends it as X-Data-Token to /connect/product/<id>/holdings/.
+        Both requests go over one connection (a rotating proxy address would void the token)
+        with the project's own User-Agent; a refusal is not retried. See extract/README.md.
+        """
+        conn = self._ngmdb_connection()
+        try:
+            def get(path: str, **extra: str) -> tuple[int, str]:
+                conn.request("GET", path, headers={**_contact_headers(), **extra})
+                r = conn.getresponse()
+                body = r.read().decode("utf-8", "replace")
+                time.sleep(self.cfg["request_pause_seconds"])
+                return r.status, body
+
+            status, js = get(f"/dev/ipcheck.js?pub={int(pub_id)}")
+            m = re.search(r"var token\s*=\s*'([^']+)'", js)
+            if status != 200 or not m:
+                return None
+            status, body = get(f"/connect/product/{int(pub_id)}/holdings/?format=json", **{"X-Data-Token": m.group(1)})
+            if status != 200:
+                return None
+            h = json.loads(body)
+            return h if isinstance(h, dict) else None
+        except (OSError, ValueError, http.client.HTTPException):
+            return None
+        finally:
+            conn.close()
+
     def download(self, url: str, dest: Path) -> Path:
         dest = Path(dest)
         dest.parent.mkdir(parents=True, exist_ok=True)
@@ -226,17 +277,16 @@ class HttpFetcher:
 
 # --- resolving --------------------------------------------------------------
 
-_HOLDINGS = re.compile(r"var holdings\s*=\s*(\{.*?\})\s*;?\s*</script>", re.S)
+page_holdings = ngmdb_images.page_holdings
 
 
-def ngmdb_scans(page: str, formats=(2, 3)) -> list[str]:
-    """download.pl URLs for each scanned sheet, preferring the first available format."""
-    m = _HOLDINGS.search(page or "")
-    if not m:
-        return []
-    try:
-        h = json.loads(m.group(1))
-    except ValueError:
+def ngmdb_scans(holdings: dict | str | None, formats=(2, 3)) -> list[str]:
+    """download.pl URLs for each scanned sheet, preferring the first available format.
+
+    `holdings` is the holdings JSON, or a product page that inlines it.
+    """
+    h = page_holdings(holdings) if isinstance(holdings, str) else holdings
+    if not h:
         return []
     out = []
     for img in h.get("images", []):
@@ -356,7 +406,7 @@ def resolve(rec: dict, fetcher, email: str | None = None, log: Callable[..., Non
     for url in rec.get("availability", {}).get("pdf", []):
         add({"url": url, "via": "catalog_pdf"})
 
-    page, scans, pub_links = "", [], []
+    page, holdings, scans, pub_links = "", None, [], []
     if rec.get("ngmdb_url"):
         checked.append("ngmdb")
         try:
@@ -364,7 +414,13 @@ def resolve(rec: dict, fetcher, email: str | None = None, log: Callable[..., Non
         except OSError as err:
             log(f"  {rec['id']}: NGMDB page failed: {type(err).__name__}")
             checked.remove("ngmdb")
-        scans = ngmdb_scans(page, cfg["ngmdb_scan_formats"])
+        holdings = page_holdings(page)
+        pid = re.search(r"proddesc_(\d+)", rec["ngmdb_url"])
+        if page and holdings is None and pid and hasattr(fetcher, "ngmdb_holdings"):
+            holdings = fetcher.ngmdb_holdings(int(pid.group(1)))
+            if holdings is None:
+                log(f"  {rec['id']}: NGMDB holdings not available")
+        scans = ngmdb_scans(holdings, cfg["ngmdb_scan_formats"])
         pub_links = publisher_links(page)
 
     index_ids = []
@@ -442,7 +498,7 @@ def resolve(rec: dict, fetcher, email: str | None = None, log: Callable[..., Non
     images = cfg.get("ngmdb_images", {})
     if not cands and images.get("enabled") and (rec.get("publisher") or "").strip() in images.get("publishers", []):
         # Browse images (Zoomify tiles) of sheets with no PDF: OCRed into page text.
-        for url in ngmdb_images.browse_images(page, images.get("providers", [])):
+        for url in ngmdb_images.browse_images(holdings, images.get("providers", [])):
             add({"url": url, "via": "ngmdb_image"})
     if not cands:
         for url in rec.get("availability", {}).get("scgs_ftp", []):
