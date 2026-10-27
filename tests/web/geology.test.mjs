@@ -41,9 +41,9 @@ test('legendEntries lists only classes present, in class order, with counts', ()
   assert.deepEqual(legendEntries(features, 'lith').map((e) => e.id), ['Unconsolidated', 'Metamorphic']);
 });
 
-test('formatAgeRange gives oldest to youngest using the finest terms', () => {
+test('formatAgeRange gives youngest to oldest using the finest terms', () => {
   assert.equal(formatAgeRange('Phanerozoic - Paleozoic - Permian', 'Phanerozoic - Paleozoic - Carboniferous'),
-    'Carboniferous to Permian');
+    'Permian to Carboniferous');
   const pl = 'Phanerozoic - Cenozoic - Quaternary - Pleistocene';
   assert.equal(formatAgeRange(pl, pl), 'Pleistocene');
   assert.equal(formatAgeRange('Phanerozoic - Cenozoic - Tertiary-Neogene - Miocene', null), 'Miocene');

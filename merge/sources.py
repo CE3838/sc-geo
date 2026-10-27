@@ -175,7 +175,7 @@ def _sgmc_age(p: dict) -> str | None:
     old = (p.get("age_max") or "").split(" - ")[-1].strip()
     if not young and not old:
         return None
-    return young if (young == old or not old) else (old if not young else f"{old} to {young}")
+    return young if (young == old or not old) else (old if not young else f"{young} to {old}")
 
 
 def sgmc_feature(geometry: dict, p: dict) -> dict:
