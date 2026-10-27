@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 182,
+ "count": 438,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -183,20 +183,6 @@
    "verify": {
     "verdict": "unclear",
     "note": "year printed as '198k' in the text layer (OCR); 1989 is likely from the text citations but not legible in the entry"
-   }
-  },
-  {
-   "source_id": "ngmdb:47117",
-   "path": "groundwater[11].description",
-   "problem": "verify_disagree",
-   "value": "field bulk density 96 to 120 lb per ft3 and porosity 26 to 46 percent (D'Appolonia, 1981, 1982); laboratory salt-solution column tests reduced permeability to about 4 to 10 percent of baseline",
-   "page": 64,
-   "quote": "bulk density ranged from 96 to 120 Ib.",
-   "added_at": "2026-10-06T01:43:08+00:00",
-   "verify": {
-    "verdict": "disagree",
-    "value": "field bulk density 96 to 120 lb per ft3 and porosity 26 to 46 percent (D'Appolonia, 1981, 1982)",
-    "note": "page 64 gives the field bulk density and porosity; the 4 to 10 percent permeability result is on page 66, not page 64"
    }
   },
   {
@@ -474,46 +460,6 @@
    }
   },
   {
-   "source_id": "ngmdb:103396",
-   "path": "references[1].citation",
-   "problem": "verify_disagree",
-   "value": "Kaczorowski, R. T., 1976, Origin of Carolina bays, in Hayes, M. O., and Kana, T. W. (eds.), Terrigenous clastic depositional environments, some modern examples, a field course sponsored by the American Association of Petroleum Geologists: Columbia, Coastal Research Division, Department of Geology, University of South Carolina, Technical Report 11-CRD, p. II-16 - II-36.",
-   "page": 1,
-   "quote": "Kaczorowski, R. T., 1976. Origin of Carolina bays, in Hayes, M. O., and Kana,",
-   "added_at": "2026-10-06T01:49:48+00:00",
-   "verify": {
-    "verdict": "disagree",
-    "value": "Kaczorowski, R. T., 1976, Origin of Carolina bays, in Hayes, M. O., and Kana, T. W. (eds.), Terrigenous clastic depositional environments, some modern examples, a field course sponsored by the American Association of Petroleum Geologists: Columbia, Coastal Research Division, Department of Geology, University of South Carolina, Technical Report 11-CRD, p. II-16 - I-36.",
-    "note": "page reads 'p. II-16 - I-36.'; the first pass changed it to II-36"
-   }
-  },
-  {
-   "source_id": "ngmdb:103895",
-   "path": "structures[0].certainty",
-   "problem": "verify_unclear",
-   "value": "Identity and existence certain, location accurate. Location approximate where dashed.",
-   "page": 1,
-   "quote": "Fault — Identity and existence certain, location accurate. Location approximate",
-   "added_at": "2026-10-06T10:57:10+00:00",
-   "verify": {
-    "verdict": "unclear",
-    "note": "legend symbol only, no trace or location readable; the explanation alone does not show a fault exists on this quadrangle"
-   }
-  },
-  {
-   "source_id": "ngmdb:103895",
-   "path": "structures[0].description",
-   "problem": "verify_unclear",
-   "value": "fault shown on the map (map symbol explanation)",
-   "page": 1,
-   "quote": "Fault — Identity and existence certain, location accurate. Location approximate",
-   "added_at": "2026-10-06T10:57:10+00:00",
-   "verify": {
-    "verdict": "unclear",
-    "note": "legend symbol only, no trace or location readable; the explanation alone does not show a fault exists on this quadrangle"
-   }
-  },
-  {
    "source_id": "ngmdb:103893",
    "path": "units[3].thickness",
    "problem": "verify_unclear",
@@ -628,19 +574,6 @@
    "verify": {
     "verdict": "unclear",
     "note": "text layer reads 'Thickness is | to 15 feet.'; value read as '1 to 15 feet' with '|' taken as '1'; check the digit against the map image"
-   }
-  },
-  {
-   "source_id": "ngmdb:99138",
-   "path": "units[1].map_symbol",
-   "problem": "verify_unclear",
-   "value": "QHtw",
-   "page": 1,
-   "quote": "QHtw Freshwater marsh and swamp deposits (Holocene) — Black (N1), silty clay and peat",
-   "added_at": "2026-10-06T10:59:45+00:00",
-   "verify": {
-    "verdict": "unclear",
-    "note": "OCR prints 'QHtw' in the description and 'QHiw' on the map face; check the map image"
    }
   },
   {
@@ -1324,58 +1257,6 @@
    "verify": {
     "verdict": "unclear",
     "note": "text layer reads 'aPmt'; read as 'QPmt' by correcting OCR characters; check against the map image"
-   }
-  },
-  {
-   "source_id": "ngmdb:99140",
-   "path": "units[14].map_symbol",
-   "problem": "verify_unclear",
-   "value": "QPphr",
-   "page": 1,
-   "quote": "@Pphr Flood plain deposits",
-   "added_at": "2026-10-07T10:59:56+00:00",
-   "verify": {
-    "verdict": "unclear",
-    "note": "text layer reads '@Pphr'; read as 'QPphr' by correcting OCR characters; check against the map image"
-   }
-  },
-  {
-   "source_id": "ngmdb:99140",
-   "path": "units[18].map_symbol",
-   "problem": "verify_unclear",
-   "value": "QPwr",
-   "page": 1,
-   "quote": "[ aPwr | Fluvial deposits",
-   "added_at": "2026-10-07T10:59:56+00:00",
-   "verify": {
-    "verdict": "unclear",
-    "note": "text layer reads 'aPwr'; read as 'QPwr' by correcting OCR characters; check against the map image"
-   }
-  },
-  {
-   "source_id": "ngmdb:99141",
-   "path": "units[13].map_symbol",
-   "problem": "verify_unclear",
-   "value": "QPpas",
-   "page": 1,
-   "quote": "[ oF pas | Barrier-island deposits",
-   "added_at": "2026-10-07T10:59:56+00:00",
-   "verify": {
-    "verdict": "unclear",
-    "note": "text layer reads 'oF pas'; read as 'QPpas' by correcting OCR characters; check against the map image"
-   }
-  },
-  {
-   "source_id": "ngmdb:103893",
-   "path": "units[10].map_symbol",
-   "problem": "verify_unclear",
-   "value": "QPpas",
-   "page": 1,
-   "quote": "[ aFpas | Barrier-island deposits",
-   "added_at": "2026-10-07T10:59:56+00:00",
-   "verify": {
-    "verdict": "unclear",
-    "note": "text layer reads 'aFpas'; read as 'QPpas' by correcting OCR characters; check against the map image"
    }
   },
   {
@@ -2207,6 +2088,71 @@
    }
   },
   {
+   "source_id": "ngmdb:46513",
+   "path": "water_tests[82].value",
+   "problem": "verify_unclear",
+   "value": "0.5",
+   "page": 11,
+   "quote": "0.5'",
+   "added_at": "2026-10-18T16:17:30+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "text layer garbles this cell; page image shows 0.5 (re-viewed p11 tile r2c1)"
+   }
+  },
+  {
+   "source_id": "ngmdb:46513",
+   "path": "water_tests[154].value",
+   "problem": "verify_unclear",
+   "value": "3.2",
+   "page": 13,
+   "quote": "BAM079 7.4 11 _3.2 1.1 15 0.4 ND 6.3",
+   "added_at": "2026-10-18T16:17:30+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR-garbled cell (text layer prints _3.2; page image (p13 tile r1c1) shows 3.2); reading from the page image"
+   }
+  },
+  {
+   "source_id": "ngmdb:46513",
+   "path": "water_tests[207].value",
+   "problem": "verify_unclear",
+   "value": "4.6",
+   "page": 13,
+   "quote": "1 \"' 4.6' :",
+   "added_at": "2026-10-18T16:17:30+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR-garbled cell (text layer prints 4.6' on the line below the COL356 row; page image (p13 tile r1c1) shows 4.6 under Silica); reading from the page image"
+   }
+  },
+  {
+   "source_id": "ngmdb:46513",
+   "path": "water_tests[345].value",
+   "problem": "verify_unclear",
+   "value": "1",
+   "page": 13,
+   "quote": "ORG400 58 I 9.7 0.42 8.6 18 0.13 16",
+   "added_at": "2026-10-18T16:17:30+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR-garbled cell (text layer prints I; page image (p13 tile r2c1) shows 1); reading from the page image"
+   }
+  },
+  {
+   "source_id": "ngmdb:46513",
+   "path": "water_tests[600].value",
+   "problem": "verify_unclear",
+   "value": "0.011",
+   "page": 15,
+   "quote": "DOR326 Deethyl atrazine (0.019), atrazine (0.01 1), prometon (0.009)",
+   "added_at": "2026-10-18T16:17:30+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "printed (0.01 1) in the text layer; 0.011 is the likely reading"
+   }
+  },
+  {
    "source_id": "ngmdb:48337",
    "path": "water_tests[181].value",
    "problem": "verify_unclear",
@@ -2272,6 +2218,39 @@
    }
   },
   {
+   "source_id": "ngmdb:42961",
+   "path": "surfaces[7].elevation",
+   "problem": "image_unclear",
+   "value": "-2 to 2",
+   "page": 1,
+   "quote": "2'",
+   "added_at": "2026-10-18T22:56:08+00:00",
+   "image": {
+    "tile": "p1-144dpi-3x4-r1c3",
+    "box": [
+     715,
+     398,
+     750,
+     428
+    ],
+    "dpi": 144,
+    "page_px_box": [
+     2936,
+     398,
+     2971,
+     428
+    ],
+    "pt_box": [
+     1468.0,
+     199.0,
+     1485.5,
+     214.0
+    ],
+    "pdf_sha256": "dfa435c4dbc71adce2bd9f32eb7fa1c215d21a08a01b748e33a4ae83e402c1c1",
+    "unclear": true
+   }
+  },
+  {
    "source_id": "ngmdb:100345",
    "path": "units[2].thickness",
    "problem": "verify_unclear",
@@ -2317,212 +2296,3116 @@
    "value": "Large burrows 1 to 2 cm in diameter, and locally small burrows 2 to 3 mm in diameter",
    "page": 1,
    "quote": "inclined thin clay laminae help define the cross bedding. Large burrows | to 2 cm in diameter, and",
-   "added_at": "2026-10-20T00:49:44+00:00",
+   "added_at": "2026-10-19T10:56:42+00:00",
    "verify": {
     "verdict": "unclear",
     "note": "OCR prints '| to 2 cm'; the first digit is read as 1 but is not printed legibly"
    }
   },
   {
-   "source_id": "ngmdb:42961",
-   "path": "surfaces[7].elevation",
-   "problem": "image_unclear",
-   "value": "-2 to 2",
+   "source_id": "ngmdb:77477",
+   "path": "units[5].lithology",
+   "problem": "verify_unclear",
+   "value": "gray, fine- to medium-crystalline, moderately well layered augen gneiss with microcline augen 1 to 4 centimeters in size; variably mylonitic",
    "page": 1,
-   "quote": "2'",
-   "added_at": "2026-10-20T00:49:45+00:00",
+   "quote": "and moderately well layered compositionally. Microcline augen are | to 4 centimeters in 7",
+   "added_at": "2026-10-20T10:58:28+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints \"| to 4 centimeters\"; the first digit is read as 1 but is not printed legibly"
+   }
+  },
+  {
+   "source_id": "ngmdb:77459",
+   "path": "units[11].lithology",
+   "problem": "verify_unclear",
+   "value": "dark, spotted phyllitic rock with flattened lapilli; clasts up to several centimeters long and 1 to 2 mm thick",
+   "page": 1,
+   "quote": "elliptical shapes up to several centimeters long and | to 2 mm thick, and they are composed of fine 23 oo . ; .",
+   "added_at": "2026-10-20T10:59:50+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints \"| to 2 mm\"; the first digit is read as 1 but is not printed legibly"
+   }
+  },
+  {
+   "source_id": "ngmdb:77459",
+   "path": "units[11].description",
+   "problem": "verify_unclear",
+   "value": "chloritoid schist with chloritoid crystals 2 to 4 mm and minor magnetite octahedra 1 mm; kyanite quartzite around Jefferson Mountain; possible siliceous alteration zone",
+   "page": 1,
+   "quote": "luster: dark-colored chloritoid crystals are 2 to 4 mm, and minor magnetite octahedra are | mm. - . ; -",
+   "added_at": "2026-10-20T10:59:50+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints \"are | mm\"; the digit is read as 1 but is not printed legibly"
+   }
+  },
+  {
+   "source_id": "ngmdb:77449",
+   "path": "units[2].map_symbol",
+   "problem": "verify_unclear",
+   "value": "QHfw",
+   "page": 1,
+   "quote": "QHiw",
+   "added_at": "2026-10-25T10:57:12+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR 'QHiw'; page image box reads QHfw"
+   }
+  },
+  {
+   "source_id": "ngmdb:77449",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "lowering the salinity and rising tides importing high salinity waters. Thickness | to 40 feet",
+   "added_at": "2026-10-25T10:57:12+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' for the first digit; 1 is the likely reading"
+   }
+  },
+  {
+   "source_id": "ngmdb:77449",
+   "path": "units[4].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "Thickness | to 40 feet.",
+   "added_at": "2026-10-25T10:57:12+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints '|' for the first digit; 1 is the likely reading"
+   }
+  },
+  {
+   "source_id": "ngmdb:100396",
+   "path": "surfaces[72].elevation",
+   "problem": "image_unclear",
+   "value": -19,
+   "page": 1,
+   "quote": "-19",
+   "added_at": "2026-10-25T23:45:35+00:00",
    "image": {
-    "tile": "p1-144dpi-3x4-r1c3",
+    "tile": "p1-400dpi-crop1200_1150_2000_1260-r1c2",
     "box": [
-     715,
-     398,
-     750,
-     428
+     912,
+     0,
+     975,
+     50
     ],
-    "dpi": 144,
+    "dpi": 400,
     "page_px_box": [
-     2936,
-     398,
-     2971,
-     428
+     8659,
+     6388,
+     8722,
+     6438
     ],
     "pt_box": [
-     1468.0,
-     199.0,
-     1485.5,
-     214.0
+     1558.62,
+     1149.84,
+     1569.96,
+     1158.84
     ],
-    "pdf_sha256": "dfa435c4dbc71adce2bd9f32eb7fa1c215d21a08a01b748e33a4ae83e402c1c1",
+    "pdf_sha256": "b3e94f43bfa31fc12b46323e732f715eb6f0e7c96226151d87963ed60b900e29",
     "unclear": true
    }
   },
   {
-   "source_id": "ngmdb:46513",
-   "path": "water_tests[82].value",
-   "problem": "image_not_verified",
-   "value": "0.5",
-   "page": 11,
-   "quote": "0.5'",
-   "added_at": "2026-10-20T00:49:47+00:00",
+   "source_id": "ngmdb:100396",
+   "path": "surfaces[72].location",
+   "problem": "image_unclear",
+   "value": "auger hole or well symbol on the map face; no printed coordinates (position only as this image box)",
+   "page": 1,
+   "quote": "-19",
+   "added_at": "2026-10-25T23:45:35+00:00",
    "image": {
-    "tile": "p11-250dpi-1x2-r2c1",
+    "tile": "p1-400dpi-crop1200_1150_2000_1260-r1c2",
     "box": [
-     1610,
-     535,
-     1680,
-     578
+     912,
+     0,
+     975,
+     50
     ],
-    "dpi": 250,
+    "dpi": 400,
     "page_px_box": [
-     1610,
-     1800,
-     1680,
-     1843
+     8659,
+     6388,
+     8722,
+     6438
     ],
     "pt_box": [
-     463.68,
-     518.4,
-     483.84,
-     530.78
+     1558.62,
+     1149.84,
+     1569.96,
+     1158.84
     ],
-    "pdf_sha256": "be83fb6816d3f8863bf1eb1dd02074fa8ec57d67b36b1e8f26af3cc982b43f11"
-   },
-   "verdict": "unclear",
-   "note": "text layer garbles this cell; page image shows 0.5 (re-viewed p11 tile r2c1)",
-   "verify": {
-    "verdict": "unclear",
-    "note": "text layer garbles this cell; page image shows 0.5 (re-viewed p11 tile r2c1)"
-   },
-   "detail": "values read from an image are stored only after a verify pass re-views the tile and agrees"
+    "pdf_sha256": "b3e94f43bfa31fc12b46323e732f715eb6f0e7c96226151d87963ed60b900e29",
+    "unclear": true
+   }
   },
   {
-   "source_id": "ngmdb:46513",
-   "path": "water_tests[154].value",
-   "problem": "image_not_verified",
-   "value": "3.2",
-   "page": 13,
-   "quote": "BAM079 7.4 11 _3.2 1.1 15 0.4 ND 6.3",
-   "added_at": "2026-10-20T00:49:47+00:00",
+   "source_id": "ngmdb:100396",
+   "path": "surfaces[83].elevation",
+   "problem": "image_unclear",
+   "value": 5,
+   "page": 1,
+   "quote": "5",
+   "added_at": "2026-10-25T23:45:35+00:00",
    "image": {
-    "tile": "p13-250dpi-1x2-r1c1",
+    "tile": "p1-400dpi-crop1200_1150_2000_1260-r1c4",
     "box": [
-     800,
-     712,
-     855,
-     752
+     412,
+     192,
+     458,
+     255
     ],
-    "dpi": 250,
+    "dpi": 400,
     "page_px_box": [
-     800,
-     712,
-     855,
-     752
+     10322,
+     6580,
+     10368,
+     6643
     ],
     "pt_box": [
-     230.4,
-     205.06,
-     246.24,
-     216.58
+     1857.96,
+     1184.4,
+     1866.24,
+     1195.74
     ],
-    "pdf_sha256": "be83fb6816d3f8863bf1eb1dd02074fa8ec57d67b36b1e8f26af3cc982b43f11"
-   },
-   "verdict": "unclear",
-   "note": "OCR-garbled cell (text layer prints _3.2; page image (p13 tile r1c1) shows 3.2); reading from the page image",
-   "verify": {
-    "verdict": "unclear",
-    "note": "OCR-garbled cell (text layer prints _3.2; page image (p13 tile r1c1) shows 3.2); reading from the page image"
-   },
-   "detail": "values read from an image are stored only after a verify pass re-views the tile and agrees"
+    "pdf_sha256": "b3e94f43bfa31fc12b46323e732f715eb6f0e7c96226151d87963ed60b900e29",
+    "unclear": true
+   }
   },
   {
-   "source_id": "ngmdb:46513",
-   "path": "water_tests[207].value",
-   "problem": "image_not_verified",
-   "value": "4.6",
-   "page": 13,
-   "quote": "1 \"' 4.6' :",
-   "added_at": "2026-10-20T00:49:47+00:00",
+   "source_id": "ngmdb:100396",
+   "path": "surfaces[83].location",
+   "problem": "image_unclear",
+   "value": "auger hole or well symbol on the map face; no printed coordinates (position only as this image box)",
+   "page": 1,
+   "quote": "5",
+   "added_at": "2026-10-25T23:45:35+00:00",
    "image": {
-    "tile": "p13-250dpi-1x2-r1c1",
+    "tile": "p1-400dpi-crop1200_1150_2000_1260-r1c4",
     "box": [
-     1690,
-     1048,
-     1740,
-     1088
+     412,
+     192,
+     458,
+     255
     ],
-    "dpi": 250,
+    "dpi": 400,
     "page_px_box": [
-     1690,
-     1048,
-     1740,
-     1088
+     10322,
+     6580,
+     10368,
+     6643
     ],
     "pt_box": [
-     486.72,
-     301.82,
-     501.12,
-     313.34
+     1857.96,
+     1184.4,
+     1866.24,
+     1195.74
     ],
-    "pdf_sha256": "be83fb6816d3f8863bf1eb1dd02074fa8ec57d67b36b1e8f26af3cc982b43f11"
-   },
-   "verdict": "unclear",
-   "note": "OCR-garbled cell (text layer prints 4.6' on the line below the COL356 row; page image (p13 tile r1c1) shows 4.6 under Silica); reading from the page image",
-   "verify": {
-    "verdict": "unclear",
-    "note": "OCR-garbled cell (text layer prints 4.6' on the line below the COL356 row; page image (p13 tile r1c1) shows 4.6 under Silica); reading from the page image"
-   },
-   "detail": "values read from an image are stored only after a verify pass re-views the tile and agrees"
+    "pdf_sha256": "b3e94f43bfa31fc12b46323e732f715eb6f0e7c96226151d87963ed60b900e29",
+    "unclear": true
+   }
   },
   {
-   "source_id": "ngmdb:46513",
-   "path": "water_tests[345].value",
-   "problem": "image_not_verified",
-   "value": "1",
-   "page": 13,
-   "quote": "ORG400 58 I 9.7 0.42 8.6 18 0.13 16",
-   "added_at": "2026-10-20T00:49:47+00:00",
+   "source_id": "ngmdb:100396",
+   "path": "surfaces[87].elevation",
+   "problem": "image_unclear",
+   "value": -19,
+   "page": 1,
+   "quote": "-19",
+   "added_at": "2026-10-25T23:45:35+00:00",
    "image": {
-    "tile": "p13-250dpi-1x2-r2c1",
+    "tile": "p1-400dpi-crop1200_1250_1390_1900-r1c1",
     "box": [
-     605,
-     783,
-     640,
-     822
+     852,
+     135,
+     935,
+     190
     ],
-    "dpi": 250,
+    "dpi": 400,
     "page_px_box": [
-     605,
-     2048,
-     640,
-     2087
+     7518,
+     7079,
+     7601,
+     7134
     ],
     "pt_box": [
-     174.24,
-     589.82,
-     184.32,
-     601.06
+     1353.24,
+     1274.22,
+     1368.18,
+     1284.12
     ],
-    "pdf_sha256": "be83fb6816d3f8863bf1eb1dd02074fa8ec57d67b36b1e8f26af3cc982b43f11"
-   },
-   "verdict": "unclear",
-   "note": "OCR-garbled cell (text layer prints I; page image (p13 tile r2c1) shows 1); reading from the page image",
-   "verify": {
-    "verdict": "unclear",
-    "note": "OCR-garbled cell (text layer prints I; page image (p13 tile r2c1) shows 1); reading from the page image"
-   },
-   "detail": "values read from an image are stored only after a verify pass re-views the tile and agrees"
+    "pdf_sha256": "b3e94f43bfa31fc12b46323e732f715eb6f0e7c96226151d87963ed60b900e29",
+    "unclear": true
+   }
   },
   {
-   "source_id": "ngmdb:46513",
-   "path": "water_tests[600].value",
+   "source_id": "ngmdb:100396",
+   "path": "surfaces[87].location",
+   "problem": "image_unclear",
+   "value": "auger hole or well symbol on the map face; no printed coordinates (position only as this image box)",
+   "page": 1,
+   "quote": "-19",
+   "added_at": "2026-10-25T23:45:35+00:00",
+   "image": {
+    "tile": "p1-400dpi-crop1200_1250_1390_1900-r1c1",
+    "box": [
+     852,
+     135,
+     935,
+     190
+    ],
+    "dpi": 400,
+    "page_px_box": [
+     7518,
+     7079,
+     7601,
+     7134
+    ],
+    "pt_box": [
+     1353.24,
+     1274.22,
+     1368.18,
+     1284.12
+    ],
+    "pdf_sha256": "b3e94f43bfa31fc12b46323e732f715eb6f0e7c96226151d87963ed60b900e29",
+    "unclear": true
+   }
+  },
+  {
+   "source_id": "ngmdb:100396",
+   "path": "surfaces[96].elevation",
+   "problem": "image_unclear",
+   "value": 7,
+   "page": 1,
+   "quote": "7",
+   "added_at": "2026-10-25T23:45:35+00:00",
+   "image": {
+    "tile": "p1-400dpi-crop1200_1250_1390_1900-r1c1",
+    "box": [
+     494,
+     838,
+     548,
+     870
+    ],
+    "dpi": 400,
+    "page_px_box": [
+     7160,
+     7782,
+     7214,
+     7814
+    ],
+    "pt_box": [
+     1288.8,
+     1400.76,
+     1298.52,
+     1406.52
+    ],
+    "pdf_sha256": "b3e94f43bfa31fc12b46323e732f715eb6f0e7c96226151d87963ed60b900e29",
+    "unclear": true
+   }
+  },
+  {
+   "source_id": "ngmdb:100396",
+   "path": "surfaces[96].location",
+   "problem": "image_unclear",
+   "value": "auger hole or well symbol on the map face; no printed coordinates (position only as this image box)",
+   "page": 1,
+   "quote": "7",
+   "added_at": "2026-10-25T23:45:35+00:00",
+   "image": {
+    "tile": "p1-400dpi-crop1200_1250_1390_1900-r1c1",
+    "box": [
+     494,
+     838,
+     548,
+     870
+    ],
+    "dpi": 400,
+    "page_px_box": [
+     7160,
+     7782,
+     7214,
+     7814
+    ],
+    "pt_box": [
+     1288.8,
+     1400.76,
+     1298.52,
+     1406.52
+    ],
+    "pdf_sha256": "b3e94f43bfa31fc12b46323e732f715eb6f0e7c96226151d87963ed60b900e29",
+    "unclear": true
+   }
+  },
+  {
+   "source_id": "ngmdb:100396",
+   "path": "surfaces[106].elevation",
+   "problem": "image_unclear",
+   "value": -10,
+   "page": 1,
+   "quote": "-10",
+   "added_at": "2026-10-25T23:45:35+00:00",
+   "image": {
+    "tile": "p1-400dpi-crop1200_1250_1390_1900-r1c1",
+    "box": [
+     495,
+     1058,
+     555,
+     1125
+    ],
+    "dpi": 400,
+    "page_px_box": [
+     7161,
+     8002,
+     7221,
+     8069
+    ],
+    "pt_box": [
+     1288.98,
+     1440.36,
+     1299.78,
+     1452.42
+    ],
+    "pdf_sha256": "b3e94f43bfa31fc12b46323e732f715eb6f0e7c96226151d87963ed60b900e29",
+    "unclear": true
+   }
+  },
+  {
+   "source_id": "ngmdb:100396",
+   "path": "surfaces[106].location",
+   "problem": "image_unclear",
+   "value": "auger hole or well symbol on the map face; no printed coordinates (position only as this image box)",
+   "page": 1,
+   "quote": "-10",
+   "added_at": "2026-10-25T23:45:35+00:00",
+   "image": {
+    "tile": "p1-400dpi-crop1200_1250_1390_1900-r1c1",
+    "box": [
+     495,
+     1058,
+     555,
+     1125
+    ],
+    "dpi": 400,
+    "page_px_box": [
+     7161,
+     8002,
+     7221,
+     8069
+    ],
+    "pt_box": [
+     1288.98,
+     1440.36,
+     1299.78,
+     1452.42
+    ],
+    "pdf_sha256": "b3e94f43bfa31fc12b46323e732f715eb6f0e7c96226151d87963ed60b900e29",
+    "unclear": true
+   }
+  },
+  {
+   "source_id": "ngmdb:100396",
+   "path": "surfaces[116].elevation",
+   "problem": "image_unclear",
+   "value": -7,
+   "page": 1,
+   "quote": "-7",
+   "added_at": "2026-10-25T23:45:35+00:00",
+   "image": {
+    "tile": "p1-400dpi-crop1200_1250_1390_1900-r2c1",
+    "box": [
+     338,
+     492,
+     388,
+     550
+    ],
+    "dpi": 400,
+    "page_px_box": [
+     7004,
+     8600,
+     7054,
+     8658
+    ],
+    "pt_box": [
+     1260.72,
+     1548.0,
+     1269.72,
+     1558.44
+    ],
+    "pdf_sha256": "b3e94f43bfa31fc12b46323e732f715eb6f0e7c96226151d87963ed60b900e29",
+    "unclear": true
+   }
+  },
+  {
+   "source_id": "ngmdb:100396",
+   "path": "surfaces[116].location",
+   "problem": "image_unclear",
+   "value": "auger hole or well symbol on the map face; no printed coordinates (position only as this image box)",
+   "page": 1,
+   "quote": "-7",
+   "added_at": "2026-10-25T23:45:35+00:00",
+   "image": {
+    "tile": "p1-400dpi-crop1200_1250_1390_1900-r2c1",
+    "box": [
+     338,
+     492,
+     388,
+     550
+    ],
+    "dpi": 400,
+    "page_px_box": [
+     7004,
+     8600,
+     7054,
+     8658
+    ],
+    "pt_box": [
+     1260.72,
+     1548.0,
+     1269.72,
+     1558.44
+    ],
+    "pdf_sha256": "b3e94f43bfa31fc12b46323e732f715eb6f0e7c96226151d87963ed60b900e29",
+    "unclear": true
+   }
+  },
+  {
+   "source_id": "ngmdb:100396",
+   "path": "surfaces[118].elevation",
+   "problem": "image_unclear",
+   "value": 13,
+   "page": 1,
+   "quote": "13",
+   "added_at": "2026-10-25T23:45:35+00:00",
+   "image": {
+    "tile": "p1-400dpi-crop1200_1250_1390_1900-r2c1",
+    "box": [
+     560,
+     772,
+     632,
+     838
+    ],
+    "dpi": 400,
+    "page_px_box": [
+     7226,
+     8880,
+     7298,
+     8946
+    ],
+    "pt_box": [
+     1300.68,
+     1598.4,
+     1313.64,
+     1610.28
+    ],
+    "pdf_sha256": "b3e94f43bfa31fc12b46323e732f715eb6f0e7c96226151d87963ed60b900e29",
+    "unclear": true
+   }
+  },
+  {
+   "source_id": "ngmdb:100396",
+   "path": "surfaces[118].location",
+   "problem": "image_unclear",
+   "value": "auger hole or well symbol on the map face; no printed coordinates (position only as this image box)",
+   "page": 1,
+   "quote": "13",
+   "added_at": "2026-10-25T23:45:35+00:00",
+   "image": {
+    "tile": "p1-400dpi-crop1200_1250_1390_1900-r2c1",
+    "box": [
+     560,
+     772,
+     632,
+     838
+    ],
+    "dpi": 400,
+    "page_px_box": [
+     7226,
+     8880,
+     7298,
+     8946
+    ],
+    "pt_box": [
+     1300.68,
+     1598.4,
+     1313.64,
+     1610.28
+    ],
+    "pdf_sha256": "b3e94f43bfa31fc12b46323e732f715eb6f0e7c96226151d87963ed60b900e29",
+    "unclear": true
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[337].observation",
    "problem": "verify_unclear",
-   "value": "0.011",
-   "page": 15,
-   "quote": "DOR326 Deethyl atrazine (0.019), atrazine (0.01 1), prometon (0.009)",
-   "added_at": "2026-10-20T00:49:47+00:00",
+   "value": "E586-1",
+   "page": 32,
+   "quote": "E586-l   586GW00101   18.4   4   3.3   4   AOC   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
    "verify": {
     "verdict": "unclear",
-    "note": "printed (0.01 1) in the text layer; 0.011 is the likely reading"
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'E586-l'; Well identifier 586GW00101; well type AOC; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[338].observation",
+   "problem": "verify_unclear",
+   "value": "E586-1",
+   "page": 32,
+   "quote": "E586-l   586GW00101   18.4   4   3.3   4   AOC   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'E586-l'; Well identifier 586GW00101; well type AOC; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[495].observation",
+   "problem": "verify_unclear",
+   "value": "EGD-11D",
+   "page": 34,
+   "quote": "EGD-llD   GDEGW11D01   5.2   4   5.4   4   GRID   NA",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'EGD-llD'; Well identifier GDEGW11D01; well type GRID; GEOCODE NA"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[496].observation",
+   "problem": "verify_unclear",
+   "value": "EGD-11D",
+   "page": 34,
+   "quote": "EGD-llD   GDEGW11D01   5.2   4   5.4   4   GRID   NA",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'EGD-llD'; Well identifier GDEGW11D01; well type GRID; GEOCODE NA"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[509].observation",
+   "problem": "verify_unclear",
+   "value": "EGD-18D",
+   "page": 34,
+   "quote": "EGD-1 8D   GDEGW18D01   2.5   4   2.7   4   GRID   NA",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'EGD-1 8D'; Well identifier GDEGW18D01; well type GRID; GEOCODE NA"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[510].observation",
+   "problem": "verify_unclear",
+   "value": "EGD-18D",
+   "page": 34,
+   "quote": "EGD-1 8D   GDEGW18D01   2.5   4   2.7   4   GRID   NA",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'EGD-1 8D'; Well identifier GDEGW18D01; well type GRID; GEOCODE NA"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[645].observation",
+   "problem": "verify_unclear",
+   "value": "GDF-1D",
+   "page": 36,
+   "quote": "GDF-lD   GDFGW01D01   8.8   4   5.6   4   GRID   NA",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'GDF-lD'; Well identifier GDFGW01D01; well type GRID; GEOCODE NA"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[646].observation",
+   "problem": "verify_unclear",
+   "value": "GDF-1D",
+   "page": 36,
+   "quote": "GDF-lD   GDFGW01D01   8.8   4   5.6   4   GRID   NA",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'GDF-lD'; Well identifier GDFGW01D01; well type GRID; GEOCODE NA"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[681].observation",
+   "problem": "verify_unclear",
+   "value": "G011-2",
+   "page": 36,
+   "quote": "GOll -2   011GW00201   4.2   4   4.5   4   SWMU   u",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'GOll -2'; Well identifier 011GW00201; well type SWMU; GEOCODE U"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[682].observation",
+   "problem": "verify_unclear",
+   "value": "G011-2",
+   "page": 36,
+   "quote": "GOll -2   011GW00201   4.2   4   4.5   4   SWMU   u",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'GOll -2'; Well identifier 011GW00201; well type SWMU; GEOCODE U"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[697].observation",
+   "problem": "verify_unclear",
+   "value": "G637-1",
+   "page": 37,
+   "quote": "0637-1   6370W00101   5.9   4   4.5   4   AOC   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads '0637-1'; Well identifier 637GW00101 (text layer: 6370W00101); well type AOC; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[698].observation",
+   "problem": "verify_unclear",
+   "value": "G637-1",
+   "page": 37,
+   "quote": "0637-1   6370W00101   5.9   4   4.5   4   AOC   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads '0637-1'; Well identifier 637GW00101 (text layer: 6370W00101); well type AOC; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[699].observation",
+   "problem": "verify_unclear",
+   "value": "G637-2",
+   "page": 37,
+   "quote": "0637-2   6370W002A1   2.4   4   5.0   4   AOC   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads '0637-2'; Well identifier 637GW002A1 (text layer: 6370W002A1); well type AOC; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[700].observation",
+   "problem": "verify_unclear",
+   "value": "G637-2",
+   "page": 37,
+   "quote": "0637-2   6370W002A1   2.4   4   5.0   4   AOC   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads '0637-2'; Well identifier 637GW002A1 (text layer: 6370W002A1); well type AOC; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[701].observation",
+   "problem": "verify_unclear",
+   "value": "G637-3",
+   "page": 37,
+   "quote": "0637-3   6370W003A1   5.8   5   5.0   4   AOC   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads '0637-3'; Well identifier 637GW003A1 (text layer: 6370W003A1); well type AOC; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[702].observation",
+   "problem": "verify_unclear",
+   "value": "G637-3",
+   "page": 37,
+   "quote": "0637-3   6370W003A1   5.8   5   5.0   4   AOC   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads '0637-3'; Well identifier 637GW003A1 (text layer: 6370W003A1); well type AOC; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[703].observation",
+   "problem": "verify_unclear",
+   "value": "G638-1",
+   "page": 37,
+   "quote": "0638-1   6380W00101   6.0   4   4.8   4   AOC   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads '0638-1'; Well identifier 638GW00101 (text layer: 6380W00101); well type AOC; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[704].observation",
+   "problem": "verify_unclear",
+   "value": "G638-1",
+   "page": 37,
+   "quote": "0638-1   6380W00101   6.0   4   4.8   4   AOC   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads '0638-1'; Well identifier 638GW00101 (text layer: 6380W00101); well type AOC; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[705].observation",
+   "problem": "verify_unclear",
+   "value": "G706-1",
+   "page": 37,
+   "quote": "0706-1   7060W001Al   9.6   4   6.0   4   AOC   u",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads '0706-1'; Well identifier 706GW001A1 (text layer: 7060W001Al); well type AOC; GEOCODE U"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[706].observation",
+   "problem": "verify_unclear",
+   "value": "G706-1",
+   "page": 37,
+   "quote": "0706-1   7060W001Al   9.6   4   6.0   4   AOC   u",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads '0706-1'; Well identifier 706GW001A1 (text layer: 7060W001Al); well type AOC; GEOCODE U"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[709].observation",
+   "problem": "verify_unclear",
+   "value": "FDS-1B",
+   "page": 37,
+   "quote": "FDS-lB   FDSOW01B01   7.8   2   3.9   2   FDS   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'FDS-lB'; Well identifier FDSGW01B01 (text layer: FDSOW01B01); well type FDS; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[710].observation",
+   "problem": "verify_unclear",
+   "value": "FDS-1B",
+   "page": 37,
+   "quote": "FDS-lB   FDSOW01B01   7.8   2   3.9   2   FDS   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'FDS-lB'; Well identifier FDSGW01B01 (text layer: FDSOW01B01); well type FDS; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[713].observation",
+   "problem": "verify_unclear",
+   "value": "FDS-1D",
+   "page": 37,
+   "quote": "FDS-lD   FDSOW01D01   3.5   2   6.9   2   FDS   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'FDS-lD'; Well identifier FDSGW01D01 (text layer: FDSOW01D01); well type FDS; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[714].observation",
+   "problem": "verify_unclear",
+   "value": "FDS-1D",
+   "page": 37,
+   "quote": "FDS-lD   FDSOW01D01   3.5   2   6.9   2   FDS   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'FDS-lD'; Well identifier FDSGW01D01 (text layer: FDSOW01D01); well type FDS; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[765].observation",
+   "problem": "verify_unclear",
+   "value": "FDS-10A",
+   "page": 37,
+   "quote": "FDS-lOA   FDSOWlOAOl   5.9   2   6.9   2   FDS   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'FDS-lOA'; Well identifier FDSGW10A01 (text layer: FDSOWlOAOl); well type FDS; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[766].observation",
+   "problem": "verify_unclear",
+   "value": "FDS-10A",
+   "page": 37,
+   "quote": "FDS-lOA   FDSOWlOAOl   5.9   2   6.9   2   FDS   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'FDS-lOA'; Well identifier FDSGW10A01 (text layer: FDSOWlOAOl); well type FDS; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[767].observation",
+   "problem": "verify_unclear",
+   "value": "FDS-10B",
+   "page": 37,
+   "quote": "FDS-IOB   FDSOW10B01   2.3   2   3.9   2   FDS   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'FDS-IOB'; Well identifier FDSGW10B01 (text layer: FDSOW10B01); well type FDS; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[768].observation",
+   "problem": "verify_unclear",
+   "value": "FDS-10B",
+   "page": 37,
+   "quote": "FDS-IOB   FDSOW10B01   2.3   2   3.9   2   FDS   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'FDS-IOB'; Well identifier FDSGW10B01 (text layer: FDSOW10B01); well type FDS; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[769].observation",
+   "problem": "verify_unclear",
+   "value": "FDS-10C",
+   "page": 37,
+   "quote": "FDS-lOC   FDSOWlOCOl   2.3   2   3.9   2   FDS   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'FDS-lOC'; Well identifier FDSGW10C01 (text layer: FDSOWlOCOl); well type FDS; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[770].observation",
+   "problem": "verify_unclear",
+   "value": "FDS-10C",
+   "page": 37,
+   "quote": "FDS-lOC   FDSOWlOCOl   2.3   2   3.9   2   FDS   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'FDS-lOC'; Well identifier FDSGW10C01 (text layer: FDSOWlOCOl); well type FDS; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[773].observation",
+   "problem": "verify_unclear",
+   "value": "FDS-11B",
+   "page": 37,
+   "quote": "FDS-llB   FDSOW11B01   2.3   2   3.9   2   FDS   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'FDS-llB'; Well identifier FDSGW11B01 (text layer: FDSOW11B01); well type FDS; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[774].observation",
+   "problem": "verify_unclear",
+   "value": "FDS-11B",
+   "page": 37,
+   "quote": "FDS-llB   FDSOW11B01   2.3   2   3.9   2   FDS   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'FDS-llB'; Well identifier FDSGW11B01 (text layer: FDSOW11B01); well type FDS; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[775].observation",
+   "problem": "verify_unclear",
+   "value": "FDS-11C",
+   "page": 37,
+   "quote": "FDS-llC   FDSOW11C01   2.7   2   3.9   2   FDS   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'FDS-llC'; Well identifier FDSGW11C01 (text layer: FDSOW11C01); well type FDS; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[776].observation",
+   "problem": "verify_unclear",
+   "value": "FDS-11C",
+   "page": 37,
+   "quote": "FDS-llC   FDSOW11C01   2.7   2   3.9   2   FDS   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'FDS-llC'; Well identifier FDSGW11C01 (text layer: FDSOW11C01); well type FDS; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[1035].observation",
+   "problem": "verify_unclear",
+   "value": "HGD-10D",
+   "page": 41,
+   "quote": "HGD-lOD   GDHGW10D1   3.5   4   4.6   4   GRID   NA",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'HGD-lOD'; Well identifier GDHGW10D1; well type GRID; GEOCODE NA"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[1036].observation",
+   "problem": "verify_unclear",
+   "value": "HGD-10D",
+   "page": 41,
+   "quote": "HGD-lOD   GDHGW10D1   3.5   4   4.6   4   GRID   NA",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'HGD-lOD'; Well identifier GDHGW10D1; well type GRID; GEOCODE NA"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[1037].observation",
+   "problem": "verify_unclear",
+   "value": "HGD-11D",
+   "page": 41,
+   "quote": "HGD-llD   GDHGW11D1   3.1   4   4.7   4   GRID   NA",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'HGD-llD'; Well identifier GDHGW11D1; well type GRID; GEOCODE NA"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[1038].observation",
+   "problem": "verify_unclear",
+   "value": "HGD-11D",
+   "page": 41,
+   "quote": "HGD-llD   GDHGW11D1   3.1   4   4.7   4   GRID   NA",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'HGD-llD'; Well identifier GDHGW11D1; well type GRID; GEOCODE NA"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[1039].observation",
+   "problem": "verify_unclear",
+   "value": "I012-1",
+   "page": 41,
+   "quote": "1012-1   012GW00102   4   3.8   4   SWMU   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads '1012-1'; Well identifier 012GW00102; well type SWMU; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[1040].observation",
+   "problem": "verify_unclear",
+   "value": "I012-2",
+   "page": 41,
+   "quote": "1012-2   012GW00202   5   3.7   5   SWMU   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads '1012-2'; Well identifier 012GW00202; well type SWMU; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[1041].observation",
+   "problem": "verify_unclear",
+   "value": "I012-3",
+   "page": 41,
+   "quote": "1012-3   012GW00302   4.3   4   4.2   4   SWMU   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads '1012-3'; Well identifier 012GW00302; well type SWMU; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[1042].observation",
+   "problem": "verify_unclear",
+   "value": "I012-3",
+   "page": 41,
+   "quote": "1012-3   012GW00302   4.3   4   4.2   4   SWMU   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads '1012-3'; Well identifier 012GW00302; well type SWMU; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[1043].observation",
+   "problem": "verify_unclear",
+   "value": "I177-1",
+   "page": 41,
+   "quote": "1177-1   177GW00102   3.6   3   2.4   3   SWMU   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads '1177-1'; Well identifier 177GW00102; well type SWMU; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[1044].observation",
+   "problem": "verify_unclear",
+   "value": "I177-1",
+   "page": 41,
+   "quote": "1177-1   177GW00102   3.6   3   2.4   3   SWMU   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads '1177-1'; Well identifier 177GW00102; well type SWMU; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[1045].observation",
+   "problem": "verify_unclear",
+   "value": "I177-2",
+   "page": 41,
+   "quote": "1177-2   177GW00202   3.0   3   2.4   3   SWMU   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads '1177-2'; Well identifier 177GW00202; well type SWMU; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[1046].observation",
+   "problem": "verify_unclear",
+   "value": "I177-2",
+   "page": 41,
+   "quote": "1177-2   177GW00202   3.0   3   2.4   3   SWMU   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads '1177-2'; Well identifier 177GW00202; well type SWMU; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[1055].observation",
+   "problem": "verify_unclear",
+   "value": "I675-1",
+   "page": 41,
+   "quote": "1675-1   675GW00102   4.2   3   4.2   3   AOC   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads '1675-1'; Well identifier 675GW00102; well type AOC; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[1056].observation",
+   "problem": "verify_unclear",
+   "value": "I675-1",
+   "page": 41,
+   "quote": "1675-1   675GW00102   4.2   3   4.2   3   AOC   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads '1675-1'; Well identifier 675GW00102; well type AOC; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[1077].observation",
+   "problem": "verify_unclear",
+   "value": "I681-2",
+   "page": 41,
+   "quote": "1681-2   681GW00201   3.5   3   2.3   3   AOC   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads '1681-2'; Well identifier 681GW00201; well type AOC; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[1078].observation",
+   "problem": "verify_unclear",
+   "value": "I681-2",
+   "page": 41,
+   "quote": "1681-2   681GW00201   3.5   3   2.3   3   AOC   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads '1681-2'; Well identifier 681GW00201; well type AOC; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[1145].observation",
+   "problem": "verify_unclear",
+   "value": "IGD-10D",
+   "page": 42,
+   "quote": "IGD-lOD   GDIGW10D02   6.0   3   5.6   3   GRID   NA",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'IGD-lOD'; Well identifier GDIGW10D02; well type GRID; GEOCODE NA"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[1146].observation",
+   "problem": "verify_unclear",
+   "value": "IGD-10D",
+   "page": 42,
+   "quote": "IGD-lOD   GDIGW10D02   6.0   3   5.6   3   GRID   NA",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'IGD-lOD'; Well identifier GDIGW10D02; well type GRID; GEOCODE NA"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[1203].observation",
+   "problem": "verify_unclear",
+   "value": "I012-1",
+   "page": 41,
+   "quote": "1012-1   012GW00102   4   3.8   4   SWMU   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads '1012-1'; Well identifier 012GW00102; well type SWMU; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:52781",
+   "path": "water_tests[1204].observation",
+   "problem": "verify_unclear",
+   "value": "I012-2",
+   "page": 41,
+   "quote": "1012-2   012GW00202   5   3.7   5   SWMU   M",
+   "added_at": "2026-10-25T23:42:41+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads '1012-2'; Well identifier 012GW00202; well type SWMU; GEOCODE M"
+   }
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[2].value",
+   "problem": "missing_units",
+   "value": "0.40",
+   "page": 24,
+   "quote": "tensiometer 10 backfill sand 0 .40   _   _   2.7x10-3",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[5].value",
+   "problem": "missing_units",
+   "value": "0.31",
+   "page": 24,
+   "quote": "Monitoring site 2 trench cap   compacted   0 .31   0 .71   0. 36   1.9x10-6",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[6].value",
+   "problem": "missing_units",
+   "value": "0.71",
+   "page": 24,
+   "quote": "Monitoring site 2 trench cap   compacted   0 .31   0 .71   0. 36   1.9x10-6",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[7].value",
+   "problem": "missing_units",
+   "value": "0.36",
+   "page": 24,
+   "quote": "Monitoring site 2 trench cap   compacted   0 .31   0 .71   0. 36   1.9x10-6",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[9].value",
+   "problem": "missing_units",
+   "value": "0.29",
+   "page": 24,
+   "quote": "tensiometer 2   compacted   0 .29   0 .66   0. 39   -",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[10].value",
+   "problem": "missing_units",
+   "value": "0.66",
+   "page": 24,
+   "quote": "tensiometer 2   compacted   0 .29   0 .66   0. 39   -",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[11].value",
+   "problem": "missing_units",
+   "value": "0.39",
+   "page": 24,
+   "quote": "tensiometer 2   compacted   0 .29   0 .66   0. 39   -",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[12].value",
+   "problem": "missing_units",
+   "value": "0.29",
+   "page": 24,
+   "quote": "tensiometer 3   compacted   0 .29   0 .79   0. 18   5.0x10-7",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[13].value",
+   "problem": "missing_units",
+   "value": "0.79",
+   "page": 24,
+   "quote": "tensiometer 3   compacted   0 .29   0 .79   0. 18   5.0x10-7",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[14].value",
+   "problem": "missing_units",
+   "value": "0.18",
+   "page": 24,
+   "quote": "tensiometer 3   compacted   0 .29   0 .79   0. 18   5.0x10-7",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[16].value",
+   "problem": "missing_units",
+   "value": "0.37",
+   "page": 24,
+   "quote": "tensiometer 4   surface sand   0 .37   0 .010   0. 29   3.3x10-3",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[17].value",
+   "problem": "missing_units",
+   "value": "0.010",
+   "page": 24,
+   "quote": "tensiometer 4   surface sand   0 .37   0 .010   0. 29   3.3x10-3",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[18].value",
+   "problem": "missing_units",
+   "value": "0.29",
+   "page": 24,
+   "quote": "tensiometer 4   surface sand   0 .37   0 .010   0. 29   3.3x10-3",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[20].value",
+   "problem": "missing_units",
+   "value": "0.36",
+   "page": 24,
+   "quote": "tensiometer 5   surface sand   0 .36   0 .067   0. 44   7.0x10-3",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[21].value",
+   "problem": "missing_units",
+   "value": "0.067",
+   "page": 24,
+   "quote": "tensiometer 5   surface sand   0 .36   0 .067   0. 44   7.0x10-3",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[22].value",
+   "problem": "missing_units",
+   "value": "0.44",
+   "page": 24,
+   "quote": "tensiometer 5   surface sand   0 .36   0 .067   0. 44   7.0x10-3",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[24].value",
+   "problem": "missing_units",
+   "value": "0.33",
+   "page": 24,
+   "quote": "tensiometer 6   undisturbed   0 .33   0 .85   _   6.7xlO-8",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[25].value",
+   "problem": "missing_units",
+   "value": "0.85",
+   "page": 24,
+   "quote": "tensiometer 6   undisturbed   0 .33   0 .85   _   6.7xlO-8",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[27].value",
+   "problem": "missing_units",
+   "value": "0.38",
+   "page": 24,
+   "quote": "tensiometer 7   backfill sand   0 .38   0 .18   0. 44   5.2x10-3",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[28].value",
+   "problem": "missing_units",
+   "value": "0.18",
+   "page": 24,
+   "quote": "tensiometer 7   backfill sand   0 .38   0 .18   0. 44   5.2x10-3",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[29].value",
+   "problem": "missing_units",
+   "value": "0.44",
+   "page": 24,
+   "quote": "tensiometer 7   backfill sand   0 .38   0 .18   0. 44   5.2x10-3",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[31].value",
+   "problem": "missing_units",
+   "value": "0.31",
+   "page": 24,
+   "quote": "tensiometer 8   undisturbed   0 .31   0 .84   0. 26   4.8x10-7",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[32].value",
+   "problem": "missing_units",
+   "value": "0.84",
+   "page": 24,
+   "quote": "tensiometer 8   undisturbed   0 .31   0 .84   0. 26   4.8x10-7",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[33].value",
+   "problem": "missing_units",
+   "value": "0.26",
+   "page": 24,
+   "quote": "tensiometer 8   undisturbed   0 .31   0 .84   0. 26   4.8x10-7",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[35].value",
+   "problem": "missing_units",
+   "value": "0.39",
+   "page": 24,
+   "quote": "trench bottom   undisturbed   0 .39   0 .90   0. 44   9.0xlO-8",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[36].value",
+   "problem": "missing_units",
+   "value": "0.90",
+   "page": 24,
+   "quote": "trench bottom   undisturbed   0 .39   0 .90   0. 44   9.0xlO-8",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[37].value",
+   "problem": "missing_units",
+   "value": "0.44",
+   "page": 24,
+   "quote": "trench bottom   undisturbed   0 .39   0 .90   0. 44   9.0xlO-8",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[39].value",
+   "problem": "missing_units",
+   "value": "0.27",
+   "page": 24,
+   "quote": "Monitoring site 3 tensiometer 3 undisturbed   0 .27   0 .37   0. 63   _",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[40].value",
+   "problem": "missing_units",
+   "value": "0.37",
+   "page": 24,
+   "quote": "Monitoring site 3 tensiometer 3 undisturbed   0 .27   0 .37   0. 63   _",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[41].value",
+   "problem": "missing_units",
+   "value": "0.63",
+   "page": 24,
+   "quote": "Monitoring site 3 tensiometer 3 undisturbed   0 .27   0 .37   0. 63   _",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[42].value",
+   "problem": "missing_units",
+   "value": "0.30",
+   "page": 24,
+   "quote": "tensiometer 4 undisturbed   0 .30   0 .67   0. 37   -",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[43].value",
+   "problem": "missing_units",
+   "value": "0.67",
+   "page": 24,
+   "quote": "tensiometer 4 undisturbed   0 .30   0 .67   0. 37   -",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[44].value",
+   "problem": "missing_units",
+   "value": "0.37",
+   "page": 24,
+   "quote": "tensiometer 4 undisturbed   0 .30   0 .67   0. 37   -",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[45].value",
+   "problem": "missing_units",
+   "value": "0.28",
+   "page": 24,
+   "quote": "tensiometer 6 backfill sand   0 .28   0 .36   0. 66   -",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[46].value",
+   "problem": "missing_units",
+   "value": "0.36",
+   "page": 24,
+   "quote": "tensiometer 6 backfill sand   0 .28   0 .36   0. 66   -",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[47].value",
+   "problem": "missing_units",
+   "value": "0.66",
+   "page": 24,
+   "quote": "tensiometer 6 backfill sand   0 .28   0 .36   0. 66   -",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[48].value",
+   "problem": "missing_units",
+   "value": "0.22",
+   "page": 24,
+   "quote": "tensiometer 8 undisturbed   0 .22   0 .55   0. 17   -",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[49].value",
+   "problem": "missing_units",
+   "value": "0.55",
+   "page": 24,
+   "quote": "tensiometer 8 undisturbed   0 .22   0 .55   0. 17   -",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[50].value",
+   "problem": "missing_units",
+   "value": "0.17",
+   "page": 24,
+   "quote": "tensiometer 8 undisturbed   0 .22   0 .55   0. 17   -",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[51].value",
+   "problem": "missing_units",
+   "value": "0.31",
+   "page": 24,
+   "quote": "Monitoring site 4 tensiometer 2 undisturbed   0 .31   0 .71   0. 61   _",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[52].value",
+   "problem": "missing_units",
+   "value": "0.71",
+   "page": 24,
+   "quote": "Monitoring site 4 tensiometer 2 undisturbed   0 .31   0 .71   0. 61   _",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[53].value",
+   "problem": "missing_units",
+   "value": "0.61",
+   "page": 24,
+   "quote": "Monitoring site 4 tensiometer 2 undisturbed   0 .31   0 .71   0. 61   _",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[54].value",
+   "problem": "missing_units",
+   "value": "0.29",
+   "page": 24,
+   "quote": "tensiometer 4 undisturbed   0 .29   0 .72   0. 65   _",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[55].value",
+   "problem": "missing_units",
+   "value": "0.72",
+   "page": 24,
+   "quote": "tensiometer 4 undisturbed   0 .29   0 .72   0. 65   _",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[56].value",
+   "problem": "missing_units",
+   "value": "0.65",
+   "page": 24,
+   "quote": "tensiometer 4 undisturbed   0 .29   0 .72   0. 65   _",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[57].value",
+   "problem": "missing_units",
+   "value": "0.28",
+   "page": 24,
+   "quote": "tensiometer 6 undisturbed   0 .28   0 .71   0. 68   _",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[58].value",
+   "problem": "missing_units",
+   "value": "0.71",
+   "page": 24,
+   "quote": "tensiometer 6 undisturbed   0 .28   0 .71   0. 68   _",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:25572",
+   "path": "water_tests[59].value",
+   "problem": "missing_units",
+   "value": "0.68",
+   "page": 24,
+   "quote": "tensiometer 6 undisturbed   0 .28   0 .71   0. 68   _",
+   "added_at": "2026-10-25T23:45:29+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[10].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-4   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[11].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-4   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[12].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-4   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[13].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-4   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[14].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-4   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[15].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-5   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[16].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-5   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[17].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-5   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[18].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-5   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[19].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-5   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[35].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-10   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[36].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-10   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[37].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-10   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[38].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-10   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[39].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-10   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[40].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-11   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[41].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-11   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[42].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-11   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[43].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-11   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[44].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-11   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[45].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-1 2   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[46].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-1 2   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[47].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-1 2   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[48].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-1 2   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[49].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-1 2   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[50].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-1 3   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[51].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-1 3   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[52].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-1 3   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[53].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-1 3   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[54].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-1 3   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[55].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-14   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[56].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-14   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[57].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-14   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[58].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-14   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[59].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-14   BD   BD   BD   BD   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[64].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-1 5   6.7   6.1   5.9   11.4   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[66].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-1 6   6.5   BD   BD   BD   800",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[67].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-1 6   6.5   BD   BD   BD   800",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[68].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-1 6   6.5   BD   BD   BD   800",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[72].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 19,
+   "quote": "LB-EX-RW   8,650   16,100   BD   7,900   70,000",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[75].observation",
+   "problem": "verify_unclear",
+   "value": "LB-EX-1",
+   "page": 24,
+   "quote": "LB-EX-l   0   19.8   ND   6.12   19.7",
+   "added_at": "2026-10-25T23:48:48+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'LB-EX-l'"
+   }
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[76].observation",
+   "problem": "verify_unclear",
+   "value": "LB-EX-1",
+   "page": 24,
+   "quote": "LB-EX-l   0   19.8   ND   6.12   19.7",
+   "added_at": "2026-10-25T23:48:48+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'LB-EX-l'"
+   }
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[77].observation",
+   "problem": "verify_unclear",
+   "value": "LB-EX-1",
+   "page": 24,
+   "quote": "LB-EX-l   0   19.8   ND   6.12   19.7",
+   "added_at": "2026-10-25T23:48:48+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'LB-EX-l'"
+   }
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[78].observation",
+   "problem": "verify_unclear",
+   "value": "LB-EX-1",
+   "page": 24,
+   "quote": "LB-EX-l   0   19.8   ND   6.12   19.7",
+   "added_at": "2026-10-25T23:48:48+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'LB-EX-l'"
+   }
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[88].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 24,
+   "quote": "LB-EX-5   5.07   BD   ND   4.63   17.9",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[100].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 24,
+   "quote": "LB-EX-9   4.11   BD   ND   4.76   17.2",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[104].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 24,
+   "quote": "LB-EX-10   2.93   BD   ND   5.75   17.8",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[107].observation",
+   "problem": "verify_unclear",
+   "value": "LB-EX-11",
+   "page": 24,
+   "quote": "LB-EX-l 1   4.66   BD   ND   4.77   17.2",
+   "added_at": "2026-10-25T23:48:48+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'LB-EX-l 1'"
+   }
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[108].observation",
+   "problem": "verify_unclear",
+   "value": "LB-EX-11",
+   "page": 24,
+   "quote": "LB-EX-l 1   4.66   BD   ND   4.77   17.2",
+   "added_at": "2026-10-25T23:48:48+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'LB-EX-l 1'"
+   }
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[108].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 24,
+   "quote": "LB-EX-l 1   4.66   BD   ND   4.77   17.2",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[109].observation",
+   "problem": "verify_unclear",
+   "value": "LB-EX-11",
+   "page": 24,
+   "quote": "LB-EX-l 1   4.66   BD   ND   4.77   17.2",
+   "added_at": "2026-10-25T23:48:48+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'LB-EX-l 1'"
+   }
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[110].observation",
+   "problem": "verify_unclear",
+   "value": "LB-EX-11",
+   "page": 24,
+   "quote": "LB-EX-l 1   4.66   BD   ND   4.77   17.2",
+   "added_at": "2026-10-25T23:48:48+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'LB-EX-l 1'"
+   }
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[112].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 24,
+   "quote": "LB-EX-12   4.43   BD   ND   5.30   16.3",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[126].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 24,
+   "quote": "LB-EX-16   4.92   BD   ND   4.50   16.8",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[143].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 25,
+   "quote": "LB-EX-3   1.27   3.77   3.72   .50   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[144].observation",
+   "problem": "verify_unclear",
+   "value": "LB-EX-4",
+   "page": 25,
+   "quote": "LB-EX^   .96   1.88   3.37   .27   BD",
+   "added_at": "2026-10-25T23:48:48+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'LB-EX^'"
+   }
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[145].observation",
+   "problem": "verify_unclear",
+   "value": "LB-EX-4",
+   "page": 25,
+   "quote": "LB-EX^   .96   1.88   3.37   .27   BD",
+   "added_at": "2026-10-25T23:48:48+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'LB-EX^'"
+   }
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[146].observation",
+   "problem": "verify_unclear",
+   "value": "LB-EX-4",
+   "page": 25,
+   "quote": "LB-EX^   .96   1.88   3.37   .27   BD",
+   "added_at": "2026-10-25T23:48:48+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'LB-EX^'"
+   }
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[147].observation",
+   "problem": "verify_unclear",
+   "value": "LB-EX-4",
+   "page": 25,
+   "quote": "LB-EX^   .96   1.88   3.37   .27   BD",
+   "added_at": "2026-10-25T23:48:48+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'LB-EX^'"
+   }
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[148].observation",
+   "problem": "verify_unclear",
+   "value": "LB-EX-4",
+   "page": 25,
+   "quote": "LB-EX^   .96   1.88   3.37   .27   BD",
+   "added_at": "2026-10-25T23:48:48+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'LB-EX^'"
+   }
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[148].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 25,
+   "quote": "LB-EX^   .96   1.88   3.37   .27   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[153].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 25,
+   "quote": "LB-EX-5   1.66   1.16   5.82   .16   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[173].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 25,
+   "quote": "LB-EX-9   1.36   4.17   3.79   .25   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[178].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 25,
+   "quote": "LB-EX-10   1.86   6.31   5.63   .29   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[183].value",
+   "problem": "unclear_value",
+   "value": "Bd",
+   "page": 25,
+   "quote": "LB-EX-11   1.78   4.57   10.57   .61   Bd",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[188].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 25,
+   "quote": "LB-EX-12   1.06   4.81   3.88   .54   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[193].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 25,
+   "quote": "LB-EX-13   2.07   3.57   23.02   .50   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[198].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 25,
+   "quote": "LB-EX-14   1.83   1.91   4.09   .38   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[203].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 25,
+   "quote": "LB-EX-1 5   1.71   12.34   18.18   1.74   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[208].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 25,
+   "quote": "LB-EX-1 6   1.19   1.36   8.14   1.44   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[217].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "LB-EX-1   4.47   0.12   0.19   BD   8.14",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[220].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "LB-EX-3   8.19   BD   .39   BD   6.75",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[222].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "LB-EX-3   8.19   BD   .39   BD   6.75",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[224].observation",
+   "problem": "verify_unclear",
+   "value": "LB-EX-4",
+   "page": 26,
+   "quote": "LB-EX^   5.53   BD   .15   BD   5.60",
+   "added_at": "2026-10-25T23:48:48+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'LB-EX^'"
+   }
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[225].observation",
+   "problem": "verify_unclear",
+   "value": "LB-EX-4",
+   "page": 26,
+   "quote": "LB-EX^   5.53   BD   .15   BD   5.60",
+   "added_at": "2026-10-25T23:48:48+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'LB-EX^'"
+   }
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[225].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "LB-EX^   5.53   BD   .15   BD   5.60",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[226].observation",
+   "problem": "verify_unclear",
+   "value": "LB-EX-4",
+   "page": 26,
+   "quote": "LB-EX^   5.53   BD   .15   BD   5.60",
+   "added_at": "2026-10-25T23:48:48+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'LB-EX^'"
+   }
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[227].observation",
+   "problem": "verify_unclear",
+   "value": "LB-EX-4",
+   "page": 26,
+   "quote": "LB-EX^   5.53   BD   .15   BD   5.60",
+   "added_at": "2026-10-25T23:48:48+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'LB-EX^'"
+   }
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[227].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "LB-EX^   5.53   BD   .15   BD   5.60",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[228].observation",
+   "problem": "verify_unclear",
+   "value": "LB-EX-4",
+   "page": 26,
+   "quote": "LB-EX^   5.53   BD   .15   BD   5.60",
+   "added_at": "2026-10-25T23:48:48+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "well number corrected from an OCR misread; OCR text layer reads 'LB-EX^'"
+   }
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[230].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "LB-EX-5   9.26   BD   .05   BD   7.45",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[232].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "LB-EX-5   9.26   BD   .05   BD   7.45",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[236].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "LB-EX-7   5.55   .27   BD   BD   .99",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[237].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "LB-EX-7   5.55   .27   BD   BD   .99",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[242].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "oo   LB-EX-7R   5.44   .17   .04   BD   .95",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[246].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "LB-EX-8   9.04   .23   BD   BD   9.82",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[247].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "LB-EX-8   9.04   .23   BD   BD   9.82",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[250].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "LB-EX-9   7.01   BD   .08   BD   12.12",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[252].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "LB-EX-9   7.01   BD   .08   BD   12.12",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[255].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "LB-EX-10   11.11   BD   .07   BD   14.75",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[257].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "LB-EX-10   11.11   BD   .07   BD   14.75",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[262].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "LB-EX-1 1   16.14   .15   .04   BD   14.84",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[267].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "LB-EX-12   6.87   .08   .07   BD   12.13",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[272].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "LB-EX-13   24.45   .15   6.36   BD   24.43",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[275].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "LB-EX-14   7.06   BD   2.66   BD   9.93",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[277].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "LB-EX-14   7.06   BD   2.66   BD   9.93",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[280].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "LB-EX-15   22.26   BD   .67   BD   27.88",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[282].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "LB-EX-15   22.26   BD   .67   BD   27.88",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[286].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "LB-EX-16   12.02   .11   BD   BD   15.50",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[287].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "LB-EX-16   12.02   .11   BD   BD   15.50",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[291].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "LB-EX-RW   2.89   .08   BD   BD   .82",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[292].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 26,
+   "quote": "LB-EX-RW   2.89   .08   BD   BD   .82",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[295].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 27,
+   "quote": "LB-EX-1   208.1   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[297].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 27,
+   "quote": "LB-EX-3   113.7   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[299].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 27,
+   "quote": "LB-EX-4   52.9   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[301].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 27,
+   "quote": "LB-EX-5   18.7   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[303].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 27,
+   "quote": "LB-EX-7   158.0   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[305].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 27,
+   "quote": "LB-EX-7R   220.2   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[307].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 27,
+   "quote": "LB-EX-8   132.6   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[309].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 27,
+   "quote": "LB-EX-9   31.0   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[311].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 27,
+   "quote": "LB-EX-10   34.4   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[313].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 27,
+   "quote": "LB-EX-1 1   1.9   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[315].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 27,
+   "quote": "LB-EX-1 2   44.2   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[317].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 27,
+   "quote": "LB-EX-1 3   46.7   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[319].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 27,
+   "quote": "LB-EX-14   33.3   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[321].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 27,
+   "quote": "LB-EX-1 5   67.3   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[323].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 27,
+   "quote": "LB-EX-16   28.8   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:48392",
+   "path": "water_tests[325].value",
+   "problem": "unclear_value",
+   "value": "BD",
+   "page": 27,
+   "quote": "LB-EX-RW   251.1   BD",
+   "added_at": "2026-10-25T23:48:48+00:00"
+  },
+  {
+   "source_id": "ngmdb:77450",
+   "path": "observations[0].label",
+   "problem": "verify_unclear",
+   "value": "SCGS drill hole 32-129",
+   "page": 1,
+   "quote": "sediment at 34 to 35 ft depth (47 to 48 ft elevation) in SCGS drill hole 32-129 at Packs Landing",
+   "added_at": "2026-10-26T10:58:36+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "Review: this sheet clearly prints \"SCGS drill hole 32-129\" (checked on the page image at 144 ppi, no OCR misread), but the Lone Star sheet ngmdb:77458 prints \"43-129\" twice for the same sample (25,960 yr BP, 34-35 ft depth, Packs Landing). The sheets disagree; a person should check the SCGS log number."
+   }
+  },
+  {
+   "source_id": "ngmdb:77458",
+   "path": "observations[1].label",
+   "problem": "verify_unclear",
+   "value": "43-129",
+   "page": 1,
+   "quote": "(47 to 48 feet elevation) in SCGS drill hole 43-129 at Packs Landing, Sumter County, in Lone Star",
+   "added_at": "2026-10-26T11:01:09+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "Review: this sheet clearly prints \"43-129\" twice (checked on the page image at 144 ppi, no OCR misread), but the Pinewood sheet ngmdb:77450 prints \"32-129\" for the same sample (25,960 yr BP, 34-35 ft depth, Packs Landing). The sheets disagree; a person should check the SCGS log number. Nearby holes on this sheet's section are numbered 43-132 to 43-135."
+   }
+  },
+  {
+   "source_id": "ngmdb:47117",
+   "path": "water_tests[24].value",
+   "problem": "missing_units",
+   "value": "175",
+   "page": 59,
+   "quote": "12A   38.0   1.6   2.7   1.3   1.7   12.0   123.0   8.09   21.2   184.0   175",
+   "added_at": "2026-10-26T11:01:56+00:00"
+  },
+  {
+   "source_id": "ngmdb:47117",
+   "path": "water_tests[35].value",
+   "problem": "missing_units",
+   "value": "35",
+   "page": 59,
+   "quote": "12C   4.8   1.2   1.1   .4   .85   .2   18.0   6.85   21.5   35.0   35",
+   "added_at": "2026-10-26T11:01:56+00:00"
+  },
+  {
+   "source_id": "ngmdb:47117",
+   "path": "water_tests[46].value",
+   "problem": "missing_units",
+   "value": "120",
+   "page": 59,
+   "quote": "20A   31.0   .57   1.8   1.7   2.2   10.0   85.0   7.81   22.7   153.0   120",
+   "added_at": "2026-10-26T11:01:56+00:00"
+  },
+  {
+   "source_id": "ngmdb:47117",
+   "path": "water_tests[57].value",
+   "problem": "missing_units",
+   "value": "92",
+   "page": 59,
+   "quote": "20B   19.0   .52   1.9   .70   1.8   5.5   62.0   8.40   20.7   91.0   92",
+   "added_at": "2026-10-26T11:01:56+00:00"
+  },
+  {
+   "source_id": "ngmdb:47117",
+   "path": "water_tests[68].value",
+   "problem": "missing_units",
+   "value": "21",
+   "page": 59,
+   "quote": "20C   1.6   .42   1.5   .42   2.1   .2   6.0   6.04   20.9   19.0   21",
+   "added_at": "2026-10-26T11:01:56+00:00"
+  },
+  {
+   "source_id": "ngmdb:103396",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "waters. Thickness | to 40 feet.",
+   "added_at": "2026-10-26T10:59:03+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:103890",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 50 feet",
+   "page": 1,
+   "quote": "brackish water bodies inland of the saltwater wedge. Thickness | to 50 feet.",
+   "added_at": "2026-10-26T11:01:19+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:103890",
+   "path": "units[3].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "salinity, and rising tides importing high salinity waters. Thickness | to 40 feet.",
+   "added_at": "2026-10-26T11:01:19+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:103890",
+   "path": "units[5].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 20 feet",
+   "page": 1,
+   "quote": "(Kaczorowski, 1977). Thickness | to 20 feet.",
+   "added_at": "2026-10-26T11:01:19+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:103890",
+   "path": "units[15].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 15 feet",
+   "page": 1,
+   "quote": "fine quartz and phosphorite sand. Thickness is | to 15 feet.",
+   "added_at": "2026-10-26T11:01:19+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:103891",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "salinity, and rising tides importing high salinity waters. Thickness | to 40 feet.",
+   "added_at": "2026-10-26T11:03:18+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:103891",
+   "path": "units[3].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 6 feet",
+   "page": 1,
+   "quote": "sand. Thickness | to 6 feet.",
+   "added_at": "2026-10-26T11:03:18+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:103891",
+   "path": "units[4].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 12 feet",
+   "page": 1,
+   "quote": "reliable radiocarbon dates (Brooks and others, 2001). Thickness is | to 12 feet.",
+   "added_at": "2026-10-26T11:03:18+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:103891",
+   "path": "units[8].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 50 feet",
+   "page": 1,
+   "quote": "Thickness is | to 50 feet.",
+   "added_at": "2026-10-26T11:03:18+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:103891",
+   "path": "units[10].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 35 feet",
+   "page": 1,
+   "quote": "Thickness is | to 35 feet.",
+   "added_at": "2026-10-26T11:03:18+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:103895",
+   "path": "units[2].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 40 feet",
+   "page": 1,
+   "quote": "the salinity, and rising tides importing high salinity waters. Thickness | to 40 feet.",
+   "added_at": "2026-10-26T11:11:28+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:103895",
+   "path": "units[3].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 12 feet",
+   "page": 1,
+   "quote": "reliable radiocarbon dates (Brooks and others, 2001). Thickness is | to 12 feet.",
+   "added_at": "2026-10-26T11:11:28+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:103895",
+   "path": "units[4].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 56 feet",
+   "page": 1,
+   "quote": "in the map area. Thickness is | to 56",
+   "added_at": "2026-10-26T11:11:28+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:103895",
+   "path": "units[5].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 25 feet",
+   "page": 1,
+   "quote": "valleys associated with the Duplin sea-level maximum. Thickness is | to 25 feet.",
+   "added_at": "2026-10-26T11:11:28+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:103895",
+   "path": "units[6].thickness",
+   "problem": "verify_unclear",
+   "value": "1 to 50 feet",
+   "page": 1,
+   "quote": "well-sorted, subrounded, fine or medium to coarse-grained quartz sand. Thickness is | to 50 feet.",
+   "added_at": "2026-10-26T11:11:28+00:00",
+   "verify": {
+    "verdict": "unclear",
+    "note": "OCR prints | for the first digit"
+   }
+  },
+  {
+   "source_id": "ngmdb:102164",
+   "path": "water_tests[32].value",
+   "problem": "unclear_value",
+   "value": "about 69 feet squared per day",
+   "page": 13,
+   "quote": "well IR-1 were about 69 feet squared per day, and the radius",
+   "added_at": "2026-10-27T11:06:09+00:00"
+  },
+  {
+   "source_id": "ngmdb:102164",
+   "path": "water_tests[33].value",
+   "problem": "unclear_value",
+   "value": "about 640 feet",
+   "page": 13,
+   "quote": "of influence was estimated at about 640 feet.",
+   "added_at": "2026-10-27T11:06:09+00:00"
+  },
+  {
+   "source_id": "ngmdb:102164",
+   "path": "water_tests[1].method",
+   "problem": "verify_disagree",
+   "value": "acoustic Doppler velocimeter and the mid-point method",
+   "page": 26,
+   "quote": "the survey line using an acoustic Doppler velocimeter and the",
+   "added_at": "2026-10-27T11:08:41+00:00",
+   "verify": {
+    "verdict": "disagree",
+    "value": "not stated",
+    "note": "page 26 describes the method of a discharge measurement made on February 13, 2013; the method of the February 28, 2013 measurement on page 53 is not stated"
    }
   }
  ]

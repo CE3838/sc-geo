@@ -8,8 +8,8 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-06T22:57:45+00:00",
- "updated_at": "2026-10-06T22:57:45+00:00",
- "reader": "Claude, Claude Code reading session 2026-10-06",
+ "updated_at": "2026-10-25T23:40:51+00:00",
+ "reader": "Claude, re-read session 2026-10-25 (subsurface fields)",
  "packets": [
   "packet-01"
  ],
@@ -18,7 +18,7 @@
  ],
  "blocks_total": 1,
  "complete": true,
- "notes": "Single OCR map sheet; map face is noise. Units here are grouped by terrace (Silver Bluff, Princess Anne), not alloformation. Freshwater marsh thickness OCR 'Thickness | to 40 feet.' read as 1 to 40 feet (inferred, sent to review). Symbols QHsm and QPsbs inferred from placement; QPpas from OCR 'aFpas'. Symbols for moved earth, beach sand, beach ridge sand and freshwater marsh illegible. Bodies of standing water skipped. No references on the sheet.\nSUBSURFACE: page 1 has no cross section; the explanation shows SCGS drill hole symbol with example number 22-341 (logs on file at SCGS, not printed; legend only, not recorded as an observation). Terrace margins given as elevations: Holocene below 10 ft at landward margin; Silver Bluff 6-10 ft; Princess Anne 12-18 ft (page 1). Vertical datum not stated; base map OCR reads '1973 North American Datum' (Brookgreen 7.5' quadrangle, 1973), contour interval 20 feet.",
+ "notes": "Single OCR map sheet; map face is noise. Units here are grouped by terrace (Silver Bluff, Princess Anne), not alloformation. Freshwater marsh thickness OCR 'Thickness | to 40 feet.' read as 1 to 40 feet (inferred, sent to review). Symbols QHsm and QPsbs inferred from placement; QPpas from OCR 'aFpas'. Symbols for moved earth, beach sand, beach ridge sand and freshwater marsh illegible. Bodies of standing water skipped. No references on the sheet.\nSUBSURFACE: page 1 has no cross section; the explanation shows SCGS drill hole symbol with example number 22-341 (logs on file at SCGS, not printed; legend only, not recorded as an observation). Terrace margins given as elevations: Holocene below 10 ft at landward margin; Silver Bluff 6-10 ft; Princess Anne 12-18 ft (page 1). Vertical datum not stated; base map OCR reads '1973 North American Datum' (Brookgreen 7.5' quadrangle, 1973), contour interval 20 feet.\nRe-read of page 1 for subsurface fields (single OCR map sheet; map face is noise). Units grouped by terrace (Silver Bluff, Princess Anne) as before; map symbols read from the legend boxes on a page-image tile (OCR had them garbled, missing or placed apart). Terrace-sediment margin elevations (Holocene <10 ft landward; Silver Bluff >6/<10 ft; Princess Anne >12/<18 ft) are recorded as unit contacts and as stated unit tops at those margins (boundary inferred; no vertical datum printed). Freshwater marsh thickness OCR 'Thickness | to 40 feet.' read as 1 to 40 feet (inferred). No cross section or structure contours; SCGS drill holes (22-xxx) are plotted on the map face by label only, without depths (logs on file at SCGS), so none is recorded. Legend-only symbols and bodies of water not recorded. No references on the sheet.",
  "files": [
   {
    "url": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
@@ -29,15 +29,16 @@
   }
  ],
  "summary": {
-  "stored": 44,
+  "stored": 78,
   "quote_match": {
-   "exact": 44
+   "image": 7,
+   "exact": 71
   },
   "verification": {
-   "unclear": 1,
-   "agree": 5
+   "agree": 41,
+   "unclear": 1
   },
-  "inferred": 10
+  "inferred": 17
  },
  "ingests": [
   {
@@ -57,6 +58,758 @@
    "disagree": 0,
    "unclear": 1,
    "review_items": 1
+  },
+  {
+   "at": "2026-10-25T23:40:51+00:00",
+   "packets": [
+    "reread-01"
+   ],
+   "reader": "Claude, re-read session 2026-10-25 (subsurface fields)",
+   "values": 78,
+   "stored": 78,
+   "exact": 71,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 41,
+   "disagree": 0,
+   "unclear": 1,
+   "image": 7,
+   "image_not_verified": 0,
+   "review_items": 1,
+   "reread": {
+    "packets": [
+     "reread-01"
+    ],
+    "pages": [
+     1
+    ],
+    "reason": "subsurface fields",
+    "queue_ids": [
+     "ngmdb:100326:subsurface_fields:p1"
+    ]
+   }
+  }
+ ],
+ "history": [
+  {
+   "at": "2026-10-25T23:40:51+00:00",
+   "reason": "subsurface fields",
+   "packets": [
+    "reread-01"
+   ],
+   "pages": [
+    1
+   ],
+   "replaced": [
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Moved earth",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "Moved earth (Holocene) — Earth material moved in bulk by humans.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Holocene",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "Moved earth (Holocene) — Earth material moved in bulk by humans.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.0117,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "thickness": {
+       "value": "up to 18 feet",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "Thickness up to 18 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": null,
+        "max_ft": 18.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Beach sand",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "Beach sand (Holocene) — White (N9) to medium-gray (N5), well-sorted, subrounded to",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Holocene",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "Beach sand (Holocene) — White (N9) to medium-gray (N5), well-sorted, subrounded to",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.0117,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "well-sorted, subrounded to well-rounded, fine to medium quartz sand with lenses of very coarse shell fragments and very angular, very fine heavy mineral sand",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "well-rounded, fine to medium quartz sand with lenses of very coarse shell fragments and",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "exposed above mean low water and up to the storm tide line",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "above mean low water and up to the storm tide line.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "less than 1 foot",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "the subaqueous beach face. Thickness less than 1 foot.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": null,
+        "max_ft": 1.0,
+        "unit": "foot",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Beach ridge sand",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "Beach ridge sand (Holocene) — White (N9) to medium-gray (N5), bimodal. subrounded,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Holocene",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "Beach ridge sand (Holocene) — White (N9) to medium-gray (N5), bimodal. subrounded,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.0117,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "bimodal, subrounded, fine and medium quartz sand with very fine heavy mineral sand and sparse, well-rounded, fine phosphatic sand",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "fine and medium quartz sand with very fine heavy mineral sand and sparse. well-rounded,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "dune lines formed near the high water line on the beach, parallel to the water's edge; bimodal sorting associated with eolian transport",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "The bimodal sorting is associated with eolian transport.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "3 to 20 feet",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "Heavy minerals form thin layers along bedding planes. Thickness 3 to 20 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": 3.0,
+        "max_ft": 20.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Freshwater marsh and swamp deposits",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "Freshwater marsh and swamp deposits (Holocene) — Black (N1), silty clay and peat",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Holocene",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "Freshwater marsh and swamp deposits (Holocene) — Black (N1), silty clay and peat",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.0117,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "Black (N1), silty clay and peat",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "Freshwater marsh and swamp deposits (Holocene) — Black (N1), silty clay and peat",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "deposited in stream valleys and areas of locally low elevation",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "deposited in stream valleys and areas of locally low elevation",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      },
+      "thickness": {
+       "value": "1 to 40 feet",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.479,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "salinity, and rising tides importing high salinity waters. Thickness | to 40 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "unclear",
+       "note": "OCR text reads 'Thickness | to 40 feet.'; first digit read as 1",
+       "normalized": {
+        "min_ft": 1.0,
+        "max_ft": 40.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "QHsm",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "intertidal zone in estuaries. Thickness 3 to 30 feet.\n\nQHsm",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "symbol placed after this description in the OCR text; association inferred from layout"
+      },
+      "name": {
+       "value": "Saltmarsh deposits",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "Saltmarsh deposits (Holocene) — Black (N1), soft, silty clay with scattered lenses of",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Holocene",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "Saltmarsh deposits (Holocene) — Black (N1), soft, silty clay with scattered lenses of",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.0117,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "soft, silty clay with scattered lenses of well-sorted, subrounded, very fine quartz sand",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "Saltmarsh deposits (Holocene) — Black (N1), soft, silty clay with scattered lenses of",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "intertidal zone in estuaries",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "intertidal zone in estuaries.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "3 to 30 feet",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "intertidal zone in estuaries. Thickness 3 to 30 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": 3.0,
+        "max_ft": 30.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Sediments beneath the Silver Bluff terrace",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "Sediments beneath the Silver Bluff Terrace",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "rank": {
+       "value": "terrace sediments (informal)",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "Sediments beneath the Silver Bluff Terrace",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "contacts": {
+       "value": "generally above the elevation of 6 feet at their seaward margin where overlapped by Holocene deposits; at their landward margin generally below the elevation of 10 feet, where the deposits overlap, overlie, or abut sediments of the Princess Anne terrace",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "Sediments beneath the Silver Bluff terrace generally are above the elevation of 6 feet at their",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "QPsbs",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "Thickness 4 to 50 feet.\n\nQPsbs",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "symbol placed after this description in the OCR text; association inferred from layout"
+      },
+      "name": {
+       "value": "Barrier-island deposits (Silver Bluff terrace)",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "ridges that are commonly welded to older terrace or barrier deposits. Thickness 4 to 50 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "'Barrier-island deposits (Pleistocene)' listed under the Silver Bluff terrace heading"
+      },
+      "group": {
+       "value": "Silver Bluff terrace",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "Sediments beneath the Silver Bluff Terrace",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Pleistocene",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "Barrier-island deposits (Pleistocene) — Light-gray (N7) to dark-gray (N3). poorly to",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "poorly to moderately well-sorted, subrounded to well-rounded, fine quartz sand with a minor fraction of fine heavy minerals, phosphatic sand, and shell hash",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "moderately well-sorted, subrounded to well-rounded, fine quartz sand with a minor",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "description": {
+       "value": "Deposits form linear, subparallel ridges that are commonly welded to older terrace or barrier deposits",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "ridges that are commonly welded to older terrace or barrier deposits.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "4 to 50 feet",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "ridges that are commonly welded to older terrace or barrier deposits. Thickness 4 to 50 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": 4.0,
+        "max_ft": 50.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Sediments beneath the Princess Anne terrace",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "Sediments Beneath the Princess Anne Terrace",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "rank": {
+       "value": "terrace sediments (informal)",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "Sediments Beneath the Princess Anne Terrace",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "contacts": {
+       "value": "generally above the elevation of 12 feet at their seaward margin where overlapped by Silver Bluff terrace and Holocene deposits; at the landward margin generally below the elevation of 18 feet where the deposits overlap, overlie, or abut sediments of the Pamlico terrace",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "Sediments beneath the Princess Anne terrace are generally above the elevation of 12 feet at their",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "QPpas",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.684,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "[ aFpas | Barrier-island deposits (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "note": "OCR reads 'aFpas'"
+      },
+      "name": {
+       "value": "Barrier-island deposits (Princess Anne terrace)",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.684,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "[ aFpas | Barrier-island deposits (Pleistocene) — Light-gray (N7) to dark-gray (N3), phosphatic,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      },
+      "group": {
+       "value": "Princess Anne terrace",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "Sediments Beneath the Princess Anne Terrace",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Pleistocene",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "[ aFpas | Barrier-island deposits (Pleistocene) — Light-gray (N7) to dark-gray (N3), phosphatic,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "phosphatic, poorly to moderately well-sorted, subrounded to well-rounded, fine quartz sand with abundant fine heavy minerals, medium shell sand, shell hash, and trace amounts of fine mica",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "poorly to moderately well-sorted, subrounded to well-rounded, fine quartz sand with",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      },
+      "description": {
+       "value": "Deposits form linear to curvate, subparallel ridges",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "Deposits form linear to curvate, subparallel ridges. Thickness 4 to 50 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "4 to 50 feet",
+       "source_id": "ngmdb:100326",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+       "quote": "Deposits form linear to curvate, subparallel ridges. Thickness 4 to 50 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": 4.0,
+        "max_ft": 50.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    }
+   ]
   }
  ],
  "units": [
@@ -111,6 +864,43 @@
      "unit": "feet",
      "approximate": false
     }
+   },
+   "map_symbol": {
+    "value": "me",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1#page=1&viewrect=1668,276,39,20",
+    "quote": "me",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1655_260_1720_950-r1c1",
+     "box": [
+      26,
+      32,
+      104,
+      72
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3336,
+      552,
+      3414,
+      592
+     ],
+     "pt_box": [
+      1668.0,
+      276.0,
+      1707.0,
+      296.0
+     ],
+     "pdf_sha256": "6d89ca0e4668a01265fb1e4694b052bfc34af068dde731180aea19a7e91deac7"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled, missing or placed apart in the OCR text)"
    }
   },
   {
@@ -190,6 +980,43 @@
      "unit": "foot",
      "approximate": false
     }
+   },
+   "map_symbol": {
+    "value": "QHabf",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1#page=1&viewrect=1668,376,39,20",
+    "quote": "QHabf",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1655_260_1720_950-r1c1",
+     "box": [
+      26,
+      232,
+      104,
+      272
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3336,
+      752,
+      3414,
+      792
+     ],
+     "pt_box": [
+      1668.0,
+      376.0,
+      1707.0,
+      396.0
+     ],
+     "pdf_sha256": "6d89ca0e4668a01265fb1e4694b052bfc34af068dde731180aea19a7e91deac7"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled, missing or placed apart in the OCR text)"
    }
   },
   {
@@ -269,6 +1096,43 @@
      "unit": "feet",
      "approximate": false
     }
+   },
+   "map_symbol": {
+    "value": "QHbr",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1#page=1&viewrect=1668.5,463,38.5,20.5",
+    "quote": "QHbr",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1655_260_1720_950-r1c1",
+     "box": [
+      27,
+      406,
+      104,
+      447
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3337,
+      926,
+      3414,
+      967
+     ],
+     "pt_box": [
+      1668.5,
+      463.0,
+      1707.0,
+      483.5
+     ],
+     "pdf_sha256": "6d89ca0e4668a01265fb1e4694b052bfc34af068dde731180aea19a7e91deac7"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled, missing or placed apart in the OCR text)"
    }
   },
   {
@@ -277,13 +1141,13 @@
     "source_id": "ngmdb:100326",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.727,
+    "confidence": 0.855,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
     "quote": "Freshwater marsh and swamp deposits (Holocene) — Black (N1), silty clay and peat",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null
+    "verification": "agree"
    },
    "age": {
     "value": "Holocene",
@@ -322,13 +1186,13 @@
     "source_id": "ngmdb:100326",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.855,
+    "confidence": 0.727,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
     "quote": "deposited in stream valleys and areas of locally low elevation",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree"
+    "verification": null
    },
    "thickness": {
     "value": "1 to 40 feet",
@@ -349,6 +1213,43 @@
      "unit": "feet",
      "approximate": false
     }
+   },
+   "map_symbol": {
+    "value": "QHfw",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1#page=1&viewrect=1668,538.5,39,20.5",
+    "quote": "QHfw",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1655_260_1720_950-r1c1",
+     "box": [
+      26,
+      557,
+      104,
+      598
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3336,
+      1077,
+      3414,
+      1118
+     ],
+     "pt_box": [
+      1668.0,
+      538.5,
+      1707.0,
+      559.0
+     ],
+     "pdf_sha256": "6d89ca0e4668a01265fb1e4694b052bfc34af068dde731180aea19a7e91deac7"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled, missing or placed apart in the OCR text)"
    }
   },
   {
@@ -356,15 +1257,39 @@
     "value": "QHsm",
     "source_id": "ngmdb:100326",
     "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.581,
-    "inferred": true,
-    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
-    "quote": "intertidal zone in estuaries. Thickness 3 to 30 feet.\n\nQHsm",
-    "quote_match": "exact",
-    "text_method": "ocr",
-    "verification": null,
-    "note": "symbol placed after this description in the OCR text; association inferred from layout"
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1#page=1&viewrect=1668.5,639,38.5,19.5",
+    "quote": "QHsm",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1655_260_1720_950-r1c1",
+     "box": [
+      27,
+      758,
+      104,
+      797
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3337,
+      1278,
+      3414,
+      1317
+     ],
+     "pt_box": [
+      1668.5,
+      639.0,
+      1707.0,
+      658.5
+     ],
+     "pdf_sha256": "6d89ca0e4668a01265fb1e4694b052bfc34af068dde731180aea19a7e91deac7"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled, missing or placed apart in the OCR text)"
    },
    "name": {
     "value": "Saltmarsh deposits",
@@ -476,13 +1401,13 @@
     "source_id": "ngmdb:100326",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.727,
+    "confidence": 0.855,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
     "quote": "Sediments beneath the Silver Bluff terrace generally are above the elevation of 6 feet at their",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null
+    "verification": "agree"
    }
   },
   {
@@ -490,15 +1415,39 @@
     "value": "QPsbs",
     "source_id": "ngmdb:100326",
     "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.581,
-    "inferred": true,
-    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
-    "quote": "Thickness 4 to 50 feet.\n\nQPsbs",
-    "quote_match": "exact",
-    "text_method": "ocr",
-    "verification": null,
-    "note": "symbol placed after this description in the OCR text; association inferred from layout"
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1#page=1&viewrect=1668.5,776,38.5,20.5",
+    "quote": "QPsbs",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1655_260_1720_950-r1c1",
+     "box": [
+      27,
+      1032,
+      104,
+      1073
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3337,
+      1552,
+      3414,
+      1593
+     ],
+     "pt_box": [
+      1668.5,
+      776.0,
+      1707.0,
+      796.5
+     ],
+     "pdf_sha256": "6d89ca0e4668a01265fb1e4694b052bfc34af068dde731180aea19a7e91deac7"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled, missing or placed apart in the OCR text)"
    },
    "name": {
     "value": "Barrier-island deposits (Silver Bluff terrace)",
@@ -532,13 +1481,13 @@
     "source_id": "ngmdb:100326",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.855,
+    "confidence": 0.727,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
     "quote": "Barrier-island deposits (Pleistocene) — Light-gray (N7) to dark-gray (N3). poorly to",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree",
+    "verification": null,
     "normalized": {
      "younger_ma": 0.0117,
      "older_ma": 2.58,
@@ -577,13 +1526,13 @@
     "source_id": "ngmdb:100326",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.727,
+    "confidence": 0.855,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
     "quote": "ridges that are commonly welded to older terrace or barrier deposits. Thickness 4 to 50 feet.",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
+    "verification": "agree",
     "normalized": {
      "min_ft": 4.0,
      "max_ft": 50.0,
@@ -598,13 +1547,13 @@
     "source_id": "ngmdb:100326",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.727,
+    "confidence": 0.855,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
     "quote": "Sediments Beneath the Princess Anne Terrace",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null
+    "verification": "agree"
    },
    "rank": {
     "value": "terrace sediments (informal)",
@@ -638,28 +1587,51 @@
     "value": "QPpas",
     "source_id": "ngmdb:100326",
     "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.684,
-    "inferred": true,
-    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
-    "quote": "[ aFpas | Barrier-island deposits (Pleistocene)",
-    "quote_match": "exact",
-    "text_method": "ocr",
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1#page=1&viewrect=1668.5,913,38.5,20.5",
+    "quote": "QPpas",
+    "quote_match": "image",
+    "text_method": "image",
     "verification": "agree",
-    "note": "OCR reads 'aFpas'"
+    "image": {
+     "tile": "p1-144dpi-crop1655_260_1720_950-r1c1",
+     "box": [
+      27,
+      1306,
+      104,
+      1347
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3337,
+      1826,
+      3414,
+      1867
+     ],
+     "pt_box": [
+      1668.5,
+      913.0,
+      1707.0,
+      933.5
+     ],
+     "pdf_sha256": "6d89ca0e4668a01265fb1e4694b052bfc34af068dde731180aea19a7e91deac7"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled, missing or placed apart in the OCR text)"
    },
    "name": {
     "value": "Barrier-island deposits (Princess Anne terrace)",
     "source_id": "ngmdb:100326",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.684,
+    "confidence": 0.581,
     "inferred": true,
     "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
     "quote": "[ aFpas | Barrier-island deposits (Pleistocene) — Light-gray (N7) to dark-gray (N3), phosphatic,",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree"
+    "verification": null
    },
    "group": {
     "value": "Princess Anne terrace",
@@ -698,13 +1670,13 @@
     "source_id": "ngmdb:100326",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.855,
+    "confidence": 0.727,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
     "quote": "poorly to moderately well-sorted, subrounded to well-rounded, fine quartz sand with",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree"
+    "verification": null
    },
    "description": {
     "value": "Deposits form linear to curvate, subparallel ridges",
@@ -743,5 +1715,566 @@
  "observations": [],
  "structures": [],
  "groundwater": [],
- "references": []
+ "references": [],
+ "surfaces": [
+  {
+   "surface": {
+    "value": "top of Sediments Beneath the Holocene Terrace",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "deposits generally are below the elevation of 10 feet at the landward margin. where Holocene",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "elevation of the unit's upper surface as stated; read as the top of the unit"
+   },
+   "unit": {
+    "value": "Sediments Beneath the Holocene Terrace",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "Sediments Beneath the Holocene Terrace",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "boundary": {
+    "value": "top",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "deposits generally are below the elevation of 10 feet at the landward margin. where Holocene",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "stated elevation of the deposits' upper surface read as the unit's top"
+   },
+   "elevation": {
+    "value": "below 10 feet",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "deposits generally are below the elevation of 10 feet at the landward margin. where Holocene",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "units": "ft",
+    "normalized": {
+     "min_ft": 10.0,
+     "max_ft": 10.0,
+     "unit": "feet",
+     "approximate": false
+    },
+    "navd88": {
+     "value": {
+      "min_ft": 10.0,
+      "max_ft": 10.0
+     },
+     "source_id": "ngmdb:100326",
+     "page": 1,
+     "extraction_method": "datum_conversion",
+     "confidence": 0.551,
+     "inferred": true,
+     "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+     "from_datum": null,
+     "shift_ft": 0.0,
+     "conversion": "none (datum not stated)",
+     "approximate": true,
+     "assumptions": [
+      "vertical datum not stated; kept as printed (NGVD29 and NAVD88 differ by about a foot here)"
+     ],
+     "datum_from": "not stated",
+     "datum_page": null,
+     "location_from": null
+    }
+   },
+   "method": {
+    "value": "stated",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "deposits generally are below the elevation of 10 feet at the landward margin. where Holocene",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "location": {
+    "value": "landward margin",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "deposits generally are below the elevation of 10 feet at the landward margin. where Holocene",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "surface": {
+    "value": "top of Sediments beneath the Silver Bluff terrace",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "Sediments beneath the Silver Bluff terrace generally are above the elevation of 6 feet at their",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "elevation of the unit's upper surface as stated; read as the top of the unit"
+   },
+   "unit": {
+    "value": "Sediments beneath the Silver Bluff terrace",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "Sediments beneath the Silver Bluff Terrace",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "boundary": {
+    "value": "top",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "Sediments beneath the Silver Bluff terrace generally are above the elevation of 6 feet at their",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "stated elevation of the deposits' upper surface read as the unit's top"
+   },
+   "elevation": {
+    "value": "above 6 feet",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "Sediments beneath the Silver Bluff terrace generally are above the elevation of 6 feet at their",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "units": "ft",
+    "normalized": {
+     "min_ft": 6.0,
+     "max_ft": 6.0,
+     "unit": "feet",
+     "approximate": false
+    },
+    "navd88": {
+     "value": {
+      "min_ft": 6.0,
+      "max_ft": 6.0
+     },
+     "source_id": "ngmdb:100326",
+     "page": 1,
+     "extraction_method": "datum_conversion",
+     "confidence": 0.551,
+     "inferred": true,
+     "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+     "from_datum": null,
+     "shift_ft": 0.0,
+     "conversion": "none (datum not stated)",
+     "approximate": true,
+     "assumptions": [
+      "vertical datum not stated; kept as printed (NGVD29 and NAVD88 differ by about a foot here)"
+     ],
+     "datum_from": "not stated",
+     "datum_page": null,
+     "location_from": null
+    }
+   },
+   "method": {
+    "value": "stated",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "Sediments beneath the Silver Bluff terrace generally are above the elevation of 6 feet at their",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "location": {
+    "value": "seaward margin",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "seaward margin where overlapped by Holocene deposits. At their landward margin, Silver Bluff",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "surface": {
+    "value": "top of Sediments beneath the Silver Bluff terrace",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "terrace sediments generally are below the elevation of 10 feet. where the deposits overlap, overlie,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "elevation of the unit's upper surface as stated; read as the top of the unit"
+   },
+   "unit": {
+    "value": "Sediments beneath the Silver Bluff terrace",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "Sediments beneath the Silver Bluff Terrace",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "boundary": {
+    "value": "top",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "terrace sediments generally are below the elevation of 10 feet. where the deposits overlap, overlie,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "stated elevation of the deposits' upper surface read as the unit's top"
+   },
+   "elevation": {
+    "value": "below 10 feet",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "terrace sediments generally are below the elevation of 10 feet. where the deposits overlap, overlie,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "units": "ft",
+    "normalized": {
+     "min_ft": 10.0,
+     "max_ft": 10.0,
+     "unit": "feet",
+     "approximate": false
+    },
+    "navd88": {
+     "value": {
+      "min_ft": 10.0,
+      "max_ft": 10.0
+     },
+     "source_id": "ngmdb:100326",
+     "page": 1,
+     "extraction_method": "datum_conversion",
+     "confidence": 0.551,
+     "inferred": true,
+     "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+     "from_datum": null,
+     "shift_ft": 0.0,
+     "conversion": "none (datum not stated)",
+     "approximate": true,
+     "assumptions": [
+      "vertical datum not stated; kept as printed (NGVD29 and NAVD88 differ by about a foot here)"
+     ],
+     "datum_from": "not stated",
+     "datum_page": null,
+     "location_from": null
+    }
+   },
+   "method": {
+    "value": "stated",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "terrace sediments generally are below the elevation of 10 feet. where the deposits overlap, overlie,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "location": {
+    "value": "landward margin",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "seaward margin where overlapped by Holocene deposits. At their landward margin, Silver Bluff",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "surface": {
+    "value": "top of Sediments beneath the Princess Anne terrace",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "Sediments beneath the Princess Anne terrace are generally above the elevation of 12 feet at their",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "elevation of the unit's upper surface as stated; read as the top of the unit"
+   },
+   "unit": {
+    "value": "Sediments beneath the Princess Anne terrace",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "Sediments Beneath the Princess Anne Terrace",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "boundary": {
+    "value": "top",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "Sediments beneath the Princess Anne terrace are generally above the elevation of 12 feet at their",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "stated elevation of the deposits' upper surface read as the unit's top"
+   },
+   "elevation": {
+    "value": "above 12 feet",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "Sediments beneath the Princess Anne terrace are generally above the elevation of 12 feet at their",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "units": "ft",
+    "normalized": {
+     "min_ft": 12.0,
+     "max_ft": 12.0,
+     "unit": "feet",
+     "approximate": false
+    },
+    "navd88": {
+     "value": {
+      "min_ft": 12.0,
+      "max_ft": 12.0
+     },
+     "source_id": "ngmdb:100326",
+     "page": 1,
+     "extraction_method": "datum_conversion",
+     "confidence": 0.551,
+     "inferred": true,
+     "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+     "from_datum": null,
+     "shift_ft": 0.0,
+     "conversion": "none (datum not stated)",
+     "approximate": true,
+     "assumptions": [
+      "vertical datum not stated; kept as printed (NGVD29 and NAVD88 differ by about a foot here)"
+     ],
+     "datum_from": "not stated",
+     "datum_page": null,
+     "location_from": null
+    }
+   },
+   "method": {
+    "value": "stated",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "Sediments beneath the Princess Anne terrace are generally above the elevation of 12 feet at their",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "location": {
+    "value": "seaward margin",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "seaward margin where overlapped by Silver Bluff terrace and Holocene deposits. At the landward",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "surface": {
+    "value": "top of Sediments beneath the Princess Anne terrace",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "margin, Princess Anne terrace sediments generally are below the elevation of 18 feet where the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "elevation of the unit's upper surface as stated; read as the top of the unit"
+   },
+   "unit": {
+    "value": "Sediments beneath the Princess Anne terrace",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "Sediments Beneath the Princess Anne Terrace",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "boundary": {
+    "value": "top",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "margin, Princess Anne terrace sediments generally are below the elevation of 18 feet where the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "stated elevation of the deposits' upper surface read as the unit's top"
+   },
+   "elevation": {
+    "value": "below 18 feet",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "margin, Princess Anne terrace sediments generally are below the elevation of 18 feet where the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "units": "ft",
+    "normalized": {
+     "min_ft": 18.0,
+     "max_ft": 18.0,
+     "unit": "feet",
+     "approximate": false
+    },
+    "navd88": {
+     "value": {
+      "min_ft": 18.0,
+      "max_ft": 18.0
+     },
+     "source_id": "ngmdb:100326",
+     "page": 1,
+     "extraction_method": "datum_conversion",
+     "confidence": 0.551,
+     "inferred": true,
+     "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+     "from_datum": null,
+     "shift_ft": 0.0,
+     "conversion": "none (datum not stated)",
+     "approximate": true,
+     "assumptions": [
+      "vertical datum not stated; kept as printed (NGVD29 and NAVD88 differ by about a foot here)"
+     ],
+     "datum_from": "not stated",
+     "datum_page": null,
+     "location_from": null
+    }
+   },
+   "method": {
+    "value": "stated",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "margin, Princess Anne terrace sediments generally are below the elevation of 18 feet where the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "location": {
+    "value": "landward margin",
+    "source_id": "ngmdb:100326",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100326_1",
+    "quote": "seaward margin where overlapped by Silver Bluff terrace and Holocene deposits. At the landward",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  }
+ ],
+ "contours": [],
+ "sections": [],
+ "water_tests": [],
+ "rock_tests": []
 }

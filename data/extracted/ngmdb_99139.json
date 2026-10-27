@@ -8,8 +8,8 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-06T11:02:10+00:00",
- "updated_at": "2026-10-06T11:02:10+00:00",
- "reader": "Claude, scheduled Claude Code session 2026-10-06",
+ "updated_at": "2026-10-26T11:19:02+00:00",
+ "reader": "Claude, re-read session 2026-10-25 (subsurface fields)",
  "packets": [
   "packet-01"
  ],
@@ -18,7 +18,7 @@
  ],
  "blocks_total": 1,
  "complete": true,
- "notes": "Single map sheet read from OCR (page 1). Map symbols are garbled or not clearly tied to a unit in the OCR text ('SHme', '[ QHiw', 'QPldm') and were not recorded. The Water unit was not recorded. The map-symbol explanation (contact) was not recorded: legend-only features are not values. Two thicknesses printed as '| to N feet' are read as 1, flagged inferred and sent to review. Georgia portions of the quadrangle are not mapped.\nSUBSURFACE: Ladson Formation margin elevations (above 35 ft seaward where overlapped by the Ten Mile Hill beds, below 57 ft landward against the Penholoway Formation; page 1). No drill holes, cross sections or structure contours appear in the OCR text. Datum: horizontal 1927 North American Datum; contour interval 10 feet on the 1978 base map; the vertical datum is not stated (page 1).",
+ "notes": "Single map sheet read from OCR (page 1). Map symbols are garbled or not clearly tied to a unit in the OCR text ('SHme', '[ QHiw', 'QPldm') and were not recorded. The Water unit was not recorded. The map-symbol explanation (contact) was not recorded: legend-only features are not values. Two thicknesses printed as '| to N feet' are read as 1, flagged inferred and sent to review. Georgia portions of the quadrangle are not mapped.\nSUBSURFACE: Ladson Formation margin elevations (above 35 ft seaward where overlapped by the Ten Mile Hill beds, below 57 ft landward against the Penholoway Formation; page 1). No drill holes, cross sections or structure contours appear in the OCR text. Datum: horizontal 1927 North American Datum; contour interval 10 feet on the 1978 base map; the vertical datum is not stated (page 1).\nRe-read of page 1 for subsurface fields (single OCR map sheet; most of the quadrangle is the unmapped Georgia area). Units as before; map symbols read from the legend boxes on a page-image tile. Two thicknesses printed '| to N feet' read as 1 (inferred). Ladson Formation margin elevations (above 35 ft seaward, below 57 ft landward) recorded as contacts and as stated unit tops at those margins (boundary inferred; no vertical datum printed). Whole-page image checked: no drill holes, cross sections or structure contours. Water unit, unmapped Georgia area and legend-only contact not recorded.",
  "files": [
   {
    "url": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
@@ -29,15 +29,16 @@
   }
  ],
  "summary": {
-  "stored": 30,
+  "stored": 48,
   "quote_match": {
-   "exact": 30
+   "exact": 42,
+   "image": 6
   },
   "verification": {
    "unclear": 2,
-   "agree": 3
+   "agree": 21
   },
-  "inferred": 2
+  "inferred": 6
  },
  "ingests": [
   {
@@ -57,6 +58,552 @@
    "disagree": 0,
    "unclear": 2,
    "review_items": 2
+  },
+  {
+   "at": "2026-10-26T11:19:02+00:00",
+   "packets": [
+    "reread-01"
+   ],
+   "reader": "Claude, re-read session 2026-10-25 (subsurface fields)",
+   "values": 48,
+   "stored": 48,
+   "exact": 42,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 21,
+   "disagree": 0,
+   "unclear": 2,
+   "image": 6,
+   "image_not_verified": 0,
+   "review_items": 2,
+   "reread": {
+    "packets": [
+     "reread-01"
+    ],
+    "pages": [
+     1
+    ],
+    "reason": "subsurface fields",
+    "queue_ids": [
+     "ngmdb:99139:subsurface_fields:p1"
+    ]
+   }
+  }
+ ],
+ "history": [
+  {
+   "at": "2026-10-26T11:19:02+00:00",
+   "reason": "subsurface fields",
+   "packets": [
+    "reread-01"
+   ],
+   "pages": [
+    1
+   ],
+   "replaced": [
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Moved earth",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "Moved earth (Holocene) — Earth material moved in bulk by humans.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Holocene",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "Moved earth (Holocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.0117,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Earth material moved in bulk by humans. Color is highly variable and dependent on source location.",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "Earth material moved in bulk by humans. Color is highly",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "up to 18 feet",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "Thickness up to 18 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": null,
+        "max_ft": 18.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Meander scars (Holocene)",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "Meander scars (Holocene) —Geomorphic patterns on the land surface",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Holocene",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "Meander scars (Holocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.0117,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Geomorphic patterns on the land surface resulting from the erosion by migrating river channels into older deposits and the subsequent abandoning and filling of those channels",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "Meander scars (Holocene) —Geomorphic patterns on the land surface resulting from the",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "lithology": {
+       "value": "most often medium to coarse sand or silty clay",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "and filling of those channels. Sediments are most often medium to coarse sand or silty clay.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "3 to 15 feet",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "Thickness 3 to 15 feet.\n\nSavannah River Floodplain",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": 3.0,
+        "max_ft": 15.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Savannah River Floodplain",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "Savannah River Floodplain (Holocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Holocene",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "Savannah River Floodplain (Holocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.0117,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "Variegated, non-differentiated sand, mud, and organic non-marine material",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "Variegated, non-differentiated sand, mud, and",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "commonly deposited by fluvial processes and uncommonly deposited by eolian processes",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "organic non-marine material commonly deposited by fluvial processes and uncommonly",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      },
+      "thickness": {
+       "value": "1 to 60 feet",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.479,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "Thickness | to 60 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "unclear",
+       "note": "OCR text: 'Thickness | to 60 feet.'; '|' read as the digit 1",
+       "normalized": {
+        "min_ft": 1.0,
+        "max_ft": 60.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Freshwater marsh and swamp deposits",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "Freshwater marsh and swamp deposits (Holocene) — Black (N1), silty clay and peat",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Holocene",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "Freshwater marsh and swamp deposits (Holocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.0117,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "Black (N1), silty clay and peat",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "Black (N1), silty clay and peat",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "stream valleys and areas of locally low elevation; areas of poor drainage",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "deposited in stream valleys and areas of locally low elevation",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "1 to 40 feet",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.479,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "Thickness | to 40 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "unclear",
+       "note": "OCR text: 'Thickness | to 40 feet.'; '|' read as the digit 1",
+       "normalized": {
+        "min_ft": 1.0,
+        "max_ft": 40.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Ladson Formation",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "Ladson Formation (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Ladson",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "Ladson Formation (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Pleistocene",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "Ladson Formation (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "contacts": {
+       "value": "generally above the elevation of 35 feet at their seaward margin where overlapped by sediments of the Ten Mile Hill beds; at the landward margin generally below the elevation of 57 feet where the deposits overlap, overlie, or abut sediments of the Penholoway Formation",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "Sediments of the Ladson Formation are generally above the elevation of 35 feet at their seaward",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Meander scars (Ladson Formation)",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "Meander scars — Geomorphic patterns on the land surface resulting from the erosion by",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "listed under the Ladson Formation"
+      },
+      "lithology": {
+       "value": "most often medium to coarse sand or silty clay",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "channels. Sediments are most often medium to coarse sand or silty clay. Thickness 3 to 15 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "3 to 15 feet",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "channels. Sediments are most often medium to coarse sand or silty clay. Thickness 3 to 15 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": 3.0,
+        "max_ft": 15.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Flood plain deposits (Ladson Formation)",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "Flood plain deposits — Variable color, mix of sand, clay, silt in fluvial deposits along the",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "listed under the Ladson Formation"
+      },
+      "lithology": {
+       "value": "Variable color, mix of sand, clay, silt",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "Flood plain deposits — Variable color, mix of sand, clay, silt",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "fluvial deposits along the Savannah River, derived from nonmarine sediments that are not altered by marine processes",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "derived from nonmarine sediments that are not altered by marine processes",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "2 to 35 feet",
+       "source_id": "ngmdb:99139",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+       "quote": "Thickness 2 to 35 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": 2.0,
+        "max_ft": 35.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    }
+   ]
   }
  ],
  "units": [
@@ -111,19 +658,57 @@
     "source_id": "ngmdb:99139",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.727,
+    "confidence": 0.855,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
     "quote": "Thickness up to 18 feet.",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
+    "verification": "agree",
     "normalized": {
      "min_ft": null,
      "max_ft": 18.0,
      "unit": "feet",
      "approximate": false
     }
+   },
+   "map_symbol": {
+    "value": "me",
+    "source_id": "ngmdb:99139",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1#page=1&viewrect=1668,265,39,20.5",
+    "quote": "me",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1660_250_1715_665-r1c1",
+     "box": [
+      16,
+      30,
+      94,
+      71
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3336,
+      530,
+      3414,
+      571
+     ],
+     "pt_box": [
+      1668.0,
+      265.0,
+      1707.0,
+      285.5
+     ],
+     "pdf_sha256": "b140953194fb0af75f2a0364f8442e93f3b0b4ead7077e7b28ad9586c9a50fae"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled or loose in the OCR text)"
    }
   },
   {
@@ -203,6 +788,43 @@
      "unit": "feet",
      "approximate": false
     }
+   },
+   "map_symbol": {
+    "value": "QHms",
+    "source_id": "ngmdb:99139",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1#page=1&viewrect=1668,301.5,38.5,20",
+    "quote": "QHms",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1660_250_1715_665-r1c1",
+     "box": [
+      16,
+      103,
+      93,
+      143
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3336,
+      603,
+      3413,
+      643
+     ],
+     "pt_box": [
+      1668.0,
+      301.5,
+      1706.5,
+      321.5
+     ],
+     "pdf_sha256": "b140953194fb0af75f2a0364f8442e93f3b0b4ead7077e7b28ad9586c9a50fae"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled or loose in the OCR text)"
    }
   },
   {
@@ -224,13 +846,13 @@
     "source_id": "ngmdb:99139",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.855,
+    "confidence": 0.727,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
     "quote": "Savannah River Floodplain (Holocene)",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree",
+    "verification": null,
     "normalized": {
      "younger_ma": 0.0,
      "older_ma": 0.0117,
@@ -256,13 +878,13 @@
     "source_id": "ngmdb:99139",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.855,
+    "confidence": 0.727,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
     "quote": "organic non-marine material commonly deposited by fluvial processes and uncommonly",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree"
+    "verification": null
    },
    "thickness": {
     "value": "1 to 60 feet",
@@ -283,6 +905,43 @@
      "unit": "feet",
      "approximate": false
     }
+   },
+   "map_symbol": {
+    "value": "Qsvf",
+    "source_id": "ngmdb:99139",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1#page=1&viewrect=1668,364,38.5,20",
+    "quote": "Qsvf",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1660_250_1715_665-r1c1",
+     "box": [
+      16,
+      228,
+      93,
+      268
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3336,
+      728,
+      3413,
+      768
+     ],
+     "pt_box": [
+      1668.0,
+      364.0,
+      1706.5,
+      384.0
+     ],
+     "pdf_sha256": "b140953194fb0af75f2a0364f8442e93f3b0b4ead7077e7b28ad9586c9a50fae"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled or loose in the OCR text)"
    }
   },
   {
@@ -323,13 +982,13 @@
     "source_id": "ngmdb:99139",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.727,
+    "confidence": 0.855,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
     "quote": "Black (N1), silty clay and peat",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null
+    "verification": "agree"
    },
    "depositional_environment": {
     "value": "stream valleys and areas of locally low elevation; areas of poor drainage",
@@ -363,6 +1022,43 @@
      "unit": "feet",
      "approximate": false
     }
+   },
+   "map_symbol": {
+    "value": "QHfw",
+    "source_id": "ngmdb:99139",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1#page=1&viewrect=1667,414,38.5,20.5",
+    "quote": "QHfw",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1660_250_1715_665-r1c1",
+     "box": [
+      14,
+      328,
+      91,
+      369
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3334,
+      828,
+      3411,
+      869
+     ],
+     "pt_box": [
+      1667.0,
+      414.0,
+      1705.5,
+      434.5
+     ],
+     "pdf_sha256": "b140953194fb0af75f2a0364f8442e93f3b0b4ead7077e7b28ad9586c9a50fae"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled or loose in the OCR text)"
    }
   },
   {
@@ -402,13 +1098,13 @@
     "source_id": "ngmdb:99139",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.727,
+    "confidence": 0.855,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
     "quote": "Ladson Formation (Pleistocene)",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
+    "verification": "agree",
     "normalized": {
      "younger_ma": 0.0117,
      "older_ma": 2.58,
@@ -421,13 +1117,13 @@
     "source_id": "ngmdb:99139",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.855,
+    "confidence": 0.727,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
     "quote": "Sediments of the Ladson Formation are generally above the elevation of 35 feet at their seaward",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree"
+    "verification": null
    }
   },
   {
@@ -476,6 +1172,44 @@
      "unit": "feet",
      "approximate": false
     }
+   },
+   "map_symbol": {
+    "value": "QPldm",
+    "source_id": "ngmdb:99139",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1#page=1&viewrect=1669.5,589,38.5,20",
+    "quote": "QPldm",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1660_250_1715_665-r1c1",
+     "box": [
+      19,
+      678,
+      96,
+      718
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3339,
+      1178,
+      3416,
+      1218
+     ],
+     "pt_box": [
+      1669.5,
+      589.0,
+      1708.0,
+      609.0
+     ],
+     "pdf_sha256": "b140953194fb0af75f2a0364f8442e93f3b0b4ead7077e7b28ad9586c9a50fae"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled or loose in the OCR text)"
    }
   },
   {
@@ -537,11 +1271,286 @@
      "unit": "feet",
      "approximate": false
     }
+   },
+   "map_symbol": {
+    "value": "QPldr",
+    "source_id": "ngmdb:99139",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1#page=1&viewrect=1669,638.5,39,20",
+    "quote": "QPldr",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1660_250_1715_665-r1c1",
+     "box": [
+      18,
+      777,
+      96,
+      817
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3338,
+      1277,
+      3416,
+      1317
+     ],
+     "pt_box": [
+      1669.0,
+      638.5,
+      1708.0,
+      658.5
+     ],
+     "pdf_sha256": "b140953194fb0af75f2a0364f8442e93f3b0b4ead7077e7b28ad9586c9a50fae"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled or loose in the OCR text)"
    }
   }
  ],
  "observations": [],
  "structures": [],
  "groundwater": [],
- "references": []
+ "references": [],
+ "surfaces": [
+  {
+   "surface": {
+    "value": "top of Ladson Formation",
+    "source_id": "ngmdb:99139",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+    "quote": "Sediments of the Ladson Formation are generally above the elevation of 35 feet at their seaward",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "elevation of the unit's upper surface as stated; read as the top of the unit"
+   },
+   "unit": {
+    "value": "Ladson Formation",
+    "source_id": "ngmdb:99139",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+    "quote": "Ladson Formation (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "Ladson",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "boundary": {
+    "value": "top",
+    "source_id": "ngmdb:99139",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+    "quote": "Sediments of the Ladson Formation are generally above the elevation of 35 feet at their seaward",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "stated elevation of the deposits' upper surface read as the unit's top"
+   },
+   "elevation": {
+    "value": "above 35 feet",
+    "source_id": "ngmdb:99139",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+    "quote": "Sediments of the Ladson Formation are generally above the elevation of 35 feet at their seaward",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "units": "ft",
+    "normalized": {
+     "min_ft": 35.0,
+     "max_ft": 35.0,
+     "unit": "feet",
+     "approximate": false
+    },
+    "navd88": {
+     "value": {
+      "min_ft": 35.0,
+      "max_ft": 35.0
+     },
+     "source_id": "ngmdb:99139",
+     "page": 1,
+     "extraction_method": "datum_conversion",
+     "confidence": 0.551,
+     "inferred": true,
+     "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+     "from_datum": null,
+     "shift_ft": 0.0,
+     "conversion": "none (datum not stated)",
+     "approximate": true,
+     "assumptions": [
+      "vertical datum not stated; kept as printed (NGVD29 and NAVD88 differ by about a foot here)"
+     ],
+     "datum_from": "not stated",
+     "datum_page": null,
+     "location_from": null
+    }
+   },
+   "method": {
+    "value": "stated",
+    "source_id": "ngmdb:99139",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+    "quote": "Sediments of the Ladson Formation are generally above the elevation of 35 feet at their seaward",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "location": {
+    "value": "seaward margin",
+    "source_id": "ngmdb:99139",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+    "quote": "Sediments of the Ladson Formation are generally above the elevation of 35 feet at their seaward",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "surface": {
+    "value": "top of Ladson Formation",
+    "source_id": "ngmdb:99139",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+    "quote": "Formation sediments generally are below the elevation of 57 feet where the deposits overlap,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "elevation of the unit's upper surface as stated; read as the top of the unit"
+   },
+   "unit": {
+    "value": "Ladson Formation",
+    "source_id": "ngmdb:99139",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+    "quote": "Ladson Formation (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "Ladson",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "boundary": {
+    "value": "top",
+    "source_id": "ngmdb:99139",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+    "quote": "Formation sediments generally are below the elevation of 57 feet where the deposits overlap,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "stated elevation of the deposits' upper surface read as the unit's top"
+   },
+   "elevation": {
+    "value": "below 57 feet",
+    "source_id": "ngmdb:99139",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+    "quote": "Formation sediments generally are below the elevation of 57 feet where the deposits overlap,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "units": "ft",
+    "normalized": {
+     "min_ft": 57.0,
+     "max_ft": 57.0,
+     "unit": "feet",
+     "approximate": false
+    },
+    "navd88": {
+     "value": {
+      "min_ft": 57.0,
+      "max_ft": 57.0
+     },
+     "source_id": "ngmdb:99139",
+     "page": 1,
+     "extraction_method": "datum_conversion",
+     "confidence": 0.551,
+     "inferred": true,
+     "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+     "from_datum": null,
+     "shift_ft": 0.0,
+     "conversion": "none (datum not stated)",
+     "approximate": true,
+     "assumptions": [
+      "vertical datum not stated; kept as printed (NGVD29 and NAVD88 differ by about a foot here)"
+     ],
+     "datum_from": "not stated",
+     "datum_page": null,
+     "location_from": null
+    }
+   },
+   "method": {
+    "value": "stated",
+    "source_id": "ngmdb:99139",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+    "quote": "Formation sediments generally are below the elevation of 57 feet where the deposits overlap,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "location": {
+    "value": "landward margin",
+    "source_id": "ngmdb:99139",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99139_1",
+    "quote": "margin where overlapped by sediments of the Ten Mile Hill beds. At their landward margin, Ladson",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  }
+ ],
+ "contours": [],
+ "sections": [],
+ "water_tests": [],
+ "rock_tests": []
 }

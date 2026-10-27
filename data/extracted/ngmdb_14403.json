@@ -8,8 +8,8 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-07T11:00:33+00:00",
- "updated_at": "2026-10-07T11:00:33+00:00",
- "reader": "Claude, scheduled Claude Code session 2026-10-07",
+ "updated_at": "2026-10-25T23:45:09+00:00",
+ "reader": "Claude, Claude Code re-read session 2026-10-25",
  "packets": [
   "packet-01"
  ],
@@ -27,7 +27,7 @@
  ],
  "blocks_total": 10,
  "complete": true,
- "notes": "Audio-magnetotelluric (AMT) station location map (plate, p. 1, OCR) and data log (pp. 3-10). The data log tabulates observed apparent resistivity (ohm-metres), number of observations and standard error at frequencies from 7.5 Hz to 18.6 kHz for each station, but the tables are handwritten and the text layer is garbled: station numbers and values cannot be read reliably, so none were recorded. The schema has no fields for geophysical soundings in any case. The plate shows only place names (Lake Marion, Lake Moultrie, Santee National Wildlife Refuge) and no legible station numbers. The report says it is preliminary and not reviewed for USGS standards (p. 2). No geologic units, borings, structures or references.\nSUBSURFACE: AMT apparent-resistivity soundings by station (pp. 3-10) could constrain depth to resistive basement or saline water but are illegible in the text layer; a reading from the original images would be needed. No elevations, datum, cross sections or contour maps.",
+ "notes": "Audio-magnetotelluric (AMT) station location map (plate, p. 1, OCR) and data log (pp. 3-10). The data log tabulates observed apparent resistivity (ohm-metres), number of observations and standard error at frequencies from 7.5 Hz to 18.6 kHz for each station, but the tables are handwritten and the text layer is garbled: station numbers and values cannot be read reliably, so none were recorded. The schema has no fields for geophysical soundings in any case. The plate shows only place names (Lake Marion, Lake Moultrie, Santee National Wildlife Refuge) and no legible station numbers. The report says it is preliminary and not reviewed for USGS standards (p. 2). No geologic units, borings, structures or references.\nSUBSURFACE: AMT apparent-resistivity soundings by station (pp. 3-10) could constrain depth to resistive basement or saline water but are illegible in the text layer; a reading from the original images would be needed. No elevations, datum, cross sections or contour maps.\nRe-read of pages 3-10 with page images. The pages are the handwritten AMT data log: for each station and telluric line orientation (e.g. 1NS, 1EW) the observed apparent resistivity (ohm-metres), number of observations and standard error at frequencies 7.5 Hz to 18.6 kHz. The images are legible, but these are geophysical soundings with no depths, elevations, datum, units, cross sections or contours, and no water or rock test values, so the schema has no field for them and nothing was recorded. SUBSURFACE: apparent-resistivity soundings by station (pp. 3-10), legible in the page images; no schema field for geophysical soundings.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/of/1977/0342/plate-1.pdf",
@@ -68,6 +68,45 @@
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
+  },
+  {
+   "at": "2026-10-25T23:45:09+00:00",
+   "packets": [
+    "reread-01"
+   ],
+   "reader": "Claude, Claude Code re-read session 2026-10-25",
+   "values": 0,
+   "stored": 0,
+   "exact": 0,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 0,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 0,
+   "image_not_verified": 0,
+   "review_items": 0,
+   "reread": {
+    "packets": [
+     "reread-01"
+    ],
+    "pages": [
+     3,
+     4,
+     5,
+     6,
+     7,
+     8,
+     9,
+     10
+    ],
+    "reason": "subsurface_fields",
+    "queue_ids": [
+     "ngmdb:14403:subsurface_fields:p3-10"
+    ]
+   }
   }
  ],
  "units": [],
@@ -77,5 +116,7 @@
  "references": [],
  "surfaces": [],
  "contours": [],
- "sections": []
+ "sections": [],
+ "water_tests": [],
+ "rock_tests": []
 }

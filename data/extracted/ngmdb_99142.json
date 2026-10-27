@@ -8,8 +8,8 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-06T22:57:56+00:00",
- "updated_at": "2026-10-06T22:57:56+00:00",
- "reader": "Claude, scheduled Claude Code session 2026-10-06",
+ "updated_at": "2026-10-26T11:25:02+00:00",
+ "reader": "Claude, re-read session 2026-10-25 (subsurface fields)",
  "packets": [
   "packet-01"
  ],
@@ -18,7 +18,7 @@
  ],
  "blocks_total": 1,
  "complete": true,
- "notes": "Single map sheet read from OCR (page 1). Map symbols recorded only where printed directly below a description (QHfw, Qe, QPps; flagged inferred); garbled symbols ('QHfim', '[ aFpas |') were not recorded. The Water unit was not recorded. Legend-only features (contact, drill-hole symbol) were not recorded as values. Two values printed with '|' for a digit are read as 1, flagged inferred and sent to review.\nSUBSURFACE: margin elevations: Holocene terrace sediments below 10 ft landward; Princess Anne Formation above 12 ft seaward, below 18 ft landward; Pamlico Formation above 17 ft seaward, below 25 ft landward (page 1). Princess Anne estuarine/marine unit: lower part 10 to 20 ft, upper part 1 to 10 ft thick (page 1). The legend shows SCGS drill-hole locations with log identification numbers (e.g. 22-411), logs on file at the SCGS and not in this document (page 1). No cross sections or structure contours appear in the OCR text. Datum: the base map line reads '1973 North American Datum' in the OCR; the vertical datum is not stated (page 1).",
+ "notes": "Single map sheet read from OCR (page 1). Map symbols recorded only where printed directly below a description (QHfw, Qe, QPps; flagged inferred); garbled symbols ('QHfim', '[ aFpas |') were not recorded. The Water unit was not recorded. Legend-only features (contact, drill-hole symbol) were not recorded as values. Two values printed with '|' for a digit are read as 1, flagged inferred and sent to review.\nSUBSURFACE: margin elevations: Holocene terrace sediments below 10 ft landward; Princess Anne Formation above 12 ft seaward, below 18 ft landward; Pamlico Formation above 17 ft seaward, below 25 ft landward (page 1). Princess Anne estuarine/marine unit: lower part 10 to 20 ft, upper part 1 to 10 ft thick (page 1). The legend shows SCGS drill-hole locations with log identification numbers (e.g. 22-411), logs on file at the SCGS and not in this document (page 1). No cross sections or structure contours appear in the OCR text. Datum: the base map line reads '1973 North American Datum' in the OCR; the vertical datum is not stated (page 1).\nRe-read of page 1 for subsurface fields (single OCR map sheet). Units as before; map symbols read from the legend boxes on a page-image tile (OCR had 'QHfim', '[ aFpas |'). Two values printed with '|' for a digit read as 1 (inferred). Margin elevations (Holocene terrace sediments <10 ft landward; Princess Anne Formation 12/18 ft; Pamlico Formation 17/25 ft, seaward/landward) recorded as contacts and as stated unit tops at those margins (boundary inferred; no vertical datum printed). Whole-page image checked: no cross section or structure contours; SCGS drill holes (22-4xx) plotted by label only, without depths (logs on file at SCGS). Water unit and legend-only symbols not recorded.",
  "files": [
   {
    "url": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
@@ -29,15 +29,16 @@
   }
  ],
  "summary": {
-  "stored": 53,
+  "stored": 88,
   "quote_match": {
-   "exact": 53
+   "exact": 80,
+   "image": 8
   },
   "verification": {
-   "agree": 5,
-   "unclear": 2
+   "unclear": 2,
+   "agree": 43
   },
-  "inferred": 5
+  "inferred": 12
  },
  "ingests": [
   {
@@ -57,6 +58,910 @@
    "disagree": 0,
    "unclear": 2,
    "review_items": 2
+  },
+  {
+   "at": "2026-10-26T11:25:02+00:00",
+   "packets": [
+    "reread-01"
+   ],
+   "reader": "Claude, re-read session 2026-10-25 (subsurface fields)",
+   "values": 88,
+   "stored": 88,
+   "exact": 80,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 43,
+   "disagree": 0,
+   "unclear": 2,
+   "image": 8,
+   "image_not_verified": 0,
+   "review_items": 2,
+   "reread": {
+    "packets": [
+     "reread-01"
+    ],
+    "pages": [
+     1
+    ],
+    "reason": "subsurface fields",
+    "queue_ids": [
+     "ngmdb:99142:subsurface_fields:p1"
+    ]
+   }
+  }
+ ],
+ "history": [
+  {
+   "at": "2026-10-26T11:25:02+00:00",
+   "reason": "subsurface fields",
+   "packets": [
+    "reread-01"
+   ],
+   "pages": [
+    1
+   ],
+   "replaced": [
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Moved earth",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Moved earth (Holocene) — Earth material moved in bulk by humans.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Holocene",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Moved earth (Holocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.0117,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Earth material moved in bulk by humans. Color is highly variable and dependent on source location.",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Earth material moved in bulk by humans. Color is highly",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "up to 18 feet",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Thickness up to 18 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": null,
+        "max_ft": 18.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Sediments beneath the Holocene terrace",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Sediments Beneath the Holocene Terrace",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "description": {
+       "value": "being deposited in response to current sea level",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Sediments beneath the Holocene terrace are being deposited in response to current sea level.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "contacts": {
+       "value": "generally below the elevation of 10 feet at the landward margin, where Holocene sediments overlap, overlie, or abut sediments of the Silver Bluff Formation",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "deposits generally are below the elevation of 10 feet at the landward margin, where Holocene",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Freshwater marsh",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Freshwater marsh (Holocene)— Black (N1) to SGY 2/1 (Dark greenish-black), soupy,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Holocene",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Freshwater marsh (Holocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.0117,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "Black (N1) to 5GY 2/1 (Dark greenish-black), soupy, organic-rich (peaty) muds and fine quartz sand",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "organic-rich (peaty) muds and fine quartz sand",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "OCR reads the Munsell code as 'SGY 2/1'"
+      },
+      "depositional_environment": {
+       "value": "along tidal fresh-to brackish water bodies inland of the saltwater wedge",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Generally forms along tidal fresh-to",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "1 to 50 feet",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.479,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Thickness | to 50 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "unclear",
+       "note": "OCR text: 'Thickness | to 50 feet.'; '|' read as the digit 1",
+       "normalized": {
+        "min_ft": 1.0,
+        "max_ft": 50.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Freshwater marsh and swamp deposits",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Freshwater marsh and swamp deposits (Holocene) — Black (N1), silty clay and peat",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "map_symbol": {
+       "value": "QHfw",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Thickness 1 to 40 feet.\n\nQHfw",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "symbol printed directly below this description in the OCR text"
+      },
+      "age": {
+       "value": "Holocene",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Freshwater marsh and swamp deposits (Holocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.0117,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "Black (N1), silty clay and peat",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Black (N1), silty clay and peat",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "stream valleys and areas of locally low elevation; areas of poor drainage",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "deposited in stream valleys and areas of locally low elevation",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "1 to 40 feet",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Thickness 1 to 40 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": 1.0,
+        "max_ft": 40.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Carolina bay deposits",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Carolina bay deposits (Holocene, and Holocene to upper Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Holocene, and Holocene to upper Pleistocene",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Carolina bay deposits (Holocene, and Holocene to upper Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.129,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "Light gray (N-7) to black (N-1), quartzose clay to clayey quartz sand; quartzose sand in lake beds; and quartzose sand in eolian rims of bays",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "(N-7) to black (N-1), quartzose clay to clayey quartz sand: quartzose sand in lake beds;",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "Carolina bays formed by the action of dominant southwesterly winds on ponded water and dry land under conditions of fluctuating ground water",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Carolina bays formed by the action of dominant",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "1 to 12 feet",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Thickness 1 to 12 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": 1.0,
+        "max_ft": 12.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Eolian deposits",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Eolian deposits (Pleistocene to Holocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "map_symbol": {
+       "value": "Qe",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.684,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Thickness 3 to 60 feet.\n\nQe",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "note": "symbol printed directly below this description in the OCR text"
+      },
+      "age": {
+       "value": "Pleistocene to Holocene",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Eolian deposits (Pleistocene to Holocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "White (N9) to yellowish-gray (5Y 8/1) and medium-gray (N5), bimodal, subangular to well rounded, fine and medium quartz sand",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "medium-gray (N5), bimodal, subangular to well rounded, fine and medium quartz sand.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "dune fields derived from local sediments, such as flood plains or river banks",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Deposits occur in dune fields derived from local sediments",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "3 to 60 feet",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Thickness 3 to 60 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": 3.0,
+        "max_ft": 60.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Princess Anne Formation",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Princess Anne Formation (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Princess Anne",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Princess Anne Formation (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Pleistocene",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Princess Anne Formation (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "contacts": {
+       "value": "generally above the elevation of 12 feet at their seaward margin where overlapped by Silver Bluff Formation and Holocene deposits; at the landward margin generally below the elevation of 18 feet where the deposits overlap, overlie, or abut sediments of the Pamlico Formation",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Sediments of the Princess Anne Formation are generally above the elevation of 12 feet at their",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Barrier-island deposits (Princess Anne Formation)",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Barrier-island deposits — Light-gray (N7) to dark-gray (N3). phosphatic, poorly to",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "listed under the Princess Anne Formation"
+      },
+      "lithology": {
+       "value": "Light-gray (N7) to dark-gray (N3), phosphatic, poorly to moderately well-sorted, subrounded to well-rounded, fine quartz sand with abundant fine heavy minerals, medium shell sand, shell hash, and trace amounts of fine mica",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "moderately well-sorted, subrounded to well-rounded, fine quartz sand with abundant",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "description": {
+       "value": "Deposits form linear to curvate, subparallel ridges.",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "linear to curvate, subparallel ridges.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "4 to 50 feet",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "linear to curvate, subparallel ridges. Thickness 4 to 50 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": 4.0,
+        "max_ft": 50.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Estuarine deposits or marine deposits or both (Princess Anne Formation)",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Estuarine deposits or marine deposits or both — In lower part, this unit is medium",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "note": "listed under the Princess Anne Formation"
+      },
+      "lithology": {
+       "value": "lower part: medium bluish-gray (5B 5/1), poorly sorted, subrounded to very angular, fine to very coarse quartz and phosphatic sand; upper part: medium light gray (N6) to medium bluish gray (5B 5/1) clayey-silty quartz sand and a phosphatic and quartz sand with shells",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "bluish-gray (5B 5/1), poorly sorted, subrounded to very angular, fine to very coarse",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "lower part 10 to 20 feet",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "is 10 to 20 feet thick.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": 10.0,
+        "max_ft": 20.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      },
+      "description": {
+       "value": "upper part 1 to 10 feet thick",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.479,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "The upper part is | to 10 feet thick.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "unclear",
+       "note": "OCR text: 'The upper part is | to 10 feet thick.'; '|' read as the digit 1"
+      },
+      "fossils": {
+       "value": "broken and intact Oliva, Polinices, Terebra, Mercenaria and Dosinia shells",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "zones contain both broken and intact Oliva, Polinices, Terebra, Mercenaria and Dosinia shells.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      },
+      "depositional_environment": {
+       "value": "shallow intertidal to shallow offshore zones",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Both parts are deposited in the shallow intertidal to shallow",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Pamlico Formation",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Pamlico Formation (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Pamlico",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Pamlico Formation (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Pleistocene",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Pamlico Formation (Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "contacts": {
+       "value": "generally above the elevation of 17 feet at their seaward margin where overlapped by sediments of the Princess Anne Formation; at the landward margin generally below the elevation of 25 feet where the deposits overlap, overlie, or abut sediments of the Ten Mile Hill beds",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Sediments of the Pamlico Formation are generally above the elevation of 17 feet at their seaward",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Barrier island deposits (Pamlico Formation)",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Barrier island deposits — Light-gray (N7) to dark-gray (N3), moderately well-sorted,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "listed under the Pamlico Formation"
+      },
+      "map_symbol": {
+       "value": "QPps",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Thickness 4 to 50 feet.\n\nQPps",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "symbol printed directly below this description in the OCR text"
+      },
+      "lithology": {
+       "value": "Light-gray (N7) to dark-gray (N3), moderately well-sorted, subrounded to well-rounded, fine phosphatic quartz sand, with a minor fraction of medium to coarse quartz sand, as well as fine heavy minerals, shell hash, and trace coarse mica",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "subrounded to well-rounded, fine phosphatic quartz sand, with a minor fraction of",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "description": {
+       "value": "Deposits form linear, sub-parallel ridges.",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Deposits form linear, sub-parallel ridges.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      },
+      "thickness": {
+       "value": "4 to 50 feet",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Deposits form linear, sub-parallel ridges. Thickness 4 to 50 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "normalized": {
+        "min_ft": 4.0,
+        "max_ft": 50.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "references",
+     "record": {
+      "citation": {
+       "value": "Kaczorowski, R. T., 1977, The Carolina Bays: a Comparison with Modern Oriented Lakes Technical Report no, 13-CRD, Coastal research Division, Department of Geology, University of South Carolina; Columbia, South Carolina; 124 pp.",
+       "source_id": "ngmdb:99142",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+       "quote": "Kaczorowski, R. T., 1977, The Carolina Bays: a Comparison with Modern Oriented Lakes Technical Report",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    }
+   ]
   }
  ],
  "units": [
@@ -124,6 +1029,43 @@
      "unit": "feet",
      "approximate": false
     }
+   },
+   "map_symbol": {
+    "value": "me",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1#page=1&viewrect=1668,286,39,20.5",
+    "quote": "me",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1660_280_1715_1060-r1c1",
+     "box": [
+      16,
+      12,
+      94,
+      53
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3336,
+      572,
+      3414,
+      613
+     ],
+     "pt_box": [
+      1668.0,
+      286.0,
+      1707.0,
+      306.5
+     ],
+     "pdf_sha256": "21e9d5a0b72fd1445be53baca0f53845536d03f324a9051f410ce70dff7b76be"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled or placed apart in the OCR text)"
    }
   },
   {
@@ -246,6 +1188,43 @@
      "unit": "feet",
      "approximate": false
     }
+   },
+   "map_symbol": {
+    "value": "QHfm",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1#page=1&viewrect=1668,387.5,39,20.5",
+    "quote": "QHfm",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1660_280_1715_1060-r1c1",
+     "box": [
+      16,
+      215,
+      94,
+      256
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3336,
+      775,
+      3414,
+      816
+     ],
+     "pt_box": [
+      1668.0,
+      387.5,
+      1707.0,
+      408.0
+     ],
+     "pdf_sha256": "21e9d5a0b72fd1445be53baca0f53845536d03f324a9051f410ce70dff7b76be"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled or placed apart in the OCR text)"
    }
   },
   {
@@ -266,15 +1245,39 @@
     "value": "QHfw",
     "source_id": "ngmdb:99142",
     "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.581,
-    "inferred": true,
-    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
-    "quote": "Thickness 1 to 40 feet.\n\nQHfw",
-    "quote_match": "exact",
-    "text_method": "ocr",
-    "verification": null,
-    "note": "symbol printed directly below this description in the OCR text"
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1#page=1&viewrect=1668,437.5,39,20.5",
+    "quote": "QHfw",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1660_280_1715_1060-r1c1",
+     "box": [
+      16,
+      315,
+      94,
+      356
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3336,
+      875,
+      3414,
+      916
+     ],
+     "pt_box": [
+      1668.0,
+      437.5,
+      1707.0,
+      458.0
+     ],
+     "pdf_sha256": "21e9d5a0b72fd1445be53baca0f53845536d03f324a9051f410ce70dff7b76be"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled or placed apart in the OCR text)"
    },
    "age": {
     "value": "Holocene",
@@ -418,6 +1421,43 @@
      "unit": "feet",
      "approximate": false
     }
+   },
+   "map_symbol": {
+    "value": "Qcb",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1#page=1&viewrect=1668,537,39,20",
+    "quote": "Qcb",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1660_280_1715_1060-r1c1",
+     "box": [
+      16,
+      514,
+      94,
+      554
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3336,
+      1074,
+      3414,
+      1114
+     ],
+     "pt_box": [
+      1668.0,
+      537.0,
+      1707.0,
+      557.0
+     ],
+     "pdf_sha256": "21e9d5a0b72fd1445be53baca0f53845536d03f324a9051f410ce70dff7b76be"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled or placed apart in the OCR text)"
    }
   },
   {
@@ -438,15 +1478,39 @@
     "value": "Qe",
     "source_id": "ngmdb:99142",
     "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.684,
-    "inferred": true,
-    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
-    "quote": "Thickness 3 to 60 feet.\n\nQe",
-    "quote_match": "exact",
-    "text_method": "ocr",
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1#page=1&viewrect=1668,625,39,19.5",
+    "quote": "Qe",
+    "quote_match": "image",
+    "text_method": "image",
     "verification": "agree",
-    "note": "symbol printed directly below this description in the OCR text"
+    "image": {
+     "tile": "p1-144dpi-crop1660_280_1715_1060-r1c1",
+     "box": [
+      16,
+      690,
+      94,
+      729
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3336,
+      1250,
+      3414,
+      1289
+     ],
+     "pt_box": [
+      1668.0,
+      625.0,
+      1707.0,
+      644.5
+     ],
+     "pdf_sha256": "21e9d5a0b72fd1445be53baca0f53845536d03f324a9051f410ce70dff7b76be"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled or placed apart in the OCR text)"
    },
    "age": {
     "value": "Pleistocene to Holocene",
@@ -598,13 +1662,13 @@
     "source_id": "ngmdb:99142",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.727,
+    "confidence": 0.855,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
     "quote": "moderately well-sorted, subrounded to well-rounded, fine quartz sand with abundant",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null
+    "verification": "agree"
    },
    "description": {
     "value": "Deposits form linear to curvate, subparallel ridges.",
@@ -637,6 +1701,43 @@
      "unit": "feet",
      "approximate": false
     }
+   },
+   "map_symbol": {
+    "value": "QPpas",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1#page=1&viewrect=1668,774.5,39,20.5",
+    "quote": "QPpas",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1660_280_1715_1060-r1c1",
+     "box": [
+      16,
+      989,
+      94,
+      1030
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3336,
+      1549,
+      3414,
+      1590
+     ],
+     "pt_box": [
+      1668.0,
+      774.5,
+      1707.0,
+      795.0
+     ],
+     "pdf_sha256": "21e9d5a0b72fd1445be53baca0f53845536d03f324a9051f410ce70dff7b76be"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled or placed apart in the OCR text)"
    }
   },
   {
@@ -705,13 +1806,13 @@
     "source_id": "ngmdb:99142",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.855,
+    "confidence": 0.727,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
     "quote": "zones contain both broken and intact Oliva, Polinices, Terebra, Mercenaria and Dosinia shells.",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree"
+    "verification": null
    },
    "depositional_environment": {
     "value": "shallow intertidal to shallow offshore zones",
@@ -725,6 +1826,43 @@
     "quote_match": "exact",
     "text_method": "ocr",
     "verification": null
+   },
+   "map_symbol": {
+    "value": "QPpam",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1#page=1&viewrect=1668,837.5,39,20",
+    "quote": "QPpam",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1660_280_1715_1060-r1c1",
+     "box": [
+      16,
+      1115,
+      94,
+      1155
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3336,
+      1675,
+      3414,
+      1715
+     ],
+     "pt_box": [
+      1668.0,
+      837.5,
+      1707.0,
+      857.5
+     ],
+     "pdf_sha256": "21e9d5a0b72fd1445be53baca0f53845536d03f324a9051f410ce70dff7b76be"
+    },
+    "note": "map symbol in the unit's legend box on the page image (garbled or placed apart in the OCR text)"
    }
   },
   {
@@ -798,28 +1936,52 @@
     "source_id": "ngmdb:99142",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.727,
+    "confidence": 0.855,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
     "quote": "Barrier island deposits — Light-gray (N7) to dark-gray (N3), moderately well-sorted,",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
+    "verification": "agree",
     "note": "listed under the Pamlico Formation"
    },
    "map_symbol": {
     "value": "QPps",
     "source_id": "ngmdb:99142",
     "page": 1,
-    "extraction_method": "llm",
-    "confidence": 0.581,
-    "inferred": true,
-    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
-    "quote": "Thickness 4 to 50 feet.\n\nQPps",
-    "quote_match": "exact",
-    "text_method": "ocr",
-    "verification": null,
-    "note": "symbol printed directly below this description in the OCR text"
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1#page=1&viewrect=1668,1025,39,20.5",
+    "quote": "QPps",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1660_280_1715_1060-r1c1",
+     "box": [
+      16,
+      1490,
+      94,
+      1531
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3336,
+      2050,
+      3414,
+      2091
+     ],
+     "pt_box": [
+      1668.0,
+      1025.0,
+      1707.0,
+      1045.5
+     ],
+     "pdf_sha256": "21e9d5a0b72fd1445be53baca0f53845536d03f324a9051f410ce70dff7b76be"
+    },
+    "text_match": true,
+    "note": "map symbol in the unit's legend box on the page image (garbled or placed apart in the OCR text)"
    },
    "lithology": {
     "value": "Light-gray (N7) to dark-gray (N3), moderately well-sorted, subrounded to well-rounded, fine phosphatic quartz sand, with a minor fraction of medium to coarse quartz sand, as well as fine heavy minerals, shell hash, and trace coarse mica",
@@ -887,5 +2049,586 @@
     "verification": null
    }
   }
- ]
+ ],
+ "surfaces": [
+  {
+   "surface": {
+    "value": "top of Sediments beneath the Holocene terrace",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "deposits generally are below the elevation of 10 feet at the landward margin, where Holocene",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "elevation of the unit's upper surface as stated; read as the top of the unit"
+   },
+   "unit": {
+    "value": "Sediments beneath the Holocene terrace",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "Sediments Beneath the Holocene Terrace",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "boundary": {
+    "value": "top",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "deposits generally are below the elevation of 10 feet at the landward margin, where Holocene",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "stated elevation of the deposits' upper surface read as the unit's top"
+   },
+   "elevation": {
+    "value": "below 10 feet",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "deposits generally are below the elevation of 10 feet at the landward margin, where Holocene",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "units": "ft",
+    "normalized": {
+     "min_ft": 10.0,
+     "max_ft": 10.0,
+     "unit": "feet",
+     "approximate": false
+    },
+    "navd88": {
+     "value": {
+      "min_ft": 10.0,
+      "max_ft": 10.0
+     },
+     "source_id": "ngmdb:99142",
+     "page": 1,
+     "extraction_method": "datum_conversion",
+     "confidence": 0.551,
+     "inferred": true,
+     "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+     "from_datum": null,
+     "shift_ft": 0.0,
+     "conversion": "none (datum not stated)",
+     "approximate": true,
+     "assumptions": [
+      "vertical datum not stated; kept as printed (NGVD29 and NAVD88 differ by about a foot here)"
+     ],
+     "datum_from": "not stated",
+     "datum_page": null,
+     "location_from": null
+    }
+   },
+   "method": {
+    "value": "stated",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "deposits generally are below the elevation of 10 feet at the landward margin, where Holocene",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "location": {
+    "value": "landward margin",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "deposits generally are below the elevation of 10 feet at the landward margin, where Holocene",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "surface": {
+    "value": "top of Princess Anne Formation",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "Sediments of the Princess Anne Formation are generally above the elevation of 12 feet at their",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "elevation of the unit's upper surface as stated; read as the top of the unit"
+   },
+   "unit": {
+    "value": "Princess Anne Formation",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "Princess Anne Formation (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "Princess Anne",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "boundary": {
+    "value": "top",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "Sediments of the Princess Anne Formation are generally above the elevation of 12 feet at their",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "stated elevation of the deposits' upper surface read as the unit's top"
+   },
+   "elevation": {
+    "value": "above 12 feet",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "Sediments of the Princess Anne Formation are generally above the elevation of 12 feet at their",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "units": "ft",
+    "normalized": {
+     "min_ft": 12.0,
+     "max_ft": 12.0,
+     "unit": "feet",
+     "approximate": false
+    },
+    "navd88": {
+     "value": {
+      "min_ft": 12.0,
+      "max_ft": 12.0
+     },
+     "source_id": "ngmdb:99142",
+     "page": 1,
+     "extraction_method": "datum_conversion",
+     "confidence": 0.551,
+     "inferred": true,
+     "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+     "from_datum": null,
+     "shift_ft": 0.0,
+     "conversion": "none (datum not stated)",
+     "approximate": true,
+     "assumptions": [
+      "vertical datum not stated; kept as printed (NGVD29 and NAVD88 differ by about a foot here)"
+     ],
+     "datum_from": "not stated",
+     "datum_page": null,
+     "location_from": null
+    }
+   },
+   "method": {
+    "value": "stated",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "Sediments of the Princess Anne Formation are generally above the elevation of 12 feet at their",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "location": {
+    "value": "seaward margin",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "seaward margin where overlapped by Silver Bluff Formation and Holocene deposits. At the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "surface": {
+    "value": "top of Princess Anne Formation",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "landward margin, Princess Anne Formation sediments generally are below the elevation of 18 feet",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "elevation of the unit's upper surface as stated; read as the top of the unit"
+   },
+   "unit": {
+    "value": "Princess Anne Formation",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "Princess Anne Formation (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "Princess Anne",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "boundary": {
+    "value": "top",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "landward margin, Princess Anne Formation sediments generally are below the elevation of 18 feet",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "stated elevation of the deposits' upper surface read as the unit's top"
+   },
+   "elevation": {
+    "value": "below 18 feet",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "landward margin, Princess Anne Formation sediments generally are below the elevation of 18 feet",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "units": "ft",
+    "normalized": {
+     "min_ft": 18.0,
+     "max_ft": 18.0,
+     "unit": "feet",
+     "approximate": false
+    },
+    "navd88": {
+     "value": {
+      "min_ft": 18.0,
+      "max_ft": 18.0
+     },
+     "source_id": "ngmdb:99142",
+     "page": 1,
+     "extraction_method": "datum_conversion",
+     "confidence": 0.551,
+     "inferred": true,
+     "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+     "from_datum": null,
+     "shift_ft": 0.0,
+     "conversion": "none (datum not stated)",
+     "approximate": true,
+     "assumptions": [
+      "vertical datum not stated; kept as printed (NGVD29 and NAVD88 differ by about a foot here)"
+     ],
+     "datum_from": "not stated",
+     "datum_page": null,
+     "location_from": null
+    }
+   },
+   "method": {
+    "value": "stated",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "landward margin, Princess Anne Formation sediments generally are below the elevation of 18 feet",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "location": {
+    "value": "landward margin",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "landward margin, Princess Anne Formation sediments generally are below the elevation of 18 feet",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "surface": {
+    "value": "top of Pamlico Formation",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "Sediments of the Pamlico Formation are generally above the elevation of 17 feet at their seaward",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "elevation of the unit's upper surface as stated; read as the top of the unit"
+   },
+   "unit": {
+    "value": "Pamlico Formation",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "Pamlico Formation (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "Pamlico",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "boundary": {
+    "value": "top",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "Sediments of the Pamlico Formation are generally above the elevation of 17 feet at their seaward",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "stated elevation of the deposits' upper surface read as the unit's top"
+   },
+   "elevation": {
+    "value": "above 17 feet",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "Sediments of the Pamlico Formation are generally above the elevation of 17 feet at their seaward",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "units": "ft",
+    "normalized": {
+     "min_ft": 17.0,
+     "max_ft": 17.0,
+     "unit": "feet",
+     "approximate": false
+    },
+    "navd88": {
+     "value": {
+      "min_ft": 17.0,
+      "max_ft": 17.0
+     },
+     "source_id": "ngmdb:99142",
+     "page": 1,
+     "extraction_method": "datum_conversion",
+     "confidence": 0.551,
+     "inferred": true,
+     "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+     "from_datum": null,
+     "shift_ft": 0.0,
+     "conversion": "none (datum not stated)",
+     "approximate": true,
+     "assumptions": [
+      "vertical datum not stated; kept as printed (NGVD29 and NAVD88 differ by about a foot here)"
+     ],
+     "datum_from": "not stated",
+     "datum_page": null,
+     "location_from": null
+    }
+   },
+   "method": {
+    "value": "stated",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "Sediments of the Pamlico Formation are generally above the elevation of 17 feet at their seaward",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "location": {
+    "value": "seaward margin",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "Sediments of the Pamlico Formation are generally above the elevation of 17 feet at their seaward",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "surface": {
+    "value": "top of Pamlico Formation",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "Pamlico Formation sediments generally are below the elevation of 25 feet where the deposits",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "elevation of the unit's upper surface as stated; read as the top of the unit"
+   },
+   "unit": {
+    "value": "Pamlico Formation",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "Pamlico Formation (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "Pamlico",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "boundary": {
+    "value": "top",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "Pamlico Formation sediments generally are below the elevation of 25 feet where the deposits",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "stated elevation of the deposits' upper surface read as the unit's top"
+   },
+   "elevation": {
+    "value": "below 25 feet",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "Pamlico Formation sediments generally are below the elevation of 25 feet where the deposits",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "units": "ft",
+    "normalized": {
+     "min_ft": 25.0,
+     "max_ft": 25.0,
+     "unit": "feet",
+     "approximate": false
+    },
+    "navd88": {
+     "value": {
+      "min_ft": 25.0,
+      "max_ft": 25.0
+     },
+     "source_id": "ngmdb:99142",
+     "page": 1,
+     "extraction_method": "datum_conversion",
+     "confidence": 0.551,
+     "inferred": true,
+     "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+     "from_datum": null,
+     "shift_ft": 0.0,
+     "conversion": "none (datum not stated)",
+     "approximate": true,
+     "assumptions": [
+      "vertical datum not stated; kept as printed (NGVD29 and NAVD88 differ by about a foot here)"
+     ],
+     "datum_from": "not stated",
+     "datum_page": null,
+     "location_from": null
+    }
+   },
+   "method": {
+    "value": "stated",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "Pamlico Formation sediments generally are below the elevation of 25 feet where the deposits",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "location": {
+    "value": "landward margin",
+    "source_id": "ngmdb:99142",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/99000_99999/99142_1",
+    "quote": "margin where overlapped by sediments of the Princess Anne Formation. At their landward margin,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  }
+ ],
+ "contours": [],
+ "sections": [],
+ "water_tests": [],
+ "rock_tests": []
 }

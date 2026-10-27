@@ -1,0 +1,2126 @@
+{
+ "source_id": "ngmdb:77450",
+ "title": "Geologic map of the Pinewood quadrangle, Clarendon and Sumter Counties, South Carolina",
+ "citation": "Willoughby, R.H., 2002, Geologic map of the Pinewood quadrangle, Clarendon and Sumter Counties, South Carolina: South Carolina Geological Survey Geologic Quadrangle Map GQM-7, map scale 1:24,000.",
+ "year": 2002,
+ "scale": 24000,
+ "publisher": "South Carolina Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-10-25T10:59:43+00:00",
+ "updated_at": "2026-10-26T10:58:37+00:00",
+ "reader": "Claude, Claude Code re-read session 2026-10-26",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1"
+ ],
+ "blocks_total": 1,
+ "complete": true,
+ "notes": "Single OCRed map sheet. Map symbols are garbled or placed ambiguously in the OCR text (Qsik, Qeb, [ta) and were left out; the boxes QHfw and Qatv have no description. Section A-A' checked on the whole-page image: no drill holes or faults drawn, so no tiles read and no unit positions recorded. Drill-hole labels on the map face have no printed locations. Drill hole 32-129 (radiocarbon sample) is in the adjacent Lone Star quadrangle, as printed.\nSingle OCRed map sheet. Map symbols are garbled or placed ambiguously in the OCR text (Qsik, Qeb, [ta) and were left out; the boxes QHfw and Qatv have no description. Section A-A' checked on the whole-page image: no drill holes or faults drawn, so no tiles read and no unit positions recorded. Drill-hole labels on the map face have no printed locations. Drill hole 32-129 (radiocarbon sample) is in the adjacent Lone Star quadrangle, as printed. Re-read of page 1: the hole number was checked on the page image. This sheet clearly prints \"SCGS drill hole 32-129\" (no OCR misread); the Lone Star quadrangle sheet (ngmdb:77458) prints 43-129 twice for the same sample (25,960 yr BP at 34-35 ft). Both recorded as printed; the conflict is left for review.",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+   "via": "ngmdb_image",
+   "sha256": "80787ebcc98e62728d3bb8bdd5d498d63e5d2f04673214e739651a8b8ffd6e58",
+   "pages": 1,
+   "first_page": 1
+  }
+ ],
+ "summary": {
+  "stored": 58,
+  "quote_match": {
+   "exact": 58
+  },
+  "verification": {
+   "unclear": 1,
+   "agree": 49
+  },
+  "inferred": 5
+ },
+ "ingests": [
+  {
+   "at": "2026-10-25T10:59:43+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, Claude Code session 2026-10-25",
+   "values": 58,
+   "stored": 58,
+   "exact": 58,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 49,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 0,
+   "image_not_verified": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-10-26T10:58:37+00:00",
+   "packets": [
+    "reread-01"
+   ],
+   "reader": "Claude, Claude Code re-read session 2026-10-26",
+   "values": 58,
+   "stored": 58,
+   "exact": 58,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 49,
+   "disagree": 0,
+   "unclear": 1,
+   "image": 0,
+   "image_not_verified": 0,
+   "review_items": 1,
+   "reread": {
+    "packets": [
+     "reread-01"
+    ],
+    "pages": [
+     1
+    ],
+    "reason": "hole label 32-129 vs 43-129: checked on the page image",
+    "queue_ids": [
+     "ngmdb:77450:hole_label_32_129_vs_43_129_for_the_same:p1"
+    ]
+   }
+  }
+ ],
+ "history": [
+  {
+   "at": "2026-10-26T10:58:37+00:00",
+   "reason": "hole label 32-129 vs 43-129: checked on the page image",
+   "packets": [
+    "reread-01"
+   ],
+   "pages": [
+    1
+   ],
+   "replaced": [
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Moved earth",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Moved earth (Holocene) — Earthen material, including concrete and asphalt, in roads",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      },
+      "age": {
+       "value": "Holocene",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Moved earth (Holocene) — Earthen material, including concrete and asphalt, in roads",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.0117,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Earthen material, including concrete and asphalt, in roads and dams",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Moved earth (Holocene) — Earthen material, including concrete and asphalt, in roads",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Sandhills lakebed deposits",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Sandhills lakebed deposits (upper Pleistocene(?) to Holocene) — White to light gray",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      },
+      "age": {
+       "value": "upper Pleistocene(?) to Holocene",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Sandhills lakebed deposits (upper Pleistocene(?) to Holocene) — White to light gray",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.129,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "White to light gray quartz sand, with varying amounts of included humic matter; in dry lakebeds at Manchester State Forest",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Sandhills lakebed deposits (upper Pleistocene(?) to Holocene) — White to light gray",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Carolina bay deposits",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Carolina bay deposits (upper Pleistocene to Holocene; and Holocene) — Light gray",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      },
+      "age": {
+       "value": "upper Pleistocene to Holocene; and Holocene",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Carolina bay deposits (upper Pleistocene to Holocene; and Holocene) — Light gray",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.129,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Light gray to black, quartzose clay to clayey quartz sand; quartzose sand in lake beds and in eolian rims of bays",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Carolina bay deposits (upper Pleistocene to Holocene; and Holocene) — Light gray",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Eolian sand of Manchester State Forest",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Eolian sand of Manchester State Forest (upper Pleistocene(?)) — Incohesive, white,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      },
+      "age": {
+       "value": "upper Pleistocene(?)",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Eolian sand of Manchester State Forest (upper Pleistocene(?)) — Incohesive, white,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true,
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 0.129,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Incohesive, white, cream, yellow, tan, pinkish-gray or gray, moderately sorted, mostly medium-grained quartz sand",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Eolian sand of Manchester State Forest (upper Pleistocene(?)) — Incohesive, white,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      },
+      "thickness": {
+       "value": "as much as 33 feet thick in drill holes",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "The unit is as much as 33 feet thick in drill holes in Pinewood quadrangle.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true,
+       "normalized": {
+        "min_ft": null,
+        "max_ft": 33.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      },
+      "contacts": {
+       "value": "overlies the Duplin Formation",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "locally more clay-rich near base. This eolian sand body overlies the Duplin Formation.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Eolian sand at Curtis Millpond",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Eolian sand at Curtis Millpond (upper Pleistocene(?)) — Dunes of this eolian sand",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      },
+      "age": {
+       "value": "upper Pleistocene(?)",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Eolian sand at Curtis Millpond (upper Pleistocene(?)) — Dunes of this eolian sand",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true,
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 0.129,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Dunes of eolian sand in northeastern Pinewood quadrangle; at least 20 feet high",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "the Duplin Formation. The dunes are at least 20 feet high.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      },
+      "contacts": {
+       "value": "overlies the Duplin Formation",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "occur in northeastern Pinewood 7.5-minute quadrangle. This ecolian sand body overlies",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Packs Landing beds (informal), or alluvium of ancient Santee River terrace",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "] Packs Landing beds (informal), or alluvium of ancient Santee River terrace",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true,
+       "normalized": {
+        "canonical": "packs landing",
+        "in_geolex": false,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "Upper Pleistocene",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "(Upper Pleistocene) — Dominantly incohesive to lightly cohesive, tannish-orange to",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true,
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 0.129,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Dominantly incohesive to lightly cohesive, tannish-orange to light gray, medium-grained quartz sand to quartz pebbles to 10 mm; subordinately cohesive clay matrix with quartz sand, locally with wood fragments",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "(Upper Pleistocene) — Dominantly incohesive to lightly cohesive, tannish-orange to",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      },
+      "rank": {
+       "value": "beds (informal)",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "] Packs Landing beds (informal), or alluvium of ancient Santee River terrace",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Wicomico Formation or Waccamaw (?) Formation",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Wicomico Formation or Waccamaw (?) Formation (lower Pleistocene) — Incohesive",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true,
+       "normalized": {
+        "canonical": "wicomico formation or waccamaw",
+        "in_geolex": false,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "lower Pleistocene",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Wicomico Formation or Waccamaw (?) Formation (lower Pleistocene) — Incohesive",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true,
+       "normalized": {
+        "younger_ma": 0.774,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "white, cream, yellow, orange, olive or tan quartz sand, quartz sand with granules or pebbles, or clay; quartzose beds coarser at the base",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Wicomico Formation or Waccamaw (?) Formation (lower Pleistocene) — Incohesive",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      },
+      "thickness": {
+       "value": "as much as 46 feet thick in drill holes",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Formation is as much as 46 feet thick in drill holes in Pinewood quadrangle.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true,
+       "normalized": {
+        "min_ft": null,
+        "max_ft": 46.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Marietta unit",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Marietta unit (informal, upper Pliocene) — Lightly to very cohesive, locally",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true,
+       "normalized": {
+        "canonical": "marietta",
+        "in_geolex": false,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "upper Pliocene",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Marietta unit (informal, upper Pliocene) — Lightly to very cohesive, locally",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true,
+       "normalized": {
+        "younger_ma": 2.58,
+        "older_ma": 3.6,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "gray, pink, red, yellow, orange or tan quartz sand to granules or pebbles, quartz-pebble conglomerate, mixed quartzose sand and clay, and minor clay",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Marietta unit (informal, upper Pliocene) — Lightly to very cohesive, locally",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      },
+      "rank": {
+       "value": "informal unit",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.684,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Marietta unit (informal, upper Pliocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true,
+       "note": "rank from 'unit (informal'"
+      },
+      "thickness": {
+       "value": "as much as 23 feet thick in drill holes",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "as 8 feet thick and clay beds are as much as 4 feet thick. The Marietta unit is as much as 23 feet",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true,
+       "normalized": {
+        "min_ft": null,
+        "max_ft": 23.0,
+        "unit": "feet",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Duplin Formation",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Duplin Formation (lower Pliocene) — Locally clayey, moderately sorted, locally poorly",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true,
+       "normalized": {
+        "canonical": "Duplin",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "lower Pliocene",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Duplin Formation (lower Pliocene) — Locally clayey, moderately sorted, locally poorly",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true,
+       "normalized": {
+        "younger_ma": 3.6,
+        "older_ma": 5.333,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "Locally clayey, dominantly medium-grained quartz sand to quartz granules to quartz pebbles to 1 inch (25 mm), with scattered white clay beds",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Duplin Formation (lower Pliocene) — Locally clayey, moderately sorted, locally poorly",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      },
+      "contacts": {
+       "value": "Basal contact is abrupt. Contact with the immediately overlying beds of the upper Duplin Formation is gradational.",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "white clay beds to a few inches thick. Basal contact is abrupt. Contact with the immediately",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      },
+      "depositional_environment": {
+       "value": "Fluvial to nearshore marine facies; progradational to regressive character",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "overlying beds of the upper Duplin Formation is gradational. Fluvial to nearshore marine facies;",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Duplin Formation (lower part)",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Duplin Formation (lower part, lower Pliocene) — At base, clay and clayey, quartzose,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true,
+       "normalized": {
+        "canonical": "Duplin",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "lower Pliocene",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Duplin Formation (lower part, lower Pliocene) — At base, clay and clayey, quartzose,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true,
+       "normalized": {
+        "younger_ma": 3.6,
+        "older_ma": 5.333,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "At base, clay and clayey, quartzose, in part shelly, sands; above, calcareous to richly shelly or clayey, very fine- to fine-grained quartz sand",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Duplin Formation (lower part, lower Pliocene) — At base, clay and clayey, quartzose,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      },
+      "contacts": {
+       "value": "Upper contact is abrupt.",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "underlying beds of the lower Duplin Formation is gradational. Upper contact is abrupt.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      },
+      "depositional_environment": {
+       "value": "Transgressive to offshore marine facies",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Transgressive to offshore marine facies.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Lang Syne Formation",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Lang Syne Formation (lower Pliocene) — White to deep yellowish ocher, locally",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true,
+       "normalized": {
+        "canonical": "Lang Syne",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "lower Pliocene",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Lang Syne Formation (lower Pliocene) — White to deep yellowish ocher, locally",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true,
+       "note": "age as printed on the map",
+       "normalized": {
+        "younger_ma": 3.6,
+        "older_ma": 5.333,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "White to deep yellowish ocher, very fine- to medium-grained quartz sand; characteristic beds dark gray to black, silty, micaceous clay; underlies most of Pinewood quadrangle",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Lang Syne Formation (lower Pliocene) — White to deep yellowish ocher, locally",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "table": true
+      }
+     }
+    },
+    {
+     "section": "observations",
+     "record": {
+      "kind": "boring",
+      "label": {
+       "value": "SCGS drill hole 32-129",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "sediment at 34 to 35 ft depth (47 to 48 ft elevation) in SCGS drill hole 32-129 at Packs Landing",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "location": {
+       "value": "at Packs Landing, Sumter County, in Lone Star quadrangle",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Sumter County, in Lone Star quadrangle yielded a radiocarbon age of 25,960 +3,790/-2,570 C-14",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depth_reference": {
+       "value": "land surface",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.612,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "sediment at 34 to 35 ft depth (47 to 48 ft elevation)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "note": "interval given as depth, with its elevation in parentheses"
+      },
+      "intervals": [
+       {
+        "top": {
+         "value": "34 ft",
+         "source_id": "ngmdb:77450",
+         "page": 1,
+         "extraction_method": "llm",
+         "confidence": 0.765,
+         "inferred": false,
+         "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+         "quote": "sediment at 34 to 35 ft depth (47 to 48 ft elevation)",
+         "quote_match": "exact",
+         "text_method": "ocr",
+         "verification": "agree",
+         "normalized": {
+          "min_ft": 34.0,
+          "max_ft": 34.0,
+          "unit": "ft",
+          "approximate": false
+         }
+        },
+        "bottom": {
+         "value": "35 ft",
+         "source_id": "ngmdb:77450",
+         "page": 1,
+         "extraction_method": "llm",
+         "confidence": 0.65,
+         "inferred": false,
+         "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+         "quote": "sediment at 34 to 35 ft depth (47 to 48 ft elevation)",
+         "quote_match": "exact",
+         "text_method": "ocr",
+         "verification": null,
+         "normalized": {
+          "min_ft": 35.0,
+          "max_ft": 35.0,
+          "unit": "ft",
+          "approximate": false
+         }
+        },
+        "unit": {
+         "value": "Packs Landing beds (informal), or alluvium of ancient Santee River terrace",
+         "source_id": "ngmdb:77450",
+         "page": 1,
+         "extraction_method": "llm",
+         "confidence": 0.52,
+         "inferred": true,
+         "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+         "quote": "A plant stem or root selected from abundant plant matter in a bed in this",
+         "quote_match": "exact",
+         "text_method": "ocr",
+         "verification": null,
+         "note": "the bed is in the unit being described",
+         "normalized": {
+          "canonical": "packs landing",
+          "in_geolex": false,
+          "inferred": true
+         }
+        },
+        "description": {
+         "value": "plant stem or root yielded a radiocarbon age of 25,960 +3,790/-2,570 C-14 years BP, C-13 corrected [= 29,720 to 23,390 years BP]",
+         "source_id": "ngmdb:77450",
+         "page": 1,
+         "extraction_method": "llm",
+         "confidence": 0.65,
+         "inferred": false,
+         "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+         "quote": "years BP, C-13 corrected [= 29,720 to 23,390 years BP; fide Geochron Laboratories).",
+         "quote_match": "exact",
+         "text_method": "ocr",
+         "verification": null
+        }
+       }
+      ]
+     }
+    },
+    {
+     "section": "references",
+     "record": {
+      "citation": {
+       "value": "Brooks, M. J., Taylor, B. E., Stone, P. A., and Gardner, L. R., 2001, Pleistocene encroachment of the Wateree River sand sheet into Big Bay on the Middle Coastal Plain of South Carolina. Southeastern Geology, v. 40, pages 241-257.",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Brooks, M. J., Taylor, B. E., Stone, P. A., and Gardner, L. R., 2001, Pleistocene encroachment of the Wateree",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "references",
+     "record": {
+      "citation": {
+       "value": "Kaczorowski, R. T., 1976, Origin of Carolina bays, in Hayes, M. O. and Kana, T. W., editors, Terrigenous clastic depositional environments, some modern examples: University of South Carolina, Technical Report 11-CRD.",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Kaczorowski, R. T., 1976, Origin of Carolina bays, in Hayes, M. O. and Kana, T. W., editors, Terrigenous",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "references",
+     "record": {
+      "citation": {
+       "value": "Kaczorowski, R. T., 1977, The Carolina bays: A comparison with modern oriented lakes: University of South Carolina, Technical Report 13-CRD, 124 p.",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Kaczorowski, R. T., 1977, The Carolina bays: A comparison with modern oriented lakes: Columbia, Coastal",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "references",
+     "record": {
+      "citation": {
+       "value": "Willoughby, R. H., 1997, Geology of the Pinewood 7.5-minute quadrangle, Clarendon and Sumter Counties, South Carolina: South Carolina Geological Survey Open-File Report 101, map 1:24,000, 1 sheet.",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Willoughby, R. H., 1997, Geology of the Pinewood 7.5-minute quadrangle, Clarendon and Sumter Counties,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "sections",
+     "record": {
+      "name": {
+       "value": "A-A'",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.612,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "A’",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "note": "section from A to A' below the map"
+      },
+      "vertical_exaggeration": {
+       "value": "Vertical exaggeration is 50",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.765,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "Vertical exaggeration is 50",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "normalized": 50.0
+      },
+      "elevation_units": {
+       "value": "feet (left), meters (right)",
+       "source_id": "ngmdb:77450",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.612,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+       "quote": "METERS",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "note": "left scale labelled FEET, right scale METERS"
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "Moved earth",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Moved earth (Holocene) — Earthen material, including concrete and asphalt, in roads",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Moved earth (Holocene) — Earthen material, including concrete and asphalt, in roads",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Earthen material, including concrete and asphalt, in roads and dams",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Moved earth (Holocene) — Earthen material, including concrete and asphalt, in roads",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   }
+  },
+  {
+   "name": {
+    "value": "Sandhills lakebed deposits",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Sandhills lakebed deposits (upper Pleistocene(?) to Holocene) — White to light gray",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "upper Pleistocene(?) to Holocene",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Sandhills lakebed deposits (upper Pleistocene(?) to Holocene) — White to light gray",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.129,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "White to light gray quartz sand, with varying amounts of included humic matter; in dry lakebeds at Manchester State Forest",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Sandhills lakebed deposits (upper Pleistocene(?) to Holocene) — White to light gray",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   }
+  },
+  {
+   "name": {
+    "value": "Carolina bay deposits",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Carolina bay deposits (upper Pleistocene to Holocene; and Holocene) — Light gray",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "upper Pleistocene to Holocene; and Holocene",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Carolina bay deposits (upper Pleistocene to Holocene; and Holocene) — Light gray",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.129,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Light gray to black, quartzose clay to clayey quartz sand; quartzose sand in lake beds and in eolian rims of bays",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Carolina bay deposits (upper Pleistocene to Holocene; and Holocene) — Light gray",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   }
+  },
+  {
+   "name": {
+    "value": "Eolian sand of Manchester State Forest",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Eolian sand of Manchester State Forest (upper Pleistocene(?)) — Incohesive, white,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "upper Pleistocene(?)",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Eolian sand of Manchester State Forest (upper Pleistocene(?)) — Incohesive, white,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 0.129,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Incohesive, white, cream, yellow, tan, pinkish-gray or gray, moderately sorted, mostly medium-grained quartz sand",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Eolian sand of Manchester State Forest (upper Pleistocene(?)) — Incohesive, white,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   },
+   "thickness": {
+    "value": "as much as 33 feet thick in drill holes",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "The unit is as much as 33 feet thick in drill holes in Pinewood quadrangle.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 33.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "contacts": {
+    "value": "overlies the Duplin Formation",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "locally more clay-rich near base. This eolian sand body overlies the Duplin Formation.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   }
+  },
+  {
+   "name": {
+    "value": "Eolian sand at Curtis Millpond",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Eolian sand at Curtis Millpond (upper Pleistocene(?)) — Dunes of this eolian sand",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   },
+   "age": {
+    "value": "upper Pleistocene(?)",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Eolian sand at Curtis Millpond (upper Pleistocene(?)) — Dunes of this eolian sand",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 0.129,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Dunes of eolian sand in northeastern Pinewood quadrangle; at least 20 feet high",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "the Duplin Formation. The dunes are at least 20 feet high.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   },
+   "contacts": {
+    "value": "overlies the Duplin Formation",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "occur in northeastern Pinewood 7.5-minute quadrangle. This ecolian sand body overlies",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   }
+  },
+  {
+   "name": {
+    "value": "Packs Landing beds (informal), or alluvium of ancient Santee River terrace",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "] Packs Landing beds (informal), or alluvium of ancient Santee River terrace",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "canonical": "packs landing",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Upper Pleistocene",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "(Upper Pleistocene) — Dominantly incohesive to lightly cohesive, tannish-orange to",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 0.129,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Dominantly incohesive to lightly cohesive, tannish-orange to light gray, medium-grained quartz sand to quartz pebbles to 10 mm; subordinately cohesive clay matrix with quartz sand, locally with wood fragments",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "(Upper Pleistocene) — Dominantly incohesive to lightly cohesive, tannish-orange to",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   },
+   "rank": {
+    "value": "beds (informal)",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "] Packs Landing beds (informal), or alluvium of ancient Santee River terrace",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   }
+  },
+  {
+   "name": {
+    "value": "Wicomico Formation or Waccamaw (?) Formation",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Wicomico Formation or Waccamaw (?) Formation (lower Pleistocene) — Incohesive",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "canonical": "wicomico formation or waccamaw",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "lower Pleistocene",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Wicomico Formation or Waccamaw (?) Formation (lower Pleistocene) — Incohesive",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 0.774,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "white, cream, yellow, orange, olive or tan quartz sand, quartz sand with granules or pebbles, or clay; quartzose beds coarser at the base",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Wicomico Formation or Waccamaw (?) Formation (lower Pleistocene) — Incohesive",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   },
+   "thickness": {
+    "value": "as much as 46 feet thick in drill holes",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Formation is as much as 46 feet thick in drill holes in Pinewood quadrangle.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 46.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Marietta unit",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Marietta unit (informal, upper Pliocene) — Lightly to very cohesive, locally",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "canonical": "marietta",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "upper Pliocene",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Marietta unit (informal, upper Pliocene) — Lightly to very cohesive, locally",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 2.58,
+     "older_ma": 3.6,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "gray, pink, red, yellow, orange or tan quartz sand to granules or pebbles, quartz-pebble conglomerate, mixed quartzose sand and clay, and minor clay",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Marietta unit (informal, upper Pliocene) — Lightly to very cohesive, locally",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   },
+   "rank": {
+    "value": "informal unit",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.684,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Marietta unit (informal, upper Pliocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "note": "rank from 'unit (informal'"
+   },
+   "thickness": {
+    "value": "as much as 23 feet thick in drill holes",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "as 8 feet thick and clay beds are as much as 4 feet thick. The Marietta unit is as much as 23 feet",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 23.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Duplin Formation",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Duplin Formation (lower Pliocene) — Locally clayey, moderately sorted, locally poorly",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "canonical": "Duplin",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "lower Pliocene",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Duplin Formation (lower Pliocene) — Locally clayey, moderately sorted, locally poorly",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 3.6,
+     "older_ma": 5.333,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Locally clayey, dominantly medium-grained quartz sand to quartz granules to quartz pebbles to 1 inch (25 mm), with scattered white clay beds",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Duplin Formation (lower Pliocene) — Locally clayey, moderately sorted, locally poorly",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   },
+   "contacts": {
+    "value": "Basal contact is abrupt. Contact with the immediately overlying beds of the upper Duplin Formation is gradational.",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "white clay beds to a few inches thick. Basal contact is abrupt. Contact with the immediately",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   },
+   "depositional_environment": {
+    "value": "Fluvial to nearshore marine facies; progradational to regressive character",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "overlying beds of the upper Duplin Formation is gradational. Fluvial to nearshore marine facies;",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   }
+  },
+  {
+   "name": {
+    "value": "Duplin Formation (lower part)",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Duplin Formation (lower part, lower Pliocene) — At base, clay and clayey, quartzose,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "canonical": "Duplin",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "lower Pliocene",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Duplin Formation (lower part, lower Pliocene) — At base, clay and clayey, quartzose,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "younger_ma": 3.6,
+     "older_ma": 5.333,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "At base, clay and clayey, quartzose, in part shelly, sands; above, calcareous to richly shelly or clayey, very fine- to fine-grained quartz sand",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Duplin Formation (lower part, lower Pliocene) — At base, clay and clayey, quartzose,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   },
+   "contacts": {
+    "value": "Upper contact is abrupt.",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "underlying beds of the lower Duplin Formation is gradational. Upper contact is abrupt.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   },
+   "depositional_environment": {
+    "value": "Transgressive to offshore marine facies",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Transgressive to offshore marine facies.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   }
+  },
+  {
+   "name": {
+    "value": "Lang Syne Formation",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Lang Syne Formation (lower Pliocene) — White to deep yellowish ocher, locally",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "normalized": {
+     "canonical": "Lang Syne",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "lower Pliocene",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Lang Syne Formation (lower Pliocene) — White to deep yellowish ocher, locally",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true,
+    "note": "age as printed on the map",
+    "normalized": {
+     "younger_ma": 3.6,
+     "older_ma": 5.333,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "White to deep yellowish ocher, very fine- to medium-grained quartz sand; characteristic beds dark gray to black, silty, micaceous clay; underlies most of Pinewood quadrangle",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Lang Syne Formation (lower Pliocene) — White to deep yellowish ocher, locally",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "table": true
+   }
+  }
+ ],
+ "observations": [
+  {
+   "kind": "boring",
+   "label": {
+    "value": "SCGS drill hole 32-129",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "sediment at 34 to 35 ft depth (47 to 48 ft elevation) in SCGS drill hole 32-129 at Packs Landing",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "unclear",
+    "note": "printed 32-129 on this sheet (checked on the page image); the Lone Star sheet (ngmdb:77458) prints 43-129 for the same radiocarbon date"
+   },
+   "location": {
+    "value": "at Packs Landing, Sumter County, in Lone Star quadrangle",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Sumter County, in Lone Star quadrangle yielded a radiocarbon age of 25,960 +3,790/-2,570 C-14",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depth_reference": {
+    "value": "land surface",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "sediment at 34 to 35 ft depth (47 to 48 ft elevation)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "interval given as depth, with its elevation in parentheses"
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "34 ft",
+      "source_id": "ngmdb:77450",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.765,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+      "quote": "sediment at 34 to 35 ft depth (47 to 48 ft elevation)",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "agree",
+      "normalized": {
+       "min_ft": 34.0,
+       "max_ft": 34.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "bottom": {
+      "value": "35 ft",
+      "source_id": "ngmdb:77450",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.65,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+      "quote": "sediment at 34 to 35 ft depth (47 to 48 ft elevation)",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": null,
+      "normalized": {
+       "min_ft": 35.0,
+       "max_ft": 35.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Packs Landing beds (informal), or alluvium of ancient Santee River terrace",
+      "source_id": "ngmdb:77450",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.52,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+      "quote": "A plant stem or root selected from abundant plant matter in a bed in this",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": null,
+      "note": "the bed is in the unit being described",
+      "normalized": {
+       "canonical": "packs landing",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "plant stem or root yielded a radiocarbon age of 25,960 +3,790/-2,570 C-14 years BP, C-13 corrected [= 29,720 to 23,390 years BP]",
+      "source_id": "ngmdb:77450",
+      "page": 1,
+      "extraction_method": "llm",
+      "confidence": 0.65,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+      "quote": "years BP, C-13 corrected [= 29,720 to 23,390 years BP; fide Geochron Laboratories).",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": null
+     }
+    }
+   ]
+  }
+ ],
+ "structures": [],
+ "groundwater": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Brooks, M. J., Taylor, B. E., Stone, P. A., and Gardner, L. R., 2001, Pleistocene encroachment of the Wateree River sand sheet into Big Bay on the Middle Coastal Plain of South Carolina. Southeastern Geology, v. 40, pages 241-257.",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Brooks, M. J., Taylor, B. E., Stone, P. A., and Gardner, L. R., 2001, Pleistocene encroachment of the Wateree",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Kaczorowski, R. T., 1976, Origin of Carolina bays, in Hayes, M. O. and Kana, T. W., editors, Terrigenous clastic depositional environments, some modern examples: University of South Carolina, Technical Report 11-CRD.",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Kaczorowski, R. T., 1976, Origin of Carolina bays, in Hayes, M. O. and Kana, T. W., editors, Terrigenous",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Kaczorowski, R. T., 1977, The Carolina bays: A comparison with modern oriented lakes: University of South Carolina, Technical Report 13-CRD, 124 p.",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Kaczorowski, R. T., 1977, The Carolina bays: A comparison with modern oriented lakes: Columbia, Coastal",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Willoughby, R. H., 1997, Geology of the Pinewood 7.5-minute quadrangle, Clarendon and Sumter Counties, South Carolina: South Carolina Geological Survey Open-File Report 101, map 1:24,000, 1 sheet.",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Willoughby, R. H., 1997, Geology of the Pinewood 7.5-minute quadrangle, Clarendon and Sumter Counties,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "surfaces": [],
+ "contours": [],
+ "sections": [
+  {
+   "name": {
+    "value": "A-A'",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "A’",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "section from A to A' below the map"
+   },
+   "vertical_exaggeration": {
+    "value": "Vertical exaggeration is 50",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "Vertical exaggeration is 50",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": 50.0
+   },
+   "elevation_units": {
+    "value": "feet (left), meters (right)",
+    "source_id": "ngmdb:77450",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77450_1",
+    "quote": "METERS",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "left scale labelled FEET, right scale METERS"
+   }
+  }
+ ],
+ "water_tests": [],
+ "rock_tests": []
+}
