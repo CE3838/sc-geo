@@ -8,10 +8,11 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-28T10:59:20+00:00",
- "updated_at": "2026-10-28T10:59:20+00:00",
+ "updated_at": "2026-10-28T11:00:31+00:00",
  "reader": "Claude, scheduled Claude Code session 2026-10-28",
  "packets": [
-  "packet-01"
+  "packet-01",
+  "packet-02"
  ],
  "blocks_done": [
   "1",
@@ -55,11 +56,14 @@
   "40",
   "41",
   "42",
-  "43"
+  "43",
+  "44",
+  "45",
+  "46"
  ],
  "blocks_total": 45,
- "complete": false,
- "notes": "Groundwater-flow model report. Simulated values (scenario heads, water budgets, simulated hydraulic conductivity, pilot-point calibration values in table 2 and figure 5, simulated 2015 and 2050 altitudes in table 6, simulated potentiometric maps) were not recorded. Figure 2 (observed November 2014 Middendorf potentiometric surface, from Wachob 2015) is a head map, not a geologic surface, and its contour labels cannot be tied to lines from the text; not recorded. Geologic units are from the figure 4 framework diagram (column layout); ages read from it are inferred. Table 1 transmissivity, storage and calculated conductivity are reported ranges per aquifer. Reported pumping rates (tables 3-5) and county water use (figure 8) are water use, not tests. Hydrographs (figures 3, 7) were not read. Abstract says declines of as much as 249 ft; introduction says 250 ft of total decline. General modelling and climate references skipped.",
+ "complete": true,
+ "notes": "Groundwater-flow model report. Simulated values (scenario heads, water budgets, simulated hydraulic conductivity, pilot-point calibration values in table 2 and figure 5, simulated 2015 and 2050 altitudes in table 6, simulated potentiometric maps) were not recorded. Figure 2 (observed November 2014 Middendorf potentiometric surface, from Wachob 2015) is a head map, not a geologic surface, and its contour labels cannot be tied to lines from the text; not recorded. Geologic units are from the figure 4 framework diagram (column layout); ages read from it are inferred. Table 1 transmissivity, storage and calculated conductivity are reported ranges per aquifer. Reported pumping rates (tables 3-5) and county water use (figure 8) are water use, not tests. Hydrographs (figures 3, 7) were not read. Abstract says declines of as much as 249 ft; introduction says 250 ft of total decline. General modelling and climate references skipped.\nPages 44-46: end of the reference list and back matter. South Carolina references recorded; general (geophysical logging, climate station, specific-storage) references skipped.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/sir/2017/5128/sir20175128.pdf",
@@ -70,12 +74,12 @@
   }
  ],
  "summary": {
-  "stored": 77,
+  "stored": 82,
   "quote_match": {
-   "exact": 77
+   "exact": 82
   },
   "verification": {
-   "agree": 26
+   "agree": 27
   },
   "inferred": 19
  },
@@ -94,6 +98,26 @@
    "quote_not_found": 0,
    "wrong_page": 0,
    "agree": 26,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 0,
+   "image_not_verified": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-10-28T11:00:31+00:00",
+   "packets": [
+    "packet-02"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-28",
+   "values": 5,
+   "stored": 5,
+   "exact": 5,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 1,
    "disagree": 0,
    "unclear": 0,
    "image": 0,
@@ -1332,6 +1356,86 @@
     "quote_match": "exact",
     "text_method": "pdf_text",
     "verification": "agree",
+    "note": "assembled from lines of a two-column reference list"
+   }
+  },
+  {
+   "citation": {
+    "value": "Petkewich, M.D., and Campbell, B.G., 2009, Simulation of reclaimed-water injection and pumping scenarios and particle-tracking analysis near Mount Pleasant, South Carolina: U.S. Geological Survey Scientific Investigations Report 2009–5185, 41 p.",
+    "source_id": "ngmdb:106415",
+    "page": 44,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Petkewich, M.D., and Campbell, B.G., 2009, Simulation of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "assembled from lines of a two-column reference list"
+   }
+  },
+  {
+   "citation": {
+    "value": "Wachob, Andrew, 2015, Potentiometric surface of the Middendorf aquifer in South Carolina, November 2014: South Carolina Department of Natural Resources, Land, Water and Conservation Division, Water Resources Report 58, 1 plate.",
+    "source_id": "ngmdb:106415",
+    "page": 44,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Wachob, Andrew, 2015, Potentiometric surface of the Mid-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "assembled from lines of a two-column reference list"
+   }
+  },
+  {
+   "citation": {
+    "value": "U.S. Geological Survey, 2017a, Groundwater levels for South Carolina, USGS 325136079504200 CHN-173, in USGS water data for the Nation: U.S. Geological Survey National Water Information System database.",
+    "source_id": "ngmdb:106415",
+    "page": 44,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Carolina, USGS 325136079504200 CHN-173, in USGS",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "assembled from lines of a two-column reference list"
+   }
+  },
+  {
+   "citation": {
+    "value": "U.S. Geological Survey, 2017b, Groundwater levels for South Carolina, USGS 324729079472001 CHN-14, in USGS water data for the Nation: U.S. Geological Survey National Water Information System database.",
+    "source_id": "ngmdb:106415",
+    "page": 44,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "South Carolina, USGS 324729079472001 CHN-14, in",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "assembled from lines of a two-column reference list"
+   }
+  },
+  {
+   "citation": {
+    "value": "U.S. Geological Survey, 2017c, Groundwater levels for South Carolina, USGS 331022080021801 BRK-431, in USGS water data for the Nation: U.S. Geological Survey National Water Information System database.",
+    "source_id": "ngmdb:106415",
+    "page": 44,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Carolina, USGS 331022080021801 BRK-431, in USGS",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
     "note": "assembled from lines of a two-column reference list"
    }
   }
