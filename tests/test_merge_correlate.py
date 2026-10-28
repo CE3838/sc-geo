@@ -65,3 +65,11 @@ def test_names_join_on_any_map_and_age_is_kept_when_the_entry_gives_none():
     assert [o["properties"]["name"] for o in out] == ["Salt-marsh deposits", "Salt-marsh deposits"]
     assert out[0]["properties"]["age"] == "Holocene" and out[0]["properties"]["age_ma"] == [0.0, 0.0117]
     assert set(out[0]["properties"]["inferred_fields"]) == {"name", "unit_name"}
+
+
+def test_units_kept_as_mapped_are_in_no_correlation():
+    data = json.loads((ROOT / "config" / "unit_correlations.json").read_text())
+    keep = {n.lower() for k in data.get("keep_as_mapped", []) for n in k["names"]}
+    assert "barrier-island deposits" in keep
+    for c in data["correlations"]:
+        assert c["name"].lower() not in keep and not keep & {n.lower() for n in c.get("names", [])}, c["name"]
