@@ -86,3 +86,11 @@ def test_age_classes_name_their_period():
     assert period["Oligocene"] == period["Eocene"] == period["Paleocene"] == "Paleogene"
     assert period["Cretaceous"] == "Cretaceous" and period["Neoproterozoic"] == "Neoproterozoic"
     assert period["Unknown"] == "Unknown"
+
+
+def test_water_has_its_own_age_class():
+    water = next(c for c in classes.AGE_CLASSES if c["id"] == "Water")
+    assert water["period"] == "Water"
+    assert classes.display_age_class({"age_ma": [0.0, 0.0117], "geomaterial": "Water or ice"}) == "Water"
+    assert classes.display_age_class({"age_ma": None, "name": "water"}) == "Water"
+    assert classes.display_age_class({"age_ma": [0.0, 0.0117], "name": "Alluvium"}) == "Holocene"

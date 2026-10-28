@@ -45,7 +45,12 @@ _PLEISTOCENE_PARTS = {"late Pleistocene", "middle Pleistocene", "early Pleistoce
 _PERIOD = {"Holocene": "Quaternary", "Pleistocene": "Quaternary", "Pliocene": "Neogene", "Miocene": "Neogene",
            "Oligocene": "Paleogene", "Eocene": "Paleogene", "Paleocene": "Paleogene"}
 AGE_CLASSES = [{"id": a, "color": c, "period": _PERIOD.get(a, a)} for a, _, _, c in _AGES if a not in _PLEISTOCENE_PARTS] + \
-    [{"id": "Unknown", "color": "#bdbdbd", "period": "Unknown"}]
+    [{"id": "Water", "color": "#a6cee3", "period": "Water"}, {"id": "Unknown", "color": "#bdbdbd", "period": "Unknown"}]
+
+
+def display_age_class(props: dict) -> str:
+    """Age class a merged polygon is drawn with: water is its own class, whatever age a map gives it."""
+    return "Water" if material_class(props) == "Water" else age_class(props.get("age_ma"))
 
 
 def age_class(age_ma) -> str:

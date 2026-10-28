@@ -348,7 +348,7 @@ def split_tables(features: list[dict]) -> tuple[list[dict], dict, dict]:
         p = f["properties"]
         key = f"{p['source']}|{p['map_unit']}"
         lean = {k: p.get(k) for k in POLY_FIELDS}
-        lean.update(unit=key, age_class=classes.age_class(p.get("age_ma")), material_class=classes.material_class(p))
+        lean.update(unit=key, age_class=classes.display_age_class(p), material_class=classes.material_class(p))
         polys.append({"type": "Feature", "properties": lean,
                       "geometry": {"type": f["geometry"]["type"], "coordinates": _round(f["geometry"]["coordinates"])}})
         units.setdefault(key, {k: p.get(k) for k in UNIT_FIELDS})

@@ -23,7 +23,6 @@ from model.units import age_range
 
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG = ROOT / "config" / "unit_correlations.json"
-CHANGED = ("name", "unit_name", "age", "age_ma", "geomaterial")
 
 
 def load(path: Path = CONFIG) -> list[dict]:
@@ -31,25 +30,37 @@ def load(path: Path = CONFIG) -> list[dict]:
 
 
 def apply(features: list[dict], table: list[dict]) -> list[dict]:
-    """Features with every correlated member renamed; others are returned as they are."""
-    by_member = {(m["source"], m["map_unit"]): c for c in table for m in c["members"]}
-    if not by_member:
+    """Features with every correlated member renamed; others are returned as they are.
+
+    A unit is a member when its source and map symbol are listed in `members`,
+    or its name (any capitals) is in `names` on any map. An entry without an
+    age or GeoMaterial renames only and keeps the member's own.
+    """
+    by_member = {(m["source"], m["map_unit"]): c for c in table for m in c.get("members", [])}
+    by_name = {n.strip().lower(): c for c in table for n in c.get("names", [])}
+    if not by_member and not by_name:
         return features
     out = []
     for f in features:
         p = f["properties"]
-        c = by_member.get((p.get("source"), p.get("map_unit")))
+        c = by_member.get((p.get("source"), p.get("map_unit"))) or by_name.get((p.get("name") or "").strip().lower())
         if c is None:
             out.append(f)
             continue
         f = copy.deepcopy(f)
         p = f["properties"]
         p["as_mapped"] = {k: p.get(k) for k in ("name", "age", "age_ma", "geomaterial")}
-        rng = age_range(c["age"])
-        p.update(name=c["name"], unit_name=c["name"], age=c["age"], age_ma=list(rng) if rng else None,
-                 geomaterial=c.get("geomaterial") or p.get("geomaterial"))
+        changed = {"name", "unit_name"}
+        p.update(name=c["name"], unit_name=c["name"])
+        if c.get("age"):
+            rng = age_range(c["age"])
+            p.update(age=c["age"], age_ma=list(rng) if rng else None)
+            changed |= {"age", "age_ma"}
+        if c.get("geomaterial"):
+            p["geomaterial"] = c["geomaterial"]
+            changed.add("geomaterial")
         p["correlation"] = {"name": c["name"], "basis": c.get("basis"), "reason": c["reason"], "inferred": True}
-        p["inferred_fields"] = sorted(set(p.get("inferred_fields") or []) | set(CHANGED))
+        p["inferred_fields"] = sorted(set(p.get("inferred_fields") or []) | changed)
         p["layer"] = score.layer(p)
         out.append(f)
     return out
