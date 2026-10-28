@@ -8,10 +8,11 @@
  "kind": "publication",
  "schema_version": 1,
  "extracted_at": "2026-10-28T11:01:58+00:00",
- "updated_at": "2026-10-28T11:01:58+00:00",
+ "updated_at": "2026-10-28T11:03:01+00:00",
  "reader": "Claude, scheduled Claude Code session 2026-10-28",
  "packets": [
-  "packet-01"
+  "packet-01",
+  "packet-02"
  ],
  "blocks_done": [
   "1",
@@ -46,11 +47,18 @@
   "32",
   "33",
   "34",
-  "35"
+  "35",
+  "36",
+  "37",
+  "38",
+  "39",
+  "40",
+  "41",
+  "43"
  ],
  "blocks_total": 40,
- "complete": false,
- "notes": "Multi-state report; only South Carolina content recorded. Hilton Head Island drilling results are second-hand (McCauley 1960; Williams 1967) and are for groups of holes, not individual logs. Barrier islands reported by Neiheisel (1958) to have high-grade heavy-mineral sands (Bull, Capers, Isle of Palms, Edisto, Fripp, Dewees Islands; page 34) were not recorded as separate observations. Statements that units crossing into South Carolina near the NC border are mapped as Pliocene (page 26) and the modelled titanium maps (figures 10-16) were not recorded. Table 1 (mineral properties) is general, not South Carolina data.",
+ "complete": true,
+ "notes": "Multi-state report; only South Carolina content recorded. Hilton Head Island drilling results are second-hand (McCauley 1960; Williams 1967) and are for groups of holes, not individual logs. Barrier islands reported by Neiheisel (1958) to have high-grade heavy-mineral sands (Bull, Capers, Isle of Palms, Edisto, Fripp, Dewees Islands; page 34) were not recorded as separate observations. Statements that units crossing into South Carolina near the NC border are mapped as Pliocene (page 26) and the modelled titanium maps (figures 10-16) were not recorded. Table 1 (mineral properties) is general, not South Carolina data.\nPages 36-43: conclusions and references. South Carolina-relevant references recorded; references about other states, minerals industry, and methods skipped. No new South Carolina data on these pages.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/sir/2018/5045/sir20185045.pdf",
@@ -61,12 +69,12 @@
   }
  ],
  "summary": {
-  "stored": 21,
+  "stored": 28,
   "quote_match": {
-   "exact": 21
+   "exact": 28
   },
   "verification": {
-   "agree": 3
+   "agree": 4
   },
   "inferred": 4
  },
@@ -85,6 +93,26 @@
    "quote_not_found": 0,
    "wrong_page": 0,
    "agree": 3,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 0,
+   "image_not_verified": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-10-28T11:03:01+00:00",
+   "packets": [
+    "packet-02"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-28",
+   "values": 7,
+   "stored": 7,
+   "exact": 7,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 1,
    "disagree": 0,
    "unclear": 0,
    "image": 0,
@@ -444,7 +472,120 @@
  ],
  "structures": [],
  "groundwater": [],
- "references": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Force, E.R., Grosz, A.E., Loferski, P.J., and Maybin, A.H., 1982, Aeroradioactivity maps in heavy-mineral exploration—Charleston, South Carolina, area: U.S. Geological Survey Professional Paper 1218, 19 p., 2 pl., scale 1:500,000.",
+    "source_id": "ngmdb:107138",
+    "page": 37,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Charleston, South Carolina, area: U.S. Geological Survey",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "assembled from lines of a two-column reference list"
+   }
+  },
+  {
+   "citation": {
+    "value": "McCauley, C.K., 1960, Exploration for heavy minerals on Hilton Head Island, South Carolina: South Carolina State Development Board, Division of Geology Bulletin 26, 13 p.",
+    "source_id": "ngmdb:107138",
+    "page": 38,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Hilton Head Island, South Carolina: South Carolina State",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "assembled from lines of a two-column reference list"
+   }
+  },
+  {
+   "citation": {
+    "value": "Neiheisel, James, 1958, Heavy mineral beach placers of the South Carolina coast: South Carolina State Development Board, Division of Geology, Monthly Bulletin, v. 2, no. 1, p. 1–7.",
+    "source_id": "ngmdb:107138",
+    "page": 38,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Neiheisel, James, 1958, Heavy mineral beach placers of the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "assembled from lines of a two-column reference list"
+   }
+  },
+  {
+   "citation": {
+    "value": "Neiheisel, James, 1976, Heavy minerals in aeroradioactive high areas of the Savannah River flood plain and deltaic plain: South Carolina Division of Geology Geologic Notes, v. 20, p. 45–51.",
+    "source_id": "ngmdb:107138",
+    "page": 38,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Neiheisel, James, 1976, Heavy minerals in aeroradioactive",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "assembled from lines of a two-column reference list"
+   }
+  },
+  {
+   "citation": {
+    "value": "Horton, J.D., San Juan, C.A., and Stoeser, D.B., 2017, The State Geologic Map Compilation (SGMC) geodatabase of the conterminous United States: U.S. Geological Survey Data Series 1052, 46 p.",
+    "source_id": "ngmdb:107138",
+    "page": 38,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Horton, J.D., San Juan, C.A., and Stoeser, D.B., 2017, The",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "assembled from lines of a two-column reference list"
+   }
+  },
+  {
+   "citation": {
+    "value": "Shah, A.K., and Harris, M.S., 2012, Shipboard surveys track magnetic sources in marine sediments—Geophysical studies of the Stono and North Edisto Inlets near Charleston, South Carolina: U.S. Geological Survey Open-File Report 2012–1112.",
+    "source_id": "ngmdb:107138",
+    "page": 40,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Shah, A.K., and Harris, M.S., 2012, Shipboard surveys track",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "assembled from lines of a two-column reference list"
+   }
+  },
+  {
+   "citation": {
+    "value": "Williams, Lloyd, 1967, Heavy minerals in South Carolina: Columbia, S.C., South Carolina State Development Board, Division of Geology, Bulletin 35, 35 p.",
+    "source_id": "ngmdb:107138",
+    "page": 40,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Williams, Lloyd, 1967, Heavy minerals in South Carolina:",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "assembled from lines of a two-column reference list"
+   }
+  }
+ ],
  "surfaces": [],
  "contours": [],
  "sections": [],
