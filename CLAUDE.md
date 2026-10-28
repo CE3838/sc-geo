@@ -75,6 +75,10 @@ Guidance for Claude (and humans) working in this repository.
   SSURGO soil estimates (Soil Data Access, live) and key references
   (`merge/references.py` → `web/data/geology/references.json`). Faults and
   shear zones come from the SGMC structure layer (`harvest/sgmc.py`).
+  The header's About tab (`web/about.html`, static) explains the merge, the
+  confidence value, inferred values and interpolation; every number it states
+  is wrapped in `data-sync` and checked against the code by
+  `tests/test_about_page.py` and `tests/web/about.test.mjs`.
 - Roads: US Census Bureau TIGER/Line roads (TIGERweb Transportation
   MapServer, Primary/Secondary/Local Roads; public domain, live, attributed;
   nothing copied), with route shields and street names (bundled Noto Sans glyphs in
@@ -125,7 +129,7 @@ Guidance for Claude (and humans) working in this repository.
 | `config/` | Pilot area, `sources.json` (data sources and URLs), `catalog_scope.json` (chapter page ranges), other settings |
 | `harvest/` | Resumable jobs that discover and download public sources |
 | `extract/` | Parsers and prompts that pull values out of sources |
-| `model/` | Data model: provenance (`StoredValue`), ages and unit names (`units.py`), shapefile/projection reader (`gisio.py`), printed coordinates (`coords.py`), vertical datums (`vdatum.py`), surface interpolation (`surfaces.py`) |
+| `model/` | Data model: provenance (`StoredValue`), ages and unit names (`units.py`), shapefile/projection reader (`gisio.py`), printed coordinates (`coords.py`), vertical datums (`vdatum.py`), surface interpolation (`surfaces.py`; experimental methods compared in `surface_methods.py`, see `docs/interpolation.md`) |
 | `data/` | Small public derived data only: `catalog/`, `lexicon/` (no PDFs, no internal data) |
 | `merge/` | Merge all GIS sources into one surficial and one bedrock layer with confidence (`python -m merge.build`); pack the public data package (`python -m merge.package`) |
 | `review/` | Tools for human review of extracted and inferred values |

@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About the Viewer</title>
+  <meta name="description" content="How the South Carolina Geology Viewer merges maps, scores confidence, marks inferred values and interpolates subsurface surfaces.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
+</head>
+<!--
+  Every number below that comes from the code is wrapped in data-sync="key".
+  tests/test_about_page.py (Python code and config) and tests/web/about.test.mjs
+  (web/card.js, web/merged.js) recompute each one and fail if the page differs.
+-->
+<body class="about-page">
+  <header class="app-header">
+    <h1 class="app-title">South Carolina Geology Viewer</h1>
+    <span class="app-subtitle">South Carolina Geology · Public Data</span>
+    <nav class="app-nav" aria-label="Pages">
+      <a class="app-tab" href="index.html">Map</a>
+      <a class="app-tab" href="about.html" aria-current="page">About</a>
+      <a class="app-link app-link-sources" href="https://github.com/CE3838/sc-geo" target="_blank" rel="noopener noreferrer">Sources</a>
+    </nav>
+  </header>
+
+  <main class="about">
+    <div class="about-intro">
+      <h1>How the information is presented</h1>
+      <p>What the map shows, where each value comes from, and how much weight it can bear. Written for engineers
+        and geologists. Every value in the viewer links back to its source and page, and every value the
+        software worked out rather than read is marked <span class="tag-inferred">inferred</span>.</p>
+      <nav class="about-toc" aria-label="On this page">
+        <a href="#map">What the map shows</a>
+        <a href="#confidence">The confidence value</a>
+        <a href="#inferred">Inferred and derived values</a>
+        <a href="#documents">Values read from documents</a>
+        <a href="#surfaces">Subsurface surfaces</a>
+        <a href="#sources">Sources and no warranty</a>
+      </nav>
+    </div>
+
+    <section id="map">
+      <h2>What the map shows</h2>
+      <p>The geology is one seamless map merged from every public geologic map with usable GIS data: USGS
+        and South Carolina Geological Survey (SCGS) quadrangles and compilations listed in the source catalog,
+        plus the USGS State Geologic Map Compilation (SGMC). The Map units panel says how many maps were
+        merged; the property card names the map behind each polygon.</p>
+      <h3>Where maps overlap</h3>
+      <p>Maps are ranked and each one is kept only where no better map already covers the ground:</p>
+      <ol>
+        <li><strong>Most detailed first</strong>: the smallest scale denominator wins (1:24,000 beats 1:100,000).</li>
+        <li><strong>Then the newest</strong> map.</li>
+        <li><strong>Then the mapper's certainty</strong> (a unit identified as <em>certain</em> beats <em>questionable</em>).</li>
+      </ol>
+      <p>The losing maps are not thrown away. For every merged polygon, the other maps under it are measured
+        (their share of its area) and used for the agreement part of the confidence, and the ones that disagree
+        are listed on the card as <em>Other maps here</em> with their citation, scale and how much of the polygon
+        they cover. A map counts only where it covers more than <span data-sync="name.min_share">1%</span> of a polygon.</p>
+      <p>SGMC (1:500,000) covers the whole state, so it fills in wherever no detailed map exists. Maps coarser
+        than <span data-sync="scale.max_used">1:1,000,000</span> are not used: they would never win anywhere
+        and would only dilute agreement. SCGS FTP quadrangle packages with no scale in the catalog are taken
+        as <span data-sync="scale.scgs_assumed">1:24,000</span> (an inferred scale; every SCGS quadrangle package
+        is published at that scale).</p>
+      <h3>Two layers: Unconsolidated Deposits and Consolidated Rock</h3>
+      <p>Units are split into two layers by the <strong>material at the surface</strong>, not by depth or
+        province. A unit goes in <em>Unconsolidated Deposits</em> when its GeMS GeoMaterial names sediment,
+        made land, water, regolith, alluvium, marsh, sand, clay and similar; in <em>Consolidated Rock</em> when
+        it names rock, granite, gneiss, schist, volcanic or plutonic rock. Without a GeoMaterial the lithology
+        decides (unconsolidated or water), and failing that the age: units younger than 66 Ma (Cenozoic) go in
+        Unconsolidated Deposits. The split is an inference. Unconsolidated Deposits draw on top; turn them off
+        to see the rock map under them where a map shows both.</p>
+    </section>
+
+    <section id="confidence">
+      <h2>The confidence value</h2>
+      <p>Each merged polygon has a confidence from 0 to 1 that the unit shown is the right one. It is computed
+        by <code>merge/score.py</code> from four things:</p>
+      <div class="formula">confidence = scale weight × identity weight × agreement factor + Geolex bonus
+        <span class="formula-note">(at most 1, rounded to 3 decimals)</span></div>
+
+      <h3>1. Map scale</h3>
+      <p>Detail on the map sets the starting point. Scale weight by scale denominator:</p>
+      <div class="table-wrap"><table class="about-table">
+        <thead><tr><th>Map scale (this or more detailed)</th><th>Weight</th></tr></thead>
+        <tbody>
+          <tr><td data-sync="scale.24000.label">1:24,000</td><td data-sync="scale.24000">0.95</td></tr>
+          <tr><td data-sync="scale.62500.label">1:62,500</td><td data-sync="scale.62500">0.90</td></tr>
+          <tr><td data-sync="scale.100000.label">1:100,000</td><td data-sync="scale.100000">0.85</td></tr>
+          <tr><td data-sync="scale.250000.label">1:250,000</td><td data-sync="scale.250000">0.70</td></tr>
+          <tr><td data-sync="scale.500000.label">1:500,000</td><td data-sync="scale.500000">0.55</td></tr>
+          <tr><td data-sync="scale.1000000.label">1:1,000,000</td><td data-sync="scale.1000000">0.45</td></tr>
+          <tr><td>Coarser</td><td data-sync="scale.coarser">0.35</td></tr>
+          <tr><td>Scale unknown</td><td data-sync="scale.unknown">0.35</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>2. The mapper's identification</h3>
+      <p>GeMS maps record how sure the mapper was of each unit (IdentityConfidence).</p>
+      <div class="table-wrap"><table class="about-table">
+        <thead><tr><th>Mapper's identification</th><th>Multiplier</th></tr></thead>
+        <tbody>
+          <tr><td>certain</td><td>× <span data-sync="identity.certain">1.00</span></td></tr>
+          <tr><td>questionable</td><td>× <span data-sync="identity.questionable">0.80</span></td></tr>
+          <tr><td>not stated (SGMC and many non-GeMS maps) or anything else</td><td>× <span data-sync="identity.other">0.90</span></td></tr>
+        </tbody>
+      </table></div>
+      <p>Scale weight × identity weight is the <strong>base</strong> confidence.</p>
+
+      <h3>3. Agreement of the other maps</h3>
+      <p>Every other map under the polygon is compared with the winner by unit name, using USGS Geolex names
+        (a facies or member is compared as its formation):</p>
+      <div class="table-wrap"><table class="about-table">
+        <thead><tr><th>The other map's unit</th><th>Agreement</th></tr></thead>
+        <tbody>
+          <tr><td>Same Geolex unit</td><td data-sync="name.same">1.00</td></tr>
+          <tr><td>Both units informal (no formal name), ages overlap</td><td data-sync="name.age_both_unnamed">0.50</td></tr>
+          <tr><td>One named, one informal, ages overlap</td><td data-sync="name.age_one_named">0.25</td></tr>
+          <tr><td>Different named units, or ages do not overlap</td><td data-sync="name.different">0.00</td></tr>
+        </tbody>
+      </table></div>
+      <p>The agreement <em>a</em> is the area-weighted mean over the other maps (each map's share of the
+        polygon is its weight, and a map counts once however many of its polygons lie under it). Then</p>
+      <div class="formula">agreement factor = <span data-sync="agree.floor">0.80</span> + <span data-sync="agree.slope">0.25</span> × a</div>
+      <p>so full disagreement multiplies the base by 0.80 and full agreement by
+        <span data-sync="agree.top">1.05</span>. Where no other map covers the ground the factor is
+        <span data-sync="agree.lone">0.92</span>: a single map is neither confirmed nor contradicted. Water is
+        left out on both sides, because maps differ there only in where the shoreline was drawn.</p>
+
+      <h3>4. Published research (Geolex)</h3>
+      <p>When the unit is a recognized USGS Geolex unit and its age does not contradict the Geolex age,
+        <span data-sync="geolex.bonus">0.03</span> is added.</p>
+
+      <h3>What the levels mean</h3>
+      <div class="levels">
+        <div><span class="badge badge-high">High</span> <span data-sync="level.high">0.70</span> or more: typically a
+          detailed (1:24,000 to 1:100,000) map that other maps agree with.</div>
+        <div><span class="badge badge-medium">Medium</span> <span data-sync="level.medium">0.40</span> to under
+          0.70: a regional map alone, or a detailed map that others dispute.</div>
+        <div><span class="badge badge-low">Low</span> under 0.40: a map of unknown or very small scale, or
+          strong disagreement.</div>
+      </div>
+      <p>With <em>Color geology by: Confidence</em> the map shades from red
+        (<span data-sync="color.low">0.3</span> and below) through yellow (<span data-sync="color.mid">0.6</span>)
+        to green (<span data-sync="color.high">0.9</span> and above).</p>
+      <p class="note">The confidence ranks how well supported the <em>mapped unit</em> is. It is not a
+        probability, and it says nothing about the position of a contact on the ground, which is only as good
+        as the map's scale (at 1:24,000 a 0.5 mm line is about 40 ft wide).</p>
+
+      <h3>The card's "why" rows</h3>
+      <p>Open <em>Why 0.92</em> (the value of the polygon) next to the confidence badge on the property card to see the same four steps for
+        the polygon you clicked: the scale weight, × the identity multiplier, × the agreement factor with how
+        many other maps cover the ground and what share agree, + the Geolex bonus (or + 0), and the total.
+        The card shows two decimals, so its rows may not multiply out exactly to the third decimal.</p>
+
+      <h3 id="example">Worked example</h3>
+      <p>A polygon of Wando Formation on a 1:24,000 map whose mapper marked it <em>certain</em>. An older
+        1:24,000 map also calls it Wando Formation over 60% of the polygon; SGMC covers all of it with an
+        unnamed Pleistocene sediment unit.</p>
+      <div class="table-wrap"><table class="about-table example">
+        <tbody>
+          <tr><th scope="row">Base</th><td>0.95 (1:24,000) × 1.00 (certain)</td><td data-sync="ex1.base">0.95</td></tr>
+          <tr><th scope="row">Agreement</th><td>(0.6 × <span data-sync="ex1.a_other">1.00</span> + 1.0 × <span data-sync="ex1.a_sgmc">0.25</span>) ÷ (0.6 + 1.0)</td><td data-sync="ex1.agreement">0.531</td></tr>
+          <tr><th scope="row">Agreement factor</th><td>0.80 + 0.25 × 0.531</td><td data-sync="ex1.factor">0.933</td></tr>
+          <tr><th scope="row">Before the bonus</th><td>0.95 × 0.933</td><td data-sync="ex1.before">0.886</td></tr>
+          <tr><th scope="row">Confidence</th><td>+ 0.03 (Wando is a Geolex unit, ages agree)</td><td><strong data-sync="ex1.value">0.916</strong></td></tr>
+        </tbody>
+      </table></div>
+      <p>The card shows <strong><span data-sync="ex1.card">0.92</span> · High</strong>, with the why rows
+        <em>Map scale 1:24,000 0.95</em>, <em>Mapper's identification: certain × 1.00</em>,
+        <em>2 other maps cover this ground; <span data-sync="ex1.agree_pct">53%</span> agree
+        × <span data-sync="ex1.factor_card">0.93</span></em>, <em>Recognized Geolex unit + 0.03</em>
+        (<span data-sync="ex1.sources">3</span> maps in all).</p>
+      <p>Where only SGMC covers the ground and its unit has no Geolex name: 0.55 × 0.90 =
+        <span data-sync="ex2.base">0.495</span>, × 0.92 = <span data-sync="ex2.value">0.455</span>, shown as
+        <strong><span data-sync="ex2.card">0.46</span> · Medium</strong>.</p>
+    </section>
+
+    <section id="inferred">
+      <h2>Inferred and derived values</h2>
+      <p>A value read directly from a source is shown with its citation number, e.g. <sup class="cite">[1]</sup>,
+        which links to the reference list at the foot of the card. A value the software worked out is tagged
+        <span class="tag-inferred">inferred</span> instead, with a note saying how (for example
+        <em>from the age text, ICS chart</em> or <em>derived class</em>). Inferred values are stored with
+        <code>inferred=True</code> and keep the source and page they were derived from.</p>
+      <h3>Derived classes used for color and grouping</h3>
+      <ul>
+        <li><strong>Age range (Ma)</strong>: the printed age text turned into a range in millions of years on the
+          ICS International Chronostratigraphic Chart. Ranges are written <em>younger age first</em>
+          (late Pleistocene is 0.0117–0.129 Ma).</li>
+        <li><strong>Age class</strong>: the epoch or period the age range overlaps most (an interval counts only
+          when it holds more than 5% of the range). The legend has one Pleistocene class; the late, middle and
+          early parts decide the overlap, and a range spanning all three is called Pleistocene. Each unit keeps
+          its own refined age for the card.</li>
+        <li><strong>Material class</strong>: GeoMaterial, lithology or unit name grouped into a short legend.
+          Human-moved earth (fill, made land, dredge spoil) wins over any natural material another field names;
+          valley and channel fill are natural deposits and are not counted as fill. <em>Water</em> is its own
+          class (GeoMaterial or lithology "water"), and water polygons take no part in agreement.</li>
+        <li><strong>Map units panel</strong>: units are grouped by period, then epoch, youngest first. Units with
+          the same Geolex name are one entry listing every map label. Units named <em>undivided</em> or
+          <em>undifferentiated</em> are one entry per epoch, <em>Undifferentiated - &lt;epoch&gt;</em>, which
+          lists the printed names it includes.</li>
+        <li><strong>Layer</strong> (Unconsolidated Deposits or Consolidated Rock), as described above.</li>
+      </ul>
+      <p>Soil properties on the card are NRCS SSURGO representative estimates, not site measurements; the
+        shrink-swell class is inferred from the linear extensibility (LEP) by the NRCS classes.</p>
+    </section>
+
+    <section id="documents">
+      <h2>Values read from documents</h2>
+      <p>Reports and maps with legally open full text are read by a model; code does everything else. Each
+        value must come with the page it is on and a verbatim quote. The quote is then checked against the
+        text of that page (tolerant of line breaks, hyphenation, ligatures and common OCR errors). A quote
+        found only on a neighbouring page, or not at all, is <strong>not stored</strong>: it goes to the review
+        queue (<code>data/review/queue.json</code>) for a person to check. Values whose second reading pass
+        disagrees or is unclear, inexact quotes on pages with a real text layer, and water and rock test
+        values with no printed units (units are never guessed), a value that is not a number, or a "|" where a
+        digit belongs are queued as well.</p>
+      <h3>Confidence of a document value</h3>
+      <div class="formula">confidence = S × M × Q × V × I</div>
+      <div class="table-wrap"><table class="about-table">
+        <tbody>
+          <tr><th scope="row">S, source</th><td>agency, state survey or journal <span data-sync="doc.agency">0.85</span>;
+            other publishers <span data-sync="doc.other">0.70</span>; drafts at most <span data-sync="doc.draft">0.60</span>.
+            Map-unit descriptions on a map sheet, and values read from contour maps, take the map's scale weight (table above).</td></tr>
+          <tr><th scope="row">M, text</th><td>PDF text layer 1.00; OCR text <span data-sync="doc.ocr">0.90</span></td></tr>
+          <tr><th scope="row">Q, quote match</th><td>exact 1.00; OCR-tolerant <span data-sync="doc.ocr_quote">0.95</span>; fuzzy <span data-sync="doc.fuzzy">0.85</span></td></tr>
+          <tr><th scope="row">V, second pass</th><td>agrees <span data-sync="doc.verify_agree">1.00</span>; not checked <span data-sync="doc.verify_unchecked">0.85</span>;
+            unclear <span data-sync="doc.verify_unclear">0.70</span>; disagrees <span data-sync="doc.verify_disagree">0.40</span> (and queued)</td></tr>
+          <tr><th scope="row">I, inference</th><td>× <span data-sync="doc.inferred">0.80</span> when the value was inferred from the text rather than stated</td></tr>
+        </tbody>
+      </table></div>
+      <h3>Text or image</h3>
+      <p>Values read from the page text are stored with <code>extraction_method</code> <strong>llm</strong>.
+        Values that exist only on a page image (map faces, cross sections, scanned figures) are stored as
+        <strong>llm-image</strong>, with a locator to the exact box on the page, only after a second pass looks
+        at the same image tile and agrees. Their confidence is min(<span data-sync="image.max">0.60</span>,
+        S × <span data-sync="image.factor">0.80</span>) × V × I, times <span data-sync="image.unclear">0.70</span>
+        when digits were unclear, so an image reading never outranks a checked text reading from the same source.</p>
+      <h3>Elevations, coordinates and agreement</h3>
+      <p>Printed locations are converted to latitude and longitude as a separate inferred value. Every elevation
+        gets a derived NAVD88 value (NGVD29 through the NGS VERTCON grid); when the datum is not stated the value
+        is kept as printed and marked approximate. Two surface elevations for the same unit and boundary from
+        independent sources, at least one measured, within <span data-sync="agreement.distance">1,000 ft</span>
+        and within <span data-sync="agreement.tolerance">5 ft</span> (plus <span data-sync="agreement.approx">1 ft</span>
+        if either is approximate) agree. Each agreeing source raises confidence c to
+        1 − (1 − c)(1 − <span data-sync="agreement.boost">0.25</span>)<sup>k</sup>, at most
+        <span data-sync="agreement.cap">0.98</span>. A disagreeing value is never dropped or lowered; both are kept as alternatives.</p>
+    </section>
+
+    <section id="surfaces">
+      <h2>Subsurface surfaces and interpolation</h2>
+      <p>Tops and bases of units, and water levels, are interpolated from point elevations in feet NAVD88 on SC
+        State Plane coordinates (<code>model/surfaces.py</code>). This is what the coming cross-section and
+        plane viewer will draw, so every estimate carries a ± uncertainty and a method, and is an inference
+        citing every point it used.</p>
+      <h3>Method</h3>
+      <ul>
+        <li><strong>Ordinary kriging</strong> with at least <span data-sync="surf.min_points">10</span> points.
+          Pairs of points are binned (<span data-sync="surf.bins">12</span> lag bins up to half the largest distance)
+          into an empirical semivariogram, and spherical, exponential and gaussian models are fitted. The model
+          kept is the one with the lowest <strong>leave-one-out cross-validation</strong> error: each point is
+          predicted from all the others and the errors compared (computed exactly, Dubrule 1983).</li>
+        <li><strong>Fallback</strong>: natural-neighbour (Sibson) interpolation inside the points' outline (convex
+          hull) and inverse-distance weighting (power <span data-sync="surf.idw_power">2</span>) outside it, used when
+          there are too few points, when the variogram fit is poor (r² under <span data-sync="surf.min_r2">0.30</span>),
+          when there is almost no spatial structure (partial sill under <span data-sync="surf.min_structure">5%</span>
+          of the sill), or when kriging cross-validates more than <span data-sync="surf.cv_margin">10%</span> worse
+          than the fallback on the same points.</li>
+      </ul>
+      <h3>The ± uncertainty</h3>
+      <ul>
+        <li>Kriging: the kriging standard deviation, calibrated so it matches the errors cross-validation actually
+          saw (scaled by the square root of the mean standardized squared error, bounded to
+          <span data-sync="surf.msse_low">0.25</span>–<span data-sync="surf.msse_high">20</span>). About 95% of true
+          values should fall within ±2 of it (checked on test surfaces).</li>
+        <li>Fallback: the method's leave-one-out RMSE, the same everywhere.</li>
+        <li>Never less than <span data-sync="surf.min_std">0.3 ft</span>, the error of elevations printed to the nearest foot.</li>
+      </ul>
+      <h3>Where there is no estimate</h3>
+      <p>No value is given farther from the nearest point than the maximum distance (by default
+        <span data-sync="surf.max_distance_factor">3</span> times the median spacing between neighbouring points);
+        the viewer will show a gap with the reason. Estimates outside the points' outline are flagged
+        <strong>extrapolated</strong>.</p>
+      <p>Research into better methods for Coastal Plain surfaces (regional dip, anisotropy, contour maps as data,
+        surfaces that do not cross), with cross-validation on the extracted points, is in
+        <a href="https://github.com/CE3838/sc-geo/blob/main/docs/interpolation.md" target="_blank" rel="noopener noreferrer">docs/interpolation.md</a>.
+        Nothing there changes the method above until it is approved.</p>
+    </section>
+
+    <section id="sources">
+      <h2>Sources, citations and licences</h2>
+      <ul>
+        <li>Geology: USGS and SCGS maps listed in the source catalog (each cited on the card, with a link to its
+          NGMDB record), and Horton, J.D., San Juan, C.A., and Stoeser, D.B., 2017, The State Geologic Map
+          Compilation (SGMC) geodatabase of the conterminous United States: U.S. Geological Survey Data Series 1052,
+          <a href="https://doi.org/10.5066/F7WH2N65" target="_blank" rel="noopener noreferrer">doi:10.5066/F7WH2N65</a>.</li>
+        <li>Unit names and ages: USGS National Geologic Map Database, Geolex; ages on the ICS International
+          Chronostratigraphic Chart.</li>
+        <li>Imagery: USDA NAIP via USGS; ground elevation: USGS 3DEP Elevation Point Query Service; soils: USDA NRCS
+          SSURGO via Soil Data Access; water data: USGS Water Data APIs; roads: US Census Bureau TIGER/Line;
+          parcels: county GIS services, queried live and attributed on the map. Each keeps its own terms.</li>
+        <li>Document values cite the source and page they were read on; the viewer's credits (the (i) button on the
+          map) list the live services in use.</li>
+        <li>Software: Apache License 2.0, source code at
+          <a href="https://github.com/CE3838/sc-geo" target="_blank" rel="noopener noreferrer">github.com/CE3838/sc-geo</a>.</li>
+      </ul>
+      <p class="warranty"><strong>No warranty.</strong> Data comes from the cited public sources, which keep
+        their own terms. It is provided as is, without warranty of any kind. It is not a substitute for a
+        site investigation, and the sources and pages cited should be checked before relying on any value.</p>
+    </section>
+  </main>
+</body>
+</html>
