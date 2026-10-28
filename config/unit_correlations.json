@@ -1,0 +1,10 @@
+{
+ "about": "Units that different maps name differently. merge/correlate.py gives each member (source and map symbol) the shared name, age and GeoMaterial before the overlay, so the same deposit draws, colours and scores alike on both sides of a map edge. The symbol stays as mapped; the mapped values are kept in as_mapped; every changed field is flagged inferred. basis is the unit whose name and age are followed; reason says why the units are the same.",
+ "correlations": [
+  {"name": "Alluvium", "age": "Holocene", "geomaterial": "Alluvial sediment, mostly coarse-grained",
+   "members": [{"source": "usgs-sgmc", "map_unit": "Qavs"}],
+   "basis": {"source": "ngmdb:100396", "map_unit": "Qal"},
+   "reason": "same valley-floor deposit: the 1:24,000 map's alluvium (sand and clayey sand along drainage courses, veneered by organic mud and peat) meets SGMC's Alluvial Valley Swamp (fluvial sand and gravel grading up into fine sand and silt, local peat) along the same valleys; SGMC's age is Quaternary undivided",
+   "inferred": true}
+ ]
+}

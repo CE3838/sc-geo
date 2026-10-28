@@ -139,6 +139,10 @@ export function mergedCard({ props: p, unit, sources, records, lng, lat }) {
     confidenceNote: null,
     rows: [
       row('Map unit', u.map_unit ?? p.map_unit, loc),
+      u.as_mapped && row('As mapped', [u.as_mapped.name, u.as_mapped.age && `(${u.as_mapped.age})`].filter(Boolean).join(' '), loc),
+      u.correlation && row('Correlated as', `${u.correlation.name}${u.correlation.basis
+        ? `, as ${u.correlation.basis.map_unit} of ${u.correlation.basis.source}` : ''}: ${u.correlation.reason}`,
+      { inferred: true, note: 'units named differently on adjoining maps (config/unit_correlations.json)' }),
       row('Age range', formatMa(u.age_ma), { inferred: true, note: 'from the age text, ICS chart' }),
       row('Geomaterial', u.geomaterial, loc),
       row('Lithology', u.lith, loc),
