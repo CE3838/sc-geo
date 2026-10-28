@@ -40,8 +40,12 @@ _AGES = [
     ("Archean", 2500.0, 4031.0, "#f0047f"),
 ]
 _PLEISTOCENE_PARTS = {"late Pleistocene", "middle Pleistocene", "early Pleistocene"}
-AGE_CLASSES = [{"id": a, "color": c} for a, _, _, c in _AGES if a not in _PLEISTOCENE_PARTS] + \
-    [{"id": "Unknown", "color": "#bdbdbd"}]
+# The period each epoch belongs to (ICS chart), for grouping the Map units panel;
+# older classes are periods (or Proterozoic eras) themselves.
+_PERIOD = {"Holocene": "Quaternary", "Pleistocene": "Quaternary", "Pliocene": "Neogene", "Miocene": "Neogene",
+           "Oligocene": "Paleogene", "Eocene": "Paleogene", "Paleocene": "Paleogene"}
+AGE_CLASSES = [{"id": a, "color": c, "period": _PERIOD.get(a, a)} for a, _, _, c in _AGES if a not in _PLEISTOCENE_PARTS] + \
+    [{"id": "Unknown", "color": "#bdbdbd", "period": "Unknown"}]
 
 
 def age_class(age_ma) -> str:

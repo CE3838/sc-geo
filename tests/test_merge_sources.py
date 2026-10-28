@@ -105,3 +105,11 @@ def test_all_sgmc_polygons_are_one_source():
     b = sources.sgmc_feature(poly, {"name": "water", "source_id": "usgs-sgmc:unknown"})["properties"]
     assert a["source"] == b["source"] == "usgs-sgmc"
     assert a["source_id"] == "usgs-sgmc:SC002, SC003"
+
+
+def test_sgmc_age_text_lists_the_younger_age_first():
+    assert sources._sgmc_age({"age_min": "Phanerozoic - Paleozoic - Permian",
+                              "age_max": "Phanerozoic - Paleozoic - Carboniferous"}) == "Permian to Carboniferous"
+    assert sources._sgmc_age({"age_min": "Phanerozoic - Cenozoic - Quaternary - Pleistocene",
+                              "age_max": "Phanerozoic - Cenozoic - Quaternary - Pleistocene"}) == "Pleistocene"
+    assert sources._sgmc_age({"unit_age": "Miocene", "age_min": "x", "age_max": "y"}) == "Miocene"

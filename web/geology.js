@@ -74,7 +74,7 @@ export function formatAgeRange(ageMin, ageMax) {
   const old = finest(ageMax);
   if (!young && !old) return 'Unknown';
   if (!young || !old || young === old) return young || old;
-  return `${old} to ${young}`;
+  return `${young} to ${old}`;
 }
 
 export function safeHttpsUrl(url) {

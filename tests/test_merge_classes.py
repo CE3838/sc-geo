@@ -77,3 +77,12 @@ def test_material_class(props, expected):
 def test_artificial_fill_is_a_material_class_and_made_land_is_gone():
     ids = [c["id"] for c in classes.MATERIAL_CLASSES]
     assert "Artificial fill" in ids and "Made land" not in ids
+
+
+def test_age_classes_name_their_period():
+    period = {c["id"]: c["period"] for c in classes.AGE_CLASSES}
+    assert period["Holocene"] == period["Pleistocene"] == "Quaternary"
+    assert period["Pliocene"] == period["Miocene"] == "Neogene"
+    assert period["Oligocene"] == period["Eocene"] == period["Paleocene"] == "Paleogene"
+    assert period["Cretaceous"] == "Cretaceous" and period["Neoproterozoic"] == "Neoproterozoic"
+    assert period["Unknown"] == "Unknown"

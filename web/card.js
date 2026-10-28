@@ -3,7 +3,7 @@
 // Every row names the reference it comes from (`cite`, 1-based into
 // `references`) and derived values are flagged `inferred`.
 import { formatAgeRange, safeHttpsUrl } from './geology.js';
-import { layerName, parseAlternatives, scaleText, sourceLink } from './merged.js';
+import { formatMa, layerName, parseAlternatives, scaleText, sourceLink } from './merged.js';
 
 export const SGMC_REFERENCE = {
   id: 'usgs-sgmc',
@@ -55,14 +55,7 @@ export function confidenceWhy(p, source) {
   return why;
 }
 
-const sig = (n) => String(Number(n.toPrecision(3)));
-
-// [young, old] in Ma -> "old–young Ma".
-export function formatMa(range) {
-  if (!Array.isArray(range) || range.length !== 2 || !range.every(Number.isFinite)) return null;
-  const [young, old] = range;
-  return young === old ? `${sig(old)} Ma` : `${sig(old)}–${sig(young)} Ma`;
-}
+export { formatMa };
 
 // "Weems and Lemon, 1993" from a USGS-style citation.
 export function shortRef(ref) {

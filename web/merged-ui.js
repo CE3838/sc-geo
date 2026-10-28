@@ -4,7 +4,8 @@
 // layers were merged. Click: a short description, and the property card
 // model (card.js).
 import {
-  confidenceColor, confidenceText, CONFIDENCE_STOPS, GEOLOGY_LAYERS, layerName, legendFor, matchColor, parseAlternatives, scaleText, sourceLink,
+  confidenceColor, confidenceText, CONFIDENCE_STOPS, GEOLOGY_LAYERS, groupUnits, layerName, legendFor, matchColor, parseAlternatives,
+  scaleText, sourceLink,
 } from './merged.js';
 import { safeHttpsUrl, shortCitation } from './geology.js';
 import { mergedCard } from './card.js';
@@ -54,9 +55,12 @@ export async function setupMergedGeology(map, ui) {
     el('div', { class: 'geo-row' }, el('label', { for: 'geo-mode' }, 'Color geology by'), modeSelect),
     el('div', { class: 'geo-row' }, el('label', { for: 'geo-opacity' }, 'Opacity'), opacity));
 
+  // Color key (material or confidence), then the map units on screen grouped by period and epoch.
   const legendList = el('ul', { class: 'geo-legend', 'aria-label': 'Legend' });
+  const unitGroups = el('div', { class: 'unit-groups', 'aria-label': 'Map units by age' });
+  const expanded = new Set();  // periods start collapsed: a short list of periods with counts
   const used = (summary.sources ?? []).filter((s) => s.status === 'used');
-  ui.units.append(legendList, el('p', { class: 'geo-source' },
+  ui.units.append(legendList, unitGroups, el('p', { class: 'geo-source' },
     `Merged from ${used.length} maps (${used.filter((s) => s.scale && s.scale <= 24000).length} at 1:24,000). `
     + 'Where maps overlap the most detailed and recent map is shown; confidence reflects map scale, '
     + 'how many maps agree, and whether the unit is a recognized Geolex unit. Colors are derived classes.'));
@@ -70,16 +74,39 @@ export async function setupMergedGeology(map, ui) {
       map.setPaintProperty(`merged-${l.id}-fill`, 'fill-opacity', state.opacity);
     }
     const shown = LAYERS.filter((l) => state.visible[l.id]).flatMap((l) => features[l.id]);
-    let entries;
+    let entries = [];
     if (state.mode === 'confidence') {
       entries = CONFIDENCE_STOPS.map(([v, color]) => ({ id: `${v.toFixed(1)} confidence`, color }));
-    } else {
-      const [prop, classes] = state.mode === 'material' ? ['material_class', legend.material] : ['age_class', legend.age];
-      entries = legendFor(shown, prop, classes);
+    } else if (state.mode === 'material') {
+      entries = legendFor(shown, 'material_class', legend.material);
     }
     legendList.replaceChildren(...entries.map((e) => el('li', {},
       el('span', { class: 'geo-swatch', style: `background:${e.color}` }), e.id,
       e.count != null && el('span', { class: 'geo-count' }, ` ${e.count}`))));
+    legendList.hidden = entries.length === 0;
+    renderUnits(groupUnits(shown, units, legend.age));
+  }
+
+  const materialColor = Object.fromEntries(legend.material.map((c) => [c.id, c.color]));
+  const swatch = (color) => el('span', { class: 'geo-swatch', style: `background:${color}` });
+
+  function renderUnits(groups) {
+    unitGroups.replaceChildren(...groups.map((g) => {
+      const single = g.epochs.length === 1 && g.epochs[0].id === g.period;
+      const details = el('details', { class: 'unit-period', open: expanded.has(g.period),
+        ontoggle: () => (details.open ? expanded.add(g.period) : expanded.delete(g.period)) },
+        el('summary', {}, single && state.mode === 'age' && swatch(g.epochs[0].color), g.period,
+          el('span', { class: 'geo-count' }, ` ${g.count}`)),
+        ...g.epochs.flatMap((e) => [
+          !single && el('div', { class: 'unit-epoch' }, state.mode === 'age' && swatch(e.color), e.id),
+          el('ul', { class: 'geo-legend unit-list' }, ...e.units.map((u) => el('li', { title: [u.ma, ...u.includes].filter(Boolean).join('\n') },
+            state.mode === 'material' && swatch(materialColor[u.material_class] ?? materialColor.Unknown ?? '#bdbdbd'),
+            el('span', { class: 'unit-name' }, u.name,
+              u.labels.length > 0 && el('span', { class: 'unit-label' }, ` ${u.labels.join(', ')}`)),
+            el('span', { class: 'geo-count' }, ` ${u.count}`)))),
+        ]));
+      return details;
+    }));
   }
   apply();
 

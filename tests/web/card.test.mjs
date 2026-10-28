@@ -42,9 +42,9 @@ test('confidenceWhy names one other map in the singular', () => {
   assert.equal(why[2].label, '1 other map covers this ground; 100% agree');
 });
 
-test('formatMa gives old to young with three significant digits', () => {
-  assert.equal(formatMa([0.0117, 0.129]), '0.129–0.0117 Ma');
-  assert.equal(formatMa([538.8, 541]), '541–539 Ma');
+test('formatMa gives young to old with three significant digits', () => {
+  assert.equal(formatMa([0.0117, 0.129]), '0.0117–0.129 Ma');
+  assert.equal(formatMa([538.8, 541]), '539–541 Ma');
   assert.equal(formatMa([2.58, 2.58]), '2.58 Ma');
   assert.equal(formatMa(null), null);
   assert.equal(formatMa('junk'), null);
@@ -105,7 +105,7 @@ test('mergedCard: name, group, age, Ma range, aliases, confidence and cited rows
   assert.equal(c.group, 'Wando Formation');
   assert.equal(c.subtitle, 'Unconsolidated Deposits · map label Qws');
   assert.equal(c.age, 'late Pleistocene');
-  assert.equal(c.ma, '0.129–0.0117 Ma');
+  assert.equal(c.ma, '0.0117–0.129 Ma');
   assert.deepEqual(c.aliases, ['Barrier-island sand facies', 'Wando']);
   assert.equal(c.confidence.text, '0.66 · Medium');
   assert.equal(c.confidence.why.length, 5);
