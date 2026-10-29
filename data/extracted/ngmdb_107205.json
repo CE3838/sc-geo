@@ -8,11 +8,12 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-29T22:59:11+00:00",
- "updated_at": "2026-10-29T23:00:58+00:00",
+ "updated_at": "2026-10-29T23:02:25+00:00",
  "reader": "Claude, scheduled Claude Code session 2026-10-29",
  "packets": [
   "packet-01",
-  "packet-02"
+  "packet-02",
+  "packet-03"
  ],
  "blocks_done": [
   "1",
@@ -70,11 +71,32 @@
   "55",
   "56",
   "57",
-  "58"
+  "58",
+  "59",
+  "60",
+  "61",
+  "62",
+  "63",
+  "64",
+  "65",
+  "66",
+  "67",
+  "68",
+  "69",
+  "70",
+  "71",
+  "72",
+  "73",
+  "74",
+  "75",
+  "76",
+  "77",
+  "78",
+  "81"
  ],
  "blocks_total": 111,
  "complete": false,
- "notes": "Multi-state report (Florida, Georgia, Alabama, South Carolina); only South Carolina content and system-wide statements that include South Carolina recorded. Plate 1 and figures 14-15 are potentiometric (head) maps, not geologic surfaces; not recorded. Table 2 and 3 values are simulated (Bush and Johnston 1988 model); not recorded. Figures 8, 9 and 12 contour labels in South Carolina read from page images of the cached PDF (SC part only); which state a label lies in is read from the map layout and flagged inferred. Figure 9 label 500 near the Savannah River left out (state uncertain). Florida-only aquifers (Biscayne, intermediate, sand and gravel) and the Brunswick aquifer system (Georgia) not recorded. Table 1 (regulatory agencies) not geology; not recorded.\nOnly South Carolina content recorded. Figure 16B hydrographs: wells HAM-83 and CHN-101 (South Carolina well names; leader lines go to wells in South Carolina, checked on the page image) with printed trend slopes; pairing slope to well read from the figure layout, flagged inferred. Other figure 16 wells are in Georgia or Florida. Table 4 and net-recharge values are Soil-Water-Balance model estimates and tables 2-3 simulated (Bush and Johnston); not recorded. Water use by State (South Carolina 60 Mgal/d, table 7) is water use, not geology; not recorded. Figure 15 groundwater-level change and figure 17 recharge maps have no legible South Carolina values in the text.",
+ "notes": "Multi-state report (Florida, Georgia, Alabama, South Carolina); only South Carolina content and system-wide statements that include South Carolina recorded. Plate 1 and figures 14-15 are potentiometric (head) maps, not geologic surfaces; not recorded. Table 2 and 3 values are simulated (Bush and Johnston 1988 model); not recorded. Figures 8, 9 and 12 contour labels in South Carolina read from page images of the cached PDF (SC part only); which state a label lies in is read from the map layout and flagged inferred. Figure 9 label 500 near the Savannah River left out (state uncertain). Florida-only aquifers (Biscayne, intermediate, sand and gravel) and the Brunswick aquifer system (Georgia) not recorded. Table 1 (regulatory agencies) not geology; not recorded.\nOnly South Carolina content recorded. Figure 16B hydrographs: wells HAM-83 and CHN-101 (South Carolina well names; leader lines go to wells in South Carolina, checked on the page image) with printed trend slopes; pairing slope to well read from the figure layout, flagged inferred. Other figure 16 wells are in Georgia or Florida. Table 4 and net-recharge values are Soil-Water-Balance model estimates and tables 2-3 simulated (Bush and Johnston); not recorded. Water use by State (South Carolina 60 Mgal/d, table 7) is water use, not geology; not recorded. Figure 15 groundwater-level change and figure 17 recharge maps have no legible South Carolina values in the text.\nPages 59-69: storage-change estimates (table 9) are by groundwater basin spanning Georgia, Florida and South Carolina, computed by potentiometric-map subtraction; budget terms (fig. 27) are Soil-Water-Balance model estimates; table 10 surficial wells are in Florida and Georgia; none recorded. Summary repeats the Hilton Head Island saltwater intrusion statement recorded from page 14. References (pages 69-78): those about South Carolina or the Floridan/Southeastern Coastal Plain aquifer systems including South Carolina recorded; Florida-, Georgia- and Alabama-only, climate, water-use and general method references skipped. Appendix 1 (page 81) is south Florida only.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/sir/2018/5030/sir20185030_plate.pdf",
@@ -92,13 +114,13 @@
   }
  ],
  "summary": {
-  "stored": 69,
+  "stored": 89,
   "quote_match": {
    "image": 7,
-   "exact": 62
+   "exact": 82
   },
   "verification": {
-   "agree": 31
+   "agree": 33
   },
   "inferred": 17
  },
@@ -152,6 +174,26 @@
    "values": 18,
    "stored": 18,
    "exact": 18,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 2,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 0,
+   "image_not_verified": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-10-29T23:02:25+00:00",
+   "packets": [
+    "packet-03"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-29",
+   "values": 20,
+   "stored": 20,
+   "exact": 20,
    "ocr": 0,
    "fuzzy": 0,
    "quote_not_found": 0,
@@ -1765,7 +1807,308 @@
    }
   }
  ],
- "references": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Barker, R.A., and Pernik, M., 1994, Regional hydrology and simulation of deep ground-water flow in the Southeastern Coastal Plain aquifer system in Mississippi, Alabama, Georgia, and South Carolina: U.S. Geological Survey Professional Paper 1410–C, 87 p.",
+    "source_id": "ngmdb:107205",
+    "page": 70,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Barker, R.A., and Pernik, M., 1994, Regional hydrology and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Bellino, J.C., 2017, Groundwater withdrawals in Florida and parts of Georgia, Alabama, and South Carolina, 1995–2010: U.S. Geological Survey data release, https://doi.org/10.5066/F78K7749.",
+    "source_id": "ngmdb:107205",
+    "page": 70,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Bellino, J.C., 2017, Groundwater withdrawals in Florida and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Bush, P.W., Barr, G.L., Clarke, J.S., and Johnston, R.H., 1987, Potentiometric surface of the Upper Floridan aquifer in Florida and in parts of Georgia, South Carolina, and Alabama, May 1985: U.S. Geological Survey Water-Resources Investigations Report 86–4316, 1 pl.",
+    "source_id": "ngmdb:107205",
+    "page": 70,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Bush, P.W., Barr, G.L., Clarke, J.S., and Johnston, R.H.,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Bush, P.W., and Johnston, R.H., 1988, Ground-water hydraulics, regional flow, and ground-water development of the Floridan aquifer system in Florida and in parts of Georgia, South Carolina, and Alabama: U.S. Geological Survey Professional Paper 1403–C, 80 p.",
+    "source_id": "ngmdb:107205",
+    "page": 70,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Bush, P.W., and Johnston, R.H., 1988, Ground-water",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Campbell, B.G., and Coes, A.L., 2010, Groundwater availability in the Atlantic Coastal Plain of North and South Carolina: U.S. Geological Survey Professional Paper 1773, 241 p.",
+    "source_id": "ngmdb:107205",
+    "page": 70,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Campbell, B.G., and Coes, A.L., 2010, Groundwater",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Falls, F.W., Ransom, C., Landmeyer, J.E., Reuber, E.J., and Edwards, L.E., 2005, Hydrogeology, water quality, and saltwater intrusion in the Upper Florida aquifer in the offshore area near Hilton Head Island, South Carolina, and Tybee Island, Georgia, 1999–2002: U.S. Geological Survey Scientific Investigations Report 2005–5134, 48 p.",
+    "source_id": "ngmdb:107205",
+    "page": 71,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "offshore area near Hilton Head Island, South Carolina, and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Kinnaman, S.L., 2012, Synoptic water-level measurements of the Upper Floridan aquifer in Florida and in parts of Georgia, South Carolina, and Alabama, May–June 2010: U.S. Geological Survey Data Series 639.",
+    "source_id": "ngmdb:107205",
+    "page": 73,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Kinnaman, S.L., 2012, Synoptic water-level measurements",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Kinnaman, S.L., and Dixon, J.F., 2011, Potentiometric surface of the Upper Floridan aquifer in Florida and parts of Georgia, South Carolina, and Alabama, May–June 2010: U.S. Geological Survey Scientific Investigations Map 3182, 1 pl.",
+    "source_id": "ngmdb:107205",
+    "page": 73,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Kinnaman, S.L., and Dixon, J.F., 2011, Potentiometric surface",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Krause, R.E., and Clarke, J.S., 2001, Coastal ground water at risk—Saltwater contamination at Brunswick, Georgia and Hilton Head Island, South Carolina: U.S. Geological Survey Water-Resources Investigations Report 2001–4107, 1 pl.",
+    "source_id": "ngmdb:107205",
+    "page": 73,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "and Hilton Head Island, South Carolina: U.S. Geological",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Krause, R.E., and Randolph, R.B., 1989, Hydrology of the Floridan aquifer system in southeast Georgia and adjacent parts of Florida and South Carolina: U.S. Geological Survey Professional Paper 1403–D, 65 p., 19 pls.",
+    "source_id": "ngmdb:107205",
+    "page": 73,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Krause, R.E., and Randolph, R.B., 1989, Hydrology of the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Kuniansky, E.L., and Bellino, J.C., 2012, Tabulated transmissivity and storage properties of the Floridan aquifer system in Florida and parts of Georgia, South Carolina, and Alabama: U.S. Geological Survey Data Series 669, 37 p.",
+    "source_id": "ngmdb:107205",
+    "page": 73,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Kuniansky, E.L., and Bellino, J.C., 2012, Tabulated",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Kuniansky, E.L., Bellino, J.C., and Dixon, J.F., 2012, Transmissivity of the Upper Floridan aquifer in Florida and parts of Georgia, South Carolina, and Alabama: U.S. Geological Survey Scientific Investigations Map 3204, 1 pl.",
+    "source_id": "ngmdb:107205",
+    "page": 73,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Kuniansky, E.L., Bellino, J.C., and Dixon, J.F., 2012,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Kuniansky, E.L., Dixon, J.F., and Kinnaman, S.L., 2017, Potentiometric surface contours, wells, and groundwater basin divides for the Upper Floridan aquifer in Florida and parts of Georgia, South Carolina, and Alabama, May–June 2010—Updated: U.S. Geological Survey data release, https://doi.org/10.5066/F75Q4TZD.",
+    "source_id": "ngmdb:107205",
+    "page": 74,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Kuniansky, E.L., Dixon, J.F., and Kinnaman, S.L., 2017,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Miller, J.A., 1986, Hydrogeologic framework of the Floridan aquifer system in Florida and in parts of Georgia, South Carolina, and Alabama: U.S. Geological Survey Professional Paper 1403–B, 91 p.",
+    "source_id": "ngmdb:107205",
+    "page": 74,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Miller, J.A., 1986, Hydrogeologic framework of the Floridan",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Payne, D.F., Rumman, M.A., and Clarke, J.S., 2005, Simulation of ground-water flow in coastal Georgia and adjacent parts of South Carolina and Florida—Predevelopment, 1980, and 2000: U.S. Geological Survey Scientific Investigations Report 2005–5089, 91 p.",
+    "source_id": "ngmdb:107205",
+    "page": 75,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Payne, D.F., Rumman, M.A., and Clarke, J.S., 2005,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Priest, S., 2004, Evaluation of ground-water contribution to streamflow in coastal Georgia and adjacent parts of Florida and South Carolina: U.S. Geological Survey Scientific Investigations Report 2004–5265, 46 p.",
+    "source_id": "ngmdb:107205",
+    "page": 75,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Priest, S., 2004, Evaluation of ground-water contribution",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Provost, A.M., Payne, D.F., and Voss, C.I., 2006, Simulation of saltwater movement in the Upper Floridan aquifer in the Savannah, Georgia–Hilton Head Island, South Carolina, area, predevelopment–2004, and projected movement for 2000 pumping conditions: U.S. Geological Survey Scientific Investigations Report 2006–5058, 132 p.",
+    "source_id": "ngmdb:107205",
+    "page": 76,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Savannah, Georgia–Hilton Head Island, South Carolina,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Renken, R.A., 1996, Hydrogeology of the Southeastern Coastal Plain aquifer system in Mississippi, Alabama, Georgia, and South Carolina: U.S. Geological Survey Professional Paper 1410–B, 101 p.",
+    "source_id": "ngmdb:107205",
+    "page": 76,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Renken, R.A., 1996, Hydrogeology of the Southeastern",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Williams, L.J., and Kuniansky, E.L., 2015, Revised hydrogeologic framework of the Floridan aquifer system in Alabama, Georgia, South Carolina, and Florida: U.S. Geological Survey Professional Paper 1807, 140 p.",
+    "source_id": "ngmdb:107205",
+    "page": 78,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "in Alabama, Georgia, South Carolina, and Florida: U.S.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Williams, L.J., and Dixon, J.F., 2015, Digital surfaces and thicknesses of selected hydrogeologic units within the Floridan aquifer system: U.S. Geological Survey Data Series 926, 4 p.",
+    "source_id": "ngmdb:107205",
+    "page": 78,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Williams, L.J., and Dixon, J.F., 2015, Digital surfaces and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ],
  "surfaces": [],
  "contours": [
   {
