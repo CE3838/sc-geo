@@ -8,10 +8,11 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-29T22:59:11+00:00",
- "updated_at": "2026-10-29T22:59:13+00:00",
+ "updated_at": "2026-10-29T23:00:58+00:00",
  "reader": "Claude, scheduled Claude Code session 2026-10-29",
  "packets": [
-  "packet-01"
+  "packet-01",
+  "packet-02"
  ],
  "blocks_done": [
   "1",
@@ -44,11 +45,36 @@
   "30",
   "31",
   "32",
-  "33"
+  "33",
+  "34",
+  "35",
+  "36",
+  "37",
+  "38",
+  "39",
+  "40",
+  "41",
+  "42",
+  "43",
+  "44",
+  "45",
+  "46",
+  "47",
+  "48",
+  "49",
+  "50",
+  "51",
+  "52",
+  "53",
+  "54",
+  "55",
+  "56",
+  "57",
+  "58"
  ],
  "blocks_total": 111,
  "complete": false,
- "notes": "Multi-state report (Florida, Georgia, Alabama, South Carolina); only South Carolina content and system-wide statements that include South Carolina recorded. Plate 1 and figures 14-15 are potentiometric (head) maps, not geologic surfaces; not recorded. Table 2 and 3 values are simulated (Bush and Johnston 1988 model); not recorded. Figures 8, 9 and 12 contour labels in South Carolina read from page images of the cached PDF (SC part only); which state a label lies in is read from the map layout and flagged inferred. Figure 9 label 500 near the Savannah River left out (state uncertain). Florida-only aquifers (Biscayne, intermediate, sand and gravel) and the Brunswick aquifer system (Georgia) not recorded. Table 1 (regulatory agencies) not geology; not recorded.",
+ "notes": "Multi-state report (Florida, Georgia, Alabama, South Carolina); only South Carolina content and system-wide statements that include South Carolina recorded. Plate 1 and figures 14-15 are potentiometric (head) maps, not geologic surfaces; not recorded. Table 2 and 3 values are simulated (Bush and Johnston 1988 model); not recorded. Figures 8, 9 and 12 contour labels in South Carolina read from page images of the cached PDF (SC part only); which state a label lies in is read from the map layout and flagged inferred. Figure 9 label 500 near the Savannah River left out (state uncertain). Florida-only aquifers (Biscayne, intermediate, sand and gravel) and the Brunswick aquifer system (Georgia) not recorded. Table 1 (regulatory agencies) not geology; not recorded.\nOnly South Carolina content recorded. Figure 16B hydrographs: wells HAM-83 and CHN-101 (South Carolina well names; leader lines go to wells in South Carolina, checked on the page image) with printed trend slopes; pairing slope to well read from the figure layout, flagged inferred. Other figure 16 wells are in Georgia or Florida. Table 4 and net-recharge values are Soil-Water-Balance model estimates and tables 2-3 simulated (Bush and Johnston); not recorded. Water use by State (South Carolina 60 Mgal/d, table 7) is water use, not geology; not recorded. Figure 15 groundwater-level change and figure 17 recharge maps have no legible South Carolina values in the text.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/sir/2018/5030/sir20185030_plate.pdf",
@@ -66,15 +92,15 @@
   }
  ],
  "summary": {
-  "stored": 51,
+  "stored": 69,
   "quote_match": {
    "image": 7,
-   "exact": 44
+   "exact": 62
   },
   "verification": {
-   "agree": 29
+   "agree": 31
   },
-  "inferred": 13
+  "inferred": 17
  },
  "ingests": [
   {
@@ -114,6 +140,26 @@
    "disagree": 0,
    "unclear": 0,
    "image": 7,
+   "image_not_verified": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-10-29T23:00:58+00:00",
+   "packets": [
+    "packet-02"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-29",
+   "values": 18,
+   "stored": 18,
+   "exact": 18,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 2,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 0,
    "image_not_verified": 0,
    "review_items": 0
   }
@@ -1109,7 +1155,40 @@
   }
  ],
  "units": [],
- "observations": [],
+ "observations": [
+  {
+   "kind": "well",
+   "label": {
+    "value": "HAM–83",
+    "source_id": "ngmdb:107205",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "HAM–83",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "CHN–101",
+    "source_id": "ngmdb:107205",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "CHN–101",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ],
  "structures": [
   {
    "kind": "other",
@@ -1462,6 +1541,227 @@
     "quote_match": "exact",
     "text_method": "pdf_text",
     "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Floridan aquifer system",
+    "source_id": "ngmdb:107205",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Groundwater-level hydrographs for selected wells in the Floridan aquifer system",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "well HAM–83",
+    "source_id": "ngmdb:107205",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "HAM–83",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "groundwater-level hydrograph trend Slope = –0.21 ft/yr (altitude above NGVD 1929, about 1960-2010)",
+    "source_id": "ngmdb:107205",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Slope = –0.21 ft/yr",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "Slope belongs to the HAM-83 panel by figure layout (checked on page image p36 overview)."
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Floridan aquifer system",
+    "source_id": "ngmdb:107205",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Groundwater-level hydrographs for selected wells in the Floridan aquifer system",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "well CHN–101",
+    "source_id": "ngmdb:107205",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "CHN–101",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "groundwater-level hydrograph trend Slope=0.01 ft/yr (altitude above NGVD 1929)",
+    "source_id": "ngmdb:107205",
+    "page": 36,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Slope=0.01 ft/yr",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "Slope belongs to the CHN-101 panel by figure layout (checked on page image p36 overview)."
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Floridan aquifer system",
+    "source_id": "ngmdb:107205",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "affect the potentiometric surface within South Carolina. The",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Southeast Georgia-Northeast Florida-South South Carolina groundwater basin",
+    "source_id": "ngmdb:107205",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "South Carolina Groundwater Basin",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "role": {
+    "value": "aquifer",
+    "source_id": "ngmdb:107205",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "is confined over nearly its entire extent (pl. 1 and figs. 7 and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "description": {
+    "value": "The Gulf Trough does not extend through the entire northern part of the area and does not affect the potentiometric surface within South Carolina",
+    "source_id": "ngmdb:107205",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "affect the potentiometric surface within South Carolina. The",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Floridan aquifer system",
+    "source_id": "ngmdb:107205",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "aquifer system by means of leakage from the surficial aquifer",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "Southeast Georgia-Northeast Florida-South South Carolina groundwater basin",
+    "source_id": "ngmdb:107205",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "South Carolina Groundwater Basin",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "Water enters by leakage from the surficial aquifer system through the upper confining unit and direct recharge in updip inland areas where the aquifer is unconfined; diffuse upward leakage in lowland areas along the coast; land-surface altitude of the direct recharge area is more than 400 ft",
+    "source_id": "ngmdb:107205",
+    "page": 39,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the direct recharge area is more than 400 ft, and the system is",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "aquifer": {
+    "value": "Floridan aquifer system",
+    "source_id": "ngmdb:107205",
+    "page": 47,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "or larger springs in South Carolina",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "location": {
+    "value": "South Carolina",
+    "source_id": "ngmdb:107205",
+    "page": 47,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "or larger springs in South Carolina",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "There are no third-magnitude or larger springs in South Carolina",
+    "source_id": "ngmdb:107205",
+    "page": 47,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "or larger springs in South Carolina",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "Sentence begins on the previous line: 'There are no third-magnitude'."
    }
   }
  ],
