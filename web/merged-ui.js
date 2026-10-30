@@ -134,11 +134,11 @@ export async function setupMergedGeology(map, ui) {
         el('div', {}, `Material: ${p.material_class}`),
         u.description && el('div', { class: 'geo-cite' }, shortCitation(u.description, 220)),
         el('div', { class: 'geo-conf' }, confidenceText(p)),
-        el('div', { class: 'geo-cite' }, `Source: ${shortCitation(src.citation || src.title || p.source, 180)} (${scaleText(src.scale)})`),
+        el('div', { class: 'geo-cite' }, `Source: ${shortCitation(src.citation || src.title || 'source map', 180)} (${scaleText(src.scale)})`),
         link && el('a', { href: link, target: '_blank', rel: 'noopener noreferrer' }, 'Source record'),
         alts.length > 0 && el('div', { class: 'geo-alts' }, 'Other maps here:',
           el('ul', {}, ...alts.slice(0, 3).map((a) => el('li', {},
-            `${a.name ?? 'unnamed unit'}${a.age ? ` (${a.age})` : ''} — ${shortCitation(sources[a.source]?.title || a.source, 60)}, `
+            `${a.name ?? 'unnamed unit'}${a.age ? ` (${a.age})` : ''} — ${shortCitation(sources[a.source]?.title || 'another map', 60)}, `
             + `${scaleText(a.scale)}, covers ${Math.round((a.overlap ?? 0) * 100)}%`)))));
     },
   };

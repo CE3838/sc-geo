@@ -120,7 +120,7 @@ export function mergedCard({ props: p, unit, sources, records, lng, lat }) {
   const fromCatalog = (records ?? []).find((r) => r.id === p.source);
   const references = [ref(1, {
     id: p.source,
-    citation: src.citation || src.title || fromCatalog?.citation || p.source,
+    citation: src.citation || src.title || fromCatalog?.citation || 'Source map (record linked)',
     url: fromCatalog?.url || sourceLink(p.source),
     scale: src.scale ?? fromCatalog?.scale,
     year: src.year ?? fromCatalog?.year,
@@ -128,11 +128,18 @@ export function mergedCard({ props: p, unit, sources, records, lng, lat }) {
   for (const r of keyReferences(records, lng, lat, p.source, 4)) references.push(ref(references.length + 1, r));
   const citeOf = (id) => references.find((r) => r.id === id)?.n ?? null;
   const loc = { locator: p.locator ?? null };
+  // Fields a correlation replaced (merge/correlate.py) are inferred, not read from this map.
+  const inferredFields = new Set(u.inferred_fields ?? []);
+  const fromMap = (field) => (inferredFields.has(field)
+    ? { inferred: true, note: 'from a correlated unit on an adjoining map (config/unit_correlations.json)' } : loc);
+  const basis = u.correlation?.basis;
+  const basisRef = basis && shortRef(sources?.[basis.source] ?? (records ?? []).find((r) => r.id === basis.source) ?? {});
   return {
     title,
     group,
     subtitle: `${layerName(p.layer)} · map label ${u.map_unit ?? p.map_unit}`,
     age: u.age ?? null,
+    ageInferred: inferredFields.has('age'),
     ma: formatMa(u.age_ma),
     aliases: distinct([u.name, u.full_name, u.formation, u.canonical], title, group),
     confidence: confidenceLevel(p.conf) && { ...confidenceLevel(p.conf), why: confidenceWhy(p, src) },
@@ -140,11 +147,11 @@ export function mergedCard({ props: p, unit, sources, records, lng, lat }) {
     rows: [
       row('Map unit', u.map_unit ?? p.map_unit, loc),
       u.as_mapped && row('As mapped', [u.as_mapped.name, u.as_mapped.age && `(${u.as_mapped.age})`].filter(Boolean).join(' '), loc),
-      u.correlation && row('Correlated as', `${u.correlation.name}${u.correlation.basis
-        ? `, as ${u.correlation.basis.map_unit} of ${u.correlation.basis.source}` : ''}: ${u.correlation.reason}`,
+      u.correlation && row('Correlated as', `${u.correlation.name}${basis
+        ? `, as ${basis.map_unit}${basisRef ? ` on ${basisRef}` : ' on an adjoining map'}` : ''}: ${u.correlation.reason}`,
       { inferred: true, note: 'units named differently on adjoining maps (config/unit_correlations.json)' }),
       row('Age range', formatMa(u.age_ma), { inferred: true, note: 'from the age text, ICS chart' }),
-      row('Geomaterial', u.geomaterial, loc),
+      row('Geomaterial', u.geomaterial, fromMap('geomaterial')),
       row('Lithology', u.lith, loc),
       row('Material class', p.material_class, { inferred: true, note: 'derived class' }),
       row('Mapper’s identification', p.identity_confidence, loc),
@@ -152,7 +159,7 @@ export function mergedCard({ props: p, unit, sources, records, lng, lat }) {
     ].filter(Boolean),
     alternatives: parseAlternatives(p.alternatives).map((a) => ({
       name: a.name ?? 'unnamed unit',
-      citation: shortRef(sources?.[a.source] ?? { citation: a.source }),
+      citation: shortRef(sources?.[a.source] ?? (records ?? []).find((r) => r.id === a.source) ?? {}) || 'another map',
       cite: citeOf(a.source),
       detail: [a.age, scaleText(a.scale), `covers ${Math.round((a.overlap ?? 0) * 100)}%`].filter(Boolean).join(' · '),
     })),

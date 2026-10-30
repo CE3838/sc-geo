@@ -207,7 +207,7 @@ class HttpFetcher:
         proxy = os.environ.get("HTTPS_PROXY") or os.environ.get("https_proxy")
         if not proxy:
             return http.client.HTTPSConnection(host, timeout=timeout)
-        p = urllib.parse.urlsplit(proxy)
+        p = urllib.parse.urlsplit(proxy if "://" in proxy else f"http://{proxy}")
         cafile = os.environ.get("SSL_CERT_FILE") or os.environ.get("REQUESTS_CA_BUNDLE")
         ctx = ssl.create_default_context(cafile=cafile) if cafile else ssl.create_default_context()
         conn = http.client.HTTPSConnection(p.hostname, p.port or 80, context=ctx, timeout=timeout)
@@ -226,8 +226,9 @@ class HttpFetcher:
         Both requests go over one connection (a rotating proxy address would void the token)
         with the project's own User-Agent; a refusal is not retried. See extract/README.md.
         """
-        conn = self._ngmdb_connection()
+        conn = None
         try:
+            conn = self._ngmdb_connection()
             def get(path: str, **extra: str) -> tuple[int, str]:
                 conn.request("GET", path, headers={**_contact_headers(), **extra})
                 r = conn.getresponse()
@@ -244,10 +245,11 @@ class HttpFetcher:
                 return None
             h = json.loads(body)
             return h if isinstance(h, dict) else None
-        except (OSError, ValueError, http.client.HTTPException):
+        except (OSError, ValueError, TypeError, http.client.HTTPException):
             return None
         finally:
-            conn.close()
+            if conn is not None:
+                conn.close()
 
     def download(self, url: str, dest: Path) -> Path:
         dest = Path(dest)
@@ -413,13 +415,15 @@ def resolve(rec: dict, fetcher, email: str | None = None, log: Callable[..., Non
             page = fetcher.text(rec["ngmdb_url"])
         except OSError as err:
             log(f"  {rec['id']}: NGMDB page failed: {type(err).__name__}")
-            checked.remove("ngmdb")
+            checked[checked.index("ngmdb")] = "ngmdb_failed"  # retried next run (_stale)
         holdings = page_holdings(page)
         pid = re.search(r"proddesc_(\d+)", rec["ngmdb_url"])
         if page and holdings is None and pid and hasattr(fetcher, "ngmdb_holdings"):
             holdings = fetcher.ngmdb_holdings(int(pid.group(1)))
             if holdings is None:
+                # Not "no open text": the lookup failed (refused, expired token, timeout); retried next run.
                 log(f"  {rec['id']}: NGMDB holdings not available")
+                checked[checked.index("ngmdb")] = "ngmdb_failed"
         scans = ngmdb_scans(holdings, cfg["ngmdb_scan_formats"])
         pub_links = publisher_links(page)
 
@@ -610,6 +614,8 @@ def _stale(ck: dict, email: str | None) -> bool:
     if "candidates" not in ck:
         return True
     if email and "unpaywall_skipped" in ck.get("checked", []):
+        return True
+    if "ngmdb_failed" in ck.get("checked", []):
         return True
     return ck.get("status") != "text" and ck.get("resolver_version") != RESOLVER_VERSION
 
