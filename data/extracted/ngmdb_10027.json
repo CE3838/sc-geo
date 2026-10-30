@@ -1,0 +1,1005 @@
+{
+ "source_id": "ngmdb:10027",
+ "title": "Aeroradiometric map and geologic interpretation of part of the Cape Fear region, Florence and Georgetown 1 degree x 2 degrees quadrangles, South Carolina",
+ "citation": "Owens, J.P., Grosz, A.E., and Fisher, J.C., 1989, Aeroradiometric map and geologic interpretation of part of the Cape Fear region, Florence and Georgetown 1 degree x 2 degrees quadrangles, South Carolina: U.S. Geological Survey Miscellaneous Investigations Series Map I-1948-B, map scale 1:250,000.",
+ "year": 1989,
+ "scale": 250000,
+ "publisher": "U.S. Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-10-28T23:02:35+00:00",
+ "updated_at": "2026-10-28T23:02:35+00:00",
+ "reader": "Claude, scheduled Claude Code session 2026-10-28",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1"
+ ],
+ "blocks_total": 1,
+ "complete": true,
+ "notes": "Single OCR sheet whose columns are interleaved line by line; quotes are fragments of one line. Units from the Regional Geology section (South Carolina part of the Florence and Georgetown quadrangles). Tables 1-6 (gamma-ray spectra, mineralogy, neutron activation, monazite/zircon) are too garbled in the OCR to read reliably and were not recorded; they are radiometric and mineral analyses, not water or rock tests. Aeroradiometric contours (total-count, 25 counts per second interval) are geophysical, not a geologic surface. Age conflicts: Penholoway 'middle Pleistocene' in the text vs 'lower Pleistocene' in the explanation; argillite 'Lower Cambrian' in the text vs 'Middle Cambrian' in the explanation.",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=7681_10027_2",
+   "via": "ngmdb_scan",
+   "sha256": "396d5fe08a17066d79a6a0ac988e41b30a5eedeb0a99a676bf880f499e375c84",
+   "pages": 1,
+   "first_page": 1
+  }
+ ],
+ "summary": {
+  "stored": 56,
+  "quote_match": {
+   "exact": 56
+  },
+  "verification": {
+   "agree": 6
+  },
+  "inferred": 9
+ },
+ "ingests": [
+  {
+   "at": "2026-10-28T23:02:35+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-28",
+   "values": 56,
+   "stored": 56,
+   "exact": 56,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 6,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 0,
+   "image_not_verified": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "metavolcanic rocks (primarily argillite)",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The oldest rocks exposed are metavolcanic rocks (primarily argillite), which crop",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Lower Cambrian",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "tributaries. These Lower Cambrian rocks are part of the slate belt of the Piedmont",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "the map explanation labels the argillite 'Middle Cambrian' (OCR 'Middls Cas brian')",
+    "normalized": {
+     "younger_ma": 521.0,
+     "older_ma": 538.8,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "crop out in a small area in the northwest part of the map along the Pee Dee River and its tributaries; part of the slate belt of the Piedmont",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "tributaries. These Lower Cambrian rocks are part of the slate belt of the Piedmont",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Middendorf Formation",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The metavolcanic rocks are overlain unconformably by the Middendorf Formation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Middendorf",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "Middendorf Formation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "rank from the unit name"
+   },
+   "age": {
+    "value": "Late Cretaceous (Santonian)",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "of Late Cretaceous (Santonian) age. The Middendorf is largely loose gravelly quartz",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 83.6,
+     "older_ma": 86.3,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "largely loose gravelly quartz sand intercalated with light-gray to variegated red, yellow, and white clay and silt",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "sand intercalated with light-gray to variegated red, yellow, and white clay and silt.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "contacts": {
+    "value": "overlies the metavolcanic rocks unconformably",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The metavolcanic rocks are overlain unconformably by the Middendorf Formation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "near Cheraw, S.C., thin interbeds of dark-gray clay with abundant woody fragments and loose light-gray micaceous sand",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "abundant woody fragments and loose light-gray micaceous sand, but tHese facies are",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "'Cheraw, S.C., the Middendorf consists of thin interbeds of dark-gray clay having' on the line above"
+   }
+  },
+  {
+   "name": {
+    "value": "Tar Heel Formation",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Middendorf is overlain by the Tar Heel Formation of Late Cretaceous age",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Tar Heel",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "Tar Heel Formation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "rank from the unit name"
+   },
+   "age": {
+    "value": "Late Cretaceous (Campanian)",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "(Campanian) in the Sand Hills area. Here, the highest altitudes rise to greater than 400",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 72.1,
+     "older_ma": 83.6,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "contacts": {
+    "value": "overlies the Middendorf; overlapped at altitudes between 250 and 290 ft (76 and 88 m) above m.s.l. by the Duplin Formation",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Tar Heel is overlapped at altitudes between 250 and 290 ft (76 and 88 m)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "lithology": {
+    "value": "thick interbeds of sand and clay or silt, as well as some beds of gravel; deeply weathered with brightly colored clay beds",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "sand and clay or silt, as well as some beds of gravel, is similar lithologically to the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "Middendorf and Tar Heel Formations about 400 ft (122 m) thick in their outcrop belt",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Middendorf and Tar Heel Formations are about 400 ft (122 m) thick in their outcrop",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 400.0,
+     "max_ft": 400.262467191601,
+     "values_ft": [
+      400.0,
+      400.262467191601
+     ],
+     "unit": "ft",
+     "approximate": true
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Duplin Formation",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "above m.s.l. by a widespread unit called the Duplin Formation. The contact between",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Duplin",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "Duplin Formation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "rank from the unit name"
+   },
+   "age": {
+    "value": "early Pliocene",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "unweathered parts of the formation. This unit is early Pliocene in age.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 3.6,
+     "older_ma": 5.333,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "mostly fine to medium sand; mostly quartz, feldspar up to 10 percent in unweathered parts",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "unit. The Duplin is mostly fine to medium sand and averages about 40 ft (12 m) in",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "averages about 40 ft (12 m)",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "unit. The Duplin is mostly fine to medium sand and averages about 40 ft (12 m) in",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 39.370078740157474,
+     "max_ft": 40.0,
+     "values_ft": [
+      40.0,
+      39.370078740157474
+     ],
+     "unit": "ft",
+     "approximate": true
+    }
+   },
+   "contacts": {
+    "value": "contact with the Tar Heel is a very subdued, highly eroded scarp known as the Orangeburg scarp; seaward a small intermittent scarp separates the Duplin from the Bear Bluff",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "these two units is a very subdued, highly eroded scarp known as the Orangeburg",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Bear Bluff Formation",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Bluff Formation. The marine facies of the Bear Bluff underlies a broad plain that slopes",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Bear Bluff",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "Bear Bluff Formation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "rank from the unit name"
+   },
+   "description": {
+    "value": "marine facies underlies a broad plain sloping from about 140 ft (43 m) to about 100 ft (30 m) above m.s.l.; well-preserved Horry barrier system between the Lumber and Waccamaw Rivers; fluvial facies of sand and gravelly sand in the Pee Dee River valley",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "downward from about 140 ft (43 m) above msl. to about 100 ft (30 m) above ms.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "between 40 and 50 ft (12 and 15 m)",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "(12 and 15 m) thick in the map area. The marine facies can be traced up the Pee Dee",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "the feet values are garbled by OCR ('betvieet 40 ant. 0 ft' on the line above); read from the metric equivalents",
+    "normalized": {
+     "min_ft": 49.212598425196845,
+     "max_ft": 50.0,
+     "values_ft": [
+      50.0,
+      49.212598425196845
+     ],
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "lithology": {
+    "value": "interbedded thick, light-yellow sand and clay and silt beds",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "thick, light-yellow sand and clay and silt beds. In general, the Bear Bluff has more clay",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Waccamaw Formation",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The oldest Quaternary unit, the Waccamaw Formation of early Pleistocene age,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Waccamaw",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "Waccamaw Formation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "rank from the unit name"
+   },
+   "age": {
+    "value": "early Pleistocene",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The oldest Quaternary unit, the Waccamaw Formation of early Pleistocene age,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.774,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "overall thickness of 25 to 45 ft (8 to 14 m); barriers up to 30 ft (9 m)",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Waccamaw is largely a barrier-backbarrier system and has an overall thickness of 25",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "'to 45 ft (8 to 14 m)' on the next line",
+    "normalized": {
+     "min_ft": 25.0,
+     "max_ft": 45.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "description": {
+    "value": "largely a barrier-backbarrier system; at its seaward edge a large, subdued barrier system cresting at 90 ft (27 m) above m.s.l., the Kingstree barrier",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Waccamaw is a large, subdued barrier system that crests at 90 ft (27 m) above m.s.l.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "contacts": {
+    "value": "cuts into the Bear Bluff at about 90 ft (27 m) above m.s.l.; bounded at its seaward edge by the Penholoway Formation",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "place to another, cuts into the Bear Bluff : about 90 ft (27 m) above m.s.l. The scarp between the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Penholoway Formation",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Waccamaw is bounded at its seaward edge by the Penholoway Formation of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Penholoway",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "Penholoway Formation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "rank from the unit name"
+   },
+   "age": {
+    "value": "middle Pleistocene",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "middle Pleistocene age. No pronounced scarp separates the Waccamaw and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "the map explanation gives 'lower Pleistocene' for the Penholoway",
+    "normalized": {
+     "younger_ma": 0.129,
+     "older_ma": 0.774,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "underlies a surface 60 to 70 ft (18 to 21 m) above m.s.l.; largely a barrier-backbarrier system with small barriers, mostly backbarrier facies; thin fluvial terrace in the Pee Dee River valley",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "70 ft (18 to 21 m) above m.s.l. Like the Waccamaw, the Penholoway is largely a",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "barrier-backbarrier facies a maximum of 45 ft (14 m); valley facies up to 55 ft (17 m) locally",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "a maximum of 45 ft (14 m) in thickness. The backbarrier facies is similar to the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 45.0,
+     "max_ft": 55.77427821522309,
+     "values_ft": [
+      45.0,
+      45.93175853018372,
+      55.0,
+      55.77427821522309
+     ],
+     "unit": "ft",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Socastee Formation",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Socastee Formation of late Pleistocene age has eroded the seaward edge of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Socastee",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "Socastee Formation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "rank from the unit name"
+   },
+   "age": {
+    "value": "late Pleistocene",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Socastee Formation of late Pleistocene age has eroded the seaward edge of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 0.129,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "principal coastal unit; lies at altitudes between 30 and 60 ft (9 and 18 m) above m.s.l.; barrier system includes the Jaluco and Conway barriers; backbarrier facies well exposed along the Intracoastal Waterway at Myrtle Beach",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.63,
+    "inferred": false,
+    "locator": null,
+    "quote": "the Penholoway near the coast. The Socastee lies at altitudes between 30 and 60 ft",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "thickness": {
+    "value": "barrier-backbarrier deposits up to 60 ft (18 m); barriers a maximum of 20 ft (6 m)",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "up to 60 ft (18 m) in thickness. In addition, the Socastee forms one of the terrace",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 19.685039370078737,
+     "max_ft": 60.0,
+     "values_ft": [
+      60.0,
+      59.055118110236215,
+      20.0,
+      19.685039370078737
+     ],
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "contacts": {
+    "value": "has eroded the seaward edge of the Penholoway near the coast",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.63,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Socastee Formation of late Pleistocene age has eroded the seaward edge of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "name": {
+    "value": "Wando Formation",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.63,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Wando Formation of late Pleistocene age is present only as sandy fluvial",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "Wando",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "Wando Formation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "rank from the unit name"
+   },
+   "age": {
+    "value": "late Pleistocene",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.63,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Wando Formation of late Pleistocene age is present only as sandy fluvial",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 0.129,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "present only as sandy fluvial deposits; widespread in the upper part of the Pee Dee River valley; feldspar 20 to 25 percent in the Pee Dee valley, 5 to 10 percent in the Waccamaw and Lumber River valleys",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "deposits in the map area. The Wando Formation is widespread in the upper part of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "averages about 25 to 30 ft (8 to 9 m)",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "the most part, averages about 25 to 30 ft (8 to 9 m) thick.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 25.0,
+     "max_ft": 30.0,
+     "unit": "ft",
+     "approximate": true
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Holocene deposits",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Qh Holocene deposits—Sand clay, and minor wise dy mate rial facalavid",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "map_symbol": {
+    "value": "Qh",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Qh Holocene deposits—Sand clay, and minor wise dy mate rial facalavid",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "occur along the lower reaches of the Pee Dee and Waccamaw Rivers; thickness and composition little known",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.63,
+    "inferred": false,
+    "locator": null,
+    "quote": "occur along the lower reaches of the Pee Dee and Waccamaw Rivers. Little is known",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  }
+ ],
+ "observations": [],
+ "structures": [],
+ "groundwater": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Dryden, Lincoln, 1958, Monazite in part of the southern Atlantic Coastal Plain: U.S. Geological Survey Bulletin 1042-L, p. 393-429.",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Dryden, Lincoln, 1958, Monazite in part of the southern Atlantic Coastal",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR of a multi-column sheet; citation assembled from adjacent lines"
+   }
+  },
+  {
+   "citation": {
+    "value": "DuBar, J.R., 1971, Neogene stratigraphy of the lower Coastal Plain of the Carolinas: Atlantic Coastal Plain Geological Association 12th Annual Field Conference, Myrtle Beach, S.C., 1971 [Guidebook], 128 p.",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "DuBar, J.R., 1971, Neogene stratigraphy of the lower Coastal Plain of the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "OCR of a multi-column sheet; citation assembled from adjacent lines"
+   }
+  },
+  {
+   "citation": {
+    "value": "Force, E.R., Grosz, A.E., Loferski, P.J., and Maybin, A.H., Jr., 1982, Aeroradioactivity maps in heavy-mineral exploration; Charleston, South Carolina area: U.S. Geological Survey Professional Paper 1218, 19 p.",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Aeroradioactivity maps in heavy-mineral exploration; Charleston, South",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR of a multi-column sheet; citation assembled from adjacent lines"
+   }
+  },
+  {
+   "citation": {
+    "value": "Owens, J.P., 1989, Geologic map of the Cape Fear region, Florence 1° x 2° quadrangle and northern half of the Georgetown 1° x 2° quadrangle, North Carolina and South Carolina: U.S. Geological Survey Miscellaneous Investigations Series Map I-1948-A, scale 1:250,000.",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Owens, J.P., 1989, Geologic map of the Cape Fear region, Florence 1° X 2°",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR of a multi-column sheet; citation assembled from adjacent lines"
+   }
+  },
+  {
+   "citation": {
+    "value": "Perlman, S.H., Bunker, C.M., Bush, C.A., and Gohn, G.S., 1976, Ground radioactivity measurements in South Carolina and Georgia with radioelement analyses of surficial sediments: U.S. Geological Survey Open-File Report 76-478, 10 p.",
+    "source_id": "ngmdb:10027",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "radioactivity measurements in South Carolina and Georgia with radioelement",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR of a multi-column sheet; citation assembled from adjacent lines"
+   }
+  }
+ ],
+ "surfaces": [],
+ "contours": [],
+ "sections": [],
+ "water_tests": [],
+ "rock_tests": []
+}

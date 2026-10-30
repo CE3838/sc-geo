@@ -1,0 +1,4501 @@
+{
+ "source_id": "ngmdb:10026",
+ "title": "Geologic map of the Cape Fear region, Florence 1 degree x 2 degrees quadrangle and northern half of the Georgetown 1 degree x 2 degrees quadrangle, North Carolina and South Carolina",
+ "citation": "Owens, J.P., 1990, Geologic map of the Cape Fear region, Florence 1 degree x 2 degrees quadrangle and northern half of the Georgetown 1 degree x 2 degrees quadrangle, North Carolina and South Carolina: U.S. Geological Survey Miscellaneous Investigations Series Map I-1948-A, map scale 1:250,000.",
+ "year": 1990,
+ "scale": 250000,
+ "publisher": "U.S. Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-10-28T23:00:02+00:00",
+ "updated_at": "2026-10-28T23:00:20+00:00",
+ "reader": "Claude, scheduled Claude Code session 2026-10-28",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1",
+  "2"
+ ],
+ "blocks_total": 2,
+ "complete": true,
+ "notes": "Two-state map (NC and SC); only units present in South Carolina and South Carolina localities recorded. Skipped as North Carolina only: upland gravels, 'Pinehurst' Formation, Castle Hayne Limestone, Cape Fear Formation outcrop description (it is recorded only as a corehole interval), Jurassic-Triassic rocks, gabbro, Lilesville Granite, mica gneiss and schist, argillite, phyllitic rocks, and NC localities (Southport hole, Holden Beach, Snows Cut and others). Map face (sheet 1) OCR is garbled; no map-face values recorded. Britton Neck corehole MRN-78 (figure 2) formation boundaries were read from the page image; the depth column is labelled meters but its numbers fit feet (text: 374-m-deep hole; Bladen about 44 m = 216 to 362 on the scale), so all depths are marked unclear and no surfaces were derived. Text thicknesses from the corehole (Donoho Creek about 18 m, Tar Heel 55 m) do not match the drawn boundaries read as feet (about 30 m and about 70 m). Generalized cross sections A-A' to G-G' (sheet 2, vertical exaggeration 35x) were not read; they need an image re-read. Black Creek Group, Peedee and Middendorf in this packet use the author's new nomenclature (Black Creek raised to group).",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20648_10026_2",
+   "via": "ngmdb_scan",
+   "sha256": "982967708cce0eba811533997f609e421b40613b281bc774d59c698671e16777",
+   "pages": 1,
+   "first_page": 1
+  },
+  {
+   "url": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2",
+   "via": "ngmdb_scan",
+   "sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc",
+   "pages": 1,
+   "first_page": 2
+  }
+ ],
+ "summary": {
+  "stored": 119,
+  "quote_match": {
+   "image": 18,
+   "exact": 101
+  },
+  "verification": {
+   "agree": 29
+  },
+  "inferred": 29
+ },
+ "ingests": [
+  {
+   "at": "2026-10-28T23:00:02+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-28",
+   "values": 119,
+   "stored": 109,
+   "exact": 101,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 19,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 8,
+   "image_not_verified": 0,
+   "image_locator_invalid": 10,
+   "review_items": 12
+  },
+  {
+   "at": "2026-10-28T23:00:20+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-28",
+   "values": 119,
+   "stored": 119,
+   "exact": 101,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 29,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 18,
+   "image_not_verified": 0,
+   "review_items": 12
+  }
+ ],
+ "history": [
+  {
+   "at": "2026-10-28T23:00:20+00:00",
+   "reason": "re-ingest of packet-01",
+   "packets": [
+    "packet-01"
+   ],
+   "pages": [
+    1,
+    2
+   ],
+   "replaced": [
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Holocene deposits",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.63,
+       "inferred": false,
+       "locator": null,
+       "quote": "Holocene deposits—Holocene sediments are confined to major drainageways and",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      },
+      "age": {
+       "value": "Holocene",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Holocene deposits—Holocene sediments are confined to major drainageways and",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.0117,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "confined to major drainageways and small valleys; alluvial valley deposits widespread in the lower reaches of the Cape Fear and Pee Dee Rivers",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Holocene alluvial valley deposits are particularly widespread in the lower",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "lithology": {
+       "value": "interbedded dark clays and light sand, commonly containing a thin gravel layer at the base",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "The riverine sediments typically are interbedded dark clays and light sand,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Wando Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Wando Formation (upper Pleistocene)—This formation consists of sandy deposits",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Wando",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.428,
+       "inferred": true,
+       "locator": null,
+       "quote": "Wando Formation (upper Pleistocene)—This formation consists of sandy deposits",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "rank from the unit name"
+      },
+      "age": {
+       "value": "about 90,000 years (late Pleistocene)",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "studies on corals from this unit in the Charleston area, is about 90,000 years",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 0.129,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "sandy deposits that form a single barrier and a very large fluvial system; fluvial facies widespread in the Pee Dee River valley",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Wando Formation (upper Pleistocene)—This formation consists of sandy deposits",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "tops of the Wando terraces from 3.0 to 33.5 m above m.s.l. in the Pee Dee valley",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.63,
+       "inferred": false,
+       "locator": null,
+       "quote": "mzs.l. in the Cape Fear valley and from 3.0 to 33.5 m above msl. in the Pee",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "note": "terrace-top altitudes, not a thickness",
+       "normalized": {
+        "min_ft": 9.842519685039369,
+        "max_ft": 109.90813648293963,
+        "unit": "m",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Socastee Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Socastee Formation (upper Pleistocene)—The Socastee Formation, like the",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Socastee",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.428,
+       "inferred": true,
+       "locator": null,
+       "quote": "Socastee Formation (upper Pleistocene)—The Socastee Formation, like the",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "rank from the unit name"
+      },
+      "age": {
+       "value": "upper Pleistocene",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Socastee Formation (upper Pleistocene)—The Socastee Formation, like the",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 0.129,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "major coastal Pleistocene unit; marine facies crops out from the coast to just south of Allen, S.C., a width of about 30 km; redefined in this report; type locality on the lower Waccamaw River",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Allen, S.C., a width of about 30 km. The surface in much of the area is",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "contacts": {
+       "value": "base of the formation irregular, from about 2 m below msl. to, less commonly, 5 m above m.sl.",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "ranging from about 2 m below msl. to, less commonly, 5 m above m.sl. In",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "maximum surface altitude of 15.2 m in the north and 9.1 m in the south",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.428,
+       "inferred": true,
+       "locator": null,
+       "quote": "barviers, but I disagree. The Socastee has a maximum surface altitude of 15,2",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "OCR '15,2' read as 15.2; '9.1 m in the south' is on the next line; surface altitudes, not thickness",
+       "normalized": {
+        "min_ft": 29.85564304461942,
+        "max_ft": 49.86876640419947,
+        "values_ft": [
+         49.86876640419947,
+         29.85564304461942
+        ],
+        "unit": "m",
+        "approximate": false
+       }
+      },
+      "fossils": {
+       "value": "age about 200,000 years",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "The age of the Socastee is about 200,000 years (McCartan and others,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "dating basis for the age"
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Canepatch Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.63,
+       "inferred": false,
+       "locator": null,
+       "quote": "Canepatch Formation (middle Pleistocene)—This unit was originally named by",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "normalized": {
+        "canonical": "Canepatch",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.428,
+       "inferred": true,
+       "locator": null,
+       "quote": "Canepatch Formation (middle Pleistocene)—This unit was originally named by",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "rank from the unit name"
+      },
+      "age": {
+       "value": "middle Pleistocene",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Canepatch Formation (middle Pleistocene)—This unit was originally named by",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.129,
+        "older_ma": 0.774,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "restricted to one subsurface shelf facies outcrop along the Intracoastal Waterway at locality WA-20 of DuBar (1971); corals dated at about 450,000 years",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "at locality WA-20 of DuBar (1971). The Canepatch has no known fluvial facies",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "lithology": {
+       "value": "coarse shelly quartz sand about 4.5 m thick",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "The Canepatch Formation at locality WA-20 is a coarse shelly quartz sand",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "about 4.5 m",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.63,
+       "inferred": false,
+       "locator": null,
+       "quote": "about 4.5 m thick, which lies unconformably over the Waccamaw Formation.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "normalized": {
+        "min_ft": 14.763779527559054,
+        "max_ft": 14.763779527559054,
+        "unit": "m",
+        "approximate": true
+       }
+      },
+      "contacts": {
+       "value": "lies unconformably over the Waccamaw Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "about 4.5 m thick, which lies unconformably over the Waccamaw Formation.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "fossils": {
+       "value": "Anadara ovalis (A. brasiliana and A. ovalis) mollusk subzone of Blackwelder (1981)",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.428,
+       "inferred": true,
+       "locator": null,
+       "quote": "Canepatch fossils are abundant and belong to the Andora ovalis (A.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "OCR 'Andora ovalis' and 'brasifiana' read as Anadara ovalis and A. brasiliana; unclear"
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Penholoway Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Penholoway Formation (Lower Pleistocene)—The name Penholoway was used in",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Penholoway",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.428,
+       "inferred": true,
+       "locator": null,
+       "quote": "Penholoway Formation (Lower Pleistocene)—The name Penholoway was used in",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "rank from the unit name"
+      },
+      "age": {
+       "value": "presumed early Pleistocene (older than 760,000 years)",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Formation, but is still presumed to be early Pleistocene (older than 760,000",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.774,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "largely a barrier and backbarrier system, the top of which lies at altitudes between 15 and 21 m above m.s.l.",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "area. The Penholoway is largely a barrier and backbarrier system, the top of",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "contacts": {
+       "value": "base ranges from 6 to 9 m above m.s.l.",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Penholoway deposits ranges from 6 to 9 m above m.sl. and commonly lies",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "barrier sands typically about 3 to 4.5 m thick; backbarrier deposits as much as 15 m thick; fluvial facies about 15 m thick",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "barrier system of DuBar (1971). The barrier sands are thin, typically about 3 to 4.5 m thick",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "other thicknesses on later lines",
+       "normalized": {
+        "min_ft": 9.842519685039369,
+        "max_ft": 14.763779527559054,
+        "unit": "m",
+        "approximate": true
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Waccamaw Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Waccamaw Formation (lower Pleistocene)—The type locality of the Waccamaw",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Waccamaw",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.428,
+       "inferred": true,
+       "locator": null,
+       "quote": "Waccamaw Formation (lower Pleistocene)—The type locality of the Waccamaw",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "rank from the unit name"
+      },
+      "age": {
+       "value": "lower Pleistocene",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Waccamaw Formation (lower Pleistocene)—The type locality of the Waccamaw",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.774,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "type locality a small fossil bed along the Waccamaw River near Conway, S.C.; largely a barrier and backbarrier sequence at altitudes between 21 and 30 m above msl.",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Formation is a small fossil bed lying along the Waccamaw River near Conway,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "barrier sands average about 10.7 m near the Pee Dee River and about 6 m elsewhere",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "The thickness of the barrier sands averages about 10.7 m near the Pee Dee",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": 19.685039370078737,
+        "max_ft": 35.10498687664042,
+        "values_ft": [
+         35.10498687664042,
+         19.685039370078737
+        ],
+        "unit": "m",
+        "approximate": true
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Bear Bluff Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Bear Bluff Formation (upper Pliocene)—Originally, the Bear Bluff Formation was",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Bear Bluff",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.428,
+       "inferred": true,
+       "locator": null,
+       "quote": "Bear Bluff Formation (upper Pliocene)—Originally, the Bear Bluff Formation was",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "rank from the unit name"
+      },
+      "age": {
+       "value": "latest Pliocene, about 1.8 to 2.4 m.y. ago",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.428,
+       "inferred": true,
+       "locator": null,
+       "quote": "deposited about 1.8 to 2.4 my. (million years) ago.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "OCR 'my.' read as m.y.",
+       "normalized": {
+        "younger_ma": 2.58,
+        "older_ma": 5.333,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "leached shelly facies exposed in a large quarry near Cedar Grove, S.C., where channels extend at least 12 m below m.s.l.",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Grove, S.C. Here, the channels, or trenches, extend down at least 12 m below",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "quarry name on the line above"
+      },
+      "thickness": {
+       "value": "barrier facies averages about 4.5 m; fluvial facies maximum about 13 m",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "The barrier facies of the Bear Bluff is very thin and averages about 4.5 m",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": 14.763779527559054,
+        "max_ft": 42.6509186351706,
+        "values_ft": [
+         14.763779527559054,
+         42.6509186351706
+        ],
+        "unit": "m",
+        "approximate": true
+       }
+      },
+      "depositional_environment": {
+       "value": "barrier, backbarrier, fluvial and marine (shelf) facies; tidal-flat over tidal-inlet deposits in pits near Smithboro, S.C.",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Smithboro, S.C., laminated to thin-bedded, burrowed tidal-flat deposits overlie",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Duplin Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Duplin Formation (lower Pliocene)—DuBar and others (1974) restricted the",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Duplin",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.428,
+       "inferred": true,
+       "locator": null,
+       "quote": "Duplin Formation (lower Pliocene)—DuBar and others (1974) restricted the",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "rank from the unit name"
+      },
+      "age": {
+       "value": "early Pliocene; about 2.8 to 3.6 m.y. ago",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "about 2.8 to 3.6 m.y. ago. The magainvertebrate fauna includes Ostrea",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 3.6,
+        "older_ma": 5.333,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "between the Mechanicsville and Orangeburg scarps; shelf facies best exposed at Davis and Bostick Landings on the Pee Dee River (light-gray, fine calcarenite with large pectinoid shells)",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "fossil-tich localities at Davis and Bostick Landings (Cooke, 1936, for example)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "about 21.3 m near the Orangeburg scarp",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Near the Orangeburg scarp, the Duplin Formation is about 21.3 m thick, and",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": 69.88188976377953,
+        "max_ft": 69.88188976377953,
+        "unit": "m",
+        "approximate": true
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Black Mingo Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Black Mingo Formation (Paleocene)—The Black Mingo Formation underlies most",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Black Mingo",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.428,
+       "inferred": true,
+       "locator": null,
+       "quote": "Black Mingo Formation (Paleocene)—The Black Mingo Formation underlies most",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "rank from the unit name"
+      },
+      "age": {
+       "value": "Paleocene",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Black Mingo Formation (Paleocene)—The Black Mingo Formation underlies most",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 56.0,
+        "older_ma": 66.0,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "underlies most of the western part of the Georgetown quadrangle; small outcrops only along the Black River near Rhems and Bryans Crossroads, S.C.",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "only along the Black River near Rhems and Bryans Crossroads, S.C. The",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "contacts": {
+       "value": "contact with the underlying Peedee Formation is sharp (at St. Stephens)",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "The contact with the underlying Peedee Formation is sharp, but no coarse",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Peedee Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Peedee Formation (upper Cretaceous}—This formation is exposed in the banks",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Peedee",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.428,
+       "inferred": true,
+       "locator": null,
+       "quote": "Peedee Formation (upper Cretaceous}—This formation is exposed in the banks",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "rank from the unit name"
+      },
+      "age": {
+       "value": "middle to late Maestrichtian",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "The Peedee is middle to late Maestrichtian as determined from the",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "lithology": {
+       "value": "massive to thick-bedded, dark-gray to gray-green, slightly to very clayey, micaceous, calcareous, glauconitic quartz sand",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "to thick-bedded, dark-gray to gray-green, slightly to very clayey, micaceous,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "description": {
+       "value": "best exposed along the Pee Dee River from near Burches Ferry to Hemingway, S.C.",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.63,
+       "inferred": false,
+       "locator": null,
+       "quote": "Hemingway, S.C., a distance of about 40 km. Most of the Peedee is a massive",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      },
+      "thickness": {
+       "value": "at least 37.4 m in the corehole near Britton Neck",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Peedee is at least 37.4 m thick as measured in the corehole (maN-7é) near",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": 122.7034120734908,
+        "max_ft": null,
+        "unit": "m",
+        "approximate": false
+       }
+      },
+      "fossils": {
+       "value": "Exogyra costata and Belemnitella americana; Globotruncana ganserri foraminifer zone",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Exogyra costata and Belemnitella americana, and a microfaunal suite, which",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "contacts": {
+       "value": "separated from the underlying unit by a reworked zone with abundant phosphatic pebbles; best exposed at Burches Ferry on the Pee Dee River",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.63,
+       "inferred": false,
+       "locator": null,
+       "quote": "The Peedee is separated from the underlying unit by a reworked zone",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Black Creek Group",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Creek Formation is raised to group status and divided into three formations, the",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Black Creek",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "rank": {
+       "value": "Group",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Creek Formation is raised to group status and divided into three formations, the",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "description": {
+       "value": "Black Creek Formation raised to group status and divided into the Donoho Creek, Bladen, and Tar Heel Formations; type locality near Darlington, S.C.",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.63,
+       "inferred": false,
+       "locator": null,
+       "quote": "thin beds of black clay and light-yellow sand at its type locality near Darlinaton,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "note": "OCR 'Darlinaton' is Darlington"
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Donoho Creek Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Donoho Creek Formation (upper Cretaceous)—The upper unit of the Black",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Donoho Creek",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.428,
+       "inferred": true,
+       "locator": null,
+       "quote": "Donoho Creek Formation (upper Cretaceous)—The upper unit of the Black",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "rank from the unit name"
+      },
+      "age": {
+       "value": "upper Cretaceous",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Donoho Creek Formation (upper Cretaceous)—The upper unit of the Black",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 66.0,
+        "older_ma": 100.5,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "group": {
+       "value": "Black Creek Group",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "included as the upper formation of the Black Creek Group.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "description": {
+       "value": "in the Pee Dee River valley, intercalated sands and clays or thin crossbedded sands best exposed at Mars Bluff, followed downstream to Burches Ferry",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "best exposed at Mars Bluff and can be followed intermittently downstream from",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "about 18 m in the corehole near Britton Neck",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.63,
+       "inferred": false,
+       "locator": null,
+       "quote": "The Donoho Creek marine sequences are about 18 m thick in the corehole",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "normalized": {
+        "min_ft": 59.055118110236215,
+        "max_ft": 59.055118110236215,
+        "unit": "m",
+        "approximate": true
+       }
+      },
+      "contacts": {
+       "value": "overlain unconformably by the massive Peedee Formation at Burches Ferry",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Mars Bluff to Burches Ferry, where they are overlain unconformably by the",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Bladen Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Bladen Formation (upper Cretaceous)—The Bladen Formation as originally",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Bladen",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.428,
+       "inferred": true,
+       "locator": null,
+       "quote": "Bladen Formation (upper Cretaceous)—The Bladen Formation as originally",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "rank from the unit name"
+      },
+      "age": {
+       "value": "latest Campanian to earliest Maestrichtian",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "The age of the Bladen Formation is latest Campanian to earliest",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 72.1,
+        "older_ma": 83.6,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "group": {
+       "value": "Black Creek Group",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "raised to group status. As defined in this report, the Bladen Formation consists",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "about 44 m",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "and Pee Dee River valleys. The unit is about 44 m thick.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": 144.3569553805774,
+        "max_ft": 144.3569553805774,
+        "unit": "m",
+        "approximate": true
+       }
+      },
+      "description": {
+       "value": "in the Pee Dee valley exposed from the bluff north of Florence to near Hurricane Branch and along Black Creek at Darlington; fossil beds at Hodges Mill near Mullin, S.C.",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Lumber River drainage at Hodges Mill near Mullin, S.C.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Tar Heel Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "ik Tar Heel Formation (upper Cretaceous)—The basal unit of the Black Creek",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Tar Heel",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.428,
+       "inferred": true,
+       "locator": null,
+       "quote": "ik Tar Heel Formation (upper Cretaceous)—The basal unit of the Black Creek",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "rank from the unit name"
+      },
+      "age": {
+       "value": "early Campanian",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "The age of the Tar Heel Formation is early Campanian as determined by",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 79.76666666666667,
+        "older_ma": 83.6,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "group": {
+       "value": "Black Creek Group",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "ik Tar Heel Formation (upper Cretaceous)—The basal unit of the Black Creek",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "description": {
+       "value": "in the Pee Dee valley mainly sandy: thick, red-to-white, typically crossbedded sands and white-to-black, thick-bedded clays; sands under the Sand Hills near Cash, S.C., commonly mapped as Middendorf",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Hills near Cash, S.C., commonly have been mapped as the Middendorf",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "at least 60 m in the Sand Hills area; 55 m in the corehole near Britton Neck",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "In the corehole near Britton Neck, the unit is 55 m thick.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": 180.44619422572177,
+        "max_ft": 196.85039370078738,
+        "values_ft": [
+         196.85039370078738,
+         180.44619422572177
+        ],
+        "unit": "m",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Middendorf Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Middendorf Formation (upper Cretaceous)—The Middendort Formation crops out",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Middendorf",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.428,
+       "inferred": true,
+       "locator": null,
+       "quote": "Middendorf Formation (upper Cretaceous)—The Middendort Formation crops out",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "rank from the unit name"
+      },
+      "age": {
+       "value": "Santonian",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "indicates a Santonian age, zone V- of the palynozonal age classification (R.A.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 83.6,
+        "older_ma": 86.3,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "interbedded black-weathering to chocolate-brown or white clayey beds and clayey crossbedded micaceous sands",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "Most of the Middendorf consists of interbedded black-weathering to",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "45 to 60 m in outcrop; nearly 110 m in the Britton Neck corehole",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.63,
+       "inferred": false,
+       "locator": null,
+       "quote": "nearly 110 m thick in the Britton Neck corehole (fig. 2). The sands of the",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "normalized": {
+        "min_ft": 147.63779527559055,
+        "max_ft": 196.85039370078738,
+        "unit": "m",
+        "approximate": false
+       }
+      },
+      "depositional_environment": {
+       "value": "largely deltaic (mainly upper delta-plain facies in outcrop)",
+       "source_id": "ngmdb:10026",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.535,
+       "inferred": false,
+       "locator": null,
+       "quote": "The Middendorf appears to be largely a deltaic deposit (mainly upper delta-",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "observations",
+     "record": {
+      "kind": "core",
+      "label": {
+       "value": "MRN-78",
+       "source_id": "ngmdb:10026",
+       "page": 2,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": null,
+       "quote": "A 374-m-deep corehole (MRN-78) near Britton Neck, S.C., penetrated nearly the entire",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "Britton Neck corehole"
+      },
+      "location": {
+       "value": "5.3 km south of Britton Neck, S. C., east of the Pee Dee River in Georgetown 1° x 2° quadrangle",
+       "source_id": "ngmdb:10026",
+       "page": 2,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": null,
+       "quote": "Figure 2. Lithology, geophysical log, and pollen zones found in the Britton Neck corehole, MRN-78, 5.3 km south of Britton",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "'Neck, S. C., east of the Pee Dee River in Georgetown' continues on the next line"
+      },
+      "total_depth": {
+       "value": "374 m",
+       "source_id": "ngmdb:10026",
+       "page": 2,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": null,
+       "quote": "A 374-m-deep corehole (MRN-78) near Britton Neck, S.C., penetrated nearly the entire",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "min_ft": 1227.034120734908,
+        "max_ft": 1227.034120734908,
+        "unit": "m",
+        "approximate": false
+       }
+      },
+      "depth_reference": {
+       "value": "land surface",
+       "source_id": "ngmdb:10026",
+       "page": 2,
+       "extraction_method": "llm",
+       "confidence": 0.612,
+       "inferred": true,
+       "locator": null,
+       "quote": "A 374-m-deep corehole (MRN-78) near Britton Neck, S.C., penetrated nearly the entire",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "note": "depth column of figure 2; assumed below land surface"
+      },
+      "intervals": [
+       {
+        "unit": {
+         "value": "Peedee",
+         "source_id": "ngmdb:10026",
+         "page": 2,
+         "extraction_method": "llm-image",
+         "confidence": 0.6,
+         "inferred": false,
+         "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2#page=1&viewrect=1413.12,334.08,48,52.8",
+         "quote": "PEEDEE",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p2-150dpi-crop1034_200_1467_560-r1c1",
+          "box": [
+           790,
+           280,
+           890,
+           390
+          ],
+          "dpi": 150,
+          "page_px_box": [
+           2944,
+           696,
+           3044,
+           806
+          ],
+          "pt_box": [
+           1413.12,
+           334.08,
+           1461.12,
+           386.88
+          ],
+          "pdf_sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc"
+         },
+         "text_match": true,
+         "note": "formation column of figure 2"
+        },
+        "top": {
+         "value": "0",
+         "source_id": "ngmdb:10026",
+         "page": 2,
+         "extraction_method": "llm-image",
+         "confidence": 0.336,
+         "inferred": true,
+         "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2#page=1&viewrect=1120.32,302.88,38.4,14.4",
+         "quote": "0",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p2-150dpi-crop1034_200_1467_560-r1c1",
+          "box": [
+           180,
+           215,
+           260,
+           245
+          ],
+          "dpi": 150,
+          "page_px_box": [
+           2334,
+           631,
+           2414,
+           661
+          ],
+          "pt_box": [
+           1120.32,
+           302.88,
+           1158.72,
+           317.28
+          ],
+          "pdf_sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc",
+          "unclear": true
+         },
+         "text_match": true,
+         "note": "read off the figure 2 depth scale; column headed 'DEPTH, IN METERS' but numbers fit feet (374-m hole), so the unit is uncertain"
+        }
+       },
+       {
+        "unit": {
+         "value": "Donoho Creek",
+         "source_id": "ngmdb:10026",
+         "page": 2,
+         "extraction_method": "llm-image",
+         "confidence": 0.6,
+         "inferred": false,
+         "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2#page=1&viewrect=1413.12,458.88,48,86.4",
+         "quote": "DONOHO CREEK",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p2-150dpi-crop1034_200_1467_560-r1c1",
+          "box": [
+           790,
+           540,
+           890,
+           720
+          ],
+          "dpi": 150,
+          "page_px_box": [
+           2944,
+           956,
+           3044,
+           1136
+          ],
+          "pt_box": [
+           1413.12,
+           458.88,
+           1461.12,
+           545.28
+          ],
+          "pdf_sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc"
+         },
+         "text_match": true,
+         "note": "formation column of figure 2"
+        }
+       },
+       {
+        "unit": {
+         "value": "Bladen",
+         "source_id": "ngmdb:10026",
+         "page": 2,
+         "extraction_method": "llm-image",
+         "confidence": 0.6,
+         "inferred": false,
+         "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2#page=1&viewrect=1413.12,620.16,43.2,48",
+         "quote": "BLADEN",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p2-150dpi-crop1034_457_1467_2273-r1c1",
+          "box": [
+           790,
+           340,
+           880,
+           440
+          ],
+          "dpi": 150,
+          "page_px_box": [
+           2944,
+           1292,
+           3034,
+           1392
+          ],
+          "pt_box": [
+           1413.12,
+           620.16,
+           1456.32,
+           668.16
+          ],
+          "pdf_sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc"
+         },
+         "text_match": true,
+         "note": "formation column of figure 2"
+        }
+       },
+       {
+        "unit": {
+         "value": "Tar Heel",
+         "source_id": "ngmdb:10026",
+         "page": 2,
+         "extraction_method": "llm-image",
+         "confidence": 0.6,
+         "inferred": false,
+         "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2#page=1&viewrect=1413.12,836.16,43.2,67.2",
+         "quote": "TAR HEEL",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p2-150dpi-crop1034_457_1467_2273-r1c1",
+          "box": [
+           790,
+           790,
+           880,
+           930
+          ],
+          "dpi": 150,
+          "page_px_box": [
+           2944,
+           1742,
+           3034,
+           1882
+          ],
+          "pt_box": [
+           1413.12,
+           836.16,
+           1456.32,
+           903.36
+          ],
+          "pdf_sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc"
+         },
+         "text_match": true,
+         "note": "formation column of figure 2"
+        }
+       },
+       {
+        "unit": {
+         "value": "Middendorf",
+         "source_id": "ngmdb:10026",
+         "page": 2,
+         "extraction_method": "llm-image",
+         "confidence": 0.6,
+         "inferred": false,
+         "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2#page=1&viewrect=1413.12,1153.44,43.2,72",
+         "quote": "MIDDENDORF",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p2-150dpi-crop1034_457_1467_2273-r2c1",
+          "box": [
+           790,
+           230,
+           880,
+           380
+          ],
+          "dpi": 150,
+          "page_px_box": [
+           2944,
+           2403,
+           3034,
+           2553
+          ],
+          "pt_box": [
+           1413.12,
+           1153.44,
+           1456.32,
+           1225.44
+          ],
+          "pdf_sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc"
+         },
+         "text_match": true,
+         "note": "formation column of figure 2"
+        }
+       },
+       {
+        "unit": {
+         "value": "Cape Fear",
+         "source_id": "ngmdb:10026",
+         "page": 2,
+         "extraction_method": "llm-image",
+         "confidence": 0.6,
+         "inferred": false,
+         "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2#page=1&viewrect=1413.12,1527.84,43.2,62.4",
+         "quote": "CAPE FEAR",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p2-150dpi-crop1034_457_1467_2273-r2c1",
+          "box": [
+           790,
+           1010,
+           880,
+           1140
+          ],
+          "dpi": 150,
+          "page_px_box": [
+           2944,
+           3183,
+           3034,
+           3313
+          ],
+          "pt_box": [
+           1413.12,
+           1527.84,
+           1456.32,
+           1590.24
+          ],
+          "pdf_sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc"
+         },
+         "text_match": true,
+         "note": "formation column of figure 2"
+        },
+        "bottom": {
+         "value": "about 1180-1190",
+         "source_id": "ngmdb:10026",
+         "page": 2,
+         "extraction_method": "llm-image",
+         "confidence": 0.336,
+         "inferred": true,
+         "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2#page=1&viewrect=1350.72,1667.52,52.8,28.8",
+         "quote": "???? above + symbols at about 1180-1190",
+         "quote_match": "image",
+         "text_method": "image",
+         "verification": "agree",
+         "image": {
+          "tile": "p2-150dpi-crop1034_457_1467_2273-r3c1",
+          "box": [
+           660,
+           80,
+           770,
+           140
+          ],
+          "dpi": 150,
+          "page_px_box": [
+           2814,
+           3474,
+           2924,
+           3534
+          ],
+          "pt_box": [
+           1350.72,
+           1667.52,
+           1403.52,
+           1696.32
+          ],
+          "pdf_sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc",
+          "unclear": true
+         },
+         "note": "read off the figure 2 depth scale; column headed 'DEPTH, IN METERS' but numbers fit feet (374-m hole), so the unit is uncertain; base drawn queried (? ? ? ?) above basement (+)"
+        }
+       }
+      ]
+     }
+    },
+    {
+     "section": "references",
+     "record": {
+      "citation": {
+       "value": "Colquhoun, D.J., 1974, Cyclic surficial stratigraphic units of the middle and lower Coastal Plains, central South Carolina, in Oaks, R.Q., Jr., and DuBar, J.R., eds., Post-Miocene stratigraphy central and southern Atlantic Coastal Plain: Logan, Utah, Utah State University Press, p. 179-190.",
+       "source_id": "ngmdb:10026",
+       "page": 2,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": null,
+       "quote": "Colquhoun, D.J., 1974, Cyclic surficial stratigraphic units of the middle and lower Coastal Plains",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "OCR of a multi-column sheet; citation assembled from adjacent lines"
+      }
+     }
+    },
+    {
+     "section": "references",
+     "record": {
+      "citation": {
+       "value": "Cooke, C.W., 1936, Geology of the Coastal Plain of South Carolina: U.S. Geological Survey Bulletin 867, 196 p., scale 1:500,000.",
+       "source_id": "ngmdb:10026",
+       "page": 2,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": null,
+       "quote": "Cooke, C.W., 1936, Geology of the Coastal Plain of South Carolina: U.S. Geological Survey",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "OCR of a multi-column sheet; citation assembled from adjacent lines"
+      }
+     }
+    },
+    {
+     "section": "references",
+     "record": {
+      "citation": {
+       "value": "DuBar, J.R., 1971, Neogene stratigraphy of the lower Coastal Plain of the Carolinas: Atlantic Coastal Plain Geological Association, 12th Annual Field Conference, Myrtle Beach, S.C., 1971 [Guidebook], 128 p.",
+       "source_id": "ngmdb:10026",
+       "page": 2,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": null,
+       "quote": "DuBar, J.R., 1971, Neogene stratigraphy of the lower Coastal Plain of the Carolinas: Atlantic",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "OCR of a multi-column sheet; citation assembled from adjacent lines"
+      }
+     }
+    },
+    {
+     "section": "references",
+     "record": {
+      "citation": {
+       "value": "DuBar, J.R., Johnson, H.S., Jr., Thom, Bruce, and Hatchel, W.O., 1974, Neogene stratigraphy and morphology, south flank of the Cape Fear arch, North and South Carolina, in Oaks, R.Q., Jr., and DuBar, J.R., eds., Post-Miocene stratigraphy central and southern Atlantic Coastal Plain: Logan, Utah, Utah State University Press, p. 139-173.",
+       "source_id": "ngmdb:10026",
+       "page": 2,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": null,
+       "quote": "and morphology, south flank of the Cape Fear arch, North and South Carolina, in Oaks",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "OCR of a multi-column sheet; citation assembled from adjacent lines"
+      }
+     }
+    },
+    {
+     "section": "references",
+     "record": {
+      "citation": {
+       "value": "Gohn, G.S., Hazel, J.E., Bybell, L.M., and Edwards, L.E., 1983, The Fishburne Formation (lower Eocene), a newly defined subsurface unit in the South Carolina Coastal Plain: U.S. Geological Survey Bulletin 1537-C, p. C1-C16.",
+       "source_id": "ngmdb:10026",
+       "page": 2,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": null,
+       "quote": "Eocene), a newly defined subsurface unit in the South Carolina Coastal Plain: U.S.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "OCR of a multi-column sheet; citation assembled from adjacent lines"
+      }
+     }
+    },
+    {
+     "section": "references",
+     "record": {
+      "citation": {
+       "value": "McCartan, Lucy, Lemon, E.M., Jr., and Weems, R.E., 1984, Geologic map of the area between Charleston and Orangeburg, South Carolina: U.S. Geological Survey Miscellaneous Investigations Series Map I-1472, scale 1:250,000.",
+       "source_id": "ngmdb:10026",
+       "page": 2,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": null,
+       "quote": "Charleston and Orangeburg, South Carolina: U.S. Geological Survey Miscellaneous",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "OCR of a multi-column sheet; citation assembled from adjacent lines"
+      }
+     }
+    },
+    {
+     "section": "references",
+     "record": {
+      "citation": {
+       "value": "Siple, G.E., 1959, Guidebook for South Carolina Coastal Plain field trip of the Carolina Geological Society, November 16-17, 1957: South Carolina State Development Board Division of Geology Bulletin 24, 27 p.",
+       "source_id": "ngmdb:10026",
+       "page": 2,
+       "extraction_method": "llm",
+       "confidence": 0.765,
+       "inferred": false,
+       "locator": null,
+       "quote": "Siple, G.E., 1959, Guidebook for South Carolina Coasal Plain field trip of the Carolina",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "note": "OCR of a multi-column sheet; citation assembled from adjacent lines"
+      }
+     }
+    },
+    {
+     "section": "references",
+     "record": {
+      "citation": {
+       "value": "Van Nieuwenhuise, D.S., and Colquhoun, D.J., 1982, The Paleocene-lower Eocene Black Mingo Group of the east-central Coastal Plain of South Carolina: South Carolina Division of Geology Bulletin, v. 26, no. 2, p. 46-67.",
+       "source_id": "ngmdb:10026",
+       "page": 2,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": null,
+       "quote": "Van Nieuwenhuise, D.S., and Colquhoun, D.J., 1982, The Paleocene-lower Eocene Black Mingo",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "OCR of a multi-column sheet; citation assembled from adjacent lines"
+      }
+     }
+    },
+    {
+     "section": "references",
+     "record": {
+      "citation": {
+       "value": "Owens, J.P., and Gohn, G.S., 1985, Depositional history of the Cretaceous series in the United States Atlantic Coastal Plain; stratigraphy, paleoenvironments, and tectonic controls of sedimentation, in Poag, C.W., ed., Geologic evolution of the United States Atlantic margin: New York, N.Y., Van Nostrand Reinhold Co., p. 25-86.",
+       "source_id": "ngmdb:10026",
+       "page": 2,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": null,
+       "quote": "Owens, J.P., and Gohn, G.S., 1985, Depositional history o! the Cretaceous series in the United",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "OCR of a multi-column sheet; citation assembled from adjacent lines"
+      }
+     }
+    },
+    {
+     "section": "references",
+     "record": {
+      "citation": {
+       "value": "Sohl, N.F., and Christopher, R.A., 1983, The Black Creek-Peedee formational contact (Upper Cretaceous) in the Cape Fear River region of North Carolina: U.S. Geological Survey Professional Paper 1285, 37 p.",
+       "source_id": "ngmdb:10026",
+       "page": 2,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": null,
+       "quote": "Sohl, N.F., and Christopher, R.A., 1983, The Black CreekPeedee formational contact (Upper",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "OCR of a multi-column sheet; citation assembled from adjacent lines"
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "Holocene deposits",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.63,
+    "inferred": false,
+    "locator": null,
+    "quote": "Holocene deposits—Holocene sediments are confined to major drainageways and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Holocene deposits—Holocene sediments are confined to major drainageways and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "confined to major drainageways and small valleys; alluvial valley deposits widespread in the lower reaches of the Cape Fear and Pee Dee Rivers",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Holocene alluvial valley deposits are particularly widespread in the lower",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "lithology": {
+    "value": "interbedded dark clays and light sand, commonly containing a thin gravel layer at the base",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The riverine sediments typically are interbedded dark clays and light sand,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Wando Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Wando Formation (upper Pleistocene)—This formation consists of sandy deposits",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Wando",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "Wando Formation (upper Pleistocene)—This formation consists of sandy deposits",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "rank from the unit name"
+   },
+   "age": {
+    "value": "about 90,000 years (late Pleistocene)",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "studies on corals from this unit in the Charleston area, is about 90,000 years",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 0.129,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "sandy deposits that form a single barrier and a very large fluvial system; fluvial facies widespread in the Pee Dee River valley",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Wando Formation (upper Pleistocene)—This formation consists of sandy deposits",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "tops of the Wando terraces from 3.0 to 33.5 m above m.s.l. in the Pee Dee valley",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.63,
+    "inferred": false,
+    "locator": null,
+    "quote": "mzs.l. in the Cape Fear valley and from 3.0 to 33.5 m above msl. in the Pee",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "terrace-top altitudes, not a thickness",
+    "normalized": {
+     "min_ft": 9.842519685039369,
+     "max_ft": 109.90813648293963,
+     "unit": "m",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Socastee Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Socastee Formation (upper Pleistocene)—The Socastee Formation, like the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Socastee",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "Socastee Formation (upper Pleistocene)—The Socastee Formation, like the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "rank from the unit name"
+   },
+   "age": {
+    "value": "upper Pleistocene",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Socastee Formation (upper Pleistocene)—The Socastee Formation, like the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 0.129,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "major coastal Pleistocene unit; marine facies crops out from the coast to just south of Allen, S.C., a width of about 30 km; redefined in this report; type locality on the lower Waccamaw River",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Allen, S.C., a width of about 30 km. The surface in much of the area is",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "contacts": {
+    "value": "base of the formation irregular, from about 2 m below msl. to, less commonly, 5 m above m.sl.",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "ranging from about 2 m below msl. to, less commonly, 5 m above m.sl. In",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "maximum surface altitude of 15.2 m in the north and 9.1 m in the south",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "barviers, but I disagree. The Socastee has a maximum surface altitude of 15,2",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR '15,2' read as 15.2; '9.1 m in the south' is on the next line; surface altitudes, not thickness",
+    "normalized": {
+     "min_ft": 29.85564304461942,
+     "max_ft": 49.86876640419947,
+     "values_ft": [
+      49.86876640419947,
+      29.85564304461942
+     ],
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "fossils": {
+    "value": "age about 200,000 years",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The age of the Socastee is about 200,000 years (McCartan and others,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "dating basis for the age"
+   }
+  },
+  {
+   "name": {
+    "value": "Canepatch Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.63,
+    "inferred": false,
+    "locator": null,
+    "quote": "Canepatch Formation (middle Pleistocene)—This unit was originally named by",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "Canepatch",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "Canepatch Formation (middle Pleistocene)—This unit was originally named by",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "rank from the unit name"
+   },
+   "age": {
+    "value": "middle Pleistocene",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Canepatch Formation (middle Pleistocene)—This unit was originally named by",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.129,
+     "older_ma": 0.774,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "restricted to one subsurface shelf facies outcrop along the Intracoastal Waterway at locality WA-20 of DuBar (1971); corals dated at about 450,000 years",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "at locality WA-20 of DuBar (1971). The Canepatch has no known fluvial facies",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "lithology": {
+    "value": "coarse shelly quartz sand about 4.5 m thick",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Canepatch Formation at locality WA-20 is a coarse shelly quartz sand",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "about 4.5 m",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.63,
+    "inferred": false,
+    "locator": null,
+    "quote": "about 4.5 m thick, which lies unconformably over the Waccamaw Formation.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "min_ft": 14.763779527559054,
+     "max_ft": 14.763779527559054,
+     "unit": "m",
+     "approximate": true
+    }
+   },
+   "contacts": {
+    "value": "lies unconformably over the Waccamaw Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "about 4.5 m thick, which lies unconformably over the Waccamaw Formation.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "fossils": {
+    "value": "Anadara ovalis (A. brasiliana and A. ovalis) mollusk subzone of Blackwelder (1981)",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "Canepatch fossils are abundant and belong to the Andora ovalis (A.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR 'Andora ovalis' and 'brasifiana' read as Anadara ovalis and A. brasiliana; unclear"
+   }
+  },
+  {
+   "name": {
+    "value": "Penholoway Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Penholoway Formation (Lower Pleistocene)—The name Penholoway was used in",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Penholoway",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "Penholoway Formation (Lower Pleistocene)—The name Penholoway was used in",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "rank from the unit name"
+   },
+   "age": {
+    "value": "presumed early Pleistocene (older than 760,000 years)",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Formation, but is still presumed to be early Pleistocene (older than 760,000",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.774,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "largely a barrier and backbarrier system, the top of which lies at altitudes between 15 and 21 m above m.s.l.",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "area. The Penholoway is largely a barrier and backbarrier system, the top of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "contacts": {
+    "value": "base ranges from 6 to 9 m above m.s.l.",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Penholoway deposits ranges from 6 to 9 m above m.sl. and commonly lies",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "barrier sands typically about 3 to 4.5 m thick; backbarrier deposits as much as 15 m thick; fluvial facies about 15 m thick",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "barrier system of DuBar (1971). The barrier sands are thin, typically about 3 to 4.5 m thick",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "other thicknesses on later lines",
+    "normalized": {
+     "min_ft": 9.842519685039369,
+     "max_ft": 14.763779527559054,
+     "unit": "m",
+     "approximate": true
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Waccamaw Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Waccamaw Formation (lower Pleistocene)—The type locality of the Waccamaw",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Waccamaw",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "Waccamaw Formation (lower Pleistocene)—The type locality of the Waccamaw",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "rank from the unit name"
+   },
+   "age": {
+    "value": "lower Pleistocene",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Waccamaw Formation (lower Pleistocene)—The type locality of the Waccamaw",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.774,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "type locality a small fossil bed along the Waccamaw River near Conway, S.C.; largely a barrier and backbarrier sequence at altitudes between 21 and 30 m above msl.",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Formation is a small fossil bed lying along the Waccamaw River near Conway,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "barrier sands average about 10.7 m near the Pee Dee River and about 6 m elsewhere",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The thickness of the barrier sands averages about 10.7 m near the Pee Dee",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 19.685039370078737,
+     "max_ft": 35.10498687664042,
+     "values_ft": [
+      35.10498687664042,
+      19.685039370078737
+     ],
+     "unit": "m",
+     "approximate": true
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Bear Bluff Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Bear Bluff Formation (upper Pliocene)—Originally, the Bear Bluff Formation was",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Bear Bluff",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "Bear Bluff Formation (upper Pliocene)—Originally, the Bear Bluff Formation was",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "rank from the unit name"
+   },
+   "age": {
+    "value": "latest Pliocene, about 1.8 to 2.4 m.y. ago",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "deposited about 1.8 to 2.4 my. (million years) ago.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR 'my.' read as m.y.",
+    "normalized": {
+     "younger_ma": 2.58,
+     "older_ma": 5.333,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "leached shelly facies exposed in a large quarry near Cedar Grove, S.C., where channels extend at least 12 m below m.s.l.",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Grove, S.C. Here, the channels, or trenches, extend down at least 12 m below",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "quarry name on the line above"
+   },
+   "thickness": {
+    "value": "barrier facies averages about 4.5 m; fluvial facies maximum about 13 m",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The barrier facies of the Bear Bluff is very thin and averages about 4.5 m",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 14.763779527559054,
+     "max_ft": 42.6509186351706,
+     "values_ft": [
+      14.763779527559054,
+      42.6509186351706
+     ],
+     "unit": "m",
+     "approximate": true
+    }
+   },
+   "depositional_environment": {
+    "value": "barrier, backbarrier, fluvial and marine (shelf) facies; tidal-flat over tidal-inlet deposits in pits near Smithboro, S.C.",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Smithboro, S.C., laminated to thin-bedded, burrowed tidal-flat deposits overlie",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Duplin Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Duplin Formation (lower Pliocene)—DuBar and others (1974) restricted the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Duplin",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "Duplin Formation (lower Pliocene)—DuBar and others (1974) restricted the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "rank from the unit name"
+   },
+   "age": {
+    "value": "early Pliocene; about 2.8 to 3.6 m.y. ago",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "about 2.8 to 3.6 m.y. ago. The magainvertebrate fauna includes Ostrea",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 3.6,
+     "older_ma": 5.333,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "between the Mechanicsville and Orangeburg scarps; shelf facies best exposed at Davis and Bostick Landings on the Pee Dee River (light-gray, fine calcarenite with large pectinoid shells)",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "fossil-tich localities at Davis and Bostick Landings (Cooke, 1936, for example)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "about 21.3 m near the Orangeburg scarp",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Near the Orangeburg scarp, the Duplin Formation is about 21.3 m thick, and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 69.88188976377953,
+     "max_ft": 69.88188976377953,
+     "unit": "m",
+     "approximate": true
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Black Mingo Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Black Mingo Formation (Paleocene)—The Black Mingo Formation underlies most",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Black Mingo",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "Black Mingo Formation (Paleocene)—The Black Mingo Formation underlies most",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "rank from the unit name"
+   },
+   "age": {
+    "value": "Paleocene",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Black Mingo Formation (Paleocene)—The Black Mingo Formation underlies most",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 56.0,
+     "older_ma": 66.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "underlies most of the western part of the Georgetown quadrangle; small outcrops only along the Black River near Rhems and Bryans Crossroads, S.C.",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "only along the Black River near Rhems and Bryans Crossroads, S.C. The",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "contacts": {
+    "value": "contact with the underlying Peedee Formation is sharp (at St. Stephens)",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The contact with the underlying Peedee Formation is sharp, but no coarse",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Peedee Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Peedee Formation (upper Cretaceous}—This formation is exposed in the banks",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Peedee",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "Peedee Formation (upper Cretaceous}—This formation is exposed in the banks",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "rank from the unit name"
+   },
+   "age": {
+    "value": "middle to late Maestrichtian",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Peedee is middle to late Maestrichtian as determined from the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "lithology": {
+    "value": "massive to thick-bedded, dark-gray to gray-green, slightly to very clayey, micaceous, calcareous, glauconitic quartz sand",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "to thick-bedded, dark-gray to gray-green, slightly to very clayey, micaceous,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "best exposed along the Pee Dee River from near Burches Ferry to Hemingway, S.C.",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.63,
+    "inferred": false,
+    "locator": null,
+    "quote": "Hemingway, S.C., a distance of about 40 km. Most of the Peedee is a massive",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "thickness": {
+    "value": "at least 37.4 m in the corehole near Britton Neck",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Peedee is at least 37.4 m thick as measured in the corehole (maN-7é) near",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 122.7034120734908,
+     "max_ft": null,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "fossils": {
+    "value": "Exogyra costata and Belemnitella americana; Globotruncana ganserri foraminifer zone",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Exogyra costata and Belemnitella americana, and a microfaunal suite, which",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "contacts": {
+    "value": "separated from the underlying unit by a reworked zone with abundant phosphatic pebbles; best exposed at Burches Ferry on the Pee Dee River",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.63,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Peedee is separated from the underlying unit by a reworked zone",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "name": {
+    "value": "Black Creek Group",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Creek Formation is raised to group status and divided into three formations, the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Black Creek",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Group",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Creek Formation is raised to group status and divided into three formations, the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "Black Creek Formation raised to group status and divided into the Donoho Creek, Bladen, and Tar Heel Formations; type locality near Darlington, S.C.",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.63,
+    "inferred": false,
+    "locator": null,
+    "quote": "thin beds of black clay and light-yellow sand at its type locality near Darlinaton,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "OCR 'Darlinaton' is Darlington"
+   }
+  },
+  {
+   "name": {
+    "value": "Donoho Creek Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Donoho Creek Formation (upper Cretaceous)—The upper unit of the Black",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Donoho Creek",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "Donoho Creek Formation (upper Cretaceous)—The upper unit of the Black",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "rank from the unit name"
+   },
+   "age": {
+    "value": "upper Cretaceous",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Donoho Creek Formation (upper Cretaceous)—The upper unit of the Black",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 66.0,
+     "older_ma": 100.5,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Black Creek Group",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "included as the upper formation of the Black Creek Group.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "in the Pee Dee River valley, intercalated sands and clays or thin crossbedded sands best exposed at Mars Bluff, followed downstream to Burches Ferry",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "best exposed at Mars Bluff and can be followed intermittently downstream from",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "about 18 m in the corehole near Britton Neck",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.63,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Donoho Creek marine sequences are about 18 m thick in the corehole",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "min_ft": 59.055118110236215,
+     "max_ft": 59.055118110236215,
+     "unit": "m",
+     "approximate": true
+    }
+   },
+   "contacts": {
+    "value": "overlain unconformably by the massive Peedee Formation at Burches Ferry",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Mars Bluff to Burches Ferry, where they are overlain unconformably by the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Bladen Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Bladen Formation (upper Cretaceous)—The Bladen Formation as originally",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Bladen",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "Bladen Formation (upper Cretaceous)—The Bladen Formation as originally",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "rank from the unit name"
+   },
+   "age": {
+    "value": "latest Campanian to earliest Maestrichtian",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The age of the Bladen Formation is latest Campanian to earliest",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 72.1,
+     "older_ma": 83.6,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Black Creek Group",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "raised to group status. As defined in this report, the Bladen Formation consists",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "about 44 m",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "and Pee Dee River valleys. The unit is about 44 m thick.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 144.3569553805774,
+     "max_ft": 144.3569553805774,
+     "unit": "m",
+     "approximate": true
+    }
+   },
+   "description": {
+    "value": "in the Pee Dee valley exposed from the bluff north of Florence to near Hurricane Branch and along Black Creek at Darlington; fossil beds at Hodges Mill near Mullin, S.C.",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Lumber River drainage at Hodges Mill near Mullin, S.C.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Tar Heel Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "ik Tar Heel Formation (upper Cretaceous)—The basal unit of the Black Creek",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Tar Heel",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "ik Tar Heel Formation (upper Cretaceous)—The basal unit of the Black Creek",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "rank from the unit name"
+   },
+   "age": {
+    "value": "early Campanian",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The age of the Tar Heel Formation is early Campanian as determined by",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 79.76666666666667,
+     "older_ma": 83.6,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Black Creek Group",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "ik Tar Heel Formation (upper Cretaceous)—The basal unit of the Black Creek",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "in the Pee Dee valley mainly sandy: thick, red-to-white, typically crossbedded sands and white-to-black, thick-bedded clays; sands under the Sand Hills near Cash, S.C., commonly mapped as Middendorf",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Hills near Cash, S.C., commonly have been mapped as the Middendorf",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "at least 60 m in the Sand Hills area; 55 m in the corehole near Britton Neck",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "In the corehole near Britton Neck, the unit is 55 m thick.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 180.44619422572177,
+     "max_ft": 196.85039370078738,
+     "values_ft": [
+      196.85039370078738,
+      180.44619422572177
+     ],
+     "unit": "m",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Middendorf Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Middendorf Formation (upper Cretaceous)—The Middendort Formation crops out",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Middendorf",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.428,
+    "inferred": true,
+    "locator": null,
+    "quote": "Middendorf Formation (upper Cretaceous)—The Middendort Formation crops out",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "rank from the unit name"
+   },
+   "age": {
+    "value": "Santonian",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "indicates a Santonian age, zone V- of the palynozonal age classification (R.A.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 83.6,
+     "older_ma": 86.3,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "interbedded black-weathering to chocolate-brown or white clayey beds and clayey crossbedded micaceous sands",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "Most of the Middendorf consists of interbedded black-weathering to",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "45 to 60 m in outcrop; nearly 110 m in the Britton Neck corehole",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.63,
+    "inferred": false,
+    "locator": null,
+    "quote": "nearly 110 m thick in the Britton Neck corehole (fig. 2). The sands of the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "min_ft": 147.63779527559055,
+     "max_ft": 196.85039370078738,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "depositional_environment": {
+    "value": "largely deltaic (mainly upper delta-plain facies in outcrop)",
+    "source_id": "ngmdb:10026",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.535,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Middendorf appears to be largely a deltaic deposit (mainly upper delta-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "observations": [
+  {
+   "kind": "core",
+   "label": {
+    "value": "MRN-78",
+    "source_id": "ngmdb:10026",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "A 374-m-deep corehole (MRN-78) near Britton Neck, S.C., penetrated nearly the entire",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "Britton Neck corehole"
+   },
+   "location": {
+    "value": "5.3 km south of Britton Neck, S. C., east of the Pee Dee River in Georgetown 1° x 2° quadrangle",
+    "source_id": "ngmdb:10026",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Figure 2. Lithology, geophysical log, and pollen zones found in the Britton Neck corehole, MRN-78, 5.3 km south of Britton",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "'Neck, S. C., east of the Pee Dee River in Georgetown' continues on the next line"
+   },
+   "total_depth": {
+    "value": "374 m",
+    "source_id": "ngmdb:10026",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "A 374-m-deep corehole (MRN-78) near Britton Neck, S.C., penetrated nearly the entire",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 1227.034120734908,
+     "max_ft": 1227.034120734908,
+     "unit": "m",
+     "approximate": false
+    }
+   },
+   "depth_reference": {
+    "value": "land surface",
+    "source_id": "ngmdb:10026",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": null,
+    "quote": "A 374-m-deep corehole (MRN-78) near Britton Neck, S.C., penetrated nearly the entire",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "depth column of figure 2; assumed below land surface"
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Peedee",
+      "source_id": "ngmdb:10026",
+      "page": 2,
+      "extraction_method": "llm-image",
+      "confidence": 0.6,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2#page=1&viewrect=1413.12,334.08,48,52.8",
+      "quote": "PEEDEE",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p2-150dpi-crop1034_200_1467_560-r1c1",
+       "box": [
+        790,
+        280,
+        890,
+        390
+       ],
+       "dpi": 150,
+       "page_px_box": [
+        2944,
+        696,
+        3044,
+        806
+       ],
+       "pt_box": [
+        1413.12,
+        334.08,
+        1461.12,
+        386.88
+       ],
+       "pdf_sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc"
+      },
+      "text_match": true,
+      "note": "formation column of figure 2"
+     },
+     "top": {
+      "value": "0",
+      "source_id": "ngmdb:10026",
+      "page": 2,
+      "extraction_method": "llm-image",
+      "confidence": 0.336,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2#page=1&viewrect=1120.32,302.88,38.4,14.4",
+      "quote": "0",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p2-150dpi-crop1034_200_1467_560-r1c1",
+       "box": [
+        180,
+        215,
+        260,
+        245
+       ],
+       "dpi": 150,
+       "page_px_box": [
+        2334,
+        631,
+        2414,
+        661
+       ],
+       "pt_box": [
+        1120.32,
+        302.88,
+        1158.72,
+        317.28
+       ],
+       "pdf_sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc",
+       "unclear": true
+      },
+      "text_match": true,
+      "note": "read off the figure 2 depth scale; column headed 'DEPTH, IN METERS' but numbers fit feet (374-m hole), so the unit is uncertain"
+     },
+     "bottom": {
+      "value": "about 119",
+      "source_id": "ngmdb:10026",
+      "page": 2,
+      "extraction_method": "llm-image",
+      "confidence": 0.336,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2#page=1&viewrect=1348.32,439.68,117.6,14.4",
+      "quote": "boundary at about 119",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p2-150dpi-crop1034_200_1467_560-r1c1",
+       "box": [
+        655,
+        500,
+        900,
+        530
+       ],
+       "dpi": 150,
+       "page_px_box": [
+        2809,
+        916,
+        3054,
+        946
+       ],
+       "pt_box": [
+        1348.32,
+        439.68,
+        1465.92,
+        454.08
+       ],
+       "pdf_sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc",
+       "unclear": true
+      },
+      "note": "read off the figure 2 depth scale; column headed 'DEPTH, IN METERS' but numbers fit feet (374-m hole), so the unit is uncertain"
+     }
+    },
+    {
+     "unit": {
+      "value": "Donoho Creek",
+      "source_id": "ngmdb:10026",
+      "page": 2,
+      "extraction_method": "llm-image",
+      "confidence": 0.6,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2#page=1&viewrect=1413.12,458.88,48,86.4",
+      "quote": "DONOHO CREEK",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p2-150dpi-crop1034_200_1467_560-r1c1",
+       "box": [
+        790,
+        540,
+        890,
+        720
+       ],
+       "dpi": 150,
+       "page_px_box": [
+        2944,
+        956,
+        3044,
+        1136
+       ],
+       "pt_box": [
+        1413.12,
+        458.88,
+        1461.12,
+        545.28
+       ],
+       "pdf_sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc"
+      },
+      "text_match": true,
+      "note": "formation column of figure 2"
+     },
+     "top": {
+      "value": "about 119",
+      "source_id": "ngmdb:10026",
+      "page": 2,
+      "extraction_method": "llm-image",
+      "confidence": 0.336,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2#page=1&viewrect=1348.32,439.68,117.6,14.4",
+      "quote": "boundary at about 119",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p2-150dpi-crop1034_200_1467_560-r1c1",
+       "box": [
+        655,
+        500,
+        900,
+        530
+       ],
+       "dpi": 150,
+       "page_px_box": [
+        2809,
+        916,
+        3054,
+        946
+       ],
+       "pt_box": [
+        1348.32,
+        439.68,
+        1465.92,
+        454.08
+       ],
+       "pdf_sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc",
+       "unclear": true
+      },
+      "note": "read off the figure 2 depth scale; column headed 'DEPTH, IN METERS' but numbers fit feet (374-m hole), so the unit is uncertain"
+     },
+     "bottom": {
+      "value": "about 216",
+      "source_id": "ngmdb:10026",
+      "page": 2,
+      "extraction_method": "llm-image",
+      "confidence": 0.336,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2#page=1&viewrect=1348.32,552.96,117.6,14.4",
+      "quote": "boundary at about 216",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p2-150dpi-crop1034_457_1467_2273-r1c1",
+       "box": [
+        655,
+        200,
+        900,
+        230
+       ],
+       "dpi": 150,
+       "page_px_box": [
+        2809,
+        1152,
+        3054,
+        1182
+       ],
+       "pt_box": [
+        1348.32,
+        552.96,
+        1465.92,
+        567.36
+       ],
+       "pdf_sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc",
+       "unclear": true
+      },
+      "note": "read off the figure 2 depth scale; column headed 'DEPTH, IN METERS' but numbers fit feet (374-m hole), so the unit is uncertain"
+     }
+    },
+    {
+     "unit": {
+      "value": "Bladen",
+      "source_id": "ngmdb:10026",
+      "page": 2,
+      "extraction_method": "llm-image",
+      "confidence": 0.6,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2#page=1&viewrect=1413.12,620.16,43.2,48",
+      "quote": "BLADEN",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p2-150dpi-crop1034_457_1467_2273-r1c1",
+       "box": [
+        790,
+        340,
+        880,
+        440
+       ],
+       "dpi": 150,
+       "page_px_box": [
+        2944,
+        1292,
+        3034,
+        1392
+       ],
+       "pt_box": [
+        1413.12,
+        620.16,
+        1456.32,
+        668.16
+       ],
+       "pdf_sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc"
+      },
+      "text_match": true,
+      "note": "formation column of figure 2"
+     },
+     "top": {
+      "value": "about 216",
+      "source_id": "ngmdb:10026",
+      "page": 2,
+      "extraction_method": "llm-image",
+      "confidence": 0.336,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2#page=1&viewrect=1348.32,552.96,117.6,14.4",
+      "quote": "boundary at about 216",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p2-150dpi-crop1034_457_1467_2273-r1c1",
+       "box": [
+        655,
+        200,
+        900,
+        230
+       ],
+       "dpi": 150,
+       "page_px_box": [
+        2809,
+        1152,
+        3054,
+        1182
+       ],
+       "pt_box": [
+        1348.32,
+        552.96,
+        1465.92,
+        567.36
+       ],
+       "pdf_sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc",
+       "unclear": true
+      },
+      "note": "read off the figure 2 depth scale; column headed 'DEPTH, IN METERS' but numbers fit feet (374-m hole), so the unit is uncertain"
+     },
+     "bottom": {
+      "value": "about 362",
+      "source_id": "ngmdb:10026",
+      "page": 2,
+      "extraction_method": "llm-image",
+      "confidence": 0.336,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2#page=1&viewrect=1348.32,721.92,117.6,14.4",
+      "quote": "boundary at about 362",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p2-150dpi-crop1034_457_1467_2273-r1c1",
+       "box": [
+        655,
+        552,
+        900,
+        582
+       ],
+       "dpi": 150,
+       "page_px_box": [
+        2809,
+        1504,
+        3054,
+        1534
+       ],
+       "pt_box": [
+        1348.32,
+        721.92,
+        1465.92,
+        736.32
+       ],
+       "pdf_sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc",
+       "unclear": true
+      },
+      "note": "read off the figure 2 depth scale; column headed 'DEPTH, IN METERS' but numbers fit feet (374-m hole), so the unit is uncertain"
+     }
+    },
+    {
+     "unit": {
+      "value": "Tar Heel",
+      "source_id": "ngmdb:10026",
+      "page": 2,
+      "extraction_method": "llm-image",
+      "confidence": 0.6,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2#page=1&viewrect=1413.12,836.16,43.2,67.2",
+      "quote": "TAR HEEL",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p2-150dpi-crop1034_457_1467_2273-r1c1",
+       "box": [
+        790,
+        790,
+        880,
+        930
+       ],
+       "dpi": 150,
+       "page_px_box": [
+        2944,
+        1742,
+        3034,
+        1882
+       ],
+       "pt_box": [
+        1413.12,
+        836.16,
+        1456.32,
+        903.36
+       ],
+       "pdf_sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc"
+      },
+      "text_match": true,
+      "note": "formation column of figure 2"
+     },
+     "top": {
+      "value": "about 362",
+      "source_id": "ngmdb:10026",
+      "page": 2,
+      "extraction_method": "llm-image",
+      "confidence": 0.336,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2#page=1&viewrect=1348.32,721.92,117.6,14.4",
+      "quote": "boundary at about 362",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p2-150dpi-crop1034_457_1467_2273-r1c1",
+       "box": [
+        655,
+        552,
+        900,
+        582
+       ],
+       "dpi": 150,
+       "page_px_box": [
+        2809,
+        1504,
+        3054,
+        1534
+       ],
+       "pt_box": [
+        1348.32,
+        721.92,
+        1465.92,
+        736.32
+       ],
+       "pdf_sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc",
+       "unclear": true
+      },
+      "note": "read off the figure 2 depth scale; column headed 'DEPTH, IN METERS' but numbers fit feet (374-m hole), so the unit is uncertain"
+     },
+     "bottom": {
+      "value": "about 590",
+      "source_id": "ngmdb:10026",
+      "page": 2,
+      "extraction_method": "llm-image",
+      "confidence": 0.336,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2#page=1&viewrect=1348.32,984,117.6,14.4",
+      "quote": "boundary at about 590",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p2-150dpi-crop1034_457_1467_2273-r1c1",
+       "box": [
+        655,
+        1098,
+        900,
+        1128
+       ],
+       "dpi": 150,
+       "page_px_box": [
+        2809,
+        2050,
+        3054,
+        2080
+       ],
+       "pt_box": [
+        1348.32,
+        984.0,
+        1465.92,
+        998.4
+       ],
+       "pdf_sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc",
+       "unclear": true
+      },
+      "note": "read off the figure 2 depth scale; column headed 'DEPTH, IN METERS' but numbers fit feet (374-m hole), so the unit is uncertain"
+     }
+    },
+    {
+     "unit": {
+      "value": "Middendorf",
+      "source_id": "ngmdb:10026",
+      "page": 2,
+      "extraction_method": "llm-image",
+      "confidence": 0.6,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2#page=1&viewrect=1413.12,1153.44,43.2,72",
+      "quote": "MIDDENDORF",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p2-150dpi-crop1034_457_1467_2273-r2c1",
+       "box": [
+        790,
+        230,
+        880,
+        380
+       ],
+       "dpi": 150,
+       "page_px_box": [
+        2944,
+        2403,
+        3034,
+        2553
+       ],
+       "pt_box": [
+        1413.12,
+        1153.44,
+        1456.32,
+        1225.44
+       ],
+       "pdf_sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc"
+      },
+      "text_match": true,
+      "note": "formation column of figure 2"
+     },
+     "top": {
+      "value": "about 590",
+      "source_id": "ngmdb:10026",
+      "page": 2,
+      "extraction_method": "llm-image",
+      "confidence": 0.336,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2#page=1&viewrect=1348.32,984,117.6,14.4",
+      "quote": "boundary at about 590",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p2-150dpi-crop1034_457_1467_2273-r1c1",
+       "box": [
+        655,
+        1098,
+        900,
+        1128
+       ],
+       "dpi": 150,
+       "page_px_box": [
+        2809,
+        2050,
+        3054,
+        2080
+       ],
+       "pt_box": [
+        1348.32,
+        984.0,
+        1465.92,
+        998.4
+       ],
+       "pdf_sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc",
+       "unclear": true
+      },
+      "note": "read off the figure 2 depth scale; column headed 'DEPTH, IN METERS' but numbers fit feet (374-m hole), so the unit is uncertain"
+     },
+     "bottom": {
+      "value": "about 937",
+      "source_id": "ngmdb:10026",
+      "page": 2,
+      "extraction_method": "llm-image",
+      "confidence": 0.336,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2#page=1&viewrect=1348.32,1385.28,117.6,14.4",
+      "quote": "boundary at about 937",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p2-150dpi-crop1034_457_1467_2273-r2c1",
+       "box": [
+        655,
+        713,
+        900,
+        743
+       ],
+       "dpi": 150,
+       "page_px_box": [
+        2809,
+        2886,
+        3054,
+        2916
+       ],
+       "pt_box": [
+        1348.32,
+        1385.28,
+        1465.92,
+        1399.68
+       ],
+       "pdf_sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc",
+       "unclear": true
+      },
+      "note": "read off the figure 2 depth scale; column headed 'DEPTH, IN METERS' but numbers fit feet (374-m hole), so the unit is uncertain"
+     }
+    },
+    {
+     "unit": {
+      "value": "Cape Fear",
+      "source_id": "ngmdb:10026",
+      "page": 2,
+      "extraction_method": "llm-image",
+      "confidence": 0.6,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2#page=1&viewrect=1413.12,1527.84,43.2,62.4",
+      "quote": "CAPE FEAR",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p2-150dpi-crop1034_457_1467_2273-r2c1",
+       "box": [
+        790,
+        1010,
+        880,
+        1140
+       ],
+       "dpi": 150,
+       "page_px_box": [
+        2944,
+        3183,
+        3034,
+        3313
+       ],
+       "pt_box": [
+        1413.12,
+        1527.84,
+        1456.32,
+        1590.24
+       ],
+       "pdf_sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc"
+      },
+      "text_match": true,
+      "note": "formation column of figure 2"
+     },
+     "top": {
+      "value": "about 937",
+      "source_id": "ngmdb:10026",
+      "page": 2,
+      "extraction_method": "llm-image",
+      "confidence": 0.336,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2#page=1&viewrect=1348.32,1385.28,117.6,14.4",
+      "quote": "boundary at about 937",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p2-150dpi-crop1034_457_1467_2273-r2c1",
+       "box": [
+        655,
+        713,
+        900,
+        743
+       ],
+       "dpi": 150,
+       "page_px_box": [
+        2809,
+        2886,
+        3054,
+        2916
+       ],
+       "pt_box": [
+        1348.32,
+        1385.28,
+        1465.92,
+        1399.68
+       ],
+       "pdf_sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc",
+       "unclear": true
+      },
+      "note": "read off the figure 2 depth scale; column headed 'DEPTH, IN METERS' but numbers fit feet (374-m hole), so the unit is uncertain"
+     },
+     "bottom": {
+      "value": "about 1180-1190",
+      "source_id": "ngmdb:10026",
+      "page": 2,
+      "extraction_method": "llm-image",
+      "confidence": 0.336,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=20649_10026_2#page=1&viewrect=1350.72,1667.52,52.8,28.8",
+      "quote": "???? above + symbols at about 1180-1190",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p2-150dpi-crop1034_457_1467_2273-r3c1",
+       "box": [
+        660,
+        80,
+        770,
+        140
+       ],
+       "dpi": 150,
+       "page_px_box": [
+        2814,
+        3474,
+        2924,
+        3534
+       ],
+       "pt_box": [
+        1350.72,
+        1667.52,
+        1403.52,
+        1696.32
+       ],
+       "pdf_sha256": "c74cdba09a14f1ed3b88ef9d9507ce29a7efc3576350673623976be8ed583cbc",
+       "unclear": true
+      },
+      "note": "read off the figure 2 depth scale; column headed 'DEPTH, IN METERS' but numbers fit feet (374-m hole), so the unit is uncertain; base drawn queried (? ? ? ?) above basement (+)"
+     }
+    }
+   ]
+  }
+ ],
+ "structures": [],
+ "groundwater": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Colquhoun, D.J., 1974, Cyclic surficial stratigraphic units of the middle and lower Coastal Plains, central South Carolina, in Oaks, R.Q., Jr., and DuBar, J.R., eds., Post-Miocene stratigraphy central and southern Atlantic Coastal Plain: Logan, Utah, Utah State University Press, p. 179-190.",
+    "source_id": "ngmdb:10026",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Colquhoun, D.J., 1974, Cyclic surficial stratigraphic units of the middle and lower Coastal Plains",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR of a multi-column sheet; citation assembled from adjacent lines"
+   }
+  },
+  {
+   "citation": {
+    "value": "Cooke, C.W., 1936, Geology of the Coastal Plain of South Carolina: U.S. Geological Survey Bulletin 867, 196 p., scale 1:500,000.",
+    "source_id": "ngmdb:10026",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cooke, C.W., 1936, Geology of the Coastal Plain of South Carolina: U.S. Geological Survey",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR of a multi-column sheet; citation assembled from adjacent lines"
+   }
+  },
+  {
+   "citation": {
+    "value": "DuBar, J.R., 1971, Neogene stratigraphy of the lower Coastal Plain of the Carolinas: Atlantic Coastal Plain Geological Association, 12th Annual Field Conference, Myrtle Beach, S.C., 1971 [Guidebook], 128 p.",
+    "source_id": "ngmdb:10026",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "DuBar, J.R., 1971, Neogene stratigraphy of the lower Coastal Plain of the Carolinas: Atlantic",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR of a multi-column sheet; citation assembled from adjacent lines"
+   }
+  },
+  {
+   "citation": {
+    "value": "DuBar, J.R., Johnson, H.S., Jr., Thom, Bruce, and Hatchel, W.O., 1974, Neogene stratigraphy and morphology, south flank of the Cape Fear arch, North and South Carolina, in Oaks, R.Q., Jr., and DuBar, J.R., eds., Post-Miocene stratigraphy central and southern Atlantic Coastal Plain: Logan, Utah, Utah State University Press, p. 139-173.",
+    "source_id": "ngmdb:10026",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "and morphology, south flank of the Cape Fear arch, North and South Carolina, in Oaks",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR of a multi-column sheet; citation assembled from adjacent lines"
+   }
+  },
+  {
+   "citation": {
+    "value": "Gohn, G.S., Hazel, J.E., Bybell, L.M., and Edwards, L.E., 1983, The Fishburne Formation (lower Eocene), a newly defined subsurface unit in the South Carolina Coastal Plain: U.S. Geological Survey Bulletin 1537-C, p. C1-C16.",
+    "source_id": "ngmdb:10026",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Eocene), a newly defined subsurface unit in the South Carolina Coastal Plain: U.S.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR of a multi-column sheet; citation assembled from adjacent lines"
+   }
+  },
+  {
+   "citation": {
+    "value": "McCartan, Lucy, Lemon, E.M., Jr., and Weems, R.E., 1984, Geologic map of the area between Charleston and Orangeburg, South Carolina: U.S. Geological Survey Miscellaneous Investigations Series Map I-1472, scale 1:250,000.",
+    "source_id": "ngmdb:10026",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Charleston and Orangeburg, South Carolina: U.S. Geological Survey Miscellaneous",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR of a multi-column sheet; citation assembled from adjacent lines"
+   }
+  },
+  {
+   "citation": {
+    "value": "Siple, G.E., 1959, Guidebook for South Carolina Coastal Plain field trip of the Carolina Geological Society, November 16-17, 1957: South Carolina State Development Board Division of Geology Bulletin 24, 27 p.",
+    "source_id": "ngmdb:10026",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "Siple, G.E., 1959, Guidebook for South Carolina Coasal Plain field trip of the Carolina",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "OCR of a multi-column sheet; citation assembled from adjacent lines"
+   }
+  },
+  {
+   "citation": {
+    "value": "Van Nieuwenhuise, D.S., and Colquhoun, D.J., 1982, The Paleocene-lower Eocene Black Mingo Group of the east-central Coastal Plain of South Carolina: South Carolina Division of Geology Bulletin, v. 26, no. 2, p. 46-67.",
+    "source_id": "ngmdb:10026",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Van Nieuwenhuise, D.S., and Colquhoun, D.J., 1982, The Paleocene-lower Eocene Black Mingo",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR of a multi-column sheet; citation assembled from adjacent lines"
+   }
+  },
+  {
+   "citation": {
+    "value": "Owens, J.P., and Gohn, G.S., 1985, Depositional history of the Cretaceous series in the United States Atlantic Coastal Plain; stratigraphy, paleoenvironments, and tectonic controls of sedimentation, in Poag, C.W., ed., Geologic evolution of the United States Atlantic margin: New York, N.Y., Van Nostrand Reinhold Co., p. 25-86.",
+    "source_id": "ngmdb:10026",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Owens, J.P., and Gohn, G.S., 1985, Depositional history o! the Cretaceous series in the United",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR of a multi-column sheet; citation assembled from adjacent lines"
+   }
+  },
+  {
+   "citation": {
+    "value": "Sohl, N.F., and Christopher, R.A., 1983, The Black Creek-Peedee formational contact (Upper Cretaceous) in the Cape Fear River region of North Carolina: U.S. Geological Survey Professional Paper 1285, 37 p.",
+    "source_id": "ngmdb:10026",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": null,
+    "quote": "Sohl, N.F., and Christopher, R.A., 1983, The Black CreekPeedee formational contact (Upper",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR of a multi-column sheet; citation assembled from adjacent lines"
+   }
+  }
+ ],
+ "surfaces": [],
+ "contours": [],
+ "sections": [],
+ "water_tests": [],
+ "rock_tests": []
+}
