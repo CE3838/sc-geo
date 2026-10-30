@@ -474,10 +474,12 @@ def run(out_dir: Path, checkpoint_dir: Path, log: Callable[..., None] = print) -
 
 
 def reapply_corrections(out_dir: Path = CATALOG, log: Callable[..., None] = print) -> dict:
-    """Apply config/catalog_corrections.json to the committed catalog, offline (no requests)."""
+    """Apply config/catalog_exclude.json and catalog_corrections.json to the committed catalog, offline (no requests)."""
     out = Path(out_dir)
     records = json.loads((out / "sc_catalog.json").read_text())
     retrieved_at = json.loads((out / "summary.json").read_text())["retrieved_at"]
+    drop = excluded_ids()
+    records = [r for r in records if r["id"] not in drop]
     stale = apply_corrections(records, load_corrections())
     for c in stale:
         log(f"not applied: {c['id']} {c['field']}")
@@ -499,7 +501,7 @@ def main() -> None:
     parser.add_argument("--out", type=Path, default=CATALOG)
     parser.add_argument("--checkpoints", type=Path, default=ROOT / ".checkpoints" / "catalog")
     parser.add_argument("--apply-corrections", action="store_true",
-                        help="only apply config/catalog_corrections.json to the catalog in --out (no network)")
+                        help="only apply config/catalog_exclude.json and catalog_corrections.json to the catalog in --out (no network)")
     args = parser.parse_args()
     if args.apply_corrections:
         reapply_corrections(args.out)
