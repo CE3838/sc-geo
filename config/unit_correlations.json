@@ -1,0 +1,95 @@
+{
+ "about": "Units that different maps name differently. merge/correlate.py gives each member (source and map symbol) the shared name, age and GeoMaterial before the overlay, so the same deposit draws, colours and scores alike on both sides of a map edge. The symbol stays as mapped; the mapped values are kept in as_mapped; every changed field is flagged inferred. basis is the unit whose name and age are followed; reason says why the units are the same.",
+ "correlations": [
+  {
+   "name": "Alluvium",
+   "age": "Holocene",
+   "geomaterial": "Alluvial sediment, mostly coarse-grained",
+   "members": [
+    {
+     "source": "usgs-sgmc",
+     "map_unit": "Qavs"
+    }
+   ],
+   "basis": {
+    "source": "ngmdb:100396",
+    "map_unit": "Qal"
+   },
+   "reason": "same valley-floor deposit: the 1:24,000 map's alluvium (sand and clayey sand along drainage courses, veneered by organic mud and peat) meets SGMC's Alluvial Valley Swamp (fluvial sand and gravel grading up into fine sand and silt, local peat) along the same valleys; SGMC's age is Quaternary undivided",
+   "inferred": true
+  },
+  {
+   "name": "Salt-marsh deposits",
+   "age": "Holocene",
+   "geomaterial": "Coastal zone sediment, mostly fine-grained",
+   "members": [
+    {
+     "source": "usgs-sgmc",
+     "map_unit": "Qtm"
+    }
+   ],
+   "names": [
+    "Saltmarsh deposits",
+    "Salt-marsh deposits",
+    "Tidal-marsh deposits"
+   ],
+   "basis": {
+    "source": "ngmdb:77444",
+    "map_unit": "QHsm"
+   },
+   "reason": "same intertidal marsh deposit: the 1:24,000 maps' saltmarsh and tidal-marsh deposits (soft, organic silty clay and clayey sand under marsh grass, Holocene by carbon-14 dating) meet SGMC's Tidal Marsh (peat and muck along tidal margins of estuaries and back bays, with silt, fine sand and clay levees) along the same marshes; one unit spelled three ways on the detailed maps; SGMC's age is Quaternary undivided",
+   "inferred": true
+  },
+  {
+   "name": "Freshwater swamp deposits",
+   "age": "Holocene and late Pleistocene",
+   "geomaterial": "Peat and muck",
+   "members": [
+    {
+     "source": "usgs-sgmc",
+     "map_unit": "Qsw"
+    }
+   ],
+   "basis": {
+    "source": "ngmdb:100396",
+    "map_unit": "Qhm"
+   },
+   "reason": "same deposit: the 1:24,000 map's freshwater swamp deposits (organic muds and peats along impounded streams, pocosins and Carolina bays) meet SGMC's Swamp (cypress swamps in low-lying, poorly drained bay deposits, thick peat and buried wood); SGMC's age is Quaternary undivided",
+   "inferred": true
+  },
+  {
+   "name": "Water",
+   "names": [
+    "water",
+    "Bodies of water"
+   ],
+   "reason": "open water named two ways on different maps; drawn as one Water class whatever date a map gives it",
+   "inferred": true
+  },
+  {
+   "name": "Fluvial deposits",
+   "names": [
+    "Fluvial desposits"
+   ],
+   "reason": "spelling: 'desposits' on some 1:24,000 maps for the unit spelled 'Fluvial deposits' on the adjoining maps with the same symbol (QPjr)",
+   "inferred": true
+  },
+  {
+   "name": "Estuarine and marine deposits",
+   "names": [
+    "Estuarian and marine deposits"
+   ],
+   "reason": "spelling: 'Estuarian' for the unit spelled 'Estuarine and marine deposits' on the adjoining maps with the same symbol (QPsbem)",
+   "inferred": true
+  }
+ ],
+ "keep_as_mapped": [
+  {
+   "names": [
+    "Barrier-island deposits",
+    "Barrier island deposits"
+   ],
+   "reason": "the repository owner's decision (2026-10-28): keep the barrier-island deposits wording as mapped; not correlated with strand deposits or other names for the same symbol"
+  }
+ ]
+}

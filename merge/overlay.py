@@ -24,7 +24,7 @@ MIN_AREA = 1e-10  # about 1 square meter in degrees; smaller slivers are dropped
 
 KEEP = ("source", "source_title", "citation", "scale", "year", "map_unit", "name", "full_name", "formation",
         "unit_name", "age", "age_ma", "geomaterial", "lith", "description", "identity_confidence", "source_id",
-        "locator", "extraction_method", "confidence", "inferred_fields", "name_source")
+        "locator", "extraction_method", "confidence", "inferred_fields", "name_source", "as_mapped", "correlation")
 
 
 def _clean(geom):

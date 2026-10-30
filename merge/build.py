@@ -39,7 +39,7 @@ from pathlib import Path
 from typing import Callable
 
 from harvest.net import contact_headers
-from merge import classes, references, scgs, sources
+from merge import classes, correlate, references, scgs, sources
 from model import gisio
 from model.units import Lexicon
 
@@ -301,6 +301,8 @@ def run(normalize_only: bool = False, log: Callable[..., None] = print) -> dict:
     else:
         report.append({"id": "usgs-sgmc", "status": "skipped", "reason": "run python -m harvest.sgmc first"})
     features += sgmc
+    # Units that different maps name differently (config/unit_correlations.json), inferred.
+    features = correlate.apply(features, correlate.load())
     refs = references.write(catalog, OUT / "references.json")
     log(f"{refs.name}: {refs.stat().st_size // 1000} kB")
     summary = {"built_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -331,7 +333,7 @@ def run(normalize_only: bool = False, log: Callable[..., None] = print) -> dict:
 POLY_FIELDS = ("source", "map_unit", "layer", "identity_confidence", "locator", "extraction_method", "confidence",
                "conf", "conf_base", "agreement", "n_sources", "research_support", "alternatives", "derived_inferred")
 UNIT_FIELDS = ("source", "map_unit", "name", "full_name", "formation", "unit_name", "canonical", "age", "age_ma",
-               "geomaterial", "lith", "description", "inferred_fields", "name_source")
+               "geomaterial", "lith", "description", "inferred_fields", "name_source", "as_mapped", "correlation")
 SOURCE_FIELDS = ("title", "citation", "scale", "year")
 
 
@@ -346,7 +348,7 @@ def split_tables(features: list[dict]) -> tuple[list[dict], dict, dict]:
         p = f["properties"]
         key = f"{p['source']}|{p['map_unit']}"
         lean = {k: p.get(k) for k in POLY_FIELDS}
-        lean.update(unit=key, age_class=classes.age_class(p.get("age_ma")), material_class=classes.material_class(p))
+        lean.update(unit=key, age_class=classes.display_age_class(p), material_class=classes.material_class(p))
         polys.append({"type": "Feature", "properties": lean,
                       "geometry": {"type": f["geometry"]["type"], "coordinates": _round(f["geometry"]["coordinates"])}})
         units.setdefault(key, {k: p.get(k) for k in UNIT_FIELDS})
