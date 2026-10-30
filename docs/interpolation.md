@@ -1,43 +1,90 @@
 # Interpolating subsurface surfaces
 
 Notes for the cross-section and plane viewer: how `model/surfaces.py` builds a
-surface today, how it does on the points already extracted, what the literature
-suggests for Coastal Plain surfaces, and what to change, in order. Nothing here
-changes `surfaces.build()`; each change needs the owner's approval first.
+surface, how it does on the points already extracted, what the literature
+suggests for Coastal Plain surfaces, and what to change, in order. Sections
+2–5 are the study that led to the current method (approved 2026-10-30: planar
+trend kriging as a candidate, no variogram-fit gate, tops stacked by geologic
+age); section 1 describes the method now in `build()` and section 7 measures
+it against the one it replaced.
 
-Reproduce the numbers (pure Python, about 15 minutes):
+Reproduce the numbers (pure Python; about 15 minutes with the method table,
+seconds without it):
 
 ```sh
-python -m model.surface_methods --json cv.json     # data/extracted -> leave-one-out table per surface
+python -m model.surface_methods --json cv.json     # data/extracted -> leave-one-out table per surface + stacking check
+python -m model.surface_methods --no-compare        # stacking check only (crossings before/after model/stack.py)
 ```
 
 The experimental methods live in `model/surface_methods.py` (tests in
-`tests/test_surface_methods.py`) and are not used by the viewer or the build.
+`tests/test_surface_methods.py`) and are not used by the viewer or the build;
+`surfaces.UniversalKriging` is shared, so the study measures what `build()` runs.
 
 ## 1. The current method
 
 `surfaces.build(points)` takes elevations in feet NAVD88 at SC State Plane
-coordinates (feet):
+coordinates (feet) and tries three candidates on the same points:
 
 * **Ordinary kriging (OK)** with 10 or more points. Empirical semivariogram in
   12 lag bins up to half the largest distance; spherical, exponential and
   gaussian models fitted by weighted least squares; the model with the lowest
   leave-one-out (LOO) RMSE is kept. LOO errors come exactly from one inverse
   of the kriging matrix (Dubrule, 1983).
+* **Trend kriging** (universal kriging with a planar drift), same minimum. The
+  variogram is fitted to the residuals of a least-squares plane (regression
+  kriging); the kriging estimates the drift itself (generalized least
+  squares), and that drift's dip is reported in `provenance()["trend"]`:
+  `dip_ft_per_mile`, `dip_azimuth_deg` (down-dip, clockwise from north),
+  `dip_direction` (quadrant bearing), `variance_explained` by a
+  least-squares plane, and `used`. A quadratic drift is not a candidate
+  (finding 3).
 * **Fallback**: natural neighbour (Sibson) inside the convex hull, IDW
-  (power 2) outside it; used with fewer than 10 points, a poor fit (r² < 0.3),
-  almost no structure (partial sill < 5% of the sill), or when kriging
-  cross-validates more than 10% worse than the fallback.
-* **Uncertainty**: kriging standard deviation scaled by √MSSE from LOO
-  (bounded 0.25–20) so it matches the errors LOO saw; the fallback reports
-  its LOO RMSE. Never below 0.3 ft.
+  (power 2) outside it.
+
+**Selection.** The kriging candidate with the lower LOO RMSE is kept unless its
+LOO RMSE is more than 10% above the fallback's (`cv_margin`; the margin is
+about LOO error only and favours kriging, whose uncertainty grows away from
+the data). There is no variogram-fit gate any more: neither r² nor the share
+of nugget rejects kriging (finding 2). The fallback is used with fewer than
+10 points or when no variogram model with a positive partial sill can be
+fitted. `provenance()["candidates"]` lists every candidate's LOO RMSE and
+which one was chosen; `reason` says why in words.
+
+* **Uncertainty**: kriging standard deviation scaled by √MSSE of the chosen
+  method's LOO (bounded 0.25–20) so it matches the errors LOO saw; the
+  fallback reports its LOO RMSE. Never below 0.3 ft.
 * **Limits**: no estimate beyond 3 × the median nearest-neighbour spacing;
   estimates outside the hull are flagged `extrapolated`. Every estimate is an
   inference citing the points it used.
 
-Each surface is built on its own. Nothing ties the top of one unit to the
-units above or below it, and the regional dip is left for the variogram to
-absorb.
+**Stacking** (`model/stack.py`). `stack.stack(tops, lexicon)` takes unit-top
+surfaces built separately and returns estimates with the order enforced:
+
+* *Order by geologic age.* Each unit's age is its Geolex entry
+  (`data/lexicon/geolex_sc.json`) read by `units.finest_age_range`, which
+  keeps the most specific intervals the entry names (Geolex writes
+  "Tertiary / Miocene, early", which `age_range` would read as the whole
+  Tertiary). A unit is younger than another when its age range lies wholly
+  at or above the other's; then its top must lie at or above the other's
+  top. Overlapping ranges are not ordered against each other; units with no
+  known age are not moved; both are reported (`unordered`, `unknown_age`).
+  If 3 or more logged holes (`surface_methods.unit_order`) show the older
+  unit above the younger, more often than the other way, the pair is not
+  enforced and is reported in `conflicts`.
+* *Enforcement.* At each place, the units' values are moved the least
+  possible, weighted by inverse variance, to satisfy every age constraint at
+  once (weighted least-squares projection, Dykstra's algorithm). Two units
+  that cross both move to their inverse-variance weighted mean (zero
+  thickness there; the less certain one moves more). The preferred design,
+  a reference surface plus non-negative interpolated thicknesses
+  (isochores), was not used: it needs each unit's thickness, and where it is
+  absent, in the same holes, and the logged tops do not record absence.
+* *Uncertainty after stacking.* A moved value takes the largest ± among the
+  units it ends level with (connected through active constraints), never
+  less than its own: reconciling two estimates that disagree does not make
+  either better known. `value_unstacked`, `std_unstacked`, `moved_ft`,
+  `adjusted` and `adjustment_reason` are kept on every estimate, which is
+  inferred.
 
 ## 2. The data used for the test
 
@@ -74,7 +121,7 @@ the mean error; **MSSE** (mean squared error ÷ kriging variance, ideally 1)
 shows whether the raw kriging variance is honest before build() calibrates
 it. Methods:
 
-* **Current**: exactly what `build()` returns (kriging or its fallback).
+* **Current**: exactly what `build()` returned before the change (ordinary kriging or its fallback, with the r² gate).
 * **OK**: ordinary kriging, best of three variogram models by LOO, with no
   fit-quality gate.
 * **UK planar / quadratic**: universal kriging with a linear or quadratic
@@ -196,10 +243,12 @@ as expected.
    OK and the fallback with the existing 10% margin. Measured gain 2–18% on
    every subsurface top; the code and its exact LOO are in
    `model/surface_methods.py`. Report the fitted dip (ft/mile, direction) in
-   the provenance. *Needs approval: changes default output.*
-2. **Judge kriging by LOO, not by variogram r².** Keep the minimum point count
-   and the "almost all nugget" check, drop the r² < 0.3 rule (Parkers Ferry:
-   12–18% better kriging discarded).
+   the provenance. **Done** (2026-10-30): `trend_kriging` in `build()`, dip in
+   `provenance()["trend"]`; see section 7.
+2. **Judge kriging by LOO, not by variogram r².** **Done** (2026-10-30): both
+   the r² < 0.3 rule and the "almost all nugget" check were dropped (approved:
+   "don't use the fit rule, accept more results"); the minimum point count
+   and the 10% LOO margin against the fallback stay.
 3. **Stack surfaces before drawing cross sections.** Build the uppermost
    surface (or use the 3DEP ground surface), then krige each unit's thickness
    (zero where a hole shows it absent, never negative) and subtract down the
@@ -207,6 +256,11 @@ as expected.
    lower = min(lower, upper) and flag those nodes inferred with the larger
    of the two uncertainties. Finding 5 shows this is needed before any
    section is drawn.
+   **Done** (2026-10-30) as `model/stack.py`, ordered by geologic age (Geolex)
+   rather than by the holes, with an inverse-variance weighted projection
+   instead of a plain min() (it reduces to lower = upper at a crossing, with
+   the less certain surface moving more) and the larger uncertainty kept.
+   Isochores remain the better design once absences are logged.
 4. **Use structure-contour maps as soft data or drift, not as dense points.**
    Resample digitized contours to about the well spacing, give them a nugget
    from the map's scale weight and contour interval (half the interval is a
@@ -239,6 +293,77 @@ as expected.
 * Alternatives: where independent sources disagree (extract/agreement.py),
   both values shown with citations, never averaged silently.
 * Vertical datum NAVD88 throughout, feet, with vertical exaggeration stated.
+
+## 7. The new method on the same points
+
+`build()` after the change against `build()` before it (the "Current" column
+of section 3), on the same tops. RMSE, bias and MSSE are those of the method
+each version chose. Dip is the trend kriging's generalized least-squares
+drift (down-dip direction); "explained" is the share of variance a
+least-squares plane explains.
+
+| Top of | n | Before | After | Change | Bias before → after | MSSE before → after | Dip (ft/mile, toward) | Explained |
+| --- | ---: | --- | --- | ---: | --- | --- | --- | ---: |
+| Runnymede | 60 | 9.79 (kriging) | 9.64 (trend kriging) | −2% | +0.05 → −0.09 | 0.75 → 1.03 | 2.69, S13°E | 89% |
+| Harleyville | 35 | 21.70 (kriging) | 18.71 (trend kriging) | −14% | −0.07 → −1.36 | 1.69 → 1.44 | 2.29, S9°W | 68% |
+| Marks Head | 32 | 11.30 (kriging) | 9.22 (trend kriging) | −18% | +0.61 → +0.03 | 1.66 → 1.23 | 2.40, S27°E | 67% |
+| Parkers Ferry | 26 | 18.55 (natural neighbour, r² 0.26) | 15.24 (trend kriging) | −18% | +0.98 → −1.39 | – → 0.79 | 1.28, S30°W | 17% |
+| Givhans Ferry | 25 | 9.36 (kriging) | 8.63 (trend kriging) | −8% | +0.16 → −0.11 | 0.72 → 1.10 | 2.83, S6°W | 96% |
+| Wando | 19 | 13.59 (kriging) | 12.68 (trend kriging) | −7% | −0.20 → −0.72 | 1.05 → 1.22 | 2.62, S27°E | 55% |
+| Goose Creek | 10 | 21.01 (natural neighbour) | 21.01 (natural neighbour) | 0% | +8.28 → +8.28 | – | – (no variogram fits) | – |
+
+Trend kriging was chosen for all six tops with 19 or more points; on each it
+also beat ordinary kriging, so the r² gate (only Parkers Ferry) and the
+trend both contributed. The fitted dips, 1.3–2.8 ft per mile toward S30°W to
+S27°E, match the regional seaward dip of section 2.
+
+**Crossings.** All seven tops, ordered by Geolex age (younger first): Wando
+(late Pleistocene), Goose Creek (early to middle Pliocene), Marks Head (early
+Miocene), Givhans Ferry and Runnymede (both early Oligocene), Harleyville and
+Parkers Ferry (both late Eocene). That gives 19 age-ordered pairs; none
+contradicts the logged holes. Counts are 2,000-ft grid nodes over the extent of
+all seven tops (13,066 nodes) where both surfaces of a pair have an estimate.
+
+| | Pairs that cross | Crossed pair-nodes (of 92,605) | Worst crossing |
+| --- | ---: | ---: | ---: |
+| Before (old `build()`, each top alone) | 15 of 19 | 8,764 | 35.4 ft (Givhans Ferry above Marks Head) |
+| New `build()`, each top alone | 14 of 19 | 7,330 | 41.3 ft (Givhans Ferry above Goose Creek) |
+| New `build()` + `stack` | **0 of 19** | **0** | 0 |
+
+Stacking moved at least one value at 4,133 of the 13,066 nodes. Two pairs are
+**not ordered by age** because their Geolex ages are the same, and still
+cross after stacking: Givhans Ferry / Runnymede (1,616 of 7,651 nodes, up to
+19.5 ft; the holes log Givhans Ferry above Runnymede 18 times, never the
+reverse) and Harleyville / Parkers Ferry (636 of 4,296 nodes, up to 12.1 ft;
+Harleyville above in 12 holes, never the reverse). Ordering them needs a rule
+beyond age (for example the logged superposition as a tie-breaker), which is
+not applied without approval.
+
+Per pair (crossed nodes, before → new unstacked → stacked):
+
+| Upper (younger) | Lower (older) | Holes in order | Before | New, unstacked | Stacked |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Wando | Goose Creek | 15 | 143 | 417 | 0 |
+| Wando | Givhans Ferry | 13 | 187 | 18 | 0 |
+| Wando | Marks Head, Runnymede, Harleyville, Parkers Ferry | 19–30 | 0 | 0 | 0 |
+| Goose Creek | Marks Head | 5 | 100 | 102 | 0 |
+| Goose Creek | Givhans Ferry | 2 | 1,650 | 1,687 | 0 |
+| Goose Creek | Runnymede | 7 | 463 | 572 | 0 |
+| Goose Creek | Harleyville | 2 | 3 | 31 | 0 |
+| Goose Creek | Parkers Ferry | 2 | 22 | 39 | 0 |
+| Marks Head | Givhans Ferry | 7 | 1,305 | 733 | 0 |
+| Marks Head | Runnymede | 15 | 977 | 503 | 0 |
+| Marks Head | Harleyville | 10 | 40 | 0 | 0 |
+| Marks Head | Parkers Ferry | 8 | 429 | 470 | 0 |
+| Givhans Ferry | Harleyville | 6 | 661 | 582 | 0 |
+| Givhans Ferry | Parkers Ferry | 3 | 559 | 248 | 0 |
+| Runnymede | Harleyville | 16 | 946 | 713 | 0 |
+| Runnymede | Parkers Ferry | 6 | 1,279 | 1,215 | 0 |
+
+Most remaining raw crossings involve Goose Creek (ten points, natural
+neighbour, LOO RMSE 21 ft): its surface is the least certain, so stacking
+moves it most. Section 3's crossing counts used only pairs logged in 3+
+holes and each pair's own extent, so they differ from these.
 
 ## References
 

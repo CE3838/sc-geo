@@ -2,14 +2,15 @@
 
 Research code for docs/interpolation.md. Nothing here is used by build() or
 changes its defaults; a method moves into model/surfaces.py only after the
-user approves it.
+user approves it (planar trend kriging and stacking have: `UniversalKriging`
+now lives in model/surfaces.py and model/stack.py keeps tops in age order).
 
-* `UniversalKriging`: kriging with a polynomial drift (constant = ordinary
-  kriging, linear = a planar regional dip, quadratic), in covariance form.
-  The variogram is fitted to the ordinary-least-squares residuals of the same
-  drift (regression kriging; Hengl and others, 2007). Leave-one-out errors
-  come exactly from one inverse of the kriging matrix, as in
-  model/surfaces.py (Dubrule, 1983, covers the drift case).
+* `kriging_cv`: kriging with a polynomial drift (constant = ordinary
+  kriging, linear = a planar regional dip, quadratic) via
+  `surfaces.UniversalKriging`. The variogram is fitted to the
+  ordinary-least-squares residuals of the same drift (regression kriging;
+  Hengl and others, 2007). Leave-one-out errors come exactly from one inverse
+  of the kriging matrix (Dubrule, 1983, covers the drift case).
 * `fit_anisotropy`: geometric anisotropy by a grid search over the azimuth of
   the long axis and the range ratio, scored by leave-one-out RMSE. The
   choice is made on the same errors it reports, so its RMSE is slightly
@@ -31,87 +32,15 @@ import re
 import sys
 from pathlib import Path
 
-from model import coords, surfaces
-from model.surfaces import KINDS, Point, Variogram, empirical_variogram, fit_variogram, inverse
+from model import coords, stack, surfaces
+from model.surfaces import (KINDS, Point, UniversalKriging, Variogram, empirical_variogram,  # noqa: F401
+                            fit_trend, fit_variogram, residuals)
+from model.units import Lexicon
 
 ROOT = Path(__file__).resolve().parent.parent
 DRIFTS = ("constant", "linear", "quadratic")
 AZIMUTHS = tuple(range(0, 180, 15))
 RATIOS = (1.0, 1.5, 2.0, 3.0, 4.0)
-
-
-# --- drift ---------------------------------------------------------------------
-
-class _Frame:
-    """Centred, scaled coordinates so polynomial drift terms stay well conditioned."""
-
-    def __init__(self, points: list[Point]):
-        xs, ys = [p.x for p in points], [p.y for p in points]
-        self.mx, self.my = sum(xs) / len(xs), sum(ys) / len(ys)
-        self.s = max(max(xs) - min(xs), max(ys) - min(ys), 1.0)
-
-    def terms(self, drift: str, x: float, y: float) -> list[float]:
-        u, v = (x - self.mx) / self.s, (y - self.my) / self.s
-        if drift == "constant":
-            return [1.0]
-        if drift == "linear":
-            return [1.0, u, v]
-        if drift == "quadratic":
-            return [1.0, u, v, u * u, u * v, v * v]
-        raise ValueError(drift)
-
-
-def fit_trend(points: list[Point], drift: str = "linear"):
-    """Ordinary least-squares polynomial trend; returns f(x, y)."""
-    frame = _Frame(points)
-    rows = [frame.terms(drift, p.x, p.y) for p in points]
-    m = len(rows[0])
-    ata = [[sum(r[i] * r[j] for r in rows) for j in range(m)] for i in range(m)]
-    atb = [sum(r[i] * p.z for r, p in zip(rows, points)) for i in range(m)]
-    beta = surfaces.solve(ata, atb)
-    return lambda x, y: sum(b * t for b, t in zip(beta, frame.terms(drift, x, y)))
-
-
-def residuals(points: list[Point], trend) -> list[Point]:
-    return [Point(p.x, p.y, p.z - trend(p.x, p.y), refs=p.refs) for p in points]
-
-
-class UniversalKriging:
-    """Kriging with a polynomial drift: [[C, F], [F^T, 0]] [w; mu] = [c; f]."""
-
-    def __init__(self, points: list[Point], vg: Variogram, drift: str = "linear"):
-        self.points, self.vg, self.drift = points, vg, drift
-        self.frame = _Frame(points)
-        n = len(points)
-        f = [self.frame.terms(drift, p.x, p.y) for p in points]
-        m = len(f[0])
-        jitter = 1e-10 * (vg.sill or 1.0)
-        k = [[0.0] * (n + m) for _ in range(n + m)]
-        for i, p in enumerate(points):
-            for j in range(i, n):
-                q = points[j]
-                c = vg.cov(math.hypot(p.x - q.x, p.y - q.y)) + (jitter if i == j else 0.0)
-                k[i][j] = k[j][i] = c
-            for t in range(m):
-                k[i][n + t] = k[n + t][i] = f[i][t]
-        self.m = m
-        self.kinv = inverse(k)
-
-    def predict(self, x: float, y: float) -> tuple[float, float]:
-        """(estimate, kriging variance)."""
-        n = len(self.points)
-        c = [self.vg.cov(math.hypot(p.x - x, p.y - y)) for p in self.points]
-        rhs = c + self.frame.terms(self.drift, x, y)
-        sol = [sum(r[j] * rhs[j] for j in range(n + self.m)) for r in self.kinv]
-        est = sum(sol[i] * self.points[i].z for i in range(n))
-        var = self.vg.sill - sum(sol[i] * rhs[i] for i in range(n + self.m))
-        return est, max(var, 0.0)
-
-    def leave_one_out(self) -> tuple[list[float], list[float]]:
-        n = len(self.points)
-        b = [p.z for p in self.points] + [0.0] * self.m
-        alpha = [sum(r[j] * b[j] for j in range(n + self.m)) for r in self.kinv]
-        return [alpha[i] / self.kinv[i][i] for i in range(n)], [1.0 / self.kinv[i][i] for i in range(n)]
 
 
 # --- scoring -------------------------------------------------------------------
@@ -212,7 +141,7 @@ def compare(points: list[Point], methods=METHODS) -> list[dict]:
         detail = ""
         if m == "current":
             s = surfaces.build(pts)
-            if s.method == "kriging":
+            if s.method in surfaces.KRIGING_METHODS:
                 st = stats(*s.kriging.leave_one_out())
             else:
                 st = stats(fallback_errors(pts, s.cfg["idw_power"]))
@@ -353,6 +282,8 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--min-points", type=int, default=surfaces.DEFAULTS["min_points_kriging"])
     ap.add_argument("--max-points", type=int, default=150, help="skip larger sets (pure Python, O(n^3))")
     ap.add_argument("--nested-max", type=int, default=60, help="nested anisotropy CV up to this many points")
+    ap.add_argument("--step", type=float, default=2000.0, help="grid spacing (ft) for the crossing check")
+    ap.add_argument("--no-compare", action="store_true", help="skip the per-surface method table")
     ap.add_argument("--json", type=Path, help="write the results here")
     args = ap.parse_args(argv)
     docs = {str(f.relative_to(ROOT)): json.loads(f.read_text()) for f in sorted((ROOT / "data" / "extracted").glob("*.json"))}
@@ -361,7 +292,7 @@ def main(argv: list[str] | None = None) -> int:
     for (unit, boundary), pts in sorted(sets.items(), key=lambda kv: -len(kv[1])):
         n = len(surfaces._merge(pts))
         sig = tuple(sorted((round(p.x), round(p.y), round(p.z, 2)) for p in pts))
-        if not args.min_points <= n <= args.max_points or sig in seen:
+        if args.no_compare or not args.min_points <= n <= args.max_points or sig in seen:
             continue  # the same points under another record are measured once
         seen.add(sig)
         srcs = sorted({r["source_id"] for p in pts for r in p.refs})
@@ -373,17 +304,26 @@ def main(argv: list[str] | None = None) -> int:
             msse = f"{r['msse']:.2f}" if r["msse"] is not None else "-"
             print(f"  {r['method']:<16} rmse {r['rmse']:7.2f}  mae {r['mae']:7.2f}  bias {r['bias']:+6.2f}  "
                   f"msse {msse:>5}  {r['detail']}")
-    # Stacking: do the current surfaces of units logged one above the other cross?
+    # Stacking: the tops of units logged one above the other, before and after model/stack.py.
     order = unit_order(docs)
     tops = {u: surfaces.build(p) for (u, b), p in sets.items()
-            if b == "top" and len(surfaces._merge(p)) >= args.min_points}
-    stack = []
-    for (a, b), k in sorted(order.items(), key=lambda kv: -kv[1]):
-        if a in tops and b in tops and k >= 3 and order.get((b, a), 0) == 0:
-            stack.append({"upper": a, "lower": b, "holes": k, **crossings(tops[a], tops[b])})
-            print(f"stack {a} over {b} ({k} holes): {stack[-1]}")
+            if b == "top" and args.min_points <= len(surfaces._merge(p)) <= args.max_points}
+    lex = Lexicon(json.loads((ROOT / "data" / "lexicon" / "geolex_sc.json").read_text()))
+    st = stack.stack(tops, lex, superposition=order)
+    check = st.crossings(step_ft=args.step)
+    stacking = {"provenance": {k: v for k, v in st.provenance().items() if k != "surfaces"},
+                "nodes": check["nodes"], "nodes_adjusted": check["nodes_adjusted"], "pairs": []}
+    print(f"\nstack order (younger first): {', '.join(u['unit'] for u in st.order)}; "
+          f"unknown age: {st.unknown_age or 'none'}; not ordered by age: {st.unordered or 'none'}; "
+          f"conflicts with the logs: {st.conflicts or 'none'}")
+    for (a, b), c in check["pairs"].items():
+        k = order.get((a, b), 0), order.get((b, a), 0)
+        stacking["pairs"].append({"upper": a, "lower": b, "holes": k[0], "holes_reversed": k[1], **c})
+        print(f"  {a} over {b} ({'age' if c['ordered'] else 'not ordered'}; holes {k[0]}-{k[1]}): "
+              f"crossed {c['crossed_before']} -> {c['crossed_after']} of {c['nodes']} nodes, "
+              f"worst {c['worst_before_ft']} -> {c['worst_after_ft']} ft")
     if args.json:
-        args.json.write_text(json.dumps({"surfaces": results, "stacking": stack}, indent=1))
+        args.json.write_text(json.dumps({"surfaces": results, "stacking": stacking}, indent=1, default=str))
     return 0
 
 

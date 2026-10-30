@@ -88,7 +88,7 @@ def test_compare_reports_the_current_method_as_build_does():
     pts = scatter(40, tilted, seed=9)
     row = {r["method"]: r for r in sm.compare(pts, methods=("current",))}["current"]
     s = surfaces.build(pts)
-    key = "kriging" if s.method == "kriging" else "fallback"
+    key = s.method if s.method in surfaces.KRIGING_METHODS else "fallback"
     assert row["detail"].startswith(s.method)
     assert row["rmse"] == pytest.approx(s.cv[key]["rmse"], rel=1e-9)
     assert set(row) >= {"method", "n", "rmse", "bias", "mae", "msse", "detail"}
@@ -144,7 +144,7 @@ def test_contact_points_skip_intervals_given_as_elevations():
 
 def test_build_defaults_are_unchanged():
     assert surfaces.DEFAULTS["min_points_kriging"] == 10 and surfaces.DEFAULTS["min_std_ft"] == 0.3
-    assert not hasattr(surfaces, "UniversalKriging")
+    assert sm.UniversalKriging is surfaces.UniversalKriging   # the research code measures what build() runs
 
 
 def test_nested_anisotropy_chooses_without_the_held_out_point():

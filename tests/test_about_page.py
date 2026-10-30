@@ -12,7 +12,7 @@ from pathlib import Path
 
 from extract import ingest
 from merge import build, score
-from model import surfaces
+from model import stack, surfaces
 from model.units import Lexicon
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -121,11 +121,11 @@ def expected() -> dict[str, str]:
             "agreement.cap": f2(ag["cap"])}
 
     d = surfaces.DEFAULTS
-    exp |= {"surf.min_points": str(d["min_points_kriging"]), "surf.min_r2": f2(d["min_r2"]),
-            "surf.min_structure": pct(d["min_structure"]), "surf.cv_margin": pct(d["cv_margin"]),
+    exp |= {"surf.min_points": str(d["min_points_kriging"]), "surf.cv_margin": pct(d["cv_margin"]),
             "surf.min_std": f"{d['min_std_ft']:g} ft", "surf.max_distance_factor": f"{d['max_distance_factor']:g}",
             "surf.msse_low": f2(d["msse_bounds"][0]), "surf.msse_high": f"{d['msse_bounds'][1]:g}",
-            "surf.idw_power": f"{d['idw_power']:g}", "surf.bins": str(d["bins"])}
+            "surf.idw_power": f"{d['idw_power']:g}", "surf.bins": str(d["bins"]),
+            "stack.min_holes": str(stack.MIN_HOLES)}
     return exp
 
 
@@ -157,3 +157,11 @@ def test_about_page_is_static_and_cites_no_warranty():
 
 def test_interpolation_notes_exist():
     assert (ROOT / "docs" / "interpolation.md").is_file()
+
+
+def test_about_page_describes_the_current_surface_method():
+    html = PAGE.read_text(encoding="utf-8")
+    sec = html[html.index('<section id="surfaces">'):html.index('<section id="sources">')]
+    assert "Trend kriging" in sec and "geologic age" in sec
+    assert "r²" not in sec, "there is no variogram-fit (r²) rule any more"
+    assert "min_r2" not in surfaces.DEFAULTS and "min_structure" not in surfaces.DEFAULTS
