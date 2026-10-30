@@ -8,10 +8,11 @@
  "kind": "publication",
  "schema_version": 1,
  "extracted_at": "2026-10-30T22:34:44+00:00",
- "updated_at": "2026-10-30T22:34:44+00:00",
+ "updated_at": "2026-10-30T22:35:42+00:00",
  "reader": "Claude, scheduled Claude Code session 2026-10-30",
  "packets": [
-  "packet-01"
+  "packet-01",
+  "packet-02"
  ],
  "blocks_done": [
   "1",
@@ -42,11 +43,26 @@
   "28",
   "29",
   "30",
-  "31"
+  "31",
+  "32",
+  "33",
+  "34",
+  "35",
+  "36",
+  "37",
+  "38",
+  "39",
+  "40",
+  "41",
+  "42",
+  "43",
+  "44",
+  "45",
+  "46"
  ],
  "blocks_total": 44,
- "complete": false,
- "notes": "Regional summary (Mississippi, Alabama, Georgia, South Carolina); only South Carolina statements and system-wide statements that include South Carolina recorded. Plate 1 correlation chart and figure 14 (subregional units by State) OCR is garbled; South Carolina column not legible; not recorded. Simulated values (water budgets, calibrated transmissivity and leakance, simulated heads) not recorded. Potentiometric maps (figs. 7-9) are head maps with no legible South Carolina values. Hydrographs and geochemistry figures are outside South Carolina.",
+ "complete": true,
+ "notes": "Regional summary (Mississippi, Alabama, Georgia, South Carolina); only South Carolina statements and system-wide statements that include South Carolina recorded. Plate 1 correlation chart and figure 14 (subregional units by State) OCR is garbled; South Carolina column not legible; not recorded. Simulated values (water budgets, calibrated transmissivity and leakance, simulated heads) not recorded. Potentiometric maps (figs. 7-9) are head maps with no legible South Carolina values. Hydrographs and geochemistry figures are outside South Carolina.\nPages 32-37: simulated leakance, head change and water budgets (model values) not recorded; the 'surficial aquifer in South Carolina' budget terms are simulated. Pages 37-44: ground-water chemistry of the Black Warrior River aquifer middle zone and an Alabama-Mississippi flowpath; no South Carolina values. References: South Carolina and regional aquifer-system references recorded; Mississippi, Alabama, Georgia-only and method references skipped. Reference numbers like '86^347' printed with OCR '^' for '-4'; values written with '-4'.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/pp/1410a/plate-1.pdf",
@@ -64,14 +80,14 @@
   }
  ],
  "summary": {
-  "stored": 25,
+  "stored": 43,
   "quote_match": {
-   "exact": 25
+   "exact": 43
   },
   "verification": {
-   "agree": 3
+   "agree": 5
   },
-  "inferred": 0
+  "inferred": 4
  },
  "ingests": [
   {
@@ -88,6 +104,26 @@
    "quote_not_found": 0,
    "wrong_page": 0,
    "agree": 3,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 0,
+   "image_not_verified": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-10-30T22:35:42+00:00",
+   "packets": [
+    "packet-02"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-30",
+   "values": 18,
+   "stored": 18,
+   "exact": 18,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 2,
    "disagree": 0,
    "unclear": 0,
    "image": 0,
@@ -443,7 +479,282 @@
    }
   }
  ],
- "references": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Aucott, W.R., 1988, The predevelopment ground-water flow system and hydrologic characteristics of the Coastal Plain aquifers of South Carolina: U.S. Geological Survey Water-Resources Investigations Report 86-4347, 66 p.",
+    "source_id": "ngmdb:113605",
+    "page": 44,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Aucott, W.R., 1988, The predevelopment ground-water flow system",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "Report number printed with '^' (OCR) for '-4'."
+   }
+  },
+  {
+   "citation": {
+    "value": "Aucott, W.R., in press, Hydrology of the Southeastern Coastal Plain aquifer system in South Carolina and parts of Georgia and North Carolina: U.S. Geological Survey Professional Paper 1410-E.",
+    "source_id": "ngmdb:113605",
+    "page": 44,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "system in South Carolina and parts of Georgia and North Carolina:",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Brown, P.M., Brown, D.L., Reid, M.S., and Lloyd, O.B., Jr., 1979, Evaluation of the geologic and hydrologic factors related to the waste-storage potential of Mesozoic aquifers in the southern part of the Atlantic Coastal Plain, South Carolina and Georgia: U.S. Geological Survey Professional Paper 1088, 37 p.",
+    "source_id": "ngmdb:113605",
+    "page": 44,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Brown, P.M., Brown, D.L., Reid, M.S., and Lloyd, O.B., Jr., 1979,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Colquhoun, D.J., Woolen, I.D., Van Niewenhuise, D.S., Padgett, G.G., Oldham, R.W., Boylan, D.C., Bishop, J.W., and Powell, P.D., 1983, Surface and subsurface stratigraphy, structure and aquifers of the South Carolina Coastal Plain: Columbia, S.C., University of South Carolina Department of Geology, 78 p.",
+    "source_id": "ngmdb:113605",
+    "page": 44,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "aquifers of the South Carolina Coastal Plain: Columbia, S.C.,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Cooke, C.W., 1936, Geology of the Coastal Plain of South Carolina: U.S. Geological Survey Bulletin 867, 196 p.",
+    "source_id": "ngmdb:113605",
+    "page": 44,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cooke, C.W., 1936, Geology of the Coastal Plain of South Carolina:",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Faye, R.E., and Mayer, G.C., in press, Hydrology of the Southeastern Coastal Plain aquifer system in Georgia and in parts of Alabama and South Carolina: U.S. Geological Survey Professional Paper 1410-F.",
+    "source_id": "ngmdb:113605",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "system in Georgia and in parts of Alabama and South Carolina:",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Hayes, L.R., 1979, The ground-water resources of Beaufort, Colleton, Hampton, and Jasper Counties, South Carolina: South Carolina Water Resources Commission Report 9, 91 p.",
+    "source_id": "ngmdb:113605",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Hayes, L.R., 1979, The ground-water resources of Beaufort, Colleton,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Marine, I.W., 1976, Geochemistry of ground water at the Savannah River Plant: US ERDA DP 1356, 102 p.",
+    "source_id": "ngmdb:113605",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Marine, I.W., 1976, Geochemistry of ground water at the Savannah",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Miller, J.A., 1986, Hydrogeologic framework of the Floridan aquifer system in Florida and in parts of Georgia, Alabama, and South Carolina: U.S. Geological Survey Professional Paper 1403-B, 91 p.",
+    "source_id": "ngmdb:113605",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Miller, J.A., 1986, Hydrogeologic framework of the Floridan aquifer",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Miller, J.A., and Renken, R.A., 1988, Nomenclature of regional hydrogeologic units of the Southeastern Coastal Plain aquifer system: U.S. Geological Survey Water-Resources Investigations Report 87-4202, 21 p.",
+    "source_id": "ngmdb:113605",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Miller, J.A., and Renken, R.A., 1988, Nomenclature of regional",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "Report number printed with '^' (OCR) for '-4'."
+   }
+  },
+  {
+   "citation": {
+    "value": "Reid, M.S., Aucott, W.R., Lee, R.W., and Renken, R.A., 1986, Hydrologic and geologic analysis of a well in Dorchester County, South Carolina: U.S. Geological Survey Water-Resources Investigations Report 86-4161, 23 p.",
+    "source_id": "ngmdb:113605",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Hydrologic and geologic analysis of a well in Dorchester County,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "Report number printed with '^' (OCR) for '-4'."
+   }
+  },
+  {
+   "citation": {
+    "value": "Reid, M.S., Renken, R.A., Wait, R.L., Aucott, W.R., and Lee, R.W., 1986, Hydrologic and geologic analysis of two wells in Marion County, South Carolina: U.S. Geological Survey Water-Resources Investigations Report 86-4102, 20 p.",
+    "source_id": "ngmdb:113605",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "1986, Hydrologic and geologic analysis of two wells in Marion",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Renken, R.A., 1984, The hydrogeologic framework for the Southeastern Coastal Plain aquifer system of the United States: U.S. Geological Survey Water-Resources Investigations Report 84-4243, 26 p.",
+    "source_id": "ngmdb:113605",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Renken, R.A., 1984, The hydrogeologic framework for the Southeast-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "Report number printed with '^' (OCR) for '-4'."
+   }
+  },
+  {
+   "citation": {
+    "value": "Renken, R.A., in press, Geology and hydrogeology of the Southeastern Coastal Plain aquifer system in Mississippi, Alabama, Georgia, and South Carolina: U.S. Geological Survey Professional Paper 1410-B.",
+    "source_id": "ngmdb:113605",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "in press, Geology and hydrogeology of the Southestern Coastal",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Siple, G.E., 1957, Ground water in the South Carolina Coastal Plain: Journal of the American Water Works Association, v. 49, no. 3, p. 283-300.",
+    "source_id": "ngmdb:113605",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Siple, G.E., 1957, Ground water in the South Carolina Coastal Plain:",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "citation": {
+    "value": "Siple, G.E., 1967, Geology and ground water of the Savannah River Plant and vicinity, South Carolina: U.S. Geological Survey Water-Supply Paper 1841, 113 p.",
+    "source_id": "ngmdb:113605",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "1967, Geology and ground water of the Savannah River Plant",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Stricker, V.A., 1983, Base flow of streams in the outcrop area of southeastern sand aquifer, South Carolina, Georgia, Alabama, and Mississippi: U.S. Geological Survey Water-Resources Investigations Report 83-4106, 17 p.",
+    "source_id": "ngmdb:113605",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "southeastern sand aquifer, South Carolina, Georgia, Alabama, and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Wait, R.L., and Davis, M.E., 1986, Configuration and hydrology of the pre-Cretaceous rocks underlying the Southeastern Coastal Plain aquifer system: U.S. Geological Survey Water-Resources Investigations Report 86-4010, 1 sheet.",
+    "source_id": "ngmdb:113605",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Wait, R.L., and Davis, M.E., 1986, Configuration and hydrology of the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ],
  "surfaces": [],
  "contours": [],
  "sections": [],
