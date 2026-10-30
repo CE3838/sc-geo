@@ -32,8 +32,15 @@ body { display: flex; flex-direction: column; overflow: hidden; color: var(--tex
   background: linear-gradient(135deg, #f9f97f 0 33%, #fd9a52 33% 66%, #7fc64e 66%);
 }
 .app-subtitle { color: var(--chrome-muted); font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.app-link { margin-left: auto; color: var(--chrome-muted); font-size: 13px; text-decoration: none; }
+.app-nav { margin-left: auto; display: flex; align-items: center; gap: 4px; flex: none; }
+.app-link { color: var(--chrome-muted); font-size: 13px; text-decoration: none; padding: 0 6px; }
 .app-link:hover { color: var(--chrome-text); text-decoration: underline; }
+.app-tab {
+  color: var(--chrome-muted); font-size: 13px; text-decoration: none; padding: 5px 10px; border-radius: 4px;
+  border: 1px solid transparent;
+}
+.app-tab:hover { color: var(--chrome-text); background: var(--chrome-2); }
+.app-tab[aria-current="page"] { color: var(--chrome-text); background: var(--chrome-2); border-color: #3a434c; }
 .header-button {
   display: none; font: inherit; font-size: 13px; padding: 5px 10px; border-radius: 4px; cursor: pointer;
   background: var(--chrome-2); color: var(--chrome-text); border: 1px solid #3a434c;
@@ -197,6 +204,10 @@ body { display: flex; flex-direction: column; overflow: hidden; color: var(--tex
   .header-button { display: inline-block; }
   .app-title { font-size: 16px; }
   .app-subtitle { display: none; }
+  .app-header { gap: 8px; padding: 0 10px; }
+  .app-title { overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+  .app-link-sources { display: none; }
+  .app-tab { padding: 4px 8px; }
   .sidebar {
     position: absolute; top: 0; bottom: 0; left: 0; width: min(300px, 86vw); transform: translateX(-102%);
     transition: transform .2s ease; box-shadow: 2px 0 12px rgba(0,0,0,.35); border-right: 0;
