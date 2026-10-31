@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 503,
+ "count": 504,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -6412,6 +6412,46 @@
    "page": 113,
    "quote": "AK–826   AK–826   333230081290501   October 19, 2016   16:50   9.05   5.72   1.57   61.3   64.3   54.8   CFC-11, CFC-12,   Late 1940s to   17.2   2.3   NP",
    "added_at": "2026-10-31T12:07:39+00:00"
+  },
+  {
+   "source_id": "ngmdb:100320",
+   "path": "sections[0].holes[13].elevation",
+   "problem": "image_not_verified",
+   "value": 37,
+   "page": 1,
+   "quote": "8-302",
+   "added_at": "2026-10-31T12:07:18+00:00",
+   "image": {
+    "tile": "p1-144dpi-crop90_2110_2420_2460-r1c3",
+    "box": [
+     1185,
+     225,
+     1235,
+     241
+    ],
+    "dpi": 144,
+    "page_px_box": [
+     4391,
+     4445,
+     4441,
+     4461
+    ],
+    "pt_box": [
+     2195.5,
+     2222.5,
+     2220.5,
+     2230.5
+    ],
+    "pdf_sha256": "1d3c69584dad1cfe9a6bfdd1d3dac0b664fbce416af1af0614978e49ec0ec418"
+   },
+   "verdict": "disagree",
+   "note": "tile p1-144dpi-crop90_2110_2420_2460-r1c3: the hole top bar is at about 37 ft but the land-surface profile at the hole (small QHfw at top) is at about 40 ft",
+   "verify": {
+    "verdict": "disagree",
+    "value": 40,
+    "note": "tile p1-144dpi-crop90_2110_2420_2460-r1c3: the hole top bar is at about 37 ft but the land-surface profile at the hole (small QHfw at top) is at about 40 ft"
+   },
+   "detail": "values read from an image are stored only after a verify pass re-views the tile and agrees"
   }
  ]
 }
