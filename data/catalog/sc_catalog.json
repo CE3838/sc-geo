@@ -14385,7 +14385,7 @@
  {
   "id": "ngmdb:42960",
   "title": "Geology of the Fort Jackson North quadrangle, Richland County, South Carolina",
-  "authors": "Smith,John, Brown,E.J., and Jones,K.M.",
+  "authors": "Pooser, W.K., and Johnson, H.S., Jr.",
   "year": 1961,
   "publisher": "South Carolina Geological Survey",
   "series": "Map Series MS-3",
@@ -14403,7 +14403,7 @@
    -80.875,
    34.125
   ],
-  "citation": "Smith,John, Brown,E.J., and Jones,K.M., 1961, Geology of the Fort Jackson North quadrangle, Richland County, South Carolina: South Carolina Geological Survey Map Series MS-3, map scale 1:24,000.",
+  "citation": "Pooser, W.K., and Johnson, H.S., Jr., 1961, Geology of the Fort Jackson North quadrangle, Richland County, South Carolina: South Carolina Geological Survey Map Series MS-3, map scale 1:24,000.",
   "keywords": [
    "map",
    "bedrock",
@@ -14441,10 +14441,40 @@
     "extraction_method": "catalog_import",
     "confidence": 1.0,
     "retrieved_at": "2026-10-03T18:30:15+00:00"
+   },
+   {
+    "source_id": "catalog-corrections",
+    "locator": "config/catalog_corrections.json: authors",
+    "extraction_method": "manual",
+    "confidence": 1.0,
+    "inferred": false
+   },
+   {
+    "source_id": "catalog-corrections",
+    "locator": "config/catalog_corrections.json: citation",
+    "extraction_method": "manual",
+    "confidence": 1.0,
+    "inferred": false
    }
   ],
   "status": "published",
-  "kind": "map"
+  "kind": "map",
+  "corrections": [
+   {
+    "field": "authors",
+    "old": "Smith,John, Brown,E.J., and Jones,K.M.",
+    "new": "Pooser, W.K., and Johnson, H.S., Jr.",
+    "reason": "placeholder authors in the harvested record: the map's title block reads \"W. K. Pooser and H. S Johnson, Jr.\" and the text says field work was by W. K. Pooser (1958) and H. S. Johnson, Jr. (1960)",
+    "inferred": false
+   },
+   {
+    "field": "citation",
+    "old": "Smith,John, Brown,E.J., and Jones,K.M., 1961, Geology of the Fort Jackson North quadrangle, Richland County, South Carolina: South Carolina Geological Survey Map Series MS-3, map scale 1:24,000.",
+    "new": "Pooser, W.K., and Johnson, H.S., Jr., 1961, Geology of the Fort Jackson North quadrangle, Richland County, South Carolina: South Carolina Geological Survey Map Series MS-3, map scale 1:24,000.",
+    "reason": "placeholder authors in the harvested record: the map's title block reads \"W. K. Pooser and H. S Johnson, Jr.\" and the text says field work was by W. K. Pooser (1958) and H. S. Johnson, Jr. (1960)",
+    "inferred": false
+   }
+  ]
  },
  {
   "id": "ngmdb:42961",
