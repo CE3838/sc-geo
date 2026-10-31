@@ -47,6 +47,7 @@ from model.provenance import ExtractionMethod, StoredValue
 from model.units import Lexicon
 
 from extract import labtests  # water and rock tests
+from extract import compact  # compact water-test tables
 
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG: dict = json.loads((ROOT / "config" / "extract.json").read_text())
@@ -372,7 +373,7 @@ def _combine(results: list[dict]) -> dict:
     notes = [r["notes"] for r in results if r.get("notes")]
     if notes:
         out["notes"] = "\n".join(notes)
-    for key in SECTIONS:
+    for key in SECTIONS + (compact.SECTION,):
         out[key] = [x for r in results for x in r.get(key, [])]
     return out
 
@@ -437,6 +438,9 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
         allowed = set(rec_scope["pages"])
         outside = [f"{path} (page {val['page']})" for path, val in schema.iter_values(result)
                    if val["page"] not in allowed]
+        outside += [f"{compact.SECTION}[{i}].rows[{r}] (page {row['page']})"
+                    for i, t in enumerate(result.get(compact.SECTION, [])) for r, row in enumerate(t["rows"])
+                    if row["page"] not in allowed]
         if outside:
             raise IngestError(f"{sid} is one paper of a larger volume (config/catalog_scope.json); its pages are "
                               f"{scope.describe(rec_scope['pages'])}, but these values cite pages outside them:\n  "
@@ -542,6 +546,32 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
 
     ctx = {"values": stored}
     new_sections = {key: _store(result[key], key, ctx) or [] for key in SECTIONS}
+
+    def check_row(path, page, quote):
+        pg = pages.get(page)
+        match = find_quote(quote, pg) if pg else None
+        val = {"value": None, "page": page, "quote": quote}
+        if match is None:
+            near = [n for n in (page - 1, page + 1) if n in pages and find_quote(quote, pages[n])]
+            if near:
+                counts["wrong_page"] += 1
+                queue(path, val, "wrong_page", found_page=near[0])
+            else:
+                counts["quote_not_found"] += 1
+                queue(path, val, "quote_not_found")
+            return None
+        if match in ("ocr", "fuzzy") and pg.get("method") != "ocr":
+            queue(path, val, "inexact_quote", match=match)
+        return match, pg.get("method"), confidence(rec, pg.get("method", "pdf_text"), match, None, False, cfg,
+                                                   section="water_tests", map_sheet=page in sheets)
+
+    for t in result.get(compact.SECTION, []):
+        if any(len(row["cells"]) != len(t["columns"]) for row in t["rows"]):
+            raise IngestError(f"{sid}: a compact water-test table row has a different number of cells than columns")
+    new_tables, compact_rows = compact.store_tables(
+        result.get(compact.SECTION, []), stored, check_row,
+        lambda quote, cell: _contains(normalize(quote), normalize(cell)),
+        queue, sid)
     grid = default_grid() if vgrid is None else (vgrid or None)
     navd88 = elevations.attach_navd88(new_sections, rec.get("year"), grid, cfg["vertical_datum"],
                                       cfg["confidence"]["inferred_factor"])
@@ -574,6 +604,14 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
         have = {_vkey(f, v) for f, v in _walk_values(kept)}
         fresh = [r for r in (_prune(r, lambda f, v: _vkey(f, v) in have) for r in new_sections[key]) if r is not None]
         merged[key] = kept + fresh
+    # Compact tables are replaced whole: an earlier table goes when a row of it is on a page this result covers,
+    # or when it is the same table (same caption and first row) read again.
+    new_sig = {_table_sig(t) for t in new_tables}
+    old_tables = [t for t in prev.get(compact.SECTION, [])
+                  if not any(row[0] in whole_pages for row in t["rows"]) and _table_sig(t) not in new_sig]
+    replaced += [{"section": compact.SECTION, "record": t} for t in prev.get(compact.SECTION, [])
+                 if t not in old_tables]
+    tables = old_tables + new_tables
 
     done = [b for b in all_blocks if b in set(prev.get("blocks_done") or []) | set(covered)]
     complete = set(all_blocks) <= set(done)
@@ -599,6 +637,7 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
         "ingests": history,
         **_history(prev, replaced, result, reread, whole_pages),
         **merged,
+        **({compact.SECTION: tables} if tables else {}),
     }
     out_dir.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n")
@@ -618,11 +657,17 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
         done_dir.mkdir(parents=True, exist_ok=True)
         (done_dir / f"{safe_id(sid)}.json").write_text(json.dumps({"id": sid, "done_at": _now(),
                                                                    "summary": out["summary"]}, indent=1))
-    return counts | {"navd88": navd88, "review_items": len(review), "complete": complete, "blocks_done": len(done),
+    return counts | {"navd88": navd88, "compact_rows": compact_rows, "review_items": len(review), "complete": complete, "blocks_done": len(done),
                      "blocks_total": len(all_blocks)}
 
 
 SECTIONS = ("units", "observations", "structures", "groundwater", "references") + SUBSURFACE + labtests.TESTS
+
+
+def _table_sig(t: dict) -> tuple:
+    cap = (t.get("source_table") or {}).get("value")
+    first = t["rows"][0] if t.get("rows") else [None, ""]
+    return cap, first[0], normalize(first[1] or "")
 
 
 def _is_stored(x) -> bool:
