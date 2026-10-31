@@ -90,6 +90,12 @@ Guidance for Claude (and humans) working in this repository.
   live from the browser, CORS ok) via `web/usgs-water.js`; stations load for
   the area on screen (no fetch above 150 square degrees); clicking a station
   opens an SVG chart (`web/water-chart.js`, `web/water-ui.js`).
+  It sits in the Layers panel's collapsible Hydro folder (`sidebar.js`
+  `addFolder`) with "Known Wells (Documents)" and "Water Tests"
+  (`web/hydro.js`, `web/hydro-ui.js`), read from `python -m merge.wells`
+  (`web/data/sites/wells.geojson`, `water-tests.json`, `rock-tests.json`):
+  only sites placed to within 1 mile by an inferred coordinate. The viewer
+  shows short citations, never raw record ids.
 - Document extraction (`extract/`, `harvest/pdfs.py`): Claude reads every
   catalog source with legal open full text; code does the rest. No-LLM
   plumbing downloads PDFs, pulls page text (OCR for scans), and builds packets
