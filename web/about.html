@@ -294,9 +294,11 @@
       <p>The tops of several units are put in order by <strong>geologic age</strong> (<code>model/stack.py</code>):
         each unit's age comes from its Geolex entry (the most specific interval it names, on the ICS chart; an
         inferred value), and a younger unit's top must lie at or above an older unit's top. Units whose age ranges
-        overlap (two members of the same age) are not ordered against each other, units with no known age are not
-        moved, and a pair that <span data-sync="stack.min_holes">3</span> or more logged holes show the other way up
-        is not enforced; all three are listed with the surfaces.</p>
+        overlap (two members of the same age) are ordered by <strong>superposition</strong> instead: one is kept above
+        the other only when at least <span data-sync="stack.min_holes">3</span> logged holes show it above and none
+        show the reverse; otherwise they are left unordered. Units with no known age are not moved, and an age order
+        that as many holes show the other way up is not enforced. All of these are listed with the surfaces, and
+        every moved value says whether its order came from age or from superposition (and how many holes).</p>
       <p>Where two surfaces cross, both move to a single level between them, weighted so that the less certain surface
         moves more (the smallest change, weighted by uncertainty, that restores the order everywhere at once). The unit
         is then of zero thickness there. Every moved value is marked <span class="tag-inferred">inferred</span> with

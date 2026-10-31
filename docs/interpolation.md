@@ -66,8 +66,13 @@ surfaces built separately and returns estimates with the order enforced:
   "Tertiary / Miocene, early", which `age_range` would read as the whole
   Tertiary). A unit is younger than another when its age range lies wholly
   at or above the other's; then its top must lie at or above the other's
-  top. Overlapping ranges are not ordered against each other; units with no
-  known age are not moved; both are reported (`unordered`, `unknown_age`).
+  top. Units whose ranges overlap are ordered by superposition in the
+  logged holes (`surface_methods.unit_order`): A above B only when 3 or more
+  holes log A over B and none log B over A; otherwise the pair stays
+  unordered and is reported with the hole counts (`unordered_reasons`).
+  Units with no known age are not moved (`unknown_age`). Every constraint
+  keeps its basis, "age" or "superposition, N holes", and every adjusted
+  value carries it as `order_basis`.
   If 3 or more logged holes (`surface_methods.unit_order`) show the older
   unit above the younger, more often than the other way, the pair is not
   enforced and is reported in `conflicts`.
@@ -257,7 +262,7 @@ as expected.
    of the two uncertainties. Finding 5 shows this is needed before any
    section is drawn.
    **Done** (2026-10-30) as `model/stack.py`, ordered by geologic age (Geolex)
-   rather than by the holes, with an inverse-variance weighted projection
+   (same-age units by superposition in the holes), with an inverse-variance weighted projection
    instead of a plain min() (it reduces to lower = upper at a crossing, with
    the less certain surface moving more) and the larger uncertainty kept.
    Isochores remain the better design once absences are logged.
@@ -320,24 +325,22 @@ S27°E, match the regional seaward dip of section 2.
 **Crossings.** All seven tops, ordered by Geolex age (younger first): Wando
 (late Pleistocene), Goose Creek (early to middle Pliocene), Marks Head (early
 Miocene), Givhans Ferry and Runnymede (both early Oligocene), Harleyville and
-Parkers Ferry (both late Eocene). That gives 19 age-ordered pairs; none
-contradicts the logged holes. Counts are 2,000-ft grid nodes over the extent of
-all seven tops (13,066 nodes) where both surfaces of a pair have an estimate.
+Parkers Ferry (both late Eocene). That gives 19 age-ordered pairs, none
+contradicted by the logged holes, and two same-age pairs ordered by
+superposition: Givhans Ferry over Runnymede (18 holes, none reversed) and
+Harleyville over Parkers Ferry (12 holes, none reversed), 21 in all. Counts
+are 2,000-ft grid nodes over the extent of all seven tops (13,066 nodes)
+where both surfaces of a pair have an estimate.
 
-| | Pairs that cross | Crossed pair-nodes (of 92,605) | Worst crossing |
+| | Pairs that cross | Crossed pair-nodes (of 104,552) | Worst crossing |
 | --- | ---: | ---: | ---: |
-| Before (old `build()`, each top alone) | 15 of 19 | 8,764 | 35.4 ft (Givhans Ferry above Marks Head) |
-| New `build()`, each top alone | 14 of 19 | 7,330 | 41.3 ft (Givhans Ferry above Goose Creek) |
-| New `build()` + `stack` | **0 of 19** | **0** | 0 |
+| Before (old `build()`, each top alone) | 17 of 21 | 11,476 | 35.4 ft (Givhans Ferry above Marks Head) |
+| New `build()`, each top alone | 16 of 21 | 9,649 | 41.3 ft (Givhans Ferry above Goose Creek) |
+| New `build()` + `stack` | **0 of 21** | **0** | 0 |
 
-Stacking moved at least one value at 4,133 of the 13,066 nodes. Two pairs are
-**not ordered by age** because their Geolex ages are the same, and still
-cross after stacking: Givhans Ferry / Runnymede (1,616 of 7,651 nodes, up to
-19.5 ft; the holes log Givhans Ferry above Runnymede 18 times, never the
-reverse) and Harleyville / Parkers Ferry (636 of 4,296 nodes, up to 12.1 ft;
-Harleyville above in 12 holes, never the reverse). Ordering them needs a rule
-beyond age (for example the logged superposition as a tie-breaker), which is
-not applied without approval.
+Of these, the 19 age-ordered pairs alone: 15 → 14 → 0 pairs, 8,764 → 7,330 →
+0 of 92,605 pair-nodes. Stacking moved at least one value at 5,782 of the
+13,066 nodes.
 
 Per pair (crossed nodes, before → new unstacked → stacked):
 
@@ -359,6 +362,8 @@ Per pair (crossed nodes, before → new unstacked → stacked):
 | Givhans Ferry | Parkers Ferry | 3 | 559 | 248 | 0 |
 | Runnymede | Harleyville | 16 | 946 | 713 | 0 |
 | Runnymede | Parkers Ferry | 6 | 1,279 | 1,215 | 0 |
+| Givhans Ferry | Runnymede (same age; superposition) | 18 | 1,674 | 1,652 | 0 |
+| Harleyville | Parkers Ferry (same age; superposition) | 12 | 1,038 | 667 | 0 |
 
 Most remaining raw crossings involve Goose Creek (ten points, natural
 neighbour, LOO RMSE 21 ft): its surface is the least certain, so stacking

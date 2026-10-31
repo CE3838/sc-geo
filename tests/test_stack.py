@@ -134,6 +134,52 @@ def test_provenance_lists_order_constraints_and_method():
     p = st.provenance()
     assert p["inferred"] is True and "age" in p["method"]
     assert [u["unit"] for u in p["order"]] == ["wando", "marks head"]
-    assert p["constraints"] == [["wando", "marks head"]]
+    assert p["constraints"] == [["wando", "marks head", "age"]]
     assert "uncertainty" in p and p["unknown_age"] == [] and p["unordered"] == []
     assert math.isfinite(p["order"][0]["age"]["range_ma"][1])
+
+
+# --- same-age units: ordered by superposition in the logged holes ------------------------
+
+def same_age_pair():
+    # Harleyville and Parkers Ferry are both late Eocene; Parkers Ferry's top rises east and crosses.
+    return {"harleyville": grid_surface(lambda x, y: -60.0),
+            "parkers ferry": grid_surface(lambda x, y: -70.0 + 0.002 * x)}
+
+
+def test_same_age_units_are_ordered_by_superposition_when_the_holes_agree():
+    st = stack.stack(same_age_pair(), LEX, superposition={("harleyville", "parkers ferry"): 4})
+    assert ("harleyville", "parkers ferry") in st.constraints and not st.unordered
+    assert st.basis[("harleyville", "parkers ferry")] == "superposition, 4 holes"
+    for x, y in GRID:
+        e = st.estimate(x, y)
+        assert e["parkers ferry"]["value"] <= e["harleyville"]["value"] + 1e-9
+    e = st.estimate(9000.0, 5000.0)
+    for u in ("harleyville", "parkers ferry"):
+        assert e[u]["adjusted"] is True and e[u]["order_basis"] == "superposition, 4 holes"
+        assert "superposition" in e[u]["adjustment_reason"]
+    c = st.crossings(step_ft=1000.0)["pairs"][("harleyville", "parkers ferry")]
+    assert c["ordered"] is True and c["basis"] == "superposition, 4 holes"
+    assert c["crossed_before"] > 0 and c["crossed_after"] == 0
+
+
+@pytest.mark.parametrize("sup", [
+    {("harleyville", "parkers ferry"): 5, ("parkers ferry", "harleyville"): 1},   # contradicted
+    {("harleyville", "parkers ferry"): stack.MIN_HOLES - 1},                     # too few holes
+    None,
+])
+def test_same_age_units_stay_unordered_unless_the_holes_agree(sup):
+    st = stack.stack(same_age_pair(), LEX, superposition=sup)
+    assert {frozenset(p) for p in st.unordered} == {frozenset({"harleyville", "parkers ferry"})}
+    assert not st.constraints
+    reason = st.provenance()["unordered_reasons"][0]["reason"]
+    assert "overlap" in reason
+    assert st.estimate(9000.0, 5000.0)["parkers ferry"]["adjusted"] is False
+
+
+def test_age_ordered_values_say_their_basis_is_age():
+    st = stack.stack(crossing_pair(), LEX, superposition={("wando", "marks head"): 9})
+    assert st.basis[("wando", "marks head")] == "age"
+    e = st.estimate(9000.0, 5000.0)
+    assert e["marks head"]["order_basis"] == "age" and e["wando"]["order_basis"] == "age"
+    assert st.provenance()["constraints"] == [["wando", "marks head", "age"]]

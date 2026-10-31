@@ -9,9 +9,14 @@ read with `model.units.finest_age_range` (an inferred value citing the entry);
 `ages={unit: age text}` overrides it. A unit is younger than another when its
 whole age range is at or above the other's (the ranges do not overlap), and
 then its top must lie at or above the other's top. Units whose ranges
-overlap (two members of the same age) are not ordered against each other,
-and units with no known age are not reordered at all; both are reported.
-When `superposition` (hole counts {(upper, lower): n}, such as
+overlap (two members of the same age) are ordered by superposition, the
+logged holes (`superposition`, hole counts {(upper, lower): n} such as
+`model.surface_methods.unit_order`): A above B only when `min_holes` or more
+holes log A over B and none log B over A; otherwise the pair stays unordered
+and is reported with the reason. Units with no known age are not reordered
+at all and are reported. Each constraint keeps its basis ("age" or
+"superposition, N holes"), and every adjusted value says which it was moved
+by (`order_basis`). When `superposition` (hole counts {(upper, lower): n}, such as
 `model.surface_methods.unit_order`) logs the older unit above the younger in
 `min_holes` or more holes, more often than the other way, the age order is in
 doubt: that pair is not enforced and is reported as a conflict.
@@ -39,11 +44,12 @@ from __future__ import annotations
 
 from model import units
 
-METHOD = ("tops ordered by geologic age (younger above older); where they cross, moved by the "
+METHOD = ("tops ordered by geologic age (younger above older), units of overlapping age by superposition in "
+          "the logged holes; where they cross, moved by the "
           "inverse-variance weighted least-squares projection onto the order (Dykstra's algorithm)")
 UNCERTAINTY = ("an adjusted value takes the largest uncertainty of the units it was reconciled with, never less "
                "than its own; values and uncertainties before stacking are kept")
-MIN_HOLES = 3   # logged holes that must reverse an age order before it is doubted
+MIN_HOLES = 3   # logged holes needed to order same-age units, or to doubt an age order
 _TOL = 1e-9
 
 
@@ -67,6 +73,7 @@ class Stack:
                        key=lambda u: (info[u]["range_ma"][0], info[u]["range_ma"][1], u))
         self.order = [{"unit": u, "age": info[u]} for u in known]
         self.constraints, self.unordered, self.conflicts = [], [], []
+        self.basis, self.unordered_reasons = {}, []
         sup = superposition or {}
         for i, a in enumerate(known):
             for b in known[i + 1:]:
@@ -77,7 +84,17 @@ class Stack:
                 elif ob <= ya:
                     younger, older = b, a
                 else:
+                    ab, ba = sup.get((a, b), 0), sup.get((b, a), 0)
+                    if ab >= min_holes and ba == 0 or ba >= min_holes and ab == 0:
+                        upper, lower, k = (a, b, ab) if ab else (b, a, ba)
+                        self.constraints.append((upper, lower))
+                        self.basis[(upper, lower)] = f"superposition, {k} holes"
+                        continue
                     self.unordered.append((a, b))
+                    self.unordered_reasons.append({
+                        "units": [a, b], "holes": {f"{a} over {b}": ab, f"{b} over {a}": ba},
+                        "reason": (f"age ranges overlap, and the holes do not settle the order ({ab} log {a} over "
+                                   f"{b}, {ba} the reverse; {min_holes}+ one way and none the other are needed)")})
                     continue
                 rev, fwd = sup.get((older, younger), 0), sup.get((younger, older), 0)
                 if rev >= min_holes and rev > fwd:
@@ -85,6 +102,7 @@ class Stack:
                                            "holes_in_order": fwd})
                     continue
                 self.constraints.append((younger, older))
+                self.basis[(younger, older)] = "age"
 
     # --- one place -----------------------------------------------------------------
 
@@ -98,7 +116,8 @@ class Stack:
         out = {}
         for u, e in raw.items():
             r = {**e, "inferred": True, "value_unstacked": e["value"], "std_unstacked": e["std"],
-                 "adjusted": False, "moved_ft": 0.0 if e["value"] is not None else None, "adjustment_reason": None}
+                 "adjusted": False, "moved_ft": 0.0 if e["value"] is not None else None, "adjustment_reason": None,
+                 "order_basis": None}
             if u in z:
                 moved = z[u] - z0[u]
                 if moved != 0.0:
@@ -106,7 +125,9 @@ class Stack:
                     stds = [raw[v]["std"] for v in group if raw[v]["std"] is not None]
                     r |= {"value": z[u], "moved_ft": moved, "adjusted": True,
                           "std": max(stds) if stds else e["std"],
-                          "adjustment_reason": self._reason(u, moved, z, cons)}
+                          "adjustment_reason": self._reason(u, moved, z, cons),
+                          "order_basis": "; ".join(sorted({self.basis[c] for c in cons if u in c
+                                                            and abs(z[c[0]] - z[c[1]]) <= 1e-6}))}
             out[u] = r
         return out
 
@@ -116,15 +137,16 @@ class Stack:
         worst = max(stds) if stds else 1.0
         return {u: 1.0 / (raw[u]["std"] or worst) ** 2 for u in live}
 
-    @staticmethod
-    def _reason(u, moved, z, cons) -> str:
-        above = [a for a, b in cons if b == u and abs(z[a] - z[u]) <= 1e-6]
-        below = [b for a, b in cons if a == u and abs(z[b] - z[u]) <= 1e-6]
-        parts = []
-        if above:
-            parts.append(f"at or below the top of {', '.join(above)} (younger by geologic age)")
-        if below:
-            parts.append(f"at or above the top of {', '.join(below)} (older by geologic age)")
+    def _why(self, pair, rel) -> str:
+        b = self.basis[pair]
+        return f"{rel} by geologic age" if b == "age" else f"above it by superposition, {b.split(', ', 1)[1]}" \
+            if rel == "younger" else f"below it by superposition, {b.split(', ', 1)[1]}"
+
+    def _reason(self, u, moved, z, cons) -> str:
+        above = [(a, b) for a, b in cons if b == u and abs(z[a] - z[u]) <= 1e-6]
+        below = [(a, b) for a, b in cons if a == u and abs(z[b] - z[u]) <= 1e-6]
+        parts = [f"at or below the top of {a} ({self._why((a, b), 'younger')})" for a, b in above]
+        parts += [f"at or above the top of {b} ({self._why((a, b), 'older')})" for a, b in below]
         amount = f"{abs(moved):.1f} ft" if abs(moved) >= 0.05 else "less than 0.1 ft"
         return f"moved {'down' if moved < 0 else 'up'} {amount} to lie " + " and ".join(parts)
 
@@ -138,9 +160,9 @@ class Stack:
             ys = [p.y for s in self.tops.values() for p in s.points]
             bounds = (min(xs), min(ys), max(xs), max(ys))
         pairs = {p: {"nodes": 0, "crossed_before": 0, "crossed_after": 0, "worst_before_ft": 0.0,
-                     "worst_after_ft": 0.0, "ordered": True} for p in self.constraints}
+                     "worst_after_ft": 0.0, "ordered": True, "basis": self.basis[p]} for p in self.constraints}
         pairs |= {p: {"nodes": 0, "crossed_before": 0, "crossed_after": 0, "worst_before_ft": 0.0,
-                      "worst_after_ft": 0.0, "ordered": False} for p in self.unordered}
+                      "worst_after_ft": 0.0, "ordered": False, "basis": None} for p in self.unordered}
         adjusted = nodes = 0
         x0, y0, x1, y1 = bounds
         x = x0
@@ -168,8 +190,9 @@ class Stack:
 
     def provenance(self) -> dict:
         return {"method": METHOD, "uncertainty": UNCERTAINTY, "inferred": True, "extraction_method": "inference",
-                "order": self.order, "constraints": [list(c) for c in self.constraints],
-                "unordered": [list(p) for p in self.unordered], "unknown_age": self.unknown_age,
+                "order": self.order, "constraints": [[*c, self.basis[c]] for c in self.constraints],
+                "unordered": [list(p) for p in self.unordered], "unordered_reasons": self.unordered_reasons,
+                "unknown_age": self.unknown_age,
                 "conflicts": self.conflicts,
                 "surfaces": {u: {"method": s.method, "reason": s.reason} for u, s in self.tops.items()}}
 

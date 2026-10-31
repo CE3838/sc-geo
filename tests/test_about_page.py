@@ -162,6 +162,6 @@ def test_interpolation_notes_exist():
 def test_about_page_describes_the_current_surface_method():
     html = PAGE.read_text(encoding="utf-8")
     sec = html[html.index('<section id="surfaces">'):html.index('<section id="sources">')]
-    assert "Trend kriging" in sec and "geologic age" in sec
+    assert "Trend kriging" in sec and "geologic age" in sec and "superposition" in sec
     assert "r²" not in sec, "there is no variogram-fit (r²) rule any more"
     assert "min_r2" not in surfaces.DEFAULTS and "min_structure" not in surfaces.DEFAULTS

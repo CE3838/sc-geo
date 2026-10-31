@@ -314,12 +314,12 @@ def main(argv: list[str] | None = None) -> int:
     stacking = {"provenance": {k: v for k, v in st.provenance().items() if k != "surfaces"},
                 "nodes": check["nodes"], "nodes_adjusted": check["nodes_adjusted"], "pairs": []}
     print(f"\nstack order (younger first): {', '.join(u['unit'] for u in st.order)}; "
-          f"unknown age: {st.unknown_age or 'none'}; not ordered by age: {st.unordered or 'none'}; "
+          f"unknown age: {st.unknown_age or 'none'}; not ordered: {st.unordered_reasons or 'none'}; "
           f"conflicts with the logs: {st.conflicts or 'none'}")
     for (a, b), c in check["pairs"].items():
         k = order.get((a, b), 0), order.get((b, a), 0)
         stacking["pairs"].append({"upper": a, "lower": b, "holes": k[0], "holes_reversed": k[1], **c})
-        print(f"  {a} over {b} ({'age' if c['ordered'] else 'not ordered'}; holes {k[0]}-{k[1]}): "
+        print(f"  {a} over {b} ({c['basis'] or 'not ordered'}; holes {k[0]}-{k[1]}): "
               f"crossed {c['crossed_before']} -> {c['crossed_after']} of {c['nodes']} nodes, "
               f"worst {c['worst_before_ft']} -> {c['worst_after_ft']} ft")
     if args.json:
