@@ -128,6 +128,53 @@ def age_range(text: str | None) -> tuple[float, float] | None:
     return (min(f[0] for f in found), max(f[1] for f in found))
 
 
+_EPOCHS = "|".join(sorted({k.split()[-1] for k in INTERVALS if " " in k}, key=len, reverse=True))
+_COMMA_MODIFIER = re.compile(r"\b(" + _EPOCHS + r")\s*,\s*(early|lower|middle|late|upper)\b")
+
+
+def finest_age_range(text: str | None) -> tuple[float, float] | None:
+    """(younger, older) in Ma from the most specific intervals the age text names.
+
+    Geolex lists ages as a hierarchy ('Tertiary / Miocene, early / Burdigalian'); age_range() takes
+    the union of every term, which for such text is the whole Tertiary. Here an interval that
+    contains another named interval is dropped and the rest are joined, so 'Tertiary / Miocene,
+    early' gives the early Miocene and 'Pliocene, late / Pleistocene, early' spans both. A derived
+    value: callers store it inferred."""
+    if not text:
+        return None
+    t = text.lower().replace("precambrian-proterozoic", "proterozoic")
+    t = re.sub(r"\(\?\)|[?*]", "", t)          # 'late(?) Oligocene*': the query does not widen the age
+    t = _COMMA_MODIFIER.sub(lambda m: f"{m.group(2)} {m.group(1)}", t)
+    paren = re.findall(r"\(([^)]*)\)", t)
+    if paren and any(_TERM.search(p) for p in paren):
+        t = " ".join(paren)
+    if re.search(r"\s-\s", t) and not re.search(r"\bto\b|\band\b", t):
+        t = re.split(r"\s-\s", t)[-1]
+    found = sorted({f for f in (_interval(m.group(1), m.group(2)) for m in _TERM.finditer(t)) if f})
+    if not found:
+        return None
+    fine = [a for a in found if not any(b != a and a[0] <= b[0] and b[1] <= a[1] for b in found)]
+    return (min(f[0] for f in fine), max(f[1] for f in fine))
+
+
+def unit_age(name: str | None, lexicon: "Lexicon | None") -> dict | None:
+    """The age of a named unit from the Geolex lexicon, as an inferred value citing the entry.
+
+    `name` may be a bare geographic name ('marks head', as logged-hole units are normalized) or a
+    full unit name ('Marks Head Formation'); abandoned names follow their replacement. None when
+    the unit is not in the lexicon or its age names no interval."""
+    if not name or lexicon is None:
+        return None
+    entry = lexicon.entries.get(name.strip().lower())
+    entry = lexicon.follow(entry) if entry else lexicon.resolve(name)
+    rng = finest_age_range(entry.get("age")) if entry else None
+    if rng is None:
+        return None
+    return {"name": entry["name"], "age": entry.get("age"), "range_ma": rng, "source_id": entry.get("source_id"),
+            "locator": entry.get("locator"), "extraction_method": "inference", "inferred": True,
+            "age_source": AGE_SOURCE}
+
+
 def age_overlap(a, b) -> float | None:
     """Share of the narrower range that lies inside the other (0-1)."""
     if a is None or b is None:
@@ -208,7 +255,10 @@ class Lexicon:
 
     def resolve(self, name: str | None) -> dict | None:
         key, _ = name_key(name)
-        entry = self.entries.get(key) if key else None
+        return self.follow(self.entries.get(key) if key else None)
+
+    def follow(self, entry: dict | None) -> dict | None:
+        """The current entry for `entry`, following replacements of abandoned names."""
         seen = set()
         while entry and entry.get("replaced_by") and entry["name"] not in seen:
             seen.add(entry["name"])

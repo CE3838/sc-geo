@@ -113,3 +113,37 @@ def test_age_range_and_name_key_are_memoized_and_stable():
     assert first == again == ((27.82, 33.9), ("wando", "formation"))
     assert units.age_range.cache_info().hits == 1 and units.name_key.cache_info().hits == 1
     assert units.age_range(None) is None and units.name_key(None) == (None, None)
+
+
+# --- finest age, for ordering stacked surfaces ------------------------------------
+
+@pytest.mark.parametrize("text,young,old", [
+    ("Quaternary (late Pleistocene)*", 0.0117, 0.129),
+    ("Tertiary*\nMiocene, early*\nBurdigalian", 15.98, 23.03),            # Geolex 'Miocene, early'
+    ("Tertiary*\nEocene, late*\nPriabonian*", 33.9, 37.71),
+    ("Tertiary\nPliocene, late\nQuaternary*\nPleistocene, early*", 0.774, 3.6),  # spans two periods
+    ("Tertiary*\nlate(?) Oligocene to early Miocene*", 15.98, 27.82),
+    ("early Tertiary (early Oligocene; Rupelian)", 27.82, 33.9),
+    ("Pleistocene", 0.0117, 2.58),
+])
+def test_finest_age_range_keeps_the_most_specific_intervals(text, young, old):
+    r = units.finest_age_range(text)
+    assert close(r[0], young, 0.01) and close(r[1], old, 0.01), (text, r)
+
+
+def test_finest_age_range_unknown():
+    assert units.finest_age_range(None) is None and units.finest_age_range("unknown") is None
+
+
+def test_unit_age_from_the_lexicon_is_inferred_and_cited():
+    lex = units.Lexicon([
+        {"name": "Marks Head", "status": "current", "replaced_by": None, "age": "Tertiary*\nMiocene, early*",
+         "source_id": "usgs-geolex", "locator": "MarksHead_1"},
+        {"name": "Old Name", "status": "abandoned", "replaced_by": "Marks Head", "age": "Eocene"},
+    ])
+    a = units.unit_age("marks head", lex)
+    assert a["range_ma"] == pytest.approx((15.98, 23.03)) and a["inferred"] is True
+    assert a["source_id"] == "usgs-geolex" and a["locator"] == "MarksHead_1" and a["name"] == "Marks Head"
+    assert units.unit_age("Marks Head Formation", lex)["name"] == "Marks Head"
+    assert units.unit_age("old name", lex)["name"] == "Marks Head"   # abandoned names follow the replacement
+    assert units.unit_age("nowhere", lex) is None
