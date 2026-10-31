@@ -3,7 +3,8 @@
 The package holds the merged geology (and the SGMC layer) built into
 web/data/geology, the source catalog, the Geolex lexicon, the South
 Carolina outline and the water and rock tests per site (web/data/sites, from
-python -m merge.site_tests), plus a manifest with a SHA-256 for each file. Deploy
+python -m merge.site_tests; known wells, water tests and rock tests from
+python -m merge.wells), plus a manifest with a SHA-256 for each file. Deploy
 publishes it as a GitHub Release tagged data-YYYYMMDD-HHMM (UTC).
 
 Run: python -m merge.package [--out sc-geo-data.zip]

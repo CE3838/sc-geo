@@ -1,6 +1,7 @@
 import hashlib
 import json
 import zipfile
+from pathlib import Path
 
 import pytest
 
@@ -85,3 +86,21 @@ def test_build_includes_the_site_tests_export(tmp_path):
     with zipfile.ZipFile(out) as zf:
         assert "data/sites/site-tests.json" in zf.namelist()
     assert any(f["path"] == "data/sites/site-tests.json" for f in manifest["files"])
+
+
+def test_build_includes_the_wells_and_test_exports(tmp_path):
+    root = _tree(tmp_path / "repo")
+    sites = root / "web" / "data" / "sites"
+    sites.mkdir(parents=True)
+    for name in ("wells.geojson", "water-tests.json", "rock-tests.json"):
+        (sites / name).write_text("{}")
+    out = tmp_path / "p.zip"
+    package.build(root, out, tag="data-20261003-0905", commit="")
+    with zipfile.ZipFile(out) as zf:
+        names = set(zf.namelist())
+    assert {"data/sites/wells.geojson", "data/sites/water-tests.json", "data/sites/rock-tests.json"} <= names
+
+
+def test_deploy_exports_the_wells_before_packing():
+    wf = (Path(__file__).resolve().parent.parent / ".github" / "workflows" / "ci-pages.yml").read_text()
+    assert wf.index("python -m merge.wells") < wf.index("python -m merge.package")
