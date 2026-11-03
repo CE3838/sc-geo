@@ -354,3 +354,21 @@ def test_unconfirmed_names_are_left_alone():
     assert "Wyrik, R.F." in records["ngmdb:56440"]["authors"]
     assert "Stockl, D.F." in records["ngmdb:113142"]["authors"]
     assert "Books, K.G." in records["ngmdb:74376"]["authors"]
+
+
+def test_offline_reapply_also_drops_excluded_records(tmp_path, monkeypatch):
+    recs = catalog.build_catalog(NGMDB_ROWS, THEMES, PAGES, SCGS_INDEX, SCGS_GIS, FTP, "t")
+    (tmp_path / "sc_catalog.json").write_text(json.dumps(recs))
+    (tmp_path / "summary.json").write_text(json.dumps({"retrieved_at": "t"}))
+    gone = recs[0]["id"]
+    monkeypatch.setattr(catalog, "excluded_ids", lambda *a, **k: {gone})
+    catalog.reapply_corrections(tmp_path, log=lambda *a: None)
+    kept = json.loads((tmp_path / "sc_catalog.json").read_text())
+    assert gone not in {r["id"] for r in kept} and len(kept) == len(recs) - 1
+
+
+def test_dropped_records_are_excluded_with_reasons():
+    ex = {e["id"]: e["reason"] for e in json.loads((catalog.EXCLUDE).read_text())["exclude"]}
+    for rid in ("ngmdb:115834", "ngmdb:115835", "ngmdb:112323", "ngmdb:112324", "ngmdb:100295",
+                "ngmdb:73949", "ngmdb:74147", "ngmdb:74721"):
+        assert ex.get(rid), rid
