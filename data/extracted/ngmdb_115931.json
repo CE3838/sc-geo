@@ -1,0 +1,1809 @@
+{
+ "source_id": "ngmdb:115931",
+ "title": "Geologic Map of the Ropers Crossroads Quadrangle, Edgefield and Aiken Counties, South Carolina",
+ "citation": "Wilson, C.G., Morrow, R.H., and Willoughby, R.H., 2024, Geologic Map of the Ropers Crossroads Quadrangle, Edgefield and Aiken Counties, South Carolina: South Carolina Geological Survey Open-File Report 266, map scale 1:24,000.",
+ "year": 2024,
+ "scale": 24000,
+ "publisher": "South Carolina Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-11-03T00:01:55+00:00",
+ "updated_at": "2026-11-03T00:01:55+00:00",
+ "reader": "Claude, Claude Code session 2026-11-03",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1",
+  "2",
+  "3",
+  "4"
+ ],
+ "blocks_total": 4,
+ "complete": true,
+ "notes": "Map sheet with a text layer (page 1); pages 2-4 are an unrelated FGDC symbol-style note bundled in the download and were not recorded. Symbol-description pairing checked on page images of the legend and correlation chart (Qal, Qcb, Tb, Ttr, Tdb, Th, UKs). Ages of Qal, Qcb and UKs taken from their names (inferred). The many strike/dip, lineation and fold-hinge numbers on the map face have no printed locations and were not recorded; legend-only symbols (Augusta fault zone trace, fault types, field stations) not recorded. 15 SCDNR well-log locations labelled on the map face (19-21 also the legend sample); no logs printed. 'S-19' labels on the map face are not explained in the legend and were not recorded. SUBSURFACE: none beyond the recorded values.",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2000&pid=115931",
+   "via": "gis_package",
+   "sha256": "349031026b36917a1f24a5bd917351cab110b4a5b46db858371f8b0483a4d0f8",
+   "pages": 1,
+   "first_page": 1
+  },
+  {
+   "url": "https://ngmdb.usgs.gov/ngm-bin/gems_download.pl?id=2000&pid=115931",
+   "via": "gis_package",
+   "sha256": "2a16d6c8acf9cc8b1842b5fb6851751fa60b67948e124a04560df1d8b4361561",
+   "pages": 3,
+   "first_page": 2
+  }
+ ],
+ "summary": {
+  "stored": 112,
+  "quote_match": {
+   "exact": 112
+  },
+  "verification": {
+   "agree": 12
+  },
+  "inferred": 9
+ },
+ "ingests": [
+  {
+   "at": "2026-11-03T00:01:55+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, Claude Code session 2026-11-03",
+   "values": 112,
+   "stored": 112,
+   "exact": 112,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 12,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 0,
+   "image_not_verified": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "Bodies of water",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Bodies of water – Water, fresh, brackish, or salt. Water boundaries are delineated from 2006",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "Water, fresh, brackish, or salt. Water boundaries are delineated from 2006 digital ortho-quarter quadrangle photos (DOQQs).",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "digital ortho-quarter quadrangle photos (DOQQs).",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Qal",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Qal",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "Quaternary alluvium",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Quaternary alluvium – Deposits of loose sand and of mixed sand, silt and clay are found in",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Quaternary",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Quaternary alluvium",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "loose sand and mixed sand, silt and clay",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Quaternary alluvium – Deposits of loose sand and of mixed sand, silt and clay are found in",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "depositional_environment": {
+    "value": "floodplains of the streams in Coastal Plain areas; not shown in the Piedmont areas",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "floodplains of the streams in Coastal Plain areas; they are not shown in the Piedmont areas.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Qcb",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Qcb",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "Quaternary lake deposits in Carolina bays",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Quaternary lake deposits in Carolina bays – Deposits of light- to dark-colored, tan or",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Quaternary",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Quaternary lake deposits in Carolina bays",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "tan or brown clay and silt with varying amounts of sand, clay, and some residual quartz pebbles",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "brown clay and silt with varying amounts of sand, clay, and some residual quartz pebbles. All",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "contacts": {
+    "value": "lie on the upland unit or on residuum derived from it",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "or on residuum derived from it.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Tal",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Altamaha Formation (Miocene; Tal)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "Altamaha Formation",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Altamaha Formation (Miocene; Tal) – Younger than the Tobacco Road Sand of the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Altamaha",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Altamaha Formation (Miocene; Tal)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Miocene",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Altamaha Formation (Miocene; Tal)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 5.333,
+     "older_ma": 23.03,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "coarse- to very coarse-grained quartz sand and quartz granules with quartz pebbles, interstitial clay and kaolinitic clay clasts; quartz-cobble conglomerate",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "coarse-grained quartz sand and quartz granules, with minor to abundant included quartz pebbles, with",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "typically pinkish red-orange or salmon-pink; clay clasts give a characteristic flecked appearance; quartz-cobble conglomerate mostly at or near the base",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "of the unit a characteristic \"flecked\" appearance. Most occurrences of the quartz-cobble conglomerate",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "contacts": {
+    "value": "Younger than the Tobacco Road Sand of the Barnwell Group and presumably older than Pleistocene",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Altamaha Formation (Miocene; Tal) – Younger than the Tobacco Road Sand of the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Tb",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Tb",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "Barnwell Group sediments, undifferentiated",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Barnwell Group sediments, undifferentiated (Upper Eocene, Jacksonian) – In western",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Barnwell",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Group",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Barnwell Group sediments, undifferentiated",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Upper Eocene, Jacksonian",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Barnwell Group sediments, undifferentiated (Upper Eocene, Jacksonian)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 37.71,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Dry Branch Formation and Tobacco Road Sand where they thin along the updip western edge of the Coastal Plain and cannot be separated confidently",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Sand do not crop out, and the two formations thin so that they cannot be separated confidently.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "contacts": {
+    "value": "contact with the upland unit is an erosional unconformity, locally with relief of 30 ft or more in western South Carolina",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Road Sand. The contact between the Barnwell Group and the upland unit is an erosional unconformity",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Ttr",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Ttr",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "Tobacco Road Sand",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Tobacco Road Sand (Upper Eocene, Jacksonian) – Consists primarily of medium- to very",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Tobacco Road",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Upper Eocene, Jacksonian",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Tobacco Road Sand (Upper Eocene, Jacksonian)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 37.71,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "medium- to very coarse-grained quartz sand and quartz granules with minor to moderate interstitial clay",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "coarse-grained quartz sand and quartz granules with minor to moderate interstitial clay and,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "fossils": {
+    "value": "common to abundant burrows, the trace fossil Ophiomorpha nodosa",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "in outcrops, usually with common to abundant burrows, the trace fossil Ophiomorpha nodosa.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Tdb",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Tdb",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "Dry Branch Formation",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Dry Branch Formation (Upper Eocene, Jacksonian) – includes three main lithologies: (1)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Dry Branch",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Dry Branch Formation (Upper Eocene, Jacksonian)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "age": {
+    "value": "Upper Eocene, Jacksonian",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Dry Branch Formation (Upper Eocene, Jacksonian)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 37.71,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "very fine- to fine-grained quartz sand; laminated smectitic clay; medium- to very coarse-grained quartz sand with granules and interstitial clay",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "(2) laminated to thinly-bedded, plastic, smectitic clay with interbedded very fine- to fine-grained quartz",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "An ocher-yellow or mustard-yellow color is characteristic of the Dry Branch Formation.",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "An ocher-yellow or mustard-yellow color is characteristic of the Dry Branch Formation.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "fossils": {
+    "value": "locally Ophiomorpha nodosa burrows",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "abundant interstitial clay. Locally the Dry Branch Formation may have Ophiomorpha nodosa burrows,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Th",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Th",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "Huber Formation",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Huber Formation (Middle Eocene) – The Huber Formation consists of 3 main lithologies:",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Huber",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "rank": {
+    "value": "Formation",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Huber Formation (Middle Eocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Middle Eocene",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Huber Formation (Middle Eocene)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 37.71,
+     "older_ma": 47.8,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "kaolinitic quartz sand; massive white to cream kaolin; very fine- to fine-grained quartz sand",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "sand with negligible scattered thin to medium beds of kaolin. The first two lithologies occur typically",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "contacts": {
+    "value": "contact with the overlying Dry Branch Formation is an erosional unconformity",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Formation. The stratigraphic contact between the Huber Formation and the Dry Branch Formation is an",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "UKs",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "UKs",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "Upper Cretaceous sediments",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Upper Cretaceous sediments – Medium- to very coarse-grained quartz sand with quartz",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "age": {
+    "value": "Upper Cretaceous",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Upper Cretaceous sediments",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 66.0,
+     "older_ma": 100.5,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "medium- to very coarse-grained quartz sand with quartz granules and pebbles and white kaolin",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Upper Cretaceous sediments – Medium- to very coarse-grained quartz sand with quartz",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "contacts": {
+    "value": "top of the Cretaceous recognized at the change from loose, well-sorted fine sand (lower Huber Formation) to stiff, cohesive, poorly sorted clayey sand; pisolitic kaolin cobbles at the top",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "occurs locally but is not characteristic. The top of the Cretaceous is recognized at the change from loose,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "PPeg",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Edgefield Granite (Pennsylvanian-Permian, PPeg)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "Edgefield Granite",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Edgefield Granite (Pennsylvanian-Permian, PPeg) – Leucocratic (CI=10-15), weathered",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "edgefield",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Pennsylvanian-Permian",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Edgefield Granite (Pennsylvanian-Permian, PPeg)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 251.902,
+     "older_ma": 323.2,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "equigranular to porphyritic granite, locally pegmatitic",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "equigranular to porphyritic granite. The mineral assemblage includes quartz + plagioclase + K-feldspar",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "typically undeformed or weakly to moderately foliated; informally named the Edgefield granite by Metzger (1977); local source of aggregate",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "typically undeformed or weakly to moderately foliated. Metzger (1977) informally named this unit the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "PPgg",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Graniteville granite (Pennsylvanian-Permian; PPgg)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "Graniteville granite",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Graniteville granite (Pennsylvanian-Permian; PPgg) – Hololeucocratic to leucocratic",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "graniteville",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Pennsylvanian-Permian",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Graniteville granite (Pennsylvanian-Permian; PPgg)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 251.902,
+     "older_ma": 323.2,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "medium- to coarse-grained felsic porphyritic monzogranite",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "(CI=0-15), weathered white to gray, gray fresh, medium- to coarse-grained felsic porphyritic",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "CZmbs",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Biotite – garnet schist (Neoproterozoic – Cambrian; CZmbs)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "Biotite – garnet schist",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Biotite – garnet schist (Neoproterozoic – Cambrian; CZmbs) – Weathered yellowish",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Neoproterozoic – Cambrian",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Biotite – garnet schist (Neoproterozoic – Cambrian; CZmbs)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 485.4,
+     "older_ma": 1000.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "white mica-biotite schist and biotite-garnet quartzofeldspathic gneiss",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "orange, light gray to dark gray fresh, medium- to coarse-crystalline white mica-biotite schist,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "within the Modoc shear zone develops phyllonitic to mylonitic foliation and S-C fabric indicating NE–SW-directed dextral motion; deformation late Paleozoic",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "and S-C fabric within the Modoc shear zone indicate NE–SW-directed dextral kinematic motion.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "CZamf",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Interlayered mafic and felsic metavolcanic rocks (Neoproterozoic – Cambrian; CZamf)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "Interlayered mafic and felsic metavolcanic rocks",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Interlayered mafic and felsic metavolcanic rocks (Neoproterozoic – Cambrian; CZamf)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Neoproterozoic – Cambrian",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Interlayered mafic and felsic metavolcanic rocks (Neoproterozoic – Cambrian; CZamf)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 485.4,
+     "older_ma": 1000.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Augusta terrane",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "ROCKS OF THE AUGUSTA TERRANE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "lithology": {
+    "value": "porphyritic rhyolite and dacite tuff with lenses of intermediate to mafic crystal tuff, greenstone, and volcanogenic sedimentary rocks",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "fine-crystalline, porphyritic rhyolite and dacite tuff. Phenocryst phases are quartz ± plagioclase (1-3 mm)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "SRm",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Migmatitic gneiss (Neoproterozoic-Cambrian; SRm)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "Migmatitic gneiss",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Migmatitic gneiss (Neoproterozoic-Cambrian; SRm) – Weathered medium gray to gray,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "migmatitic",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Neoproterozoic-Cambrian",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Migmatitic gneiss (Neoproterozoic-Cambrian; SRm)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 485.4,
+     "older_ma": 1000.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Savannah River terrane",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "ROCKS OF THE SAVANNAH RIVER TERRANE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "lithology": {
+    "value": "interlayered mafic and felsic gneisses; migmatitic biotite-quartz-feldspar gneiss",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "biotite-quartz-feldspar gneiss. The mesosome consists of fine to medium crystalline",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "most abundant map unit in Ropers Crossroads; stromatic migmatite with layering 3 to 30 cm; includes the two-mica gneiss unit of Maher, 1979",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "the most abundant SRt map unit in Ropers Crossroads and acts as a “matrix” to the other map units.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "SRmg",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "SRmg",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "biotite granite leucosome",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "of migmatites as stromatic. Locally, lenses of biotite granite leucosome (SRmg) can be mapped as a",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "lenses mapped separately within SRm"
+   },
+   "description": {
+    "value": "Locally, lenses of biotite granite leucosome (SRmg) can be mapped as a separate unit",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "of migmatites as stromatic. Locally, lenses of biotite granite leucosome (SRmg) can be mapped as a",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "SRs",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Pelitic schist (Neoproterozoic-Cambrian; SRs)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "Pelitic schist",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Pelitic schist (Neoproterozoic-Cambrian; SRs) – Weathered orange to reddish orange, dark",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "pelitic",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Neoproterozoic-Cambrian",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Pelitic schist (Neoproterozoic-Cambrian; SRs)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 485.4,
+     "older_ma": 1000.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "coarse to very coarse crystalline biotite schist with minor muscovite",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "gray fresh, coarse to very coarse crystalline biotite schist with minor muscovite. The schist is",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "SRp",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Psammitic gneiss (Neoproterozoic-Cambrian; SRp)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "Psammitic gneiss",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Psammitic gneiss (Neoproterozoic-Cambrian; SRp) – Weathered orange to light tannish",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "psammitic",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Neoproterozoic-Cambrian",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Psammitic gneiss (Neoproterozoic-Cambrian; SRp)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 485.4,
+     "older_ma": 1000.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "equigranular biotite gneiss with trace magnetite and garnet",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "gray, light gray to white fresh, medium- to very coarse-crystalline, equigranular biotite gneiss",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "SRa",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Amphibolite and amphibole gneiss (Neoproterozoic-Cambrian; SRa)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "Amphibolite and amphibole gneiss",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Amphibolite and amphibole gneiss (Neoproterozoic-Cambrian; SRa) – Weathered brown",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "amphibolite and amphibole",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Neoproterozoic-Cambrian",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Amphibolite and amphibole gneiss (Neoproterozoic-Cambrian; SRa)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 485.4,
+     "older_ma": 1000.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "biotite-amphibole-quartz-feldspar gneiss and amphibole gneiss",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "to reddish brown, dark gray fresh, fine- to coarse-crystalline biotite-amphibole-quartz-feldspar",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "presence of quartz limits this assemblage to 1st-sillimanite zone",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "presence of quartz limits this assemblage to 1st-sillimanite zone.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  }
+ ],
+ "observations": [
+  {
+   "kind": "well",
+   "label": {
+    "value": "19-21",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "19-21",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "SCDNR well log location labelled on the map face; no log data printed"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "19-22",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "19-22",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "SCDNR well log location labelled on the map face; no log data printed"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "19-39",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "19-39",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "SCDNR well log location labelled on the map face; no log data printed"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "19-40",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "19-40",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "SCDNR well log location labelled on the map face; no log data printed"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "19-48",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "19-48",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "SCDNR well log location labelled on the map face; no log data printed"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "19-49",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "19-49",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "SCDNR well log location labelled on the map face; no log data printed"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "19-50",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "19-50",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "SCDNR well log location labelled on the map face; no log data printed"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "19-51",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "19-51",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "SCDNR well log location labelled on the map face; no log data printed"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "19-52",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "19-52",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "SCDNR well log location labelled on the map face; no log data printed"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "19-53",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "19-53",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "SCDNR well log location labelled on the map face; no log data printed"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "19-60",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "19-60",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "SCDNR well log location labelled on the map face; no log data printed"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "19-61",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "19-61",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "SCDNR well log location labelled on the map face; no log data printed"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "19-62",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "19-62",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "SCDNR well log location labelled on the map face; no log data printed"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "2-143",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "2-143",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "SCDNR well log location labelled on the map face; no log data printed"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "2-144",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "2-144",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "SCDNR well log location labelled on the map face; no log data printed"
+   }
+  }
+ ],
+ "structures": [
+  {
+   "kind": "other",
+   "name": {
+    "value": "Modoc shear zone",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "and S-C fabric within the Modoc shear zone indicate NE–SW-directed dextral kinematic motion.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "sense": {
+    "value": "NE–SW-directed dextral",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "and S-C fabric within the Modoc shear zone indicate NE–SW-directed dextral kinematic motion.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "late Paleozoic",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "shear zone is late Paleozoic.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 251.902,
+     "older_ma": 347.5346666666666,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "phyllonitic to mylonitic foliation and localized S-C fabric in CZmbs",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "zone, these rocks develop a phyllonitic to mylonitic foliation and localized S-C fabric. Phyllonitic mica",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  }
+ ],
+ "groundwater": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Maher, H.D., Jr., 1979, Stratigraphy, metamorphism, and structure of the Kiokee and Belair belts near Augusta, Georgia: Master of Science thesis, University of South Carolina, Columbia, South Carolina, 94 p.",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Maher, H.D., Jr., 1979, Stratigraphy, metamorphism, and structure of the Kiokee and Belair belts near",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Metzgar, C. R., 1977, The petrology and structure of the Edgefield 7.5-minute quadrangle, South Carolina Piedmont: Master of Science thesis, University of South Carolina, Columbia, South Carolina, 51 p.",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Metzgar, C. R., 1977, The petrology and structure of the Edgefield 7.5-minute quadrangle, South",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Willoughby, R. H., 1986, Geologic Map of the Coastal Plain in Ropers Crossroads Quadrangle: South Carolina Geologic Survey Open-File Report 54, 1:24,000-scale.",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Willoughby, R. H., 1986, Geologic Map of the Coastal Plain in Ropers Crossroads Quadrangle: South",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "citation": {
+    "value": "Edgefield County Elevation 2012, 10x10 ft DEM [File Geodatabase] and Aiken County Elevation 2012, 10x10 ft DEM [File Geodatabase]",
+    "source_id": "ngmdb:115931",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "DEM [File Geodatabase] and Aiken County Elevation 2012, 10x10 ft DEM [File Geodatabase].",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "cited in the map notes"
+   }
+  }
+ ],
+ "surfaces": [],
+ "contours": [],
+ "sections": [],
+ "water_tests": [],
+ "rock_tests": []
+}
