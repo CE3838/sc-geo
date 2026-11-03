@@ -304,3 +304,147 @@ def parse(text, assume_state_plane_nad83: bool = False) -> dict | None:
         angles = [(float(m.group("d")), hint, hemi, bool(m.group("sign"))) for m, hint, hemi in _angles(s, dec)]
         return _pair(s, angles, "decimal", "decimal degrees")
     return None
+
+
+# --- how far a converted coordinate may be from the place ---------------------------------
+
+M_PER_DEG = 111_320.0          # metres per degree of latitude (rounded up a little for SC)
+NAD27_SHIFT_M = 5.0            # accuracy of gisio's three-parameter NAD27 -> NAD83 shift
+_APPROX = re.compile(r"(?i)\bapprox|\babout\b|\bcirca\b|~")
+
+
+def _decimals(tok: str | None) -> int:
+    return len(tok.split(".", 1)[1]) if tok and "." in tok else 0
+
+
+def _angle_steps(s: str, fmt: str) -> list[tuple[float, str]] | None:
+    """(rounding step in degrees, printed place) of each of the two angles, in the order parse reads them."""
+    if fmt == "decimal":
+        sym = list(_SYM.finditer(s))
+        toks = [m.group("d") for m in sym] if sym else [m.group("d") for m in _DEC.finditer(s)]
+        return [(10.0 ** -_decimals(t), f"{_decimals(t)} decimal places") for t in toks]
+    out = []
+    if fmt == "dms":
+        ms = list(_SYM.finditer(s)) or list(_SEP.finditer(s))
+        for m in ms:
+            if m.group("s") is not None:
+                out.append((10.0 ** -_decimals(m.group("s")) / 3600, "seconds", m.group("s"), m.group("m")))
+            elif m.group("m") is not None:
+                out.append((10.0 ** -_decimals(m.group("m")) / 60, "minutes", None, m.group("m")))
+            else:
+                out.append((10.0 ** -_decimals(m.group("d")), "degrees", None, None))
+    elif fmt == "packed_dms":
+        for m in _PACKED.finditer(s):
+            n = m.group("n")
+            sec = n[-2:] + (m.group("f") or "")
+            out.append((10.0 ** -_decimals(sec) / 3600, "seconds", sec, n[-4:-2]))
+    if len(out) != 2:
+        return None
+    # Whole zero seconds on both angles (32°47'00") read as rounded to the minute, zero minutes to the degree.
+    if all(o[1] == "seconds" and o[2] is not None and re.fullmatch(r"0+", o[2]) for o in out):
+        if all(o[3] is not None and re.fullmatch(r"0+", o[3]) for o in out):
+            out = [(1.0, "degrees (zero minutes and seconds)", None, None)] * 2
+        else:
+            out = [(1 / 60, "minutes (zero seconds)", None, None)] * 2
+    return [(o[0], o[1]) for o in out]
+
+
+def _grid_step(tok: str) -> float:
+    if "." in tok:
+        return 10.0 ** -_decimals(tok)
+    digits = tok.replace(",", "")
+    zeros = len(digits) - len(digits.rstrip("0"))
+    return 10.0 ** min(zeros, len(digits) - 1)
+
+
+def _dist_m(lat1, lon1, lat2, lon2) -> float:
+    import math
+    return math.hypot((lat1 - lat2) * M_PER_DEG, (lon1 - lon2) * M_PER_DEG * math.cos(math.radians(lat1)))
+
+
+def location_radius(text, assume_state_plane_nad83: bool = False, bbox=None) -> dict | None:
+    """How far the point parse(text) gives may be from the place: {radius_m, rounding_m, datum_m, basis} or None.
+
+    rounding_m: half the last printed place of each coordinate, combined (seconds, minutes or decimal
+    places; State Plane decimals, or the trailing zeros of whole numbers: 405000 is to the 1,000 ft). Whole
+    zero seconds on both angles count as minutes. A printed "approximate"/"about" widens it one place
+    (seconds to minutes, minutes to degrees, one decimal fewer, State Plane x10).
+    datum_m: no horizontal datum printed for degrees -> the NAD27/NAD83 shift at the point; NAD27 printed ->
+    NAD27_SHIFT_M; State Plane with NAD83 assumed -> the farthest NAD27 (north or south zone) reading of the
+    same numbers that lies inside `bbox` [w, s, e, n] (or South Carolina's region without one), plus the
+    international/US survey foot difference when feet were assumed. radius_m = rounding_m + datum_m, rounded.
+    None when parse cannot read the text."""
+    import math
+    c = parse(text, assume_state_plane_nad83=assume_state_plane_nad83)
+    if c is None:
+        return None
+    s = re.sub(r"\s+", " ", text)[:500]
+    approx = bool(_APPROX.search(s))
+    basis: list[str] = []
+    datum_m = 0.0
+    if c["format"] == "state_plane":
+        e_tok = _labelled_tokens(s, r"\beasting\b|\bE\b|\bX\b")
+        n_tok = _labelled_tokens(s, r"\bnorthing\b|\bN\b|\bY\b")
+        if len(e_tok) != 1 or len(n_tok) != 1:
+            return None
+        conv = c["conversion"]
+        unit = "us_ft" if "US survey feet" in conv else "m" if "metres" in conv else "ft"
+        k = _UNITS_M[unit]
+        se, sn = _grid_step(e_tok[0]), _grid_step(n_tok[0])
+        basis.append(f"State Plane printed to {se:g} / {sn:g} {'m' if unit == 'm' else 'ft'}")
+        if approx:
+            se, sn = se * 10, sn * 10
+            basis.append("printed approximate: one place coarser")
+        rounding = math.hypot(se / 2, sn / 2) * k
+        e, n = _f(e_tok[0]), _f(n_tok[0])
+        if c["datum"] == "NAD27":
+            datum_m += NAD27_SHIFT_M
+            basis.append("NAD27 shifted to NAD83")
+        if c.get("datum_assumed"):
+            w, so, ea, no = bbox if bbox and len(bbox) == 4 else (REGION["lon"][0], REGION["lat"][0],
+                                                                   REGION["lon"][1], REGION["lat"][1])
+            far = 0.0
+            for zone in ("north", "south"):
+                if unit == "m":
+                    continue  # NAD27 State Plane was in feet only
+                lat27, lon27 = state_plane_to_latlon(e * k / US_FOOT_M, n * k / US_FOOT_M, "NAD27", "us_ft", zone)
+                lon27, lat27 = gisio.nad27_to_nad83(lon27, lat27)
+                if w - 0.05 <= lon27 <= ea + 0.05 and so - 0.05 <= lat27 <= no + 0.05:
+                    far = max(far, _dist_m(c["lat"], c["lon"], lat27, lon27))
+            datum_m += far
+            basis.append(f"NAD83 assumed: farthest NAD27 reading {far:.0f} m away")
+            if any("feet assumed" in a for a in c["assumptions"]):
+                datum_m += math.hypot(e, n) * abs(gisio.US_FOOT - gisio.INTL_FOOT)
+    else:
+        steps = _angle_steps(s, c["format"])
+        if steps is None:
+            return None
+        basis.append("printed to " + ", ".join(dict.fromkeys(p for _, p in steps)))
+        if approx:
+            steps = [(st * (60 if p.startswith(("seconds", "minutes")) else 10), p) for st, p in steps]
+            basis.append("printed approximate: one place coarser")
+        # parse puts latitude first unless labels or magnitudes swap them; the larger step is used for both
+        # when that order is unknown, which never shrinks the radius.
+        st = max(x for x, _ in steps)
+        rounding = math.hypot(st / 2 * M_PER_DEG, st / 2 * M_PER_DEG * math.cos(math.radians(c["lat"])))
+        if c["datum"] == "NAD27":
+            datum_m += NAD27_SHIFT_M
+            basis.append("NAD27 shifted to NAD83")
+        elif c["datum"] is None:
+            lon83, lat83 = gisio.nad27_to_nad83(c["lon"], c["lat"])
+            datum_m += _dist_m(c["lat"], c["lon"], lat83, lon83)
+            basis.append("horizontal datum not printed: NAD27/NAD83 shift added")
+    return {"radius_m": round(rounding + datum_m), "rounding_m": round(rounding, 2), "datum_m": round(datum_m, 1),
+            "basis": basis}
+
+
+US_FOOT_M = gisio.US_FOOT
+
+
+def _labelled_tokens(s: str, labels: str) -> list[str]:
+    """Like _labelled, but the printed numbers (to read their precision)."""
+    pre = list(dict.fromkeys(m.group(1) for m in re.finditer(rf"(?i)(?:{labels})\s*[:=]?\s*({_NUM})", s)))
+    if pre:
+        return pre
+    post = re.finditer(rf"(?i)(?<![\d.,])({_NUM})\s*(?:ft|feet|m|meters?|metres?)?\.?\s*(?:{labels})(?![A-Za-z])", s)
+    return list(dict.fromkeys(m.group(1) for m in post))

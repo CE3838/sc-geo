@@ -6,6 +6,8 @@ import { setupGeology } from './geology-ui.js';
 import { setupMergedGeology } from './merged-ui.js';
 import { setupFaults } from './faults-ui.js';
 import { setupWater } from './water-ui.js';
+import { setupHydro } from './hydro-ui.js';
+import { HYDRO_FOLDER } from './hydro.js';
 import { setupRoads } from './roads-ui.js';
 import { setupParcels } from './parcels-ui.js';
 import { createSidebar } from './sidebar.js';
@@ -164,9 +166,12 @@ setupMergedGeology(map, sidebar)
 const faults = setupFaults(map, sidebar);
 const roads = setupRoads(map, sidebar);
 const parcels = setupParcels(map, sidebar);
-// USGS water monitoring stations (added after roads so they draw on top);
-// a click on one opens its chart instead of the callout.
-const water = setupWater(map, sidebar, { phone });
+// Hydro folder: known wells and water tests of the documents (served with the
+// viewer), and the live USGS water monitoring stations (added after roads so
+// they draw on top; a click on a station opens its chart instead of the callout).
+const hydro = sidebar.addFolder(HYDRO_FOLDER);
+const wells = setupHydro(map, hydro, { phone });
+const water = setupWater(map, hydro, { phone });
 
 // Catalog records with footprints (merge/references.py), loaded on first use.
 let references = null;
@@ -182,6 +187,8 @@ function loadReferences() {
 // add-ons. popupItems: functions (click event) => DOM node or null; the click
 // popup shows the first non-null item instead of the geology summary.
 window.scGeo = { map, geology, popupItems: [] };
+// A known well under the click shows its record (add-ons' items come after it).
+window.scGeo.popupItems.push((e) => wells.popupItem(e));
 
 // --- status bar: cursor position and scale ------------------------------------
 
@@ -265,6 +272,8 @@ map.on('click', (e) => {
       el('button', { type: 'button', class: 'btn btn-primary callout-card', onclick: () => openCard(unit, lng, lat) }, 'Card'),
       el('button', { type: 'button', class: 'btn', onclick: () => window.open(streetViewUrl(lng, lat), '_blank', 'noopener') },
         'Open Street View')));
+  // A well record holds a small table; give it a little more room.
+  popup.setMaxWidth(item?.classList?.contains('hydro-site') ? '400px' : '300px');
   popup.setLngLat(e.lngLat).setDOMContent(content).addTo(map);
   if (card.isOpen) openCard(unit, lng, lat);
 

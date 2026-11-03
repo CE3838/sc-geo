@@ -330,6 +330,95 @@ site, for the viewer's click callout and the cross-section tool:
 - `units` is null when the source prints none (the value is in the review
   queue).
 
+- Documents with compact water-test tables (below) have their tests
+  expanded into this export like any other water test.
+
+## Compact water-test tables
+
+A very large water-test table (hundreds of samples by dozens of
+constituents) may be written in a result as `water_test_tables` instead of
+one `water_tests` entry per cell (`extract/schema.json`,
+`extract/compact.py`):
+
+```json
+{"compact": true, "kind": "well",
+ "source_table": {"value": "Table 3", "page": 13, "quote": "Table 3.", "inferred": false},
+ "units": {"value": "milligrams per liter", "page": 13, "quote": "in milligrams per liter", "inferred": false},
+ "columns": [
+  {"field": "observation", "header": {"value": "Well", "page": 13, "quote": "Well  Calcium", "inferred": false}},
+  {"field": "date"},
+  {"field": "value", "parameter": {"value": "Calcium", "page": 13, "quote": "Well  Calcium", "inferred": false}}],
+ "rows": [{"page": 13, "quote": "BFT-1234  6/10/1997  12.5", "cells": ["BFT-1234", "6/10/1997", "12.5"]}]}
+```
+
+- Columns are given once. A `value` column names its `parameter` (and may
+  give its own `units`, `fraction`, `method`); other columns name the test
+  field they fill (`observation`, `location`, `sample_id`, `date`, `top`,
+  `bottom`, `depth`, `aquifer`, `unit`, `fraction`, `method`, `lab`,
+  `qualifier`). Header values are ordinary values: quote-checked, with
+  confidence.
+- Each row is one printed table line: its page, the line verbatim as
+  `quote`, and one cell per column (null when blank). Ingest finds every row
+  quote on its page (else the row is dropped and queued `quote_not_found` or
+  `wrong_page`) and every cell inside its row quote (else the cell is dropped
+  and queued `cell_not_in_row`); `missing_units`, `unclear_value` and
+  `ocr_digit` are checked as for `water_tests`. A row with a different number
+  of cells than columns stops ingest.
+- Stored form: the table keeps `source_id`, `extraction_method` "llm",
+  `kind`, the stored header values, `row_fields` (`page`, `quote`,
+  `quote_match`, `text_method`, `confidence`, `cells`) and `rows` as arrays
+  in that order. A re-ingest replaces a table whose rows are on pages it
+  covers, or the same table (same caption and first row).
+- `extract.compact.expand(table, i)` turns each non-empty value cell back
+  into an ordinary stored water test: every field a StoredValue citing the
+  row's page and quote, `inferred: false`, locator
+  `water_test_tables[i] row r column c`, with the same normalized forms as
+  `water_tests`. `merge.site_tests` and `merge.wells` use it.
+
+## Known wells and tests for the map
+
+`python -m merge.wells` writes three files into `web/data/sites/` (not
+committed; deploy builds them, and `merge.package` ships them as
+`data/sites/`) for the viewer's Hydro folder:
+
+- `wells.geojson`: a point per well, boring, core, auger hole, test pit,
+  CPT or spring of `data/extracted` (public catalog records only), and per
+  site with water or rock tests, grouped like the site tests export
+  (`site_key`). Properties use short keys, listed in the file's `keys`:
+  `id`, `l` label, `k` kind, `s` source id, `p` page, `q` quote, `lc`
+  locator and `loc` printed text of the location; `ci` (1: coordinates
+  inferred), `cf` confidence, `d` horizontal datum, `a` assumptions, `r`
+  radius in metres; `td` total depth and `el` land-surface elevation as
+  `{v, ft, p, q, c, i, m, lc}` (value as printed, feet, page, quote,
+  confidence, inferred, method, locator), `el.d` its vertical datum and
+  `el.n88` the stored NAVD 88 conversion; `wt`/`rt` how many water and rock
+  tests it has; `n` observations with that label. `sources` gives each
+  document's citation, title, year, publisher and record link.
+  Coordinates are rounded to 6 decimals.
+- `water-tests.json` and `rock-tests.json`: the tests of those sites, keyed
+  by site id, `columns` once and one array per test (parameter or test type
+  and value as printed, inferred normalized names, number/range/qualifier,
+  units as printed, date, depths in feet, sample id, table, and the value's
+  page, quote, confidence, inferred flag and locator).
+- **Only placed sites.** A site is placed only by an inferred
+  `derived_coordinates` of its own printed location or of an observation
+  with the same label in that document; never from a place name. A site
+  with none is left out of all three files. A site whose inferred location
+  may be more than `MAX_LOCATION_RADIUS_M` = 1609 m (1 mile) from the place
+  is left out too (rule set by the user, 2026-10-30). `r` comes from
+  `model.coords.location_radius`: half the last printed place of each
+  coordinate (decimal places; seconds, minutes or degrees; State Plane
+  decimals, or the trailing zeros of a whole number), combined; whole zero
+  seconds on both angles count as minutes; a printed "approximate" or
+  "about" widens it one place; plus the datum: the NAD27/NAD83 shift at the
+  point when degrees print no datum, 5 m for a printed NAD27 shift, and for
+  State Plane with NAD83 assumed the farthest NAD27-zone reading of the same
+  numbers inside the document's catalog bbox. When a site has several
+  converted locations the one with the smallest radius is used. Exact,
+  non-inferred coordinates would be kept as they are. `counts` gives the
+  sites kept and left out (no location, radius over the limit) by kind.
+  `site-tests.json` still lists every site, placed or not.
+
 ## Derived coordinates
 
 Every `location` or `coordinates` value that `model/coords.py` can read

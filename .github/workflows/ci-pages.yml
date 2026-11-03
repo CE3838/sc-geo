@@ -77,6 +77,8 @@ jobs:
           fi
       - name: Export water and rock tests per site
         run: python -m merge.site_tests
+      - name: Export known wells and water and rock tests for the map
+        run: python -m merge.wells
       - name: Pack the public data package
         id: package
         if: hashFiles('web/data/geology/merged-surficial.geojson') != ''

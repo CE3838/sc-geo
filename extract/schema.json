@@ -21,7 +21,8 @@
     "contours": {"type": "array", "items": {"$ref": "#/$defs/contour"}, "description": "Optional. Structure-contour and isopach maps"},
     "sections": {"type": "array", "items": {"$ref": "#/$defs/section"}, "description": "Optional. Published cross sections"},
     "water_tests": {"type": "array", "items": {"$ref": "#/$defs/water_test"}, "description": "Optional. One entry per water-sample result, field measurement or hydraulic-test value, linked to a well, boring or spring"},
-    "rock_tests": {"type": "array", "items": {"$ref": "#/$defs/rock_test"}, "description": "Optional. One entry per rock specimen or core test result, linked to a boring or core and depth, or to an outcrop"}
+    "rock_tests": {"type": "array", "items": {"$ref": "#/$defs/rock_test"}, "description": "Optional. One entry per rock specimen or core test result, linked to a boring or core and depth, or to an outcrop"},
+    "water_test_tables": {"type": "array", "items": {"$ref": "#/$defs/water_test_table"}, "description": "Optional. Very large water-test tables in compact form: columns once, one row per printed table line with its page and verbatim quote; ingest checks every row quote and every cell against it (see extract/README.md, Compact water-test tables)"}
   },
   "$defs": {
     "value": {
@@ -262,6 +263,42 @@
         "contacts": {"type": "array", "items": {"$ref": "#/$defs/section_contact"}},
         "holes": {"type": "array", "items": {"$ref": "#/$defs/section_hole"}},
         "units_along": {"type": "array", "items": {"$ref": "#/$defs/section_unit"}}
+      }
+    },
+    "water_test_table": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["compact", "columns", "rows"],
+      "properties": {
+        "compact": {"const": true},
+        "kind": {"enum": ["boring", "well", "outcrop", "auger_hole", "core", "test_pit", "cpt", "spring", "other"], "description": "Kind of site of every row"},
+        "source_table": {"$ref": "#/$defs/field", "description": "Table caption or number, e.g. Table 3"},
+        "units": {"$ref": "#/$defs/field", "description": "Units printed for the whole table (a value column's own units win); never guessed"},
+        "columns": {"type": "array", "minItems": 2, "items": {"$ref": "#/$defs/water_test_column"}},
+        "rows": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/water_test_row"}}
+      }
+    },
+    "water_test_column": {
+      "anyOf": [
+        {"type": "object", "additionalProperties": false, "required": ["field", "parameter"],
+         "properties": {"field": {"const": "value"},
+                        "parameter": {"$ref": "#/$defs/value", "description": "Column header: parameter as printed"},
+                        "units": {"$ref": "#/$defs/value", "description": "Units printed for this column"},
+                        "fraction": {"$ref": "#/$defs/value"},
+                        "method": {"$ref": "#/$defs/value"}}},
+        {"type": "object", "additionalProperties": false, "required": ["field"],
+         "properties": {"field": {"enum": ["observation", "location", "sample_id", "date", "top", "bottom", "depth", "aquifer", "unit", "fraction", "method", "lab", "qualifier"]},
+                        "header": {"$ref": "#/$defs/value", "description": "Column header as printed"}}}
+      ]
+    },
+    "water_test_row": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["page", "quote", "cells"],
+      "properties": {
+        "page": {"type": "integer", "minimum": 1},
+        "quote": {"type": "string", "minLength": 1, "maxLength": 1000, "description": "The printed table line, verbatim; every non-null cell must appear in it"},
+        "cells": {"type": "array", "items": {"type": ["string", "number", "null"]}, "description": "One cell per column, as printed; null when blank"}
       }
     },
     "water_test": {

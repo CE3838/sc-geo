@@ -22,6 +22,8 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+from extract import compact
+
 ROOT = Path(__file__).resolve().parent.parent
 EXTRACTED = ROOT / "data" / "extracted"
 CATALOG = ROOT / "data" / "catalog" / "sc_catalog.json"
@@ -136,6 +138,11 @@ def _test_entry(section: str, test: dict, obs: dict | None, sid: str) -> dict:
     return entry
 
 
+def tests_of(doc: dict, section: str) -> list[dict]:
+    """The stored tests of one section, with the water tests of compact tables expanded (extract/compact.py)."""
+    return list(doc.get(section) or []) + (compact.expand_doc(doc) if section == "water_tests" else [])
+
+
 def _observations(doc: dict) -> dict[str, list[dict]]:
     out: dict[str, list[dict]] = {}
     for o in doc.get("observations", []):
@@ -156,11 +163,11 @@ def build(extracted_dir: Path = EXTRACTED, catalog: dict | set | None = None) ->
     for path in sorted(Path(extracted_dir).glob("*.json")):
         doc = json.loads(path.read_text())
         sid = doc.get("source_id")
-        if sid not in ids or not any(doc.get(s) for s in TESTS):
+        if sid not in ids or not any(doc.get(s) for s in TESTS + (compact.SECTION,)):
             continue
         obs_by_label = _observations(doc)
         for section in TESTS:
-            for test in doc.get(section, []):
+            for test in tests_of(doc, section):
                 label = _value(test, "observation")
                 key = site_key(label)
                 matches = obs_by_label.get(key, []) if key else []
