@@ -68,6 +68,7 @@ export function setupCard(container, { onToggle } = {}) {
         parts.push(el('div', { class: 'card-sub' }, model.subtitle));
         if (model.age) {
           parts.push(el('div', { class: 'card-age' }, model.age,
+            model.ageInferred && el('span', { class: 'card-inferred', title: 'from a correlated unit on an adjoining map' }, ' (inferred)'),
             model.ma && el('span', { class: 'card-ma' }, ` · ${model.ma}`)));
         }
         if (model.aliases.length) parts.push(el('div', { class: 'card-aka' }, `Also: ${model.aliases.join('; ')}`));

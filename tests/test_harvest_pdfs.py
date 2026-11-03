@@ -578,3 +578,28 @@ def test_http_fetcher_holdings_refused_is_none(monkeypatch):
     monkeypatch.setattr(f, "_ngmdb_connection", lambda: conn)
     assert f.ngmdb_holdings(1) is None
     assert len(conn.requests) == 2  # no retries against a refusal
+
+
+def test_failed_holdings_lookup_is_retried_on_the_next_run():
+    page = NGMDB_PAGE.split("<script")[0].replace("pubs.usgs", "x")
+    f = TokenFetcher({"https://ngmdb.usgs.gov/Prodesc/": page,
+                      "https://pubs.usgs.gov/pubs-services/publication/?": {"records": []}}, None)
+    r = pdfs.resolve(CHS, f, email=None)
+    assert "ngmdb_failed" in r["checked"] and "ngmdb" not in r["checked"]
+    ck = {"candidates": r["candidates"], "checked": r["checked"], "status": "needs_access",
+          "resolver_version": pdfs.RESOLVER_VERSION}
+    assert pdfs._stale(ck, None)
+
+
+def test_proxy_without_a_scheme_is_used_not_a_crash(monkeypatch):
+    monkeypatch.setenv("HTTPS_PROXY", "proxy.local:3128")
+    conn = pdfs.HttpFetcher()._ngmdb_connection()
+    assert conn.host == "proxy.local" and conn.port == 3128
+
+
+def test_holdings_lookup_never_raises(monkeypatch):
+    f = pdfs.HttpFetcher({**pdfs.CONFIG, "request_pause_seconds": 0})
+    def boom():
+        raise TypeError("bad proxy")
+    monkeypatch.setattr(f, "_ngmdb_connection", boom)
+    assert f.ngmdb_holdings(1) is None

@@ -137,7 +137,7 @@ test('mergedCard copes with a unit missing from the table', () => {
   assert.equal(c.title, 'Qws');
   assert.equal(c.ma, null);
   assert.deepEqual(c.alternatives, []);
-  assert.equal(c.references[0].citation, 'ngmdb:2');
+  assert.equal(c.references[0].citation, 'Source map (record linked)');  // never a record id
 });
 
 test('sgmcCard: SGMC unit with its source map and no merge score', () => {
@@ -166,10 +166,31 @@ test('mergedCard shows a correlated unit under its shared name, with the name as
   const unit = { map_unit: 'Qavs', name: 'Alluvium', unit_name: 'Alluvium', age: 'Holocene', age_ma: [0, 0.0117],
     as_mapped: { name: 'Alluvial Valley Swamp', age: 'Quaternary', age_ma: [0, 2.58], geomaterial: null },
     correlation: { name: 'Alluvium', basis: { source: 'ngmdb:100396', map_unit: 'Qal' }, reason: 'valley-floor alluvium', inferred: true } };
-  const c = mergedCard({ props: { ...POLY, source: 'usgs-sgmc', map_unit: 'Qavs' }, unit, sources: SOURCES, records: [], lng: -80.36, lat: 33.25 });
+  const sources = { ...SOURCES, 'ngmdb:100396': SOURCES['ngmdb:2'] };
+  const c = mergedCard({ props: { ...POLY, source: 'usgs-sgmc', map_unit: 'Qavs' },
+    unit: { ...unit, geomaterial: 'Alluvial sediment', inferred_fields: ['age', 'age_ma', 'geomaterial', 'name', 'unit_name'] },
+    sources, records: [], lng: -80.36, lat: 33.25 });
   assert.equal(c.title, 'Alluvium');
   const rows = Object.fromEntries(c.rows.map((r) => [r.label, r]));
   assert.equal(rows['As mapped'].value, 'Alluvial Valley Swamp (Quaternary)');
-  assert.equal(rows['Correlated as'].value, 'Alluvium, as Qal of ngmdb:100396: valley-floor alluvium');
+  assert.equal(rows['Correlated as'].value, 'Alluvium, as Qal on Bee, 2010: valley-floor alluvium');
   assert.equal(rows['Correlated as'].inferred, true);
+});
+
+
+test('correlated fields are marked inferred and the card shows no record ids', () => {
+  const sources = { ...SOURCES, 'ngmdb:100396': SOURCES['ngmdb:2'] };
+  const unit = { map_unit: 'Qavs', name: 'Alluvium', unit_name: 'Alluvium', age: 'Holocene', age_ma: [0, 0.0117],
+    geomaterial: 'Alluvial sediment', inferred_fields: ['age', 'age_ma', 'geomaterial', 'name', 'unit_name'],
+    as_mapped: { name: 'Alluvial Valley Swamp', age: 'Quaternary' },
+    correlation: { name: 'Alluvium', basis: { source: 'ngmdb:100396', map_unit: 'Qal' }, reason: 'same deposit', inferred: true } };
+  const c = mergedCard({ props: { ...POLY, source: 'usgs-sgmc', map_unit: 'Qavs',
+    alternatives: JSON.stringify([{ source: 'ngmdb:999', name: 'X', overlap: 0.4 }]) },
+  unit, sources, records: [], lng: -80.36, lat: 33.25 });
+  const rows = Object.fromEntries(c.rows.map((r) => [r.label, r]));
+  assert.equal(rows.Geomaterial.inferred, true);
+  assert.equal(c.ageInferred, true);
+  const shown = JSON.stringify([c.title, c.subtitle, c.age, c.rows.map((r) => r.value), c.alternatives.map((a) => a.citation),
+    c.references.map((r) => r.citation)]);
+  assert.doesNotMatch(shown, /\b(ngmdb|usgs-sgmc):?\d*/);
 });
