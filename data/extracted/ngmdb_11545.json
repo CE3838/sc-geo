@@ -1,0 +1,113 @@
+{
+ "source_id": "ngmdb:11545",
+ "title": "Aeromagnetic map of northeast South Carolina",
+ "citation": "Tyson, N.S., Riggle, F.E., Zietz, Isidore, and Daniels, D.L., 1980, Aeromagnetic map of northeast South Carolina: U.S. Geological Survey Open-File Report OF-80-2020, map scale 1:250,000.",
+ "year": 1980,
+ "scale": 250000,
+ "publisher": "U.S. Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-10-31T12:18:30+00:00",
+ "updated_at": "2026-10-31T12:18:30+00:00",
+ "reader": "Claude, scheduled Claude Code session 2026-10-31",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1"
+ ],
+ "blocks_total": 1,
+ "complete": true,
+ "notes": "Aeromagnetic contour map (total intensity, contour interval 20 gammas, IGRF 1965 removed; flight lines 1 mile E-W at 500 feet above ground, flown February 1975 by Geometrics), read from the page image because the OCR text holds only coordinates. It shows no geologic units, structures, wells or sections; magnetic contours are geophysical and do not fit the contour fields (structure or isopach), so none were recorded. The only citation besides the general IGRF reference (Fabiano and Peddie, 1969, skipped as not South Carolina geology) is the source map, recorded from the image. SUBSURFACE: none.",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=47620_11545_2",
+   "via": "ngmdb_scan",
+   "sha256": "2660b6bc5481fc670dc8d479c03354016dc1735fa147df2c528c40b70d9f250f",
+   "pages": 1,
+   "first_page": 1
+  }
+ ],
+ "summary": {
+  "stored": 1,
+  "quote_match": {
+   "image": 1
+  },
+  "verification": {
+   "agree": 1
+  },
+  "inferred": 1
+ },
+ "ingests": [
+  {
+   "at": "2026-10-31T12:18:30+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, scheduled Claude Code session 2026-10-31",
+   "values": 1,
+   "stored": 1,
+   "exact": 0,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 1,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 1,
+   "image_not_verified": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [],
+ "observations": [],
+ "structures": [],
+ "groundwater": [],
+ "references": [
+  {
+   "citation": {
+    "value": "U.S. Geological Survey, 1976, Aeromagnetic maps of parts of Georgia, South Carolina, and North Carolina: U.S. Geological Survey Open-File Report 76-181, 13 pls., scale 1:250,000.",
+    "source_id": "ngmdb:11545",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=47620_11545_2#page=1&viewrect=338.4,2751.84,316.8,57.6",
+    "quote": "Open-File Report 76-181: Aeromagnetic maps of parts of Georgia, South Carolina, and North Carolina, by U.S. Geological Survey, 13 pls., scale 1:250,000, 1976.",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-150dpi-crop300_2440_820_2840-r1c1",
+     "box": [
+      80,
+      650,
+      740,
+      770
+     ],
+     "dpi": 150,
+     "page_px_box": [
+      705,
+      5733,
+      1365,
+      5853
+     ],
+     "pt_box": [
+      338.4,
+      2751.84,
+      655.2,
+      2809.44
+     ],
+     "pdf_sha256": "2660b6bc5481fc670dc8d479c03354016dc1735fa147df2c528c40b70d9f250f"
+    },
+    "note": "Map note says this map is a hand contoured version of part of this report; citation arranged from the note"
+   }
+  }
+ ],
+ "surfaces": [],
+ "contours": [],
+ "sections": [],
+ "water_tests": [],
+ "rock_tests": []
+}

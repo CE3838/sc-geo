@@ -1,0 +1,374 @@
+{
+ "source_id": "ngmdb:100335",
+ "title": "Geologic Map of the Burtons Ferry Landing Quadrangle, Allendale County, South Carolina",
+ "citation": "Doar, W.R., III, 2010, Geologic Map of the Burtons Ferry Landing Quadrangle, Allendale County, South Carolina: South Carolina Geological Survey Open-File Report OFR-194, map scale 1:24,000.",
+ "year": 2010,
+ "scale": 24000,
+ "publisher": "South Carolina Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-10-31T12:09:28+00:00",
+ "updated_at": "2026-10-31T12:09:28+00:00",
+ "reader": "Claude, Claude Code session 2026-10-31",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1"
+ ],
+ "blocks_total": 1,
+ "complete": true,
+ "notes": "Single OCR'd map sheet; almost all of the quadrangle is in Georgia (not mapped). Map symbols me and QHfw read from legend boxes on a page-image tile. One SCGS drill hole (3-158) labelled on the South Carolina side of the map face, read from a tile; no log data printed. A hole on the Georgia side is not recorded (South Carolina content only). Contact symbol is legend-only. No cross sections, no references. SUBSURFACE: none.",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/img2/100000_100999/100335_1",
+   "via": "ngmdb_image",
+   "sha256": "5bfbb1beb830e51a600c165eb1e7aff15d3bb7c7cf2d7d53482dcbb71127d3eb",
+   "pages": 1,
+   "first_page": 1
+  }
+ ],
+ "summary": {
+  "stored": 15,
+  "quote_match": {
+   "exact": 12,
+   "image": 3
+  },
+  "verification": {
+   "agree": 5
+  },
+  "inferred": 0
+ },
+ "ingests": [
+  {
+   "at": "2026-10-31T12:09:28+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, Claude Code session 2026-10-31",
+   "values": 15,
+   "stored": 15,
+   "exact": 12,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 5,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 3,
+   "image_not_verified": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "Bodies of water",
+    "source_id": "ngmdb:100335",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100335_1",
+    "quote": "Bodies of water (2006) — Water boundaries are delineated from 2006 digital",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "Water boundaries are delineated from 2006 digital ortho-quarter quadrangles photos (DOQQs).",
+    "source_id": "ngmdb:100335",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100335_1",
+    "quote": "Water boundaries are delineated from 2006 digital",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "me",
+    "source_id": "ngmdb:100335",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100335_1#page=1&viewrect=1613,215,39,18",
+    "quote": "me",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1600_130_2060_450-r1c1",
+     "box": [
+      26,
+      170,
+      104,
+      206
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3226,
+      430,
+      3304,
+      466
+     ],
+     "pt_box": [
+      1613.0,
+      215.0,
+      1652.0,
+      233.0
+     ],
+     "pdf_sha256": "5bfbb1beb830e51a600c165eb1e7aff15d3bb7c7cf2d7d53482dcbb71127d3eb"
+    }
+   },
+   "name": {
+    "value": "Moved earth",
+    "source_id": "ngmdb:100335",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100335_1",
+    "quote": "Moved earth (Late Holocene) — Earth material moved in bulk by humans.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Late Holocene",
+    "source_id": "ngmdb:100335",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100335_1",
+    "quote": "Moved earth (Late Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0039000000000000003,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "Earth material moved in bulk by humans. Color is highly variable and dependent on source location.",
+    "source_id": "ngmdb:100335",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100335_1",
+    "quote": "highly variable and dependent on source location.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "up to 18 feet",
+    "source_id": "ngmdb:100335",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100335_1",
+    "quote": "Thickness up to 18 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 18.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QHfw",
+    "source_id": "ngmdb:100335",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100335_1#page=1&viewrect=1613,255,39,17",
+    "quote": "QHfw",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1600_130_2060_450-r1c1",
+     "box": [
+      26,
+      250,
+      104,
+      284
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3226,
+      510,
+      3304,
+      544
+     ],
+     "pt_box": [
+      1613.0,
+      255.0,
+      1652.0,
+      272.0
+     ],
+     "pdf_sha256": "5bfbb1beb830e51a600c165eb1e7aff15d3bb7c7cf2d7d53482dcbb71127d3eb"
+    }
+   },
+   "name": {
+    "value": "Freshwater marsh and swamp deposits",
+    "source_id": "ngmdb:100335",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100335_1",
+    "quote": "Freshwater marsh and swamp deposits (Holocene) — Black (N1), silty clay and peat",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:100335",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100335_1",
+    "quote": "Freshwater marsh and swamp deposits (Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "silty clay and peat",
+    "source_id": "ngmdb:100335",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100335_1",
+    "quote": "Black (N1), silty clay and peat",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "description": {
+    "value": "Black (N1), silty clay and peat deposited in stream valleys and areas of locally low elevation",
+    "source_id": "ngmdb:100335",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100335_1",
+    "quote": "deposited in stream valleys and areas of locally low elevation.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "stream valleys and areas of locally low elevation; areas of poor drainage",
+    "source_id": "ngmdb:100335",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100335_1",
+    "quote": "of poor drainage, such as a swale in a dune field or the slow drainage of a stream system.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "1 to 40 feet",
+    "source_id": "ngmdb:100335",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100335_1",
+    "quote": "salinity waters. Thickness 1 to 40 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 1.0,
+     "max_ft": 40.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  }
+ ],
+ "observations": [
+  {
+   "kind": "boring",
+   "label": {
+    "value": "3-158",
+    "source_id": "ngmdb:100335",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/100000_100999/100335_1#page=1&viewrect=1509,1019,21,9",
+    "quote": "3-158",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1380_960_1560_1060-r1c1",
+     "box": [
+      258,
+      118,
+      300,
+      136
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3018,
+      2038,
+      3060,
+      2056
+     ],
+     "pt_box": [
+      1509.0,
+      1019.0,
+      1530.0,
+      1028.0
+     ],
+     "pdf_sha256": "5bfbb1beb830e51a600c165eb1e7aff15d3bb7c7cf2d7d53482dcbb71127d3eb"
+    },
+    "note": "SCGS drill hole symbol and label on the map face on the South Carolina bank (a Georgia hole beside it is not recorded)"
+   }
+  }
+ ],
+ "structures": [],
+ "groundwater": [],
+ "references": [],
+ "surfaces": [],
+ "contours": [],
+ "sections": [],
+ "water_tests": [],
+ "rock_tests": []
+}
