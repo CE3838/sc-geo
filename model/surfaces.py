@@ -3,24 +3,37 @@
 Pure Python, no numpy. Points are in a plane in feet (SC State Plane; see
 `point_from_latlon`), elevations in feet NAVD88 (extract/elevations.py).
 
-`build(points, cfg)` picks the method:
+`build(points, cfg)` tries up to three candidates on the same points and keeps
+the one with the lowest leave-one-out (LOO) RMSE:
 
-1. Ordinary kriging, the primary method, with at least `min_points_kriging`
-   points. An empirical semivariogram (pairs binned to half the largest
-   distance) is fitted with spherical, exponential and gaussian models (nugget
-   and partial sill by weighted least squares, range by search); the model is
-   the one with the lowest leave-one-out RMSE, computed exactly from one
-   inverse of the kriging matrix (Dubrule 1983). Each estimate's uncertainty
-   is its kriging standard deviation, calibrated by the square root of the
-   leave-one-out mean standardized squared error (bounded by `msse_bounds`) so
-   it matches the errors cross-validation saw; the raw value is kept as
-   `std_raw`.
-2. The fallback when there are too few points, when the variogram fit is poor
-   (r² below `min_r2`, or almost no spatial structure: partial sill under
-   `min_structure` of the sill), or when kriging cross-validates more than
-   `cv_margin` worse than the fallback on the same points: natural neighbour (Sibson) inside the
-   points' convex hull, inverse distance weighting outside it. Their
-   uncertainty is the method's leave-one-out RMSE.
+1. Ordinary kriging (`kriging`), with at least `min_points_kriging` points. An
+   empirical semivariogram (pairs binned to half the largest distance) is
+   fitted with spherical, exponential and gaussian models (nugget and partial
+   sill by weighted least squares, range by search); the model kept is the one
+   with the lowest LOO RMSE, computed exactly from one inverse of the kriging
+   matrix (Dubrule 1983).
+2. Trend kriging (`trend_kriging`, universal kriging with a planar drift),
+   with the same minimum: the regional dip is carried by the drift and the
+   variogram, fitted to the residuals of a least-squares plane (regression
+   kriging; Hengl and others 2007), carries only the local structure. The
+   fitted dip (ft per mile and its azimuth, from the kriging's own
+   generalized least-squares drift) is reported in `provenance()["trend"]`.
+   A quadratic drift is not a candidate: on the extracted tops it won as
+   often as it lost (docs/interpolation.md).
+3. The fallback: natural neighbour (Sibson) inside the points' convex hull,
+   inverse distance weighting outside it.
+
+The kriging candidate with the lower LOO RMSE is kept unless it cross-validates
+more than `cv_margin` worse than the fallback (the margin favours kriging, whose
+uncertainty varies with distance to the data). There is no variogram-fit gate:
+a noisy empirical variogram with a low r² can still krige well, and LOO is the
+judge. Fewer than `min_points_kriging` points, or no variogram model with a
+positive partial sill, leaves the fallback.
+
+Each kriging estimate's uncertainty is its kriging standard deviation,
+calibrated by the square root of the method's LOO mean standardized squared
+error (bounded by `msse_bounds`) so it matches the errors cross-validation saw;
+the raw value is kept as `std_raw`. The fallback's uncertainty is its LOO RMSE.
 
 No uncertainty is reported below `min_std_ft` (0.3 ft, the error of
 elevations printed to the nearest foot).
@@ -40,10 +53,14 @@ from dataclasses import dataclass, field
 
 from model import coords
 
-DEFAULTS = {"min_points_kriging": 10, "min_r2": 0.3, "min_structure": 0.05, "cv_margin": 0.10,
+DEFAULTS = {"min_points_kriging": 10, "cv_margin": 0.10,
             "idw_power": 2.0, "max_distance_ft": None, "max_distance_factor": 3.0, "bins": 12,
             "msse_bounds": (0.25, 20.0), "min_std_ft": 0.3}
 KINDS = ("spherical", "exponential", "gaussian")
+KRIGING_METHODS = ("kriging", "trend_kriging")
+LABELS = {"kriging": "ordinary kriging", "trend_kriging": "trend kriging (planar regional dip)",
+          "natural_neighbor": "natural neighbour", "idw": "inverse distance weighting"}
+FT_PER_MILE = 5280.0
 
 
 @dataclass
@@ -244,6 +261,108 @@ class Kriging:
         return ([alpha[i] / self.kinv[i][i] for i in range(n)], [1.0 / self.kinv[i][i] for i in range(n)])
 
 
+class _Frame:
+    """Centred, scaled coordinates so polynomial drift terms stay well conditioned."""
+
+    def __init__(self, points: list[Point]):
+        xs, ys = [p.x for p in points], [p.y for p in points]
+        self.mx, self.my = sum(xs) / len(xs), sum(ys) / len(ys)
+        self.s = max(max(xs) - min(xs), max(ys) - min(ys), 1.0)
+
+    def terms(self, drift: str, x: float, y: float) -> list[float]:
+        u, v = (x - self.mx) / self.s, (y - self.my) / self.s
+        if drift == "constant":
+            return [1.0]
+        if drift == "linear":
+            return [1.0, u, v]
+        if drift == "quadratic":
+            return [1.0, u, v, u * u, u * v, v * v]
+        raise ValueError(drift)
+
+
+def fit_trend(points: list[Point], drift: str = "linear"):
+    """Ordinary least-squares polynomial trend; returns f(x, y)."""
+    frame = _Frame(points)
+    rows = [frame.terms(drift, p.x, p.y) for p in points]
+    m = len(rows[0])
+    ata = [[sum(r[i] * r[j] for r in rows) for j in range(m)] for i in range(m)]
+    atb = [sum(r[i] * p.z for r, p in zip(rows, points)) for i in range(m)]
+    beta = solve(ata, atb)
+    return lambda x, y: sum(b * t for b, t in zip(beta, frame.terms(drift, x, y)))
+
+
+def residuals(points: list[Point], trend) -> list[Point]:
+    return [Point(p.x, p.y, p.z - trend(p.x, p.y), refs=p.refs) for p in points]
+
+
+class UniversalKriging:
+    """Kriging with a polynomial drift: [[C, F], [F^T, 0]] [w; mu] = [c; f]."""
+
+    def __init__(self, points: list[Point], vg: Variogram, drift: str = "linear"):
+        self.points, self.vg, self.drift = points, vg, drift
+        self.frame = _Frame(points)
+        n = len(points)
+        f = [self.frame.terms(drift, p.x, p.y) for p in points]
+        m = len(f[0])
+        jitter = 1e-10 * (vg.sill or 1.0)
+        k = [[0.0] * (n + m) for _ in range(n + m)]
+        for i, p in enumerate(points):
+            for j in range(i, n):
+                q = points[j]
+                c = vg.cov(math.hypot(p.x - q.x, p.y - q.y)) + (jitter if i == j else 0.0)
+                k[i][j] = k[j][i] = c
+            for t in range(m):
+                k[i][n + t] = k[n + t][i] = f[i][t]
+        self.m = m
+        self.kinv = inverse(k)
+
+    def predict(self, x: float, y: float) -> tuple[float, float]:
+        """(estimate, kriging variance)."""
+        n = len(self.points)
+        c = [self.vg.cov(math.hypot(p.x - x, p.y - y)) for p in self.points]
+        rhs = c + self.frame.terms(self.drift, x, y)
+        sol = [sum(r[j] * rhs[j] for j in range(n + self.m)) for r in self.kinv]
+        est = sum(sol[i] * self.points[i].z for i in range(n))
+        var = self.vg.sill - sum(sol[i] * rhs[i] for i in range(n + self.m))
+        return est, max(var, 0.0)
+
+    def leave_one_out(self) -> tuple[list[float], list[float]]:
+        n = len(self.points)
+        b = [p.z for p in self.points] + [0.0] * self.m
+        alpha = [sum(r[j] * b[j] for j in range(n + self.m)) for r in self.kinv]
+        return [alpha[i] / self.kinv[i][i] for i in range(n)], [1.0 / self.kinv[i][i] for i in range(n)]
+
+    def drift_coefficients(self) -> list[float]:
+        """The generalized least-squares drift the kriging uses (the drift rows of the inverse times z)."""
+        n = len(self.points)
+        return [sum(self.kinv[n + t][i] * self.points[i].z for i in range(n)) for t in range(self.m)]
+
+    def gradient(self) -> tuple[float, float]:
+        """dz/dx, dz/dy of a linear drift, in feet per foot."""
+        if self.drift != "linear":
+            raise ValueError("gradient of a linear drift only")
+        _, bu, bv = self.drift_coefficients()
+        return bu / self.frame.s, bv / self.frame.s
+
+
+def bearing(azimuth_deg: float) -> str:
+    """Quadrant bearing ('S28°E') for an azimuth clockwise from north."""
+    a = azimuth_deg % 360.0
+    if a <= 90:
+        return f"N{a:.0f}°E"
+    if a <= 180:
+        return f"S{180 - a:.0f}°E"
+    if a <= 270:
+        return f"S{a - 180:.0f}°W"
+    return f"N{360 - a:.0f}°W"
+
+
+def dip(gx: float, gy: float) -> dict:
+    """Dip of a plane with gradient (gx, gy) ft/ft: magnitude in ft per mile and the down-dip azimuth."""
+    az = math.degrees(math.atan2(-gx, -gy)) % 360.0
+    return {"dip_ft_per_mile": math.hypot(gx, gy) * FT_PER_MILE, "dip_azimuth_deg": az, "dip_direction": bearing(az)}
+
+
 class IDW:
     def __init__(self, points: list[Point], power: float = 2.0):
         self.points, self.power = points, power
@@ -396,7 +515,7 @@ def _merge(points: list[Point]) -> list[Point]:
 def _stats(errs: list[float], variances: list[float] | None = None) -> dict:
     n = len(errs)
     out = {"n": n, "rmse": math.sqrt(sum(e * e for e in errs) / n) if n else None,
-           "mae": sum(abs(e) for e in errs) / n if n else None}
+           "mae": sum(abs(e) for e in errs) / n if n else None, "bias": sum(errs) / n if n else None}
     if variances is not None and n:
         ok = [(e, v) for e, v in zip(errs, variances) if v > 0]
         out["msse"] = sum(e * e / v for e, v in ok) / len(ok) if ok else None
@@ -404,16 +523,18 @@ def _stats(errs: list[float], variances: list[float] | None = None) -> dict:
 
 
 class Surface:
-    def __init__(self, points, cfg, method, reason, variogram=None, kriging=None, cv=None, cv_models=None):
+    def __init__(self, points, cfg, method, reason, variogram=None, kriging=None, cv=None, cv_models=None,
+                 trend=None, candidates=None):
         self.points, self.cfg, self.method, self.reason = points, cfg, method, reason
         self.variogram, self.kriging = variogram, kriging
         self.cv, self.cv_models = cv or {}, cv_models or {}
+        self.trend, self.candidates = trend, candidates or {}
         self.idw = IDW(points, cfg["idw_power"])
         self.nn = NaturalNeighbor(points) if len(points) >= 3 and method == "natural_neighbor" else None
         self.hull = _hull([(p.x, p.y) for p in points])
         # Kriging variances scale with the fitted sill, which a trend or a few pairs can inflate or
         # shrink; the leave-one-out mean standardized squared error (ideally 1) rescales them.
-        msse = (self.cv.get("kriging") or {}).get("msse")
+        msse = (self.cv.get(method) or {}).get("msse") if method in KRIGING_METHODS else None
         lo, hi = cfg["msse_bounds"]
         self.std_factor = math.sqrt(min(max(msse, lo), hi)) if msse else 1.0
         self.max_distance_ft = cfg["max_distance_ft"]
@@ -430,12 +551,12 @@ class Surface:
         if nearest > self.max_distance_ft + 1e-9:
             return {"value": None, "std": None, "std_kind": None, "method": None,
                     "reason": f"beyond {self.max_distance_ft:.0f} ft from the nearest point", **base}
-        if self.method == "kriging":
+        if self.method in KRIGING_METHODS:
             est, var = self.kriging.predict(x, y)
             raw = math.sqrt(var)
             return {"value": est, "std": max(raw * self.std_factor, self.cfg["min_std_ft"]), "std_raw": raw,
                     "std_kind": "kriging standard deviation (calibrated by cross-validation)",
-                    "method": "kriging", "reason": None, **base}
+                    "method": self.method, "reason": None, **base}
         method, value = "idw", None
         if self.nn is not None and inside:
             value = self.nn.predict(x, y)
@@ -450,10 +571,46 @@ class Surface:
 
     def provenance(self) -> dict:
         return {"method": self.method, "reason": self.reason, "inferred": True, "extraction_method": "inference",
+                "selection": (f"lowest leave-one-out RMSE among kriging, trend kriging and the fallback; kriging "
+                              f"is kept unless more than {self.cfg['cv_margin']:.0%} worse than the fallback"),
+                "candidates": self.candidates, "trend": self.trend,
                 "variogram": self.variogram.to_dict() if self.variogram else None, "cv": self.cv,
                 "std_factor": self.std_factor,
                 "cv_models": self.cv_models, "max_distance_ft": self.max_distance_ft,
                 "points": [{"x": p.x, "y": p.y, "z": p.z, "refs": p.refs} for p in self.points]}
+
+
+def _kriging_fits(pts: list[Point], cfg: dict, drift: str):
+    """{kind: LOO stats + variogram}, {kind: (Variogram, kriging)} for one drift."""
+    try:
+        base = residuals(pts, fit_trend(pts, drift)) if drift != "constant" else pts
+    except ValueError:
+        return {}, {}
+    bins = empirical_variogram(base, cfg["bins"])
+    models, fits = {}, {}
+    for kind in KINDS:
+        vg = fit_variogram(bins, kind)
+        if vg is None or vg.psill <= 0:
+            continue
+        try:
+            k = Kriging(pts, vg) if drift == "constant" else UniversalKriging(pts, vg, drift)
+        except ValueError:
+            continue
+        errs, variances = k.leave_one_out()
+        models[kind] = _stats(errs, variances) | {"variogram": vg.to_dict()}
+        fits[kind] = (vg, k)
+    return models, fits
+
+
+def _trend_report(pts: list[Point], k: UniversalKriging, used: bool) -> dict:
+    gx, gy = k.gradient()
+    ols = fit_trend(pts, "linear")
+    mean = sum(p.z for p in pts) / len(pts)
+    sst = sum((p.z - mean) ** 2 for p in pts)
+    sse = sum((p.z - ols(p.x, p.y)) ** 2 for p in pts)
+    return {"drift": "linear", "used": used, **dip(gx, gy),
+            "variance_explained": 1 - sse / sst if sst > 0 else None, "inferred": True,
+            "note": "generalized least-squares drift of the trend kriging; variance explained by a least-squares plane"}
 
 
 def build(points: list[Point], cfg: dict | None = None) -> Surface:
@@ -478,35 +635,43 @@ def build(points: list[Point], cfg: dict | None = None) -> Surface:
         # What the fallback would do at every point: natural neighbour inside the hull, IDW elsewhere.
         cv["fallback"] = _stats([nn if nn is not None else iw for nn, iw in zip(nn_err, idw_err)])
     fallback = "natural_neighbor" if n >= 3 else "idw"
+    candidates = {"fallback": {"rmse": cv.get("fallback", {}).get("rmse"), "chosen": False}}
     if n < cfg["min_points_kriging"]:
-        return Surface(pts, cfg, fallback, f"fewer than {cfg['min_points_kriging']} points for a variogram", cv=cv)
-    bins = empirical_variogram(pts, cfg["bins"])
-    cv_models, fits = {}, {}
-    for kind in KINDS:
-        vg = fit_variogram(bins, kind)
-        if vg is None or vg.psill <= 0:
+        candidates["fallback"]["chosen"] = True
+        return Surface(pts, cfg, fallback, f"fewer than {cfg['min_points_kriging']} points for a variogram",
+                       cv=cv, candidates=candidates)
+    cv_models, chosen = {}, {}
+    for method, drift in (("kriging", "constant"), ("trend_kriging", "linear")):
+        models, fits = _kriging_fits(pts, cfg, drift)
+        if not fits:
+            candidates[method] = {"rmse": None, "chosen": False, "reason": "no variogram model could be fitted"}
             continue
-        try:
-            k = Kriging(pts, vg)
-        except ValueError:
-            continue
-        errs, variances = k.leave_one_out()
-        cv_models[kind] = _stats(errs, variances) | {"variogram": vg.to_dict()}
-        fits[kind] = (vg, k)
-    if not fits:
-        return Surface(pts, cfg, fallback, "no variogram model could be fitted", cv=cv)
-    kind = min(cv_models, key=lambda k: cv_models[k]["rmse"])
-    vg, krig = fits[kind]
-    cv["kriging"] = {k: v for k, v in cv_models[kind].items() if k != "variogram"}
-    if vg.r2 < cfg["min_r2"]:
-        reason = f"poor variogram fit (r2 {vg.r2:.2f} < {cfg['min_r2']})"
-    elif vg.psill < cfg["min_structure"] * vg.sill:
-        reason = "no spatial structure in the variogram (almost all nugget)"
-    else:
-        other = cv.get("fallback", {}).get("rmse")
-        if other is not None and cv["kriging"]["rmse"] > (1 + cfg["cv_margin"]) * other:
-            reason = "kriging with the fitted variogram cross-validates worse than the fallback"
-        else:
-            return Surface(pts, cfg, "kriging", f"{kind} variogram chosen by leave-one-out cross-validation",
-                           vg, krig, cv, cv_models)
-    return Surface(pts, cfg, fallback, reason, vg, None, cv, cv_models)
+        kind = min(models, key=lambda k: models[k]["rmse"])
+        cv_models[method] = models
+        cv[method] = {k: v for k, v in models[kind].items() if k != "variogram"}
+        chosen[method] = (kind, *fits[kind])
+        candidates[method] = {"rmse": cv[method]["rmse"], "chosen": False, "variogram": kind}
+    trend = None
+    if "trend_kriging" in chosen:
+        trend = _trend_report(pts, chosen["trend_kriging"][2], used=False)
+    if not chosen:
+        candidates["fallback"]["chosen"] = True
+        return Surface(pts, cfg, fallback, "no variogram model could be fitted", cv=cv, cv_models=cv_models,
+                       trend=trend, candidates=candidates)
+    best = min(chosen, key=lambda m: cv[m]["rmse"])
+    kind, vg, krig = chosen[best]
+    rmse, other = cv[best]["rmse"], cv.get("fallback", {}).get("rmse")
+    if other is not None and rmse > (1 + cfg["cv_margin"]) * other:
+        candidates["fallback"]["chosen"] = True
+        reason = (f"{LABELS[best]} cross-validates worse than the fallback by more than "
+                  f"{cfg['cv_margin']:.0%} (RMSE {rmse:.2f} vs {other:.2f} ft)")
+        return Surface(pts, cfg, fallback, reason, vg, None, cv, cv_models, trend, candidates)
+    candidates[best]["chosen"] = True
+    if trend is not None:
+        trend["used"] = best == "trend_kriging"
+    others = ", ".join(f"{LABELS.get(m, m)} {c['rmse']:.2f}" for m, c in candidates.items()
+                       if m != best and c.get("rmse") is not None)
+    lead = ("lowest leave-one-out RMSE" if other is None or rmse <= other
+            else f"leave-one-out RMSE within {cfg['cv_margin']:.0%} of the fallback")
+    reason = f"{LABELS[best]}, {kind} variogram: {lead} ({rmse:.2f} ft" + (f"; {others} ft" if others else "") + ")"
+    return Surface(pts, cfg, best, reason, vg, krig, cv, cv_models, trend, candidates)

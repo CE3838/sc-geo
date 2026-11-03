@@ -255,19 +255,27 @@
         plane viewer will draw, so every estimate carries a ± uncertainty and a method, and is an inference
         citing every point it used.</p>
       <h3>Method</h3>
+      <p>Three methods are tried on the same points and the one that predicts held-out points best is kept
+        (<strong>leave-one-out cross-validation</strong>: each point is predicted from all the others and the errors
+        compared, computed exactly, Dubrule 1983).</p>
       <ul>
         <li><strong>Ordinary kriging</strong> with at least <span data-sync="surf.min_points">10</span> points.
           Pairs of points are binned (<span data-sync="surf.bins">12</span> lag bins up to half the largest distance)
-          into an empirical semivariogram, and spherical, exponential and gaussian models are fitted. The model
-          kept is the one with the lowest <strong>leave-one-out cross-validation</strong> error: each point is
-          predicted from all the others and the errors compared (computed exactly, Dubrule 1983).</li>
+          into an empirical semivariogram, and spherical, exponential and gaussian models are fitted; the model with
+          the lowest cross-validation error is kept.</li>
+        <li><strong>Trend kriging</strong> (the regional dip), with the same minimum: a plane carries the regional
+          seaward dip and the variogram, fitted to what is left, carries the local relief. The fitted dip, in feet per
+          mile and its direction, is reported with the surface. A curved (quadratic) trend is not used: on the
+          extracted tops it helped as often as it hurt.</li>
         <li><strong>Fallback</strong>: natural-neighbour (Sibson) interpolation inside the points' outline (convex
           hull) and inverse-distance weighting (power <span data-sync="surf.idw_power">2</span>) outside it, used when
-          there are too few points, when the variogram fit is poor (r² under <span data-sync="surf.min_r2">0.30</span>),
-          when there is almost no spatial structure (partial sill under <span data-sync="surf.min_structure">5%</span>
-          of the sill), or when kriging cross-validates more than <span data-sync="surf.cv_margin">10%</span> worse
-          than the fallback on the same points.</li>
+          there are too few points or no variogram can be fitted.</li>
       </ul>
+      <p>The kriging with the lower cross-validation error is kept unless it cross-validates more than
+        <span data-sync="surf.cv_margin">10%</span> worse than the fallback (kriging is given that margin because its
+        uncertainty grows with distance from the data). How well the variogram fits is not a reason to reject kriging:
+        the variogram of a few tens of noisy points fits poorly even when kriging predicts well, and cross-validation
+        is the judge.</p>
       <h3>The ± uncertainty</h3>
       <ul>
         <li>Kriging: the kriging standard deviation, calibrated so it matches the errors cross-validation actually
@@ -282,10 +290,24 @@
         <span data-sync="surf.max_distance_factor">3</span> times the median spacing between neighbouring points);
         the viewer will show a gap with the reason. Estimates outside the points' outline are flagged
         <strong>extrapolated</strong>.</p>
-      <p>Research into better methods for Coastal Plain surfaces (regional dip, anisotropy, contour maps as data,
-        surfaces that do not cross), with cross-validation on the extracted points, is in
+      <h3>Stacked units never cross</h3>
+      <p>The tops of several units are put in order by <strong>geologic age</strong> (<code>model/stack.py</code>):
+        each unit's age comes from its Geolex entry (the most specific interval it names, on the ICS chart; an
+        inferred value), and a younger unit's top must lie at or above an older unit's top. Units whose age ranges
+        overlap (two members of the same age) are ordered by <strong>superposition</strong> instead: one is kept above
+        the other only when at least <span data-sync="stack.min_holes">3</span> logged holes show it above and none
+        show the reverse; otherwise they are left unordered. Units with no known age are not moved, and an age order
+        that as many holes show the other way up is not enforced. All of these are listed with the surfaces, and
+        every moved value says whether its order came from age or from superposition (and how many holes).</p>
+      <p>Where two surfaces cross, both move to a single level between them, weighted so that the less certain surface
+        moves more (the smallest change, weighted by uncertainty, that restores the order everywhere at once). The unit
+        is then of zero thickness there. Every moved value is marked <span class="tag-inferred">inferred</span> with
+        the amount it moved and why, and its ± becomes the largest ± of the surfaces it was reconciled with, never
+        smaller than its own. The values before stacking are kept.</p>
+      <p>The comparison of methods on the extracted points (regional dip, anisotropy, contour maps as data,
+        stacking), with the cross-validation results before and after these changes, is in
         <a href="https://github.com/CE3838/sc-geo/blob/main/docs/interpolation.md" target="_blank" rel="noopener noreferrer">docs/interpolation.md</a>.
-        Nothing there changes the method above until it is approved.</p>
+        Methods described there but not above (anisotropy, contour maps as data) are not used.</p>
     </section>
 
     <section id="sources">

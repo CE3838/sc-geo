@@ -86,15 +86,15 @@ def test_kriging_is_exact_at_data_and_less_certain_far_away():
 def test_smooth_surface_uses_kriging_and_beats_idw():
     pts = scatter(60, bump, seed=5)
     s = surfaces.build(pts)
-    assert s.method == "kriging" and s.variogram.kind in ("spherical", "exponential", "gaussian")
-    assert set(s.cv) >= {"kriging", "idw"} and s.cv["kriging"]["rmse"] < s.cv["idw"]["rmse"]
+    assert s.method in surfaces.KRIGING_METHODS and s.variogram.kind in ("spherical", "exponential", "gaussian")
+    assert set(s.cv) >= {"kriging", "trend_kriging", "idw"} and s.cv[s.method]["rmse"] < s.cv["idw"]["rmse"]
     assert s.std_factor < 1  # the raw kriging sd is pessimistic here; calibration narrows it
     rnd = random.Random(9)
     errs, stds = [], []
     for _ in range(100):
         x, y = rnd.uniform(3000, 17000), rnd.uniform(3000, 17000)
         e = s.estimate(x, y)
-        assert e["method"] == "kriging" and e["std"] > 0 and e["std_kind"].startswith("kriging standard deviation")
+        assert e["method"] == s.method and e["std"] > 0 and e["std_kind"].startswith("kriging standard deviation")
         errs.append(e["value"] - bump(x, y))
         stds.append(e["std"])
     rmse = math.sqrt(sum(x * x for x in errs) / len(errs))
@@ -109,7 +109,7 @@ def test_smooth_surface_uses_kriging_and_beats_idw():
 def test_calibration_factor_is_the_cross_validation_msse_bounded():
     s = surfaces.build(scatter(60, bump, seed=5))
     lo, hi = surfaces.DEFAULTS["msse_bounds"]
-    assert s.std_factor == pytest.approx(math.sqrt(min(max(s.cv["kriging"]["msse"], lo), hi)))
+    assert s.std_factor == pytest.approx(math.sqrt(min(max(s.cv[s.method]["msse"], lo), hi)))
     e = s.estimate(9000.0, 9000.0)
     assert e["std"] == pytest.approx(max(e["std_raw"] * s.std_factor, surfaces.DEFAULTS["min_std_ft"]))
 
@@ -130,7 +130,7 @@ def test_kriging_is_compared_with_the_fallback_on_the_same_points():
 
 def test_model_choice_is_by_cross_validation():
     s = surfaces.build(scatter(60, bump, seed=5))
-    rmses = {k: v["rmse"] for k, v in s.cv_models.items()}
+    rmses = {k: v["rmse"] for k, v in s.cv_models[s.method].items()}
     assert set(rmses) == {"spherical", "exponential", "gaussian"}
     assert s.variogram.kind == min(rmses, key=rmses.get)
 
@@ -162,11 +162,14 @@ def test_too_few_points_fall_back_to_natural_neighbor_then_idw():
     assert out["method"] == "idw" and out["extrapolated"] is True and out["value"] is not None
 
 
-def test_no_spatial_structure_falls_back():
+def test_no_spatial_structure_is_judged_by_cross_validation_not_by_the_variogram():
+    # White noise: the variogram is almost all nugget. There is no fit gate any more; the method
+    # is whichever cross-validates best under the selection rule.
     rnd = random.Random(8)
     pts = [surfaces.Point(rnd.uniform(0, 20000), rnd.uniform(0, 20000), rnd.gauss(0, 10)) for _ in range(40)]
     s = surfaces.build(pts)
-    assert s.method != "kriging" and "variogram" in s.reason
+    assert s.method == expected_choice(s)
+    assert "min_r2" not in surfaces.DEFAULTS and "min_structure" not in surfaces.DEFAULTS
 
 
 # --- never extrapolate silently ---------------------------------------------------
@@ -214,3 +217,92 @@ def test_points_from_latlon_use_state_plane_feet():
     p = surfaces.point_from_latlon(32.78, -79.95, -62.0, ref="x")
     e, n = coords.latlon_to_state_plane(32.78, -79.95)
     assert (p.x, p.y, p.z) == pytest.approx((e, n, -62.0))
+
+
+# --- regional dip (trend kriging) and the selection rule ------------------------------
+
+def expected_choice(s):
+    """The selection rule, recomputed from the cross-validation build() reports."""
+    krig = [m for m in surfaces.KRIGING_METHODS if m in s.cv]
+    if not krig:
+        return "natural_neighbor" if len(s.points) >= 3 else "idw"
+    best = min(krig, key=lambda m: s.cv[m]["rmse"])
+    fb = s.cv["fallback"]["rmse"]
+    if s.cv[best]["rmse"] > (1 + surfaces.DEFAULTS["cv_margin"]) * fb:
+        return "natural_neighbor"
+    return best
+
+
+def dipping(x, y, ft_per_mile=10.0, azimuth=135.0):
+    """A plane dipping `ft_per_mile` toward `azimuth` (clockwise from north) with gentle relief on it."""
+    g = ft_per_mile / 5280.0
+    a = math.radians(azimuth)
+    return -40.0 - g * (x * math.sin(a) + y * math.cos(a)) + 2.0 * math.sin(x / 2500.0) * math.cos(y / 3000.0)
+
+
+@pytest.mark.parametrize("azimuth", [135.0, 200.0])
+def test_trend_kriging_recovers_the_regional_dip(azimuth):
+    pts = scatter(50, lambda x, y: dipping(x, y, 10.0, azimuth), seed=21, size=40000.0)
+    s = surfaces.build(pts)
+    assert s.method == "trend_kriging"
+    t = s.provenance()["trend"]
+    assert t["drift"] == "linear" and t["used"] is True
+    assert t["dip_ft_per_mile"] == pytest.approx(10.0, rel=0.1)
+    assert abs((t["dip_azimuth_deg"] - azimuth + 180) % 360 - 180) <= 5.0
+    assert t["dip_direction"].startswith("S")
+    assert s.cv["trend_kriging"]["rmse"] < s.cv["kriging"]["rmse"]
+    e = s.estimate(20000.0, 20000.0)
+    assert e["method"] == "trend_kriging" and e["value"] == pytest.approx(dipping(20000.0, 20000.0, 10.0, azimuth), abs=1.5)
+    assert e["std"] >= surfaces.DEFAULTS["min_std_ft"]
+
+
+def test_dip_direction_is_written_as_a_quadrant_bearing():
+    assert surfaces.bearing(0.0) == "N0°E" and surfaces.bearing(152.0) == "S28°E"
+    assert surfaces.bearing(208.0) == "S28°W" and surfaces.bearing(300.0) == "N60°W"
+    d = surfaces.dip(0.0, 1.0 / 5280.0)            # rising to the north: dips 1 ft per mile due south
+    assert d["dip_ft_per_mile"] == pytest.approx(1.0) and d["dip_azimuth_deg"] == pytest.approx(180.0)
+
+
+def test_trend_kriging_leave_one_out_is_exact():
+    pts = scatter(18, lambda x, y: dipping(x, y), seed=22)
+    vg = surfaces.Variogram("exponential", nugget=0.5, psill=4.0, range=6000.0)
+    k = surfaces.UniversalKriging(pts, vg, drift="linear")
+    errs, variances = k.leave_one_out()
+    for i in (0, 9, 17):
+        est, var = surfaces.UniversalKriging(pts[:i] + pts[i + 1:], vg, drift="linear").predict(pts[i].x, pts[i].y)
+        assert errs[i] == pytest.approx(pts[i].z - est, abs=1e-6) and variances[i] == pytest.approx(var, rel=1e-6)
+
+
+@pytest.mark.parametrize("f,seed", [(bump, 5), (plane, 2), (lambda x, y: dipping(x, y), 23)])
+def test_method_is_chosen_by_leave_one_out_rmse(f, seed):
+    s = surfaces.build(scatter(40, f, seed=seed, noise=0.5))
+    assert s.method == expected_choice(s)
+    prov = s.provenance()
+    assert set(prov["candidates"]) >= {"kriging", "trend_kriging", "fallback"}
+    assert prov["candidates"][s.method if s.method in surfaces.KRIGING_METHODS else "fallback"]["chosen"] is True
+
+
+def test_a_poor_variogram_fit_no_longer_rejects_kriging(monkeypatch):
+    real = surfaces.fit_variogram
+
+    def poor(bins, kind):
+        vg = real(bins, kind)
+        if vg is not None:
+            vg.r2 = 0.05       # the old rule fell back below r2 0.3
+        return vg
+    monkeypatch.setattr(surfaces, "fit_variogram", poor)
+    s = surfaces.build(scatter(60, bump, seed=5))
+    assert s.method in surfaces.KRIGING_METHODS and s.variogram.r2 == 0.05
+    assert "r2" not in s.reason
+
+
+def test_fallback_wins_only_when_kriging_cross_validates_worse_by_more_than_the_margin(monkeypatch):
+    pts = scatter(40, bump, seed=5)
+    s = surfaces.build(pts, {"cv_margin": -0.99})     # any kriging error above 1% of the fallback's loses
+    assert s.method == "natural_neighbor" and "worse than the fallback" in s.reason
+    assert s.estimate(9000.0, 9000.0)["std_kind"] == "leave-one-out RMSE"
+
+
+def test_too_few_points_for_trend_kriging_report_no_trend():
+    s = surfaces.build(scatter(6, plane, seed=7))
+    assert s.provenance()["trend"] is None and "trend_kriging" not in s.cv
