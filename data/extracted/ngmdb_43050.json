@@ -1,0 +1,872 @@
+{
+ "source_id": "ngmdb:43050",
+ "title": "Geologic map of the Wellford quadrangle, Spartanburg County, South Carolina",
+ "citation": "Curl, D.C., 1997, Geologic map of the Wellford quadrangle, Spartanburg County, South Carolina: South Carolina Geological Survey Open-File Report OFR-95, map scale 1:24,000.",
+ "year": 1997,
+ "scale": 24000,
+ "publisher": "South Carolina Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-11-05T11:58:41+00:00",
+ "updated_at": "2026-11-05T11:58:41+00:00",
+ "reader": "Claude, Claude Code session 2026-11-05",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1"
+ ],
+ "blocks_total": 1,
+ "complete": true,
+ "notes": "Single OCR'd map sheet; legend and map face read on page images. Map symbols from legend boxes; names missing from the OCR (Metadiorite, Metagabbro/pyroxenite, Amphiboite, Quartzite) read from the legend image; 'Amphiboite' and 'amphinolite' as printed. No ages printed. Foliation, lineation and fold-hinge symbols show dip/plunge numbers only, without printed strikes or locations; not recorded. No drill holes, cross section or references. SUBSURFACE: none.",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/img1/43000_43999/43050_1",
+   "via": "ngmdb_image",
+   "sha256": "2c59a2310f51fd04278f1fae14666110fee9e926d6005b7cd9e4344ee8f80089",
+   "pages": 1,
+   "first_page": 1
+  }
+ ],
+ "summary": {
+  "stored": 25,
+  "quote_match": {
+   "exact": 8,
+   "image": 17
+  },
+  "verification": {
+   "agree": 18
+  },
+  "inferred": 2
+ },
+ "ingests": [
+  {
+   "at": "2026-11-05T11:58:41+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, Claude Code session 2026-11-05",
+   "values": 25,
+   "stored": 25,
+   "exact": 8,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 18,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 17,
+   "image_not_verified": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "Bodies of water",
+    "source_id": "ngmdb:43050",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43050_1",
+    "quote": "Bodies of water",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "gg",
+    "source_id": "ngmdb:43050",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43050_1#page=1&viewrect=1594,201.5,38,17",
+    "quote": "gg",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1580_150_1900_480-r1c1",
+     "box": [
+      28,
+      103,
+      104,
+      137
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3188,
+      403,
+      3264,
+      437
+     ],
+     "pt_box": [
+      1594.0,
+      201.5,
+      1632.0,
+      218.5
+     ],
+     "pdf_sha256": "2c59a2310f51fd04278f1fae14666110fee9e926d6005b7cd9e4344ee8f80089"
+    },
+    "note": "symbol read from the legend box on a page image"
+   },
+   "name": {
+    "value": "Granitic gneiss",
+    "source_id": "ngmdb:43050",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43050_1",
+    "quote": "Granitic gneiss",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "granitic",
+     "in_geolex": false,
+     "inferred": true
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "md",
+    "source_id": "ngmdb:43050",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43050_1#page=1&viewrect=1594,226.5,38,17",
+    "quote": "md",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1580_150_1900_480-r1c1",
+     "box": [
+      28,
+      153,
+      104,
+      187
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3188,
+      453,
+      3264,
+      487
+     ],
+     "pt_box": [
+      1594.0,
+      226.5,
+      1632.0,
+      243.5
+     ],
+     "pdf_sha256": "2c59a2310f51fd04278f1fae14666110fee9e926d6005b7cd9e4344ee8f80089"
+    },
+    "note": "symbol read from the legend box on a page image"
+   },
+   "name": {
+    "value": "Metadiorite",
+    "source_id": "ngmdb:43050",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43050_1#page=1&viewrect=1634,227.5,156,15",
+    "quote": "Metadiorite",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1580_150_1900_480-r1c1",
+     "box": [
+      108,
+      155,
+      420,
+      185
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3268,
+      455,
+      3580,
+      485
+     ],
+     "pt_box": [
+      1634.0,
+      227.5,
+      1790.0,
+      242.5
+     ],
+     "pdf_sha256": "2c59a2310f51fd04278f1fae14666110fee9e926d6005b7cd9e4344ee8f80089"
+    },
+    "note": "name read from the legend on a page image (missing from the OCR text)"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "pyx",
+    "source_id": "ngmdb:43050",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43050_1#page=1&viewrect=1594,251.5,38,17",
+    "quote": "pyx",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1580_150_1900_480-r1c1",
+     "box": [
+      28,
+      203,
+      104,
+      237
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3188,
+      503,
+      3264,
+      537
+     ],
+     "pt_box": [
+      1594.0,
+      251.5,
+      1632.0,
+      268.5
+     ],
+     "pdf_sha256": "2c59a2310f51fd04278f1fae14666110fee9e926d6005b7cd9e4344ee8f80089"
+    },
+    "note": "symbol read from the legend box on a page image"
+   },
+   "name": {
+    "value": "Metagabbro/pyroxenite",
+    "source_id": "ngmdb:43050",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43050_1#page=1&viewrect=1634,252.5,156,15",
+    "quote": "Metagabbro/pyroxenite",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1580_150_1900_480-r1c1",
+     "box": [
+      108,
+      205,
+      420,
+      235
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3268,
+      505,
+      3580,
+      535
+     ],
+     "pt_box": [
+      1634.0,
+      252.5,
+      1790.0,
+      267.5
+     ],
+     "pdf_sha256": "2c59a2310f51fd04278f1fae14666110fee9e926d6005b7cd9e4344ee8f80089"
+    },
+    "note": "name read from the legend on a page image (missing from the OCR text)"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "am",
+    "source_id": "ngmdb:43050",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43050_1#page=1&viewrect=1594,276.5,38,17",
+    "quote": "am",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1580_150_1900_480-r1c1",
+     "box": [
+      28,
+      253,
+      104,
+      287
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3188,
+      553,
+      3264,
+      587
+     ],
+     "pt_box": [
+      1594.0,
+      276.5,
+      1632.0,
+      293.5
+     ],
+     "pdf_sha256": "2c59a2310f51fd04278f1fae14666110fee9e926d6005b7cd9e4344ee8f80089"
+    },
+    "note": "symbol read from the legend box on a page image"
+   },
+   "name": {
+    "value": "Amphiboite",
+    "source_id": "ngmdb:43050",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43050_1#page=1&viewrect=1634,277.5,156,15",
+    "quote": "Amphiboite",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1580_150_1900_480-r1c1",
+     "box": [
+      108,
+      255,
+      420,
+      285
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3268,
+      555,
+      3580,
+      585
+     ],
+     "pt_box": [
+      1634.0,
+      277.5,
+      1790.0,
+      292.5
+     ],
+     "pdf_sha256": "2c59a2310f51fd04278f1fae14666110fee9e926d6005b7cd9e4344ee8f80089"
+    },
+    "note": "name as printed ('Amphiboite'); missing from the OCR text"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "qtz",
+    "source_id": "ngmdb:43050",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43050_1#page=1&viewrect=1594,301.5,38,17",
+    "quote": "qtz",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1580_150_1900_480-r1c1",
+     "box": [
+      28,
+      303,
+      104,
+      337
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3188,
+      603,
+      3264,
+      637
+     ],
+     "pt_box": [
+      1594.0,
+      301.5,
+      1632.0,
+      318.5
+     ],
+     "pdf_sha256": "2c59a2310f51fd04278f1fae14666110fee9e926d6005b7cd9e4344ee8f80089"
+    },
+    "note": "symbol read from the legend box on a page image"
+   },
+   "name": {
+    "value": "Quartzite",
+    "source_id": "ngmdb:43050",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43050_1#page=1&viewrect=1634,302.5,156,15",
+    "quote": "Quartzite",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1580_150_1900_480-r1c1",
+     "box": [
+      108,
+      305,
+      420,
+      335
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3268,
+      605,
+      3580,
+      635
+     ],
+     "pt_box": [
+      1634.0,
+      302.5,
+      1790.0,
+      317.5
+     ],
+     "pdf_sha256": "2c59a2310f51fd04278f1fae14666110fee9e926d6005b7cd9e4344ee8f80089"
+    },
+    "note": "name read from the legend on a page image (missing from the OCR text)"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "ss",
+    "source_id": "ngmdb:43050",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43050_1#page=1&viewrect=1594,326.5,38,17",
+    "quote": "ss",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1580_150_1900_480-r1c1",
+     "box": [
+      28,
+      353,
+      104,
+      387
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3188,
+      653,
+      3264,
+      687
+     ],
+     "pt_box": [
+      1594.0,
+      326.5,
+      1632.0,
+      343.5
+     ],
+     "pdf_sha256": "2c59a2310f51fd04278f1fae14666110fee9e926d6005b7cd9e4344ee8f80089"
+    },
+    "text_match": true,
+    "note": "symbol read from the legend box on a page image"
+   },
+   "name": {
+    "value": "Sillimanite schist",
+    "source_id": "ngmdb:43050",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43050_1",
+    "quote": "Sillimanite schist",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "sillimanite",
+     "in_geolex": false,
+     "inferred": true
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "sbg",
+    "source_id": "ngmdb:43050",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43050_1#page=1&viewrect=1594,351.5,38,17",
+    "quote": "sbg",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1580_150_1900_480-r1c1",
+     "box": [
+      28,
+      403,
+      104,
+      437
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3188,
+      703,
+      3264,
+      737
+     ],
+     "pt_box": [
+      1594.0,
+      351.5,
+      1632.0,
+      368.5
+     ],
+     "pdf_sha256": "2c59a2310f51fd04278f1fae14666110fee9e926d6005b7cd9e4344ee8f80089"
+    },
+    "text_match": true,
+    "note": "symbol read from the legend box on a page image"
+   },
+   "name": {
+    "value": "Sillimanite biotite gneiss",
+    "source_id": "ngmdb:43050",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43050_1",
+    "quote": "Sillimanite biotite gneiss",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "sillimanite biotite",
+     "in_geolex": false,
+     "inferred": true
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "bg",
+    "source_id": "ngmdb:43050",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43050_1#page=1&viewrect=1594,376.5,38,17",
+    "quote": "bg",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1580_150_1900_480-r1c1",
+     "box": [
+      28,
+      453,
+      104,
+      487
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3188,
+      753,
+      3264,
+      787
+     ],
+     "pt_box": [
+      1594.0,
+      376.5,
+      1632.0,
+      393.5
+     ],
+     "pdf_sha256": "2c59a2310f51fd04278f1fae14666110fee9e926d6005b7cd9e4344ee8f80089"
+    },
+    "text_match": true,
+    "note": "symbol read from the legend box on a page image"
+   },
+   "name": {
+    "value": "Biotite gneiss (undifferentiated)",
+    "source_id": "ngmdb:43050",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43050_1",
+    "quote": "Biotite gneiss (undifferentiated)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "abg",
+    "source_id": "ngmdb:43050",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43050_1#page=1&viewrect=1594,401.5,38,17",
+    "quote": "abg",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1580_150_1900_480-r1c1",
+     "box": [
+      28,
+      503,
+      104,
+      537
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3188,
+      803,
+      3264,
+      837
+     ],
+     "pt_box": [
+      1594.0,
+      401.5,
+      1632.0,
+      418.5
+     ],
+     "pdf_sha256": "2c59a2310f51fd04278f1fae14666110fee9e926d6005b7cd9e4344ee8f80089"
+    },
+    "note": "symbol read from the legend box on a page image"
+   },
+   "name": {
+    "value": "Augen biotite gneiss",
+    "source_id": "ngmdb:43050",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43050_1",
+    "quote": "Augen biotite gneiss",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "augen biotite",
+     "in_geolex": false,
+     "inferred": true
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "pbg",
+    "source_id": "ngmdb:43050",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43050_1#page=1&viewrect=1594,426.5,38,17",
+    "quote": "pbg",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1580_150_1900_480-r1c1",
+     "box": [
+      28,
+      553,
+      104,
+      587
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3188,
+      853,
+      3264,
+      887
+     ],
+     "pt_box": [
+      1594.0,
+      426.5,
+      1632.0,
+      443.5
+     ],
+     "pdf_sha256": "2c59a2310f51fd04278f1fae14666110fee9e926d6005b7cd9e4344ee8f80089"
+    },
+    "text_match": true,
+    "note": "symbol read from the legend box on a page image"
+   },
+   "name": {
+    "value": "Porphyroclastic biotite gneiss/amphinolite",
+    "source_id": "ngmdb:43050",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43050_1",
+    "quote": "Porphyroclastic biotite gneiss/amphinolite",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "porphyroclastic biotite",
+     "in_geolex": false,
+     "inferred": true
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "lbg",
+    "source_id": "ngmdb:43050",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43050_1#page=1&viewrect=1594,451.5,38,17",
+    "quote": "lbg",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1580_150_1900_480-r1c1",
+     "box": [
+      28,
+      603,
+      104,
+      637
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3188,
+      903,
+      3264,
+      937
+     ],
+     "pt_box": [
+      1594.0,
+      451.5,
+      1632.0,
+      468.5
+     ],
+     "pdf_sha256": "2c59a2310f51fd04278f1fae14666110fee9e926d6005b7cd9e4344ee8f80089"
+    },
+    "text_match": true,
+    "note": "symbol read from the legend box on a page image"
+   },
+   "name": {
+    "value": "Layered augen biotite gneiss",
+    "source_id": "ngmdb:43050",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43050_1",
+    "quote": "Layered augen biotite gneiss",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "layered augen biotite",
+     "in_geolex": false,
+     "inferred": true
+    }
+   }
+  }
+ ],
+ "observations": [],
+ "structures": [
+  {
+   "kind": "fault",
+   "fault_type": {
+    "value": "thrust",
+    "source_id": "ngmdb:43050",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43050_1#page=1&viewrect=1330,1720,170,145",
+    "quote": "thrust fault",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1300_1700_1510_1880-r1c1",
+     "box": [
+      60,
+      40,
+      400,
+      330
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2660,
+      3440,
+      3000,
+      3730
+     ],
+     "pt_box": [
+      1330.0,
+      1720.0,
+      1500.0,
+      1865.0
+     ],
+     "pdf_sha256": "2c59a2310f51fd04278f1fae14666110fee9e926d6005b7cd9e4344ee8f80089"
+    },
+    "text_match": true,
+    "note": "dashed line with sawteeth on the map face in the southeast corner, between abg and ss"
+   },
+   "location": {
+    "value": "southeast corner of the quadrangle, between abg and ss",
+    "source_id": "ngmdb:43050",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43050_1#page=1&viewrect=1330,1720,170,145",
+    "quote": "thrust fault",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1300_1700_1510_1880-r1c1",
+     "box": [
+      60,
+      40,
+      400,
+      330
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2660,
+      3440,
+      3000,
+      3730
+     ],
+     "pt_box": [
+      1330.0,
+      1720.0,
+      1500.0,
+      1865.0
+     ],
+     "pdf_sha256": "2c59a2310f51fd04278f1fae14666110fee9e926d6005b7cd9e4344ee8f80089"
+    },
+    "text_match": true
+   }
+  }
+ ],
+ "groundwater": [],
+ "references": [],
+ "surfaces": [],
+ "contours": [],
+ "sections": [],
+ "water_tests": [],
+ "rock_tests": []
+}
