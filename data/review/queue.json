@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 505,
+ "count": 506,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -6491,6 +6491,20 @@
     "note": "dashed fault lines in sch show no arrows or sawteeth at this scale; oblique-slip is the closest legend type but it is not certain"
    },
    "detail": "values read from an image are stored only after a verify pass re-views the tile and agrees"
+  },
+  {
+   "source_id": "ngmdb:43059",
+   "path": "surfaces[0].method",
+   "problem": "verify_disagree",
+   "value": "measured",
+   "page": 1,
+   "quote": "younger than the middle and lower beds. The base of the terrace is just 4 feet higher (197 feet)",
+   "added_at": "2026-11-05T23:59:59+00:00",
+   "verify": {
+    "verdict": "disagree",
+    "value": "stated",
+    "note": "the page states the terrace base elevation (197 feet) in text without saying it was measured in the hole"
+   }
   }
  ]
 }
