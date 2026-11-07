@@ -1,6 +1,6 @@
 {
  "about": "Extracted values that need a human look (see review/README.md).",
- "count": 504,
+ "count": 506,
  "items": [
   {
    "source_id": "ngmdb:27394",
@@ -6452,6 +6452,59 @@
     "note": "tile p1-144dpi-crop90_2110_2420_2460-r1c3: the hole top bar is at about 37 ft but the land-surface profile at the hole (small QHfw at top) is at about 40 ft"
    },
    "detail": "values read from an image are stored only after a verify pass re-views the tile and agrees"
+  },
+  {
+   "source_id": "ngmdb:43048",
+   "path": "structures[1].fault_type",
+   "problem": "image_not_verified",
+   "value": "oblique-slip",
+   "page": 1,
+   "quote": "oblique-slip fault",
+   "added_at": "2026-11-04T23:57:22+00:00",
+   "image": {
+    "tile": "p1-144dpi-crop1300_850_1520_1100-r1c1",
+    "box": [
+     170,
+     90,
+     440,
+     240
+    ],
+    "dpi": 144,
+    "page_px_box": [
+     2770,
+     1790,
+     3040,
+     1940
+    ],
+    "pt_box": [
+     1385.0,
+     895.0,
+     1520.0,
+     970.0
+    ],
+    "pdf_sha256": "50a641dc15836afd77aee0e6dd87b2395956de17aa844923a4226d519cf065be"
+   },
+   "verdict": "unclear",
+   "note": "dashed fault lines in sch show no arrows or sawteeth at this scale; oblique-slip is the closest legend type but it is not certain",
+   "verify": {
+    "verdict": "unclear",
+    "note": "dashed fault lines in sch show no arrows or sawteeth at this scale; oblique-slip is the closest legend type but it is not certain"
+   },
+   "detail": "values read from an image are stored only after a verify pass re-views the tile and agrees"
+  },
+  {
+   "source_id": "ngmdb:43059",
+   "path": "surfaces[0].method",
+   "problem": "verify_disagree",
+   "value": "measured",
+   "page": 1,
+   "quote": "younger than the middle and lower beds. The base of the terrace is just 4 feet higher (197 feet)",
+   "added_at": "2026-11-05T23:59:59+00:00",
+   "verify": {
+    "verdict": "disagree",
+    "value": "stated",
+    "note": "the page states the terrace base elevation (197 feet) in text without saying it was measured in the hole"
+   }
   }
  ]
 }

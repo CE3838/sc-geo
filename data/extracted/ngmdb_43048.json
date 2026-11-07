@@ -1,0 +1,797 @@
+{
+ "source_id": "ngmdb:43048",
+ "title": "Geologic map of the Pelham quadrangle, Greenville, Laurens, and Spartanburg Counties, South Carolina",
+ "citation": "Maybin, A.H., III, 1997, Geologic map of the Pelham quadrangle, Greenville, Laurens, and Spartanburg Counties, South Carolina: South Carolina Geological Survey Open-File Report OFR-93, map scale 1:24,000.",
+ "year": 1997,
+ "scale": 24000,
+ "publisher": "South Carolina Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-11-04T23:57:22+00:00",
+ "updated_at": "2026-11-04T23:57:22+00:00",
+ "reader": "Claude, Claude Code session 2026-11-04",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1"
+ ],
+ "blocks_total": 1,
+ "complete": true,
+ "notes": "Single OCR'd map sheet; legend and map face checked on page images. Symbols bgn-amp, amp, sch, gnsch, garmgr, augn read from legend boxes (OCR garbled 'Ampnibotite', '[saxmar', '[avon'). No ages are printed for the Inner Piedmont units. Many foliation, crenulation and lineation symbols on the map face show dip/plunge numbers only, with no printed strikes or locations; not recorded. The diabase dikes are drawn (two NW-trending lines) but carry no labels beyond the unit. No cross section, no references. SUBSURFACE: none.",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1",
+   "via": "ngmdb_image",
+   "sha256": "50a641dc15836afd77aee0e6dd87b2395956de17aa844923a4226d519cf065be",
+   "pages": 1,
+   "first_page": 1
+  }
+ ],
+ "summary": {
+  "stored": 34,
+  "quote_match": {
+   "image": 9,
+   "exact": 25
+  },
+  "verification": {
+   "agree": 11
+  },
+  "inferred": 11
+ },
+ "ingests": [
+  {
+   "at": "2026-11-04T23:57:22+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, Claude Code session 2026-11-04",
+   "values": 35,
+   "stored": 34,
+   "exact": 25,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 11,
+   "disagree": 0,
+   "unclear": 1,
+   "image": 9,
+   "image_not_verified": 1,
+   "review_items": 1
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "Bodies of water",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1",
+    "quote": "Bodies of water",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Diabase dike",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1",
+    "quote": "Diabase dike",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Mesozoic",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1",
+    "quote": "MESOZOIC",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "legend heading above the unit",
+    "normalized": {
+     "younger_ma": 66.0,
+     "older_ma": 251.902,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "mgr",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1",
+    "quote": "mgr | Biotite metagranite",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "name": {
+    "value": "Biotite metagranite",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1",
+    "quote": "mgr | Biotite metagranite -- Medium to coarse-grained containing minor amphibolite lense.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "group": {
+    "value": "Inner Piedmont, Southeast Flank",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.684,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1",
+    "quote": "Southeast Flank",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "legend heading"
+   },
+   "description": {
+    "value": "Medium to coarse-grained containing minor amphibolite lense.",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1",
+    "quote": "mgr | Biotite metagranite -- Medium to coarse-grained containing minor amphibolite lense.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "bgn-amp",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1#page=1&viewrect=1592.5,326.5,37.5,17",
+    "quote": "bgn-amp",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1580_150_2070_600-r1c1",
+     "box": [
+      25,
+      353,
+      100,
+      387
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3185,
+      653,
+      3260,
+      687
+     ],
+     "pt_box": [
+      1592.5,
+      326.5,
+      1630.0,
+      343.5
+     ],
+     "pdf_sha256": "50a641dc15836afd77aee0e6dd87b2395956de17aa844923a4226d519cf065be"
+    },
+    "text_match": true,
+    "note": "symbol read from the legend box on a page image"
+   },
+   "name": {
+    "value": "Biotite gneiss and amphibolite",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1",
+    "quote": "bgn-amp| Biotite gneiss and amphibolite",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "gneiss and",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "group": {
+    "value": "Inner Piedmont, Southeast Flank",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1",
+    "quote": "Southeast Flank",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "legend heading"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "amp",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1#page=1&viewrect=1592.5,351.5,37.5,17",
+    "quote": "amp",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1580_150_2070_600-r1c1",
+     "box": [
+      25,
+      403,
+      100,
+      437
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3185,
+      703,
+      3260,
+      737
+     ],
+     "pt_box": [
+      1592.5,
+      351.5,
+      1630.0,
+      368.5
+     ],
+     "pdf_sha256": "50a641dc15836afd77aee0e6dd87b2395956de17aa844923a4226d519cf065be"
+    },
+    "text_match": true,
+    "note": "symbol read from the legend box on a page image"
+   },
+   "name": {
+    "value": "Amphibolite",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1#page=1&viewrect=1632.5,350,65,20",
+    "quote": "Amphibolite",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1580_150_2070_600-r1c1",
+     "box": [
+      105,
+      400,
+      235,
+      440
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3265,
+      700,
+      3395,
+      740
+     ],
+     "pt_box": [
+      1632.5,
+      350.0,
+      1697.5,
+      370.0
+     ],
+     "pdf_sha256": "50a641dc15836afd77aee0e6dd87b2395956de17aa844923a4226d519cf065be"
+    },
+    "text_match": true,
+    "note": "OCR prints '[are || Ampnibotite'"
+   },
+   "group": {
+    "value": "Inner Piedmont, Southeast Flank",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1",
+    "quote": "Southeast Flank",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "legend heading"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "sch",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1#page=1&viewrect=1592.5,419,37.5,17",
+    "quote": "sch",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1580_150_2070_600-r1c1",
+     "box": [
+      25,
+      538,
+      100,
+      572
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3185,
+      838,
+      3260,
+      872
+     ],
+     "pt_box": [
+      1592.5,
+      419.0,
+      1630.0,
+      436.0
+     ],
+     "pdf_sha256": "50a641dc15836afd77aee0e6dd87b2395956de17aa844923a4226d519cf065be"
+    },
+    "note": "symbol read from the legend box on a page image"
+   },
+   "name": {
+    "value": "Sillimanite quartz mica schist",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1",
+    "quote": "Sillimanite quartz mica schist -- Sillimanite quartz mica schist having interlayers of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "sillimanite quartz mica",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "group": {
+    "value": "Inner Piedmont Core, Six Mile thrust sheet",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1",
+    "quote": "Six Mile thrust sheet",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "legend heading"
+   },
+   "description": {
+    "value": "Sillimanite quartz mica schist having interlayers of biotite gneiss.",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1",
+    "quote": "Sillimanite quartz mica schist -- Sillimanite quartz mica schist having interlayers of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "ugn",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1",
+    "quote": "ugn",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "name": {
+    "value": "Undifferentiated gneiss",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1",
+    "quote": "Undifferentiated gneiss -- Various gneissic units consisting of garnet biotite",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "group": {
+    "value": "Inner Piedmont Core, Six Mile thrust sheet",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.684,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1",
+    "quote": "Six Mile thrust sheet",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "legend heading"
+   },
+   "description": {
+    "value": "Various gneissic units consisting of garnet biotite feldspar-augen mylonitic gneiss, layered biotite gneiss (+/- garnet) and biotite porphyroblastic gneiss (+/- garnet). Most rocks have an S-C fabric.",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1",
+    "quote": "porphyroblastic gneiss (+/- garnet). Most rocks have an S-C fabric.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "gnsch",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1#page=1&viewrect=1592.5,506.5,37.5,17",
+    "quote": "gnsch",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1580_150_2070_600-r1c1",
+     "box": [
+      25,
+      713,
+      100,
+      747
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3185,
+      1013,
+      3260,
+      1047
+     ],
+     "pt_box": [
+      1592.5,
+      506.5,
+      1630.0,
+      523.5
+     ],
+     "pdf_sha256": "50a641dc15836afd77aee0e6dd87b2395956de17aa844923a4226d519cf065be"
+    },
+    "note": "symbol read from the legend box on a page image"
+   },
+   "name": {
+    "value": "Sillimanite gneiss/schist",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1",
+    "quote": "Sillimanite gneiss/schist -- Sillimanite gniess (+/- garnet) to sillimanite schist (+/-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "sillimanite",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "group": {
+    "value": "Inner Piedmont Core, Six Mile thrust sheet",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1",
+    "quote": "Six Mile thrust sheet",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "legend heading"
+   },
+   "description": {
+    "value": "Sillimanite gneiss (+/- garnet) to sillimanite schist (+/- garnet) also containing garnet (+/-) biotite feldspar-augen mylonite gneiss.",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1",
+    "quote": "garnet) also containing garnet (+/-) biotite feldspar-augen mylonite gneiss.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "'gniess' as printed"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "garmgr",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1#page=1&viewrect=1592.5,539,37.5,17",
+    "quote": "garmgr",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1580_150_2070_600-r1c1",
+     "box": [
+      25,
+      778,
+      100,
+      812
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3185,
+      1078,
+      3260,
+      1112
+     ],
+     "pt_box": [
+      1592.5,
+      539.0,
+      1630.0,
+      556.0
+     ],
+     "pdf_sha256": "50a641dc15836afd77aee0e6dd87b2395956de17aa844923a4226d519cf065be"
+    },
+    "note": "symbol read from the legend box on a page image"
+   },
+   "name": {
+    "value": "Garnet biotite metagranite",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1",
+    "quote": "Garnet biotite metagranite -- Medium-grained garnet biotite metagranite.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "group": {
+    "value": "Inner Piedmont Core, Six Mile thrust sheet",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1",
+    "quote": "Six Mile thrust sheet",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "legend heading"
+   },
+   "description": {
+    "value": "Medium-grained garnet biotite metagranite.",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1",
+    "quote": "Garnet biotite metagranite -- Medium-grained garnet biotite metagranite.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "augn",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1#page=1&viewrect=1592.5,564,37.5,17",
+    "quote": "augn",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1580_150_2070_600-r1c1",
+     "box": [
+      25,
+      828,
+      100,
+      862
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3185,
+      1128,
+      3260,
+      1162
+     ],
+     "pt_box": [
+      1592.5,
+      564.0,
+      1630.0,
+      581.0
+     ],
+     "pdf_sha256": "50a641dc15836afd77aee0e6dd87b2395956de17aa844923a4226d519cf065be"
+    },
+    "note": "symbol read from the legend box on a page image"
+   },
+   "name": {
+    "value": "Garnet (+/-) feldspar augen gneiss and lineated garnet (+/-) biotite metagranite",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1",
+    "quote": "Garnet (+/-) feldspar augen gneiss and lineated garnet (+/-) biotite metagranite",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "feldspar augen gneiss and lineated garnet biotite",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "group": {
+    "value": "Inner Piedmont Core, Six Mile thrust sheet",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1",
+    "quote": "Six Mile thrust sheet",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "legend heading"
+   }
+  }
+ ],
+ "observations": [],
+ "structures": [
+  {
+   "kind": "fault",
+   "fault_type": {
+    "value": "thrust",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1#page=1&viewrect=1435,935,85,80",
+    "quote": "thrust fault",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1300_850_1520_1100-r1c1",
+     "box": [
+      270,
+      170,
+      440,
+      330
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2870,
+      1870,
+      3040,
+      2030
+     ],
+     "pt_box": [
+      1435.0,
+      935.0,
+      1520.0,
+      1015.0
+     ],
+     "pdf_sha256": "50a641dc15836afd77aee0e6dd87b2395956de17aa844923a4226d519cf065be"
+    },
+    "text_match": true,
+    "note": "sawteeth line drawn on the map face between sch (upper plate) and mgr"
+   },
+   "description": {
+    "value": "thrust fault with sawteeth, separating the Six Mile thrust sheet (sch) from the Southeast Flank (mgr) across the quadrangle",
+    "source_id": "ngmdb:43048",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43048_1#page=1&viewrect=1435,935,85,80",
+    "quote": "thrust fault",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1300_850_1520_1100-r1c1",
+     "box": [
+      270,
+      170,
+      440,
+      330
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2870,
+      1870,
+      3040,
+      2030
+     ],
+     "pt_box": [
+      1435.0,
+      935.0,
+      1520.0,
+      1015.0
+     ],
+     "pdf_sha256": "50a641dc15836afd77aee0e6dd87b2395956de17aa844923a4226d519cf065be"
+    },
+    "text_match": true
+   }
+  }
+ ],
+ "groundwater": [],
+ "references": [],
+ "surfaces": [],
+ "contours": [],
+ "sections": [],
+ "water_tests": [],
+ "rock_tests": []
+}
