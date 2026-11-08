@@ -1,10 +1,10 @@
 {
  "about": "Documents already read whose chosen pages need a re-read (python -m extract.reread; see extract/SESSION.md).",
- "count": 29,
- "pending": 11,
+ "count": 30,
+ "pending": 12,
  "by_reason": {
   "logs": 2,
-  "image_pages": 3,
+  "image_pages": 4,
   "subsurface_fields": 7,
   "water_tests": 13,
   "rock_tests": 1,
@@ -396,6 +396,35 @@
    "ocr": false,
    "added_at": "2026-10-16T00:28:58+00:00",
    "images": false,
+   "status": "pending"
+  },
+  {
+   "id": "ngmdb:96656:image_pages:p40,47-48,50-51,53-54,56-57,60,67-68,73,80-82",
+   "source_id": "ngmdb:96656",
+   "pages": [
+    40,
+    47,
+    48,
+    50,
+    51,
+    53,
+    54,
+    56,
+    57,
+    60,
+    67,
+    68,
+    73,
+    80,
+    81,
+    82
+   ],
+   "reason": "image_pages",
+   "detail": "Appendix 3-4 rows whose text layer drops a cell (column positions ambiguous) or separates the marsh site number from its row: read those rows from page images (tables printed rotated). The re-read replaces every value on these pages, so record all rows again; the result notes of reread-01..03 (2026-11-08) list the skipped rows.",
+   "origin": "manual",
+   "ocr": false,
+   "added_at": "2026-11-08T00:02:39+00:00",
+   "images": true,
    "status": "pending"
   },
   {
