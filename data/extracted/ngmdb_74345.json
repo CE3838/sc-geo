@@ -8,8 +8,8 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-10-05T00:52:49+00:00",
- "updated_at": "2026-10-05T00:54:13+00:00",
- "reader": "Claude, reading session 2026-10-05",
+ "updated_at": "2026-11-08T11:59:25+00:00",
+ "reader": "Claude, Claude Code re-read session 2026-11-08",
  "packets": [
   "packet-01",
   "packet-02"
@@ -58,7 +58,7 @@
  ],
  "blocks_total": 40,
  "complete": true,
- "notes": "Packet 1 of 2 (pp. 17-47). Page 18 (figure) had no text and was not OCRed. Heavy-mineral tables 3, 5-8 and clay table 4 not stored (no schema fields). Unit names are the report's informal units Q1-Q6 and lithofacies (OCR in the text writes 1 as l, e.g. Q21 = Q2l). Regional geology section continues into packet 2.\nPacket 2 of 2 (pp. 48-59). Continues the regional geology section (Santee Limestone/Black Mingo) from packet 1. Table 9 heavy minerals not stored. Figure 16 column (Mount Pleasant) has no readable depths; layers listed top to bottom. Skipped references outside South Carolina (New Jersey, Delmarva, Australia, Gulf Coast, Florida, general clay and sea-level papers).",
+ "notes": "Packet 1 of 2 (pp. 17-47). Page 18 (figure) had no text and was not OCRed. Heavy-mineral tables 3, 5-8 and clay table 4 not stored (no schema fields). Unit names are the report's informal units Q1-Q6 and lithofacies (OCR in the text writes 1 as l, e.g. Q21 = Q2l). Regional geology section continues into packet 2.\nPacket 2 of 2 (pp. 48-59). Continues the regional geology section (Santee Limestone/Black Mingo) from packet 1. Table 9 heavy minerals not stored. Figure 16 column (Mount Pleasant) has no readable depths; layers listed top to bottom. Skipped references outside South Carolina (New Jersey, Delmarva, Australia, Gulf Coast, Florida, general clay and sea-level papers).\nPage 18 viewed on the page image: it is blank (verso of the chapter title page); OCR finds no text. Nothing to record.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/pp/1367/report.pdf",
@@ -66,55 +66,6 @@
    "sha256": "f123bf5e3ad9be7126706d0b91c435f59642a61b1f2bbe83ccd8dbb885f2bf92",
    "pages": 315,
    "first_page": 1
-  },
-  {
-   "url": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=77851_74345_2",
-   "via": "ngmdb_scan",
-   "sha256": "7aa93dcf78751e5466bee4983e085f58a4abd744bb2f880aefaa9e01b8aa9497",
-   "pages": 1,
-   "first_page": 316
-  },
-  {
-   "url": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=77852_74345_2",
-   "via": "ngmdb_scan",
-   "sha256": "e860c341c258375024879802598ae2ef88171d081ae324aea99cd788fe8e61f7",
-   "pages": 1,
-   "first_page": 317
-  },
-  {
-   "url": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=77853_74345_2",
-   "via": "ngmdb_scan",
-   "sha256": "cdc0f87bc43ac8c9e6b3ecd09948a22b476b98eb7d12631ef31ac2599e5e16d1",
-   "pages": 1,
-   "first_page": 318
-  },
-  {
-   "url": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=77854_74345_2",
-   "via": "ngmdb_scan",
-   "sha256": "b33b6c5e4da86bae9a9372292ea7f12d67152158ae8dc8f10af4d0d6f4b395bf",
-   "pages": 1,
-   "first_page": 319
-  },
-  {
-   "url": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=77855_74345_2",
-   "via": "ngmdb_scan",
-   "sha256": "566066ce9a9db97f60ba3e151aa620dcfe17d6c5d3ec9c363c3f5fc58d53bd83",
-   "pages": 1,
-   "first_page": 320
-  },
-  {
-   "url": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=77856_74345_2",
-   "via": "ngmdb_scan",
-   "sha256": "889240a6724077153ff1c8bf47c15d49bc8d1bb8804469adb11ca38c8b61331c",
-   "pages": 1,
-   "first_page": 321
-  },
-  {
-   "url": "https://ngmdb.usgs.gov/ngm-bin/pdp/download.pl?q=77857_74345_2",
-   "via": "ngmdb_scan",
-   "sha256": "b8f1f8aacb85156a34164d9760ff22693b9b67094c21b0496120a8e0aacfeacf",
-   "pages": 1,
-   "first_page": 322
   }
  ],
  "summary": {
@@ -163,6 +114,38 @@
    "disagree": 0,
    "unclear": 0,
    "review_items": 0
+  },
+  {
+   "at": "2026-11-08T11:59:25+00:00",
+   "packets": [
+    "reread-01"
+   ],
+   "reader": "Claude, Claude Code re-read session 2026-11-08",
+   "values": 0,
+   "stored": 0,
+   "exact": 0,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 0,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 0,
+   "image_not_verified": 0,
+   "review_items": 0,
+   "reread": {
+    "packets": [
+     "reread-01"
+    ],
+    "pages": [
+     18
+    ],
+    "reason": "Page 18 had no text and was not OCRed in the first reading",
+    "queue_ids": [
+     "ngmdb:74345:image_pages:p18"
+    ]
+   }
   }
  ],
  "units": [
@@ -4743,5 +4726,10 @@
     "verification": null
    }
   }
- ]
+ ],
+ "surfaces": [],
+ "contours": [],
+ "sections": [],
+ "water_tests": [],
+ "rock_tests": []
 }
