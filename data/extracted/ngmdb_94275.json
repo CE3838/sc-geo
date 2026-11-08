@@ -1,0 +1,3316 @@
+{
+ "source_id": "ngmdb:94275",
+ "title": "Geologic map of the Hardeeville and Rincon quadrangles, Beaufort and Jasper counties, South Carolina",
+ "citation": "Doar, W.R., III, 2008, Geologic map of the Hardeeville and Rincon quadrangles, Beaufort and Jasper counties, South Carolina: South Carolina Geological Survey Open-File Report OFR-152, map scale 1:24,000.",
+ "year": 2008,
+ "scale": 24000,
+ "publisher": "South Carolina Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-11-08T12:04:54+00:00",
+ "updated_at": "2026-11-08T12:04:54+00:00",
+ "reader": "Claude, Claude Code session 2026-11-09",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1",
+  "2"
+ ],
+ "blocks_total": 2,
+ "complete": true,
+ "notes": "Two sheets: Hardeeville (page 1) and Rincon (page 2, mostly Georgia). Map symbols read on the Hardeeville map face and section images. OCR 'Thickness | to 40 feet' read as 1 (inferred, unclear). 45 SCGS drill-hole labels read on the Hardeeville map face; Rincon shows none. Eolian and fringe deposits described on the Rincon explanation (page 2); ('Fringe deposits') has a clipped OCR name. Section A-A' (vertical exaggeration 100) hole labels and unit labels read; hole tops and contacts not digitized. SUBSURFACE: Jasper sediments generally between 10 and 20 ft elevation (no datum printed); section contacts not digitized.",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+   "via": "ngmdb_image",
+   "sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3",
+   "pages": 1,
+   "first_page": 1
+  },
+  {
+   "url": "https://ngmdb.usgs.gov/img2/94000_94999/94275_2",
+   "via": "ngmdb_image",
+   "sha256": "3d33fa9836245e5087ff8bccf806d7504f34891f0e88f39a195855fe749512b4",
+   "pages": 1,
+   "first_page": 2
+  }
+ ],
+ "summary": {
+  "stored": 103,
+  "quote_match": {
+   "image": 67,
+   "exact": 36
+  },
+  "verification": {
+   "agree": 74
+  },
+  "inferred": 9
+ },
+ "ingests": [
+  {
+   "at": "2026-11-08T12:04:54+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, Claude Code session 2026-11-09",
+   "values": 103,
+   "stored": 103,
+   "exact": 36,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 74,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 67,
+   "image_not_verified": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "Bodies of water",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "|_| Bodies of water (1999) — Water, fresh, brackish, or salt. This designation denotes altered",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "me",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=591.12,1588.32,15.84,10.08",
+    "quote": "me",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r2c1",
+     "box": [
+      690,
+      832,
+      712,
+      846
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      821,
+      2206,
+      843,
+      2220
+     ],
+     "pt_box": [
+      591.12,
+      1588.32,
+      606.96,
+      1598.4
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "unit symbol read on the map face (page image)"
+   },
+   "name": {
+    "value": "Moved earth",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "Moved earth (Holocene) — Earth material moved in bulk by humans. Color is highly",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "Moved earth (Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "up to 18 feet",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "variable and dependent on source location. Thickness up to 18 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 18.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QHfw",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=575.28,295.2,23.04,9.36",
+    "quote": "QHfw",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c1",
+     "box": [
+      668,
+      167,
+      700,
+      180
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      799,
+      410,
+      831,
+      423
+     ],
+     "pt_box": [
+      575.28,
+      295.2,
+      598.32,
+      304.56
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "text_match": true,
+    "note": "unit symbol read on the map face (page image)"
+   },
+   "name": {
+    "value": "Freshwater marsh and swamp deposits",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "Freshwater marsh and swamp deposits (Holocene) — Black (N1), silty clay and peat",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "Freshwater marsh and swamp deposits (Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Black (N1), silty clay and peat",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "Freshwater marsh and swamp deposits (Holocene) — Black (N1), silty clay and peat",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "1 to 40 feet",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "lowering the salinity and rising tides importing high salinity waters. Thickness | to 40 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "unclear in OCR: printed 'Thickness | to 40 feet'; '|' read as 1",
+    "normalized": {
+     "min_ft": 1.0,
+     "max_ft": 40.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QHrl",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=110.16,1458.72,21.6,12.96",
+    "quote": "QHrl",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r2c1",
+     "box": [
+      22,
+      652,
+      52,
+      670
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      153,
+      2026,
+      183,
+      2044
+     ],
+     "pt_box": [
+      110.16,
+      1458.72,
+      131.76,
+      1471.68
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "unit symbol read on the map face (page image)"
+   },
+   "name": {
+    "value": "River levee",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "River levee (Holocene) — White (N9) to light-yellowish orange (1OYR 8/6), very",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "River levee (Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "depositional_environment": {
+    "value": "along active and former river channels as low ridges",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "former river channels as low ridges that are highest adjacent to river’s edge and gently slope away.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Eolian deposits",
+    "source_id": "ngmdb:94275",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_2",
+    "quote": "Eolian deposits (Holocene) — White (N9) to yellowish-gray (SY 8/1) and medium-gray",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "described on the Rincon sheet"
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:94275",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_2",
+    "quote": "Eolian deposits (Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "depositional_environment": {
+    "value": "back-barrier dunes and dune fields",
+    "source_id": "ngmdb:94275",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_2",
+    "quote": "occur in back-barrier dunes and dune fields derived from local sediments. Bimodal sorting is",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "3 to 25 feet",
+    "source_id": "ngmdb:94275",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_2",
+    "quote": "change in local seasons. Thickness 3 to 25 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 3.0,
+     "max_ft": 25.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Fringe deposits",
+    "source_id": "ngmdb:94275",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_2",
+    "quote": "ts (Holocene or Pleistocene) — Black (N1) or variegated sediments",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "name 'Fringe deposits' from the Rincon legend image; OCR clipped"
+   },
+   "age": {
+    "value": "Holocene or Pleistocene",
+    "source_id": "ngmdb:94275",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_2",
+    "quote": "ts (Holocene or Pleistocene) — Black (N1) or variegated sediments",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "less than 3 feet",
+    "source_id": "ngmdb:94275",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_2",
+    "quote": "identified as salt marsh in near-infrared photos. Thickness less than 3 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 3.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QPpt",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1473.84,1856.88,25.2,10.8",
+    "quote": "QPpt",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r2c2",
+     "box": [
+      965,
+      1205,
+      1000,
+      1220
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      2047,
+      2579,
+      2082,
+      2594
+     ],
+     "pt_box": [
+      1473.84,
+      1856.88,
+      1499.04,
+      1867.68
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "unit symbol read on the map face (page image)"
+   },
+   "name": {
+    "value": "Undifferentiated terrace deposits",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "Undifferentiated terrace deposits (Pleistocene) — Clayey quartz sand, mottled, white",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "group": {
+    "value": "Sediments on or Beneath the Princess Anne Terrace",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "Sediments on or Beneath the Princess Anne Terrace",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "Undifferentiated terrace deposits (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "15 to 40 feet",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "level. Some deposits altered at the surface by human development. Thickness 15 to 40 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "min_ft": 15.0,
+     "max_ft": 40.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QPhf",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=287.28,249.12,24.48,8.64",
+    "quote": "QPhf",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c1",
+     "box": [
+      268,
+      103,
+      302,
+      115
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      399,
+      346,
+      433,
+      358
+     ],
+     "pt_box": [
+      287.28,
+      249.12,
+      311.76,
+      257.76
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "text_match": true,
+    "note": "unit symbol read on the map face (page image)"
+   },
+   "name": {
+    "value": "Flood plain clay",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "Flood plain clay (Pleistocene) — This map unit has variable colors and consists of a",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "flood plain",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "Flood plain clay (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "finely laminated, very dense silty clay and clayey silt with little to no sand",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "dense with little to no sand. The unit occurs on low hills on top of the Jasper River fluvial deposits",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "contacts": {
+    "value": "occurs on low hills on top of the Jasper River fluvial deposits (QPjr)",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "dense with little to no sand. The unit occurs on low hills on top of the Jasper River fluvial deposits",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "5 to 12 feet",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "(QPjr). Thickness 5 to 12 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 5.0,
+     "max_ft": 12.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QPjr",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=832.32,311.76,25.2,9.36",
+    "quote": "QPjr",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c1",
+     "box": [
+      1025,
+      190,
+      1060,
+      203
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1156,
+      433,
+      1191,
+      446
+     ],
+     "pt_box": [
+      832.32,
+      311.76,
+      857.52,
+      321.12
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "text_match": true,
+    "note": "unit symbol read on the map face (page image)"
+   },
+   "name": {
+    "value": "Fluvial deposits",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "Fluvial deposits (Pleistocene) — In lower part, these fluvial deposits consist of very",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "group": {
+    "value": "Jasper Sediments",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.684,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "The sediments in the Jasper, $.C., area are generally above the elevation of 10 feet and below 20",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "Fluvial deposits (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "10 to 30 feet",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "with a minor fraction of fine heavy minerals. Thickness 10 to 30 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 10.0,
+     "max_ft": 30.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "NMd",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=421.2,2412,31.2,14.4",
+    "quote": "NMd",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-60dpi-crop90_2120_2440_2480-r1c1",
+     "box": [
+      276,
+      244,
+      302,
+      256
+     ],
+     "dpi": 60,
+     "page_px_box": [
+      351,
+      2010,
+      377,
+      2022
+     ],
+     "pt_box": [
+      421.2,
+      2412.0,
+      452.4,
+      2426.4
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "unit symbol read on the map face (page image)"
+   },
+   "name": {
+    "value": "Miocene deposits (undifferentiated)",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "Miocene deposits (undifferentiated) — (cross section) Greenish black (SGY 2/1) to",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Miocene",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "Miocene deposits (undifferentiated)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 5.333,
+     "older_ma": 23.03,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "known only in the cross section; phosphorite-quartz sand and mud; upper contact often a phosphorite pebble and cobble zone",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "a phosphorite pebble and cobble zone. The lower contact was not reached with drilling in most",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  }
+ ],
+ "observations": [
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-117",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=339.12,181.44,86.4,20.16",
+    "quote": "27-117",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c1",
+     "box": [
+      340,
+      9,
+      460,
+      37
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      471,
+      252,
+      591,
+      280
+     ],
+     "pt_box": [
+      339.12,
+      181.44,
+      425.52,
+      201.6
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-116",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=225.36,258.48,86.4,20.16",
+    "quote": "27-116",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c1",
+     "box": [
+      182,
+      116,
+      302,
+      144
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      313,
+      359,
+      433,
+      387
+     ],
+     "pt_box": [
+      225.36,
+      258.48,
+      311.76,
+      278.64
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-115",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=112.32,302.4,86.4,20.16",
+    "quote": "27-115",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c1",
+     "box": [
+      25,
+      177,
+      145,
+      205
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      156,
+      420,
+      276,
+      448
+     ],
+     "pt_box": [
+      112.32,
+      302.4,
+      198.72,
+      322.56
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-129",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=709.92,323.28,86.4,20.16",
+    "quote": "27-129",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c1",
+     "box": [
+      855,
+      206,
+      975,
+      234
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      986,
+      449,
+      1106,
+      477
+     ],
+     "pt_box": [
+      709.92,
+      323.28,
+      796.32,
+      343.44
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-130",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=576.72,487.44,86.4,20.16",
+    "quote": "27-130",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c1",
+     "box": [
+      670,
+      434,
+      790,
+      462
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      801,
+      677,
+      921,
+      705
+     ],
+     "pt_box": [
+      576.72,
+      487.44,
+      663.12,
+      507.6
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-131",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=461.52,625.68,86.4,20.16",
+    "quote": "27-131",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c1",
+     "box": [
+      510,
+      626,
+      630,
+      654
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      641,
+      869,
+      761,
+      897
+     ],
+     "pt_box": [
+      461.52,
+      625.68,
+      547.92,
+      645.84
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-118",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=125.28,668.88,86.4,20.16",
+    "quote": "27-118",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c1",
+     "box": [
+      43,
+      686,
+      163,
+      714
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      174,
+      929,
+      294,
+      957
+     ],
+     "pt_box": [
+      125.28,
+      668.88,
+      211.68,
+      689.04
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-132",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=353.52,727.92,86.4,20.16",
+    "quote": "27-132",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c1",
+     "box": [
+      360,
+      768,
+      480,
+      796
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      491,
+      1011,
+      611,
+      1039
+     ],
+     "pt_box": [
+      353.52,
+      727.92,
+      439.92,
+      748.08
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-133",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=94.32,1036.08,63.36,20.16",
+    "quote": "27-133",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c1",
+     "box": [
+      0,
+      1196,
+      88,
+      1224
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      131,
+      1439,
+      219,
+      1467
+     ],
+     "pt_box": [
+      94.32,
+      1036.08,
+      157.68,
+      1056.24
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-141",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=724.32,1044.72,86.4,20.16",
+    "quote": "27-141",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c1",
+     "box": [
+      875,
+      1208,
+      995,
+      1236
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1006,
+      1451,
+      1126,
+      1479
+     ],
+     "pt_box": [
+      724.32,
+      1044.72,
+      810.72,
+      1064.88
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-128",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=823.68,184.32,86.4,20.16",
+    "quote": "27-128",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c2",
+     "box": [
+      62,
+      13,
+      182,
+      41
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1144,
+      256,
+      1264,
+      284
+     ],
+     "pt_box": [
+      823.68,
+      184.32,
+      910.08,
+      204.48
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-159",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1135.44,231.84,86.4,20.16",
+    "quote": "27-159",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c2",
+     "box": [
+      495,
+      79,
+      615,
+      107
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1577,
+      322,
+      1697,
+      350
+     ],
+     "pt_box": [
+      1135.44,
+      231.84,
+      1221.84,
+      252.0
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-139",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1034.64,288.72,86.4,20.16",
+    "quote": "27-139",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c2",
+     "box": [
+      355,
+      158,
+      475,
+      186
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1437,
+      401,
+      1557,
+      429
+     ],
+     "pt_box": [
+      1034.64,
+      288.72,
+      1121.04,
+      308.88
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-160",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1153.44,301.68,86.4,20.16",
+    "quote": "27-160",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c2",
+     "box": [
+      520,
+      176,
+      640,
+      204
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1602,
+      419,
+      1722,
+      447
+     ],
+     "pt_box": [
+      1153.44,
+      301.68,
+      1239.84,
+      321.84
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-162",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1290.24,292.32,86.4,20.16",
+    "quote": "27-162",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c2",
+     "box": [
+      710,
+      163,
+      830,
+      191
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1792,
+      406,
+      1912,
+      434
+     ],
+     "pt_box": [
+      1290.24,
+      292.32,
+      1376.64,
+      312.48
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-161",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1393.2,423.36,86.4,20.16",
+    "quote": "27-161",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c2",
+     "box": [
+      853,
+      345,
+      973,
+      373
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1935,
+      588,
+      2055,
+      616
+     ],
+     "pt_box": [
+      1393.2,
+      423.36,
+      1479.6,
+      443.52
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-163",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1153.44,496.08,86.4,20.16",
+    "quote": "27-163",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c2",
+     "box": [
+      520,
+      446,
+      640,
+      474
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1602,
+      689,
+      1722,
+      717
+     ],
+     "pt_box": [
+      1153.44,
+      496.08,
+      1239.84,
+      516.24
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-167",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1340.64,561.6,86.4,20.16",
+    "quote": "27-167",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c2",
+     "box": [
+      780,
+      537,
+      900,
+      565
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1862,
+      780,
+      1982,
+      808
+     ],
+     "pt_box": [
+      1340.64,
+      561.6,
+      1427.04,
+      581.76
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-169",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1402.56,701.28,86.4,20.16",
+    "quote": "27-169",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c2",
+     "box": [
+      866,
+      731,
+      986,
+      759
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1948,
+      974,
+      2068,
+      1002
+     ],
+     "pt_box": [
+      1402.56,
+      701.28,
+      1488.96,
+      721.44
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-168",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1412.64,761.76,86.4,20.16",
+    "quote": "27-168",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c2",
+     "box": [
+      880,
+      815,
+      1000,
+      843
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1962,
+      1058,
+      2082,
+      1086
+     ],
+     "pt_box": [
+      1412.64,
+      761.76,
+      1499.04,
+      781.92
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-172",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1054.8,771.84,86.4,20.16",
+    "quote": "27-172",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c2",
+     "box": [
+      383,
+      829,
+      503,
+      857
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1465,
+      1072,
+      1585,
+      1100
+     ],
+     "pt_box": [
+      1054.8,
+      771.84,
+      1141.2,
+      792.0
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-140",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=823.68,804.96,86.4,20.16",
+    "quote": "27-140",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c2",
+     "box": [
+      62,
+      875,
+      182,
+      903
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1144,
+      1118,
+      1264,
+      1146
+     ],
+     "pt_box": [
+      823.68,
+      804.96,
+      910.08,
+      825.12
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-171",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1284.48,830.88,86.4,20.16",
+    "quote": "27-171",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c2",
+     "box": [
+      702,
+      911,
+      822,
+      939
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1784,
+      1154,
+      1904,
+      1182
+     ],
+     "pt_box": [
+      1284.48,
+      830.88,
+      1370.88,
+      851.04
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-170",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1446.48,858.96,86.4,20.16",
+    "quote": "27-170",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c2",
+     "box": [
+      927,
+      950,
+      1047,
+      978
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      2009,
+      1193,
+      2129,
+      1221
+     ],
+     "pt_box": [
+      1446.48,
+      858.96,
+      1532.88,
+      879.12
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-165",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1284.48,978.48,86.4,20.16",
+    "quote": "27-165",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r1c2",
+     "box": [
+      702,
+      1116,
+      822,
+      1144
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1784,
+      1359,
+      1904,
+      1387
+     ],
+     "pt_box": [
+      1284.48,
+      978.48,
+      1370.88,
+      998.64
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-135",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=439.92,1172.88,86.4,20.16",
+    "quote": "27-135",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r2c1",
+     "box": [
+      480,
+      255,
+      600,
+      283
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      611,
+      1629,
+      731,
+      1657
+     ],
+     "pt_box": [
+      439.92,
+      1172.88,
+      526.32,
+      1193.04
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-124",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=339.12,1245.6,86.4,20.16",
+    "quote": "27-124",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r2c1",
+     "box": [
+      340,
+      356,
+      460,
+      384
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      471,
+      1730,
+      591,
+      1758
+     ],
+     "pt_box": [
+      339.12,
+      1245.6,
+      425.52,
+      1265.76
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-123",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=455.76,1244.16,86.4,20.16",
+    "quote": "27-123",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r2c1",
+     "box": [
+      502,
+      354,
+      622,
+      382
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      633,
+      1728,
+      753,
+      1756
+     ],
+     "pt_box": [
+      455.76,
+      1244.16,
+      542.16,
+      1264.32
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-176",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=107.28,1364.4,86.4,20.16",
+    "quote": "27-176",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r2c1",
+     "box": [
+      18,
+      521,
+      138,
+      549
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      149,
+      1895,
+      269,
+      1923
+     ],
+     "pt_box": [
+      107.28,
+      1364.4,
+      193.68,
+      1384.56
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-145",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=688.32,1286.64,86.4,20.16",
+    "quote": "27-145",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r2c1",
+     "box": [
+      825,
+      413,
+      945,
+      441
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      956,
+      1787,
+      1076,
+      1815
+     ],
+     "pt_box": [
+      688.32,
+      1286.64,
+      774.72,
+      1306.8
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-136",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=155.52,1481.04,86.4,20.16",
+    "quote": "27-136",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r2c1",
+     "box": [
+      85,
+      683,
+      205,
+      711
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      216,
+      2057,
+      336,
+      2085
+     ],
+     "pt_box": [
+      155.52,
+      1481.04,
+      241.92,
+      1501.2
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-142",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=677.52,1474.56,86.4,20.16",
+    "quote": "27-142",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r2c1",
+     "box": [
+      810,
+      674,
+      930,
+      702
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      941,
+      2048,
+      1061,
+      2076
+     ],
+     "pt_box": [
+      677.52,
+      1474.56,
+      763.92,
+      1494.72
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-143",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=619.92,1537.2,86.4,20.16",
+    "quote": "27-143",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r2c1",
+     "box": [
+      730,
+      761,
+      850,
+      789
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      861,
+      2135,
+      981,
+      2163
+     ],
+     "pt_box": [
+      619.92,
+      1537.2,
+      706.32,
+      1557.36
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-119",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=234.72,1755.36,86.4,20.16",
+    "quote": "27-119",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r2c1",
+     "box": [
+      195,
+      1064,
+      315,
+      1092
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      326,
+      2438,
+      446,
+      2466
+     ],
+     "pt_box": [
+      234.72,
+      1755.36,
+      321.12,
+      1775.52
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-120",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=295.92,1869.12,86.4,20.16",
+    "quote": "27-120",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r2c1",
+     "box": [
+      280,
+      1222,
+      400,
+      1250
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      411,
+      2596,
+      531,
+      2624
+     ],
+     "pt_box": [
+      295.92,
+      1869.12,
+      382.32,
+      1889.28
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-166",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1355.04,1059.84,86.4,20.16",
+    "quote": "27-166",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r2c2",
+     "box": [
+      800,
+      98,
+      920,
+      126
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1882,
+      1472,
+      2002,
+      1500
+     ],
+     "pt_box": [
+      1355.04,
+      1059.84,
+      1441.44,
+      1080.0
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-164",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1268.64,1100.88,86.4,20.16",
+    "quote": "27-164",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r2c2",
+     "box": [
+      680,
+      155,
+      800,
+      183
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1762,
+      1529,
+      1882,
+      1557
+     ],
+     "pt_box": [
+      1268.64,
+      1100.88,
+      1355.04,
+      1121.04
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-150",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=932.4,1143.36,86.4,20.16",
+    "quote": "27-150",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r2c2",
+     "box": [
+      213,
+      214,
+      333,
+      242
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1295,
+      1588,
+      1415,
+      1616
+     ],
+     "pt_box": [
+      932.4,
+      1143.36,
+      1018.8,
+      1163.52
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-153",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1106.64,1140.48,86.4,20.16",
+    "quote": "27-153",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r2c2",
+     "box": [
+      455,
+      210,
+      575,
+      238
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1537,
+      1584,
+      1657,
+      1612
+     ],
+     "pt_box": [
+      1106.64,
+      1140.48,
+      1193.04,
+      1160.64
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-144",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=858.24,1195.2,86.4,20.16",
+    "quote": "27-144",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r2c2",
+     "box": [
+      110,
+      286,
+      230,
+      314
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1192,
+      1660,
+      1312,
+      1688
+     ],
+     "pt_box": [
+      858.24,
+      1195.2,
+      944.64,
+      1215.36
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-155",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1131.84,1586.16,86.4,20.16",
+    "quote": "27-155",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r2c2",
+     "box": [
+      490,
+      829,
+      610,
+      857
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1572,
+      2203,
+      1692,
+      2231
+     ],
+     "pt_box": [
+      1131.84,
+      1586.16,
+      1218.24,
+      1606.32
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-154",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1290.24,1629.36,86.4,20.16",
+    "quote": "27-154",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r2c2",
+     "box": [
+      710,
+      889,
+      830,
+      917
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1792,
+      2263,
+      1912,
+      2291
+     ],
+     "pt_box": [
+      1290.24,
+      1629.36,
+      1376.64,
+      1649.52
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-156",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1239.84,1720.8,86.4,20.16",
+    "quote": "27-156",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r2c2",
+     "box": [
+      640,
+      1016,
+      760,
+      1044
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1722,
+      2390,
+      1842,
+      2418
+     ],
+     "pt_box": [
+      1239.84,
+      1720.8,
+      1326.24,
+      1740.96
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "text_match": true,
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-122",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1016.64,1733.76,86.4,20.16",
+    "quote": "27-122",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r2c2",
+     "box": [
+      330,
+      1034,
+      450,
+      1062
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1412,
+      2408,
+      1532,
+      2436
+     ],
+     "pt_box": [
+      1016.64,
+      1733.76,
+      1103.04,
+      1753.92
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-157",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1139.04,1778.4,86.4,20.16",
+    "quote": "27-157",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop95_175_1550_1890-r2c2",
+     "box": [
+      500,
+      1096,
+      620,
+      1124
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1582,
+      2470,
+      1702,
+      2498
+     ],
+     "pt_box": [
+      1139.04,
+      1778.4,
+      1225.44,
+      1798.56
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "note": "SCGS drill hole labelled on the Hardeeville map face (page image); no log printed"
+   }
+  }
+ ],
+ "structures": [],
+ "groundwater": [],
+ "references": [],
+ "surfaces": [],
+ "contours": [],
+ "sections": [
+  {
+   "name": {
+    "value": "A-A'",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "Vertical exaggeration is 100",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "section A-A' below the Hardeeville map"
+   },
+   "vertical_exaggeration": {
+    "value": "100",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1",
+    "quote": "Vertical exaggeration is 100",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": 100.0
+   },
+   "datum": {
+    "value": "SEA LEVEL",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=2356.8,2304,60,14.4",
+    "quote": "SEA LEVEL",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-60dpi-crop90_2120_2440_2480-r1c2",
+     "box": [
+      970,
+      154,
+      1020,
+      166
+     ],
+     "dpi": 60,
+     "page_px_box": [
+      1964,
+      1920,
+      2014,
+      1932
+     ],
+     "pt_box": [
+      2356.8,
+      2304.0,
+      2416.8,
+      2318.4
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "text_match": true,
+    "normalized": "MSL"
+   },
+   "elevation_units": {
+    "value": "feet (left), meters (right)",
+    "source_id": "ngmdb:94275",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=2352,2145.6,43.2,12",
+    "quote": "METERS",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-60dpi-crop90_2120_2440_2480-r1c2",
+     "box": [
+      966,
+      22,
+      1002,
+      32
+     ],
+     "dpi": 60,
+     "page_px_box": [
+      1960,
+      1788,
+      1996,
+      1798
+     ],
+     "pt_box": [
+      2352.0,
+      2145.6,
+      2395.2,
+      2157.6
+     ],
+     "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+    },
+    "text_match": true
+   },
+   "observations": [
+    {
+     "value": "27-115",
+     "source_id": "ngmdb:94275",
+     "page": 1,
+     "extraction_method": "llm-image",
+     "confidence": 0.6,
+     "inferred": false,
+     "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=211.2,2182.8,52.8,19.2",
+     "quote": "27-115",
+     "quote_match": "image",
+     "text_method": "image",
+     "verification": "agree",
+     "image": {
+      "tile": "p1-60dpi-crop90_2120_2440_2480-r1c1",
+      "box": [
+       101,
+       53,
+       145,
+       69
+      ],
+      "dpi": 60,
+      "page_px_box": [
+       176,
+       1819,
+       220,
+       1835
+      ],
+      "pt_box": [
+       211.2,
+       2182.8,
+       264.0,
+       2202.0
+      ],
+      "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+     },
+     "note": "hole drawn on the section"
+    },
+    {
+     "value": "27-116",
+     "source_id": "ngmdb:94275",
+     "page": 1,
+     "extraction_method": "llm-image",
+     "confidence": 0.6,
+     "inferred": false,
+     "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=267.6,2175.6,52.8,19.2",
+     "quote": "27-116",
+     "quote_match": "image",
+     "text_method": "image",
+     "verification": "agree",
+     "image": {
+      "tile": "p1-60dpi-crop90_2120_2440_2480-r1c1",
+      "box": [
+       148,
+       47,
+       192,
+       63
+      ],
+      "dpi": 60,
+      "page_px_box": [
+       223,
+       1813,
+       267,
+       1829
+      ],
+      "pt_box": [
+       267.6,
+       2175.6,
+       320.4,
+       2194.8
+      ],
+      "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+     },
+     "note": "hole drawn on the section"
+    },
+    {
+     "value": "27-131",
+     "source_id": "ngmdb:94275",
+     "page": 1,
+     "extraction_method": "llm-image",
+     "confidence": 0.6,
+     "inferred": false,
+     "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=684,2373.6,52.8,19.2",
+     "quote": "27-131",
+     "quote_match": "image",
+     "text_method": "image",
+     "verification": "agree",
+     "image": {
+      "tile": "p1-60dpi-crop90_2120_2440_2480-r1c1",
+      "box": [
+       495,
+       212,
+       539,
+       228
+      ],
+      "dpi": 60,
+      "page_px_box": [
+       570,
+       1978,
+       614,
+       1994
+      ],
+      "pt_box": [
+       684.0,
+       2373.6,
+       736.8,
+       2392.8
+      ],
+      "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+     },
+     "note": "hole drawn on the section"
+    },
+    {
+     "value": "27-132",
+     "source_id": "ngmdb:94275",
+     "page": 1,
+     "extraction_method": "llm-image",
+     "confidence": 0.6,
+     "inferred": false,
+     "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=715.2,2385.6,52.8,19.2",
+     "quote": "27-132",
+     "quote_match": "image",
+     "text_method": "image",
+     "verification": "agree",
+     "image": {
+      "tile": "p1-60dpi-crop90_2120_2440_2480-r1c1",
+      "box": [
+       521,
+       222,
+       565,
+       238
+      ],
+      "dpi": 60,
+      "page_px_box": [
+       596,
+       1988,
+       640,
+       2004
+      ],
+      "pt_box": [
+       715.2,
+       2385.6,
+       768.0,
+       2404.8
+      ],
+      "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+     },
+     "note": "hole drawn on the section"
+    },
+    {
+     "value": "27-141",
+     "source_id": "ngmdb:94275",
+     "page": 1,
+     "extraction_method": "llm-image",
+     "confidence": 0.6,
+     "inferred": false,
+     "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1197.6,2403.6,52.8,19.2",
+     "quote": "27-141",
+     "quote_match": "image",
+     "text_method": "image",
+     "verification": "agree",
+     "image": {
+      "tile": "p1-60dpi-crop90_2120_2440_2480-r1c1",
+      "box": [
+       923,
+       237,
+       967,
+       253
+      ],
+      "dpi": 60,
+      "page_px_box": [
+       998,
+       2003,
+       1042,
+       2019
+      ],
+      "pt_box": [
+       1197.6,
+       2403.6,
+       1250.4,
+       2422.8
+      ],
+      "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+     },
+     "note": "hole drawn on the section"
+    },
+    {
+     "value": "27-144",
+     "source_id": "ngmdb:94275",
+     "page": 1,
+     "extraction_method": "llm-image",
+     "confidence": 0.6,
+     "inferred": false,
+     "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1394.4,2385.6,52.8,19.2",
+     "quote": "27-144",
+     "quote_match": "image",
+     "text_method": "image",
+     "verification": "agree",
+     "image": {
+      "tile": "p1-60dpi-crop90_2120_2440_2480-r1c2",
+      "box": [
+       168,
+       222,
+       212,
+       238
+      ],
+      "dpi": 60,
+      "page_px_box": [
+       1162,
+       1988,
+       1206,
+       2004
+      ],
+      "pt_box": [
+       1394.4,
+       2385.6,
+       1447.2,
+       2404.8
+      ],
+      "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+     },
+     "note": "hole drawn on the section"
+    },
+    {
+     "value": "27-155",
+     "source_id": "ngmdb:94275",
+     "page": 1,
+     "extraction_method": "llm-image",
+     "confidence": 0.6,
+     "inferred": false,
+     "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1874.4,2223.6,52.8,19.2",
+     "quote": "27-155",
+     "quote_match": "image",
+     "text_method": "image",
+     "verification": "agree",
+     "image": {
+      "tile": "p1-60dpi-crop90_2120_2440_2480-r1c2",
+      "box": [
+       568,
+       87,
+       612,
+       103
+      ],
+      "dpi": 60,
+      "page_px_box": [
+       1562,
+       1853,
+       1606,
+       1869
+      ],
+      "pt_box": [
+       1874.4,
+       2223.6,
+       1927.2,
+       2242.8
+      ],
+      "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+     },
+     "note": "hole drawn on the section"
+    },
+    {
+     "value": "27-154",
+     "source_id": "ngmdb:94275",
+     "page": 1,
+     "extraction_method": "llm-image",
+     "confidence": 0.6,
+     "inferred": false,
+     "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1974,2227.2,52.8,19.2",
+     "quote": "27-154",
+     "quote_match": "image",
+     "text_method": "image",
+     "verification": "agree",
+     "image": {
+      "tile": "p1-60dpi-crop90_2120_2440_2480-r1c2",
+      "box": [
+       651,
+       90,
+       695,
+       106
+      ],
+      "dpi": 60,
+      "page_px_box": [
+       1645,
+       1856,
+       1689,
+       1872
+      ],
+      "pt_box": [
+       1974.0,
+       2227.2,
+       2026.8,
+       2246.4
+      ],
+      "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+     },
+     "note": "hole drawn on the section"
+    },
+    {
+     "value": "27-156",
+     "source_id": "ngmdb:94275",
+     "page": 1,
+     "extraction_method": "llm-image",
+     "confidence": 0.6,
+     "inferred": false,
+     "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=2028,2253.6,52.8,19.2",
+     "quote": "27-156",
+     "quote_match": "image",
+     "text_method": "image",
+     "verification": "agree",
+     "image": {
+      "tile": "p1-60dpi-crop90_2120_2440_2480-r1c2",
+      "box": [
+       696,
+       112,
+       740,
+       128
+      ],
+      "dpi": 60,
+      "page_px_box": [
+       1690,
+       1878,
+       1734,
+       1894
+      ],
+      "pt_box": [
+       2028.0,
+       2253.6,
+       2080.8,
+       2272.8
+      ],
+      "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+     },
+     "text_match": true,
+     "note": "hole drawn on the section"
+    }
+   ],
+   "units_along": [
+    {
+     "unit": {
+      "value": "QPjr",
+      "source_id": "ngmdb:94275",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=164.4,2256,28.8,14.4",
+      "quote": "QPjr",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-60dpi-crop90_2120_2440_2480-r1c1",
+       "box": [
+        62,
+        114,
+        86,
+        126
+       ],
+       "dpi": 60,
+       "page_px_box": [
+        137,
+        1880,
+        161,
+        1892
+       ],
+       "pt_box": [
+        164.4,
+        2256.0,
+        193.2,
+        2270.4
+       ],
+       "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+      },
+      "text_match": true,
+      "note": "unit labelled on the section"
+     }
+    },
+    {
+     "unit": {
+      "value": "NMd",
+      "source_id": "ngmdb:94275",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=421.2,2412,31.2,14.4",
+      "quote": "NMd",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-60dpi-crop90_2120_2440_2480-r1c1",
+       "box": [
+        276,
+        244,
+        302,
+        256
+       ],
+       "dpi": 60,
+       "page_px_box": [
+        351,
+        2010,
+        377,
+        2022
+       ],
+       "pt_box": [
+        421.2,
+        2412.0,
+        452.4,
+        2426.4
+       ],
+       "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+      },
+      "note": "unit labelled on the section"
+     }
+    },
+    {
+     "unit": {
+      "value": "QHfw",
+      "source_id": "ngmdb:94275",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=2276.4,2298,33.6,14.4",
+      "quote": "QHfw",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-60dpi-crop90_2120_2440_2480-r1c2",
+       "box": [
+        903,
+        149,
+        931,
+        161
+       ],
+       "dpi": 60,
+       "page_px_box": [
+        1897,
+        1915,
+        1925,
+        1927
+       ],
+       "pt_box": [
+        2276.4,
+        2298.0,
+        2310.0,
+        2312.4
+       ],
+       "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+      },
+      "text_match": true,
+      "note": "unit labelled on the section"
+     }
+    },
+    {
+     "unit": {
+      "value": "QPhf",
+      "source_id": "ngmdb:94275",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94275_1#page=1&viewrect=1944,2235.6,31.2,14.4",
+      "quote": "QPhf",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-60dpi-crop90_2120_2440_2480-r1c2",
+       "box": [
+        626,
+        97,
+        652,
+        109
+       ],
+       "dpi": 60,
+       "page_px_box": [
+        1620,
+        1863,
+        1646,
+        1875
+       ],
+       "pt_box": [
+        1944.0,
+        2235.6,
+        1975.2,
+        2250.0
+       ],
+       "pdf_sha256": "6b8cb88981460850b0122e7fda25f6abac85dbe2da464b498e8936219827a6e3"
+      },
+      "text_match": true,
+      "note": "unit labelled on the section"
+     }
+    }
+   ]
+  }
+ ],
+ "water_tests": [],
+ "rock_tests": []
+}
