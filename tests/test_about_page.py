@@ -11,7 +11,7 @@ import re
 from pathlib import Path
 
 from extract import ingest
-from merge import build, score
+from merge import build, correlate, score, wells
 from model import stack, surfaces
 from model.units import Lexicon
 
@@ -126,6 +126,9 @@ def expected() -> dict[str, str]:
             "surf.msse_low": f2(d["msse_bounds"][0]), "surf.msse_high": f"{d['msse_bounds'][1]:g}",
             "surf.idw_power": f"{d['idw_power']:g}", "surf.bins": str(d["bins"]),
             "stack.min_holes": str(stack.MIN_HOLES)}
+
+    r = wells.MAX_LOCATION_RADIUS_M
+    exp |= {"hydro.radius_m": f"{r:,} m", "hydro.radius_mi": f"{round(r / 1609.344)} mile"}
     return exp
 
 
@@ -140,7 +143,8 @@ def test_about_page_numbers_match_the_code():
 
 
 # Keys checked by tests/web/about.test.mjs against web/card.js and web/merged.js.
-WEB_KEYS = {"level.high", "level.medium", "color.low", "color.mid", "color.high"}
+# Keys checked by tests/web/about.test.mjs against web/usgs-water.js.
+WEB_KEYS = {"level.high", "level.medium", "color.low", "color.mid", "color.high", "water.max_area", "water.ttl"}
 
 
 def test_web_keys_are_on_the_page():
@@ -161,7 +165,38 @@ def test_interpolation_notes_exist():
 
 def test_about_page_describes_the_current_surface_method():
     html = PAGE.read_text(encoding="utf-8")
-    sec = html[html.index('<section id="surfaces">'):html.index('<section id="sources">')]
+    sec = html[html.index('<section id="surfaces">'):html.index('<section id="hydro">')]
     assert "Trend kriging" in sec and "geologic age" in sec and "superposition" in sec
     assert "r²" not in sec, "there is no variogram-fit (r²) rule any more"
     assert "min_r2" not in surfaces.DEFAULTS and "min_structure" not in surfaces.DEFAULTS
+
+
+def section(sid: str) -> str:
+    html = PAGE.read_text(encoding="utf-8")
+    start = html.index(f'<section id="{sid}">')
+    return html[start:html.index("</section>", start)]
+
+
+def test_about_page_explains_unit_correlations():
+    sec = section("units")
+    data = json.loads(correlate.CONFIG.read_text())
+    assert data["correlations"], "config/unit_correlations.json lists correlations"
+    for word in ("members", "names", "basis", "reason", "keep_as_mapped", "As mapped", "Correlated as",
+                 "merge/correlate.py", "config/unit_correlations.json", "inferred"):
+        assert word in sec, word
+    # Every name the config keeps as mapped is named on the page.
+    for keep in data.get("keep_as_mapped", []):
+        assert keep["names"][0] in sec
+    # Only fields a correlation changes are listed; the map symbol stays as mapped.
+    f = {"properties": {"source": "s", "map_unit": "Qx", "name": "Fluvial desposits"}}
+    out = correlate.apply([f], [{"name": "Fluvial deposits", "names": ["Fluvial desposits"], "reason": "spelling"}])
+    p = out[0]["properties"]
+    assert p["map_unit"] == "Qx" and p["as_mapped"]["name"] == "Fluvial desposits"
+    assert p["correlation"]["inferred"] and set(p["inferred_fields"]) == {"name", "unit_name"}
+
+
+def test_about_page_explains_the_hydro_folder():
+    sec = section("hydro")
+    for word in ("Known Wells (Documents)", "Water Tests", "Water Monitoring (USGS)", "merge/wells.py",
+                 "model/coords.py", "web/usgs-water.js", "inferred", "chart", "record id"):
+        assert word in sec, word

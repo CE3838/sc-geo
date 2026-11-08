@@ -32,10 +32,12 @@
         software worked out rather than read is marked <span class="tag-inferred">inferred</span>.</p>
       <nav class="about-toc" aria-label="On this page">
         <a href="#map">What the map shows</a>
+        <a href="#units">Correlated map units</a>
         <a href="#confidence">The confidence value</a>
         <a href="#inferred">Inferred and derived values</a>
         <a href="#documents">Values read from documents</a>
         <a href="#surfaces">Subsurface surfaces</a>
+        <a href="#hydro">Hydro layers</a>
         <a href="#sources">Sources and no warranty</a>
       </nav>
     </div>
@@ -70,6 +72,31 @@
         decides (unconsolidated or water), and failing that the age: units younger than 66 Ma (Cenozoic) go in
         Unconsolidated Deposits. The split is an inference. Unconsolidated Deposits draw on top; turn them off
         to see the rock map under them where a map shows both.</p>
+    </section>
+
+    <section id="units">
+      <h2>Correlated map units</h2>
+      <p>Where a detailed map ends and a coarser one fills in, the same deposit can carry two names, for example
+        a 1:24,000 map's <em>Alluvium</em> and SGMC's <em>Alluvial Valley Swamp</em> on the same valley floor. So
+        that both sides of the seam draw, color and score alike, <code>merge/correlate.py</code> renames them
+        before the overlay, following <code>config/unit_correlations.json</code>. Each entry there gives:</p>
+      <ul>
+        <li><strong>members</strong>: the units it applies to, by source and map symbol;</li>
+        <li><strong>names</strong>: printed names it applies to on any map (any capitals), used for spellings and
+          for one unit spelled several ways;</li>
+        <li>the shared <strong>name</strong>, and where stated the <strong>age</strong> and GeoMaterial (an entry
+          without them renames only);</li>
+        <li><strong>basis</strong>: the unit on an adjoining map whose name and age are followed;</li>
+        <li><strong>reason</strong>: why the units are the same deposit.</li>
+      </ul>
+      <p>Names under <strong>keep_as_mapped</strong> are never correlated: Barrier-island deposits keep the
+        wording of their own map and are not renamed to strand deposits or another name used for the same
+        symbol.</p>
+      <p>The map symbol always stays as mapped. On the property card, <em>As mapped</em> shows the name and age the
+        map itself prints, and <em>Correlated as</em> shows the shared name, the basis unit and its map, and the
+        reason. Every field the correlation changed (name, age, age range, GeoMaterial) is stored and shown as
+        <span class="tag-inferred">inferred</span>, with the note <em>from a correlated unit on an adjoining
+        map</em>.</p>
     </section>
 
     <section id="confidence">
@@ -308,6 +335,30 @@
         stacking), with the cross-validation results before and after these changes, is in
         <a href="https://github.com/CE3838/sc-geo/blob/main/docs/interpolation.md" target="_blank" rel="noopener noreferrer">docs/interpolation.md</a>.
         Methods described there but not above (anisotropy, contour maps as data) are not used.</p>
+    </section>
+
+    <section id="hydro">
+      <h2>Hydro layers</h2>
+      <p>The Layers panel's Hydro folder holds three layers.</p>
+      <ul>
+        <li><strong>Known Wells (Documents)</strong> and <strong>Water Tests</strong>: wells, borings, cores, test
+          holes and springs, and their water tests, read from the extracted documents (<code>merge/wells.py</code>,
+          served with the viewer; nothing is fetched from other sites). A site is placed only by a coordinate
+          converted from its printed location (<code>model/coords.py</code>), which is an inferred value, and is
+          shown only when the printed precision puts it within <span data-sync="hydro.radius_mi">1 mile</span>
+          (<span data-sync="hydro.radius_m">1,609 m</span>) of the place. Nothing is placed from a place name. Sites
+          placed less precisely are left off the map. The popup says how far the point may be from the place, and
+          every value cites its document by a short citation (author and year) and page, with the quote;
+          raw record ids are never shown.</li>
+        <li><strong>Water Monitoring (USGS)</strong>: stations of the USGS Water Data APIs, queried live from the
+          browser (<code>web/usgs-water.js</code>) and off when the viewer opens. Stations load for the area on
+          screen once the map stops moving; nothing is fetched when that area, rounded out to whole degrees, is
+          larger than <span data-sync="water.max_area">150 square degrees</span>, and an area already loaded is
+          reused for <span data-sync="water.ttl">10 minutes</span>. Clicking a station opens a chart of its
+          readings.</li>
+      </ul>
+      <p>Values in the document layers are as printed, with units as printed (never guessed); inferred values are
+        marked <span class="tag-inferred">inferred</span>.</p>
     </section>
 
     <section id="sources">
