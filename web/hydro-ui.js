@@ -60,9 +60,15 @@ function testsTable(src, rows) {
 export function describeSite(p, { sources = {}, water = null } = {}) {
   const src = sources?.[p.s] ?? null;
   const ref = src ? shortRef(src) : 'Source document';
+  // A location borrowed from another record by well ID match cites that record's source (short citation).
+  const locSrc = p.ls ? (sources?.[p.ls] ?? null) : src;
+  const matched = p.mt && p.ls
+    ? el('span', { class: 'hydro-match' }, ' · located by well ID match',
+      p.ls !== p.s ? ` in ${locSrc ? shortRef(locSrc) : 'another document'}` : ' (another page)')
+    : null;
   const facts = [
     ['Location', [p.loc ?? '', ' — placed ', radiusText(p), p.ci ? ' ' : '', p.ci ? inferredTag() : null,
-      cite(src, { p: p.p, q: p.q })]],
+      cite(locSrc, { p: p.p, q: p.q }), matched]],
   ];
   if (p.td) facts.push(['Total depth', [feetText(p.td), p.td.i ? ' ' : '', p.td.i ? inferredTag() : null, cite(src, p.td)]]);
   if (p.el) {

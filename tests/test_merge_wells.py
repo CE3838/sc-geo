@@ -136,7 +136,8 @@ def test_cli_writes_three_files(extracted, tmp_path):
     cat = tmp_path / "catalog.json"
     cat.write_text(json.dumps(list(CATALOG.values())))
     dest = tmp_path / "sites"
-    assert wells.main(["--extracted", str(extracted), "--catalog", str(cat), "--out-dir", str(dest)]) == 0
+    assert wells.main(["--extracted", str(extracted), "--catalog", str(cat), "--out-dir", str(dest),
+                       "--conflicts", str(tmp_path / "conflicts.json")]) == 0
     assert {p.name for p in dest.iterdir()} == {"wells.geojson", "water-tests.json", "rock-tests.json"}
     assert json.loads((dest / "wells.geojson").read_text())["counts"]["kept"]["well"] == 1
 

@@ -416,8 +416,27 @@ committed; deploy builds them, and `merge.package` ships them as
   numbers inside the document's catalog bbox. When a site has several
   converted locations the one with the smallest radius is used. Exact,
   non-inferred coordinates would be kept as they are. `counts` gives the
-  sites kept and left out (no location, radius over the limit) by kind.
+  sites kept and left out (no location, radius over the limit) by kind,
+  `id_match` and `id_conflict`.
   `site-tests.json` still lists every site, placed or not.
+- **Placed by well ID match.** A site without such a location (or with only
+  one over the limit) may use a coordinate printed for the same well
+  elsewhere: another document's well table or observation, or the same
+  document's location table on another page (`merge/well_ids.py`). IDs are
+  compared exactly after dropping case, dashes, spaces and zero padding
+  (`CHN-0101` is `CHN-101`). Within one document any such ID matches;
+  across documents only county well numbers (`COUNTY_PREFIXES` + number)
+  and 15-digit USGS site numbers do, including a USGS number printed alone
+  in the label's own row. Names and place descriptions never match, and a
+  USGS number is never decoded into a location. The coordinate must itself
+  be within the 1-mile limit. The site then gets `ls` (the coordinate's
+  source id), `p`/`q`/`lc`/`loc` of that location, and `mt`: the note
+  "located by well ID match", the matched key, the site label's citation
+  (`test`: source, page, quote), the coordinate's citation (`coord`) and the
+  stored inferred value (`value`, extraction method "inference", citing
+  both). When precise coordinates for one ID lie more than 1 mile apart the
+  site is not placed and is listed in `data/review/well_id_conflicts.json`
+  (`--conflicts`) with every candidate coordinate and its citation.
 
 ## Derived coordinates
 
