@@ -25,7 +25,8 @@ jobs:
       - run: node scripts/check_imagery.mjs
 
   viewer:
-    runs-on: ubuntu-latest
+    # Pinned: Playwright installs Chromium only on the Ubuntu releases it supports.
+    runs-on: ubuntu-24.04
     timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
