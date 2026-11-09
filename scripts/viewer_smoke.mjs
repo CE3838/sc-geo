@@ -8,6 +8,8 @@
 // Needs network access (MapLibre from unpkg). Usage: node scripts/viewer_smoke.mjs
 import { spawn } from 'node:child_process';
 import { chromium } from 'playwright';
+import { NAIP_SOURCES } from '../web/geo.js';
+import { IMAGERY_TIMEOUT_MS } from '../web/imagery.js';
 
 const PORT = 8765;
 
@@ -33,6 +35,8 @@ try {
   const page = await browser.newPage({ viewport: { width: 1200, height: 800 } });
   const errors = [];
   page.on('pageerror', (e) => errors.push(e.message));
+  const warnings = [];
+  page.on('console', (m) => { if (m.type() === 'warning') warnings.push(m.text()); });
   await page.goto(`http://localhost:${PORT}/`);
   await page.waitForFunction(() => window.scGeo?.map.loaded(), null, { timeout: 30000 });
 
@@ -82,7 +86,10 @@ try {
   check(/N [\d,]+ ft · E [\d,]+ ft/.test(status) && /° N, .*° W/.test(status) && /1:[\d,]+/.test(status),
     `status bar shows State Plane feet, lat/lon and scale (${status.replace(/\s+/g, ' ').trim()})`);
 
-  // Imagery and the South Carolina focus.
+  // Imagery and the South Carolina focus. A hung imagery server does not stall
+  // this: each imagery tile request times out after IMAGERY_TIMEOUT_MS
+  // (web/imagery.js) and that tile comes from the next server, so every tile
+  // finishes (loaded or errored) well within the wait.
   const settle = () => page.waitForFunction(() => window.scGeo.map.areTilesLoaded(), null, { timeout: 60000 });
   await settle();
   const region = await page.evaluate(() => {
@@ -190,6 +197,20 @@ try {
   await settle();
   const naip = await page.evaluate(() => window.scGeo.map.isSourceLoaded('naip'));
   check(naip, 'live NAIP loads at street scale over Charleston');
+  // Credits name the server(s) that served the imagery, the fallback included.
+  const credits = await page.evaluate(() => ({
+    source: window.scGeo.map.getSource('naip')?.attribution ?? '',
+    shown: document.querySelector('.maplibregl-ctrl-attrib-inner')?.textContent ?? '',
+  }));
+  const switched = warnings.find((w) => /NAIP server .* is not answering/.test(w));
+  if (switched) console.log(`NOTE ${switched}`);
+  check(Boolean(credits.source) && credits.source.split('; ').every((a) => credits.shown.includes(a))
+    && credits.source.split('; ').every((a) => NAIP_SOURCES.some((s) => s.attribution === a)),
+  `imagery credits shown for the server(s) used (${credits.source})`);
+  if (switched) {
+    check(credits.shown.includes(NAIP_SOURCES.at(-1).attribution), 'credits name the fallback imagery server');
+  }
+  console.log(`imagery tile timeout ${IMAGERY_TIMEOUT_MS} ms`);
   await snapshot(page, 'charleston-z16');
 
   // Roads (US Census Bureau TIGER, live): highways and interstates at z12.

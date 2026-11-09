@@ -1,7 +1,8 @@
 import {
   DETAIL_MINZOOM, IMAGERY_BOUNDS, MAX_BOUNDS, NAIP_SOURCES, SC_BOUNDS,
-  firstPopupItem, formatCoords, formatScale, hiDpiUrl, onStyleReady, scaleDenominator, shouldFallBack, streetViewUrl,
+  firstPopupItem, formatCoords, formatScale, onStyleReady, scaleDenominator, shouldFallBack, streetViewUrl,
 } from './geo.js';
+import { IMAGERY_PROTOCOL, IMAGERY_TILE_URL, createImageryLoader } from './imagery.js';
 import { setupGeology } from './geology-ui.js';
 import { setupMergedGeology } from './merged-ui.js';
 import { setupFaults } from './faults-ui.js';
@@ -97,46 +98,53 @@ const card = setupCard(document.getElementById('card'), {
 
 // --- imagery ------------------------------------------------------------------
 
-// Live NAIP from DETAIL_MINZOOM up; fall back to the next server if it keeps failing.
-let sourceIndex = 0;
+// Live NAIP from DETAIL_MINZOOM up. Each tile goes through web/imagery.js:
+// a server that hangs or fails is timed out per tile and that tile comes from
+// the next server; after a few failures in a row the layer stays on the next
+// server for the session. The credits name every server that served tiles.
 let stats = { errors: 0, loaded: 0 };
 let imageryOn = true;
 
-function useImagery(index) {
-  const src = NAIP_SOURCES[index];
-  if (map.getLayer('naip')) map.removeLayer('naip');
-  if (map.getSource('naip')) map.removeSource('naip');
+function setImageryAttribution(text) {
+  const src = map.getSource('naip');
+  if (!src || src.attribution === text) return;
+  src.attribution = text;
+  // The attribution control re-reads source credits on a metadata event.
+  map.fire('sourcedata', { dataType: 'source', sourceDataType: 'metadata', sourceId: 'naip' });
+}
+
+const imagery = createImageryLoader(NAIP_SOURCES, {
+  pixelRatio: window.devicePixelRatio,
+  onChange: (info) => {
+    if (info.switchedTo) console.warn(`NAIP server "${info.switchedFrom}" is not answering; using "${info.switchedTo}".`);
+    setImageryAttribution(info.attribution);
+  },
+});
+maplibregl.addProtocol(IMAGERY_PROTOCOL, imagery.load);
+
+onStyleReady(map, () => {
   map.addSource('naip', {
     type: 'raster',
-    tiles: [hiDpiUrl(src.url, window.devicePixelRatio)],
+    tiles: [IMAGERY_TILE_URL],
     tileSize: 256,
     bounds: IMAGERY_BOUNDS.flat(),
-    attribution: src.attribution,
+    attribution: imagery.attribution(),
   });
   // Above the cached imagery; below geology, the mask, outline and add-on layers.
   const above = ['merged-bedrock-fill', 'geology-fill', 'mask'].find((id) => map.getLayer(id));
   map.addLayer({ id: 'naip', type: 'raster', source: 'naip', minzoom: DETAIL_MINZOOM, paint: RASTER_PAINT,
     layout: { visibility: imageryOn ? 'visible' : 'none' } }, above);
-  sourceIndex = index;
-  stats = { errors: 0, loaded: 0 };
-}
-
-onStyleReady(map, () => useImagery(0));
+});
 
 map.on('data', (e) => {
   if (e.sourceId === 'naip' && e.tile) stats.loaded += 1;
 });
 
+// A tile error means every server failed for that tile.
 map.on('error', (e) => {
   if (e.sourceId !== 'naip') return;
   stats.errors += 1;
-  if (!shouldFallBack(stats)) return;
-  if (sourceIndex + 1 < NAIP_SOURCES.length) {
-    console.warn(`NAIP server "${NAIP_SOURCES[sourceIndex].id}" failed; trying the next one.`);
-    useImagery(sourceIndex + 1);
-  } else {
-    document.getElementById('imagery-notice').hidden = false;
-  }
+  if (shouldFallBack(stats)) document.getElementById('imagery-notice').hidden = false;
 });
 
 sidebar.addLayer({
