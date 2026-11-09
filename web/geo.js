@@ -112,7 +112,8 @@ export function fillTile(template, tile) {
     .replace('{y}', tile.y);
 }
 
-// Switch imagery servers when a source keeps failing and has never loaded.
+// Show the "imagery unavailable" notice when tiles keep failing on every
+// server (web/imagery.js) and none has loaded.
 export function shouldFallBack({ errors, loaded }, threshold = 3) {
   return loaded === 0 && errors >= threshold;
 }
