@@ -53,6 +53,96 @@ def test_water_parameter_left_alone_when_ambiguous(printed):
     assert lt.water_parameter(printed) is None
 
 
+# Organic compounds whose names contain an ion name never collapse to that ion (whole-name matching).
+@pytest.mark.parametrize("printed,name", [
+    ("Vinyl chloride", "vinyl chloride"),
+    ("vinyl chloride, in micrograms per liter", "vinyl chloride"),
+    ("Methylene chloride", "dichloromethane"),
+    ("Dichloromethane (methylene chloride)", "dichloromethane"),
+    ("Chloroform", "chloroform"),
+    ("Trichloromethane", "chloroform"),
+    ("Carbon tetrachloride", "carbon tetrachloride"),
+    ("Chloromethane", "chloromethane"),
+    ("Methyl chloride", "chloromethane"),
+    ("Chloroethane", "chloroethane"),
+    ("Ethyl chloride", "chloroethane"),
+    ("Methyl bromide", "bromomethane"),
+    ("Bromoform", "bromoform"),
+    ("Bromodichloromethane", "bromodichloromethane"),
+    ("Dibromochloromethane", "dibromochloromethane"),
+    ("Trichloroethene", "trichloroethene"),
+    ("trichloroethylene", "trichloroethene"),
+    ("Tetrachloroethene (PCE)", "tetrachloroethene"),
+    ("1,1-dichloroethene", "1,1-dichloroethene"),
+    ("1,1-dichloroethylene", "1,1-dichloroethene"),
+    ("cis-1,2-dichloroethene", "cis-1,2-dichloroethene"),
+    ("trans-1,2-dichloroethene", "trans-1,2-dichloroethene"),
+    ("1,1-dichloroethane", "1,1-dichloroethane"),
+    ("1,2-dichloroethane", "1,2-dichloroethane"),
+    ("1,1,1-trichloroethane", "1,1,1-trichloroethane"),
+    ("1,1,2-trichloroethane", "1,1,2-trichloroethane"),
+    ("Chlorobenzene", "chlorobenzene"),
+    ("1,4-Dioxane", "1,4-dioxane"),
+    ("carbon disulfide", "carbon disulfide"),
+    ("tert-butyl methyl ether", "MTBE"),
+])
+def test_organic_compounds_are_not_ions(printed, name):
+    assert lt.water_parameter(printed) == {"name": name, "category": "organic", "inferred": True}
+
+
+@pytest.mark.parametrize("printed", [
+    "Benzyl chloride", "Allyl chloride", "Cyanogen chloride", "Methyl iodide", "Dimethyl sulfide",
+    "Chlorophyll a", "Bromochloroacetonitrile",
+])
+def test_unknown_organics_with_an_ion_name_are_left_alone(printed):
+    n = lt.water_parameter(printed)
+    assert n is None or n["category"] not in ("major_ion", "nutrient", "metal_trace")
+
+
+@pytest.mark.parametrize("printed,name,category", [
+    # exact whole names first
+    ("Chloride", "chloride", "major_ion"),
+    ("chloride", "chloride", "major_ion"),
+    ("Chloride, dissolved", "chloride", "major_ion"),
+    ("Bromide (Br-)", "bromide", "major_ion"),
+    ("Sulfide", "sulfide", "metal_trace"),
+    ("Sulfide [S-]", "sulfide", "metal_trace"),
+    ("Sulfate", "sulfate", "major_ion"),
+    ("Hydrogen sulfide", "sulfide", "metal_trace"),
+    ("Nitrite", "nitrite", "nutrient"),
+    ("Nitrogen, nitrite", "nitrite", "nutrient"),
+    ("Nitrate", "nitrate", "nutrient"),
+    ("Nitrogen as nitrate", "nitrate", "nutrient"),
+    ("Total dissolved solids", "dissolved solids", "major_ion"),
+    ("Dissolved solids", "dissolved solids", "major_ion"),
+    ("Residue at 180 °C, dissolved", "dissolved solids", "major_ion"),
+    ("Dissolved oxygen", "dissolved oxygen", "field"),
+    ("Dissolved methane", "methane", "dissolved_gas"),
+    ("Iron, dissolved", "iron", "metal_trace"),
+    ("Iron(II)", "ferrous iron", "metal_trace"),
+    ("Ortho phosphate", "orthophosphate", "nutrient"),
+    ("Phosphorus, orthophosphate", "orthophosphate", "nutrient"),
+    ("Nitrogen, ammonia plus organic", "kjeldahl nitrogen", "nutrient"),
+    ("Nitrogen ammonia plus organic", "kjeldahl nitrogen", "nutrient"),
+    ("Deethyl atrazine", "deethylatrazine", "pesticide"),
+    ("Aldicarb sulfone", "aldicarb sulfone", "pesticide"),
+    ("Aldicarbsulfone", "aldicarb sulfone", "pesticide"),
+    ("Aldicarb sulfoxide", "aldicarb sulfoxide", "pesticide"),
+    ("Calculated recharge temperature", "recharge temperature", "dissolved_gas"),
+    ("Water temperature", "temperature", "field"),
+    ("Ethane", "ethane", "dissolved_gas"),
+    ("Ethene", "ethene", "dissolved_gas"),
+])
+def test_ion_and_near_miss_names(printed, name, category):
+    assert lt.water_parameter(printed) == {"name": name, "category": category, "inferred": True}
+
+
+@pytest.mark.parametrize("printed", ["Dissolved", "Total", "Nitrogen", "Organic compounds",
+                                     "Dissolved oxygen (% saturation at sample temperature)"])
+def test_qualifier_words_alone_are_no_parameter(printed):
+    assert lt.water_parameter(printed) is None
+
+
 # --- rock-test types -------------------------------------------------------------
 
 @pytest.mark.parametrize("printed,kind", [

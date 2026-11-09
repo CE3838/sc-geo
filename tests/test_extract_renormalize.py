@@ -97,6 +97,32 @@ def test_cli_dry_run_writes_nothing_and_write_mode_writes(tmp_path, capsys):
     assert json.loads(capsys.readouterr().out)["changes"] == 0
 
 
+def test_compact_table_column_parameters_are_renormalized():
+    col = lambda name, norm=None: {"field": "value", "parameter": stored(name, **({"normalized": norm} if norm else {}))}
+    doc = copy.deepcopy(DOC) | {"water_test_tables": [{"compact": True, "source_id": "ngmdb:9", "columns": [
+        {"field": "observation", "header": stored("Well")},
+        col("Vinyl chloride", {"name": "chloride", "category": "major_ion", "inferred": True}),
+        col("Chloride", {"name": "chloride", "category": "major_ion", "inferred": True}),
+        col("Chloroform"),
+        col("VC", {"name": "chloride", "category": "major_ion", "inferred": True}),
+    ], "row_fields": [], "rows": []}]}
+    new, changes = renormalize.renormalize_doc(doc, Lexicon([]))
+    cols = new["water_test_tables"][0]["columns"]
+    assert cols[1]["parameter"]["normalized"]["name"] == "vinyl chloride"
+    assert cols[2]["parameter"]["normalized"]["name"] == "chloride"
+    assert cols[3]["parameter"]["normalized"] == {"name": "chloroform", "category": "organic", "inferred": True}
+    assert "normalized" not in cols[4]["parameter"]  # an abbreviation is not guessed
+    assert "normalized" not in cols[0]["header"]
+    got = {(c["path"], c["key"]) for c in changes}
+    assert {("water_test_tables[0].columns[1].parameter", "normalized"),
+            ("water_test_tables[0].columns[3].parameter", "normalized"),
+            ("water_test_tables[0].columns[4].parameter", "normalized")} <= got
+    assert ("water_test_tables[0].columns[2].parameter", "normalized") not in got
+    assert strip(new) == strip(doc)
+    again, more = renormalize.renormalize_doc(new, Lexicon([]))
+    assert more == [] and again == new
+
+
 FILES = sorted((ROOT / "data" / "extracted").glob("*.json"))
 
 

@@ -122,6 +122,15 @@ def test_reread_by_packet_name_uses_that_packets_pages(env):
     assert built["packets"][0]["pages"] == [3, 4]
 
 
+def test_reread_by_packet_name_builds_a_missing_packet_index_from_the_cache(env, monkeypatch):
+    import harvest.pdfs as hp
+    monkeypatch.setattr(hp, "process", lambda *a, **k: pytest.fail("downloaded"))
+    (env.cache / "packets" / "ngmdb_5" / "index.json").unlink()
+    built = reread.build(SID, packet_names=["packet-01"], reason="r", **env.rkw)
+    assert built["packets"][0]["pages"] == [1, 2, 3, 4]
+    assert (env.cache / "packets" / "ngmdb_5" / "index.json").exists()
+
+
 def test_reread_never_downloads(env, monkeypatch):
     (env.cache / "text" / "ngmdb_5.json").unlink()
     import harvest.pdfs as hp
@@ -336,6 +345,55 @@ def test_queue_marks_items_done_and_keeps_manual_entries(tmp_path):
     assert by[item["id"]]["added_at"] == item["added_at"]
     assert by[manual["id"]]["status"] == "pending"
     assert q2["pending"] == 1
+
+
+def test_blank_pages_in_the_packet_index_count_as_covered(tmp_path):
+    ex, cache = tmp_path / "extracted", tmp_path / ".cache"
+    _extracted(ex, "ngmdb:1", "")
+    item = {"id": "ngmdb:1:rock_tests:p83-86", "source_id": "ngmdb:1", "pages": [83, 84, 85, 86],
+            "reason": "rock_tests", "detail": "d", "origin": "manual", "status": "pending", "added_at": "2026-10-01"}
+    d = json.loads((ex / "ngmdb_1.json").read_text())
+    d["ingests"].append({"at": "2026-10-25T00:00:00+00:00", "packets": ["reread-01"],
+                         "reread": {"reason": "x", "queue_ids": [item["id"]], "pages": [83, 85]}})
+    (ex / "ngmdb_1.json").write_text(json.dumps(d))
+    old = {"items": [item]}
+    # no packet index: pages 84 and 86 are not known to be blank, so the item is still pending
+    assert reread.build_queue(ex, known=[], old=old, cache_dir=cache)["items"][0]["status"] == "pending"
+    pk = cache / "packets" / "ngmdb_1"
+    pk.mkdir(parents=True)
+    (pk / "index.json").write_text(json.dumps({"source_id": "ngmdb:1", "packets": [],
+                                               "skipped": {"blank": [84], "toc": [86]}}))
+    # a table-of-contents page is not blank: still pending
+    assert reread.build_queue(ex, known=[], old=old, cache_dir=cache)["items"][0]["status"] == "pending"
+    (pk / "index.json").write_text(json.dumps({"source_id": "ngmdb:1", "packets": [],
+                                               "skipped": {"blank": [84, 86], "toc": [85]}}))
+    got = reread.build_queue(ex, known=[], old=old, cache_dir=cache)["items"][0]
+    assert got["status"] == "done" and got["done_at"].startswith("2026-10-25")
+
+
+def test_blank_pages_left_out_of_a_reread_are_recorded_and_count_as_covered(env):
+    _read_both(env)
+    tp = env.cache / "text" / "ngmdb_5.json"
+    doc = json.loads(tp.read_text())
+    doc["pages"].append({"page": 6, "file": 0, "file_page": 6, "method": "pdf_text", "text": " 12 ", "raw": " 12 "})
+    tp.write_text(json.dumps(doc))
+    item = {"id": "q", "source_id": SID, "pages": [3, 5, 6], "reason": "logs", "detail": "d",
+            "status": "pending", "origin": "manual"}
+    built = reread.build(SID, pages=[3, 5, 6], reason="r", queue_ids=["q"], **env.rkw)
+    assert built["no_text"] == [5, 6] and built["blank"] == [6]
+    assert built["packets"][0]["pages"] == [3]
+    env.run(result([built["packets"][0]["packet"]], [], [AH1]), "rr")
+    rr = env.out()["ingests"][-1]["reread"]
+    assert rr["pages"] == [3] and rr["blank"] == [6]
+    # page 5 needs OCR (not blank): the item stays pending, even without the cache
+    no_cache = env.tmp / "no-cache"
+    assert reread.build_queue(env.kw["out_dir"], known=[], old={"items": [item]},
+                              cache_dir=no_cache)["items"][0]["status"] == "pending"
+    item2 = item | {"id": "q2", "pages": [3, 6]}
+    built2 = reread.build(SID, pages=[3, 6], reason="r", queue_ids=["q2"], **env.rkw)
+    env.run(result([built2["packets"][0]["packet"]], [], [AH1]), "rr2")
+    q = reread.build_queue(env.kw["out_dir"], known=[], old={"items": [item2]}, cache_dir=no_cache)
+    assert q["items"][0]["status"] == "done"
 
 
 def test_next_hands_out_pending_rereads(env, monkeypatch):

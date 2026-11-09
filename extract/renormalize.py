@@ -3,7 +3,7 @@
     python -m extract.renormalize                      # dry run over data/extracted: report what would change
     python -m extract.renormalize data/extracted/x.json --write
 
-Only `normalized`, `derived_coordinates` (with `coordinates_not_derived`, why an unlabelled
+Only `normalized` (also of the column parameters of compact water-test tables), `derived_coordinates` (with `coordinates_not_derived`, why an unlabelled
 State Plane location was left blank) and `navd88` (extract/elevations.py,
 with the configured datum grid when it has been downloaded) are recomputed, from each stored
 value's own `value` and `units`, with the same functions ingest uses
@@ -21,7 +21,7 @@ import json
 import sys
 from pathlib import Path
 
-from extract import elevations, ingest
+from extract import compact, elevations, ingest, labtests
 from model.units import Lexicon
 
 DERIVED = ("normalized", "derived_coordinates", "navd88", "coordinates_not_derived")
@@ -70,8 +70,8 @@ def renormalize_doc(doc: dict, lexicon: Lexicon | None, cfg: dict = ingest.CONFI
     sections = {k: out[k] for k in ingest.SECTIONS if k in out}
     elevations.attach_navd88(sections, doc.get("year"), grid, cfg["vertical_datum"],
                              cfg["confidence"]["inferred_factor"])
+    changes = _renormalize_tables(out, doc)
     before = dict(_walk({k: doc.get(k, []) for k in ingest.SECTIONS}, ""))
-    changes = []
     for path, entry in _walk({k: out.get(k, []) for k in ingest.SECTIONS}, ""):
         old = before.get(path, {})
         for k in DERIVED:
@@ -79,6 +79,26 @@ def renormalize_doc(doc: dict, lexicon: Lexicon | None, cfg: dict = ingest.CONFI
                 changes.append({"path": path, "key": k, "value": entry.get("value"),
                                 "old": old.get(k), "new": entry.get(k)})
     return out, changes
+
+
+def _renormalize_tables(out: dict, doc: dict) -> list[dict]:
+    """Recompute the normalized parameter of every column of out's compact water-test tables (in place)."""
+    changes = []
+    for i, t in enumerate(out.get(compact.SECTION) or []):
+        for j, col in enumerate(t.get("columns") or []):
+            p = col.get("parameter")
+            if not isinstance(p, dict):
+                continue
+            old = p.get("normalized")
+            new = labtests.water_parameter(p.get("value"))
+            if new:
+                p["normalized"] = new
+            else:
+                p.pop("normalized", None)
+            if old != new:
+                changes.append({"path": f"{compact.SECTION}[{i}].columns[{j}].parameter", "key": "normalized",
+                                "value": p.get("value"), "old": old, "new": new})
+    return changes
 
 
 def main(argv: list[str] | None = None) -> int:
