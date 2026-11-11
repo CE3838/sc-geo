@@ -169,3 +169,28 @@ test('sidebar folders are collapsible, keep layer rows inside and leave the pane
   button.click();
   assert.equal(folder.list.hidden, false);
 });
+
+test('a site located by well ID match cites the coordinate source by short citation, never by id', () => {
+  const sources = {
+    ...SOURCES,
+    'ngmdb:79': { citation: 'Poe, A., 2004, Well inventory of Dorchester County: USGS OFR 04-2.', year: 2004,
+      url: 'https://ngmdb.usgs.gov/Prodesc/proddesc_79.htm' },
+  };
+  const props = { ...PROPS, ls: 'ngmdb:79', p: 4, q: '33.0101 -80.1011', loc: '33.0101, -80.1011 (NAD 83)',
+    mt: { note: 'located by well ID match', id: 'county:DOR-120', m: 'inference', i: 1, c: 0.64,
+      test: { s: 'ngmdb:78', p: 1, q: 'DOR-120' },
+      coord: { s: 'ngmdb:79', p: 4, q: '33.0101 -80.1011', lc: null, l: 'DOR-0120', lp: 4, lq: 'Well DOR-0120' } } };
+  const node = describeSite(props, { sources, water: WATER });
+  const text = node.textContent;
+  assert.match(text, /located by well ID match/);
+  assert.match(text, /Poe, 2004/);
+  assert.doesNotMatch(text, ID_LIKE);
+  assert.doesNotMatch(text, /county:/);
+  for (const n of node.all(() => true)) assert.doesNotMatch(n.getAttribute('title') ?? '', ID_LIKE);
+  // the location's page links to the coordinate's source; the test pages to the site's own source
+  const loc = node.all((n) => n.tagName === 'DD')[0];
+  const locLinks = loc.all((n) => n.tagName === 'A');
+  assert.ok(locLinks.length >= 1 && locLinks.every((a) => a.getAttribute('href') === sources['ngmdb:79'].url));
+  const table = node.all((n) => n.tagName === 'TABLE')[0];
+  assert.ok(table.all((n) => n.tagName === 'A').every((a) => a.getAttribute('href') === SOURCES['ngmdb:78'].url));
+});
