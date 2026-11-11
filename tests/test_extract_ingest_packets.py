@@ -183,8 +183,32 @@ def test_packet_index_built_before_the_scope_is_refused(env):
         run(result(["packet-02"], [ASHLEY]), "p2")
 
 
-def test_missing_packet_index_needs_next_batch(env, tmp_path):
+def _no_downloads(monkeypatch):
+    import harvest.pdfs as hp
+    monkeypatch.setattr(hp, "process", lambda *a, **k: pytest.fail("downloaded"))
+    monkeypatch.setattr(hp, "HttpFetcher", lambda *a, **k: pytest.fail("downloaded"))
+
+
+def test_missing_packet_index_is_built_from_the_cached_text(env, monkeypatch):
+    """A fresh cache holds the page text but no packets yet: ingest builds the index (downloading nothing)."""
+    _no_downloads(monkeypatch)
+    run, out, kw = env
+    (kw["packets_dir"] / "ngmdb_5" / "index.json").unlink()
+    run(result(["packet-01"], [WANDO]), "p1")
+    index = json.loads((kw["packets_dir"] / "ngmdb_5" / "index.json").read_text())
+    assert index["packets"][0]["file"] == "packet-01.md" and "1" in index["blocks"]
+    assert _names(out()) == ["Wando Formation"]
+
+
+def test_missing_packet_index_that_cannot_be_built_names_next_batch(env, monkeypatch):
+    _no_downloads(monkeypatch)
     run, _, kw = env
     (kw["packets_dir"] / "ngmdb_5" / "index.json").unlink()
-    with pytest.raises(ingest.IngestError, match="next_batch"):
+    tp = kw["text_dir"] / "ngmdb_5.json"
+    doc = json.loads(tp.read_text())
+    for p in doc["pages"]:
+        p["text"] = p["raw"] = ""  # no readable page: no packets
+    tp.write_text(json.dumps(doc))
+    with pytest.raises(ingest.IngestError, match=r"python -m extract\.next_batch --id ngmdb:5"):
         run(result(["packet-01"], [WANDO]), "p1")
+    assert not (kw["packets_dir"] / "ngmdb_5" / "index.json").exists()

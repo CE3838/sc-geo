@@ -406,6 +406,17 @@ def _now() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
 
+def _build_packet_index(rec: dict, text_path: Path, packets_dir: Path, scopes: dict) -> None:
+    """Build a missing packet index from the cached page text (a fresh cache), as next_batch does; downloads nothing.
+
+    Only when the text and packets share one cache folder (<cache>/text, <cache>/packets)."""
+    cache_dir = packets_dir.parent
+    if Path(text_path).resolve() != (cache_dir / "text" / Path(text_path).name).resolve():
+        return
+    from extract import next_batch
+    next_batch.ensure_packets(rec, cache_dir, scopes=scopes)
+
+
 def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: Path = TEXT_DIR,
            out_dir: Path = OUT_DIR, review_dir: Path = REVIEW_DIR, catalog: dict | None = None,
            lexicon: Lexicon | None = None, done_dir: Path = DONE_DIR, cfg: dict = CONFIG,
@@ -432,8 +443,11 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
     doc = _load_json(text_path, "text")
     pages = {p["page"]: p for p in doc["pages"]}
     index_path = Path(packets_dir) / safe_id(sid) / "index.json"
+    scopes = scope.load() if scopes is None else scopes
+    if not index_path.exists() and result.get("packets"):
+        _build_packet_index(rec, text_path, Path(packets_dir), scopes)
     index = _load_json(index_path, "packet index") if index_path.exists() else None
-    rec_scope = scope.for_record(sid, doc, scope.load() if scopes is None else scopes)
+    rec_scope = scope.for_record(sid, doc, scopes)
     if rec_scope:
         allowed = set(rec_scope["pages"])
         outside = [f"{path} (page {val['page']})" for path, val in schema.iter_values(result)
@@ -451,7 +465,9 @@ def ingest(result_paths: list[Path], verify_path: Path | None = None, text_dir: 
         pages = {n: p for n, p in pages.items() if n in allowed}
     if result.get("packets"):
         if index is None or "blocks" not in index:
-            raise IngestError(f"no packet index for {sid} at {index_path}; run python -m extract.next_batch --id {sid}")
+            raise IngestError(f"no packet index for {sid} at {index_path}, and none could be built from the cached "
+                              f"text; run python -m extract.next_batch --id {sid} (it builds the packets, getting the "
+                              "text first if needed)")
         packet_blocks = {p["file"].removesuffix(".md"): p["blocks"] for p in index["packets"]}
         packet_blocks |= {n: p["blocks"] for n, p in packets.reread_index(index_path.parent).items()}
         unknown = [n for n in result["packets"] if n not in packet_blocks]
@@ -713,14 +729,16 @@ def _prune(node, drop):
 
 
 def _reread_info(result: dict, rereads: dict[str, dict]) -> dict | None:
-    """What a re-read result covers (extract/reread.py): its packets, pages, reason and re-read queue ids."""
+    """What a re-read result covers (extract/reread.py): its packets, pages, reason, re-read queue ids and the
+    chosen pages left out as blank."""
     names = [n for n in result.get("packets", []) if n in rereads]
     if not names:
         return None
     entries = [rereads[n] for n in names]
     return {"packets": names, "pages": sorted({pg for e in entries for pg in e["pages"]}),
             "reason": "; ".join(dict.fromkeys(e.get("reason") or "re-read" for e in entries)),
-            "queue_ids": list(dict.fromkeys(q for e in entries for q in e.get("queue_ids", [])))}
+            "queue_ids": list(dict.fromkeys(q for e in entries for q in e.get("queue_ids", []))),
+            **({"blank": blank} if (blank := sorted({pg for e in entries for pg in e.get("blank", [])})) else {})}
 
 
 def _history(prev: dict, replaced: list[dict], result: dict, reread: dict | None, pages: set[int]) -> dict:

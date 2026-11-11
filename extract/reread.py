@@ -26,7 +26,9 @@ The re-read queue (data/review/reread_queue.json) lists what needs a
 re-read: the "SUBSURFACE:" notes lines of data/extracted (documents with
 cross sections, contours or tops noted but no subsurface values stored),
 the known re-reads below, and items added with --add. An item is done once
-an ingest records its queue id on all its pages.
+an ingest records its queue id on all its pages; a blank page (listed in the
+packet index's `skipped.blank`, or left out of a re-read as blank and recorded
+by its ingest) never gets a packet and counts as covered.
 """
 
 from __future__ import annotations
@@ -39,7 +41,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Callable
 
-from extract import packets, pdftext, scope
+from extract import packets, pdftext, scope, triage
 
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG: dict = json.loads((ROOT / "config" / "extract.json").read_text())
@@ -167,8 +169,12 @@ def build(sid: str, pages: list[int] | None = None, packet_names: list[str] | No
     chosen = set(pages or [])
     if packet_names:
         index_path = pdir / "index.json"
+        if not index_path.exists():  # a fresh cache: build the packets from the cached text, as next_batch does
+            from extract import next_batch
+            next_batch.ensure_packets(rec, cache_dir, scopes=scope.load() if scopes is None else scopes)
         if not index_path.exists():
-            raise RereadError(f"no packet index for {sid}; give --pages instead")
+            raise RereadError(f"no packet index for {sid}; run python -m extract.next_batch --id {sid} "
+                              "or give --pages instead")
         by_name = {p["file"].removesuffix(".md"): p for p in json.loads(index_path.read_text())["packets"]}
         missing = [n for n in packet_names if n not in by_name]
         if missing:
@@ -191,6 +197,8 @@ def build(sid: str, pages: list[int] | None = None, packet_names: list[str] | No
         fn = _default_ocr(cache_dir) if ocr is True else ocr
         ocred = _ocr_pages(doc, text_path, sorted(chosen), fn, cache_dir)
     no_text = sorted(p["page"] for p in doc["pages"] if p["page"] in chosen and not pdftext.has_text(p.get("text", "")))
+    blank = sorted(p["page"] for p in doc["pages"] if p["page"] in no_text and triage.classify(
+        p.get("text", ""), p["page"], len(doc["pages"]), method=p.get("method", "pdf_text"))["kind"] == "blank")
     img, image_error = _render_images(sid, sorted(chosen), images, image_render, cache_dir, images_optional)
     if not img:
         chosen -= set(no_text)
@@ -222,7 +230,7 @@ def build(sid: str, pages: list[int] | None = None, packet_names: list[str] | No
             (rdir / f"{name}.md").write_text(p["text"])
             entry = {"file": f"{name}.md", "pages": p["pages"], "blocks": p["blocks"],
                      "estimated_tokens": p["estimated_tokens"], **request, "stored_before": stored,
-                     "built_at": _now()}
+                     **({"blank": blank} if blank and not img else {}), "built_at": _now()}
             index["packets"].append(entry)
             reuse.append(entry)
         index_path.write_text(json.dumps(index, indent=1))
@@ -231,6 +239,7 @@ def build(sid: str, pages: list[int] | None = None, packet_names: list[str] | No
             "result_path": str(cache_dir / "results" / f"{safe}.{p['file'].removesuffix('.md')}.json")}
            for p in reuse]
     return {"id": sid, "citation": rec.get("citation"), "reason": reason, "pages": want, "no_text": no_text,
+            "blank": [] if img else blank,
             "ocred": ocred, "queue_ids": list(queue_ids), "packets": out,
             "estimated_tokens": sum(p["estimated_tokens"] for p in out) + (img["estimated_tokens"] if img else 0),
             **({"images": img} if img else {}), **({"image_error": image_error} if image_error else {})}
@@ -283,9 +292,21 @@ def _has_subsurface(d: dict, pages: set[int]) -> bool:
     return any(v.get("page") in pages for _, v in _walk_values({k: d.get(k, []) for k in SUBSURFACE_SECTIONS}))
 
 
-def _status(item: dict, d: dict | None) -> dict:
-    """pending, or done (with done_at) once ingests carrying the item's queue id cover all its pages."""
-    covered, last = set(), None
+def blank_pages(sid: str, d: dict | None, cache_dir: Path = CACHE) -> set[int]:
+    """Pages of a document known to be blank: the packet index's skipped.blank (when cached) and the pages its
+    re-read ingests recorded as left out blank. They never get a packet, so they need no reading."""
+    out = {pg for i in (d or {}).get("ingests") or [] for pg in (i.get("reread") or {}).get("blank", [])}
+    try:
+        index = json.loads((Path(cache_dir) / "packets" / packets.safe_id(sid) / "index.json").read_text())
+    except (OSError, ValueError):
+        return out
+    return out | set((index.get("skipped") or {}).get("blank", []))
+
+
+def _status(item: dict, d: dict | None, blank: set[int] = frozenset()) -> dict:
+    """pending, or done (with done_at) once ingests carrying the item's queue id cover all its pages (blank
+    pages count as covered)."""
+    covered, last = set(blank), None
     for i in (d or {}).get("ingests") or []:
         rr = i.get("reread") or {}
         if item["id"] in rr.get("queue_ids", []):
@@ -296,8 +317,11 @@ def _status(item: dict, d: dict | None) -> dict:
     return {"status": "pending"}
 
 
-def build_queue(extracted_dir: Path = EXTRACTED, known: list[dict] | None = None, old: dict | None = None) -> dict:
-    """The re-read queue: SUBSURFACE notes lines, known re-reads and earlier manual items, with their status."""
+def build_queue(extracted_dir: Path = EXTRACTED, known: list[dict] | None = None, old: dict | None = None,
+                cache_dir: Path = CACHE) -> dict:
+    """The re-read queue: SUBSURFACE notes lines, known re-reads and earlier manual items, with their status.
+
+    cache_dir: where packet indexes say which pages are blank (see blank_pages)."""
     known = KNOWN if known is None else known
     extracted_dir = Path(extracted_dir)
     docs = {}
@@ -331,7 +355,8 @@ def build_queue(extracted_dir: Path = EXTRACTED, known: list[dict] | None = None
         item.setdefault("ocr", False)
         item.setdefault("images", wants_images(item))
         item["added_at"] = old_items.get(iid, {}).get("added_at") or _now()
-        out.append(item | _status(item, docs.get(item["source_id"])))
+        d = docs.get(item["source_id"])
+        out.append(item | _status(item, d, blank_pages(item["source_id"], d, cache_dir)))
     order = {"ROADMAP 1.9": 0, "manual": 1, "notes": 2}
     out.sort(key=lambda i: (i["status"] != "pending", order.get(i["origin"], 3), i["source_id"], i["pages"]))
     tally: dict[str, int] = {}

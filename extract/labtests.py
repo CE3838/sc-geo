@@ -14,6 +14,14 @@ TESTS = ("water_tests", "rock_tests")
 FIELDS = {"parameter", "test_type", "value", "qualifier"}
 
 # --- water-test parameters -------------------------------------------------------
+# A printed name is matched in three steps (water_parameter):
+#  1. exact: the whole name (lower case, without a bracketed symbol or units and without a trailing
+#     ", dissolved" / ", total" or leading "total" / "dissolved") is a known name or alias;
+#  2. organic compounds (ORGANIC_PARAMETERS: VOCs and the like) are tried before any ion, so
+#     "vinyl chloride", "methylene chloride" or "carbon tetrachloride" never become chloride;
+#  3. the patterns of the other parameters, whole words only. A name that looks like an organic
+#     compound (_ORGANIC_HINT: chloro-, bromo-, "ethyl chloride", "...disulfide") never matches an ion,
+#     a nutrient or a metal: it is left without a normalized name instead.
 # (normalized name, category, pattern). Ordered so that compound names come before their parts.
 # Chemical symbols match only as whole, case-sensitive tokens ("Ca", not "CaCO3" or "ca").
 _I = re.IGNORECASE
@@ -27,17 +35,60 @@ def _sym(symbol: str) -> re.Pattern:
     return re.compile(rf"(?<![A-Za-z0-9]){symbol}(?![A-Za-z0-9])")
 
 
-WATER_PARAMETERS: list[tuple[str, str, re.Pattern]] = [
+# Locants such as "1,1-" must stand alone: "1,1-dichloroethene" is not part of "1,1,1-...".
+_LOC = r"(?<![\w,-])"
+
+ORGANIC_PARAMETERS: list[tuple[str, str, re.Pattern]] = [
+    ("MTBE", "organic", _w(r"\bMTBE\b|methyl[- ]tert[- ]?butyl[- ]ether|tert[- ]?butyl[- ]methyl[- ]ether")),
+    ("vinyl chloride", "organic", _w(r"\bvinyl\s+chloride\b|\bchloroethene\b|\bchloroethylene\b")),
+    ("dichloromethane", "organic", _w(r"\bmethylene\s+chloride\b|\bdichloromethane\b")),
+    ("chloroform", "organic", _w(r"\bchloroform\b|\btrichloromethane\b")),
+    ("carbon tetrachloride", "organic", _w(r"\bcarbon\s+tetrachloride\b|\btetrachloromethane\b")),
+    ("chloromethane", "organic", _w(r"\bmethyl\s+chloride\b|(?<![a-z])chloromethane\b")),
+    ("bromomethane", "organic", _w(r"\bmethyl\s+bromide\b|(?<![a-z])bromomethane\b")),
+    ("chloroethane", "organic", _w(r"\bethyl\s+chloride\b|(?<![a-z])chloroethane\b")),
+    ("bromoform", "organic", _w(r"\bbromoform\b|\btribromomethane\b")),
+    ("bromodichloromethane", "organic", _w(r"\bbromodichloromethane\b|\bdichlorobromomethane\b")),
+    ("dibromochloromethane", "organic", _w(r"\bdibromochloromethane\b|\bchlorodibromomethane\b")),
+    ("tetrachloroethene", "organic", _w(r"\b(?:tetra|per)chloroeth(?:yl)?ene\b|\bPCE\b")),
+    ("trichloroethene", "organic", _w(r"\btrichloroeth(?:yl)?ene\b|\bTCE\b")),
+    ("cis-1,2-dichloroethene", "organic", _w(r"\bcis-1,2-dichloroeth(?:yl)?ene\b|\bcis-?DCE\b")),
+    ("trans-1,2-dichloroethene", "organic", _w(r"\btrans-1,2-dichloroeth(?:yl)?ene\b|\btrans-?DCE\b")),
+    ("1,1-dichloroethene", "organic", _w(_LOC + r"1,1-dichloroeth(?:yl)?ene\b|\bvinylidene\s+chloride\b")),
+    ("1,1,1-trichloroethane", "organic", _w(_LOC + r"1,1,1-trichloroethane\b|\bmethyl\s+chloroform\b")),
+    ("1,1,2-trichloroethane", "organic", _w(_LOC + r"1,1,2-trichloroethane\b")),
+    ("1,1-dichloroethane", "organic", _w(_LOC + r"1,1-dichloroethane\b")),
+    ("1,2-dichloroethane", "organic", _w(_LOC + r"1,2-dichloroethane\b|\bethylene\s+dichloride\b")),
+    ("chlorobenzene", "organic", _w(r"(?<![a-z])chlorobenzene\b")),
+    ("1,4-dioxane", "organic", _w(_LOC + r"1,4-dioxane\b")),
+    ("carbon disulfide", "organic", _w(r"\bcarbon\s+disulfide\b")),
+    ("benzene", "organic", _w(r"^\s*benzene\b")),
+    ("toluene", "organic", _w(r"\btoluene\b")),
+    ("ethylbenzene", "organic", _w(r"\bethylbenzene\b")),
+    ("xylenes", "organic", _w(r"\bxylenes?\b")),
+    ("naphthalene", "organic", _w(r"\bnaphthalene\b")),
+    ("ethylene dibromide", "organic", _w(r"\bethylene\s+dibromide\b|\bEDB\b")),
+    ("dibromochloropropane", "organic", _w(r"\bdibromochloropropane\b|\bDBCP\b")),
+]
+
+# A name that looks like an organic compound: never an ion, a nutrient or a metal.
+_ORGANIC_HINT = _w(r"chloro|bromo|fluoro|iodo|(?:di|tri|tetra|penta|hexa)(?:chloride|bromide|fluoride|iodide|sulfide)"
+                   r"|\b(?:(?:di)?methyl|methylene|(?:di)?ethyl|ethylene|vinyl|vinylidene|allyl|benzyl|benzal|"
+                   r"benzoyl|acetyl|(?:iso)?propyl|butyl|phenyl|cyanogen)\s*(?:chloride|bromide|fluoride|iodide|sulfide)")
+_ION_CATEGORIES = {"major_ion", "nutrient", "metal_trace"}
+
+_OTHER_PARAMETERS: list[tuple[str, str, re.Pattern]] = [
     # field measurements
     ("pH", "field", re.compile(r"(?<![A-Za-z])pH(?![A-Za-z])")),
     ("specific conductance", "field", _w(r"specific\s+conduct(?:ance|ivity)")),
+    ("recharge temperature", "dissolved_gas", _w(r"\brecharge\s+temperature\b")),
     ("temperature", "field", _w(r"\btemperature\b|\bwater\s+temp\b")),
     ("dissolved oxygen", "field", _w(r"dissolved\s+oxygen")),
     ("water level", "field", _w(r"depth\s+to\s+water|water\s+level")),
     ("turbidity", "field", _w(r"\bturbidity\b")),
     ("alkalinity", "field", _w(r"\balkalinity\b")),
     ("oxidation-reduction potential", "field", _w(r"oxidation[- ]reduction|\bredox\b|\bORP\b|\bEh\b")),
-    ("dissolved solids", "major_ion", _w(r"dissolved\s+solids|\bTDS\b")),
+    ("dissolved solids", "major_ion", _w(r"dissolved\s+solids|\bTDS\b|\bresidue\s+(?:at|on\s+evaporation)\b")),
     ("hardness", "major_ion", _w(r"\bhardness\b")),
     # major ions
     ("calcium", "major_ion", _w(r"\bcalcium\b")),
@@ -60,13 +111,13 @@ WATER_PARAMETERS: list[tuple[str, str, re.Pattern]] = [
     ("nitrate plus nitrite", "nutrient", _w(r"nitr[ai]te\s*(?:plus|\+|and)\s*nitr[ai]te")),
     ("nitrate", "nutrient", _w(r"\bnitrate\b")),
     ("nitrite", "nutrient", _w(r"\bnitrite\b")),
+    ("kjeldahl nitrogen", "nutrient", _w(r"\bkjeldahl\b|\bammoni(?:a|um)\s*(?:plus|\+|and)\s*organic\b")),
     ("ammonia", "nutrient", _w(r"\bammoni(?:a|um)\b")),
-    ("kjeldahl nitrogen", "nutrient", _w(r"\bkjeldahl\b")),
-    ("orthophosphate", "nutrient", _w(r"\bortho-?phosphate\b")),
+    ("orthophosphate", "nutrient", _w(r"\bphosphorus,?\s*ortho[- ]?phosphate\b|\bortho[- ]?phosphate\b")),
     ("phosphorus", "nutrient", _w(r"\bphosphorus\b")),
     ("total nitrogen", "nutrient", _w(r"\btotal\s+nitrogen\b")),
     # metals and trace elements
-    ("ferrous iron", "metal_trace", _w(r"\bferrous\s+iron\b|\bFe\s*\(?II\)?|\bFe2\+")),
+    ("ferrous iron", "metal_trace", _w(r"\bferrous\s+iron\b|\bFe\s*\(?II\)?|\bFe2\+|\biron\s*\(\s*II\s*\)")),
     ("iron", "metal_trace", _w(r"\biron\b")),
     ("iron", "metal_trace", _sym("Fe")),
     ("manganese", "metal_trace", _w(r"\bmanganese\b")),
@@ -85,24 +136,12 @@ WATER_PARAMETERS: list[tuple[str, str, re.Pattern]] = [
     ("uranium", "metal_trace", _w(r"\buranium\b")),
     ("selenium", "metal_trace", _w(r"\bselenium\b")),
     ("sulfide", "metal_trace", _w(r"\bsulfide\b")),
-    # organics
-    ("MTBE", "organic", _w(r"\bMTBE\b|methyl[- ]tert[- ]?butyl[- ]ether")),
-    ("benzene", "organic", _w(r"^\s*benzene\b")),
-    ("toluene", "organic", _w(r"\btoluene\b")),
-    ("ethylbenzene", "organic", _w(r"\bethylbenzene\b")),
-    ("xylenes", "organic", _w(r"\bxylenes?\b")),
-    ("naphthalene", "organic", _w(r"\bnaphthalene\b")),
-    ("trichloroethene", "organic", _w(r"\btrichloroeth(?:yl)?ene\b|\bTCE\b")),
-    ("tetrachloroethene", "organic", _w(r"\btetrachloroeth(?:yl)?ene\b|\bPCE\b")),
-    ("cis-1,2-dichloroethene", "organic", _w(r"\bcis-1,2-dichloroeth(?:yl)?ene\b|\bcis-?DCE\b")),
-    ("vinyl chloride", "organic", _w(r"\bvinyl\s+chloride\b")),
-    ("ethylene dibromide", "organic", _w(r"\bethylene\s+dibromide\b|\bEDB\b")),
-    ("dibromochloropropane", "organic", _w(r"\bdibromochloropropane\b|\bDBCP\b")),
+    # organic carbon (organic compounds are in ORGANIC_PARAMETERS)
     ("dissolved organic carbon", "organic", _w(r"dissolved\s+organic\s+carbon|\bDOC\b")),
     ("total organic carbon", "organic", _w(r"total\s+organic\s+carbon|\bTOC\b")),
     ("dissolved inorganic carbon", "major_ion", _w(r"dissolved\s+inorganic\s+carbon|\bDIC\b")),
     # pesticides
-    ("deethylatrazine", "pesticide", _w(r"\bdeethylatrazine\b|\bdesethylatrazine\b")),
+    ("deethylatrazine", "pesticide", _w(r"\bde-?s?ethyl[\s-]*atrazine\b")),
     ("atrazine", "pesticide", _w(r"(?<![a-z])atrazine\b")),
     ("alachlor", "pesticide", _w(r"(?<![a-z])alachlor\b")),
     ("metolachlor", "pesticide", _w(r"\bmetolachlor\b")),
@@ -110,6 +149,8 @@ WATER_PARAMETERS: list[tuple[str, str, re.Pattern]] = [
     ("prometon", "pesticide", _w(r"\bprometon\b")),
     ("cyanazine", "pesticide", _w(r"\bcyanazine\b")),
     ("metribuzin", "pesticide", _w(r"\bmetribuzin\b")),
+    ("aldicarb sulfone", "pesticide", _w(r"\baldicarb\s*sulfone\b")),
+    ("aldicarb sulfoxide", "pesticide", _w(r"\baldicarb\s*sulfoxide\b")),
     ("aldicarb", "pesticide", _w(r"\baldicarb\b")),
     ("carbaryl", "pesticide", _w(r"\bcarbaryl\b")),
     ("2,4-D", "pesticide", _w(r"(?<![\w,])2,4-D(?![A-Za-z])")),
@@ -131,6 +172,8 @@ WATER_PARAMETERS: list[tuple[str, str, re.Pattern]] = [
     ("methane", "dissolved_gas", _w(r"\bmethane\b")),
     ("carbon dioxide", "dissolved_gas", _w(r"\bcarbon\s+dioxide\b|\bCO2\b")),
     ("argon", "dissolved_gas", _w(r"\bargon\b")),
+    ("ethane", "dissolved_gas", _w(r"(?<![\w,-])ethane\b")),
+    ("ethene", "dissolved_gas", _w(r"(?<![\w,-])ethene\b")),
     ("nitrogen gas", "dissolved_gas", _w(r"\bnitrogen\s+gas\b|\bN2\b")),
     # hydraulic tests
     ("transmissivity", "hydraulic", _w(r"\btransmissivity\b")),
@@ -162,12 +205,57 @@ def _classify(text: str, table: list[tuple[str, str, re.Pattern]]) -> tuple[str,
     return found[0] if len(names) == 1 else None
 
 
+WATER_PARAMETERS: list[tuple[str, str, re.Pattern]] = ORGANIC_PARAMETERS + _OTHER_PARAMETERS
+_NON_ION_PARAMETERS = ORGANIC_PARAMETERS + [e for e in _OTHER_PARAMETERS if e[1] not in _ION_CATEGORIES]
+
+# Whole names (lower case) and aliases, matched exactly before any pattern.
+_EXACT: dict[str, tuple[str, str]] = {}
+for _n, _c, _ in WATER_PARAMETERS:
+    _EXACT.setdefault(_n.lower(), (_n, _c))
+_EXACT.update({
+    "tds": ("dissolved solids", "major_ion"), "total dissolved solids": ("dissolved solids", "major_ion"),
+    "conductivity": ("specific conductance", "field"), "ph": ("pH", "field"),
+    "methylene chloride": ("dichloromethane", "organic"), "methyl chloride": ("chloromethane", "organic"),
+    "ethyl chloride": ("chloroethane", "organic"), "methyl bromide": ("bromomethane", "organic"),
+    "trichloroethylene": ("trichloroethene", "organic"), "tetrachloroethylene": ("tetrachloroethene", "organic"),
+    "perchloroethylene": ("tetrachloroethene", "organic"), "1,1-dichloroethylene": ("1,1-dichloroethene", "organic"),
+    "cis-1,2-dichloroethylene": ("cis-1,2-dichloroethene", "organic"),
+    "trans-1,2-dichloroethylene": ("trans-1,2-dichloroethene", "organic"),
+    "xylene": ("xylenes", "organic"), "ammonium": ("ammonia", "nutrient"),
+})
+# A short bracket (a symbol or units: "(Br-)", "[Fe(II)]", "(mg/L as Cl)"); a long one says what was measured.
+_BRACKETS = re.compile(r"\s*[(\[](?:[^()\[\]%]|\([^()%]*\)){1,24}[)\]]")
+_TRAILING = re.compile(r",\s*(?:dissolved|total|filtered|unfiltered|recoverable|field|lab(?:oratory)?)\s*$")
+_VALENCE = re.compile(r"[a-z]\s*\((?:i{1,3}|iv|vi)\)")
+_LEADING = re.compile(r"^(?:total|dissolved)\s+")
+
+
+def _exact(text: str) -> tuple[str, str] | None:
+    """(name, category) when the whole printed name, cleaned of brackets and qualifiers, is a known name."""
+    s = re.sub(r"\s+", " ", text).strip().lower()
+    tries = [s]
+    if _VALENCE.search(s):  # "Iron(II)" is not iron: the patterns decide
+        return _EXACT.get(s)
+    s = _BRACKETS.sub("", s).strip()
+    tries.append(s)
+    while _TRAILING.search(s):
+        s = _TRAILING.sub("", s).strip()
+        tries.append(s)
+    tries.append(_LEADING.sub("", s))
+    return next((_EXACT[t] for t in tries if t in _EXACT), None)
+
+
 def water_parameter(text) -> dict | None:
-    """{"name", "category", "inferred": True} for a printed parameter name, or None when unsure."""
+    """{"name", "category", "inferred": True} for a printed parameter name, or None when unsure.
+
+    Exact whole names first, then organic compounds, then the other patterns (see WATER_PARAMETERS);
+    a name that looks organic never becomes an ion, a nutrient or a metal."""
     s = str(text or "")
     if len(s.strip()) < 2 or s.strip().upper() == "DO":
         return None
-    hit = _classify(s, WATER_PARAMETERS)
+    hit = _exact(s)
+    if hit is None:
+        hit = _classify(s, _NON_ION_PARAMETERS if _ORGANIC_HINT.search(s) else WATER_PARAMETERS)
     return {"name": hit[0], "category": hit[1], "inferred": True} if hit else None
 
 
