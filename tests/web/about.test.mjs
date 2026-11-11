@@ -1,10 +1,11 @@
 // The About page: linked from the header, static, and in step with web/card.js
-// and web/merged.js (tests/test_about_page.py checks the Python side).
+// web/merged.js and web/usgs-water.js (tests/test_about_page.py checks the Python side).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { confidenceLevel, confidenceWhy } from '../../web/card.js';
 import { CONFIDENCE_STOPS } from '../../web/merged.js';
+import { createWaterClient } from '../../web/usgs-water.js';
 
 const read = (name) => readFileSync(new URL(`../../web/${name}`, import.meta.url), 'utf8');
 const index = read('index.html');
@@ -48,7 +49,7 @@ test('the About page is static: no scripts, no requests beyond its own styleshee
 test('every section in the table of contents exists', () => {
   const toc = [...about.matchAll(/<nav class="about-toc"[\s\S]*?<\/nav>/g)][0][0];
   const ids = [...toc.matchAll(/href="#([^"]+)"/g)].map((m) => m[1]);
-  assert.deepEqual(ids, ['map', 'confidence', 'inferred', 'documents', 'surfaces', 'sources']);
+  assert.deepEqual(ids, ['map', 'units', 'confidence', 'inferred', 'documents', 'surfaces', 'hydro', 'sources']);
   for (const id of ids) assert.match(about, new RegExp(`<section id="${id}">`));
 });
 
@@ -82,4 +83,45 @@ test('the card why rows use the factors the page states', () => {
     s['scale.24000'], `× ${s['identity.certain']}`, `× ${s['ex1.factor_card']}`, `+ ${s['geolex.bonus']}`, s['ex1.card'],
   ]);
   assert.match(ex[2].label, new RegExp(`${s['ex1.agree_pct']} agree`));
+});
+
+test('the card rows the page names are the ones card.js shows', () => {
+  const card = read('card.js');
+  const units = /<section id="units">[\s\S]*?<\/section>/.exec(about)[0];
+  for (const label of ['As mapped', 'Correlated as']) {
+    assert.match(card, new RegExp(`row\\('${label}'`));
+    assert.match(units, new RegExp(label));
+  }
+});
+
+test('the water stations limits on the page are the ones usgs-water.js uses', async () => {
+  const s = synced(about);
+  const maxArea = Number(s['water.max_area'].replace(/[^0-9.]/g, ''));
+  const ttlMin = Number(s['water.ttl'].replace(/[^0-9.]/g, ''));
+  assert.match(s['water.ttl'], /minutes$/);
+  let now = 0;
+  const calls = [];
+  const fetch = async (url) => { calls.push(url); return { ok: true, json: async () => ({ features: [] }) }; };
+  const client = createWaterClient({ fetch, now: () => now });
+  const latest = () => calls.filter((u) => u.includes('latest-continuous')).length;
+  // A view of exactly maxArea square degrees loads; one degree taller does not.
+  assert.equal((await client.loadArea([-90, 30, -90 + maxArea / 10, 40])).status, 'loaded');
+  assert.equal(latest(), 1);
+  assert.equal((await client.loadArea([-90, 30, -90 + maxArea / 10, 40.5])).status, 'too-large');
+  assert.equal(latest(), 1);
+  // The same area is served from the cache until ttl minutes have passed.
+  now = ttlMin * 60e3 - 1;
+  assert.equal((await client.loadArea([-89, 31, -88, 32])).status, 'cached');
+  now = ttlMin * 60e3;
+  assert.equal((await client.loadArea([-89, 31, -88, 32])).status, 'loaded');
+  assert.equal(latest(), 2);
+});
+
+test('the Hydro section names the layers as the Layers panel does', () => {
+  const hydro = /<section id="hydro">[\s\S]*?<\/section>/.exec(about)[0];
+  const ui = read('hydro-ui.js') + read('water-ui.js') + read('hydro.js');
+  for (const label of ['Known Wells (Documents)', 'Water Tests', 'Water Monitoring (USGS)', 'Hydro']) {
+    assert.ok(ui.includes(`'${label}'`), label);
+    assert.ok(hydro.includes(label), label);
+  }
 });
