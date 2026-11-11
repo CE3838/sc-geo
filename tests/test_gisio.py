@@ -205,3 +205,36 @@ def test_many_point_ring_and_lcc_inverse_are_exact():
         lng, lat = to_ll(x, y)
         e, n = gisio.lcc_forward(lng, lat, -81.0, 31 + 50 / 60, 32.5, 34 + 50 / 60, 609600.0, 0.0)
         assert e == pytest.approx(x * 0.3048, abs=1e-6) and n == pytest.approx(y * 0.3048, abs=1e-6)
+
+
+def _zip_with_csv(text: str) -> zipfile.ZipFile:
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w") as zf:
+        zf.writestr("pkg/DescriptionOfMapUnits.csv", text)
+    buf.seek(0)
+    return zipfile.ZipFile(buf)
+
+
+def test_zip_csv_unescapes_doubled_quotes_in_unquoted_fields():
+    # Some GeMS CSV exports double the quotes inside a field without wrapping it in quotes.
+    text = ('MapUnit,Label,AreaFillRGB,GeoMaterial,Notes\r\n'
+            'af,,"153,179,153",""Made"" or human-engineered land,High\r\n'
+            'Qx,,"1,2,3","Coastal zone sediment, mostly fine-grained","a ""quoted"" note, with comma"\r\n'
+            'Qy,,,"""Made"" or human-engineered land",\r\n'
+            'Qz,,"",Water or ice,""\r\n')
+    rows = gisio.zip_csv(_zip_with_csv(text), "DescriptionOfMapUnits")
+    assert [r["GeoMaterial"] for r in rows] == [
+        '"Made" or human-engineered land',
+        "Coastal zone sediment, mostly fine-grained",
+        '"Made" or human-engineered land',
+        "Water or ice",
+    ]
+    assert rows[0]["AreaFillRGB"] == "153,179,153" and rows[0]["Notes"] == "High"
+    assert rows[1]["Notes"] == 'a "quoted" note, with comma'
+    assert rows[3]["AreaFillRGB"] == "" and rows[3]["Notes"] == ""
+
+
+def test_zip_csv_keeps_doubled_quotes_inside_quoted_fields():
+    text = 'MapUnit,Description\r\nQa,"Sand,""Made"" land and ""fill"""\r\n'
+    rows = gisio.zip_csv(_zip_with_csv(text), "DescriptionOfMapUnits")
+    assert rows[0]["Description"] == 'Sand,"Made" land and "fill"'

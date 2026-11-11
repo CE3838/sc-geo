@@ -421,4 +421,48 @@ def zip_csv(zf: zipfile.ZipFile, name: str) -> list[dict]:
     if not hits:
         return []
     text = zf.read(hits[0]).decode("utf-8-sig", "replace")
-    return list(csv.DictReader(io.StringIO(text)))
+    return list(csv.DictReader(io.StringIO(repair_csv(text))))
+
+
+# An unquoted field that starts with doubled quotes, e.g. `""Made"" or human-engineered land`.
+_LOOSE_QUOTES = re.compile(r'(?:^|[,\r\n])""[^",\r\n]')
+
+
+def repair_csv(text: str) -> str:
+    """Quote fields some GeMS CSV exports leave unquoted although they hold doubled quotes.
+
+    Such an export writes `""Made"" or human-engineered land` (quotes doubled, field not
+    wrapped in quotes); a CSV reader then drops the opening quote and keeps `Made""`.
+    In valid CSV a field cannot start with `""` followed by more text, so any such field
+    is rewritten as a properly quoted one. Fields inside quotes are left as they are.
+    """
+    if not _LOOSE_QUOTES.search(text):
+        return text
+    out, i, n = [], 0, len(text)
+    at_start, in_quotes = True, False
+    while i < n:
+        c = text[i]
+        if in_quotes:
+            if c == '"':
+                if text.startswith('""', i):
+                    out.append('""')
+                    i += 2
+                    continue
+                in_quotes = False
+            out.append(c)
+            i += 1
+            continue
+        if at_start and text.startswith('""', i) and i + 2 < n and text[i + 2] not in '",\r\n':
+            j = i
+            while j < n and text[j] not in ",\r\n":
+                j += 1
+            raw = text[i:j].replace('""', '"')
+            out.append('"' + raw.replace('"', '""') + '"')
+            i, at_start = j, False
+            continue
+        if at_start and c == '"':
+            in_quotes = True
+        out.append(c)
+        at_start = c in ",\r\n"
+        i += 1
+    return "".join(out)
