@@ -1,0 +1,1416 @@
+{
+ "source_id": "ngmdb:42969",
+ "title": "Geology of the Old Pickens quadrangle, Oconee and Pickens Counties, South Carolina [map and text]",
+ "citation": "Griffin, V.S., Jr., 1973, Geology of the Old Pickens quadrangle, Oconee and Pickens Counties, South Carolina: South Carolina Geological Survey Map Series MS-18, map scale 1:24,000.",
+ "year": 1973,
+ "scale": 24000,
+ "publisher": "South Carolina Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-11-07T23:57:19+00:00",
+ "updated_at": "2026-11-07T23:57:19+00:00",
+ "reader": "Claude, Claude Code session 2026-11-09",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1",
+  "2",
+  "3",
+  "4"
+ ],
+ "blocks_total": 4,
+ "complete": true,
+ "notes": "Four OCR'd plates (geologic map, cross sections, tectonic map, isograds). Explanation lists units by name only, no stratigraphic order, no descriptions or ages; grouped as Non-migmatitic belt, Walhalla Nappe and Six Mile Nappe. Map symbols, section end labels and section scales read from the Plate 2 image. The sections are drawn obliquely; contacts were not digitized. Strike/dip and fold symbols carry numbers only; isograds and fold axes drawn on Plates 3-4 not recorded. No drill holes on the map face; no references. SUBSURFACE: section contacts and folds drawn but not digitized.",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/img1/42000_42999/42969_1",
+   "via": "ngmdb_image",
+   "sha256": "5e77a680db314631dca427b3b45ce59765e999a37328d037b840d9414f8e1ca6",
+   "pages": 1,
+   "first_page": 1
+  },
+  {
+   "url": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2",
+   "via": "ngmdb_image",
+   "sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e",
+   "pages": 1,
+   "first_page": 2
+  },
+  {
+   "url": "https://ngmdb.usgs.gov/img1/42000_42999/42969_3",
+   "via": "ngmdb_image",
+   "sha256": "8a694262d3f91d2e3762ad41b3446e3acec03cae03949082ebdfe76a995ac684",
+   "pages": 1,
+   "first_page": 3
+  },
+  {
+   "url": "https://ngmdb.usgs.gov/img1/42000_42999/42969_4",
+   "via": "ngmdb_image",
+   "sha256": "ae1be66acfe60024fbaa83538d8db63a24f74bf111e1659a4ec9a7c7bb5e8816",
+   "pages": 1,
+   "first_page": 4
+  }
+ ],
+ "summary": {
+  "stored": 47,
+  "quote_match": {
+   "exact": 21,
+   "image": 26
+  },
+  "verification": {
+   "agree": 29
+  },
+  "inferred": 12
+ },
+ "ingests": [
+  {
+   "at": "2026-11-07T23:57:19+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, Claude Code session 2026-11-09",
+   "values": 47,
+   "stored": 47,
+   "exact": 21,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 29,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 26,
+   "image_not_verified": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [
+  {
+   "map_symbol": {
+    "value": "hn",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2#page=1&viewrect=1547.11,808.66,56.7,27",
+    "quote": "hn",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-overview-53.333dpi",
+     "box": [
+      1146,
+      599,
+      1188,
+      619
+     ],
+     "dpi": 53.333,
+     "page_px_box": [
+      1146,
+      599,
+      1188,
+      619
+     ],
+     "pt_box": [
+      1547.11,
+      808.66,
+      1603.81,
+      835.66
+     ],
+     "pdf_sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e"
+    },
+    "note": "symbol read from the legend box on the Plate 2 image"
+   },
+   "name": {
+    "value": "Henderson Gneiss",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2",
+    "quote": "HENDERSON GNEISS",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Henderson",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "group": {
+    "value": "Non-migmatitic belt",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.684,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2",
+    "quote": "NON-MIGMATITIC BELT*",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "legend heading; no stratigraphic order implied"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "fam",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2#page=1&viewrect=1547.11,841.06,56.7,27",
+    "quote": "fam",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-overview-53.333dpi",
+     "box": [
+      1146,
+      623,
+      1188,
+      643
+     ],
+     "dpi": 53.333,
+     "page_px_box": [
+      1146,
+      623,
+      1188,
+      643
+     ],
+     "pt_box": [
+      1547.11,
+      841.06,
+      1603.81,
+      868.06
+     ],
+     "pdf_sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e"
+    },
+    "note": "symbol read from the legend box on the Plate 2 image"
+   },
+   "name": {
+    "value": "Amphibolite",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2",
+    "quote": "AMPHIBOLITE",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "group": {
+    "value": "Non-migmatitic belt",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2",
+    "quote": "NON-MIGMATITIC BELT*",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "legend heading; no stratigraphic order implied"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "bms",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2#page=1&viewrect=1547.11,873.46,56.7,27",
+    "quote": "bms",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-overview-53.333dpi",
+     "box": [
+      1146,
+      647,
+      1188,
+      667
+     ],
+     "dpi": 53.333,
+     "page_px_box": [
+      1146,
+      647,
+      1188,
+      667
+     ],
+     "pt_box": [
+      1547.11,
+      873.46,
+      1603.81,
+      900.46
+     ],
+     "pdf_sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e"
+    },
+    "note": "symbol read from the legend box on the Plate 2 image"
+   },
+   "name": {
+    "value": "Button Mica Schist",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2",
+    "quote": "BUTTON MICA SCHIST",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "button mica",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "group": {
+    "value": "Non-migmatitic belt",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2",
+    "quote": "NON-MIGMATITIC BELT*",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "legend heading; no stratigraphic order implied"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "fbgn",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2#page=1&viewrect=1547.11,936.91,56.7,27",
+    "quote": "fbgn",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-overview-53.333dpi",
+     "box": [
+      1146,
+      694,
+      1188,
+      714
+     ],
+     "dpi": 53.333,
+     "page_px_box": [
+      1146,
+      694,
+      1188,
+      714
+     ],
+     "pt_box": [
+      1547.11,
+      936.91,
+      1603.81,
+      963.91
+     ],
+     "pdf_sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e"
+    },
+    "text_match": true,
+    "note": "symbol read from the legend box on the Plate 2 image"
+   },
+   "name": {
+    "value": "Fine grained biotite gneiss",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2",
+    "quote": "fbgn FINE GRAINED BIOTITE GNEISS",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "grained biotite",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "group": {
+    "value": "Walhalla Nappe",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2",
+    "quote": "WALHALLA NAPPE*",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "legend heading"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "mfg",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2#page=1&viewrect=1547.11,969.31,56.7,27",
+    "quote": "mfg",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-overview-53.333dpi",
+     "box": [
+      1146,
+      718,
+      1188,
+      738
+     ],
+     "dpi": 53.333,
+     "page_px_box": [
+      1146,
+      718,
+      1188,
+      738
+     ],
+     "pt_box": [
+      1547.11,
+      969.31,
+      1603.81,
+      996.31
+     ],
+     "pdf_sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e"
+    },
+    "note": "symbol read from the legend box on the Plate 2 image"
+   },
+   "name": {
+    "value": "Micaceous feldspathic quartzite",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2",
+    "quote": "MICACEOUS FEDLSPATHIC QUARTZITE",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "'FEDLSPATHIC' as printed; symbol printed 'mfg' on this sheet",
+    "normalized": {
+     "canonical": "micaceous feldspathic",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "group": {
+    "value": "Walhalla Nappe",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2",
+    "quote": "WALHALLA NAPPE*",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "legend heading"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "hgn",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2#page=1&viewrect=1547.11,1001.71,56.7,27",
+    "quote": "hgn",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-overview-53.333dpi",
+     "box": [
+      1146,
+      742,
+      1188,
+      762
+     ],
+     "dpi": 53.333,
+     "page_px_box": [
+      1146,
+      742,
+      1188,
+      762
+     ],
+     "pt_box": [
+      1547.11,
+      1001.71,
+      1603.81,
+      1028.71
+     ],
+     "pdf_sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e"
+    },
+    "note": "symbol read from the legend box on the Plate 2 image"
+   },
+   "name": {
+    "value": "Amphibolite and amphibole gneiss",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2",
+    "quote": "AMPHIBOLITE AND AMPHIBOLE GNEISS",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "amphibolite and amphibole",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "group": {
+    "value": "Walhalla Nappe",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2",
+    "quote": "WALHALLA NAPPE*",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "legend heading"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "ggn",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2#page=1&viewrect=1547.11,1032.76,56.7,27",
+    "quote": "ggn",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-overview-53.333dpi",
+     "box": [
+      1146,
+      765,
+      1188,
+      785
+     ],
+     "dpi": 53.333,
+     "page_px_box": [
+      1146,
+      765,
+      1188,
+      785
+     ],
+     "pt_box": [
+      1547.11,
+      1032.76,
+      1603.81,
+      1059.76
+     ],
+     "pdf_sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e"
+    },
+    "note": "symbol read from the legend box on the Plate 2 image"
+   },
+   "name": {
+    "value": "Granitoid gneiss",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2",
+    "quote": "GRANITOID GNEISS",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "granitoid",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "group": {
+    "value": "Walhalla Nappe",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2",
+    "quote": "WALHALLA NAPPE*",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "legend heading"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "cm",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2#page=1&viewrect=1547.11,1065.16,56.7,27",
+    "quote": "cm",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-overview-53.333dpi",
+     "box": [
+      1146,
+      789,
+      1188,
+      809
+     ],
+     "dpi": 53.333,
+     "page_px_box": [
+      1146,
+      789,
+      1188,
+      809
+     ],
+     "pt_box": [
+      1547.11,
+      1065.16,
+      1603.81,
+      1092.16
+     ],
+     "pdf_sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e"
+    },
+    "note": "symbol read from the legend box on the Plate 2 image"
+   },
+   "name": {
+    "value": "Chlorite-bearing rocks",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2",
+    "quote": "CHLORITE-BEARING ROCKS",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "group": {
+    "value": "Walhalla Nappe",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2",
+    "quote": "WALHALLA NAPPE*",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "legend heading"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "bgn",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2#page=1&viewrect=1547.11,1129.96,56.7,27",
+    "quote": "bgn",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-overview-53.333dpi",
+     "box": [
+      1146,
+      837,
+      1188,
+      857
+     ],
+     "dpi": 53.333,
+     "page_px_box": [
+      1146,
+      837,
+      1188,
+      857
+     ],
+     "pt_box": [
+      1547.11,
+      1129.96,
+      1603.81,
+      1156.96
+     ],
+     "pdf_sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e"
+    },
+    "text_match": true,
+    "note": "symbol read from the legend box on the Plate 2 image"
+   },
+   "name": {
+    "value": "Biotite gneiss",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2",
+    "quote": "bgn | BIOTITE GNEISS",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "group": {
+    "value": "Six Mile Nappe",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2",
+    "quote": "SIX MILE NAPPE*",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "legend heading"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "bsh",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2#page=1&viewrect=1547.11,1161.01,56.7,27",
+    "quote": "bsh",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-overview-53.333dpi",
+     "box": [
+      1146,
+      860,
+      1188,
+      880
+     ],
+     "dpi": 53.333,
+     "page_px_box": [
+      1146,
+      860,
+      1188,
+      880
+     ],
+     "pt_box": [
+      1547.11,
+      1161.01,
+      1603.81,
+      1188.01
+     ],
+     "pdf_sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e"
+    },
+    "text_match": true,
+    "note": "symbol read from the legend box on the Plate 2 image"
+   },
+   "name": {
+    "value": "Biotite schist",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2",
+    "quote": "bsh BIOTITE SCHIST",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "group": {
+    "value": "Six Mile Nappe",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2",
+    "quote": "SIX MILE NAPPE*",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "legend heading"
+   }
+  }
+ ],
+ "observations": [],
+ "structures": [
+  {
+   "kind": "fault",
+   "fault_type": {
+    "value": "reverse",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2",
+    "quote": "SS REVERSE FAULT",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "reverse faults drawn on sections A-A' and B-B'"
+   },
+   "description": {
+    "value": "reverse fault drawn at the northwest end of section B-B' near Flat Shoals Creek",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2#page=1&viewrect=344.25,256.5,108,270",
+    "quote": "REVERSE FAULT",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-overview-53.333dpi",
+     "box": [
+      255,
+      190,
+      335,
+      390
+     ],
+     "dpi": 53.333,
+     "page_px_box": [
+      255,
+      190,
+      335,
+      390
+     ],
+     "pt_box": [
+      344.25,
+      256.5,
+      452.25,
+      526.5
+     ],
+     "pdf_sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e"
+    },
+    "text_match": true
+   }
+  }
+ ],
+ "groundwater": [],
+ "references": [],
+ "surfaces": [],
+ "contours": [],
+ "sections": [
+  {
+   "name": {
+    "value": "A-A'",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2#page=1&viewrect=918.01,60.75,29.7,33.75",
+    "quote": "A",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-overview-53.333dpi",
+     "box": [
+      680,
+      45,
+      702,
+      70
+     ],
+     "dpi": 53.333,
+     "page_px_box": [
+      680,
+      45,
+      702,
+      70
+     ],
+     "pt_box": [
+      918.01,
+      60.75,
+      947.71,
+      94.5
+     ],
+     "pdf_sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e"
+    },
+    "note": "section end labels"
+   },
+   "start": {
+    "label": {
+     "value": "A",
+     "source_id": "ngmdb:42969",
+     "page": 2,
+     "extraction_method": "llm-image",
+     "confidence": 0.6,
+     "inferred": false,
+     "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2#page=1&viewrect=918.01,60.75,29.7,33.75",
+     "quote": "A",
+     "quote_match": "image",
+     "text_method": "image",
+     "verification": "agree",
+     "image": {
+      "tile": "p2-overview-53.333dpi",
+      "box": [
+       680,
+       45,
+       702,
+       70
+      ],
+      "dpi": 53.333,
+      "page_px_box": [
+       680,
+       45,
+       702,
+       70
+      ],
+      "pt_box": [
+       918.01,
+       60.75,
+       947.71,
+       94.5
+      ],
+      "pdf_sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e"
+     }
+    }
+   },
+   "end": {
+    "label": {
+     "value": "A'",
+     "source_id": "ngmdb:42969",
+     "page": 2,
+     "extraction_method": "llm-image",
+     "confidence": 0.6,
+     "inferred": false,
+     "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2#page=1&viewrect=1617.31,286.2,32.4,35.1",
+     "quote": "A'",
+     "quote_match": "image",
+     "text_method": "image",
+     "verification": "agree",
+     "image": {
+      "tile": "p2-overview-53.333dpi",
+      "box": [
+       1198,
+       212,
+       1222,
+       238
+      ],
+      "dpi": 53.333,
+      "page_px_box": [
+       1198,
+       212,
+       1222,
+       238
+      ],
+      "pt_box": [
+       1617.31,
+       286.2,
+       1649.71,
+       321.3
+      ],
+      "pdf_sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e"
+     }
+    }
+   },
+   "datum": {
+    "value": "Sea Level",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2#page=1&viewrect=843.76,145.8,43.2,21.6",
+    "quote": "Sea Level",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-overview-53.333dpi",
+     "box": [
+      625,
+      108,
+      657,
+      124
+     ],
+     "dpi": 53.333,
+     "page_px_box": [
+      625,
+      108,
+      657,
+      124
+     ],
+     "pt_box": [
+      843.76,
+      145.8,
+      886.96,
+      167.4
+     ],
+     "pdf_sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e"
+    },
+    "note": "elevation scale labelled about Sea Level, -1000' to about 1500'",
+    "normalized": "MSL"
+   },
+   "elevation_units": {
+    "value": "feet",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2#page=1&viewrect=872.11,133.65,24.3,16.2",
+    "quote": "500'",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-overview-53.333dpi",
+     "box": [
+      646,
+      99,
+      664,
+      111
+     ],
+     "dpi": 53.333,
+     "page_px_box": [
+      646,
+      99,
+      664,
+      111
+     ],
+     "pt_box": [
+      872.11,
+      133.65,
+      896.41,
+      149.85
+     ],
+     "pdf_sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e"
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "B-B'",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2#page=1&viewrect=247.05,62.1,32.4,35.1",
+    "quote": "B",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-overview-53.333dpi",
+     "box": [
+      183,
+      46,
+      207,
+      72
+     ],
+     "dpi": 53.333,
+     "page_px_box": [
+      183,
+      46,
+      207,
+      72
+     ],
+     "pt_box": [
+      247.05,
+      62.1,
+      279.45,
+      97.2
+     ],
+     "pdf_sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e"
+    },
+    "note": "section end labels"
+   },
+   "start": {
+    "label": {
+     "value": "B",
+     "source_id": "ngmdb:42969",
+     "page": 2,
+     "extraction_method": "llm-image",
+     "confidence": 0.6,
+     "inferred": false,
+     "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2#page=1&viewrect=247.05,62.1,32.4,35.1",
+     "quote": "B",
+     "quote_match": "image",
+     "text_method": "image",
+     "verification": "agree",
+     "image": {
+      "tile": "p2-overview-53.333dpi",
+      "box": [
+       183,
+       46,
+       207,
+       72
+      ],
+      "dpi": 53.333,
+      "page_px_box": [
+       183,
+       46,
+       207,
+       72
+      ],
+      "pt_box": [
+       247.05,
+       62.1,
+       279.45,
+       97.2
+      ],
+      "pdf_sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e"
+     }
+    }
+   },
+   "end": {
+    "label": {
+     "value": "B'",
+     "source_id": "ngmdb:42969",
+     "page": 2,
+     "extraction_method": "llm-image",
+     "confidence": 0.6,
+     "inferred": false,
+     "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2#page=1&viewrect=1657.81,1752.31,35.1,35.1",
+     "quote": "B'",
+     "quote_match": "image",
+     "text_method": "image",
+     "verification": "agree",
+     "image": {
+      "tile": "p2-overview-53.333dpi",
+      "box": [
+       1228,
+       1298,
+       1254,
+       1324
+      ],
+      "dpi": 53.333,
+      "page_px_box": [
+       1228,
+       1298,
+       1254,
+       1324
+      ],
+      "pt_box": [
+       1657.81,
+       1752.31,
+       1692.91,
+       1787.41
+      ],
+      "pdf_sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e"
+     }
+    }
+   },
+   "datum": {
+    "value": "Sea Level",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2#page=1&viewrect=135,105.3,37.8,29.7",
+    "quote": "Sea Level",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-overview-53.333dpi",
+     "box": [
+      100,
+      78,
+      128,
+      100
+     ],
+     "dpi": 53.333,
+     "page_px_box": [
+      100,
+      78,
+      128,
+      100
+     ],
+     "pt_box": [
+      135.0,
+      105.3,
+      172.8,
+      135.0
+     ],
+     "pdf_sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e"
+    },
+    "note": "elevation scale labelled about Sea Level, -1000' to about 1500'",
+    "normalized": "MSL"
+   },
+   "elevation_units": {
+    "value": "feet",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2#page=1&viewrect=163.35,113.4,21.6,20.25",
+    "quote": "500'",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-overview-53.333dpi",
+     "box": [
+      121,
+      84,
+      137,
+      99
+     ],
+     "dpi": 53.333,
+     "page_px_box": [
+      121,
+      84,
+      137,
+      99
+     ],
+     "pt_box": [
+      163.35,
+      113.4,
+      184.95,
+      133.65
+     ],
+     "pdf_sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e"
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "C-C'",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2#page=1&viewrect=233.55,1205.56,32.4,33.75",
+    "quote": "C",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-overview-53.333dpi",
+     "box": [
+      173,
+      893,
+      197,
+      918
+     ],
+     "dpi": 53.333,
+     "page_px_box": [
+      173,
+      893,
+      197,
+      918
+     ],
+     "pt_box": [
+      233.55,
+      1205.56,
+      265.95,
+      1239.31
+     ],
+     "pdf_sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e"
+    },
+    "note": "section end labels"
+   },
+   "start": {
+    "label": {
+     "value": "C",
+     "source_id": "ngmdb:42969",
+     "page": 2,
+     "extraction_method": "llm-image",
+     "confidence": 0.6,
+     "inferred": false,
+     "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2#page=1&viewrect=233.55,1205.56,32.4,33.75",
+     "quote": "C",
+     "quote_match": "image",
+     "text_method": "image",
+     "verification": "agree",
+     "image": {
+      "tile": "p2-overview-53.333dpi",
+      "box": [
+       173,
+       893,
+       197,
+       918
+      ],
+      "dpi": 53.333,
+      "page_px_box": [
+       173,
+       893,
+       197,
+       918
+      ],
+      "pt_box": [
+       233.55,
+       1205.56,
+       265.95,
+       1239.31
+      ],
+      "pdf_sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e"
+     }
+    }
+   },
+   "end": {
+    "label": {
+     "value": "C'",
+     "source_id": "ngmdb:42969",
+     "page": 2,
+     "extraction_method": "llm-image",
+     "confidence": 0.6,
+     "inferred": false,
+     "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2#page=1&viewrect=1381.06,1738.81,35.1,35.1",
+     "quote": "C'",
+     "quote_match": "image",
+     "text_method": "image",
+     "verification": "agree",
+     "image": {
+      "tile": "p2-overview-53.333dpi",
+      "box": [
+       1023,
+       1288,
+       1049,
+       1314
+      ],
+      "dpi": 53.333,
+      "page_px_box": [
+       1023,
+       1288,
+       1049,
+       1314
+      ],
+      "pt_box": [
+       1381.06,
+       1738.81,
+       1416.16,
+       1773.91
+      ],
+      "pdf_sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e"
+     }
+    }
+   },
+   "datum": {
+    "value": "Sea Level",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2#page=1&viewrect=145.8,1297.36,35.1,24.3",
+    "quote": "Sea Level",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-overview-53.333dpi",
+     "box": [
+      108,
+      961,
+      134,
+      979
+     ],
+     "dpi": 53.333,
+     "page_px_box": [
+      108,
+      961,
+      134,
+      979
+     ],
+     "pt_box": [
+      145.8,
+      1297.36,
+      180.9,
+      1321.66
+     ],
+     "pdf_sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e"
+    },
+    "note": "elevation scale labelled about Sea Level, -1000' to about 1500'",
+    "normalized": "MSL"
+   },
+   "elevation_units": {
+    "value": "feet",
+    "source_id": "ngmdb:42969",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/42000_42999/42969_2#page=1&viewrect=176.85,1289.26,24.3,18.9",
+    "quote": "500'",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-overview-53.333dpi",
+     "box": [
+      131,
+      955,
+      149,
+      969
+     ],
+     "dpi": 53.333,
+     "page_px_box": [
+      131,
+      955,
+      149,
+      969
+     ],
+     "pt_box": [
+      176.85,
+      1289.26,
+      201.15,
+      1308.16
+     ],
+     "pdf_sha256": "c5ab610c3072f531d6074a2d75d8c784845a2bb0ca2e8e7c9f29add63d42611e"
+    }
+   }
+  }
+ ],
+ "water_tests": [],
+ "rock_tests": []
+}

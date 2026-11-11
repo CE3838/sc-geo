@@ -1,0 +1,2379 @@
+{
+ "source_id": "ngmdb:94274",
+ "title": "Geologic map of the Limehouse and Port Wentworth quadrangles, Beaufort and Jasper counties, South Carolina",
+ "citation": "Doar, W.R., III, 2008, Geologic map of the Limehouse and Port Wentworth quadrangles, Beaufort and Jasper counties, South Carolina: South Carolina Geological Survey Open-File Report OFR-151, map scale 1:24,000.",
+ "year": 2008,
+ "scale": 24000,
+ "publisher": "South Carolina Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-11-08T12:02:22+00:00",
+ "updated_at": "2026-11-08T12:02:22+00:00",
+ "reader": "Claude, Claude Code session 2026-11-09",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1",
+  "2"
+ ],
+ "blocks_total": 2,
+ "complete": true,
+ "notes": "Two sheets: Limehouse (page 1) and Port Wentworth (page 2, mostly Georgia; only me and QHfw described, no holes recorded). Map symbols read on the Limehouse map face and section images (OCR garbled 'aHfw', 'Ppt', '[Pir', 'NMa_'). OCR 'Thickness | to 40' read as 1 (inferred, unclear). 26 SCGS drill-hole labels read on the map face; no logs printed. Section A-A' (vertical exaggeration 100) read for unit labels; contacts not digitized. SUBSURFACE: Princess Anne terrace sediments above 12 ft and below 18 ft; Pamlico above 17 ft and below 25 ft; Jasper sediments between 10 and 20 ft (no datum printed); section contacts not digitized.",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+   "via": "ngmdb_image",
+   "sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5",
+   "pages": 1,
+   "first_page": 1
+  },
+  {
+   "url": "https://ngmdb.usgs.gov/img2/94000_94999/94274_2",
+   "via": "ngmdb_image",
+   "sha256": "1c596b337d372072f591b96636ae31ebc12fdeea6a0b91402ff34d51568b2c97",
+   "pages": 1,
+   "first_page": 2
+  }
+ ],
+ "summary": {
+  "stored": 83,
+  "quote_match": {
+   "exact": 42,
+   "image": 41
+  },
+  "verification": {
+   "agree": 48
+  },
+  "inferred": 9
+ },
+ "ingests": [
+  {
+   "at": "2026-11-08T12:02:22+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, Claude Code session 2026-11-09",
+   "values": 83,
+   "stored": 83,
+   "exact": 42,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 48,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 41,
+   "image_not_verified": 0,
+   "review_items": 1
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "Bodies of water",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "il | Bodies of water (1999) — Water, fresh. brackish, or salt. Areas of altered shoreline",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "me",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=392.4,367.2,15.84,10.08",
+    "quote": "me",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r1c1",
+     "box": [
+      420,
+      288,
+      442,
+      302
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      545,
+      510,
+      567,
+      524
+     ],
+     "pt_box": [
+      392.4,
+      367.2,
+      408.24,
+      377.28
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "text_match": true,
+    "note": "unit symbol read on the map face (page image)"
+   },
+   "name": {
+    "value": "Moved earth",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "Moved earth (Holocene) — Bulk earthen material moved by humans. Color is highly",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "Moved earth (Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "up to 18 feet",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "variable and dependent on source location. Thickness up to 18 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 18.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QHfw",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=280.8,732.24,25.2,9.36",
+    "quote": "QHfw",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r1c1",
+     "box": [
+      265,
+      795,
+      300,
+      808
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      390,
+      1017,
+      425,
+      1030
+     ],
+     "pt_box": [
+      280.8,
+      732.24,
+      306.0,
+      741.6
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "text_match": true,
+    "note": "unit symbol read on the map face (page image)"
+   },
+   "name": {
+    "value": "Freshwater marsh and swamp deposits",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "aHfw | Freshwater marsh and swamp deposits (Holocene) — Silty clay and peat, black (N1),",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "Freshwater marsh and swamp deposits (Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Silty clay and peat, black (N1)",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "aHfw | Freshwater marsh and swamp deposits (Holocene) — Silty clay and peat, black (N1),",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "1 to 40 feet",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "the content of organic materials, sediment type, water salinity and ecozones. Thickness | to 40",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "unclear in OCR: printed 'Thickness | to 40'; '|' read as 1",
+    "normalized": {
+     "min_ft": 1.0,
+     "max_ft": 40.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QHsm",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "QHsm Saltmarsh deposits (Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "name": {
+    "value": "Saltmarsh deposits",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "QHsm Saltmarsh deposits (Holocene) — Silty clay, black (N1), high water content, soft,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "QHsm Saltmarsh deposits (Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "Silty clay, black (N1), high water content, soft, with lenses of very fine quartz sand",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "QHsm Saltmarsh deposits (Holocene) — Silty clay, black (N1), high water content, soft,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "intertidal zone in estuaries",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "intertidal zone in estuaries; covered by saltwater grasses (Spartina alternaflora, Juncus or Salidea).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "3 to 30 feet",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "Thickness 3 to 30 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 3.0,
+     "max_ft": 30.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QHr",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=1188.72,1790.64,21.6,10.8",
+    "quote": "QHr",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r2c2",
+     "box": [
+      572,
+      1130,
+      602,
+      1145
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1651,
+      2487,
+      1681,
+      2502
+     ],
+     "pt_box": [
+      1188.72,
+      1790.64,
+      1210.32,
+      1801.44
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "text_match": true,
+    "note": "unit symbol read on the map face (page image)"
+   },
+   "name": {
+    "value": "Fluvial deposits",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "Fluvial deposits (Holocene or Pleistocene) — Quartz sand, grayish-yellow (SY 8/4) to",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene or Pleistocene",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "Fluvial deposits (Holocene or Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "moderately sorted, medium to very coarse grained quartz sand",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "light-gray (N7), moderately sorted, subangular to subrounded, medium grained to very",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "5 to 15 feet",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "altered by marine processes. Thickness 5 to 15 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "min_ft": 5.0,
+     "max_ft": 15.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QHrl",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=196.56,1315.44,24.48,10.8",
+    "quote": "QHrl",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r2c1",
+     "box": [
+      148,
+      470,
+      182,
+      485
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      273,
+      1827,
+      307,
+      1842
+     ],
+     "pt_box": [
+      196.56,
+      1315.44,
+      221.04,
+      1326.24
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "text_match": true,
+    "note": "unit symbol read on the map face (page image)"
+   },
+   "name": {
+    "value": "River levee",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "our | River levee (Holocene) — Quartz sand, white (N9) to light-yellowish orange (L0OYR8/6)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "River levee (Holocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "less than 5 feet",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "Deposits occur along active and former river channels. Thickness less than 5 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 5.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QPpam",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=1296.72,727.2,33.12,10.8",
+    "quote": "QPpam",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r1c2",
+     "box": [
+      722,
+      788,
+      768,
+      803
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1801,
+      1010,
+      1847,
+      1025
+     ],
+     "pt_box": [
+      1296.72,
+      727.2,
+      1329.84,
+      738.0
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "text_match": true,
+    "note": "unit symbol read on the map face (page image)"
+   },
+   "name": {
+    "value": "Estuarine deposits or marine deposits or both",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "Estuarine deposits or marine deposits or both (Pleistocene) — In lower part- quartz",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "group": {
+    "value": "Sediments Beneath the Princess Anne Terrace",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "Sediments Beneath the Princess Anne Terrace",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "Estuarine deposits or marine deposits or both (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "lower part quartz and phosphorite sand; upper part muddy sand to sandy mud, clay, silt, phosphorite sand and shells",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "and phosphorite sand, medium bluish-gray (5B 5/1), poorly sorted, subrounded to very",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "lower part 10 to 20 feet; upper part 1 to 10 feet",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "Lower part 10 to 20 feet thick. In upper part- muddy sand to sandy mud, clay, silt, silty sand,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 10.0,
+     "max_ft": 20.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   },
+   "fossils": {
+    "value": "Oliva, Polinices, Terebra, Mercenaria and Dosinia",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "bluish gray (5B 5/1). Some zones contain broken and intact Oliva, Polinices, Terebra, Mercenaria",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QPpt",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=1407.6,267.84,27.36,10.8",
+    "quote": "QPpt",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r1c2",
+     "box": [
+      876,
+      150,
+      914,
+      165
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1955,
+      372,
+      1993,
+      387
+     ],
+     "pt_box": [
+      1407.6,
+      267.84,
+      1434.96,
+      278.64
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "text_match": true,
+    "note": "unit symbol read on the map face (page image)"
+   },
+   "name": {
+    "value": "Undifferentiated terrace deposits",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "Ppt Undifferentiated terrace deposits (Pleistocene) — Clayey quartz sand, mottled, white",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "group": {
+    "value": "Sediments Beneath the Pamlico Terrace",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "Sediments Beneath the Pamlico Terrace",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "Undifferentiated terrace deposits (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "clayey quartz sand, mottled, bimodal or poorly sorted, with phosphorite and heavy mineral sand",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "Ppt Undifferentiated terrace deposits (Pleistocene) — Clayey quartz sand, mottled, white",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "15 to 40 feet",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "level. Some deposits altered at the surface by human development. Thickness 15 to 40 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 15.0,
+     "max_ft": 40.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QPjr",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=556.56,487.44,17.28,8.64",
+    "quote": "QPjr",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r1c1",
+     "box": [
+      648,
+      455,
+      672,
+      467
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      773,
+      677,
+      797,
+      689
+     ],
+     "pt_box": [
+      556.56,
+      487.44,
+      573.84,
+      496.08
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "note": "unit symbol read on the map face (page image)"
+   },
+   "name": {
+    "value": "Fluvial deposits",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "[Pir | Fluvial deposits (Pleistocene) — In lower part, quartz sand, very light gray (N8) to",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "group": {
+    "value": "Jasper Sediments",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "The sediments in the Jasper, S.C., area are generally above the elevation of 10 feet and below 20",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "Fluvial deposits (Pleistocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "lower part very poorly sorted quartz sand with pebbles and granules; upper part mottled phosphatic clayey quartz sand, deeply weathered",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "[Pir | Fluvial deposits (Pleistocene) — In lower part, quartz sand, very light gray (N8) to",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "10 to 30 feet",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "heavy minerals. Thickness 10 to 30 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "min_ft": 10.0,
+     "max_ft": 30.0,
+     "unit": "feet",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "NMd",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=644.4,2582.4,31.2,12",
+    "quote": "NMd",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-60dpi-crop90_2240_2440_2650-r1c1",
+     "box": [
+      462,
+      286,
+      488,
+      296
+     ],
+     "dpi": 60,
+     "page_px_box": [
+      537,
+      2152,
+      563,
+      2162
+     ],
+     "pt_box": [
+      644.4,
+      2582.4,
+      675.6,
+      2594.4
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "note": "unit symbol read on the map face (page image)"
+   },
+   "name": {
+    "value": "Miocene deposits (undifferentiated)",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "NMa_ | Miocene deposits (undifferentiated) - (Cross section) Mud and phosphorite-quartz",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "age": {
+    "value": "Miocene",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.684,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "Miocene deposits (undifferentiated)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 5.333,
+     "older_ma": 23.03,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "known only in the cross section; mud and phosphorite-quartz sand; upper contact often a phosphorite pebble and cobble zone; lower contact not drilled",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "not drilled. Upper contact is often a phosphorite pebble and cobble zone.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "observations": [
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-126",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=152.64,312.48,90,20.16",
+    "quote": "27-126",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r1c1",
+     "box": [
+      87,
+      212,
+      212,
+      240
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      212,
+      434,
+      337,
+      462
+     ],
+     "pt_box": [
+      152.64,
+      312.48,
+      242.64,
+      332.64
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "text_match": true,
+    "note": "SCGS drill hole labelled on the Limehouse map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-125",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=298.8,324,90,20.16",
+    "quote": "27-125",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r1c1",
+     "box": [
+      290,
+      228,
+      415,
+      256
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      415,
+      450,
+      540,
+      478
+     ],
+     "pt_box": [
+      298.8,
+      324.0,
+      388.8,
+      344.16
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "note": "SCGS drill hole labelled on the Limehouse map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-152",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=663.84,393.84,90,20.16",
+    "quote": "27-152",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r1c1",
+     "box": [
+      797,
+      325,
+      922,
+      353
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      922,
+      547,
+      1047,
+      575
+     ],
+     "pt_box": [
+      663.84,
+      393.84,
+      753.84,
+      414.0
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "note": "SCGS drill hole labelled on the Limehouse map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-137",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=561.6,468.72,90,20.16",
+    "quote": "27-137",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r1c1",
+     "box": [
+      655,
+      429,
+      780,
+      457
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      780,
+      651,
+      905,
+      679
+     ],
+     "pt_box": [
+      561.6,
+      468.72,
+      651.6,
+      488.88
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "note": "SCGS drill hole labelled on the Limehouse map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-114",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=784.8,535.68,78.48,20.16",
+    "quote": "27-114",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r1c1",
+     "box": [
+      965,
+      522,
+      1074,
+      550
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1090,
+      744,
+      1199,
+      772
+     ],
+     "pt_box": [
+      784.8,
+      535.68,
+      863.28,
+      555.84
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "note": "SCGS drill hole labelled on the Limehouse map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-151",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=630,885.6,90,20.16",
+    "quote": "27-151",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r1c1",
+     "box": [
+      750,
+      1008,
+      875,
+      1036
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      875,
+      1230,
+      1000,
+      1258
+     ],
+     "pt_box": [
+      630.0,
+      885.6,
+      720.0,
+      905.76
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "note": "SCGS drill hole labelled on the Limehouse map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-177",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=758.16,1000.8,90,20.16",
+    "quote": "27-177",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r1c1",
+     "box": [
+      928,
+      1168,
+      1053,
+      1196
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1053,
+      1390,
+      1178,
+      1418
+     ],
+     "pt_box": [
+      758.16,
+      1000.8,
+      848.16,
+      1020.96
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "note": "SCGS drill hole labelled on the Limehouse map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-121",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=1131.12,169.92,90,20.16",
+    "quote": "27-121",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r1c2",
+     "box": [
+      492,
+      14,
+      617,
+      42
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1571,
+      236,
+      1696,
+      264
+     ],
+     "pt_box": [
+      1131.12,
+      169.92,
+      1221.12,
+      190.08
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "note": "SCGS drill hole labelled on the Limehouse map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-112",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=1344.24,347.76,90,20.16",
+    "quote": "27-112",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r1c2",
+     "box": [
+      788,
+      261,
+      913,
+      289
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1867,
+      483,
+      1992,
+      511
+     ],
+     "pt_box": [
+      1344.24,
+      347.76,
+      1434.24,
+      367.92
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "text_match": true,
+    "note": "SCGS drill hole labelled on the Limehouse map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-134",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=1248.48,383.76,90,20.16",
+    "quote": "27-134",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r1c2",
+     "box": [
+      655,
+      311,
+      780,
+      339
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1734,
+      533,
+      1859,
+      561
+     ],
+     "pt_box": [
+      1248.48,
+      383.76,
+      1338.48,
+      403.92
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "note": "SCGS drill hole labelled on the Limehouse map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-189",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=1061.28,423.36,90,20.16",
+    "quote": "27-189",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r1c2",
+     "box": [
+      395,
+      366,
+      520,
+      394
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1474,
+      588,
+      1599,
+      616
+     ],
+     "pt_box": [
+      1061.28,
+      423.36,
+      1151.28,
+      443.52
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "note": "SCGS drill hole labelled on the Limehouse map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-138",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=918.72,564.48,90,20.16",
+    "quote": "27-138",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r1c2",
+     "box": [
+      197,
+      562,
+      322,
+      590
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1276,
+      784,
+      1401,
+      812
+     ],
+     "pt_box": [
+      918.72,
+      564.48,
+      1008.72,
+      584.64
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "note": "SCGS drill hole labelled on the Limehouse map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-190",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=854.64,714.24,90,20.16",
+    "quote": "27-190",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r1c2",
+     "box": [
+      108,
+      770,
+      233,
+      798
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1187,
+      992,
+      1312,
+      1020
+     ],
+     "pt_box": [
+      854.64,
+      714.24,
+      944.64,
+      734.4
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "note": "SCGS drill hole labelled on the Limehouse map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-187",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=1046.16,794.88,90,20.16",
+    "quote": "27-187",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r1c2",
+     "box": [
+      374,
+      882,
+      499,
+      910
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1453,
+      1104,
+      1578,
+      1132
+     ],
+     "pt_box": [
+      1046.16,
+      794.88,
+      1136.16,
+      815.04
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "note": "SCGS drill hole labelled on the Limehouse map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-183",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=1297.44,832.32,90,20.16",
+    "quote": "27-183",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r1c2",
+     "box": [
+      723,
+      934,
+      848,
+      962
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1802,
+      1156,
+      1927,
+      1184
+     ],
+     "pt_box": [
+      1297.44,
+      832.32,
+      1387.44,
+      852.48
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "note": "SCGS drill hole labelled on the Limehouse map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-188",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=966.96,873.36,90,20.16",
+    "quote": "27-188",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r1c2",
+     "box": [
+      264,
+      991,
+      389,
+      1019
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1343,
+      1213,
+      1468,
+      1241
+     ],
+     "pt_box": [
+      966.96,
+      873.36,
+      1056.96,
+      893.52
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "note": "SCGS drill hole labelled on the Limehouse map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-175",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=1086.48,910.08,90,20.16",
+    "quote": "27-175",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r1c2",
+     "box": [
+      430,
+      1042,
+      555,
+      1070
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1509,
+      1264,
+      1634,
+      1292
+     ],
+     "pt_box": [
+      1086.48,
+      910.08,
+      1176.48,
+      930.24
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "note": "SCGS drill hole labelled on the Limehouse map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-113",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=576,1069.2,90,20.16",
+    "quote": "27-113",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r2c1",
+     "box": [
+      675,
+      128,
+      800,
+      156
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      800,
+      1485,
+      925,
+      1513
+     ],
+     "pt_box": [
+      576.0,
+      1069.2,
+      666.0,
+      1089.36
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "note": "SCGS drill hole labelled on the Limehouse map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-184",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=1406.88,1074.96,90,20.16",
+    "quote": "27-184",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r2c2",
+     "box": [
+      875,
+      136,
+      1000,
+      164
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1954,
+      1493,
+      2079,
+      1521
+     ],
+     "pt_box": [
+      1406.88,
+      1074.96,
+      1496.88,
+      1095.12
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "note": "SCGS drill hole labelled on the Limehouse map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-174",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=930.24,1144.8,90,20.16",
+    "quote": "27-174",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r2c2",
+     "box": [
+      213,
+      233,
+      338,
+      261
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1292,
+      1590,
+      1417,
+      1618
+     ],
+     "pt_box": [
+      930.24,
+      1144.8,
+      1020.24,
+      1164.96
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "note": "SCGS drill hole labelled on the Limehouse map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-185",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=1183.68,1157.76,90,20.16",
+    "quote": "27-185",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r2c2",
+     "box": [
+      565,
+      251,
+      690,
+      279
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1644,
+      1608,
+      1769,
+      1636
+     ],
+     "pt_box": [
+      1183.68,
+      1157.76,
+      1273.68,
+      1177.92
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "note": "SCGS drill hole labelled on the Limehouse map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-186",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=1025.28,1195.92,90,20.16",
+    "quote": "27-186",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r2c2",
+     "box": [
+      345,
+      304,
+      470,
+      332
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1424,
+      1661,
+      1549,
+      1689
+     ],
+     "pt_box": [
+      1025.28,
+      1195.92,
+      1115.28,
+      1216.08
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "note": "SCGS drill hole labelled on the Limehouse map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-173",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.42,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=846.72,1274.4,90,20.16",
+    "quote": "27-173",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r2c2",
+     "box": [
+      97,
+      413,
+      222,
+      441
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1176,
+      1770,
+      1301,
+      1798
+     ],
+     "pt_box": [
+      846.72,
+      1274.4,
+      936.72,
+      1294.56
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5",
+     "unclear": true
+    },
+    "note": "SCGS drill hole labelled on the Limehouse map face (page image); no log printed; label printed '27 173' with the hyphen faint"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-132",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=1212.48,1422.72,90,20.16",
+    "quote": "27-132",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r2c2",
+     "box": [
+      605,
+      619,
+      730,
+      647
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1684,
+      1976,
+      1809,
+      2004
+     ],
+     "pt_box": [
+      1212.48,
+      1422.72,
+      1302.48,
+      1442.88
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "note": "SCGS drill hole labelled on the Limehouse map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-181",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=1457.28,1563.12,90,20.16",
+    "quote": "27-181",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r2c2",
+     "box": [
+      945,
+      814,
+      1070,
+      842
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      2024,
+      2171,
+      2149,
+      2199
+     ],
+     "pt_box": [
+      1457.28,
+      1563.12,
+      1547.28,
+      1583.28
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "note": "SCGS drill hole labelled on the Limehouse map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "27-180",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=1299.6,1617.84,90,20.16",
+    "quote": "27-180",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-100dpi-crop90_160_1550_1880-r2c2",
+     "box": [
+      726,
+      890,
+      851,
+      918
+     ],
+     "dpi": 100,
+     "page_px_box": [
+      1805,
+      2247,
+      1930,
+      2275
+     ],
+     "pt_box": [
+      1299.6,
+      1617.84,
+      1389.6,
+      1638.0
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "text_match": true,
+    "note": "SCGS drill hole labelled on the Limehouse map face (page image); no log printed"
+   }
+  }
+ ],
+ "structures": [],
+ "groundwater": [],
+ "references": [],
+ "surfaces": [],
+ "contours": [],
+ "sections": [
+  {
+   "name": {
+    "value": "A-A'",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "Vertical exaggeration is 100",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "section A-A' below the Limehouse map"
+   },
+   "vertical_exaggeration": {
+    "value": "100",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1",
+    "quote": "Vertical exaggeration is 100",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": 100.0
+   },
+   "datum": {
+    "value": "SEA LEVEL",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=2368.8,2419.2,66,14.4",
+    "quote": "SEA LEVEL",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-60dpi-crop90_2240_2440_2650-r1c2",
+     "box": [
+      980,
+      150,
+      1035,
+      162
+     ],
+     "dpi": 60,
+     "page_px_box": [
+      1974,
+      2016,
+      2029,
+      2028
+     ],
+     "pt_box": [
+      2368.8,
+      2419.2,
+      2434.8,
+      2433.6
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "text_match": true,
+    "normalized": "MSL"
+   },
+   "elevation_units": {
+    "value": "feet (left), meters (right)",
+    "source_id": "ngmdb:94274",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=2335.2,2260.8,45.6,12",
+    "quote": "METERS",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-60dpi-crop90_2240_2440_2650-r1c2",
+     "box": [
+      952,
+      18,
+      990,
+      28
+     ],
+     "dpi": 60,
+     "page_px_box": [
+      1946,
+      1884,
+      1984,
+      1894
+     ],
+     "pt_box": [
+      2335.2,
+      2260.8,
+      2380.8,
+      2272.8
+     ],
+     "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+    },
+    "text_match": true
+   },
+   "units_along": [
+    {
+     "unit": {
+      "value": "QHfw",
+      "source_id": "ngmdb:94274",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=176.4,2455.2,28.8,12",
+      "quote": "QHfw",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-60dpi-crop90_2240_2440_2650-r1c1",
+       "box": [
+        72,
+        180,
+        96,
+        190
+       ],
+       "dpi": 60,
+       "page_px_box": [
+        147,
+        2046,
+        171,
+        2056
+       ],
+       "pt_box": [
+        176.4,
+        2455.2,
+        205.2,
+        2467.2
+       ],
+       "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+      },
+      "text_match": true,
+      "note": "unit labelled on the section"
+     }
+    },
+    {
+     "unit": {
+      "value": "QPjr",
+      "source_id": "ngmdb:94274",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=750,2476.8,30,12",
+      "quote": "QPjr",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-60dpi-crop90_2240_2440_2650-r1c1",
+       "box": [
+        550,
+        198,
+        575,
+        208
+       ],
+       "dpi": 60,
+       "page_px_box": [
+        625,
+        2064,
+        650,
+        2074
+       ],
+       "pt_box": [
+        750.0,
+        2476.8,
+        780.0,
+        2488.8
+       ],
+       "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+      },
+      "note": "unit labelled on the section"
+     }
+    },
+    {
+     "unit": {
+      "value": "NMd",
+      "source_id": "ngmdb:94274",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=644.4,2582.4,31.2,12",
+      "quote": "NMd",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-60dpi-crop90_2240_2440_2650-r1c1",
+       "box": [
+        462,
+        286,
+        488,
+        296
+       ],
+       "dpi": 60,
+       "page_px_box": [
+        537,
+        2152,
+        563,
+        2162
+       ],
+       "pt_box": [
+        644.4,
+        2582.4,
+        675.6,
+        2594.4
+       ],
+       "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+      },
+      "note": "unit labelled on the section"
+     }
+    },
+    {
+     "unit": {
+      "value": "QPpam",
+      "source_id": "ngmdb:94274",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=2090.4,2474.4,40.8,12",
+      "quote": "QPpam",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-60dpi-crop90_2240_2440_2650-r1c2",
+       "box": [
+        748,
+        196,
+        782,
+        206
+       ],
+       "dpi": 60,
+       "page_px_box": [
+        1742,
+        2062,
+        1776,
+        2072
+       ],
+       "pt_box": [
+        2090.4,
+        2474.4,
+        2131.2,
+        2486.4
+       ],
+       "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+      },
+      "text_match": true,
+      "note": "unit labelled on the section"
+     }
+    },
+    {
+     "unit": {
+      "value": "QHsm",
+      "source_id": "ngmdb:94274",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94274_1#page=1&viewrect=2272.8,2428.8,28.8,12",
+      "quote": "QHsm",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-60dpi-crop90_2240_2440_2650-r1c2",
+       "box": [
+        900,
+        158,
+        924,
+        168
+       ],
+       "dpi": 60,
+       "page_px_box": [
+        1894,
+        2024,
+        1918,
+        2034
+       ],
+       "pt_box": [
+        2272.8,
+        2428.8,
+        2301.6,
+        2440.8
+       ],
+       "pdf_sha256": "0214c682e7c1e4b09d9ab46d68cff84865e3235fd06051a8d068a56deffac0c5"
+      },
+      "text_match": true,
+      "note": "unit labelled on the section"
+     }
+    }
+   ]
+  }
+ ],
+ "water_tests": [],
+ "rock_tests": []
+}

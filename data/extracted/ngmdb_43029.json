@@ -8,8 +8,8 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-11-07T11:56:57+00:00",
- "updated_at": "2026-11-07T11:56:57+00:00",
- "reader": "Claude, Claude Code session 2026-11-07",
+ "updated_at": "2026-11-07T14:10:24+00:00",
+ "reader": "Claude, Claude Code re-read session 2026-11-07",
  "packets": [
   "packet-01"
  ],
@@ -18,7 +18,7 @@
  ],
  "blocks_total": 1,
  "complete": true,
- "notes": "Single OCR'd map sheet; map face garbled in OCR. All map symbols read from legend boxes on a page image (OCR garbled 'at', 'th', 'Je', 'ums'). OCR 'burrows | to 2 cm' read as 1 (inferred, unclear in OCR). The text names no numbered drill holes; only the Huber Corporation Paragon test hole is mentioned. SCGS hole labels on the map face (2-1xx, 2-2xx, 2-3xx) were not recorded. Shearer (1917) reference is Georgia-only and not recorded. SUBSURFACE: Qat terrace surface 15 to 30 ft above the Savannah River flood plain; kaolin bed about 20 ft thick at the top of the Upper Cretaceous (no elevation printed).",
+ "notes": "Single OCR'd map sheet; map face garbled in OCR. All map symbols read from legend boxes on a page image (OCR garbled 'at', 'th', 'Je', 'ums'). OCR 'burrows | to 2 cm' read as 1 (inferred, unclear in OCR). The text names no numbered drill holes; only the Huber Corporation Paragon test hole is mentioned. SCGS hole labels on the map face (2-1xx, 2-2xx, 2-3xx) were not recorded. Shearer (1917) reference is Georgia-only and not recorded. SUBSURFACE: Qat terrace surface 15 to 30 ft above the Savannah River flood plain; kaolin bed about 20 ft thick at the top of the Upper Cretaceous (no elevation printed).\nSingle OCR'd map sheet; map face garbled in OCR. All map symbols read from legend boxes on a page image (OCR garbled 'at', 'th', 'Je', 'ums'). OCR 'burrows | to 2 cm' read as 1 (inferred, unclear in OCR). The text names no numbered drill holes; only the Huber Corporation Paragon test hole is mentioned. SCGS drill-hole labels read from the map face on page images (no logs printed; the explanation's 2-106 is the legend sample, the map-face 2-106 is a drawn hole). Labels 2-112 and 2-104 each appear twice on the map face and are recorded as printed; one symbol is labelled SCWRC C-2. Exposure marks (x, Float) carry no labels and were not recorded. Shearer (1917) reference is Georgia-only and not recorded. SUBSURFACE: Qat terrace surface 15 to 30 ft above the Savannah River flood plain; kaolin bed about 20 ft thick at the top of the Upper Cretaceous (no elevation printed).",
  "files": [
   {
    "url": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
@@ -29,13 +29,13 @@
   }
  ],
  "summary": {
-  "stored": 63,
+  "stored": 127,
   "quote_match": {
-   "image": 11,
+   "image": 75,
    "exact": 52
   },
   "verification": {
-   "agree": 16
+   "agree": 82
   },
   "inferred": 9
  },
@@ -59,6 +59,1310 @@
    "image": 11,
    "image_not_verified": 0,
    "review_items": 0
+  },
+  {
+   "at": "2026-11-07T14:10:24+00:00",
+   "packets": [
+    "reread-01"
+   ],
+   "reader": "Claude, Claude Code re-read session 2026-11-07",
+   "values": 127,
+   "stored": 127,
+   "exact": 52,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 82,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 75,
+   "image_not_verified": 0,
+   "review_items": 0,
+   "reread": {
+    "packets": [
+     "reread-01"
+    ],
+    "pages": [
+     1
+    ],
+    "reason": "SCGS drill-hole labels on the map face, from page images (no logs)",
+    "queue_ids": []
+   }
+  }
+ ],
+ "history": [
+  {
+   "at": "2026-11-07T14:10:24+00:00",
+   "reason": "SCGS drill-hole labels on the map face, from page images (no logs)",
+   "packets": [
+    "reread-01"
+   ],
+   "pages": [
+    1
+   ],
+   "replaced": [
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Bodies of water",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Bodies of water (1999) - Water boundaries are delineated from 1999 digital",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "description": {
+       "value": "Water boundaries are delineated from 1999 digital ortho-quarter quadrangles photos (DOQQs).",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "ortho-quarter quadrangles photos (DOQQs).",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "me",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1612.8,360.72,48.96,23.04",
+       "quote": "me",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-100dpi-crop1610_330_1680_1840-r1c1",
+        "box": [
+         4,
+         43,
+         72,
+         75
+        ],
+        "dpi": 100,
+        "page_px_box": [
+         2240,
+         501,
+         2308,
+         533
+        ],
+        "pt_box": [
+         1612.8,
+         360.72,
+         1661.76,
+         383.76
+        ],
+        "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+       },
+       "text_match": true,
+       "note": "symbol read from the legend box on a page image"
+      },
+      "name": {
+       "value": "Moved earth",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "[me | Moved earth",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "Qal",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1612.8,391.68,48.96,24.48",
+       "quote": "Qal",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-100dpi-crop1610_330_1680_1840-r1c1",
+        "box": [
+         4,
+         86,
+         72,
+         120
+        ],
+        "dpi": 100,
+        "page_px_box": [
+         2240,
+         544,
+         2308,
+         578
+        ],
+        "pt_box": [
+         1612.8,
+         391.68,
+         1661.76,
+         416.16
+        ],
+        "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+       },
+       "text_match": true,
+       "note": "symbol read from the legend box on a page image"
+      },
+      "name": {
+       "value": "Quaternary alluvium",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Qal Quaternary alluvium (upper Pleistocene to Holocene) — Alluvial sediments in stream",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "upper Pleistocene to Holocene",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Quaternary alluvium (upper Pleistocene to Holocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.129,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "depositional_environment": {
+       "value": "stream channels and floodplains",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "channels and floodplains.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "Qat",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1612.8,424.08,48.96,24.48",
+       "quote": "Qat",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-100dpi-crop1610_330_1680_1840-r1c1",
+        "box": [
+         4,
+         131,
+         72,
+         165
+        ],
+        "dpi": 100,
+        "page_px_box": [
+         2240,
+         589,
+         2308,
+         623
+        ],
+        "pt_box": [
+         1612.8,
+         424.08,
+         1661.76,
+         448.56
+        ],
+        "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+       },
+       "note": "OCR prints 'at'; image shows Qat"
+      },
+      "name": {
+       "value": "Quaternary alluvium terrace sediments",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "ey FEET | at Quaternary alluvium terrace sediments (upper Pleistocene) — This unit is the lower",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "upper Pleistocene",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Quaternary alluvium terrace sediments (upper Pleistocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0117,
+        "older_ma": 0.129,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "tan or gray, cohesive to non-cohesive, poorly sorted, fine- to very coarse-grained sand and pebbly grit with quartz pebbles",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "of tan, or gray, cohesive to non-cohesive, poorly sorted, fine- to very coarse-grained, sand and",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "description": {
+       "value": "lower alluvial terrace parallel to the Savannah River; its surface is 15 to 30 feet higher than the surface of the Savannah River flood plain",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "sediments is 15 to 30 feet higher than the surface of the Savannah River flood plain.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "Qcb",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1612.8,504,48.96,24.48",
+       "quote": "Qcb",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-100dpi-crop1610_330_1680_1840-r1c1",
+        "box": [
+         4,
+         242,
+         72,
+         276
+        ],
+        "dpi": 100,
+        "page_px_box": [
+         2240,
+         700,
+         2308,
+         734
+        ],
+        "pt_box": [
+         1612.8,
+         504.0,
+         1661.76,
+         528.48
+        ],
+        "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+       },
+       "note": "symbol read from the legend box on a page image"
+      },
+      "name": {
+       "value": "Carolina Bay Sediments",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Carolina Bay Sediments (upper Miocene to Recent?) — Seven Carolina bays are",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "upper Miocene to Recent?",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Carolina Bay Sediments (upper Miocene to Recent?)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 5.333,
+        "older_ma": 11.63,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "description": {
+       "value": "seven bays, generally 300 to 400 feet wide and 600 to 800 feet long, no preferred orientation, all on the Altamaha Formation; Rembert soil series",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "400 feet wide and 600 to 800 feet long. The shapes vary, however, from nearly round to long and",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "contacts": {
+       "value": "All of the bays are on the Altamaha Formation on the highest parts of the interfluves",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "bays are on the Altamaha Formation on the highest parts of the interfluves. In every bay there is the",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "Tp",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1612.8,615.6,48.96,23.76",
+       "quote": "Tp",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-100dpi-crop1610_330_1680_1840-r1c1",
+        "box": [
+         4,
+         397,
+         72,
+         430
+        ],
+        "dpi": 100,
+        "page_px_box": [
+         2240,
+         855,
+         2308,
+         888
+        ],
+        "pt_box": [
+         1612.8,
+         615.6,
+         1661.76,
+         639.36
+        ],
+        "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+       },
+       "text_match": true,
+       "note": "symbol read from the legend box on a page image"
+      },
+      "name": {
+       "value": "Pinehurst Formation",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Pinehurst Formation (upper Miocene to lower Pliocene?) — Two small bodies of loose",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Pinehurst",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Pinehurst Formation",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "upper Miocene to lower Pliocene?",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Pinehurst Formation (upper Miocene to lower Pliocene?)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 3.6,
+        "older_ma": 11.63,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "light tan, loose, poorly sorted, fine- to very coarse-grained sand with no interstitial clay",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Lexington-to- Camden area. The sand in the two deposits consists of light tan, loose, poorly sorted,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      },
+      "contacts": {
+       "value": "The eastern Pinehurst deposit overlies the Altamaha Formation",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "amount of fine grained heavy minerals. The eastern Pinehurst deposit overlies the Altamaha",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "depositional_environment": {
+       "value": "wind-blown sand deposits (dunes)",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Pinehurst Formation (wind-blown sand deposits), the upper Tertiary to Quaternary Carolina bay",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "Tal",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1612.8,711.36,48.96,25.2",
+       "quote": "Tal",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-100dpi-crop1610_330_1680_1840-r1c1",
+        "box": [
+         4,
+         530,
+         72,
+         565
+        ],
+        "dpi": 100,
+        "page_px_box": [
+         2240,
+         988,
+         2308,
+         1023
+        ],
+        "pt_box": [
+         1612.8,
+         711.36,
+         1661.76,
+         736.56
+        ],
+        "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+       },
+       "note": "symbol read from the legend box on a page image"
+      },
+      "name": {
+       "value": "Altamaha Formation",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Altamaha Formation (upper middle to lower upper Miocene) — Consists of indurated,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Altamaha",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Altamaha Formation",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "upper middle to lower upper Miocene",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Altamaha Formation (upper middle to lower upper Miocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 5.333,
+        "older_ma": 11.63,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "indurated, pink-orange, cross-bedded, poorly sorted, clayey grit of angular to subangular very coarse-grained sand and granules in a clay matrix; lavender clay clasts and quartz pebbles",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "pink-orange, cross-bedded, poorly sorted, clayey grit consisting of angular to subangular",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "Ttr",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1612.8,816.48,48.96,23.04",
+       "quote": "Ttr",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-100dpi-crop1610_330_1680_1840-r1c1",
+        "box": [
+         4,
+         676,
+         72,
+         708
+        ],
+        "dpi": 100,
+        "page_px_box": [
+         2240,
+         1134,
+         2308,
+         1166
+        ],
+        "pt_box": [
+         1612.8,
+         816.48,
+         1661.76,
+         839.52
+        ],
+        "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+       },
+       "note": "symbol read from the legend box on a page image"
+      },
+      "name": {
+       "value": "Tobacco Road Sand",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "tt, | Tobacco Road Sand (upper Eocene) — The base of the Tobacco Road Sand is commonly",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Tobacco Road",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "upper Eocene",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Tobacco Road Sand (upper Eocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 33.9,
+        "older_ma": 37.71,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "contacts": {
+       "value": "base commonly a two to three foot thick layer of well-rounded discoidal to ellipsoidal quartz pebbles; the only persistent marker bed in the Jacksonian section",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "a two to three foot thick layer of well- rounded discoidal to ellipsoidal quartz pebbles in a",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "lithology": {
+       "value": "poorly sorted, medium- to very coarse-grained sand with granules, dark red, maroon and lavender; some well-sorted fine-grained micaceous beds",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "poorly sorted and medium- to very coarse-grained with granules. There are, however, beds that are",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "fossils": {
+       "value": "Ophiomorpha nodosa burrows",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "distinctive unit. Large, well-defined, clay-lined Ophiomorpha nodosa burrows are common and are",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "Tdb",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1612.8,1048.32,48.96,31.68",
+       "quote": "Tdb",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-100dpi-crop1610_330_1680_1840-r1c1",
+        "box": [
+         4,
+         998,
+         72,
+         1042
+        ],
+        "dpi": 100,
+        "page_px_box": [
+         2240,
+         1456,
+         2308,
+         1500
+        ],
+        "pt_box": [
+         1612.8,
+         1048.32,
+         1661.76,
+         1080.0
+        ],
+        "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+       },
+       "text_match": true,
+       "note": "symbol read from the legend box on a page image"
+      },
+      "name": {
+       "value": "Dry Branch Formation",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Dry Branch Formation (upper Eocene) — Poorly sorted, pebbly, medium- to very",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Dry Branch",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Dry Branch Formation",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "upper Eocene",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Dry Branch Formation (upper Eocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 33.9,
+        "older_ma": 37.71,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "pebbly sand at the base; thinly bedded olive green smectitic clay (resembling the Twiggs Clay Member), pebbly and cross-bedded sand; golden yellow cross-bedded sand in the middle third",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "are thinly- bedded sequences up to six feet thick of olive green (in fresh exposures) waxy, smectitic",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "fossils": {
+       "value": "leaf fossils, gastropods, pelecypods, echinoids, bryozoans, corals, barnacles, shark teeth, and ray teeth",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "in the lower third of the unit have yielded gastropods, pelecypods, echinoids, bryozoans, corals,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "Th",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1612.8,1352.16,48.96,24.48",
+       "quote": "Th",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-100dpi-crop1610_330_1680_1840-r2c1",
+        "box": [
+         4,
+         431,
+         72,
+         465
+        ],
+        "dpi": 100,
+        "page_px_box": [
+         2240,
+         1878,
+         2308,
+         1912
+        ],
+        "pt_box": [
+         1612.8,
+         1352.16,
+         1661.76,
+         1376.64
+        ],
+        "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+       },
+       "text_match": true,
+       "note": "symbol read from the legend box on a page image"
+      },
+      "name": {
+       "value": "Huber Formation",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "th | Huber Formation (lower middle Eocene) — Irregularly bedded, poorly sorted, very",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Huber",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Huber Formation",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "lower middle Eocene",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Huber Formation (lower middle Eocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 37.71,
+        "older_ma": 47.8,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "lower part loose, well-sorted fine- to medium-grained sand with heavy minerals and thin clay layers; upper part cross-bedded, poorly sorted, medium- to very coarse-grained sand with kaolin balls",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "above the base is mainly composed of loose, well-sorted fine- to medium-grained sand with some",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "fossils": {
+       "value": "burrows 1 to 2 cm and 2 to 3 mm in diameter",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "thin clay laminae help define the cross bedding. Large burrows | to 2 cm in diameter, and locally,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "unclear in OCR: printed 'burrows | to 2 cm'; '|' read as 1"
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "Te",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1612.8,1671.84,48.96,33.12",
+       "quote": "Te",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-100dpi-crop1610_330_1680_1840-r2c1",
+        "box": [
+         4,
+         875,
+         72,
+         921
+        ],
+        "dpi": 100,
+        "page_px_box": [
+         2240,
+         2322,
+         2308,
+         2368
+        ],
+        "pt_box": [
+         1612.8,
+         1671.84,
+         1661.76,
+         1704.96
+        ],
+        "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+       },
+       "note": "symbol read from the legend box on a page image"
+      },
+      "name": {
+       "value": "Ellenton Formation",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Je _ | Ellenton Formation (lower Paleocene) — Pale gray, loose, poorly sorted, coarse-grained",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Ellenton",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "rank": {
+       "value": "Formation",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Ellenton Formation",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "lower Paleocene",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Ellenton Formation (lower Paleocene)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "normalized": {
+        "younger_ma": 62.666666666666664,
+        "older_ma": 66.0,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "pale gray, loose, poorly sorted, coarse- to very coarse-grained sand and granules with tan clay interlayers; blue quartz grains",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Je _ | Ellenton Formation (lower Paleocene) — Pale gray, loose, poorly sorted, coarse-grained",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "contacts": {
+       "value": "distinct from the underlying Upper Cretaceous sediments and the overlying fine-grained sugar sands of the lower Huber Formation",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "underlying white, micaceous, kaolinitic Upper Cretaceous sediments and from the overlying",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "UKs",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1612.8,1799.28,48.96,25.2",
+       "quote": "UKs",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-100dpi-crop1610_330_1680_1840-r2c1",
+        "box": [
+         4,
+         1052,
+         72,
+         1087
+        ],
+        "dpi": 100,
+        "page_px_box": [
+         2240,
+         2499,
+         2308,
+         2534
+        ],
+        "pt_box": [
+         1612.8,
+         1799.28,
+         1661.76,
+         1824.48
+        ],
+        "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+       },
+       "note": "OCR prints 'ums'; image shows UKs"
+      },
+      "name": {
+       "value": "Upper Cretaceous Sediments Undifferentiated",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Upper Cretaceous Sediments Undifferentiated — Mainly white or cream colored,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Upper Cretaceous",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Upper Cretaceous Sediments Undifferentiated",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 66.0,
+        "older_ma": 100.5,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "white or cream colored, poorly sorted, very coarse-grained, micaceous, kaolinitic sands with kaolin balls and pebble stringers; smoky quartz pebbles",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "poorly sorted, very coarse-grained, micaceous, kaolinitic sands. The sands are typically",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      },
+      "description": {
+       "value": "a bed or lens of pure kaolin about twenty feet thick at the top of the Upper Cretaceous section in the northwestern part of the map area, mined by Dixie Clay Company and J.M. Huber Corporation",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "Abed or lens of pure kaolin about twenty feet thick occurs at the top of the Upper Cretaceous section",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "observations",
+     "record": {
+      "kind": "boring",
+      "label": {
+       "value": "test hole at J.M. Huber Corporation's Paragon",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.52,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "(1940) listed the following heavy minerals from the test hole at J.M. Huber Corporation’s Paragon",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "the hole has no printed number; Lang (1940) listed its heavy minerals"
+      },
+      "intervals": [
+       {
+        "unit": {
+         "value": "Upper Cretaceous Sediments Undifferentiated",
+         "source_id": "ngmdb:43029",
+         "page": 1,
+         "extraction_method": "llm",
+         "confidence": 0.52,
+         "inferred": true,
+         "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+         "quote": "(1940) listed the following heavy minerals from the test hole at J.M. Huber Corporation’s Paragon",
+         "quote_match": "exact",
+         "text_method": "ocr",
+         "verification": null
+        }
+       }
+      ]
+     }
+    },
+    {
+     "section": "references",
+     "record": {
+      "citation": {
+       "value": "Lang, W. B., 1940, The sedimentary kaolinitic clays of South Carolina, in Lang, W. B., King, P. B., Bramlette, M. N., McVay, T. N., Bay, H. X. and Munyan, A. C., eds., Clay investigations in the southeastern states, 1934-1935: U. S. Geological Survey Bulletin 901, p. 23-82.",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "3 Aiken Lang, W. B., 1940, The sedimentary kaolinitic clays of South Carolina, in Lang, W. B., King, P. B., Bramlette,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "references",
+     "record": {
+      "citation": {
+       "value": "Rogers, V. A., 1985, Soil survey of Aiken County area, South Carolina: U. S. Department of Agriculture, Soil Conservation Service.",
+       "source_id": "ngmdb:43029",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
+       "quote": "8 New Ellenton SW Rogers, V. A., 1985, Soil survey of Aiken County area, South Carolina: U. S. Department of Agriculture, Soil",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    }
+   ]
   }
  ],
  "units": [
@@ -81,13 +1385,13 @@
     "source_id": "ngmdb:43029",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.855,
+    "confidence": 0.727,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
     "quote": "ortho-quarter quadrangles photos (DOQQs).",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree"
+    "verification": null
    }
   },
   {
@@ -134,13 +1438,13 @@
     "source_id": "ngmdb:43029",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.727,
+    "confidence": 0.855,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
     "quote": "[me | Moved earth",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null
+    "verification": "agree"
    }
   },
   {
@@ -316,13 +1620,13 @@
     "source_id": "ngmdb:43029",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.727,
+    "confidence": 0.855,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
     "quote": "sediments is 15 to 30 feet higher than the surface of the Savannah River flood plain.",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null
+    "verification": "agree"
    }
   },
   {
@@ -484,13 +1788,13 @@
     "source_id": "ngmdb:43029",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.581,
+    "confidence": 0.684,
     "inferred": true,
     "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
     "quote": "Pinehurst Formation",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null
+    "verification": "agree"
    },
    "age": {
     "value": "upper Miocene to lower Pliocene?",
@@ -516,13 +1820,13 @@
     "source_id": "ngmdb:43029",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.855,
+    "confidence": 0.727,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
     "quote": "Lexington-to- Camden area. The sand in the two deposits consists of light tan, loose, poorly sorted,",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree"
+    "verification": null
    },
    "contacts": {
     "value": "The eastern Pinehurst deposit overlies the Altamaha Formation",
@@ -542,13 +1846,13 @@
     "source_id": "ngmdb:43029",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.855,
+    "confidence": 0.727,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
     "quote": "Pinehurst Formation (wind-blown sand deposits), the upper Tertiary to Quaternary Carolina bay",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree"
+    "verification": null
    }
   },
   {
@@ -612,13 +1916,13 @@
     "source_id": "ngmdb:43029",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.581,
+    "confidence": 0.684,
     "inferred": true,
     "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
     "quote": "Altamaha Formation",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null
+    "verification": "agree"
    },
    "age": {
     "value": "upper middle to lower upper Miocene",
@@ -812,13 +2116,13 @@
     "source_id": "ngmdb:43029",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.727,
+    "confidence": 0.855,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
     "quote": "Dry Branch Formation (upper Eocene) — Poorly sorted, pebbly, medium- to very",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
+    "verification": "agree",
     "normalized": {
      "canonical": "Dry Branch",
      "in_geolex": true,
@@ -946,13 +2250,13 @@
     "source_id": "ngmdb:43029",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.581,
+    "confidence": 0.684,
     "inferred": true,
     "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
     "quote": "Huber Formation",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null
+    "verification": "agree"
    },
    "age": {
     "value": "lower middle Eocene",
@@ -1044,13 +2348,13 @@
     "source_id": "ngmdb:43029",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.727,
+    "confidence": 0.855,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
     "quote": "Je _ | Ellenton Formation (lower Paleocene) — Pale gray, loose, poorly sorted, coarse-grained",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": null,
+    "verification": "agree",
     "normalized": {
      "canonical": "Ellenton",
      "in_geolex": true,
@@ -1075,13 +2379,13 @@
     "source_id": "ngmdb:43029",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.855,
+    "confidence": 0.727,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
     "quote": "Ellenton Formation (lower Paleocene)",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree",
+    "verification": null,
     "normalized": {
      "younger_ma": 62.666666666666664,
      "older_ma": 66.0,
@@ -1191,13 +2495,13 @@
     "source_id": "ngmdb:43029",
     "page": 1,
     "extraction_method": "llm",
-    "confidence": 0.855,
+    "confidence": 0.727,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1",
     "quote": "poorly sorted, very coarse-grained, micaceous, kaolinitic sands. The sands are typically",
     "quote_match": "exact",
     "text_method": "ocr",
-    "verification": "agree"
+    "verification": null
    },
    "description": {
     "value": "a bed or lens of pure kaolin about twenty feet thick at the top of the Upper Cretaceous section in the northwestern part of the map area, mined by Dixie Clay Company and J.M. Huber Corporation",
@@ -1248,6 +2552,2566 @@
      }
     }
    ]
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-112",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=529,451,33.5,16.5",
+    "quote": "2-112",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r1c1",
+     "box": [
+      878,
+      622,
+      945,
+      655
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1058,
+      902,
+      1125,
+      935
+     ],
+     "pt_box": [
+      529.0,
+      451.0,
+      562.5,
+      467.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed; the label 2-112 is printed at two places on the map face (near Glover Cem. and near Spiderweb); both recorded as printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-318",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=186,601,28,11.5",
+    "quote": "2-318",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r1c1",
+     "box": [
+      192,
+      922,
+      248,
+      945
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      372,
+      1202,
+      428,
+      1225
+     ],
+     "pt_box": [
+      186.0,
+      601.0,
+      214.0,
+      612.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-316",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=216,612.5,26,12.5",
+    "quote": "2-316",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r1c1",
+     "box": [
+      252,
+      945,
+      304,
+      970
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      432,
+      1225,
+      484,
+      1250
+     ],
+     "pt_box": [
+      216.0,
+      612.5,
+      242.0,
+      625.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-296",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=175,616.5,26,11.5",
+    "quote": "2-296",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r1c1",
+     "box": [
+      170,
+      953,
+      222,
+      976
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      350,
+      1233,
+      402,
+      1256
+     ],
+     "pt_box": [
+      175.0,
+      616.5,
+      201.0,
+      628.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-297",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=186,627.5,27,12.5",
+    "quote": "2-297",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r1c1",
+     "box": [
+      192,
+      975,
+      246,
+      1000
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      372,
+      1255,
+      426,
+      1280
+     ],
+     "pt_box": [
+      186.0,
+      627.5,
+      213.0,
+      640.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-315",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=186,642,35,17",
+    "quote": "2-315",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r1c1",
+     "box": [
+      192,
+      1004,
+      262,
+      1038
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      372,
+      1284,
+      442,
+      1318
+     ],
+     "pt_box": [
+      186.0,
+      642.0,
+      221.0,
+      659.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-324",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=889,357.5,36.5,20",
+    "quote": "2-324",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r1c2",
+     "box": [
+      672,
+      435,
+      745,
+      475
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1778,
+      715,
+      1851,
+      755
+     ],
+     "pt_box": [
+      889.0,
+      357.5,
+      925.5,
+      377.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-118",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=967,580,35,19",
+    "quote": "2-118",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r1c2",
+     "box": [
+      828,
+      880,
+      898,
+      918
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1934,
+      1160,
+      2004,
+      1198
+     ],
+     "pt_box": [
+      967.0,
+      580.0,
+      1002.0,
+      599.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-310",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=713,647.5,37.5,17.5",
+    "quote": "2-310",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r1c2",
+     "box": [
+      320,
+      1015,
+      395,
+      1050
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1426,
+      1295,
+      1501,
+      1330
+     ],
+     "pt_box": [
+      713.0,
+      647.5,
+      750.5,
+      665.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-311",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=700.5,680,42.5,20",
+    "quote": "2-311",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r1c2",
+     "box": [
+      295,
+      1080,
+      380,
+      1120
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1401,
+      1360,
+      1486,
+      1400
+     ],
+     "pt_box": [
+      700.5,
+      680.0,
+      743.0,
+      700.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-319",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=753,731.5,34,22.5",
+    "quote": "2-319",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r1c2",
+     "box": [
+      400,
+      1183,
+      468,
+      1228
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1506,
+      1463,
+      1574,
+      1508
+     ],
+     "pt_box": [
+      753.0,
+      731.5,
+      787.0,
+      754.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-120",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1064,230,45,20",
+    "quote": "2-120",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r1c3",
+     "box": [
+      95,
+      180,
+      185,
+      220
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2128,
+      460,
+      2218,
+      500
+     ],
+     "pt_box": [
+      1064.0,
+      230.0,
+      1109.0,
+      250.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-105",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1141.5,355,42.5,20",
+    "quote": "2-105",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r1c3",
+     "box": [
+      250,
+      430,
+      335,
+      470
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2283,
+      710,
+      2368,
+      750
+     ],
+     "pt_box": [
+      1141.5,
+      355.0,
+      1184.0,
+      375.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-103",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1339,367.5,42.5,22.5",
+    "quote": "2-103",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r1c3",
+     "box": [
+      645,
+      455,
+      730,
+      500
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2678,
+      735,
+      2763,
+      780
+     ],
+     "pt_box": [
+      1339.0,
+      367.5,
+      1381.5,
+      390.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-111",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=382.5,750.5,38.5,20",
+    "quote": "2-111",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r2c1",
+     "box": [
+      585,
+      88,
+      662,
+      128
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      765,
+      1501,
+      842,
+      1541
+     ],
+     "pt_box": [
+      382.5,
+      750.5,
+      421.0,
+      770.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-320",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=492.5,811.5,37.5,15",
+    "quote": "2-320",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r2c1",
+     "box": [
+      805,
+      210,
+      880,
+      240
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      985,
+      1623,
+      1060,
+      1653
+     ],
+     "pt_box": [
+      492.5,
+      811.5,
+      530.0,
+      826.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-110",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=179,950.5,36,16",
+    "quote": "2-110",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r2c1",
+     "box": [
+      178,
+      488,
+      250,
+      520
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      358,
+      1901,
+      430,
+      1933
+     ],
+     "pt_box": [
+      179.0,
+      950.5,
+      215.0,
+      966.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-309",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=429,1101.5,36,15",
+    "quote": "2-309",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r2c1",
+     "box": [
+      678,
+      790,
+      750,
+      820
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      858,
+      2203,
+      930,
+      2233
+     ],
+     "pt_box": [
+      429.0,
+      1101.5,
+      465.0,
+      1116.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-215",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=172.5,1124,38.5,17.5",
+    "quote": "2-215",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r2c1",
+     "box": [
+      165,
+      835,
+      242,
+      870
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      345,
+      2248,
+      422,
+      2283
+     ],
+     "pt_box": [
+      172.5,
+      1124.0,
+      211.0,
+      1141.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-323",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=202.5,1153,27.5,21",
+    "quote": "2-323",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r2c1",
+     "box": [
+      225,
+      893,
+      280,
+      935
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      405,
+      2306,
+      460,
+      2348
+     ],
+     "pt_box": [
+      202.5,
+      1153.0,
+      230.0,
+      1174.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-108",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=264,1244,38.5,15",
+    "quote": "2-108",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r2c1",
+     "box": [
+      348,
+      1075,
+      425,
+      1105
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      528,
+      2488,
+      605,
+      2518
+     ],
+     "pt_box": [
+      264.0,
+      1244.0,
+      302.5,
+      1259.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-298",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=164,1266.5,33.5,19",
+    "quote": "2-298",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r2c1",
+     "box": [
+      148,
+      1120,
+      215,
+      1158
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      328,
+      2533,
+      395,
+      2571
+     ],
+     "pt_box": [
+      164.0,
+      1266.5,
+      197.5,
+      1285.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-295",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=554,1245.5,35,15",
+    "quote": "2-295",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r2c1",
+     "box": [
+      928,
+      1078,
+      998,
+      1108
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1108,
+      2491,
+      1178,
+      2521
+     ],
+     "pt_box": [
+      554.0,
+      1245.5,
+      589.0,
+      1260.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-302",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=788,809,37.5,15",
+    "quote": "2-302",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r2c2",
+     "box": [
+      470,
+      205,
+      545,
+      235
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1576,
+      1618,
+      1651,
+      1648
+     ],
+     "pt_box": [
+      788.0,
+      809.0,
+      825.5,
+      824.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-119",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1020.5,821.5,35,13",
+    "quote": "2-119",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r2c2",
+     "box": [
+      935,
+      230,
+      1005,
+      256
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2041,
+      1643,
+      2111,
+      1669
+     ],
+     "pt_box": [
+      1020.5,
+      821.5,
+      1055.5,
+      834.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-293",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=616,904.5,37,18",
+    "quote": "2-293",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r2c2",
+     "box": [
+      126,
+      396,
+      200,
+      432
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1232,
+      1809,
+      1306,
+      1845
+     ],
+     "pt_box": [
+      616.0,
+      904.5,
+      653.0,
+      922.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-305",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=827,900.5,33,16",
+    "quote": "2-305",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r2c2",
+     "box": [
+      548,
+      388,
+      614,
+      420
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1654,
+      1801,
+      1720,
+      1833
+     ],
+     "pt_box": [
+      827.0,
+      900.5,
+      860.0,
+      916.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-102",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=852,907.5,35,15",
+    "quote": "2-102",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r2c2",
+     "box": [
+      598,
+      402,
+      668,
+      432
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1704,
+      1815,
+      1774,
+      1845
+     ],
+     "pt_box": [
+      852.0,
+      907.5,
+      887.0,
+      922.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-300",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=890.5,1035.5,36.5,15",
+    "quote": "2-300",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r2c2",
+     "box": [
+      675,
+      658,
+      748,
+      688
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1781,
+      2071,
+      1854,
+      2101
+     ],
+     "pt_box": [
+      890.5,
+      1035.5,
+      927.0,
+      1050.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-314",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=927,1092.5,36,17",
+    "quote": "2-314",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r2c2",
+     "box": [
+      748,
+      772,
+      820,
+      806
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1854,
+      2185,
+      1926,
+      2219
+     ],
+     "pt_box": [
+      927.0,
+      1092.5,
+      963.0,
+      1109.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-101",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=986,1124,34.5,16.5",
+    "quote": "2-101",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r2c2",
+     "box": [
+      866,
+      835,
+      935,
+      868
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1972,
+      2248,
+      2041,
+      2281
+     ],
+     "pt_box": [
+      986.0,
+      1124.0,
+      1020.5,
+      1140.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-292",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1479,764,37.5,18.5",
+    "quote": "2-292",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r2c3",
+     "box": [
+      925,
+      115,
+      1000,
+      152
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2958,
+      1528,
+      3033,
+      1565
+     ],
+     "pt_box": [
+      1479.0,
+      764.0,
+      1516.5,
+      782.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "SCWRC C-2",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1271.5,1002.5,55,22",
+    "quote": "SCWRC C-2",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r2c3",
+     "box": [
+      510,
+      592,
+      620,
+      636
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2543,
+      2005,
+      2653,
+      2049
+     ],
+     "pt_box": [
+      1271.5,
+      1002.5,
+      1326.5,
+      1024.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed; drill-hole symbol labelled SCWRC C-2 (not an SCGS 2-nnn number); label as printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-294",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1309,1021.5,32.5,20",
+    "quote": "2-294",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r2c3",
+     "box": [
+      585,
+      630,
+      650,
+      670
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2618,
+      2043,
+      2683,
+      2083
+     ],
+     "pt_box": [
+      1309.0,
+      1021.5,
+      1341.5,
+      1041.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-121",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1454,1099,37.5,18.5",
+    "quote": "2-121",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r2c3",
+     "box": [
+      875,
+      785,
+      950,
+      822
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2908,
+      2198,
+      2983,
+      2235
+     ],
+     "pt_box": [
+      1454.0,
+      1099.0,
+      1491.5,
+      1117.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-107",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1457.5,1119,37.5,17.5",
+    "quote": "2-107",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r2c3",
+     "box": [
+      882,
+      825,
+      957,
+      860
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2915,
+      2238,
+      2990,
+      2273
+     ],
+     "pt_box": [
+      1457.5,
+      1119.0,
+      1495.0,
+      1136.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-301",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1189,1214,37.5,17.5",
+    "quote": "2-301",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r2c3",
+     "box": [
+      345,
+      1015,
+      420,
+      1050
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2378,
+      2428,
+      2453,
+      2463
+     ],
+     "pt_box": [
+      1189.0,
+      1214.0,
+      1226.5,
+      1231.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-303",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1204,1226.5,37.5,15",
+    "quote": "2-303",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r2c3",
+     "box": [
+      375,
+      1040,
+      450,
+      1070
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2408,
+      2453,
+      2483,
+      2483
+     ],
+     "pt_box": [
+      1204.0,
+      1226.5,
+      1241.5,
+      1241.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-306",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1365.5,1235.5,41,18",
+    "quote": "2-306",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r2c3",
+     "box": [
+      698,
+      1058,
+      780,
+      1094
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2731,
+      2471,
+      2813,
+      2507
+     ],
+     "pt_box": [
+      1365.5,
+      1235.5,
+      1406.5,
+      1253.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-106",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1396.5,1235.5,36,18",
+    "quote": "2-106",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r2c3",
+     "box": [
+      760,
+      1058,
+      832,
+      1094
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2793,
+      2471,
+      2865,
+      2507
+     ],
+     "pt_box": [
+      1396.5,
+      1235.5,
+      1432.5,
+      1253.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed; 2-106 is also the sample label in the explanation; this is the symbol drawn on the map face"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-124",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=91.5,1358,36,17.5",
+    "quote": "2-124",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r3c1",
+     "box": [
+      3,
+      170,
+      75,
+      205
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      183,
+      2716,
+      255,
+      2751
+     ],
+     "pt_box": [
+      91.5,
+      1358.0,
+      127.5,
+      1375.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-321",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=227.5,1353,35,16",
+    "quote": "2-321",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r3c1",
+     "box": [
+      275,
+      160,
+      345,
+      192
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      455,
+      2706,
+      525,
+      2738
+     ],
+     "pt_box": [
+      227.5,
+      1353.0,
+      262.5,
+      1369.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-308",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=511.5,1482,36,13.5",
+    "quote": "2-308",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r3c1",
+     "box": [
+      843,
+      418,
+      915,
+      445
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1023,
+      2964,
+      1095,
+      2991
+     ],
+     "pt_box": [
+      511.5,
+      1482.0,
+      547.5,
+      1495.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-109",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=290,1552,37.5,15",
+    "quote": "2-109",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r3c1",
+     "box": [
+      400,
+      558,
+      475,
+      588
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      580,
+      3104,
+      655,
+      3134
+     ],
+     "pt_box": [
+      290.0,
+      1552.0,
+      327.5,
+      1567.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-117",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=135,1569,36,18",
+    "quote": "2-117",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r3c1",
+     "box": [
+      90,
+      592,
+      162,
+      628
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      270,
+      3138,
+      342,
+      3174
+     ],
+     "pt_box": [
+      135.0,
+      1569.0,
+      171.0,
+      1587.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-317",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=180,1571,35,17",
+    "quote": "2-317",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r3c1",
+     "box": [
+      180,
+      596,
+      250,
+      630
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      360,
+      3142,
+      430,
+      3176
+     ],
+     "pt_box": [
+      180.0,
+      1571.0,
+      215.0,
+      1588.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-322",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=265,1583,34,17.5",
+    "quote": "2-322",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r3c1",
+     "box": [
+      350,
+      620,
+      418,
+      655
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      530,
+      3166,
+      598,
+      3201
+     ],
+     "pt_box": [
+      265.0,
+      1583.0,
+      299.0,
+      1600.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-123",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=354,1772,35,16",
+    "quote": "2-123",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r3c1",
+     "box": [
+      528,
+      998,
+      598,
+      1030
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      708,
+      3544,
+      778,
+      3576
+     ],
+     "pt_box": [
+      354.0,
+      1772.0,
+      389.0,
+      1788.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-291",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=517.5,1788,35,14",
+    "quote": "2-291",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r3c1",
+     "box": [
+      855,
+      1030,
+      925,
+      1058
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1035,
+      3576,
+      1105,
+      3604
+     ],
+     "pt_box": [
+      517.5,
+      1788.0,
+      552.5,
+      1802.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-112",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=670.5,1359,37.5,16.5",
+    "quote": "2-112",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r3c2",
+     "box": [
+      235,
+      172,
+      310,
+      205
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1341,
+      2718,
+      1416,
+      2751
+     ],
+     "pt_box": [
+      670.5,
+      1359.0,
+      708.0,
+      1375.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed; the label 2-112 is printed at two places on the map face (near Glover Cem. and near Spiderweb); both recorded as printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-113",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=741,1380.5,34.5,20",
+    "quote": "2-113",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r3c2",
+     "box": [
+      376,
+      215,
+      445,
+      255
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1482,
+      2761,
+      1551,
+      2801
+     ],
+     "pt_box": [
+      741.0,
+      1380.5,
+      775.5,
+      1400.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-116",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=712,1397,37,18",
+    "quote": "2-116",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r3c2",
+     "box": [
+      318,
+      248,
+      392,
+      284
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1424,
+      2794,
+      1498,
+      2830
+     ],
+     "pt_box": [
+      712.0,
+      1397.0,
+      749.0,
+      1415.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-115",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=905.5,1355.5,38.5,17.5",
+    "quote": "2-115",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r3c2",
+     "box": [
+      705,
+      165,
+      782,
+      200
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1811,
+      2711,
+      1888,
+      2746
+     ],
+     "pt_box": [
+      905.5,
+      1355.5,
+      944.0,
+      1373.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-114",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=983,1709,38.5,17.5",
+    "quote": "2-114",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r3c2",
+     "box": [
+      860,
+      872,
+      937,
+      907
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      1966,
+      3418,
+      2043,
+      3453
+     ],
+     "pt_box": [
+      983.0,
+      1709.0,
+      1021.5,
+      1726.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-325",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1266.5,1335.5,37.5,18.5",
+    "quote": "2-325",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r3c3",
+     "box": [
+      500,
+      125,
+      575,
+      162
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2533,
+      2671,
+      2608,
+      2708
+     ],
+     "pt_box": [
+      1266.5,
+      1335.5,
+      1304.0,
+      1354.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-100",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1099,1440.5,38.5,18.5",
+    "quote": "2-100",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r3c3",
+     "box": [
+      165,
+      335,
+      242,
+      372
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2198,
+      2881,
+      2275,
+      2918
+     ],
+     "pt_box": [
+      1099.0,
+      1440.5,
+      1137.5,
+      1459.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-307",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1289,1448,38.5,16",
+    "quote": "2-307",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r3c3",
+     "box": [
+      545,
+      350,
+      622,
+      382
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2578,
+      2896,
+      2655,
+      2928
+     ],
+     "pt_box": [
+      1289.0,
+      1448.0,
+      1327.5,
+      1464.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-304",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1130.5,1478,38.5,16",
+    "quote": "2-304",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r3c3",
+     "box": [
+      228,
+      410,
+      305,
+      442
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2261,
+      2956,
+      2338,
+      2988
+     ],
+     "pt_box": [
+      1130.5,
+      1478.0,
+      1169.0,
+      1494.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-290",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1461.5,1540.5,37.5,21",
+    "quote": "2-290",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r3c3",
+     "box": [
+      890,
+      535,
+      965,
+      577
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2923,
+      3081,
+      2998,
+      3123
+     ],
+     "pt_box": [
+      1461.5,
+      1540.5,
+      1499.0,
+      1561.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-326",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1070.5,1587,38.5,16",
+    "quote": "2-326",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r3c3",
+     "box": [
+      108,
+      628,
+      185,
+      660
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2141,
+      3174,
+      2218,
+      3206
+     ],
+     "pt_box": [
+      1070.5,
+      1587.0,
+      1109.0,
+      1603.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-312",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1064,1733,36.5,17.5",
+    "quote": "2-312",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r3c3",
+     "box": [
+      95,
+      920,
+      168,
+      955
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2128,
+      3466,
+      2201,
+      3501
+     ],
+     "pt_box": [
+      1064.0,
+      1733.0,
+      1100.5,
+      1750.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-313",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1091.5,1748,36,17.5",
+    "quote": "2-313",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r3c3",
+     "box": [
+      150,
+      950,
+      222,
+      985
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2183,
+      3496,
+      2255,
+      3531
+     ],
+     "pt_box": [
+      1091.5,
+      1748.0,
+      1127.5,
+      1765.5
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-104",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1480.5,1785.5,33.5,17.5",
+    "quote": "2-104",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r3c3",
+     "box": [
+      928,
+      1025,
+      995,
+      1060
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2961,
+      3571,
+      3028,
+      3606
+     ],
+     "pt_box": [
+      1480.5,
+      1785.5,
+      1514.0,
+      1803.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed; two adjacent drill-hole symbols in the southeast corner are both labelled 2-104; both recorded as printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-104",
+    "source_id": "ngmdb:43029",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43029_1#page=1&viewrect=1497.5,1798,29,21",
+    "quote": "2-104",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop90_140_1540_1900-r3c3",
+     "box": [
+      962,
+      1050,
+      1020,
+      1092
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      2995,
+      3596,
+      3053,
+      3638
+     ],
+     "pt_box": [
+      1497.5,
+      1798.0,
+      1526.5,
+      1819.0
+     ],
+     "pdf_sha256": "40c35200fe4d65197c98e123bc97f844dacec20020f4bdd56d0d4a8ac189583b"
+    },
+    "note": "SCGS drill hole symbol and label on the map face (page image); no log printed; two adjacent drill-hole symbols in the southeast corner are both labelled 2-104; both recorded as printed"
+   }
   }
  ],
  "structures": [],
