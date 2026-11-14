@@ -194,3 +194,10 @@ test('correlated fields are marked inferred and the card shows no record ids', (
     c.references.map((r) => r.citation)]);
   assert.doesNotMatch(shown, /\b(ngmdb|usgs-sgmc):?\d*/);
 });
+
+test('mergedCard shows a GeoMaterial term with quotes as the GeMS vocabulary writes it', () => {
+  const term = '"Made" or human-engineered land';
+  const c = mergedCard({ props: POLY, unit: { ...UNIT, geomaterial: term }, sources: SOURCES, records: RECORDS, lng: -79.95, lat: 32.8 });
+  const rows = Object.fromEntries(c.rows.map((r) => [r.label, r]));
+  assert.equal(rows.Geomaterial.value, term);
+});

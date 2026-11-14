@@ -46,7 +46,7 @@ from model.units import Lexicon
 ROOT = Path(__file__).resolve().parent.parent
 CACHE = ROOT / ".cache"
 OUT = ROOT / "web" / "data" / "geology"
-NORMALIZE_VERSION = 4
+NORMALIZE_VERSION = 5
 
 SCGS_FTP = "ftp://ftpdata.dnr.sc.gov/gisdata/glc/"
 # Every SCGS FTP quadrangle package is 1:24,000 (SCGS digital-data table); drafts have no catalog scale.

@@ -113,3 +113,24 @@ def test_sgmc_age_text_lists_the_younger_age_first():
     assert sources._sgmc_age({"age_min": "Phanerozoic - Cenozoic - Quaternary - Pleistocene",
                               "age_max": "Phanerozoic - Cenozoic - Quaternary - Pleistocene"}) == "Pleistocene"
     assert sources._sgmc_age({"unit_age": "Miocene", "age_min": "x", "age_max": "y"}) == "Miocene"
+
+
+def test_gems_geomaterial_with_doubled_quotes_reads_as_the_vocabulary_term():
+    import io
+    import zipfile
+
+    from merge import classes
+    from model import gisio
+
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w") as zf:  # invented two-row table in the malformed export style
+        zf.writestr("pkg/DescriptionOfMapUnits.csv",
+                    'HKey,MapUnit,Name,Age,RGB,GeoMat\r\n'
+                    '01-01,af,Artificial fill,Holocene,"153,179,153",""Made"" or human-engineered land\r\n'
+                    '01-02,Qm,Marsh deposits,Holocene,,Peat and muck\r\n')
+    buf.seek(0)
+    units = sources.gems_units(gisio.zip_csv(zipfile.ZipFile(buf), "DescriptionOfMapUnits"))
+    assert units["af"]["geomaterial"] == '"Made" or human-engineered land'
+    assert units["Qm"]["geomaterial"] == "Peat and muck"
+    assert classes.material_class(units["af"]) == "Artificial fill"
+    assert score.layer(units["af"]) == "surficial"
