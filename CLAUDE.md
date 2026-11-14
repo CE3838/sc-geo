@@ -117,9 +117,13 @@ Guidance for Claude (and humans) working in this repository.
   the NGS VERTCON grid that `python -m harvest.vertcon` downloads once into
   `.cache/grids/`); `python -m extract.agreement --write` raises the
   confidence of surface elevations that independent sources agree on, and
-  `model/surfaces.py` interpolates a surface from NAVD88 points (kriging,
-  else natural neighbour/IDW) with an uncertainty for every estimate and no
-  estimate beyond a maximum distance.
+  `model/surfaces.py` interpolates a surface from NAVD88 points with an
+  uncertainty for every estimate and no estimate beyond a maximum distance.
+  It picks ordinary kriging, trend kriging (a planar regional dip) or
+  natural neighbour/IDW by the lowest leave-one-out error, with no
+  fit-quality cutoff; `model/stack.py` keeps unit tops in geologic-age order
+  (Geolex ages, then superposition in logged holes) so layers never cross,
+  and flags every moved value with the reason.
 - Goal: merge all sources into one GeMS-aligned result. Where maps overlap,
   the most detailed and recent map wins; confidence comes from scale, the
   mapper's identity confidence, agreement among other maps and published
