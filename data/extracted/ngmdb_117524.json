@@ -8,7 +8,7 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-11-13T23:58:22+00:00",
- "updated_at": "2026-11-13T23:58:22+00:00",
+ "updated_at": "2026-11-14T11:56:14+00:00",
  "reader": "Claude, Claude Code session 2026-11-13",
  "packets": [
   "packet-01"
@@ -29,13 +29,13 @@
   }
  ],
  "summary": {
-  "stored": 58,
+  "stored": 59,
   "quote_match": {
-   "image": 14,
+   "image": 15,
    "exact": 44
   },
   "verification": {
-   "agree": 19
+   "agree": 20
   },
   "inferred": 7
  },
@@ -59,6 +59,1444 @@
    "image": 14,
    "image_not_verified": 0,
    "review_items": 1
+  },
+  {
+   "at": "2026-11-14T11:56:14+00:00",
+   "packets": [
+    "reread-01"
+   ],
+   "reader": "Claude, Claude Code session 2026-11-13",
+   "values": 59,
+   "stored": 59,
+   "exact": 44,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 20,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 15,
+   "image_not_verified": 0,
+   "review_items": 0,
+   "reread": {
+    "packets": [
+     "reread-01"
+    ],
+    "pages": [
+     1
+    ],
+    "reason": "record Qcb map symbol from the map image",
+    "queue_ids": []
+   }
+  }
+ ],
+ "history": [
+  {
+   "at": "2026-11-14T11:56:14+00:00",
+   "reason": "record Qcb map symbol from the map image",
+   "packets": [
+    "reread-01"
+   ],
+   "pages": [
+    1
+   ],
+   "replaced": [
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "dg",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "at om \\ SS Pi ) %, x ‘ fe : dg Disturbed Ground — Any area of excavation for mining or borrow pits.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "name": {
+       "value": "Disturbed ground",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "at om \\ SS Pi ) %, x ‘ fe : dg Disturbed Ground — Any area of excavation for mining or borrow pits.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "me",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "me",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "symbol from the map face"
+      },
+      "name": {
+       "value": "Moved earth",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "Moved Earth (Holocene) — Earth material moved in bulk by humans. Color is highly",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Holocene",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "Moved Earth (Holocene) — Earth material moved in bulk by humans. Color is highly",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.0117,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "thickness": {
+       "value": "up to 24 ft",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "variable and dependent on source location. Thickness up to 24 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "units": "ft",
+       "normalized": {
+        "min_ft": null,
+        "max_ft": 24.0,
+        "unit": "ft",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "QHfw",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.684,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "QHfw clast-supported sand with variable mineral composition. The sand is sourced from the underlying",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "note": "placement of symbol line uncertain in OCR"
+      },
+      "name": {
+       "value": "Freshwater marsh and swamp deposits",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "~ A ys ae e, ‘ NPdu on Freshwater marsh and swamp deposits (Holocene) — Silty clay and peat, black (N1),",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Holocene",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "~ A ys ae e, ‘ NPdu on Freshwater marsh and swamp deposits (Holocene) — Silty clay and peat, black (N1),",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.0117,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "black silty clay and peat in stream valleys and low areas",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "~ A ys ae e, ‘ NPdu on Freshwater marsh and swamp deposits (Holocene) — Silty clay and peat, black (N1),",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "thickness": {
+       "value": "1 to 12 ft",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "=a oe Ss > occur in areas of poor drainage, such as the slow drainages of a stream system. Thickness | to 12",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "units": "ft",
+       "note": "OCR '|' read as 1",
+       "normalized": {
+        "min_ft": 1.0,
+        "max_ft": 12.0,
+        "unit": "ft",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "name": {
+       "value": "Carolina bay deposits",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "Py Carolina bay deposits (upper Pleistocene to Holocene) — Quartz sand, light gray",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "upper Pleistocene to Holocene",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "Py Carolina bay deposits (upper Pleistocene to Holocene) — Quartz sand, light gray",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.129,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "thickness": {
+       "value": "1 to 6 ft",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "Qnfert Thickness is | to 6 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "units": "ft",
+       "note": "OCR '|' read as 1",
+       "normalized": {
+        "min_ft": 1.0,
+        "max_ft": 6.0,
+        "unit": "ft",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "Qcbsr",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "D> Qcbsr",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      },
+      "name": {
+       "value": "Carolina bay sand rims",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "\\ % E) \\ \\ - oy Vz ‘a ocber Carolina bay sand rims (upper Pleistocene to Holocene) — Sand, light gray (N7),",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "upper Pleistocene to Holocene",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "\\ % E) \\ \\ - oy Vz ‘a ocber Carolina bay sand rims (upper Pleistocene to Holocene) — Sand, light gray (N7),",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 0.129,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "thickness": {
+       "value": "maximum 12 ft",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "5 PEtr \\ / q \\ ) thickness is 12 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "units": "ft",
+       "normalized": {
+        "min_ft": null,
+        "max_ft": 12.0,
+        "unit": "ft",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "Qnferf",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "Qnferf",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "OCR variants 'Qnfert', 'Onfert'"
+      },
+      "name": {
+       "value": "North Fork Edisto River floodplain",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "QHiw NN rSS~ i= \\ NPdu s ‘Onfert North Fork Edisto River floodplain (Pleistocene to Holocene) — Peat, clay, silty clay",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "age": {
+       "value": "Pleistocene to Holocene",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "QHiw NN rSS~ i= \\ NPdu s ‘Onfert North Fork Edisto River floodplain (Pleistocene to Holocene) — Peat, clay, silty clay",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 0.0,
+        "older_ma": 2.58,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "thickness": {
+       "value": "1 to 10 ft",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "is historically meandering river system. Thickness is | to 10 ft.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "units": "ft",
+       "note": "OCR '|' read as 1",
+       "normalized": {
+        "min_ft": 1.0,
+        "max_ft": 10.0,
+        "unit": "ft",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "NPdu",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "3799 NPdu | Duplin Formation (Pliocene):",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "name": {
+       "value": "Duplin Formation",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "3799 NPdu | Duplin Formation (Pliocene):",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Duplin",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "Pliocene",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "3799 NPdu | Duplin Formation (Pliocene):",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree",
+       "normalized": {
+        "younger_ma": 2.58,
+        "older_ma": 5.333,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "lithology": {
+       "value": "upper sandy clay to clayey sand with iron nodules; middle sand and silty sand; lower fossiliferous sandy clay with bivalves, phosphate nodules and rare shark teeth",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "sandy clay with scattered broken and intact bivalve shells, medium- grained to pebble-sized",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "fossils": {
+       "value": "bivalve shells, phosphatized shark teeth",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "sandy clay with scattered broken and intact bivalve shells, medium- grained to pebble-sized",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "NMal",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "NMal",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "name": {
+       "value": "Altamaha Formation",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "Altamaha Formation (Middle to Upper Miocene) — Clayey Sand, weak red (10R 5/3)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Altamaha",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "Middle to Upper Miocene",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "Altamaha Formation (Middle to Upper Miocene) — Clayey Sand, weak red (10R 5/3)",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 5.333,
+        "older_ma": 11.63,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "thickness": {
+       "value": "10 to 45 ft",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "Thickness varies from 10 to 45 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "units": "ft",
+       "normalized": {
+        "min_ft": 10.0,
+        "max_ft": 45.0,
+        "unit": "ft",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "PEtr",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "PEtr",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "name": {
+       "value": "Tobacco Road Sand",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "s - r— 25 = Tobacco Road Sand (Upper Eocene) — Sand to sandy clay, yellowish brown (1OYR",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Tobacco Road",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "Upper Eocene",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "s - r— 25 = Tobacco Road Sand (Upper Eocene) — Sand to sandy clay, yellowish brown (1OYR",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 33.9,
+        "older_ma": 37.71,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "thickness": {
+       "value": "20 to 35 ft",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "fine- to fine-grained opaque minerals. Thickness varies from is 20 to 35 fi.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "units": "ft",
+       "normalized": {
+        "min_ft": 20.0,
+        "max_ft": 35.0,
+        "unit": "ft",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "PEodb",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "= Orangeburg District beds (Upper Middle Eocene) — Sand to clayey sand, strong",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "symbol PEodb read on the map face; not in OCR"
+      },
+      "name": {
+       "value": "Orangeburg District beds",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "= Orangeburg District beds (Upper Middle Eocene) — Sand to clayey sand, strong",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "Orangeburg District",
+        "in_geolex": true,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "Upper Middle Eocene",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "= Orangeburg District beds (Upper Middle Eocene) — Sand to clayey sand, strong",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 37.71,
+        "older_ma": 47.8,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "thickness": {
+       "value": "10 to 60 ft",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "3S 79 ity ~Y quartz granules, and pebbles. Thickness varies from 10 to 60 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "units": "ft",
+       "normalized": {
+        "min_ft": 10.0,
+        "max_ft": 60.0,
+        "unit": "ft",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "PEmcc",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.855,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "PEmcc",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": "agree"
+      },
+      "name": {
+       "value": "McBean Formation, Caw Caw Swamp member",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "® ee lao aa. PEmoe McBean Formation- Caw Caw Swamp member (Middle Eocene) — Clay, sandy clay,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "canonical": "caw caw swamp",
+        "in_geolex": false,
+        "inferred": true
+       }
+      },
+      "age": {
+       "value": "Middle Eocene",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "® ee lao aa. PEmoe McBean Formation- Caw Caw Swamp member (Middle Eocene) — Clay, sandy clay,",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "normalized": {
+        "younger_ma": 37.71,
+        "older_ma": 47.8,
+        "inferred": true,
+        "source": "International Chronostratigraphic Chart v2023/09"
+       }
+      },
+      "thickness": {
+       "value": "1 to 20 ft",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "J) Thickness varies from | to 20 feet.",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "units": "ft",
+       "note": "OCR '|' read as 1",
+       "normalized": {
+        "min_ft": 1.0,
+        "max_ft": 20.0,
+        "unit": "ft",
+        "approximate": false
+       }
+      }
+     }
+    },
+    {
+     "section": "observations",
+     "record": {
+      "kind": "well",
+      "label": {
+       "value": "CORD-7",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1#page=1&viewrect=87,129.6,37.2,15",
+       "quote": "CORD-7",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-120dpi-crop85_130_1521_1782-r1c1",
+        "box": [
+         4,
+         0,
+         66,
+         25
+        ],
+        "dpi": 120,
+        "page_px_box": [
+         145,
+         216,
+         207,
+         241
+        ],
+        "pt_box": [
+         87.0,
+         129.6,
+         124.2,
+         144.6
+        ],
+        "pdf_sha256": "d6526917329792e36f32610c044c46b21864afee722530d689f0327aab11f6b9"
+       },
+       "note": "SCGS well log location labelled on the map face; logs on file at SCGS, not printed"
+      }
+     }
+    },
+    {
+     "section": "observations",
+     "record": {
+      "kind": "well",
+      "label": {
+       "value": "CORD-10",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1#page=1&viewrect=310.8,444.6,43.8,15.6",
+       "quote": "CORD-10",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-120dpi-crop85_130_1521_1782-r1c1",
+        "box": [
+         377,
+         525,
+         450,
+         551
+        ],
+        "dpi": 120,
+        "page_px_box": [
+         518,
+         741,
+         591,
+         767
+        ],
+        "pt_box": [
+         310.8,
+         444.6,
+         354.6,
+         460.2
+        ],
+        "pdf_sha256": "d6526917329792e36f32610c044c46b21864afee722530d689f0327aab11f6b9"
+       },
+       "note": "SCGS well log location labelled on the map face; logs on file at SCGS, not printed"
+      }
+     }
+    },
+    {
+     "section": "observations",
+     "record": {
+      "kind": "well",
+      "label": {
+       "value": "CORD-5",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1#page=1&viewrect=645,543,40.8,20.4",
+       "quote": "CORD-5",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-120dpi-crop85_130_1521_1782-r1c2",
+        "box": [
+         176,
+         689,
+         244,
+         723
+        ],
+        "dpi": 120,
+        "page_px_box": [
+         1075,
+         905,
+         1143,
+         939
+        ],
+        "pt_box": [
+         645.0,
+         543.0,
+         685.8,
+         563.4
+        ],
+        "pdf_sha256": "d6526917329792e36f32610c044c46b21864afee722530d689f0327aab11f6b9"
+       },
+       "note": "SCGS well log location labelled on the map face; logs on file at SCGS, not printed"
+      }
+     }
+    },
+    {
+     "section": "observations",
+     "record": {
+      "kind": "well",
+      "label": {
+       "value": "CORD-8",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1#page=1&viewrect=1146.6,318.6,33.6,20.4",
+       "quote": "CORD-8",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-120dpi-crop85_130_1521_1782-r1c3",
+        "box": [
+         254,
+         315,
+         310,
+         349
+        ],
+        "dpi": 120,
+        "page_px_box": [
+         1911,
+         531,
+         1967,
+         565
+        ],
+        "pt_box": [
+         1146.6,
+         318.6,
+         1180.2,
+         339.0
+        ],
+        "pdf_sha256": "d6526917329792e36f32610c044c46b21864afee722530d689f0327aab11f6b9"
+       },
+       "note": "SCGS well log location labelled on the map face; logs on file at SCGS, not printed"
+      }
+     }
+    },
+    {
+     "section": "observations",
+     "record": {
+      "kind": "well",
+      "label": {
+       "value": "CORD-6",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1#page=1&viewrect=1336.2,511.8,40.8,16.8",
+       "quote": "CORD-6",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-120dpi-crop85_130_1521_1782-r1c3",
+        "box": [
+         570,
+         637,
+         638,
+         665
+        ],
+        "dpi": 120,
+        "page_px_box": [
+         2227,
+         853,
+         2295,
+         881
+        ],
+        "pt_box": [
+         1336.2,
+         511.8,
+         1377.0,
+         528.6
+        ],
+        "pdf_sha256": "d6526917329792e36f32610c044c46b21864afee722530d689f0327aab11f6b9"
+       },
+       "note": "SCGS well log location labelled on the map face; logs on file at SCGS, not printed"
+      }
+     }
+    },
+    {
+     "section": "observations",
+     "record": {
+      "kind": "well",
+      "label": {
+       "value": "CORD-4",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1#page=1&viewrect=761.4,807,39.6,17.4",
+       "quote": "CORD-4",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-120dpi-crop85_130_1521_1782-r2c2",
+        "box": [
+         370,
+         251,
+         436,
+         280
+        ],
+        "dpi": 120,
+        "page_px_box": [
+         1269,
+         1345,
+         1335,
+         1374
+        ],
+        "pt_box": [
+         761.4,
+         807.0,
+         801.0,
+         824.4
+        ],
+        "pdf_sha256": "d6526917329792e36f32610c044c46b21864afee722530d689f0327aab11f6b9"
+       },
+       "note": "SCGS well log location labelled on the map face; logs on file at SCGS, not printed"
+      }
+     }
+    },
+    {
+     "section": "observations",
+     "record": {
+      "kind": "well",
+      "label": {
+       "value": "CORD-1",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1#page=1&viewrect=799.8,1049.4,40.8,21.6",
+       "quote": "CORD-1",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-120dpi-crop85_130_1521_1782-r2c2",
+        "box": [
+         434,
+         655,
+         502,
+         691
+        ],
+        "dpi": 120,
+        "page_px_box": [
+         1333,
+         1749,
+         1401,
+         1785
+        ],
+        "pt_box": [
+         799.8,
+         1049.4,
+         840.6,
+         1071.0
+        ],
+        "pdf_sha256": "d6526917329792e36f32610c044c46b21864afee722530d689f0327aab11f6b9"
+       },
+       "note": "SCGS well log location labelled on the map face; logs on file at SCGS, not printed"
+      }
+     }
+    },
+    {
+     "section": "observations",
+     "record": {
+      "kind": "well",
+      "label": {
+       "value": "CORD-14",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1#page=1&viewrect=1402.2,1012.2,44.4,18",
+       "quote": "CORD-14",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-120dpi-crop85_130_1521_1782-r2c3",
+        "box": [
+         680,
+         593,
+         754,
+         623
+        ],
+        "dpi": 120,
+        "page_px_box": [
+         2337,
+         1687,
+         2411,
+         1717
+        ],
+        "pt_box": [
+         1402.2,
+         1012.2,
+         1446.6,
+         1030.2
+        ],
+        "pdf_sha256": "d6526917329792e36f32610c044c46b21864afee722530d689f0327aab11f6b9"
+       },
+       "text_match": true,
+       "note": "SCGS well log location labelled on the map face; logs on file at SCGS, not printed"
+      }
+     }
+    },
+    {
+     "section": "observations",
+     "record": {
+      "kind": "well",
+      "label": {
+       "value": "CORD-12",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1#page=1&viewrect=1474.2,1003.2,46.8,17.4",
+       "quote": "CORD-12",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-120dpi-crop85_130_1521_1782-r2c3",
+        "box": [
+         800,
+         578,
+         878,
+         607
+        ],
+        "dpi": 120,
+        "page_px_box": [
+         2457,
+         1672,
+         2535,
+         1701
+        ],
+        "pt_box": [
+         1474.2,
+         1003.2,
+         1521.0,
+         1020.6
+        ],
+        "pdf_sha256": "d6526917329792e36f32610c044c46b21864afee722530d689f0327aab11f6b9"
+       },
+       "note": "SCGS well log location labelled on the map face; logs on file at SCGS, not printed"
+      }
+     }
+    },
+    {
+     "section": "observations",
+     "record": {
+      "kind": "well",
+      "label": {
+       "value": "CORD-11",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1#page=1&viewrect=485.4,1296.6,46.8,16.8",
+       "quote": "CORD-11",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-120dpi-crop85_130_1521_1782-r3c1",
+        "box": [
+         668,
+         189,
+         746,
+         217
+        ],
+        "dpi": 120,
+        "page_px_box": [
+         809,
+         2161,
+         887,
+         2189
+        ],
+        "pt_box": [
+         485.4,
+         1296.6,
+         532.2,
+         1313.4
+        ],
+        "pdf_sha256": "d6526917329792e36f32610c044c46b21864afee722530d689f0327aab11f6b9"
+       },
+       "note": "SCGS well log location labelled on the map face; logs on file at SCGS, not printed"
+      }
+     }
+    },
+    {
+     "section": "observations",
+     "record": {
+      "kind": "well",
+      "label": {
+       "value": "CORD-13",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1#page=1&viewrect=132.6,1479,43.2,18",
+       "quote": "CORD-13",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-120dpi-crop85_130_1521_1782-r3c1",
+        "box": [
+         80,
+         493,
+         152,
+         523
+        ],
+        "dpi": 120,
+        "page_px_box": [
+         221,
+         2465,
+         293,
+         2495
+        ],
+        "pt_box": [
+         132.6,
+         1479.0,
+         175.8,
+         1497.0
+        ],
+        "pdf_sha256": "d6526917329792e36f32610c044c46b21864afee722530d689f0327aab11f6b9"
+       },
+       "text_match": true,
+       "note": "SCGS well log location labelled on the map face; logs on file at SCGS, not printed"
+      }
+     }
+    },
+    {
+     "section": "observations",
+     "record": {
+      "kind": "well",
+      "label": {
+       "value": "CORD-2",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1#page=1&viewrect=587.4,1678.8,38.4,18.6",
+       "quote": "CORD-2",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-120dpi-crop85_130_1521_1782-r3c2",
+        "box": [
+         80,
+         826,
+         144,
+         857
+        ],
+        "dpi": 120,
+        "page_px_box": [
+         979,
+         2798,
+         1043,
+         2829
+        ],
+        "pt_box": [
+         587.4,
+         1678.8,
+         625.8,
+         1697.4
+        ],
+        "pdf_sha256": "d6526917329792e36f32610c044c46b21864afee722530d689f0327aab11f6b9"
+       },
+       "text_match": true,
+       "note": "SCGS well log location labelled on the map face; logs on file at SCGS, not printed"
+      }
+     }
+    },
+    {
+     "section": "observations",
+     "record": {
+      "kind": "well",
+      "label": {
+       "value": "CORD-3",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1#page=1&viewrect=689.4,1471.8,33.6,18",
+       "quote": "CORD-3",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-120dpi-crop85_130_1521_1782-r3c2",
+        "box": [
+         250,
+         481,
+         306,
+         511
+        ],
+        "dpi": 120,
+        "page_px_box": [
+         1149,
+         2453,
+         1205,
+         2483
+        ],
+        "pt_box": [
+         689.4,
+         1471.8,
+         723.0,
+         1489.8
+        ],
+        "pdf_sha256": "d6526917329792e36f32610c044c46b21864afee722530d689f0327aab11f6b9"
+       },
+       "note": "SCGS well log location labelled on the map face; logs on file at SCGS, not printed"
+      }
+     }
+    },
+    {
+     "section": "observations",
+     "record": {
+      "kind": "well",
+      "label": {
+       "value": "CORD-9",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1#page=1&viewrect=1396.2,1756.2,42,18",
+       "quote": "CORD-9",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-120dpi-crop85_130_1521_1782-r3c3",
+        "box": [
+         670,
+         955,
+         740,
+         985
+        ],
+        "dpi": 120,
+        "page_px_box": [
+         2327,
+         2927,
+         2397,
+         2957
+        ],
+        "pt_box": [
+         1396.2,
+         1756.2,
+         1438.2,
+         1774.2
+        ],
+        "pdf_sha256": "d6526917329792e36f32610c044c46b21864afee722530d689f0327aab11f6b9"
+       },
+       "note": "SCGS well log location labelled on the map face; logs on file at SCGS, not printed"
+      }
+     }
+    },
+    {
+     "section": "references",
+     "record": {
+      "citation": {
+       "value": "Moore C.R., Brooks M.J., Mallinson D.J., Parham P.R., Ivester A.H., and Feathers J.K., 2016",
+       "source_id": "ngmdb:117524",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.65,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1",
+       "quote": "Moore C.R., Brooks M.J., Mallinson D.J., Parham P.R., Ivester A.H., and Feathers J.K., 2016, The",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "first line of the citation"
+      }
+     }
+    }
+   ]
   }
  ],
  "units": [
@@ -241,6 +1679,44 @@
    }
   },
   {
+   "map_symbol": {
+    "value": "Qcb",
+    "source_id": "ngmdb:117524",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/117000_117999/117524_1#page=1&viewrect=466.2,258.6,27.6,15",
+    "quote": "Py Carolina bay deposits (upper Pleistocene to Holocene) — Quartz sand, light gray",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-120dpi-crop85_130_1521_1782-r1c1",
+     "box": [
+      636,
+      215,
+      682,
+      240
+     ],
+     "dpi": 120,
+     "page_px_box": [
+      777,
+      431,
+      823,
+      456
+     ],
+     "pt_box": [
+      466.2,
+      258.6,
+      493.8,
+      273.6
+     ],
+     "pdf_sha256": "d6526917329792e36f32610c044c46b21864afee722530d689f0327aab11f6b9"
+    },
+    "text_match": true,
+    "note": "symbol read on the map face"
+   },
    "name": {
     "value": "Carolina bay deposits",
     "source_id": "ngmdb:117524",
