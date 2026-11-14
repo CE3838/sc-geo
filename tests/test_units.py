@@ -147,3 +147,25 @@ def test_unit_age_from_the_lexicon_is_inferred_and_cited():
     assert units.unit_age("Marks Head Formation", lex)["name"] == "Marks Head"
     assert units.unit_age("old name", lex)["name"] == "Marks Head"   # abandoned names follow the replacement
     assert units.unit_age("nowhere", lex) is None
+
+
+def test_printed_misspelling_resolves_to_lexicon_name():
+    from model.units import Lexicon, name_key, SPELLINGS
+    assert SPELLINGS.get("alamaha") == "altamaha"
+    assert name_key("Alamaha Formation") == ("altamaha", "formation")
+    lex = Lexicon([{"name": "Altamaha", "age": "Miocene"}])
+    assert lex.canonical("Alamaha Formation") == "Altamaha"
+
+
+def test_spellings_file_cites_each_correction():
+    import json
+    from pathlib import Path
+    data = json.loads((Path(__file__).resolve().parent.parent / "config" / "unit_name_spellings.json").read_text())
+    for item in data["spellings"]:
+        assert item["printed"] and item["name"] and item["seen_in"] and item["reason"]
+
+
+def test_extract_prompt_keeps_non_detects():
+    from pathlib import Path
+    text = (Path(__file__).resolve().parent.parent / "extract" / "prompts" / "extract.md").read_text()
+    assert "non-detects" in text and "never skip them" in text

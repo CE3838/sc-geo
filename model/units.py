@@ -216,9 +216,24 @@ GENERIC = {
 }
 
 
+def _load_spellings() -> dict[str, str]:
+    """Printed misspellings of unit names (config/unit_name_spellings.json), lowercase printed -> name."""
+    import json
+    from pathlib import Path
+    path = Path(__file__).resolve().parent.parent / "config" / "unit_name_spellings.json"
+    try:
+        items = json.loads(path.read_text())["spellings"]
+    except (OSError, ValueError, KeyError):
+        return {}
+    return {i["printed"].lower(): i["name"].lower() for i in items}
+
+
+SPELLINGS = _load_spellings()
+
+
 def _words(text: str) -> list[str]:
     words = re.findall(r"[a-z][a-z'’]*", text.lower().replace("’", "'"))
-    return [_ABBREV.get(w, _PLURALS.get(w, w)) for w in words]
+    return [_ABBREV.get(w, _PLURALS.get(w, SPELLINGS.get(w, w))) for w in words]
 
 
 @lru_cache(maxsize=65536)

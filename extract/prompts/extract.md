@@ -180,7 +180,10 @@ inferred, only when it is unambiguous -- do not normalize it yourself),
 the column or table header, quoted from it; if no units are printed
 anywhere, leave `units` out: our code sends the value to review, and units
 are never guessed), `qualifier` (a remark printed in its own column or
-next to the value: "<", ">", "ND", "E"), `fraction` (dissolved, total,
+next to the value: "<", ">", "ND", "E"; record non-detects of every
+parameter, organic compounds included, as values with qualifier "<" and the
+printed limit, or "ND" when no limit is printed -- never skip them),
+`fraction` (dissolved, total,
 filtered), `method` (the field or laboratory method, or the kind of
 hydraulic test: "pumping test", "slug test"), `lab`, and `source_table`
 ("Table 4"). A table of many wells and many parameters gives one entry per
