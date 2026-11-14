@@ -1,0 +1,258 @@
+{
+ "source_id": "ngmdb:43080",
+ "title": "Geologic map of the Mechanic Hill quadrangle, Aiken County, South Carolina",
+ "citation": "Nystrom, P.G., Jr., 2001, Geologic map of the Mechanic Hill quadrangle, Aiken County, South Carolina: South Carolina Geological Survey Open-File Report OFR-132, map scale 1:24,000.",
+ "year": 2001,
+ "scale": 24000,
+ "publisher": "South Carolina Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-11-13T11:57:34+00:00",
+ "updated_at": "2026-11-13T11:57:34+00:00",
+ "reader": "Claude, Claude Code session 2026-11-13",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1"
+ ],
+ "blocks_total": 1,
+ "complete": true,
+ "notes": "Mechanic Hill quadrangle map OFR-132 (2001; v2.1); only the Savannah River flood-plain alluvium is mapped (two units) in the northeast of the quadrangle; the rest of the SC area is shown as base only and Georgia portions were not mapped. No ages beyond Holocene. No drill holes or sections. SUBSURFACE: none.",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/img1/43000_43999/43080_1",
+   "via": "ngmdb_image",
+   "sha256": "2de09401578e0c5b1f1436b5224d3d14375b6267b91c0a3ede7b70d2d65125f6",
+   "pages": 1,
+   "first_page": 1
+  }
+ ],
+ "summary": {
+  "stored": 9,
+  "quote_match": {
+   "exact": 7,
+   "image": 2
+  },
+  "verification": {
+   "agree": 2
+  },
+  "inferred": 0
+ },
+ "ingests": [
+  {
+   "at": "2026-11-13T11:57:34+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, Claude Code session 2026-11-13",
+   "values": 9,
+   "stored": 9,
+   "exact": 7,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 2,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 2,
+   "image_not_verified": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [
+  {
+   "map_symbol": {
+    "value": "Qal1",
+    "source_id": "ngmdb:43080",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43080_1#page=1&viewrect=1591,211.5,43,23.5",
+    "quote": "Quaternary alluvium 1 (Holocene) — Alluvial sediments in the active flood plain of the",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1585_205_1640_320-r1c1",
+     "box": [
+      12,
+      13,
+      98,
+      60
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3182,
+      423,
+      3268,
+      470
+     ],
+     "pt_box": [
+      1591.0,
+      211.5,
+      1634.0,
+      235.0
+     ],
+     "pdf_sha256": "2de09401578e0c5b1f1436b5224d3d14375b6267b91c0a3ede7b70d2d65125f6"
+    },
+    "text_match": true,
+    "note": "symbol read on the legend image"
+   },
+   "name": {
+    "value": "Quaternary alluvium 1",
+    "source_id": "ngmdb:43080",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43080_1",
+    "quote": "Quaternary alluvium 1 (Holocene) — Alluvial sediments in the active flood plain of the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:43080",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43080_1",
+    "quote": "Quaternary alluvium 1 (Holocene) — Alluvial sediments in the active flood plain of the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "gray, pale yellow or tan, poorly sorted, fine- to very coarse-grained sand with granules and interstitial clay",
+    "source_id": "ngmdb:43080",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43080_1",
+    "quote": "alluvium 1. These sediments are generally gray, pale yellow or tan, poorly sorted, fine- to very",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "active flood plain of the Savannah River and tributaries; youngest natural map unit",
+    "source_id": "ngmdb:43080",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43080_1",
+    "quote": "— Savannah River and its tributaries constitute the youngest natural map unit, Quaternary",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Qal2",
+    "source_id": "ngmdb:43080",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43080_1#page=1&viewrect=1591,292,43,26",
+    "quote": "Quaternary alluvium 2 (Holocene) — These deposits are poorly sorted, clayey, fine- to",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1585_205_1640_320-r1c1",
+     "box": [
+      12,
+      174,
+      98,
+      226
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3182,
+      584,
+      3268,
+      636
+     ],
+     "pt_box": [
+      1591.0,
+      292.0,
+      1634.0,
+      318.0
+     ],
+     "pdf_sha256": "2de09401578e0c5b1f1436b5224d3d14375b6267b91c0a3ede7b70d2d65125f6"
+    },
+    "text_match": true,
+    "note": "symbol read on the legend image"
+   },
+   "name": {
+    "value": "Quaternary alluvium 2",
+    "source_id": "ngmdb:43080",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43080_1",
+    "quote": "Quaternary alluvium 2 (Holocene) — These deposits are poorly sorted, clayey, fine- to",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:43080",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43080_1",
+    "quote": "Quaternary alluvium 2 (Holocene) — These deposits are poorly sorted, clayey, fine- to",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "poorly sorted clayey fine- to very coarse-grained quartz sand to pebbles to 7 mm, mottled reddish orange; pebbles to 25 mm at base",
+    "source_id": "ngmdb:43080",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43080_1",
+    "quote": "very coarse-grained quartz sand to small quartz pebbles to 7 mm, with minor dark heavy",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "observations": [],
+ "structures": [],
+ "groundwater": [],
+ "references": [],
+ "surfaces": [],
+ "contours": [],
+ "sections": [],
+ "water_tests": [],
+ "rock_tests": []
+}
