@@ -12,10 +12,13 @@
 //   never switched off; when it fails too the tile errors and the viewer shows
 //   its "imagery unavailable" notice.
 // Each tile is requested at most once from each server.
-import { fillTile, hiDpiUrl } from './geo.js';
+import { NAIP_SOURCES, fillTile, hiDpiUrl } from './geo.js';
 
 // How long one tile request may wait for an answer, in milliseconds.
 export const IMAGERY_TIMEOUT_MS = 8000;
+// Longest a tile can take to load or error: each server is asked once and each request waits at most
+// IMAGERY_TIMEOUT_MS (plus a margin for the image itself). Checks wait this long for the imagery to settle.
+export const IMAGERY_SETTLE_MS = IMAGERY_TIMEOUT_MS * NAIP_SOURCES.length + 5000;
 // Failures in a row (timeouts or errors) after which a server is skipped for the session.
 export const IMAGERY_SWITCH_AFTER = 3;
 

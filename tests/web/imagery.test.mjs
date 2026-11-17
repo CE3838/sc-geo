@@ -216,3 +216,21 @@ test('high-density screens ask the rendering server for 512 px images; cached ti
   assert.match(fetch.calls[0].url, /size=512,512/);
   assert.match(fetch.calls[1].url, /\/tile\/16\/1\/1$/);
 });
+
+test('a tile settles within IMAGERY_SETTLE_MS even when every server but the last hangs', async () => {
+  const { IMAGERY_SETTLE_MS, IMAGERY_TIMEOUT_MS } = await import('../../web/imagery.js');
+  const { NAIP_SOURCES } = await import('../../web/geo.js');
+  // Each server is asked at most once per tile and each request waits at most IMAGERY_TIMEOUT_MS.
+  assert.ok(IMAGERY_SETTLE_MS >= IMAGERY_TIMEOUT_MS * NAIP_SOURCES.length);
+  assert.ok(IMAGERY_SETTLE_MS <= 60000);
+});
+
+test('the viewer smoke check waits for the imagery to settle before checking it, and still needs a loaded tile', async () => {
+  const { readFileSync } = await import('node:fs');
+  const smoke = readFileSync(new URL('../../scripts/viewer_smoke.mjs', import.meta.url), 'utf8');
+  const check = smoke.indexOf("live NAIP loads at street scale over Charleston");
+  const wait = smoke.indexOf("isSourceLoaded('naip')");
+  assert.ok(wait > 0 && wait < check, 'waits on the naip source before checking it');
+  assert.ok(smoke.indexOf('IMAGERY_SETTLE_MS') > 0 && smoke.indexOf('IMAGERY_SETTLE_MS') < check, 'wait is bounded by IMAGERY_SETTLE_MS');
+  assert.ok(/naipTilesLoaded/.test(smoke.slice(0, check + 200)), 'the check needs at least one imagery tile that loaded');
+});
