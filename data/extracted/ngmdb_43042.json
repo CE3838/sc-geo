@@ -8,7 +8,7 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-11-17T12:17:10+00:00",
- "updated_at": "2026-11-17T12:17:10+00:00",
+ "updated_at": "2026-11-17T12:17:29+00:00",
  "reader": "Claude, Claude Code session 2026-11-17",
  "packets": [
   "packet-01"
@@ -59,6 +59,1249 @@
    "image": 28,
    "image_not_verified": 0,
    "review_items": 0
+  },
+  {
+   "at": "2026-11-17T12:17:29+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, Claude Code session 2026-11-17",
+   "values": 33,
+   "stored": 33,
+   "exact": 5,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 28,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 28,
+   "image_not_verified": 0,
+   "review_items": 0
+  }
+ ],
+ "history": [
+  {
+   "at": "2026-11-17T12:17:29+00:00",
+   "reason": "re-ingest of packet-01",
+   "packets": [
+    "packet-01"
+   ],
+   "pages": [
+    1
+   ],
+   "replaced": [
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "brsz",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1",
+       "quote": "brsz- BUZZARDS' ROOST SHEAR ZONE- bgn-BIOTITE GNEISS— quartzo-FELDsPaTHic fmv—° FELSIC METAVOLCANICS— METARHYOLITE SYMBOLS",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "name": {
+       "value": "Buzzards' Roost shear zone",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=59.56,2170.47,307.64,40.58",
+       "quote": "brsz- BUZZARDS' ROOST SHEAR ZONE- bgn-BIOTITE GNEISS— quartzo-FELDsPaTHic fmv—° FELSIC METAVOLCANICS— METARHYOLITE SYMBOLS",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c1",
+        "box": [
+         0,
+         78,
+         470,
+         140
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         91,
+         3316,
+         561,
+         3378
+        ],
+        "pt_box": [
+         59.56,
+         2170.47,
+         367.2,
+         2211.05
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true,
+       "normalized": {
+        "canonical": "buzzards' roost shear",
+        "in_geolex": false,
+        "inferred": true
+       }
+      },
+      "lithology": {
+       "value": "blastomylonitic quartzite, muscovite schist and amphibolite",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=59.56,2170.47,307.64,40.58",
+       "quote": "brsz- BUZZARDS' ROOST SHEAR ZONE- bgn-BIOTITE GNEISS— quartzo-FELDsPaTHic fmv—° FELSIC METAVOLCANICS— METARHYOLITE SYMBOLS",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c1",
+        "box": [
+         0,
+         78,
+         470,
+         140
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         91,
+         3316,
+         561,
+         3378
+        ],
+        "pt_box": [
+         59.56,
+         2170.47,
+         367.2,
+         2211.05
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "g",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1",
+       "quote": "9- BIOTITE GRANITE. . AND LAYERED; INTERLAYERED BIOTITE SCHIST, AND ACTINOLITE SCHIST DOTTED WHERE INFERRED",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "OCR '9-'"
+      },
+      "name": {
+       "value": "Biotite granite",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=59.56,2220.87,189.82,16.37",
+       "quote": "9- BIOTITE GRANITE. . AND LAYERED; INTERLAYERED BIOTITE SCHIST, AND ACTINOLITE SCHIST DOTTED WHERE INFERRED",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c1",
+        "box": [
+         0,
+         155,
+         290,
+         180
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         91,
+         3393,
+         381,
+         3418
+        ],
+        "pt_box": [
+         59.56,
+         2220.87,
+         249.38,
+         2237.24
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "gp",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.581,
+       "inferred": true,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1",
+       "quote": "gP— GRANITE PORPHYRY ; HORNBLENDITE, AND METAPERIDOTITE — scraie' Seecea coumeet",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null,
+       "note": "OCR 'gP'"
+      },
+      "name": {
+       "value": "Granite porphyry",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=59.56,2260.15,189.82,16.36",
+       "quote": "gP— GRANITE PORPHYRY ; HORNBLENDITE, AND METAPERIDOTITE — scraie' Seecea coumeet",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c1",
+        "box": [
+         0,
+         215,
+         290,
+         240
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         91,
+         3453,
+         381,
+         3478
+        ],
+        "pt_box": [
+         59.56,
+         2260.15,
+         249.38,
+         2276.51
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "gb",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1",
+       "quote": "gb— PYROXENE GABBRO ggn- GRANITIC GNEISS AND MINOR METASANDSTONE; STRONG SLATY ee ee",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "name": {
+       "value": "Pyroxene gabbro",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=59.56,2277.82,189.82,17.02",
+       "quote": "gb— PYROXENE GABBRO ggn- GRANITIC GNEISS AND MINOR METASANDSTONE; STRONG SLATY ee ee",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c1",
+        "box": [
+         0,
+         242,
+         290,
+         268
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         91,
+         3480,
+         381,
+         3506
+        ],
+        "pt_box": [
+         59.56,
+         2277.82,
+         249.38,
+         2294.84
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true,
+       "normalized": {
+        "canonical": "pyroxene",
+        "in_geolex": false,
+        "inferred": true
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "ggn-g-gb",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm",
+       "confidence": 0.727,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1",
+       "quote": "ggn-g-gb-GRANITE GNEISS/GRANITE/ / CLEAVAGE SHEAR ZONE BOUNDARY-DASHED WHERE",
+       "quote_match": "exact",
+       "text_method": "ocr",
+       "verification": null
+      },
+      "name": {
+       "value": "Granite gneiss/granite/gabbro, undivided",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=59.56,2296.15,229.09,34.03",
+       "quote": "ggn-g-gb-GRANITE GNEISS/GRANITE/ / CLEAVAGE SHEAR ZONE BOUNDARY-DASHED WHERE",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c1",
+        "box": [
+         0,
+         270,
+         350,
+         322
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         91,
+         3508,
+         441,
+         3560
+        ],
+        "pt_box": [
+         59.56,
+         2296.15,
+         288.65,
+         2330.18
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "bgn",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=399.93,2170.47,379.63,56.95",
+       "quote": "brsz- BUZZARDS' ROOST SHEAR ZONE- bgn-BIOTITE GNEISS— quartzo-FELDsPaTHic fmv—° FELSIC METAVOLCANICS— METARHYOLITE SYMBOLS",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c1",
+        "box": [
+         520,
+         78,
+         1100,
+         165
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         611,
+         3316,
+         1191,
+         3403
+        ],
+        "pt_box": [
+         399.93,
+         2170.47,
+         779.56,
+         2227.42
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true,
+       "note": "read on the explanation image"
+      },
+      "name": {
+       "value": "Biotite gneiss",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=399.93,2170.47,379.63,56.95",
+       "quote": "brsz- BUZZARDS' ROOST SHEAR ZONE- bgn-BIOTITE GNEISS— quartzo-FELDsPaTHic fmv—° FELSIC METAVOLCANICS— METARHYOLITE SYMBOLS",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c1",
+        "box": [
+         520,
+         78,
+         1100,
+         165
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         611,
+         3316,
+         1191,
+         3403
+        ],
+        "pt_box": [
+         399.93,
+         2170.47,
+         779.56,
+         2227.42
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true
+      },
+      "lithology": {
+       "value": "quartzo-feldspathic biotite gneiss (garnet or sillimanite in the southwest), interlayered biotite schist",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=399.93,2170.47,379.63,56.95",
+       "quote": "brsz- BUZZARDS' ROOST SHEAR ZONE- bgn-BIOTITE GNEISS— quartzo-FELDsPaTHic fmv—° FELSIC METAVOLCANICS— METARHYOLITE SYMBOLS",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c1",
+        "box": [
+         520,
+         78,
+         1100,
+         165
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         611,
+         3316,
+         1191,
+         3403
+        ],
+        "pt_box": [
+         399.93,
+         2170.47,
+         779.56,
+         2227.42
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "am",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=399.93,2232,379.63,39.27",
+       "quote": "rea am- pg el HORNBLENDE-PLAGIO- fimv~ ve can : = INTERMEDIATE META- _ oeeaicnenamaaagigiiltecaas",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c1",
+        "box": [
+         520,
+         172,
+         1100,
+         232
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         611,
+         3410,
+         1191,
+         3470
+        ],
+        "pt_box": [
+         399.93,
+         2232.0,
+         779.56,
+         2271.27
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true,
+       "note": "read on the explanation image"
+      },
+      "name": {
+       "value": "Amphibolite",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=399.93,2232,379.63,39.27",
+       "quote": "rea am- pg el HORNBLENDE-PLAGIO- fimv~ ve can : = INTERMEDIATE META- _ oeeaicnenamaaagigiiltecaas",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c1",
+        "box": [
+         520,
+         172,
+         1100,
+         232
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         611,
+         3410,
+         1191,
+         3470
+        ],
+        "pt_box": [
+         399.93,
+         2232.0,
+         779.56,
+         2271.27
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true
+      },
+      "lithology": {
+       "value": "coarse hornblende-plagioclase schist with rare gabbro, hornblendite and metaperidotite",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=399.93,2232,379.63,39.27",
+       "quote": "rea am- pg el HORNBLENDE-PLAGIO- fimv~ ve can : = INTERMEDIATE META- _ oeeaicnenamaaagigiiltecaas",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c1",
+        "box": [
+         520,
+         172,
+         1100,
+         232
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         611,
+         3410,
+         1191,
+         3470
+        ],
+        "pt_box": [
+         399.93,
+         2232.0,
+         779.56,
+         2271.27
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "ggn",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=399.93,2279.78,183.27,16.37",
+       "quote": "gb— PYROXENE GABBRO ggn- GRANITIC GNEISS AND MINOR METASANDSTONE; STRONG SLATY ee ee",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c1",
+        "box": [
+         520,
+         245,
+         800,
+         270
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         611,
+         3483,
+         891,
+         3508
+        ],
+        "pt_box": [
+         399.93,
+         2279.78,
+         583.2,
+         2296.15
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true,
+       "note": "read on the explanation image"
+      },
+      "name": {
+       "value": "Granitic gneiss",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=399.93,2279.78,183.27,16.37",
+       "quote": "gb— PYROXENE GABBRO ggn- GRANITIC GNEISS AND MINOR METASANDSTONE; STRONG SLATY ee ee",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c1",
+        "box": [
+         520,
+         245,
+         800,
+         270
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         611,
+         3483,
+         891,
+         3508
+        ],
+        "pt_box": [
+         399.93,
+         2279.78,
+         583.2,
+         2296.15
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true,
+       "normalized": {
+        "canonical": "granitic",
+        "in_geolex": false,
+        "inferred": true
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "qzms",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=399.93,2304,346.91,18.33",
+       "quote": "GA BBRO- UNDIVIDED qzms- QUARTZITE AND MUSCOVITE SCHIST ‘ muneery APPROXIMATE, DOTTED WHERE INFERRED",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c1",
+        "box": [
+         520,
+         282,
+         1050,
+         310
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         611,
+         3520,
+         1141,
+         3548
+        ],
+        "pt_box": [
+         399.93,
+         2304.0,
+         746.84,
+         2322.33
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true,
+       "note": "read on the explanation image"
+      },
+      "name": {
+       "value": "Quartzite and muscovite schist",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=399.93,2304,346.91,18.33",
+       "quote": "GA BBRO- UNDIVIDED qzms- QUARTZITE AND MUSCOVITE SCHIST ‘ muneery APPROXIMATE, DOTTED WHERE INFERRED",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c1",
+        "box": [
+         520,
+         282,
+         1050,
+         310
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         611,
+         3520,
+         1141,
+         3548
+        ],
+        "pt_box": [
+         399.93,
+         2304.0,
+         746.84,
+         2322.33
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true,
+       "normalized": {
+        "canonical": "quartzite and muscovite",
+        "in_geolex": false,
+        "inferred": true
+       }
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "fmv",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=760.58,2175.05,353.46,49.1",
+       "quote": "brsz- BUZZARDS' ROOST SHEAR ZONE- bgn-BIOTITE GNEISS— quartzo-FELDsPaTHic fmv—° FELSIC METAVOLCANICS— METARHYOLITE SYMBOLS",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c2",
+        "box": [
+         0,
+         85,
+         540,
+         160
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         1162,
+         3323,
+         1702,
+         3398
+        ],
+        "pt_box": [
+         760.58,
+         2175.05,
+         1114.04,
+         2224.15
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true,
+       "note": "read on the explanation image"
+      },
+      "name": {
+       "value": "Felsic metavolcanics",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=760.58,2175.05,353.46,49.1",
+       "quote": "brsz- BUZZARDS' ROOST SHEAR ZONE- bgn-BIOTITE GNEISS— quartzo-FELDsPaTHic fmv—° FELSIC METAVOLCANICS— METARHYOLITE SYMBOLS",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c2",
+        "box": [
+         0,
+         85,
+         540,
+         160
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         1162,
+         3323,
+         1702,
+         3398
+        ],
+        "pt_box": [
+         760.58,
+         2175.05,
+         1114.04,
+         2224.15
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true
+      },
+      "lithology": {
+       "value": "metarhyolite and metadacite with biotite spots; a few argillite and actinolite schist interlayers",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=760.58,2175.05,353.46,49.1",
+       "quote": "brsz- BUZZARDS' ROOST SHEAR ZONE- bgn-BIOTITE GNEISS— quartzo-FELDsPaTHic fmv—° FELSIC METAVOLCANICS— METARHYOLITE SYMBOLS",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c2",
+        "box": [
+         0,
+         85,
+         540,
+         160
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         1162,
+         3323,
+         1702,
+         3398
+        ],
+        "pt_box": [
+         760.58,
+         2175.05,
+         1114.04,
+         2224.15
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "fimv",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=760.58,2230.69,340.37,32.73",
+       "quote": "rea am- pg el HORNBLENDE-PLAGIO- fimv~ ve can : = INTERMEDIATE META- _ oeeaicnenamaaagigiiltecaas",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c2",
+        "box": [
+         0,
+         170,
+         520,
+         220
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         1162,
+         3408,
+         1682,
+         3458
+        ],
+        "pt_box": [
+         760.58,
+         2230.69,
+         1100.95,
+         2263.42
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true,
+       "note": "read on the explanation image"
+      },
+      "name": {
+       "value": "Felsic and intermediate metavolcanics",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=760.58,2230.69,340.37,32.73",
+       "quote": "rea am- pg el HORNBLENDE-PLAGIO- fimv~ ve can : = INTERMEDIATE META- _ oeeaicnenamaaagigiiltecaas",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c2",
+        "box": [
+         0,
+         170,
+         520,
+         220
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         1162,
+         3408,
+         1682,
+         3458
+        ],
+        "pt_box": [
+         760.58,
+         2230.69,
+         1100.95,
+         2263.42
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "mm",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=760.58,2266.69,353.46,39.27",
+       "quote": "mm- METAMUDSTONE-CHLORITIC METAMUDSTONE",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c2",
+        "box": [
+         0,
+         225,
+         540,
+         285
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         1162,
+         3463,
+         1702,
+         3523
+        ],
+        "pt_box": [
+         760.58,
+         2266.69,
+         1114.04,
+         2305.96
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true,
+       "note": "read on the explanation image"
+      },
+      "name": {
+       "value": "Metamudstone",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=760.58,2266.69,353.46,39.27",
+       "quote": "mm- METAMUDSTONE-CHLORITIC METAMUDSTONE",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c2",
+        "box": [
+         0,
+         225,
+         540,
+         285
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         1162,
+         3463,
+         1702,
+         3523
+        ],
+        "pt_box": [
+         760.58,
+         2266.69,
+         1114.04,
+         2305.96
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true
+      },
+      "lithology": {
+       "value": "chloritic metamudstone and minor metasandstone with strong slaty cleavage",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=760.58,2266.69,353.46,39.27",
+       "quote": "mm- METAMUDSTONE-CHLORITIC METAMUDSTONE",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c2",
+        "box": [
+         0,
+         225,
+         540,
+         285
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         1162,
+         3463,
+         1702,
+         3523
+        ],
+        "pt_box": [
+         760.58,
+         2266.69,
+         1114.04,
+         2305.96
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true
+      }
+     }
+    },
+    {
+     "section": "units",
+     "record": {
+      "map_symbol": {
+       "value": "mp",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=760.58,2312.51,209.46,19.64",
+       "quote": "p- ITE PHYLLITE blest « « exemaners",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c2",
+        "box": [
+         0,
+         295,
+         320,
+         325
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         1162,
+         3533,
+         1482,
+         3563
+        ],
+        "pt_box": [
+         760.58,
+         2312.51,
+         970.04,
+         2332.15
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true,
+       "note": "read on the explanation image"
+      },
+      "name": {
+       "value": "Muscovite phyllite",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=760.58,2312.51,209.46,19.64",
+       "quote": "p- ITE PHYLLITE blest « « exemaners",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c2",
+        "box": [
+         0,
+         295,
+         320,
+         325
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         1162,
+         3533,
+         1482,
+         3563
+        ],
+        "pt_box": [
+         760.58,
+         2312.51,
+         970.04,
+         2332.15
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true
+      }
+     }
+    },
+    {
+     "section": "structures",
+     "record": {
+      "kind": "fault",
+      "name": {
+       "value": "Buzzards' Roost shear zone",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=59.56,2170.47,307.64,40.58",
+       "quote": "brsz- BUZZARDS' ROOST SHEAR ZONE- bgn-BIOTITE GNEISS— quartzo-FELDsPaTHic fmv—° FELSIC METAVOLCANICS— METARHYOLITE SYMBOLS",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c1",
+        "box": [
+         0,
+         78,
+         470,
+         140
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         91,
+         3316,
+         561,
+         3378
+        ],
+        "pt_box": [
+         59.56,
+         2170.47,
+         367.2,
+         2211.05
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true
+      }
+     }
+    },
+    {
+     "section": "structures",
+     "record": {
+      "kind": "fault",
+      "name": {
+       "value": "faults with silicified breccia",
+       "source_id": "ngmdb:43042",
+       "page": 1,
+       "extraction_method": "llm-image",
+       "confidence": 0.6,
+       "inferred": false,
+       "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=1136.95,2237.24,278.18,32.72",
+       "quote": "p- ITE PHYLLITE blest « « exemaners",
+       "quote_match": "image",
+       "text_method": "image",
+       "verification": "agree",
+       "image": {
+        "tile": "p1-110dpi-crop60_2120_1540_2520-r1c2",
+        "box": [
+         575,
+         180,
+         1000,
+         230
+        ],
+        "dpi": 110,
+        "page_px_box": [
+         1737,
+         3418,
+         2162,
+         3468
+        ],
+        "pt_box": [
+         1136.95,
+         2237.24,
+         1415.13,
+         2269.96
+        ],
+        "pdf_sha256": "991e4885139a26b7f838d316043d8463694b8e54cae5f500fc3d56ae0b4bac5d"
+       },
+       "text_match": true,
+       "note": "FAULT - silicified breccia common, read on the image"
+      }
+     }
+    }
+   ]
   }
  ],
  "units": [
@@ -218,7 +1461,7 @@
     "confidence": 0.581,
     "inferred": true,
     "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1",
-    "quote": "gP— GRANITE PORPHYRY ; HORNBLENDITE, AND METAPERIDOTITE — scraie' Seecea coumeet",
+    "quote": "gP— GRANITE PORPHYRY ; HORNBLENDITE, AND METAPERIDOTITE — scraie’' Seecea coumeet",
     "quote_match": "exact",
     "text_method": "ocr",
     "verification": null,
@@ -232,7 +1475,7 @@
     "confidence": 0.6,
     "inferred": false,
     "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43042_1#page=1&viewrect=59.56,2260.15,189.82,16.36",
-    "quote": "gP— GRANITE PORPHYRY ; HORNBLENDITE, AND METAPERIDOTITE — scraie' Seecea coumeet",
+    "quote": "gP— GRANITE PORPHYRY ; HORNBLENDITE, AND METAPERIDOTITE — scraie’' Seecea coumeet",
     "quote_match": "image",
     "text_method": "image",
     "verification": "agree",
