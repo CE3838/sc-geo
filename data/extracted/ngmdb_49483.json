@@ -8,7 +8,7 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-11-17T12:00:22+00:00",
- "updated_at": "2026-11-17T12:00:22+00:00",
+ "updated_at": "2026-11-17T12:33:43+00:00",
  "reader": "Claude, Claude Code session 2026-11-17",
  "packets": [
   "packet-01"
@@ -22,7 +22,7 @@
  ],
  "blocks_total": 5,
  "complete": true,
- "notes": "OFR-32 (Kite 1983): Seivern 15-minute quadrangle as four 7.5-minute map plates (Seivern, Wagener, Kitchings Mill, Salley) and a section plate. The plates in this packet carry no explanation of map units; unit symbols are recorded only as labels on the section and flagged inferred. Drill-hole labels on the map faces are queued for an image re-read. SUBSURFACE: section A-A' interpretive.",
+ "notes": "OFR-32 (Kite 1983): Seivern 15-minute quadrangle as four 7.5-minute map plates (Seivern, Wagener, Kitchings Mill, Salley) and a section plate. The plates in this packet carry no explanation of map units; unit symbols are recorded only as labels on the section and flagged inferred. Drill-hole labels on the map faces are queued for an image re-read. SUBSURFACE: section A-A' interpretive.\nRe-read of pages 1-4 (the four 7.5-minute plates of the Seivern 15' quadrangle) for SCGS drill-hole labels, read on 72 dpi tiles. Holes are numbered 2-xx (Aiken), 32-xx (Lexington) and 38-xx (Orangeburg). These pages held no earlier values.",
  "files": [
   {
    "url": "https://ngmdb.usgs.gov/img1/49000_49999/49483_1",
@@ -61,12 +61,13 @@
   }
  ],
  "summary": {
-  "stored": 10,
+  "stored": 52,
   "quote_match": {
-   "exact": 10
+   "exact": 10,
+   "image": 42
   },
   "verification": {
-   "agree": 3
+   "agree": 45
   },
   "inferred": 7
  },
@@ -90,6 +91,41 @@
    "image": 0,
    "image_not_verified": 0,
    "review_items": 0
+  },
+  {
+   "at": "2026-11-17T12:33:43+00:00",
+   "packets": [
+    "reread-01"
+   ],
+   "reader": "Claude, Claude Code session 2026-11-17",
+   "values": 42,
+   "stored": 42,
+   "exact": 0,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 42,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 42,
+   "image_not_verified": 0,
+   "review_items": 0,
+   "reread": {
+    "packets": [
+     "reread-01"
+    ],
+    "pages": [
+     1,
+     2,
+     3,
+     4
+    ],
+    "reason": "map_face: SCGS drill-hole labels on plates 1-4",
+    "queue_ids": [
+     "ngmdb:49483:map_face:p1-4"
+    ]
+   }
   }
  ],
  "units": [
@@ -181,7 +217,1690 @@
    }
   }
  ],
- "observations": [],
+ "observations": [
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-46",
+    "source_id": "ngmdb:49483",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_1#page=1&viewrect=361,258,41,18",
+    "quote": "2-46",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-2x2-r1c1",
+     "box": [
+      361,
+      258,
+      402,
+      276
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      361,
+      258,
+      402,
+      276
+     ],
+     "pt_box": [
+      361.0,
+      258.0,
+      402.0,
+      276.0
+     ],
+     "pdf_sha256": "b0281a4d74503348cc36d7e72d1fd12239a74109d191e2a09a10f753553cba49"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-60",
+    "source_id": "ngmdb:49483",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_1#page=1&viewrect=389,520,41,18",
+    "quote": "2-60",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-2x2-r1c1",
+     "box": [
+      389,
+      520,
+      430,
+      538
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      389,
+      520,
+      430,
+      538
+     ],
+     "pt_box": [
+      389.0,
+      520.0,
+      430.0,
+      538.0
+     ],
+     "pdf_sha256": "b0281a4d74503348cc36d7e72d1fd12239a74109d191e2a09a10f753553cba49"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-58",
+    "source_id": "ngmdb:49483",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_1#page=1&viewrect=585,650,41,18",
+    "quote": "2-58",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-2x2-r1c1",
+     "box": [
+      585,
+      650,
+      626,
+      668
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      585,
+      650,
+      626,
+      668
+     ],
+     "pt_box": [
+      585.0,
+      650.0,
+      626.0,
+      668.0
+     ],
+     "pdf_sha256": "b0281a4d74503348cc36d7e72d1fd12239a74109d191e2a09a10f753553cba49"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-65",
+    "source_id": "ngmdb:49483",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_1#page=1&viewrect=817,882,41,18",
+    "quote": "2-65",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-2x2-r1c1",
+     "box": [
+      817,
+      882,
+      858,
+      900
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      817,
+      882,
+      858,
+      900
+     ],
+     "pt_box": [
+      817.0,
+      882.0,
+      858.0,
+      900.0
+     ],
+     "pdf_sha256": "b0281a4d74503348cc36d7e72d1fd12239a74109d191e2a09a10f753553cba49"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-59",
+    "source_id": "ngmdb:49483",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_1#page=1&viewrect=609,1154,41,18",
+    "quote": "2-59",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-2x2-r1c1",
+     "box": [
+      609,
+      1154,
+      650,
+      1172
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      609,
+      1154,
+      650,
+      1172
+     ],
+     "pt_box": [
+      609.0,
+      1154.0,
+      650.0,
+      1172.0
+     ],
+     "pdf_sha256": "b0281a4d74503348cc36d7e72d1fd12239a74109d191e2a09a10f753553cba49"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-63",
+    "source_id": "ngmdb:49483",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_1#page=1&viewrect=1484,960,41,18",
+    "quote": "2-63",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-2x2-r1c2",
+     "box": [
+      637,
+      960,
+      678,
+      978
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1484,
+      960,
+      1525,
+      978
+     ],
+     "pt_box": [
+      1484.0,
+      960.0,
+      1525.0,
+      978.0
+     ],
+     "pdf_sha256": "b0281a4d74503348cc36d7e72d1fd12239a74109d191e2a09a10f753553cba49"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-62",
+    "source_id": "ngmdb:49483",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_1#page=1&viewrect=1134,1012,41,18",
+    "quote": "2-62",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-2x2-r1c2",
+     "box": [
+      287,
+      1012,
+      328,
+      1030
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1134,
+      1012,
+      1175,
+      1030
+     ],
+     "pt_box": [
+      1134.0,
+      1012.0,
+      1175.0,
+      1030.0
+     ],
+     "pdf_sha256": "b0281a4d74503348cc36d7e72d1fd12239a74109d191e2a09a10f753553cba49"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-54",
+    "source_id": "ngmdb:49483",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_1#page=1&viewrect=597,1220,41,18",
+    "quote": "2-54",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-2x2-r2c1",
+     "box": [
+      597,
+      96,
+      638,
+      114
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      597,
+      1220,
+      638,
+      1238
+     ],
+     "pt_box": [
+      597.0,
+      1220.0,
+      638.0,
+      1238.0
+     ],
+     "pdf_sha256": "b0281a4d74503348cc36d7e72d1fd12239a74109d191e2a09a10f753553cba49"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-61",
+    "source_id": "ngmdb:49483",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_1#page=1&viewrect=195,1693,41,18",
+    "quote": "2-61",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-2x2-r2c1",
+     "box": [
+      195,
+      569,
+      236,
+      587
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      195,
+      1693,
+      236,
+      1711
+     ],
+     "pt_box": [
+      195.0,
+      1693.0,
+      236.0,
+      1711.0
+     ],
+     "pdf_sha256": "b0281a4d74503348cc36d7e72d1fd12239a74109d191e2a09a10f753553cba49"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-56",
+    "source_id": "ngmdb:49483",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_1#page=1&viewrect=563,1718,41,18",
+    "quote": "2-56",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-2x2-r2c1",
+     "box": [
+      563,
+      594,
+      604,
+      612
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      563,
+      1718,
+      604,
+      1736
+     ],
+     "pt_box": [
+      563.0,
+      1718.0,
+      604.0,
+      1736.0
+     ],
+     "pdf_sha256": "b0281a4d74503348cc36d7e72d1fd12239a74109d191e2a09a10f753553cba49"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-71",
+    "source_id": "ngmdb:49483",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_1#page=1&viewrect=1530,1430,41,18",
+    "quote": "2-71",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-2x2-r2c2",
+     "box": [
+      683,
+      306,
+      724,
+      324
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1530,
+      1430,
+      1571,
+      1448
+     ],
+     "pt_box": [
+      1530.0,
+      1430.0,
+      1571.0,
+      1448.0
+     ],
+     "pdf_sha256": "b0281a4d74503348cc36d7e72d1fd12239a74109d191e2a09a10f753553cba49"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-57",
+    "source_id": "ngmdb:49483",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_1#page=1&viewrect=1530,1790,41,18",
+    "quote": "2-57",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-2x2-r2c2",
+     "box": [
+      683,
+      666,
+      724,
+      684
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1530,
+      1790,
+      1571,
+      1808
+     ],
+     "pt_box": [
+      1530.0,
+      1790.0,
+      1571.0,
+      1808.0
+     ],
+     "pdf_sha256": "b0281a4d74503348cc36d7e72d1fd12239a74109d191e2a09a10f753553cba49"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "32-64",
+    "source_id": "ngmdb:49483",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_2#page=1&viewrect=589,266,49,18",
+    "quote": "32-64",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-72dpi-2x2-r1c1",
+     "box": [
+      589,
+      266,
+      638,
+      284
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      589,
+      266,
+      638,
+      284
+     ],
+     "pt_box": [
+      589.0,
+      266.0,
+      638.0,
+      284.0
+     ],
+     "pdf_sha256": "9e221f9090d13d790de8566777ba4b5248c404502ad954ab03b53f9b50adb3cf"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "32-60",
+    "source_id": "ngmdb:49483",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_2#page=1&viewrect=778,422,37,20",
+    "quote": "32-60",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-72dpi-2x2-r1c1",
+     "box": [
+      778,
+      422,
+      815,
+      442
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      778,
+      422,
+      815,
+      442
+     ],
+     "pt_box": [
+      778.0,
+      422.0,
+      815.0,
+      442.0
+     ],
+     "pdf_sha256": "9e221f9090d13d790de8566777ba4b5248c404502ad954ab03b53f9b50adb3cf"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-64",
+    "source_id": "ngmdb:49483",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_2#page=1&viewrect=515,920,41,18",
+    "quote": "2-64",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-72dpi-2x2-r1c1",
+     "box": [
+      515,
+      920,
+      556,
+      938
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      515,
+      920,
+      556,
+      938
+     ],
+     "pt_box": [
+      515.0,
+      920.0,
+      556.0,
+      938.0
+     ],
+     "pdf_sha256": "9e221f9090d13d790de8566777ba4b5248c404502ad954ab03b53f9b50adb3cf"
+    },
+    "text_match": true,
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "32-63",
+    "source_id": "ngmdb:49483",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_2#page=1&viewrect=1275,234,49,18",
+    "quote": "32-63",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-72dpi-2x2-r1c2",
+     "box": [
+      447,
+      234,
+      496,
+      252
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1275,
+      234,
+      1324,
+      252
+     ],
+     "pt_box": [
+      1275.0,
+      234.0,
+      1324.0,
+      252.0
+     ],
+     "pdf_sha256": "9e221f9090d13d790de8566777ba4b5248c404502ad954ab03b53f9b50adb3cf"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "32-62",
+    "source_id": "ngmdb:49483",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_2#page=1&viewrect=1223,262,49,18",
+    "quote": "32-62",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-72dpi-2x2-r1c2",
+     "box": [
+      395,
+      262,
+      444,
+      280
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1223,
+      262,
+      1272,
+      280
+     ],
+     "pt_box": [
+      1223.0,
+      262.0,
+      1272.0,
+      280.0
+     ],
+     "pdf_sha256": "9e221f9090d13d790de8566777ba4b5248c404502ad954ab03b53f9b50adb3cf"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "32-61",
+    "source_id": "ngmdb:49483",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_2#page=1&viewrect=1419,727,49,18",
+    "quote": "32-61",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-72dpi-2x2-r1c2",
+     "box": [
+      591,
+      727,
+      640,
+      745
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1419,
+      727,
+      1468,
+      745
+     ],
+     "pt_box": [
+      1419.0,
+      727.0,
+      1468.0,
+      745.0
+     ],
+     "pdf_sha256": "9e221f9090d13d790de8566777ba4b5248c404502ad954ab03b53f9b50adb3cf"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-68",
+    "source_id": "ngmdb:49483",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_2#page=1&viewrect=1074,960,36,22",
+    "quote": "2-68",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-72dpi-2x2-r1c2",
+     "box": [
+      246,
+      960,
+      282,
+      982
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1074,
+      960,
+      1110,
+      982
+     ],
+     "pt_box": [
+      1074.0,
+      960.0,
+      1110.0,
+      982.0
+     ],
+     "pdf_sha256": "9e221f9090d13d790de8566777ba4b5248c404502ad954ab03b53f9b50adb3cf"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-67",
+    "source_id": "ngmdb:49483",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_2#page=1&viewrect=1195,1214,41,18",
+    "quote": "2-67",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-72dpi-2x2-r1c2",
+     "box": [
+      367,
+      1214,
+      408,
+      1232
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1195,
+      1214,
+      1236,
+      1232
+     ],
+     "pt_box": [
+      1195.0,
+      1214.0,
+      1236.0,
+      1232.0
+     ],
+     "pdf_sha256": "9e221f9090d13d790de8566777ba4b5248c404502ad954ab03b53f9b50adb3cf"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-66",
+    "source_id": "ngmdb:49483",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_2#page=1&viewrect=545,1259,41,18",
+    "quote": "2-66",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-72dpi-2x2-r2c1",
+     "box": [
+      545,
+      124,
+      586,
+      142
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      545,
+      1259,
+      586,
+      1277
+     ],
+     "pt_box": [
+      545.0,
+      1259.0,
+      586.0,
+      1277.0
+     ],
+     "pdf_sha256": "9e221f9090d13d790de8566777ba4b5248c404502ad954ab03b53f9b50adb3cf"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-55",
+    "source_id": "ngmdb:49483",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_2#page=1&viewrect=467,1689,41,18",
+    "quote": "2-55",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-72dpi-2x2-r2c1",
+     "box": [
+      467,
+      554,
+      508,
+      572
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      467,
+      1689,
+      508,
+      1707
+     ],
+     "pt_box": [
+      467.0,
+      1689.0,
+      508.0,
+      1707.0
+     ],
+     "pdf_sha256": "9e221f9090d13d790de8566777ba4b5248c404502ad954ab03b53f9b50adb3cf"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-74",
+    "source_id": "ngmdb:49483",
+    "page": 2,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_2#page=1&viewrect=1489,1151,41,18",
+    "quote": "2-74",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p2-72dpi-2x2-r2c2",
+     "box": [
+      661,
+      16,
+      702,
+      34
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1489,
+      1151,
+      1530,
+      1169
+     ],
+     "pt_box": [
+      1489.0,
+      1151.0,
+      1530.0,
+      1169.0
+     ],
+     "pdf_sha256": "9e221f9090d13d790de8566777ba4b5248c404502ad954ab03b53f9b50adb3cf"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-53",
+    "source_id": "ngmdb:49483",
+    "page": 3,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_3#page=1&viewrect=389,340,41,18",
+    "quote": "2-53",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p3-72dpi-2x2-r1c1",
+     "box": [
+      389,
+      340,
+      430,
+      358
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      389,
+      340,
+      430,
+      358
+     ],
+     "pt_box": [
+      389.0,
+      340.0,
+      430.0,
+      358.0
+     ],
+     "pdf_sha256": "d5c9869ace604b5b6ee0068b40e1b6586f1e19e6470ec82d51a1e8b39c04998d"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-43",
+    "source_id": "ngmdb:49483",
+    "page": 3,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_3#page=1&viewrect=1518,717,41,18",
+    "quote": "2-43",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p3-72dpi-2x2-r1c2",
+     "box": [
+      691,
+      717,
+      732,
+      735
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1518,
+      717,
+      1559,
+      735
+     ],
+     "pt_box": [
+      1518.0,
+      717.0,
+      1559.0,
+      735.0
+     ],
+     "pdf_sha256": "d5c9869ace604b5b6ee0068b40e1b6586f1e19e6470ec82d51a1e8b39c04998d"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-42",
+    "source_id": "ngmdb:49483",
+    "page": 3,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_3#page=1&viewrect=1018,760,41,18",
+    "quote": "2-42",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p3-72dpi-2x2-r1c2",
+     "box": [
+      191,
+      760,
+      232,
+      778
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1018,
+      760,
+      1059,
+      778
+     ],
+     "pt_box": [
+      1018.0,
+      760.0,
+      1059.0,
+      778.0
+     ],
+     "pdf_sha256": "d5c9869ace604b5b6ee0068b40e1b6586f1e19e6470ec82d51a1e8b39c04998d"
+    },
+    "text_match": true,
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-49",
+    "source_id": "ngmdb:49483",
+    "page": 3,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_3#page=1&viewrect=938,840,41,18",
+    "quote": "2-49",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p3-72dpi-2x2-r1c2",
+     "box": [
+      111,
+      840,
+      152,
+      858
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      938,
+      840,
+      979,
+      858
+     ],
+     "pt_box": [
+      938.0,
+      840.0,
+      979.0,
+      858.0
+     ],
+     "pdf_sha256": "d5c9869ace604b5b6ee0068b40e1b6586f1e19e6470ec82d51a1e8b39c04998d"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-48",
+    "source_id": "ngmdb:49483",
+    "page": 3,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_3#page=1&viewrect=1479,1140,38,22",
+    "quote": "2-48",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p3-72dpi-2x2-r1c2",
+     "box": [
+      652,
+      1140,
+      690,
+      1162
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1479,
+      1140,
+      1517,
+      1162
+     ],
+     "pt_box": [
+      1479.0,
+      1140.0,
+      1517.0,
+      1162.0
+     ],
+     "pdf_sha256": "d5c9869ace604b5b6ee0068b40e1b6586f1e19e6470ec82d51a1e8b39c04998d"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-52",
+    "source_id": "ngmdb:49483",
+    "page": 3,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_3#page=1&viewrect=559,1654,41,18",
+    "quote": "2-52",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p3-72dpi-2x2-r2c1",
+     "box": [
+      559,
+      524,
+      600,
+      542
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      559,
+      1654,
+      600,
+      1672
+     ],
+     "pt_box": [
+      559.0,
+      1654.0,
+      600.0,
+      1672.0
+     ],
+     "pdf_sha256": "d5c9869ace604b5b6ee0068b40e1b6586f1e19e6470ec82d51a1e8b39c04998d"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-51",
+    "source_id": "ngmdb:49483",
+    "page": 3,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_3#page=1&viewrect=207,1714,41,18",
+    "quote": "2-51",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p3-72dpi-2x2-r2c1",
+     "box": [
+      207,
+      584,
+      248,
+      602
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      207,
+      1714,
+      248,
+      1732
+     ],
+     "pt_box": [
+      207.0,
+      1714.0,
+      248.0,
+      1732.0
+     ],
+     "pdf_sha256": "d5c9869ace604b5b6ee0068b40e1b6586f1e19e6470ec82d51a1e8b39c04998d"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-70",
+    "source_id": "ngmdb:49483",
+    "page": 4,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_4#page=1&viewrect=303,362,41,18",
+    "quote": "2-70",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p4-72dpi-2x2-r1c1",
+     "box": [
+      303,
+      362,
+      344,
+      380
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      303,
+      362,
+      344,
+      380
+     ],
+     "pt_box": [
+      303.0,
+      362.0,
+      344.0,
+      380.0
+     ],
+     "pdf_sha256": "b22551d10bd34cd4cf443bff317b863cc127f3737ca20473328c5a73b0529bec"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-69",
+    "source_id": "ngmdb:49483",
+    "page": 4,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_4#page=1&viewrect=771,340,41,18",
+    "quote": "2-69",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p4-72dpi-2x2-r1c1",
+     "box": [
+      771,
+      340,
+      812,
+      358
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      771,
+      340,
+      812,
+      358
+     ],
+     "pt_box": [
+      771.0,
+      340.0,
+      812.0,
+      358.0
+     ],
+     "pdf_sha256": "b22551d10bd34cd4cf443bff317b863cc127f3737ca20473328c5a73b0529bec"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-44",
+    "source_id": "ngmdb:49483",
+    "page": 4,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_4#page=1&viewrect=169,760,41,18",
+    "quote": "2-44",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p4-72dpi-2x2-r1c1",
+     "box": [
+      169,
+      760,
+      210,
+      778
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      169,
+      760,
+      210,
+      778
+     ],
+     "pt_box": [
+      169.0,
+      760.0,
+      210.0,
+      778.0
+     ],
+     "pdf_sha256": "b22551d10bd34cd4cf443bff317b863cc127f3737ca20473328c5a73b0529bec"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-47",
+    "source_id": "ngmdb:49483",
+    "page": 4,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_4#page=1&viewrect=616,1104,42,22",
+    "quote": "2-47",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p4-72dpi-2x2-r1c1",
+     "box": [
+      616,
+      1104,
+      658,
+      1126
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      616,
+      1104,
+      658,
+      1126
+     ],
+     "pt_box": [
+      616.0,
+      1104.0,
+      658.0,
+      1126.0
+     ],
+     "pdf_sha256": "b22551d10bd34cd4cf443bff317b863cc127f3737ca20473328c5a73b0529bec"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-72",
+    "source_id": "ngmdb:49483",
+    "page": 4,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_4#page=1&viewrect=1070,94,34,20",
+    "quote": "2-72",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p4-72dpi-2x2-r1c2",
+     "box": [
+      284,
+      94,
+      318,
+      114
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1070,
+      94,
+      1104,
+      114
+     ],
+     "pt_box": [
+      1070.0,
+      94.0,
+      1104.0,
+      114.0
+     ],
+     "pdf_sha256": "b22551d10bd34cd4cf443bff317b863cc127f3737ca20473328c5a73b0529bec"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-75",
+    "source_id": "ngmdb:49483",
+    "page": 4,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_4#page=1&viewrect=958,688,35,22",
+    "quote": "2-75",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p4-72dpi-2x2-r1c2",
+     "box": [
+      172,
+      688,
+      207,
+      710
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      958,
+      688,
+      993,
+      710
+     ],
+     "pt_box": [
+      958.0,
+      688.0,
+      993.0,
+      710.0
+     ],
+     "pdf_sha256": "b22551d10bd34cd4cf443bff317b863cc127f3737ca20473328c5a73b0529bec"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-73",
+    "source_id": "ngmdb:49483",
+    "page": 4,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_4#page=1&viewrect=1190,700,42,20",
+    "quote": "2-73",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p4-72dpi-2x2-r1c2",
+     "box": [
+      404,
+      700,
+      446,
+      720
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1190,
+      700,
+      1232,
+      720
+     ],
+     "pt_box": [
+      1190.0,
+      700.0,
+      1232.0,
+      720.0
+     ],
+     "pdf_sha256": "b22551d10bd34cd4cf443bff317b863cc127f3737ca20473328c5a73b0529bec"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "38-126",
+    "source_id": "ngmdb:49483",
+    "page": 4,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_4#page=1&viewrect=941,1160,57,18",
+    "quote": "38-126",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p4-72dpi-2x2-r1c2",
+     "box": [
+      155,
+      1160,
+      212,
+      1178
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      941,
+      1160,
+      998,
+      1178
+     ],
+     "pt_box": [
+      941.0,
+      1160.0,
+      998.0,
+      1178.0
+     ],
+     "pdf_sha256": "b22551d10bd34cd4cf443bff317b863cc127f3737ca20473328c5a73b0529bec"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-50",
+    "source_id": "ngmdb:49483",
+    "page": 4,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_4#page=1&viewrect=333,1316,41,18",
+    "quote": "2-50",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p4-72dpi-2x2-r2c1",
+     "box": [
+      333,
+      230,
+      374,
+      248
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      333,
+      1316,
+      374,
+      1334
+     ],
+     "pt_box": [
+      333.0,
+      1316.0,
+      374.0,
+      1334.0
+     ],
+     "pdf_sha256": "b22551d10bd34cd4cf443bff317b863cc127f3737ca20473328c5a73b0529bec"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "2-45",
+    "source_id": "ngmdb:49483",
+    "page": 4,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_4#page=1&viewrect=543,1346,41,18",
+    "quote": "2-45",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p4-72dpi-2x2-r2c1",
+     "box": [
+      543,
+      260,
+      584,
+      278
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      543,
+      1346,
+      584,
+      1364
+     ],
+     "pt_box": [
+      543.0,
+      1346.0,
+      584.0,
+      1364.0
+     ],
+     "pdf_sha256": "b22551d10bd34cd4cf443bff317b863cc127f3737ca20473328c5a73b0529bec"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "38-128",
+    "source_id": "ngmdb:49483",
+    "page": 4,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_4#page=1&viewrect=1053,1434,57,18",
+    "quote": "38-128",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p4-72dpi-2x2-r2c2",
+     "box": [
+      267,
+      348,
+      324,
+      366
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1053,
+      1434,
+      1110,
+      1452
+     ],
+     "pt_box": [
+      1053.0,
+      1434.0,
+      1110.0,
+      1452.0
+     ],
+     "pdf_sha256": "b22551d10bd34cd4cf443bff317b863cc127f3737ca20473328c5a73b0529bec"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "boring",
+   "label": {
+    "value": "38-127",
+    "source_id": "ngmdb:49483",
+    "page": 4,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/49000_49999/49483_4#page=1&viewrect=1463,1198,57,18",
+    "quote": "38-127",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p4-72dpi-2x2-r2c2",
+     "box": [
+      677,
+      112,
+      734,
+      130
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1463,
+      1198,
+      1520,
+      1216
+     ],
+     "pt_box": [
+      1463.0,
+      1198.0,
+      1520.0,
+      1216.0
+     ],
+     "pdf_sha256": "b22551d10bd34cd4cf443bff317b863cc127f3737ca20473328c5a73b0529bec"
+    },
+    "note": "SCGS drill hole labelled on the map plate; log on file at SCGS, not printed"
+   }
+  }
+ ],
  "structures": [],
  "groundwater": [],
  "references": [
