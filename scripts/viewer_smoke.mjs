@@ -9,7 +9,7 @@
 import { spawn } from 'node:child_process';
 import { chromium } from 'playwright';
 import { NAIP_SOURCES } from '../web/geo.js';
-import { IMAGERY_TIMEOUT_MS } from '../web/imagery.js';
+import { IMAGERY_SETTLE_MS, IMAGERY_TIMEOUT_MS } from '../web/imagery.js';
 
 const PORT = 8765;
 
@@ -193,10 +193,20 @@ try {
   await page.locator('#geo-mode').selectOption('age');
   await settle();
   await snapshot(page, 'merged-state');
+  // Count imagery tiles that load (from any server, the fallback included).
+  await page.evaluate(() => {
+    window.naipTilesLoaded = 0;
+    window.scGeo.map.on('data', (e) => { if (e.sourceId === 'naip' && e.tile?.state === 'loaded') window.naipTilesLoaded += 1; });
+  });
   await jumpTo({ center: [-79.93, 32.78], zoom: 16 });
   await settle();
-  const naip = await page.evaluate(() => window.scGeo.map.isSourceLoaded('naip'));
-  check(naip, 'live NAIP loads at street scale over Charleston');
+  // A slow or hung imagery server delays tiles by up to IMAGERY_SETTLE_MS (timeout, then the next server):
+  // wait until every imagery tile has loaded or errored before judging the layer.
+  const naipSettled = await page.waitForFunction(() => window.scGeo.map.isSourceLoaded('naip'), null,
+    { timeout: IMAGERY_SETTLE_MS }).then(() => true, () => false);
+  const naipTilesLoaded = await page.evaluate(() => window.naipTilesLoaded);
+  check(naipSettled && naipTilesLoaded > 0,
+    `live NAIP loads at street scale over Charleston (${naipTilesLoaded} tiles${naipSettled ? '' : ', still loading'})`);
   // Credits name the server(s) that served the imagery, the fallback included.
   const credits = await page.evaluate(() => ({
     source: window.scGeo.map.getSource('naip')?.attribution ?? '',
