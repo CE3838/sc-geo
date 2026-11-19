@@ -106,13 +106,68 @@ function distinct(values, ...skip) {
   return out;
 }
 
+// --- unit descriptions read from documents ------------------------------------
+// merge/extracted_units.py links a merged polygon to unit descriptions read
+// from map explanations and reports (`extracted`, a JSON list of links) and
+// writes the descriptions once to merged-extracted.json.
+
+// Links made by name only (the same named unit on another map) are
+// inferences; they are listed in a collapsed group. To show them with the
+// map's own descriptions instead, add 'name' here.
+const PLAIN_MATCHES = new Set(['symbol']);
+const INFERRED_GROUP = 'From other maps (inferred)';
+const DESCRIPTION_FIELDS = ['name', 'age', 'lithology'];
+
+function describeEntry(e) {
+  const f = e.fields ?? {};
+  const val = (k) => (f[k]?.value === undefined || f[k]?.value === null ? null : String(f[k].value));
+  const pages = [...new Set(DESCRIPTION_FIELDS.map((k) => f[k]?.page).filter((n) => Number.isInteger(n)))]
+    .sort((a, b) => a - b);
+  return {
+    name: val('name') ?? 'unnamed unit',
+    age: val('age'),
+    lithology: val('lithology'),
+    // A short citation, never the record id.
+    citation: shortRef({ citation: e.citation, year: e.year }) || (e.year ? `cited document, ${e.year}` : 'cited document'),
+    pages: pages.length ? `${pages.length > 1 ? 'pp.' : 'p.'} ${pages.join(', ')}` : null,
+    inferred: DESCRIPTION_FIELDS.filter((k) => f[k]?.inferred === true),
+  };
+}
+
+// {shown, inferred, groupTitle}: descriptions from the polygon's own map
+// (matched by map symbol), and those matched by unit name on other maps.
+export function extractedDescriptions(linksText, table) {
+  const out = { shown: [], inferred: [], groupTitle: INFERRED_GROUP };
+  if (!table) return out;
+  for (const link of parseAlternatives(linksText)) {
+    const entry = table[link?.id];
+    if (!entry) continue;
+    out[PLAIN_MATCHES.has(link.by) ? 'shown' : 'inferred'].push(describeEntry(entry));
+  }
+  return out;
+}
+
+// A loader that runs `fetcher` once, on first call, and caches the result;
+// a failed load gives an empty table (older data packages have no file).
+export function loadOnce(fetcher) {
+  let promise = null;
+  return () => {
+    promise ??= Promise.resolve().then(fetcher).catch((err) => {
+      console.warn('Unit descriptions not loaded:', err.message);
+      return {};
+    });
+    return promise;
+  };
+}
+
 const row = (label, value, extra = {}) => (value === null || value === undefined || value === '' ? null
   : { label, value: String(value), cite: 1, inferred: false, ...extra });
 
 // Card for a merged-geology polygon (merge/build.py output): `props` from
 // the polygon, `unit` from merged-units.json, `sources` from
 // merged-sources.json source_details, `records` from references.json.
-export function mergedCard({ props: p, unit, sources, records, lng, lat }) {
+// `extracted` is merged-extracted.json (optional: loaded when a card opens).
+export function mergedCard({ props: p, unit, sources, records, lng, lat, extracted = null }) {
   const u = unit ?? {};
   const src = sources?.[p.source] ?? {};
   const title = u.unit_name || u.name || p.map_unit;
@@ -163,6 +218,7 @@ export function mergedCard({ props: p, unit, sources, records, lng, lat }) {
       cite: citeOf(a.source),
       detail: [a.age, scaleText(a.scale), `covers ${Math.round((a.overlap ?? 0) * 100)}%`].filter(Boolean).join(' · '),
     })),
+    descriptions: extractedDescriptions(p.extracted, extracted),
     references,
   };
 }

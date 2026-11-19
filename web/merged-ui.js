@@ -8,7 +8,7 @@ import {
   scaleText, sourceLink,
 } from './merged.js';
 import { safeHttpsUrl, shortCitation } from './geology.js';
-import { mergedCard } from './card.js';
+import { loadOnce, mergedCard } from './card.js';
 import { el } from './dom.js';
 import { onStyleReady } from './geo.js';
 
@@ -25,6 +25,9 @@ export async function setupMergedGeology(map, ui) {
     ...LAYERS.map((l) => getJson(`merged-${l.id}.geojson`)),
   ]);
   const sources = summary.source_details ?? {};
+  // Unit descriptions read from documents (merge/extracted_units.py): fetched once, when a card first opens.
+  let extracted = null;
+  const loadExtracted = loadOnce(() => getJson('merged-extracted.json'));
   const state = { mode: 'age', opacity: 0.6, visible: Object.fromEntries(LAYERS.map((l) => [l.id, l.visible])) };
   const features = Object.fromEntries(LAYERS.map((l, i) => [l.id, data[i].features]));
 
@@ -116,10 +119,13 @@ export async function setupMergedGeology(map, ui) {
       const layers = LAYERS.filter((l) => state.visible[l.id]).map((l) => `merged-${l.id}-fill`);
       return layers.length ? map.queryRenderedFeatures(point, { layers })[0] ?? null : null;
     },
+    loadDescriptions() {
+      return loadExtracted().then((t) => { extracted = t; return t; });
+    },
     // Property card model for a clicked feature (card.js).
     card(feature, lng, lat, records = []) {
       const p = feature.properties;
-      return mergedCard({ props: p, unit: units[p.unit], sources, records, lng, lat });
+      return mergedCard({ props: p, unit: units[p.unit], sources, records, lng, lat, extracted });
     },
     describe(feature) {
       const p = feature.properties;

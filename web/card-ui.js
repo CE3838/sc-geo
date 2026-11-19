@@ -21,6 +21,31 @@ function propertyRows(rows) {
         `inferred${r.note ? ` · ${r.note}` : ''}`) : citeMark(r.cite))))));
 }
 
+// Unit descriptions read from documents (card.js extractedDescriptions).
+function descriptionItem(d) {
+  const tag = (field) => d.inferred.includes(field)
+    && el('span', { class: 'tag-inferred', title: 'Inferred by the reader of the document' }, ' inferred');
+  return el('li', {},
+    el('strong', {}, d.name), tag('name'),
+    d.age && el('span', {}, ` · ${d.age}`), tag('age'),
+    d.lithology && el('div', { class: 'card-desc' }, d.lithology, tag('lithology')),
+    el('div', { class: 'card-muted' }, [d.citation, d.pages].filter(Boolean).join(', ')));
+}
+
+function descriptionsSection(desc) {
+  if (!desc || (!desc.shown.length && !desc.inferred.length)) return [];
+  const parts = [el('h4', {}, 'Unit descriptions ', el('span', { class: 'card-h-note' }, 'from map explanations and reports'))];
+  if (desc.shown.length) parts.push(el('ul', { class: 'card-alts card-descs' }, ...desc.shown.map(descriptionItem)));
+  if (desc.inferred.length) {
+    parts.push(el('details', { class: 'card-why card-descs-inferred' },
+      el('summary', {}, `${desc.groupTitle} (${desc.inferred.length})`),
+      el('p', { class: 'geo-cite' }, 'Matched by unit name only: the same named unit described on another map. '
+        + 'The description may not fit this outline.'),
+      el('ul', { class: 'card-alts card-descs' }, ...desc.inferred.map(descriptionItem))));
+  }
+  return parts;
+}
+
 function soilSection(soil) {
   if (!soil) return el('p', { class: 'card-muted' }, 'No soil map unit here (water or unmapped).');
   const v = soil.values;
@@ -86,6 +111,7 @@ export function setupCard(container, { onToggle } = {}) {
           parts.push(el('p', { class: 'card-muted' }, model.confidenceNote));
         }
         parts.push(el('h4', {}, 'Properties'), propertyRows(model.rows));
+        parts.push(...descriptionsSection(model.descriptions));
       } else {
         parts.push(el('h3', { class: 'card-title' }, 'No geologic map unit here'),
           el('p', { class: 'card-muted' }, 'Turn on a geology layer, or pick a point on land in South Carolina.'));

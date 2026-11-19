@@ -227,15 +227,20 @@ onStyleReady(map, () => {
 const popup = new maplibregl.Popup({ closeOnClick: false, maxWidth: '300px' });
 let elevationCtrl = null;
 
+let cardShown = null;  // the point the card was last opened for
+
 function openCard(feature, lng, lat) {
+  cardShown = null;
   const model = feature ? geology.card(feature, lng, lat, []) : null;
   card.open(model, { lng, lat });
   // On phones the card is a bottom sheet; the callout would sit on top of it.
   if (phone.matches) { setDrawer(false); popup.remove(); }
-  // Fill in the key references once the list has loaded.
+  // Fill in the key references and the unit descriptions read from documents
+  // once they have loaded (each file is fetched once, when a card first opens).
   if (feature) {
-    loadReferences().then((records) => {
-      if (records.length && card.isOpen) card.open(geology.card(feature, lng, lat, records), { lng, lat });
+    const shown = (cardShown = { feature, lng, lat });
+    Promise.all([loadReferences(), geology.loadDescriptions?.() ?? null]).then(([records]) => {
+      if (card.isOpen && cardShown === shown) card.open(geology.card(feature, lng, lat, records), { lng, lat });
     });
   }
 }
