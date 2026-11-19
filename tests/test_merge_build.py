@@ -245,7 +245,10 @@ def test_run_links_extracted_unit_descriptions_to_merged_polygons(tmp_path, monk
     val = {"value": "Wando Formation", "source_id": "ngmdb:10009", "page": 1, "extraction_method": "llm",
            "confidence": 0.8, "inferred": False, "locator": None, "quote": "Wando Formation"}
     (xdir / "ngmdb_10009.json").write_text(json.dumps(
-        {"source_id": "ngmdb:10009", "scale": 24000, "year": 1993, "citation": "c", "units": [{"name": val}]}))
+        {"source_id": "ngmdb:10009", "scale": 24000, "year": 1993, "citation": "c", "units": [{"name": val}],
+         "observations": [{"kind": "boring", "label": {**val, "value": "B-1"},
+                           "location": {**val, "value": "lat 32.85, long -79.85 (NAD 83)"},
+                           "intervals": [{"unit": val, "top": {**val, "value": 0, "normalized": {"min_ft": 0}}}]}]}))
     monkeypatch.setattr(build, "OUT", tmp_path)
     monkeypatch.setattr(build, "EXTRACTED", xdir)
     monkeypatch.setattr(build, "normalize_all", lambda catalog, log=print, **kw: ([feat], []))
@@ -257,3 +260,8 @@ def test_run_links_extracted_unit_descriptions_to_merged_polygons(tmp_path, monk
     assert links == [{"id": "ngmdb:10009#units[0]", "by": "name", "value": "Wando", "inferred": True}]
     table = json.loads((tmp_path / "merged-extracted.json").read_text())
     assert table["ngmdb:10009#units[0]"]["fields"]["name"]["page"] == 1
+    # Observations are checked against the merged layers (a report, merge/observations.py).
+    rep = json.loads((tmp_path / "merged-observations.json").read_text())
+    assert rep["summary"]["agree"] == 1 and rep["records"][0]["page"] == 1
+    summary = json.loads((tmp_path / "merged-sources.json").read_text())
+    assert summary["observations"]["agree"] == 1

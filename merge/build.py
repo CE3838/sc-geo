@@ -15,7 +15,9 @@
 
 Writes web/data/geology/merged-{surficial,bedrock}.geojson and
 merged-sources.json (every source considered, used or skipped, and why),
-merged-extracted.json (unit descriptions read from documents, linked to
+merged-observations.json (extracted point observations placed on the
+merged layers, merged unit next to the unit the source names there:
+merge/observations.py, a report only), merged-extracted.json (unit descriptions read from documents, linked to
 the polygons by merge/extracted_units.py; polygons list the links in
 `extracted`), plus references.json (merge/references.py: catalog records with their
 footprints, for the viewer's property card; written even with
@@ -311,15 +313,18 @@ def run(normalize_only: bool = False, log: Callable[..., None] = print) -> dict:
     summary = {"built_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
                "sources": report, "input_polygons": len(features)}
     if not normalize_only:
-        from merge import overlay  # needs shapely
+        from merge import observations, overlay  # need shapely
 
         OUT.mkdir(parents=True, exist_ok=True)
         all_units, all_sources, all_extracted = {}, {}, {}
         # Unit descriptions read from documents, linked to the polygons they describe (merge/extracted_units.py).
-        entries = extracted_units.index(extracted_units.load(EXTRACTED), catalog, lex)
+        docs = extracted_units.load(EXTRACTED)
+        entries = extracted_units.index(docs, catalog, lex)
+        by_layer = {}
         for layer in ("surficial", "bedrock"):
             merged, table = extracted_units.attach(overlay.merge(features, lex, layer), entries, lex)
             all_extracted.update(table)
+            by_layer[layer] = merged
             for f in merged:
                 f["properties"]["extracted"] = json.dumps(f["properties"]["extracted"])
             polys, units, srcs = split_tables(merged)
@@ -333,6 +338,11 @@ def run(normalize_only: bool = False, log: Callable[..., None] = print) -> dict:
         (OUT / "merged-units.json").write_text(json.dumps(all_units, separators=(",", ":")))
         (OUT / "merged-extracted.json").write_text(json.dumps(all_extracted, separators=(",", ":")))
         summary["extracted_units"] = {"indexed": len(entries), "linked": len(all_extracted)}
+        # Point observations against the merged units (a report; the map is not changed).
+        obs = observations.report(observations.classify(observations.points(docs, catalog), by_layer, lex))
+        observations.write(obs, OUT / "merged-observations.json")
+        summary["observations"] = obs["summary"]
+        log(f"observations: {obs['summary']}")
         (OUT / "merged-legend.json").write_text(json.dumps(
             {"age": classes.AGE_CLASSES, "material": classes.MATERIAL_CLASSES}, indent=1))
         summary["source_details"] = all_sources
