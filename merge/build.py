@@ -15,7 +15,9 @@
 
 Writes web/data/geology/merged-{surficial,bedrock}.geojson and
 merged-sources.json (every source considered, used or skipped, and why),
-plus references.json (merge/references.py: catalog records with their
+merged-extracted.json (unit descriptions read from documents, linked to
+the polygons by merge/extracted_units.py; polygons list the links in
+`extracted`), plus references.json (merge/references.py: catalog records with their
 footprints, for the viewer's property card; written even with
 --normalize-only since it needs neither downloads nor shapely).
 
@@ -39,13 +41,14 @@ from pathlib import Path
 from typing import Callable
 
 from harvest.net import contact_headers
-from merge import classes, correlate, references, scgs, sources
+from merge import classes, correlate, extracted_units, references, scgs, sources
 from model import gisio
 from model.units import Lexicon
 
 ROOT = Path(__file__).resolve().parent.parent
 CACHE = ROOT / ".cache"
 OUT = ROOT / "web" / "data" / "geology"
+EXTRACTED = ROOT / "data" / "extracted"
 NORMALIZE_VERSION = 5
 
 SCGS_FTP = "ftp://ftpdata.dnr.sc.gov/gisdata/glc/"
@@ -311,9 +314,14 @@ def run(normalize_only: bool = False, log: Callable[..., None] = print) -> dict:
         from merge import overlay  # needs shapely
 
         OUT.mkdir(parents=True, exist_ok=True)
-        all_units, all_sources = {}, {}
+        all_units, all_sources, all_extracted = {}, {}, {}
+        # Unit descriptions read from documents, linked to the polygons they describe (merge/extracted_units.py).
+        entries = extracted_units.index(extracted_units.load(EXTRACTED), catalog, lex)
         for layer in ("surficial", "bedrock"):
-            merged = overlay.merge(features, lex, layer)
+            merged, table = extracted_units.attach(overlay.merge(features, lex, layer), entries, lex)
+            all_extracted.update(table)
+            for f in merged:
+                f["properties"]["extracted"] = json.dumps(f["properties"]["extracted"])
             polys, units, srcs = split_tables(merged)
             all_units.update(units)
             all_sources.update(srcs)
@@ -323,6 +331,8 @@ def run(normalize_only: bool = False, log: Callable[..., None] = print) -> dict:
                               "by_source": dict(sorted(_count(polys, "source").items(), key=lambda kv: -kv[1]))}
             log(f"{layer}: {len(polys)} merged polygons")
         (OUT / "merged-units.json").write_text(json.dumps(all_units, separators=(",", ":")))
+        (OUT / "merged-extracted.json").write_text(json.dumps(all_extracted, separators=(",", ":")))
+        summary["extracted_units"] = {"indexed": len(entries), "linked": len(all_extracted)}
         (OUT / "merged-legend.json").write_text(json.dumps(
             {"age": classes.AGE_CLASSES, "material": classes.MATERIAL_CLASSES}, indent=1))
         summary["source_details"] = all_sources
@@ -331,7 +341,8 @@ def run(normalize_only: bool = False, log: Callable[..., None] = print) -> dict:
 
 
 POLY_FIELDS = ("source", "map_unit", "layer", "identity_confidence", "locator", "extraction_method", "confidence",
-               "conf", "conf_base", "agreement", "n_sources", "research_support", "alternatives", "derived_inferred")
+               "conf", "conf_base", "agreement", "n_sources", "research_support", "alternatives", "derived_inferred",
+               "extracted")
 UNIT_FIELDS = ("source", "map_unit", "name", "full_name", "formation", "unit_name", "canonical", "age", "age_ma",
                "geomaterial", "lith", "description", "inferred_fields", "name_source", "as_mapped", "correlation")
 SOURCE_FIELDS = ("title", "citation", "scale", "year")

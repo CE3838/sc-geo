@@ -1,5 +1,6 @@
 import json
 import zipfile
+import pytest
 
 from merge import build
 from tests.test_gisio import UTM17_NAD83, _dbf, _shp
@@ -230,3 +231,29 @@ def test_scgs_source_outside_its_catalog_extent_is_skipped(tmp_path):
     _, report = build.normalize_all([rec], cache=tmp_path, log=lambda *_: None,
                                     fetch=lambda url, dest: _scgs_package(dest))
     assert report[0]["status"] == "skipped" and "outside catalog bbox" in report[0]["reason"]
+
+
+def test_run_links_extracted_unit_descriptions_to_merged_polygons(tmp_path, monkeypatch):
+    pytest.importorskip("shapely")
+    sq = {"type": "Polygon", "coordinates": [[[-79.9, 32.8], [-79.8, 32.8], [-79.8, 32.9], [-79.9, 32.9], [-79.9, 32.8]]]}
+    feat = {"type": "Feature", "geometry": sq, "properties": {
+        "source": "gis:x", "scale": 24000, "year": 2010, "map_unit": "Qw", "name": "Wando Formation",
+        "unit_name": "Wando Formation", "formation": "Wando Formation", "age": "late Pleistocene",
+        "identity_confidence": "certain", "layer": "surficial", "citation": "x"}}
+    xdir = tmp_path / "extracted"
+    xdir.mkdir()
+    val = {"value": "Wando Formation", "source_id": "ngmdb:10009", "page": 1, "extraction_method": "llm",
+           "confidence": 0.8, "inferred": False, "locator": None, "quote": "Wando Formation"}
+    (xdir / "ngmdb_10009.json").write_text(json.dumps(
+        {"source_id": "ngmdb:10009", "scale": 24000, "year": 1993, "citation": "c", "units": [{"name": val}]}))
+    monkeypatch.setattr(build, "OUT", tmp_path)
+    monkeypatch.setattr(build, "EXTRACTED", xdir)
+    monkeypatch.setattr(build, "normalize_all", lambda catalog, log=print, **kw: ([feat], []))
+    monkeypatch.setattr(build, "sgmc_features", lambda: [])
+    monkeypatch.setattr(build.correlate, "load", lambda: [])
+    build.run(log=lambda *_: None)
+    poly = json.loads((tmp_path / "merged-surficial.geojson").read_text())["features"][0]["properties"]
+    links = json.loads(poly["extracted"])
+    assert links == [{"id": "ngmdb:10009#units[0]", "by": "name", "value": "Wando", "inferred": True}]
+    table = json.loads((tmp_path / "merged-extracted.json").read_text())
+    assert table["ngmdb:10009#units[0]"]["fields"]["name"]["page"] == 1
