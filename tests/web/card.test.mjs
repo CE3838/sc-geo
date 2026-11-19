@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  confidenceLevel, confidenceWhy, formatMa, keyReferences, mergedCard, sgmcCard, shortRef,
+  confidenceLevel, confidenceWhy, extractedDescriptions, formatMa, keyReferences, loadOnce, mergedCard, sgmcCard, shortRef,
 } from '../../web/card.js';
 
 test('confidenceLevel: High >= 0.7, Medium 0.4-0.7, Low < 0.4', () => {
@@ -200,4 +200,69 @@ test('mergedCard shows a GeoMaterial term with quotes as the GeMS vocabulary wri
   const c = mergedCard({ props: POLY, unit: { ...UNIT, geomaterial: term }, sources: SOURCES, records: RECORDS, lng: -79.95, lat: 32.8 });
   const rows = Object.fromEntries(c.rows.map((r) => [r.label, r]));
   assert.equal(rows.Geomaterial.value, term);
+});
+
+// --- unit descriptions read from documents (merge/extracted_units.py) --------
+
+const sv = (value, page, extra = {}) => ({ value, source_id: 'ngmdb:9', page, extraction_method: 'llm', confidence: 0.8,
+  inferred: false, locator: null, quote: String(value), ...extra });
+const EXTRACTED = {
+  'ngmdb:2#units[3]': { id: 'ngmdb:2#units[3]', source_id: 'ngmdb:2', citation: 'Bee, A.B., 2010, Geology of B quadrangle',
+    scale: 24000, year: 2010, fields: { name: sv('Wando Formation', 2), age: sv('late Pleistocene', 2),
+      lithology: sv('Quartz sand and clay', 3) } },
+  'ngmdb:9#units[0]': { id: 'ngmdb:9#units[0]', source_id: 'ngmdb:9', citation: 'Weems, R.E., and Lemon, E.M., 1993, Geology',
+    scale: 24000, year: 1993, fields: { name: sv('Wando Fm.', 1), lithology: sv('Sand', 1, { inferred: true }) } },
+  'ngmdb:8#units[1]': { id: 'ngmdb:8#units[1]', source_id: 'ngmdb:8', scale: 100000, year: 1980,
+    fields: { name: sv('Wando Formation', 7) } },
+};
+const LINKS = JSON.stringify([
+  { id: 'ngmdb:2#units[3]', by: 'symbol', value: 'Qws', inferred: false },
+  { id: 'ngmdb:9#units[0]', by: 'name', value: 'Wando', inferred: true },
+  { id: 'ngmdb:8#units[1]', by: 'name', value: 'Wando', inferred: true },
+  { id: 'missing#units[0]', by: 'name', value: 'Wando', inferred: true },
+]);
+
+test('extractedDescriptions: own-map descriptions plainly, name matches in the inferred group', () => {
+  const d = extractedDescriptions(LINKS, EXTRACTED);
+  assert.equal(d.shown.length, 1);
+  assert.deepEqual(d.shown[0], {
+    name: 'Wando Formation', age: 'late Pleistocene', lithology: 'Quartz sand and clay',
+    citation: 'Bee, 2010', pages: 'pp. 2, 3', inferred: [],
+  });
+  assert.deepEqual(d.inferred.map((x) => [x.name, x.citation, x.pages]), [
+    ['Wando Fm.', 'Weems and Lemon, 1993', 'p. 1'], ['Wando Formation', 'cited document, 1980', 'p. 7']]);
+  assert.deepEqual(d.inferred[0].inferred, ['lithology']);
+  assert.equal(d.groupTitle, 'From other maps (inferred)');
+});
+
+test('extractedDescriptions never shows raw record ids and copes with missing data', () => {
+  const d = extractedDescriptions(LINKS, EXTRACTED);
+  const text = JSON.stringify(d);
+  assert.ok(!text.includes('ngmdb:') && !text.includes('#units'));
+  assert.deepEqual(extractedDescriptions(undefined, EXTRACTED), { shown: [], inferred: [], groupTitle: 'From other maps (inferred)' });
+  assert.deepEqual(extractedDescriptions('not json', null).shown, []);
+  assert.deepEqual(extractedDescriptions(LINKS, null).inferred, []);
+});
+
+test('mergedCard: linked descriptions, confidence and winning unit unchanged', () => {
+  const plain = mergedCard({ props: POLY, unit: UNIT, sources: SOURCES, records: RECORDS, lng: -79.95, lat: 32.8 });
+  const withX = mergedCard({ props: { ...POLY, extracted: LINKS }, unit: UNIT, sources: SOURCES, records: RECORDS,
+    lng: -79.95, lat: 32.8, extracted: EXTRACTED });
+  assert.equal(withX.descriptions.shown.length, 1);
+  assert.equal(withX.descriptions.inferred.length, 2);
+  assert.deepEqual(plain.descriptions, { shown: [], inferred: [], groupTitle: 'From other maps (inferred)' });
+  const { descriptions: _a, ...a } = plain;
+  const { descriptions: _b, ...b } = withX;
+  assert.deepEqual(a, b);
+});
+
+test('loadOnce fetches the description table once, only when asked, and survives a missing file', async () => {
+  let calls = 0;
+  const load = loadOnce(async () => { calls += 1; return { x: 1 }; });
+  assert.equal(calls, 0);
+  assert.deepEqual(await load(), { x: 1 });
+  await load();
+  assert.equal(calls, 1);
+  const missing = loadOnce(async () => { throw new Error('HTTP 404'); });
+  assert.deepEqual(await missing(), {});
 });
