@@ -1,0 +1,1589 @@
+{
+ "source_id": "ngmdb:5920",
+ "title": "Geologic map of the Savannah River site, Aiken, Allendale, and Barnwell Counties, South Carolina",
+ "citation": "Prowell, D.C., 1996, Geologic map of the Savannah River site, Aiken, Allendale, and Barnwell Counties, South Carolina: U.S. Geological Survey Miscellaneous Field Studies Map MF-2300, map scale 1:48,000.",
+ "year": 1996,
+ "scale": 48000,
+ "publisher": "U.S. Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-11-17T23:57:23+00:00",
+ "updated_at": "2026-11-17T23:57:23+00:00",
+ "reader": "Claude, Claude Code session 2026-11-18",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8"
+ ],
+ "blocks_total": 8,
+ "complete": true,
+ "notes": "USGS MF-2300 Geologic map of the Savannah River Site (Prowell, 1996) with pamphlet (pages 2-8). Contacts drawn from structure-contour maps of unit bases; author cautions against applying contacts far from outcrops/holes. Core-sample elevations (ft, map datum NGVD 1929 assumed for the base, not stated for samples) are recorded in interval descriptions, not as depths. Section holes and reference localities not itemized beyond text. SUBSURFACE: two sections (VE 15.75x); Pen Branch fault from seismic data.",
+ "files": [
+  {
+   "url": "https://pubs.usgs.gov/mf/1996/2300/plate-1.pdf",
+   "via": "pubs_usgs",
+   "sha256": "b4f3f1121a4aa696f78254edaa5ebcb089cb7df8983804afdea7a5db91dfed37",
+   "pages": 1,
+   "first_page": 1
+  },
+  {
+   "url": "https://pubs.usgs.gov/mf/1996/2300/report.pdf",
+   "via": "pubs_usgs",
+   "sha256": "14680d46203e981e98abcf05844c3b773c91a47da0633b9083c181da3b479feb",
+   "pages": 8,
+   "first_page": 2
+  }
+ ],
+ "summary": {
+  "stored": 91,
+  "quote_match": {
+   "exact": 91
+  },
+  "verification": {
+   "agree": 15
+  },
+  "inferred": 4
+ },
+ "ingests": [
+  {
+   "at": "2026-11-17T23:57:23+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, Claude Code session 2026-11-18",
+   "values": 91,
+   "stored": 91,
+   "exact": 91,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 15,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 0,
+   "image_not_verified": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [
+  {
+   "map_symbol": {
+    "value": "Qal1",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Qal1,Qal2| Alluvium (Holocene)—Qal 1 is fine to very coarse quartz sand in a sparse",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "name": {
+    "value": "Alluvium (modern flood plain)",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Qal1,Qal2| Alluvium (Holocene)—Qal 1 is fine to very coarse quartz sand in a sparse",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Qal1,Qal2| Alluvium (Holocene)—Qal 1 is fine to very coarse quartz sand in a sparse",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "fine to very coarse angular quartz sand in sparse clay matrix with quartz gravels; crossbedded",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Qal1,Qal2| Alluvium (Holocene)—Qal 1 is fine to very coarse quartz sand in a sparse",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "exceeds 30 ft on the SRS; maximum probably not over 60 ft",
+    "source_id": "ngmdb:5920",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "plain, and data on the SRS suggest that it exceeds 30 ft. Data",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "units": "ft",
+    "normalized": {
+     "min_ft": 30.0,
+     "max_ft": 60.0,
+     "values_ft": [
+      30.0,
+      60.0
+     ],
+     "unit": "ft",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Qal2",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Qal1,Qal2| Alluvium (Holocene)—Qal 1 is fine to very coarse quartz sand in a sparse",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "name": {
+    "value": "Alluvium (older plains)",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Qal1,Qal2| Alluvium (Holocene)—Qal 1 is fine to very coarse quartz sand in a sparse",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Qal1,Qal2| Alluvium (Holocene)—Qal 1 is fine to very coarse quartz sand in a sparse",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "older alluvial plains 20-50 ft above the modern flood plain on the east side of the Savannah River valley",
+    "source_id": "ngmdb:5920",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "races) at moderately higher elevations (20-50 ft) than the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "averages about 30 ft",
+    "source_id": "ngmdb:5920",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "mation suggests that they average about 30 ft in thickness. They",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "units": "ft",
+    "normalized": {
+     "min_ft": 30.0,
+     "max_ft": 30.0,
+     "unit": "ft",
+     "approximate": true
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Td",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Td Dune sand (Pliocene?)—Medium, angular, moderately sorted tan quartz",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "name": {
+    "value": "Dune sand",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Td Dune sand (Pliocene?)—Medium, angular, moderately sorted tan quartz",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Pliocene? (probably early Pliocene)",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Td Dune sand (Pliocene?)—Medium, angular, moderately sorted tan quartz",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 3.6,
+     "older_ma": 5.333,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "about 3-5 ft, some as thick as 10 ft",
+    "source_id": "ngmdb:5920",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "post-depositional erosion. These deposits average about 3-5 ft",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "units": "ft",
+    "normalized": {
+     "min_ft": 3.0,
+     "max_ft": 5.0,
+     "unit": "ft",
+     "approximate": true
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Tu",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Tu Upland unit (Miocene?}—Unit is characterized by three predominant",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "name": {
+    "value": "Upland unit",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Tu Upland unit (Miocene?}—Unit is characterized by three predominant",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Miocene?",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Tu Upland unit (Miocene?}—Unit is characterized by three predominant",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 5.333,
+     "older_ma": 23.03,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "crossbedded gravel and poorly sorted sand; crossbedded fine to very coarse sand with clay clasts and weathered feldspar; massive sandy clay",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Tu Upland unit (Miocene?}—Unit is characterized by three predominant",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "exceeds 100 ft downdip; basal relief as much as 33 ft",
+    "source_id": "ngmdb:5920",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "33 ft, and the thickness of the formation exceeds 100 ft in",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "units": "ft",
+    "normalized": {
+     "min_ft": 33.0,
+     "max_ft": 100.0,
+     "values_ft": [
+      100.0,
+      33.0
+     ],
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "depositional_environment": {
+    "value": "high-energy fluvial",
+    "source_id": "ngmdb:5920",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "that reflect a high-energy, highly variable, fluvial depositional",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Ttr",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.81,
+    "inferred": false,
+    "locator": null,
+    "quote": "Ttr Tobacco Road Sand (Oligocene? and Eocene)—Poorly to moderately",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "name": {
+    "value": "Tobacco Road Sand",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Ttr Tobacco Road Sand (Oligocene? and Eocene)—Poorly to moderately",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Tobacco Road",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Oligocene? and Eocene",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Ttr Tobacco Road Sand (Oligocene? and Eocene)—Poorly to moderately",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 23.03,
+     "older_ma": 56.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Barnwell Group",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Barnwell Group (Oligocene? and Eocene)—Consists of Tobacco Road",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "high-energy shallow-marine, probably shoreface",
+    "source_id": "ngmdb:5920",
+    "page": 5,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "and extensive crossbedding suggest deposition in a high-energy,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Tdb",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Tdb Dry Branch Formation (Eocene)—Beds of calcareous clay, clay, thinly",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "name": {
+    "value": "Dry Branch Formation",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Tdb Dry Branch Formation (Eocene)—Beds of calcareous clay, clay, thinly",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Dry Branch",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Eocene (upper Eocene, lower Jacksonian dinoflagellates)",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Tdb Dry Branch Formation (Eocene)—Beds of calcareous clay, clay, thinly",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 37.71,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Barnwell Group",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Barnwell Group (Oligocene? and Eocene)—Consists of Tobacco Road",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "fossils": {
+    "value": "oyster beds and bioherms (Crassostrea gigantissima); molds of leaves and bivalves",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "oyster shells (Crassostrea gigantissima). Thinly laminated clay beds,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Te",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Te Clinchfield Formation (Eocene)(subsurface only)—Sandy, fossiliferous",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "name": {
+    "value": "Clinchfield Formation (subsurface only)",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Te Clinchfield Formation (Eocene)(subsurface only)—Sandy, fossiliferous",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "Clinchfield",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Eocene",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Te Clinchfield Formation (Eocene)(subsurface only)—Sandy, fossiliferous",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 56.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Barnwell Group",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Barnwell Group (Oligocene? and Eocene)—Consists of Tobacco Road",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "10-14 ft at the reference locality south of Hancock Landing",
+    "source_id": "ngmdb:5920",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "ity, the thickness of the formation is only 10-14 ft, and it disap-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "units": "ft",
+    "normalized": {
+     "min_ft": 10.0,
+     "max_ft": 14.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Tm",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Tm McBean Formation (Eocene)—Basal part of formation contains white to",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "name": {
+    "value": "McBean Formation",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Tm McBean Formation (Eocene)—Basal part of formation contains white to",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "McBean",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Eocene (late middle Eocene dinoflagellates)",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Tm McBean Formation (Eocene)—Basal part of formation contains white to",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 37.71,
+     "older_ma": 47.8,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "maximum about 86 ft (southwestern corner); basal relief up to 33 ft",
+    "source_id": "ngmdb:5920",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "about 86 ft in the southwestern corner of the map area and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "units": "ft",
+    "normalized": {
+     "min_ft": 33.0,
+     "max_ft": 86.0,
+     "values_ft": [
+      86.0,
+      33.0
+     ],
+     "unit": "ft",
+     "approximate": true
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Thc",
+    "source_id": "ngmdb:5920",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Huber and Congaree Formations, undivided (The): Small",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "OCR '(The)'"
+   },
+   "name": {
+    "value": "Huber and Congaree Formations, undivided",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Huber and Congaree Formations, undivided (Eocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "huber and congaree",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Eocene (lower and middle middle Eocene floras)",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Huber and Congaree Formations, undivided (Eocene)",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 37.71,
+     "older_ma": 47.8,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "thickness": {
+    "value": "maximum about 83 ft, southern end of SRS",
+    "source_id": "ngmdb:5920",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "maximum thickness of this unit is about 83 ft, on the southern",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "units": "ft",
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 83.0,
+     "unit": "ft",
+     "approximate": true
+    }
+   },
+   "depositional_environment": {
+    "value": "Huber: lower (restricted-marine) delta plain; Congaree: open-marine delta front",
+    "source_id": "ngmdb:5920",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "the lower (restricted-marine) delta plain whereas the Congaree",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Tltu",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.648,
+    "inferred": true,
+    "locator": null,
+    "quote": "Titu Lower Tertiary sediments, undivided (Eocene and Paleocene)(subsur-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "OCR 'Titu'"
+   },
+   "name": {
+    "value": "Lower Tertiary sediments, undivided (subsurface only)",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Titu Lower Tertiary sediments, undivided (Eocene and Paleocene)(subsur-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Eocene and Paleocene",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.689,
+    "inferred": false,
+    "locator": null,
+    "quote": "Titu Lower Tertiary sediments, undivided (Eocene and Paleocene)(subsur-",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 66.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "mainly the Ellenton Formation of Siple (1967); correlative with the Black Mingo Group",
+    "source_id": "ngmdb:5920",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Ellenton Formation of Siple (1967) as defined at its subsurface",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ],
+ "observations": [
+  {
+   "kind": "core",
+   "label": {
+    "value": "FC4A",
+    "source_id": "ngmdb:5920",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Formation were collected from wells FC4A (+53, +56, and +57",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Ellenton Formation (lower Tertiary, undivided)",
+      "source_id": "ngmdb:5920",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Formation were collected from wells FC4A (+53, +56, and +57",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Ellenton",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "carbonaceous clay samples at +53, +56 and +57 ft elevation; Paleocene pollen and dinoflagellate ages",
+      "source_id": "ngmdb:5920",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Formation were collected from wells FC4A (+53, +56, and +57",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree"
+     }
+    }
+   ]
+  },
+  {
+   "kind": "core",
+   "label": {
+    "value": "FC3A",
+    "source_id": "ngmdb:5920",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "ft), FC3A (+34 and +37 ft), FC5A (+38, +45, +61, and +75 ft),",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Ellenton Formation",
+      "source_id": "ngmdb:5920",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "ft), FC3A (+34 and +37 ft), FC5A (+38, +45, +61, and +75 ft),",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Ellenton",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "carbonaceous clay at +34 and +37 ft (Paleocene)",
+      "source_id": "ngmdb:5920",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "ft), FC3A (+34 and +37 ft), FC5A (+38, +45, +61, and +75 ft),",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    },
+    {
+     "unit": {
+      "value": "Huber and Congaree Formations",
+      "source_id": "ngmdb:5920",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Congaree Formations from the SRS wells FC3A (+91 and +141",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "huber and congaree",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "carbonaceous clay at +91 and +141 ft (lower and middle middle Eocene flora)",
+      "source_id": "ngmdb:5920",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "Congaree Formations from the SRS wells FC3A (+91 and +141",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree"
+     }
+    },
+    {
+     "unit": {
+      "value": "McBean Formation",
+      "source_id": "ngmdb:5920",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Formation from wells FC3A (+146 ft) and MSP19TA (+192 ft)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "McBean",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "dark-green clay at +146 ft (late middle Eocene dinoflagellates)",
+      "source_id": "ngmdb:5920",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Formation from wells FC3A (+146 ft) and MSP19TA (+192 ft)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    }
+   ]
+  },
+  {
+   "kind": "core",
+   "label": {
+    "value": "FC5A",
+    "source_id": "ngmdb:5920",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "ft), FC3A (+34 and +37 ft), FC5A (+38, +45, +61, and +75 ft),",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Ellenton Formation",
+      "source_id": "ngmdb:5920",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "ft), FC3A (+34 and +37 ft), FC5A (+38, +45, +61, and +75 ft),",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Ellenton",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "carbonaceous clay at +38, +45, +61 and +75 ft (Paleocene)",
+      "source_id": "ngmdb:5920",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "ft), FC3A (+34 and +37 ft), FC5A (+38, +45, +61, and +75 ft),",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    }
+   ]
+  },
+  {
+   "kind": "core",
+   "label": {
+    "value": "VSC2",
+    "source_id": "ngmdb:5920",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "MSB23TA (+84 ft), and VSC2 (-192 ft) on the SRS. Pollen and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Ellenton Formation",
+      "source_id": "ngmdb:5920",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "MSB23TA (+84 ft), and VSC2 (-192 ft) on the SRS. Pollen and",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Ellenton",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "carbonaceous clay at -192 ft (Paleocene)",
+      "source_id": "ngmdb:5920",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "MSB23TA (+84 ft), and VSC2 (-192 ft) on the SRS. Pollen and",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree"
+     }
+    },
+    {
+     "unit": {
+      "value": "Huber and Congaree Formations",
+      "source_id": "ngmdb:5920",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "ft), VSC2 (-71 ft), and MSB18TA (+153 ft) contained flora",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "huber and congaree",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "carbonaceous clay at -71 ft (middle Eocene flora)",
+      "source_id": "ngmdb:5920",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "ft), VSC2 (-71 ft), and MSB18TA (+153 ft) contained flora",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    },
+    {
+     "unit": {
+      "value": "Dry Branch Formation (Griffins Landing lithofacies)",
+      "source_id": "ngmdb:5920",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "and in a core sample from well VSC2 (+66 ft) on the SRS.",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Dry Branch",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "clay and marl at +66 ft (upper Eocene dinoflagellates)",
+      "source_id": "ngmdb:5920",
+      "page": 5,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "and in a core sample from well VSC2 (+66 ft) on the SRS.",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    }
+   ]
+  },
+  {
+   "kind": "core",
+   "label": {
+    "value": "MSB23TA",
+    "source_id": "ngmdb:5920",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "MSB23TA (+84 ft), and VSC2 (-192 ft) on the SRS. Pollen and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Ellenton Formation",
+      "source_id": "ngmdb:5920",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "MSB23TA (+84 ft), and VSC2 (-192 ft) on the SRS. Pollen and",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "Ellenton",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "carbonaceous clay at +84 ft (Paleocene)",
+      "source_id": "ngmdb:5920",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "MSB23TA (+84 ft), and VSC2 (-192 ft) on the SRS. Pollen and",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    }
+   ]
+  },
+  {
+   "kind": "core",
+   "label": {
+    "value": "MSB18TA",
+    "source_id": "ngmdb:5920",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "ft), VSC2 (-71 ft), and MSB18TA (+153 ft) contained flora",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "Huber and Congaree Formations",
+      "source_id": "ngmdb:5920",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "ft), VSC2 (-71 ft), and MSB18TA (+153 ft) contained flora",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "huber and congaree",
+       "in_geolex": false,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "carbonaceous clay at +153 ft (middle Eocene flora)",
+      "source_id": "ngmdb:5920",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.85,
+      "inferred": false,
+      "locator": null,
+      "quote": "ft), VSC2 (-71 ft), and MSB18TA (+153 ft) contained flora",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": "agree"
+     }
+    }
+   ]
+  },
+  {
+   "kind": "core",
+   "label": {
+    "value": "MSP19TA",
+    "source_id": "ngmdb:5920",
+    "page": 4,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Formation from wells FC3A (+146 ft) and MSP19TA (+192 ft)",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "intervals": [
+    {
+     "unit": {
+      "value": "McBean Formation",
+      "source_id": "ngmdb:5920",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Formation from wells FC3A (+146 ft) and MSP19TA (+192 ft)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null,
+      "normalized": {
+       "canonical": "McBean",
+       "in_geolex": true,
+       "inferred": true
+      }
+     },
+     "description": {
+      "value": "dark-green clay at +192 ft (late middle Eocene dinoflagellates)",
+      "source_id": "ngmdb:5920",
+      "page": 4,
+      "extraction_method": "llm",
+      "confidence": 0.722,
+      "inferred": false,
+      "locator": null,
+      "quote": "Formation from wells FC3A (+146 ft) and MSP19TA (+192 ft)",
+      "quote_match": "exact",
+      "text_method": "pdf_text",
+      "verification": null
+     }
+    }
+   ]
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "P14TA",
+    "source_id": "ngmdb:5920",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "elevation [+305 ft] of well P14TA differs from the SRS surveyed",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "elevation": {
+    "value": "293",
+    "source_id": "ngmdb:5920",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "elevation [+293 ft]). In these areas, the reader is advised to com-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "units": "ft",
+    "note": "SRS surveyed elevation; topographic-map elevation +305 ft",
+    "normalized": {
+     "min_ft": 293.0,
+     "max_ft": 293.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   },
+   "datum": {
+    "value": "not stated",
+    "source_id": "ngmdb:5920",
+    "page": 3,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "elevation [+293 ft]). In these areas, the reader is advised to com-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "SRS survey datum not given"
+   }
+  }
+ ],
+ "structures": [
+  {
+   "kind": "fault",
+   "name": {
+    "value": "Pen Branch fault",
+    "source_id": "ngmdb:5920",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Pen Branch fault",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "description": {
+    "value": "subsurface fault shown only in section A-A', positioned from seismic reflection data; no faults evident at the surface",
+    "source_id": "ngmdb:5920",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "its position was determined by seismic reflection data reported by",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ],
+ "groundwater": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Cooke, C.W., 1936, Geology of the Coastal Plain of South",
+    "source_id": "ngmdb:5920",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cooke, C.W., 1936, Geology of the Coastal Plain of South",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the citation"
+   }
+  },
+  {
+   "citation": {
+    "value": "Christl, R.J., 1964, Storage of radioactive wastes in basement",
+    "source_id": "ngmdb:5920",
+    "page": 6,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Christl, R.J., 1964, Storage of radioactive wastes in basement",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the citation"
+   }
+  },
+  {
+   "citation": {
+    "value": "Nystrom, P.G., Jr., and Willoughby, R.H., 1982, Geological",
+    "source_id": "ngmdb:5920",
+    "page": 7,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Nystrom, P.G., Jr., and Willoughby, R.H., 1982, Geological",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the citation"
+   }
+  },
+  {
+   "citation": {
+    "value": "Newell, W.L., Pavich, M.J., Prowell, D.C., and Markewich, H.",
+    "source_id": "ngmdb:5920",
+    "page": 7,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Newell, W.L., Pavich, M.J., Prowell, D.C., and Markewich, H.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the citation"
+   }
+  }
+ ],
+ "surfaces": [],
+ "contours": [],
+ "sections": [
+  {
+   "name": {
+    "value": "Section A-A'",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": null,
+    "quote": "VERTICAL EXAGGERATION 15.75x",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "vertical_exaggeration": {
+    "value": "15.75",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "VERTICAL EXAGGERATION 15.75x",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": 15.75
+   },
+   "datum": {
+    "value": "sea level",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "SEA LEVEL: > Im eeatevel",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": "MSL"
+   }
+  },
+  {
+   "name": {
+    "value": "Section B-B'",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "VERTICAL EXAGGERATION 15.75x INTERIOR—GEOLOGICAL SURVEY, RESTON, VA—1996",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "vertical_exaggeration": {
+    "value": "15.75",
+    "source_id": "ngmdb:5920",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": null,
+    "quote": "VERTICAL EXAGGERATION 15.75x INTERIOR—GEOLOGICAL SURVEY, RESTON, VA—1996",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": 15.75
+   }
+  }
+ ],
+ "water_tests": [],
+ "rock_tests": []
+}

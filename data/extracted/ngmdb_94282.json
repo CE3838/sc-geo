@@ -1,0 +1,5132 @@
+{
+ "source_id": "ngmdb:94282",
+ "title": "Geologic and geomorphic elements of the lower Congaree River floodplain, central South Carolina",
+ "citation": "Shelley, D.C., and Cohen, A.D., 2007, Geologic and geomorphic elements of the lower Congaree River floodplain, central South Carolina: South Carolina Geological Survey Map Series MS-27, map scale 1:12,000.",
+ "year": 2007,
+ "scale": 12000,
+ "publisher": "South Carolina Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-11-15T11:59:02+00:00",
+ "updated_at": "2026-11-16T23:56:54+00:00",
+ "reader": "Claude, Claude Code session 2026-11-15",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1",
+  "2"
+ ],
+ "blocks_total": 2,
+ "complete": true,
+ "notes": "MS-27 (Shelley and Cohen, 2007), lower Congaree River flood plain at 1:12,000. Page 1 is the plate (about 9750 x 2700 pt); page 2 is the explanation text, from which units, ages and thicknesses are recorded. Several symbols are garbled in OCR and only those cited cleanly in the text are recorded. Hand and power auger hole labels on the plate are too small for this pass and are queued for an image re-read; third-party geotechnical site identifiers are not recorded. SUBSURFACE: hole 09-247 (17+ ft fan deposits) and Boundary Road holes (4-8 ft clay top stratum) from the text.\nRe-read of page 1 (the 1:12,000 plate) for drill-hole labels. SCGS auger holes (09-xxx Calhoun, 40-xxx Richland) and SCDNR wells (CAL-, RIC-) read on 72 dpi tiles; third-party geotechnical site identifiers (601-xx, TC-, GC-) not recorded. Labels partly hidden under symbols (a 40-2xx label near Green Hill Mound, one in the Pd body near Muller's Barn Ridge, a 40-237/238/239/243 cluster) left out. Page 1 held no earlier values.",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1",
+   "via": "ngmdb_image",
+   "sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d",
+   "pages": 1,
+   "first_page": 1
+  },
+  {
+   "url": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+   "via": "ngmdb_image",
+   "sha256": "e4bc441d992eb0935ecbcb5b454b846f28910244122d64677a7c7f19b660b9af",
+   "pages": 1,
+   "first_page": 2
+  }
+ ],
+ "summary": {
+  "stored": 199,
+  "quote_match": {
+   "image": 77,
+   "exact": 122
+  },
+  "verification": {
+   "agree": 90
+  },
+  "inferred": 15
+ },
+ "ingests": [
+  {
+   "at": "2026-11-15T11:59:02+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, Claude Code session 2026-11-15",
+   "values": 122,
+   "stored": 122,
+   "exact": 122,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 13,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 0,
+   "image_not_verified": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-11-16T23:56:54+00:00",
+   "packets": [
+    "reread-01"
+   ],
+   "reader": "Claude, Claude Code session 2026-11-15",
+   "values": 77,
+   "stored": 77,
+   "exact": 0,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 77,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 77,
+   "image_not_verified": 0,
+   "review_items": 0,
+   "reread": {
+    "packets": [
+     "reread-01"
+    ],
+    "pages": [
+     1
+    ],
+    "reason": "map_face: drill-hole labels on the plate",
+    "queue_ids": [
+     "ngmdb:94282:map_face:p1"
+    ]
+   }
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "Moved earth",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[m | Moved earth (recent) — Moved earth includes artificially emplaced earthen",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "recent",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[m | Moved earth (recent) — Moved earth includes artificially emplaced earthen",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Modern Congaree River meander belt",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[Ami | Modern Congaree River meander belt (1825-Present) — The modern Congaree",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "modern congaree river meander",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "1825-present",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[Ami | Modern Congaree River meander belt (1825-Present) — The modern Congaree",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "group": {
+    "value": "Congaree River flood plain complex: meander belts",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Meander belts are irregular, sinuous zones formed by the Congaree River during specific",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "old flood plain surface beneath the belt with in situ cypress stumps; radiocarbon minimum age 1660 +/- 40 years (UGA sample 01792)",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "1660 '/- 40 years. This is likely a minimum age, because the stump margins were",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "OCR \"'/-\" read as +/-"
+   }
+  },
+  {
+   "name": {
+    "value": "Congaree River meander belt 2",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Congaree River meander belt 2 (Holocene to pre-1825) — Congaree River",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "congaree river meander",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Holocene to pre-1825",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Congaree River meander belt 2 (Holocene to pre-1825) — Congaree River",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Congaree River flood plain complex: meander belts",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Meander belts are irregular, sinuous zones formed by the Congaree River during specific",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Congaree River meander belt 3",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[rms | Congaree River meander belt 3 (Holocene to pre-1825) — Congaree River",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "congaree river meander",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Holocene to pre-1825",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[rms | Congaree River meander belt 3 (Holocene to pre-1825) — Congaree River",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Congaree River flood plain complex: meander belts",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Meander belts are irregular, sinuous zones formed by the Congaree River during specific",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Congaree River meander belt 4",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[Hime | Congaree River meander belt 4 (Holocene to pre-1825) — Congaree River",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "congaree river meander",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Holocene to pre-1825",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[Hime | Congaree River meander belt 4 (Holocene to pre-1825) — Congaree River",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "map_symbol": {
+    "value": "Hm4",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "(Hm4). These areas, called back swamps, flood basins and rim swamps, are generally",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "symbol as cited in the text"
+   },
+   "group": {
+    "value": "Congaree River flood plain complex: meander belts",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Meander belts are irregular, sinuous zones formed by the Congaree River during specific",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Congaree River meander belt 5",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Congaree River meander belt 5 (Latest Pleistocene) — Congaree River meander",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "congaree river meander",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "latest Pleistocene (channels established 17 to 14 ka regionally)",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Congaree River meander belt 5 (Latest Pleistocene) — Congaree River meander",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Congaree River flood plain complex: meander belts",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Meander belts are irregular, sinuous zones formed by the Congaree River during specific",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Bottomland terrace 1",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Bottomland terrace 1 (Pleistocene) — Bottomland terrace 1 occurs in two deeply",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Bottomland terrace 1 (Pleistocene) — Bottomland terrace 1 occurs in two deeply",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "map_symbol": {
+    "value": "Pbt1",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "equivalent to bottomland terrace 1 (Pbt1), although there is a strong difference between the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "symbol as cited in the text"
+   },
+   "group": {
+    "value": "Congaree River flood plain complex: bottomland terraces",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "BOTTOMLAND TERRACES",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Bottomland terrace 2",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[Poe | Bottomland terrace 2 (Pleistocene) — Bottomland terrace 2 includes areas in the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[Poe | Bottomland terrace 2 (Pleistocene) — Bottomland terrace 2 includes areas in the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Congaree River flood plain complex: bottomland terraces",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "BOTTOMLAND TERRACES",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Bottomland terrace 3",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "pbig | Bottomland terrace 3 (Pleistocene) — Bottomland terrace 3 is found in the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "pbig | Bottomland terrace 3 (Pleistocene) — Bottomland terrace 3 is found in the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Congaree River flood plain complex: bottomland terraces",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "BOTTOMLAND TERRACES",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Bottomland terrace 4",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Bottomland terrace 4 (Pleistocene) — Bottomland terrace 4 is a Pleistocene",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene (braided river terrace)",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Bottomland terrace 4 (Pleistocene) — Bottomland terrace 4 is a Pleistocene",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "map_symbol": {
+    "value": "Pbt4",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "on top of Pleistocene bottomland terrace 4 (Pbt4) in the vicinity of the old",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "symbol as cited in the text"
+   },
+   "group": {
+    "value": "Congaree River flood plain complex: bottomland terraces",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "BOTTOMLAND TERRACES",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "North Rim alluvial fan complex",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[Han] North Rim alluvial fan complex (Holocene) — This fan complex includes the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "north rim alluvial fan",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Holocene (at least middle Holocene)",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[Han] North Rim alluvial fan complex (Holocene) — This fan complex includes the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0039000000000000003,
+     "older_ma": 0.0078000000000000005,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Alluvial fans",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Alluvial fans are lobate cones of sediment deposited where tributary streams open up as",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "up to 8 to 12 ft",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "data indicate these fans are up to 8 to 12 feet thick, but they have been largely buried",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "units": "ft",
+    "normalized": {
+     "min_ft": 8.0,
+     "max_ft": 12.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Kingville alluvial fan",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[Hak | Kingville alluvial fan (Holocene) — The Kingville alluvial fan complex is found",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[Hak | Kingville alluvial fan (Holocene) — The Kingville alluvial fan complex is found",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Alluvial fans",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Alluvial fans are lobate cones of sediment deposited where tributary streams open up as",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "name": {
+    "value": "Griffins Creek alluvial fan",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Hag Griffins Creek alluvial fan (Holocene) — An isolated feature deposited by",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Hag Griffins Creek alluvial fan (Holocene) — An isolated feature deposited by",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "map_symbol": {
+    "value": "Hag",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Hag Griffins Creek alluvial fan (Holocene) — An isolated feature deposited by",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "symbol as cited in the text"
+   },
+   "group": {
+    "value": "Alluvial fans",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Alluvial fans are lobate cones of sediment deposited where tributary streams open up as",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Sandy Run alluvial fan",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[Pas] Sandy Run alluvial fan (Plesitocene?) — This enormous fan is associated with",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene?",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[Pas] Sandy Run alluvial fan (Plesitocene?) — This enormous fan is associated with",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "map_symbol": {
+    "value": "Pas",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[Pas] Sandy Run alluvial fan (Plesitocene?) — This enormous fan is associated with",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "symbol as cited in the text"
+   },
+   "group": {
+    "value": "Alluvial fans",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Alluvial fans are lobate cones of sediment deposited where tributary streams open up as",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Chimney alluvial apron",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[Pac] Chimney alluvial apron (Late Pleistocene) — The Chimney alluvial apron is a",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Late Pleistocene",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[Pac] Chimney alluvial apron (Late Pleistocene) — The Chimney alluvial apron is a",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 0.129,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "map_symbol": {
+    "value": "Pac",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[Pac] Chimney alluvial apron (Late Pleistocene) — The Chimney alluvial apron is a",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "symbol as cited in the text"
+   },
+   "group": {
+    "value": "Alluvial fans",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Alluvial fans are lobate cones of sediment deposited where tributary streams open up as",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Flood plain creeks",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Flood plain creeks (Pleistocene to Holocene) — The flood plain is covered with a",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene to Holocene",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Flood plain creeks (Pleistocene to Holocene) — The flood plain is covered with a",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Additional flood plain elements",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "ADDITIONAL FLOOD PLAIN ELEMENTS",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Groundwater rim swamps",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[Hor | Groundwater rim swamps (Holocene) — Ground water rim swamps are large,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[Hor | Groundwater rim swamps (Holocene) — Ground water rim swamps are large,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "map_symbol": {
+    "value": "Hgr",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "flood plain bluffs, especially near the groundwater rim swamps (Hgr). These",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "symbol as cited in the text"
+   },
+   "group": {
+    "value": "Additional flood plain elements",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "ADDITIONAL FLOOD PLAIN ELEMENTS",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "lithology": {
+    "value": "several feet of peat and muck (Dorovan Muck) over terminal Pleistocene ox-bow deposits capped by a paleosol",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "arcuate embayments in the northern flood plain margin that contain several feet of",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Landslide deposits",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[ns | Landslide deposits (Holocene to Recent) — The modern south bluffs are actively",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene to Recent",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[ns | Landslide deposits (Holocene to Recent) — The modern south bluffs are actively",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Additional flood plain elements",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "ADDITIONAL FLOOD PLAIN ELEMENTS",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Dune complexes",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Dune complexes (Late Pleistocene) — Three sand dune complexes, known as",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Late Pleistocene",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Dune complexes (Late Pleistocene) — Three sand dune complexes, known as",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 0.129,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "map_symbol": {
+    "value": "Pd",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "constrained by the presence of Muller’s Barn Ridge dune complex (Pd), and the Sandy Run",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "symbol as cited in the text"
+   },
+   "group": {
+    "value": "Additional flood plain elements",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "ADDITIONAL FLOOD PLAIN ELEMENTS",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "lithology": {
+    "value": "loose well-sorted quartz sand with heavy minerals and virtually no clay, mounds rising more than 30 ft above the flood plain",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "vegetated mounds of sand that locally rise more than 30-feet above the flood plain. The",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Wateree River flood plain, undifferentiated",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Wateree River Flood plain, undifferentiated (Late Pleistocene to recent) —",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Late Pleistocene to recent",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Wateree River Flood plain, undifferentiated (Late Pleistocene to recent) —",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 0.129,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Additional flood plain elements",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "ADDITIONAL FLOOD PLAIN ELEMENTS",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Quaternary alluvium, tributary valleys",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Quaternary alluvium, tributary valleys (Pleistocene to recent) — Tributaries",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene to recent",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Quaternary alluvium, tributary valleys (Pleistocene to recent) — Tributaries",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "map_symbol": {
+    "value": "Qatv",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "(Qatv) with the main river. These systems, which are very abundant in Congaree River",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "symbol as cited in the text"
+   },
+   "group": {
+    "value": "Upland deposits",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "UPLAND DEPOSITS",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "name": {
+    "value": "Quaternary alluvium, tributary valley microterraces",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "~Qatt_ | Quaternary alluvium, tributary valley microterraces (Pleistocene to recent) —",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene to recent",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "~Qatt_ | Quaternary alluvium, tributary valley microterraces (Pleistocene to recent) —",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "map_symbol": {
+    "value": "Qatt",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "~Qatt_ | Quaternary alluvium, tributary valley microterraces (Pleistocene to recent) —",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "symbol as cited in the text"
+   },
+   "group": {
+    "value": "Upland deposits",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "UPLAND DEPOSITS",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Quaternary alluvium, old McKenzie Creek",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Quaternary alluvium, old McKenzie Creek (Pleistocene to Holocene) — Old",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene to Holocene",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Quaternary alluvium, old McKenzie Creek (Pleistocene to Holocene) — Old",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "map_symbol": {
+    "value": "Qato",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Old Mckenzie Creek (Qato) is complicated by less than 4 feet of historical sedimentation",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "symbol as cited in the text"
+   },
+   "group": {
+    "value": "Upland deposits",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "UPLAND DEPOSITS",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "name": {
+    "value": "Carolina bays",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[ab | Carolina bays (Pleistocene) — Undisturbed Carolina bays are elliptical",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Pleistocene",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[ab | Carolina bays (Pleistocene) — Undisturbed Carolina bays are elliptical",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Upland deposits",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "UPLAND DEPOSITS",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "3 to 5 ft of sandy clay to clayey sand",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "depressions containing 3-5 feet of variably gray and black sandy clay to clayey",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "units": "ft",
+    "normalized": {
+     "min_ft": 3.0,
+     "max_ft": 5.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Congaree River Valley terrace complex",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Congaree River Valley terrace complex (Pliocene to Pleistocene) —",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "congaree river valley terrace",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Pliocene to Pleistocene",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Congaree River Valley terrace complex (Pliocene to Pleistocene) —",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 5.333,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Upland deposits",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "UPLAND DEPOSITS",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "description": {
+    "value": "14 terrace surfaces identified; modern flood plain is terrace 0",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "complex (Shelley, 2007 a-f). The modern flood plain is considered terrace 0, and the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Wateree River Valley terrace complex",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[owns | Wateree River Valley terrace complex (Late Pleistocene) — A few terraces at",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "wateree river valley terrace",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Late Pleistocene",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[owns | Wateree River Valley terrace complex (Late Pleistocene) — A few terraces at",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0117,
+     "older_ma": 0.129,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Upland deposits",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "UPLAND DEPOSITS",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Buckhead conglomerate (informal)",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[Tue | Buckhead conglomerate (Pliocene to middle Pleistocene) — A small utility cut",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Pliocene to middle Pleistocene",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[Tue | Buckhead conglomerate (Pliocene to middle Pleistocene) — A small utility cut",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.129,
+     "older_ma": 5.333,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Upland deposits",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "UPLAND DEPOSITS",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "lithology": {
+    "value": "reddish brown cross-bedded sands and quartz pebble conglomerates with minor clay; braided, eastward transport",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "unique outcrop of reddish brown, cross-bedded sands and quartz pebble conglomerates",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Upper Coastal Plain, undifferentiated",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[ «tu | Upper Coastal Plain, undifferentiated (Late Cretaceous to Eocene) — The",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "age": {
+    "value": "Late Cretaceous to Eocene",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "[ «tu | Upper Coastal Plain, undifferentiated (Late Cretaceous to Eocene) — The",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 33.9,
+     "older_ma": 100.5,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Upland deposits",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "UPLAND DEPOSITS",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "about 200 ft (northwest) to more than 800 ft (southeast)",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "grading from approximately 200-feet thick in the northwest map area to more than 800-feet",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "units": "ft",
+    "normalized": {
+     "min_ft": 200.0,
+     "max_ft": 800.0,
+     "values_ft": [
+      200.0,
+      800.0
+     ],
+     "unit": "ft",
+     "approximate": true
+    }
+   }
+  }
+ ],
+ "observations": [
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-247",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Sandy Run, a large tributary draining the southern bluffs. Drill hole log 09-247",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "0",
+      "source_id": "ngmdb:94282",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.52,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+      "quote": "indicates at least 17-feet of deposits consisting of multiple sequences of buff tan to brown",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": null,
+      "note": "from surface"
+     },
+     "bottom": {
+      "value": "at least 17",
+      "source_id": "ngmdb:94282",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.65,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+      "quote": "indicates at least 17-feet of deposits consisting of multiple sequences of buff tan to brown",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": null,
+      "units": "ft",
+      "normalized": {
+       "min_ft": 17.0,
+       "max_ft": null,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "unit": {
+      "value": "Sandy Run alluvial fan",
+      "source_id": "ngmdb:94282",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.765,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+      "quote": "[Pas] Sandy Run alluvial fan (Plesitocene?) — This enormous fan is associated with",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": "agree"
+     },
+     "description": {
+      "value": "multiple sequences of buff tan to brown silty clay to very coarse sand",
+      "source_id": "ngmdb:94282",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.65,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+      "quote": "indicates at least 17-feet of deposits consisting of multiple sequences of buff tan to brown",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": null
+     }
+    }
+   ]
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "holes along western Boundary Road, Congaree National Park",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.52,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Planform drainage is irregular. A series of holes along the western Boundary Road in",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "intervals": [
+    {
+     "top": {
+      "value": "0",
+      "source_id": "ngmdb:94282",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.52,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+      "quote": "Congaree National Park indicate that the top stratum is locally characterized by 4 to 8 feet",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": null
+     },
+     "bottom": {
+      "value": "4 to 8",
+      "source_id": "ngmdb:94282",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.65,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+      "quote": "Congaree National Park indicate that the top stratum is locally characterized by 4 to 8 feet",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": null,
+      "units": "ft",
+      "normalized": {
+       "min_ft": 4.0,
+       "max_ft": 8.0,
+       "unit": "ft",
+       "approximate": false
+      }
+     },
+     "description": {
+      "value": "top stratum of mottled brown, dark gray brown to olive brown clay with silt",
+      "source_id": "ngmdb:94282",
+      "page": 2,
+      "extraction_method": "llm",
+      "confidence": 0.65,
+      "inferred": false,
+      "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+      "quote": "of mottled brown, dark gray brown to olive brown clay with varying amounts of silt.",
+      "quote_match": "exact",
+      "text_method": "ocr",
+      "verification": null
+     }
+    }
+   ]
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-244",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=463,857,37,14",
+    "quote": "09-244",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c1",
+     "box": [
+      463,
+      857,
+      500,
+      871
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      463,
+      857,
+      500,
+      871
+     ],
+     "pt_box": [
+      463.0,
+      857.0,
+      500.0,
+      871.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-243",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=285,1007,37,14",
+    "quote": "09-243",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c1",
+     "box": [
+      285,
+      1007,
+      322,
+      1021
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      285,
+      1007,
+      322,
+      1021
+     ],
+     "pt_box": [
+      285.0,
+      1007.0,
+      322.0,
+      1021.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-248",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=631,1311,37,14",
+    "quote": "09-248",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c1",
+     "box": [
+      631,
+      1311,
+      668,
+      1325
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      631,
+      1311,
+      668,
+      1325
+     ],
+     "pt_box": [
+      631.0,
+      1311.0,
+      668.0,
+      1325.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-245",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=295,1332,37,14",
+    "quote": "09-245",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c1",
+     "box": [
+      295,
+      1332,
+      332,
+      1346
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      295,
+      1332,
+      332,
+      1346
+     ],
+     "pt_box": [
+      295.0,
+      1332.0,
+      332.0,
+      1346.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-147",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=1605,1357,37,14",
+    "quote": "09-147",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c2",
+     "box": [
+      401,
+      1357,
+      438,
+      1371
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1605,
+      1357,
+      1642,
+      1371
+     ],
+     "pt_box": [
+      1605.0,
+      1357.0,
+      1642.0,
+      1371.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-244",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=3394,510,37,14",
+    "quote": "40-244",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c3",
+     "box": [
+      987,
+      510,
+      1024,
+      524
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      3394,
+      510,
+      3431,
+      524
+     ],
+     "pt_box": [
+      3394.0,
+      510.0,
+      3431.0,
+      524.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-211",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=3374,522,37,14",
+    "quote": "40-211",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c3",
+     "box": [
+      967,
+      522,
+      1004,
+      536
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      3374,
+      522,
+      3411,
+      536
+     ],
+     "pt_box": [
+      3374.0,
+      522.0,
+      3411.0,
+      536.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-210",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=3394,653,37,14",
+    "quote": "40-210",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c3",
+     "box": [
+      987,
+      653,
+      1024,
+      667
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      3394,
+      653,
+      3431,
+      667
+     ],
+     "pt_box": [
+      3394.0,
+      653.0,
+      3431.0,
+      667.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-209",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=3414,721,37,14",
+    "quote": "40-209",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c3",
+     "box": [
+      1007,
+      721,
+      1044,
+      735
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      3414,
+      721,
+      3451,
+      735
+     ],
+     "pt_box": [
+      3414.0,
+      721.0,
+      3451.0,
+      735.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-208",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=3436,890,37,14",
+    "quote": "40-208",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c3",
+     "box": [
+      1029,
+      890,
+      1066,
+      904
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      3436,
+      890,
+      3473,
+      904
+     ],
+     "pt_box": [
+      3436.0,
+      890.0,
+      3473.0,
+      904.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-207",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=3432,939,37,14",
+    "quote": "40-207",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c3",
+     "box": [
+      1025,
+      939,
+      1062,
+      953
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      3432,
+      939,
+      3469,
+      953
+     ],
+     "pt_box": [
+      3432.0,
+      939.0,
+      3469.0,
+      953.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-206",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=3520,987,37,14",
+    "quote": "40-206",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c3",
+     "box": [
+      1113,
+      987,
+      1150,
+      1001
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      3520,
+      987,
+      3557,
+      1001
+     ],
+     "pt_box": [
+      3520.0,
+      987.0,
+      3557.0,
+      1001.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-205",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=3552,1031,37,14",
+    "quote": "40-205",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c3",
+     "box": [
+      1145,
+      1031,
+      1182,
+      1045
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      3552,
+      1031,
+      3589,
+      1045
+     ],
+     "pt_box": [
+      3552.0,
+      1031.0,
+      3589.0,
+      1045.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-204",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=3540,1117,37,14",
+    "quote": "40-204",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c3",
+     "box": [
+      1133,
+      1117,
+      1170,
+      1131
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      3540,
+      1117,
+      3577,
+      1131
+     ],
+     "pt_box": [
+      3540.0,
+      1117.0,
+      3577.0,
+      1131.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "RIC-344",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=3460,1267,39,14",
+    "quote": "RIC-344",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c3",
+     "box": [
+      1053,
+      1267,
+      1092,
+      1281
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      3460,
+      1267,
+      3499,
+      1281
+     ],
+     "pt_box": [
+      3460.0,
+      1267.0,
+      3499.0,
+      1281.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCDNR Hydrology Section well log location on the plate; log not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-224",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=3974,167,37,14",
+    "quote": "40-224",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c4",
+     "box": [
+      363,
+      167,
+      400,
+      181
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      3974,
+      167,
+      4011,
+      181
+     ],
+     "pt_box": [
+      3974.0,
+      167.0,
+      4011.0,
+      181.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-223",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=3980,239,37,14",
+    "quote": "40-223",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c4",
+     "box": [
+      369,
+      239,
+      406,
+      253
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      3980,
+      239,
+      4017,
+      253
+     ],
+     "pt_box": [
+      3980.0,
+      239.0,
+      4017.0,
+      253.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-185",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=3902,311,37,14",
+    "quote": "40-185",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c4",
+     "box": [
+      291,
+      311,
+      328,
+      325
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      3902,
+      311,
+      3939,
+      325
+     ],
+     "pt_box": [
+      3902.0,
+      311.0,
+      3939.0,
+      325.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-184",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=4802,123,37,14",
+    "quote": "40-184",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c4",
+     "box": [
+      1191,
+      123,
+      1228,
+      137
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      4802,
+      123,
+      4839,
+      137
+     ],
+     "pt_box": [
+      4802.0,
+      123.0,
+      4839.0,
+      137.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-182",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=4758,339,37,14",
+    "quote": "40-182",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c4",
+     "box": [
+      1147,
+      339,
+      1184,
+      353
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      4758,
+      339,
+      4795,
+      353
+     ],
+     "pt_box": [
+      4758.0,
+      339.0,
+      4795.0,
+      353.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "RIC-345",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=4366,501,39,14",
+    "quote": "RIC-345",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c4",
+     "box": [
+      755,
+      501,
+      794,
+      515
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      4366,
+      501,
+      4405,
+      515
+     ],
+     "pt_box": [
+      4366.0,
+      501.0,
+      4405.0,
+      515.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCDNR Hydrology Section well log location on the plate; log not printed"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "RIC-346",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=4296,901,39,14",
+    "quote": "RIC-346",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c4",
+     "box": [
+      685,
+      901,
+      724,
+      915
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      4296,
+      901,
+      4335,
+      915
+     ],
+     "pt_box": [
+      4296.0,
+      901.0,
+      4335.0,
+      915.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCDNR Hydrology Section well log location on the plate; log not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-214",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=5528,183,37,14",
+    "quote": "40-214",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c5",
+     "box": [
+      713,
+      183,
+      750,
+      197
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      5528,
+      183,
+      5565,
+      197
+     ],
+     "pt_box": [
+      5528.0,
+      183.0,
+      5565.0,
+      197.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-217",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=5424,399,37,14",
+    "quote": "40-217",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c5",
+     "box": [
+      609,
+      399,
+      646,
+      413
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      5424,
+      399,
+      5461,
+      413
+     ],
+     "pt_box": [
+      5424.0,
+      399.0,
+      5461.0,
+      413.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-215",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=5390,447,37,14",
+    "quote": "40-215",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c5",
+     "box": [
+      575,
+      447,
+      612,
+      461
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      5390,
+      447,
+      5427,
+      461
+     ],
+     "pt_box": [
+      5390.0,
+      447.0,
+      5427.0,
+      461.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-216",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=5356,501,37,14",
+    "quote": "40-216",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c5",
+     "box": [
+      541,
+      501,
+      578,
+      515
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      5356,
+      501,
+      5393,
+      515
+     ],
+     "pt_box": [
+      5356.0,
+      501.0,
+      5393.0,
+      515.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-233",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=6184,181,37,14",
+    "quote": "40-233",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c6",
+     "box": [
+      165,
+      181,
+      202,
+      195
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      6184,
+      181,
+      6221,
+      195
+     ],
+     "pt_box": [
+      6184.0,
+      181.0,
+      6221.0,
+      195.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-149",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=6820,181,37,14",
+    "quote": "40-149",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c6",
+     "box": [
+      801,
+      181,
+      838,
+      195
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      6820,
+      181,
+      6857,
+      195
+     ],
+     "pt_box": [
+      6820.0,
+      181.0,
+      6857.0,
+      195.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-154",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=6722,373,37,14",
+    "quote": "40-154",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c6",
+     "box": [
+      703,
+      373,
+      740,
+      387
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      6722,
+      373,
+      6759,
+      387
+     ],
+     "pt_box": [
+      6722.0,
+      373.0,
+      6759.0,
+      387.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-160",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=6720,385,37,14",
+    "quote": "40-160",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c6",
+     "box": [
+      701,
+      385,
+      738,
+      399
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      6720,
+      385,
+      6757,
+      399
+     ],
+     "pt_box": [
+      6720.0,
+      385.0,
+      6757.0,
+      399.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-145",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=7228,363,37,14",
+    "quote": "40-145",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c6",
+     "box": [
+      1209,
+      363,
+      1246,
+      377
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      7228,
+      363,
+      7265,
+      377
+     ],
+     "pt_box": [
+      7228.0,
+      363.0,
+      7265.0,
+      377.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-245",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=6932,879,37,14",
+    "quote": "40-245",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c6",
+     "box": [
+      913,
+      879,
+      950,
+      893
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      6932,
+      879,
+      6969,
+      893
+     ],
+     "pt_box": [
+      6932.0,
+      879.0,
+      6969.0,
+      893.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-155",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=7913,433,37,14",
+    "quote": "40-155",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c7",
+     "box": [
+      691,
+      433,
+      728,
+      447
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      7913,
+      433,
+      7950,
+      447
+     ],
+     "pt_box": [
+      7913.0,
+      433.0,
+      7950.0,
+      447.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-146",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=7775,583,37,14",
+    "quote": "40-146",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c7",
+     "box": [
+      553,
+      583,
+      590,
+      597
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      7775,
+      583,
+      7812,
+      597
+     ],
+     "pt_box": [
+      7775.0,
+      583.0,
+      7812.0,
+      597.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-147",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=7611,621,37,14",
+    "quote": "40-147",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c7",
+     "box": [
+      389,
+      621,
+      426,
+      635
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      7611,
+      621,
+      7648,
+      635
+     ],
+     "pt_box": [
+      7611.0,
+      621.0,
+      7648.0,
+      635.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-159",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=7317,649,37,14",
+    "quote": "40-159",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c7",
+     "box": [
+      95,
+      649,
+      132,
+      663
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      7317,
+      649,
+      7354,
+      663
+     ],
+     "pt_box": [
+      7317.0,
+      649.0,
+      7354.0,
+      663.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-143",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=8155,551,37,14",
+    "quote": "40-143",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c7",
+     "box": [
+      933,
+      551,
+      970,
+      565
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      8155,
+      551,
+      8192,
+      565
+     ],
+     "pt_box": [
+      8155.0,
+      551.0,
+      8192.0,
+      565.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-142",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=8357,677,37,14",
+    "quote": "40-142",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c7",
+     "box": [
+      1135,
+      677,
+      1172,
+      691
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      8357,
+      677,
+      8394,
+      691
+     ],
+     "pt_box": [
+      8357.0,
+      677.0,
+      8394.0,
+      691.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-144",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=7803,792,37,14",
+    "quote": "40-144",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c7",
+     "box": [
+      581,
+      792,
+      618,
+      806
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      7803,
+      792,
+      7840,
+      806
+     ],
+     "pt_box": [
+      7803.0,
+      792.0,
+      7840.0,
+      806.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-057",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=7811,853,37,14",
+    "quote": "40-057",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c7",
+     "box": [
+      589,
+      853,
+      626,
+      867
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      7811,
+      853,
+      7848,
+      867
+     ],
+     "pt_box": [
+      7811.0,
+      853.0,
+      7848.0,
+      867.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-242",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=7873,1007,37,14",
+    "quote": "40-242",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c7",
+     "box": [
+      651,
+      1007,
+      688,
+      1021
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      7873,
+      1007,
+      7910,
+      1021
+     ],
+     "pt_box": [
+      7873.0,
+      1007.0,
+      7910.0,
+      1021.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-241",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=7917,1017,37,14",
+    "quote": "40-241",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c7",
+     "box": [
+      695,
+      1017,
+      732,
+      1031
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      7917,
+      1017,
+      7954,
+      1031
+     ],
+     "pt_box": [
+      7917.0,
+      1017.0,
+      7954.0,
+      1031.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-234",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=7913,1041,37,14",
+    "quote": "40-234",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c7",
+     "box": [
+      691,
+      1041,
+      728,
+      1055
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      7913,
+      1041,
+      7950,
+      1055
+     ],
+     "pt_box": [
+      7913.0,
+      1041.0,
+      7950.0,
+      1055.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-236",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=8493,335,37,14",
+    "quote": "40-236",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c7",
+     "box": [
+      1271,
+      335,
+      1308,
+      349
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      8493,
+      335,
+      8530,
+      349
+     ],
+     "pt_box": [
+      8493.0,
+      335.0,
+      8530.0,
+      349.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-165",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=8623,407,37,14",
+    "quote": "40-165",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r1c8",
+     "box": [
+      197,
+      407,
+      234,
+      421
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      8623,
+      407,
+      8660,
+      421
+     ],
+     "pt_box": [
+      8623.0,
+      407.0,
+      8660.0,
+      421.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-242",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=951,1569,37,14",
+    "quote": "09-242",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c1",
+     "box": [
+      951,
+      279,
+      988,
+      293
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      951,
+      1569,
+      988,
+      1583
+     ],
+     "pt_box": [
+      951.0,
+      1569.0,
+      988.0,
+      1583.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "CAL-115",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=811,1639,39,14",
+    "quote": "CAL-115",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c1",
+     "box": [
+      811,
+      349,
+      850,
+      363
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      811,
+      1639,
+      850,
+      1653
+     ],
+     "pt_box": [
+      811.0,
+      1639.0,
+      850.0,
+      1653.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCDNR Hydrology Section well log location on the plate; log not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-241",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=1173,1751,37,14",
+    "quote": "09-241",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c1",
+     "box": [
+      1173,
+      461,
+      1210,
+      475
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1173,
+      1751,
+      1210,
+      1765
+     ],
+     "pt_box": [
+      1173.0,
+      1751.0,
+      1210.0,
+      1765.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-246",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=517,1771,37,14",
+    "quote": "09-246",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c1",
+     "box": [
+      517,
+      481,
+      554,
+      495
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      517,
+      1771,
+      554,
+      1785
+     ],
+     "pt_box": [
+      517.0,
+      1771.0,
+      554.0,
+      1785.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-217",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=1199,2017,37,14",
+    "quote": "09-217",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c1",
+     "box": [
+      1199,
+      727,
+      1236,
+      741
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1199,
+      2017,
+      1236,
+      2031
+     ],
+     "pt_box": [
+      1199.0,
+      2017.0,
+      1236.0,
+      2031.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-228",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=1091,2275,37,14",
+    "quote": "09-228",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c1",
+     "box": [
+      1091,
+      985,
+      1128,
+      999
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1091,
+      2275,
+      1128,
+      2289
+     ],
+     "pt_box": [
+      1091.0,
+      2275.0,
+      1128.0,
+      2289.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-240",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=1793,1467,37,14",
+    "quote": "09-240",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c2",
+     "box": [
+      589,
+      177,
+      626,
+      191
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1793,
+      1467,
+      1830,
+      1481
+     ],
+     "pt_box": [
+      1793.0,
+      1467.0,
+      1830.0,
+      1481.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "CAL-026",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=2241,1431,39,14",
+    "quote": "CAL-026",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c2",
+     "box": [
+      1037,
+      141,
+      1076,
+      155
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      2241,
+      1431,
+      2280,
+      1445
+     ],
+     "pt_box": [
+      2241.0,
+      1431.0,
+      2280.0,
+      1445.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCDNR Hydrology Section well log location on the plate; log not printed"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "CAL-027",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=2289,1421,39,14",
+    "quote": "CAL-027",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c2",
+     "box": [
+      1085,
+      131,
+      1124,
+      145
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      2289,
+      1421,
+      2328,
+      1435
+     ],
+     "pt_box": [
+      2289.0,
+      1421.0,
+      2328.0,
+      1435.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCDNR Hydrology Section well log location on the plate; log not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-238",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=2377,1575,37,14",
+    "quote": "09-238",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c2",
+     "box": [
+      1173,
+      285,
+      1210,
+      299
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      2377,
+      1575,
+      2414,
+      1589
+     ],
+     "pt_box": [
+      2377.0,
+      1575.0,
+      2414.0,
+      1589.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-237",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=2335,1627,37,14",
+    "quote": "09-237",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c2",
+     "box": [
+      1131,
+      337,
+      1168,
+      351
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      2335,
+      1627,
+      2372,
+      1641
+     ],
+     "pt_box": [
+      2335.0,
+      1627.0,
+      2372.0,
+      1641.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-236",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=2319,1709,37,14",
+    "quote": "09-236",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c2",
+     "box": [
+      1115,
+      419,
+      1152,
+      433
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      2319,
+      1709,
+      2356,
+      1723
+     ],
+     "pt_box": [
+      2319.0,
+      1709.0,
+      2356.0,
+      1723.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "CAL-088",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=2231,1779,39,14",
+    "quote": "CAL-088",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c2",
+     "box": [
+      1027,
+      489,
+      1066,
+      503
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      2231,
+      1779,
+      2270,
+      1793
+     ],
+     "pt_box": [
+      2231.0,
+      1779.0,
+      2270.0,
+      1793.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCDNR Hydrology Section well log location on the plate; log not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-235",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=2275,1795,37,14",
+    "quote": "09-235",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c2",
+     "box": [
+      1071,
+      505,
+      1108,
+      519
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      2275,
+      1795,
+      2312,
+      1809
+     ],
+     "pt_box": [
+      2275.0,
+      1795.0,
+      2312.0,
+      1809.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "CAL-116",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=1327,1917,39,14",
+    "quote": "CAL-116",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c2",
+     "box": [
+      123,
+      627,
+      162,
+      641
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1327,
+      1917,
+      1366,
+      1931
+     ],
+     "pt_box": [
+      1327.0,
+      1917.0,
+      1366.0,
+      1931.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCDNR Hydrology Section well log location on the plate; log not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-227",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=1339,2025,37,14",
+    "quote": "09-227",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c2",
+     "box": [
+      135,
+      735,
+      172,
+      749
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1339,
+      2025,
+      1376,
+      2039
+     ],
+     "pt_box": [
+      1339.0,
+      2025.0,
+      1376.0,
+      2039.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "CAL-076",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=1845,2157,39,14",
+    "quote": "CAL-076",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c2",
+     "box": [
+      641,
+      867,
+      680,
+      881
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1845,
+      2157,
+      1884,
+      2171
+     ],
+     "pt_box": [
+      1845.0,
+      2157.0,
+      1884.0,
+      2171.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCDNR Hydrology Section well log location on the plate; log not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-225",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=1995,2187,37,14",
+    "quote": "09-225",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c2",
+     "box": [
+      791,
+      897,
+      828,
+      911
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1995,
+      2187,
+      2032,
+      2201
+     ],
+     "pt_box": [
+      1995.0,
+      2187.0,
+      2032.0,
+      2201.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-218",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=1379,2221,37,14",
+    "quote": "09-218",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c2",
+     "box": [
+      175,
+      931,
+      212,
+      945
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1379,
+      2221,
+      1416,
+      2235
+     ],
+     "pt_box": [
+      1379.0,
+      2221.0,
+      1416.0,
+      2235.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-219",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=1389,2277,37,14",
+    "quote": "09-219",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c2",
+     "box": [
+      185,
+      987,
+      222,
+      1001
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      1389,
+      2277,
+      1426,
+      2291
+     ],
+     "pt_box": [
+      1389.0,
+      2277.0,
+      1426.0,
+      2291.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-239",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=2518,1455,37,14",
+    "quote": "09-239",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c3",
+     "box": [
+      111,
+      165,
+      148,
+      179
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      2518,
+      1455,
+      2555,
+      1469
+     ],
+     "pt_box": [
+      2518.0,
+      1455.0,
+      2555.0,
+      1469.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "CAL-082",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=2576,1790,39,14",
+    "quote": "CAL-082",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c3",
+     "box": [
+      169,
+      500,
+      208,
+      514
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      2576,
+      1790,
+      2615,
+      1804
+     ],
+     "pt_box": [
+      2576.0,
+      1790.0,
+      2615.0,
+      1804.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCDNR Hydrology Section well log location on the plate; log not printed"
+   }
+  },
+  {
+   "kind": "well",
+   "label": {
+    "value": "CAL-083",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=2568,1801,39,14",
+    "quote": "CAL-083",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c3",
+     "box": [
+      161,
+      511,
+      200,
+      525
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      2568,
+      1801,
+      2607,
+      1815
+     ],
+     "pt_box": [
+      2568.0,
+      1801.0,
+      2607.0,
+      1815.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCDNR Hydrology Section well log location on the plate; log not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-201",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=5048,2087,37,14",
+    "quote": "09-201",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c5",
+     "box": [
+      233,
+      797,
+      270,
+      811
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      5048,
+      2087,
+      5085,
+      2101
+     ],
+     "pt_box": [
+      5048.0,
+      2087.0,
+      5085.0,
+      2101.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-200",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=5030,2119,37,14",
+    "quote": "09-200",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c5",
+     "box": [
+      215,
+      829,
+      252,
+      843
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      5030,
+      2119,
+      5067,
+      2133
+     ],
+     "pt_box": [
+      5030.0,
+      2119.0,
+      5067.0,
+      2133.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-250",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=7361,1967,37,14",
+    "quote": "09-250",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c7",
+     "box": [
+      139,
+      677,
+      176,
+      691
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      7361,
+      1967,
+      7398,
+      1981
+     ],
+     "pt_box": [
+      7361.0,
+      1967.0,
+      7398.0,
+      1981.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-249",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=7365,1981,37,14",
+    "quote": "09-249",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c7",
+     "box": [
+      143,
+      691,
+      180,
+      705
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      7365,
+      1981,
+      7402,
+      1995
+     ],
+     "pt_box": [
+      7365.0,
+      1981.0,
+      7402.0,
+      1995.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-212",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=7341,2013,37,14",
+    "quote": "09-212",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c7",
+     "box": [
+      119,
+      723,
+      156,
+      737
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      7341,
+      2013,
+      7378,
+      2027
+     ],
+     "pt_box": [
+      7341.0,
+      2013.0,
+      7378.0,
+      2027.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-108",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=8379,2205,37,14",
+    "quote": "09-108",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c7",
+     "box": [
+      1157,
+      915,
+      1194,
+      929
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      8379,
+      2205,
+      8416,
+      2219
+     ],
+     "pt_box": [
+      8379.0,
+      2205.0,
+      8416.0,
+      2219.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-151",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=8641,1789,37,14",
+    "quote": "40-151",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c8",
+     "box": [
+      215,
+      499,
+      252,
+      513
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      8641,
+      1789,
+      8678,
+      1803
+     ],
+     "pt_box": [
+      8641.0,
+      1789.0,
+      8678.0,
+      1803.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "40-056",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=8653,1496,37,14",
+    "quote": "40-056",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c8",
+     "box": [
+      227,
+      206,
+      264,
+      220
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      8653,
+      1496,
+      8690,
+      1510
+     ],
+     "pt_box": [
+      8653.0,
+      1496.0,
+      8690.0,
+      1510.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  },
+  {
+   "kind": "auger_hole",
+   "label": {
+    "value": "09-107",
+    "source_id": "ngmdb:94282",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_1#page=1&viewrect=8625,2255,37,14",
+    "quote": "09-107",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-72dpi-8x2-r2c8",
+     "box": [
+      199,
+      965,
+      236,
+      979
+     ],
+     "dpi": 72,
+     "page_px_box": [
+      8625,
+      2255,
+      8662,
+      2269
+     ],
+     "pt_box": [
+      8625.0,
+      2255.0,
+      8662.0,
+      2269.0
+     ],
+     "pdf_sha256": "ccbec9f61f957f787ebd32e001116f87ba1966cbd76d76a8f5854513bdfce79d"
+    },
+    "note": "SCGS auger hole labelled on the plate; log on file at SCGS, not printed"
+   }
+  }
+ ],
+ "structures": [
+  {
+   "kind": "other",
+   "name": {
+    "value": "fluvial terrace scarps",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "siiiiiiiit Fluvial terrace scarp — Identity and existence certain, location approximate.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "scarps 2 to 15 ft high, higher along compound scarps",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Hachures point downscarp. These features range from 2 to 15 feet high, with",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  },
+  {
+   "kind": "lineament",
+   "name": {
+    "value": "flood plain scars and braid scars",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "+4114 Flood plain scar — Identity or existence questionable, location accurate.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "groundwater": [],
+ "references": [
+  {
+   "citation": {
+    "value": "Shelley, D.C., 2007a, Geologic Map of the Congaree 7.5-minute quadrangle, Richland",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Shelley, D.C., 2007a, Geologic Map of the Congaree 7.5-minute quadrangle, Richland",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "first line of the citation"
+   }
+  },
+  {
+   "citation": {
+    "value": "Shelley, D.C., 2007c, Geologic Map of the Gadsden 7.5-minute quadrangle, Calhoun and",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Shelley, D.C., 2007c, Geologic Map of the Gadsden 7.5-minute quadrangle, Calhoun and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "first line of the citation"
+   }
+  },
+  {
+   "citation": {
+    "value": "Shelley, D.C., 2007f, Geology and Geomorphology of the Congaree River Valley and",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Shelley, D.C., 2007f, Geology and Geomorphology of the Congaree River Valley and",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "first line of the citation"
+   }
+  },
+  {
+   "citation": {
+    "value": "Leigh, D. S., Srivastava, P., and Brook, G. A., 2004, Late Pleistocene braided rivers of the",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Leigh, D. S., Srivastava, P., and Brook, G. A., 2004, Late Pleistocene braided rivers of the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "first line of the citation"
+   }
+  },
+  {
+   "citation": {
+    "value": "Sexton, W. J., 1999, Alluvial valleys of the middle coastal plain of South Carolina",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Sexton, W. J., 1999, Alluvial valleys of the middle coastal plain of South Carolina:",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "first line of the citation"
+   }
+  },
+  {
+   "citation": {
+    "value": "Patterson, G. G., Speiran, G. K., and Whetstone, B. H., 1985, Hydrology and its effects on",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Patterson, G. G., Speiran, G. K., and Whetstone, B. H., 1985, Hydrology and its effects on",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "first line of the citation"
+   }
+  },
+  {
+   "citation": {
+    "value": "Kite, L. E., 1988, Geologic Map of the Congaree, Eastover, Leesburg, and Messers Pond",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Kite, L. E., 1988, Geologic Map of the Congaree, Eastover, Leesburg, and Messers Pond",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "first line of the citation"
+   }
+  },
+  {
+   "citation": {
+    "value": "Willoughby, R. H., 2003a, Geologic map of the Fort Motte 7.5-minute quadrangle",
+    "source_id": "ngmdb:94282",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/94000_94999/94282_2",
+    "quote": "Willoughby, R. H., 2003a, Geologic map of the Fort Motte 7.5-minute quadrangle,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "first line of the citation"
+   }
+  }
+ ],
+ "surfaces": [],
+ "contours": [],
+ "sections": [],
+ "water_tests": [],
+ "rock_tests": []
+}

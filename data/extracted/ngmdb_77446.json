@@ -1,0 +1,624 @@
+{
+ "source_id": "ngmdb:77446",
+ "title": "Geologic map of the Savannah quadrangle, Jasper County, South Carolina",
+ "citation": "Doar, W.R., III, 2002, Geologic map of the Savannah quadrangle, Jasper County, South Carolina: South Carolina Geological Survey Geologic Quadrangle Map GQM-3, map scale 1:24,000.",
+ "year": 2002,
+ "scale": 24000,
+ "publisher": "South Carolina Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-11-19T23:56:44+00:00",
+ "updated_at": "2026-11-19T23:56:44+00:00",
+ "reader": "Claude, Claude Code session 2026-11-19",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1"
+ ],
+ "blocks_total": 1,
+ "complete": true,
+ "notes": "SCGS GQM-3 Savannah quadrangle (Doar, 2002), 1:24,000, mapped 2001-2002; Georgia portions not mapped. QHr symbol, fluvial unit name and age and the me symbol read from the page image (missing in OCR). Sediments beneath the Holocene terrace generally below 10 ft elevation at their landward margin. SUBSURFACE: none.",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+   "via": "ngmdb_image",
+   "sha256": "14978624c21fe53a6a32203d9ef9d84786a384dfb85b2464165c93c64ecaee62",
+   "pages": 1,
+   "first_page": 1
+  }
+ ],
+ "summary": {
+  "stored": 30,
+  "quote_match": {
+   "exact": 26,
+   "image": 4
+  },
+  "verification": {
+   "agree": 7
+  },
+  "inferred": 1
+ },
+ "ingests": [
+  {
+   "at": "2026-11-19T23:56:44+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, Claude Code session 2026-11-19",
+   "values": 30,
+   "stored": 30,
+   "exact": 26,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 7,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 4,
+   "image_not_verified": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [
+  {
+   "name": {
+    "value": "Bodies of water",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+    "quote": "Bodies of water (1999) — Water. fresh, brackish, or salt. Areas of altered shoreline",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "description": {
+    "value": "fresh, brackish or salt water, including altered shoreline and flooded lands covered by water after publication of the base map; boundaries from 1999 DOQQs",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+    "quote": "Bodies of water (1999) — Water. fresh, brackish, or salt. Areas of altered shoreline",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "me",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1#page=1&viewrect=1612.5,244,38.5,17.5",
+    "quote": "me",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-3x3-r1c3",
+     "box": [
+      505,
+      488,
+      582,
+      523
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3225,
+      488,
+      3302,
+      523
+     ],
+     "pt_box": [
+      1612.5,
+      244.0,
+      1651.0,
+      261.5
+     ],
+     "pdf_sha256": "14978624c21fe53a6a32203d9ef9d84786a384dfb85b2464165c93c64ecaee62"
+    }
+   },
+   "name": {
+    "value": "Moved earth",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+    "quote": "Moved earth (Holocene) — Bulk earthen material moved by humans. Color is highly",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+    "quote": "Moved earth (Holocene) — Bulk earthen material moved by humans. Color is highly",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "bulk earthen material moved by humans; color highly variable",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+    "quote": "Moved earth (Holocene) — Bulk earthen material moved by humans. Color is highly",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "up to 18",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+    "quote": "variable and dependent on source location. Thickness up to 18 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "units": "ft",
+    "normalized": {
+     "min_ft": null,
+     "max_ft": 18.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QHfw",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+    "quote": "QHfw",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "name": {
+    "value": "Freshwater marsh and swamp deposits",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+    "quote": "Freshwater marsh and swamp deposits",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+    "quote": "(Holocene) — Silty clay and peat, black (N1),",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Sediments Beneath the Holocene Terrace",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+    "quote": "Sediments Beneath the Holocene Terrace",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "lithology": {
+    "value": "silty clay and peat, black (N1)",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+    "quote": "(Holocene) — Silty clay and peat, black (N1),",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "stream valleys and areas of locally low elevation",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+    "quote": "deposited in stream valleys and areas of locally low elevation. Deposits are identified by",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "1 to 40",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+    "quote": "the content of organic materials, sediment type. water salinity and ecozones. Thickness 1 to 40",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "units": "ft",
+    "normalized": {
+     "min_ft": 1.0,
+     "max_ft": 40.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QHsm",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+    "quote": "QHsm",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "name": {
+    "value": "Saltmarsh deposits",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+    "quote": "Saltmarsh deposits (Holocene) — Silty clay, black (N1), high water content, soft,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Holocene",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+    "quote": "Saltmarsh deposits (Holocene) — Silty clay, black (N1), high water content, soft,",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 0.0117,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Sediments Beneath the Holocene Terrace",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+    "quote": "Sediments Beneath the Holocene Terrace",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "lithology": {
+    "value": "silty clay, black (N1), high water content, soft, with scattered lenses of well-sorted, subrounded, very fine grained quartz sand",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+    "quote": "scattered lenses of well-sorted, subrounded, very fine grained quartz sand; occurs in the",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "intertidal zone in estuaries; covered by saltwater grasses",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+    "quote": "intertidal zone in estuaries: covered by saltwater grasses (Spartina alternaflora, Juncus or Salidea).",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "3 to 30",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+    "quote": "Thickness 3 to 30 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "units": "ft",
+    "normalized": {
+     "min_ft": 3.0,
+     "max_ft": 30.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "QHr",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1#page=1&viewrect=1612.5,468.5,38.5,18",
+    "quote": "QHr",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-3x3-r1c3",
+     "box": [
+      505,
+      937,
+      582,
+      973
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3225,
+      937,
+      3302,
+      973
+     ],
+     "pt_box": [
+      1612.5,
+      468.5,
+      1651.0,
+      486.5
+     ],
+     "pdf_sha256": "14978624c21fe53a6a32203d9ef9d84786a384dfb85b2464165c93c64ecaee62"
+    }
+   },
+   "name": {
+    "value": "Fluvial deposits",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1#page=1&viewrect=1654.5,466.5,188,12.5",
+    "quote": "Fluvial deposits (Holocene or Pleistocene)",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-3x3-r1c3",
+     "box": [
+      589,
+      933,
+      965,
+      958
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3309,
+      933,
+      3685,
+      958
+     ],
+     "pt_box": [
+      1654.5,
+      466.5,
+      1842.5,
+      479.0
+     ],
+     "pdf_sha256": "14978624c21fe53a6a32203d9ef9d84786a384dfb85b2464165c93c64ecaee62"
+    }
+   },
+   "age": {
+    "value": "Holocene or Pleistocene",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1#page=1&viewrect=1654.5,466.5,188,12.5",
+    "quote": "Fluvial deposits (Holocene or Pleistocene)",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-3x3-r1c3",
+     "box": [
+      589,
+      933,
+      965,
+      958
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3309,
+      933,
+      3685,
+      958
+     ],
+     "pt_box": [
+      1654.5,
+      466.5,
+      1842.5,
+      479.0
+     ],
+     "pdf_sha256": "14978624c21fe53a6a32203d9ef9d84786a384dfb85b2464165c93c64ecaee62"
+    },
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "group": {
+    "value": "Sediments Beneath the Holocene Terrace",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.581,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+    "quote": "Sediments Beneath the Holocene Terrace",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "listed under this heading in the explanation"
+   },
+   "lithology": {
+    "value": "quartz sand, grayish-yellow (5Y 8/4) to light-gray (N7), moderately sorted, subangular to subrounded, medium to very coarse grained",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+    "quote": "light-gray (N7), moderately sorted, subangular to subrounded, medium grained to very",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "depositional_environment": {
+    "value": "fluvial, from nonmarine sediments, not heavily altered by marine processes",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+    "quote": "coarse grained. Deposits derived from nonmarine sediments, deposited fluvially, and not heavily",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "thickness": {
+    "value": "5 to 15",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+    "quote": "altered by marine processes. Thickness 5 to 15 feet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "units": "ft",
+    "normalized": {
+     "min_ft": 5.0,
+     "max_ft": 15.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   }
+  }
+ ],
+ "observations": [],
+ "structures": [
+  {
+   "kind": "contact",
+   "name": {
+    "value": "Contact",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+    "quote": "Contact — Identity and existence certain, location approximate.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "certainty": {
+    "value": "identity and existence certain, location approximate",
+    "source_id": "ngmdb:77446",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/77000_77999/77446_1",
+    "quote": "Contact — Identity and existence certain, location approximate.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "groundwater": [],
+ "references": [],
+ "surfaces": [],
+ "contours": [],
+ "sections": [],
+ "water_tests": [],
+ "rock_tests": []
+}

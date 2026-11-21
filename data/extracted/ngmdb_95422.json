@@ -1,0 +1,786 @@
+{
+ "source_id": "ngmdb:95422",
+ "title": "Geologic Map of the Chesnee Quadrangle, Cherokee and Spartanburg Counties, South Carolina and Cleveland and Rutherford Counties, North Carolina",
+ "citation": "Boland, I.B., 2010, Geologic Map of the Chesnee Quadrangle, Cherokee and Spartanburg Counties, South Carolina and Cleveland and Rutherford Counties, North Carolina: South Carolina Geological Survey Open-File Report OFR-159, map scale 1:24,000.",
+ "year": 2010,
+ "scale": 24000,
+ "publisher": "South Carolina Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-11-14T18:33:44+00:00",
+ "updated_at": "2026-11-14T18:33:44+00:00",
+ "reader": "Claude, Claude Code session 2026-11-14",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1"
+ ],
+ "blocks_total": 1,
+ "complete": true,
+ "notes": "Chesnee quadrangle OFR-159 (2010). Units: alluvium, Sandy Mush granite (D symbol), biotite gneiss and mica schist (CZ symbols); no ages stated in text. Silicified breccia line, fault and antiform traces; strike/dip symbols without coordinates. No drill holes. SUBSURFACE: section A-A' interpretive only.",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1",
+   "via": "ngmdb_image",
+   "sha256": "891e65debc3172a508f47921f1070aa0072b533f2515c17d81bac973cd49ae87",
+   "pages": 1,
+   "first_page": 1
+  }
+ ],
+ "summary": {
+  "stored": 30,
+  "quote_match": {
+   "exact": 19,
+   "image": 11
+  },
+  "verification": {
+   "agree": 17
+  },
+  "inferred": 11
+ },
+ "ingests": [
+  {
+   "at": "2026-11-14T18:33:44+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, Claude Code session 2026-11-14",
+   "values": 30,
+   "stored": 30,
+   "exact": 19,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 17,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 11,
+   "image_not_verified": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [
+  {
+   "map_symbol": {
+    "value": "Qal",
+    "source_id": "ngmdb:95422",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1#page=1&viewrect=1780,207.5,35,17.5",
+    "quote": "Quaternary alluvium — Unconsolidated clay, silt, and sand.",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1775_160_1830_355-r1c1",
+     "box": [
+      10,
+      95,
+      80,
+      130
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3560,
+      415,
+      3630,
+      450
+     ],
+     "pt_box": [
+      1780.0,
+      207.5,
+      1815.0,
+      225.0
+     ],
+     "pdf_sha256": "891e65debc3172a508f47921f1070aa0072b533f2515c17d81bac973cd49ae87"
+    },
+    "text_match": true,
+    "note": "symbol read on the legend image"
+   },
+   "name": {
+    "value": "Quaternary alluvium",
+    "source_id": "ngmdb:95422",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1",
+    "quote": "Quaternary alluvium — Unconsolidated clay, silt, and sand.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "age": {
+    "value": "Quaternary",
+    "source_id": "ngmdb:95422",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1",
+    "quote": "Quaternary alluvium — Unconsolidated clay, silt, and sand.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 0.0,
+     "older_ma": 2.58,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "unconsolidated clay, silt and sand",
+    "source_id": "ngmdb:95422",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1",
+    "quote": "Quaternary alluvium — Unconsolidated clay, silt, and sand.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Dsm",
+    "source_id": "ngmdb:95422",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.6,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1#page=1&viewrect=1780,274.5,35,22.5",
+    "quote": "Sandy Mush granite - Medium- to coarse-grained biotite granite, weakly",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1775_160_1830_355-r1c1",
+     "box": [
+      10,
+      229,
+      80,
+      274
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3560,
+      549,
+      3630,
+      594
+     ],
+     "pt_box": [
+      1780.0,
+      274.5,
+      1815.0,
+      297.0
+     ],
+     "pdf_sha256": "891e65debc3172a508f47921f1070aa0072b533f2515c17d81bac973cd49ae87"
+    },
+    "text_match": true,
+    "note": "symbol read on the legend image"
+   },
+   "name": {
+    "value": "Sandy Mush granite",
+    "source_id": "ngmdb:95422",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1",
+    "quote": "Sandy Mush granite - Medium- to coarse-grained biotite granite, weakly",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "normalized": {
+     "canonical": "mush",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "lithology": {
+    "value": "medium- to coarse-grained biotite granite, weakly metamorphosed and foliated in places",
+    "source_id": "ngmdb:95422",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1",
+    "quote": "Sandy Mush granite - Medium- to coarse-grained biotite granite, weakly",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "CZb",
+    "source_id": "ngmdb:95422",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1#page=1&viewrect=1780,306.5,35,22",
+    "quote": "[ o | Biotite gneiss — Moderately strongly to strongly banded biotite gneiss +/- garnet.",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1775_160_1830_355-r1c1",
+     "box": [
+      10,
+      293,
+      80,
+      337
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3560,
+      613,
+      3630,
+      657
+     ],
+     "pt_box": [
+      1780.0,
+      306.5,
+      1815.0,
+      328.5
+     ],
+     "pdf_sha256": "891e65debc3172a508f47921f1070aa0072b533f2515c17d81bac973cd49ae87"
+    },
+    "text_match": true,
+    "note": "printed with a Cambrian-Neoproterozoic (CZ) age symbol; read on the legend image"
+   },
+   "name": {
+    "value": "Biotite gneiss",
+    "source_id": "ngmdb:95422",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.855,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1",
+    "quote": "[ o | Biotite gneiss — Moderately strongly to strongly banded biotite gneiss +/- garnet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "lithology": {
+    "value": "moderately strongly to strongly banded biotite gneiss +/- garnet",
+    "source_id": "ngmdb:95422",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1",
+    "quote": "[ o | Biotite gneiss — Moderately strongly to strongly banded biotite gneiss +/- garnet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "CZms",
+    "source_id": "ngmdb:95422",
+    "page": 1,
+    "extraction_method": "llm-image",
+    "confidence": 0.48,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1#page=1&viewrect=1780,335,35,20",
+    "quote": "Mica schist — Includes biotite schist, biotite muscovite schist, muscovite schist, quartz",
+    "quote_match": "image",
+    "text_method": "image",
+    "verification": "agree",
+    "image": {
+     "tile": "p1-144dpi-crop1775_160_1830_355-r1c1",
+     "box": [
+      10,
+      350,
+      80,
+      390
+     ],
+     "dpi": 144,
+     "page_px_box": [
+      3560,
+      670,
+      3630,
+      710
+     ],
+     "pt_box": [
+      1780.0,
+      335.0,
+      1815.0,
+      355.0
+     ],
+     "pdf_sha256": "891e65debc3172a508f47921f1070aa0072b533f2515c17d81bac973cd49ae87"
+    },
+    "text_match": true,
+    "note": "printed with a Cambrian-Neoproterozoic (CZ) age symbol; read on the legend image"
+   },
+   "name": {
+    "value": "Mica schist",
+    "source_id": "ngmdb:95422",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1",
+    "quote": "Mica schist — Includes biotite schist, biotite muscovite schist, muscovite schist, quartz",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "lithology": {
+    "value": "biotite, biotite muscovite, muscovite, quartz muscovite, quartz muscovite sillimanite and sillimanite schist +/- garnet",
+    "source_id": "ngmdb:95422",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.727,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1",
+    "quote": "muscovite schist, quartz muscovite sillimanite schist, and sillimanite schist +/- garnet.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "observations": [],
+ "structures": [
+  {
+   "kind": "fault",
+   "name": {
+    "value": "silicified quartz breccia",
+    "source_id": "ngmdb:95422",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1",
+    "quote": "Silicified quartz breccias — Silicified quartz breccia, fault rock, material generated in a",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "description": {
+    "value": "fault rock generated in a fault zone; a northeast-trending trace in the west of the map",
+    "source_id": "ngmdb:95422",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.52,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1",
+    "quote": "Silicified quartz breccias — Silicified quartz breccia, fault rock, material generated in a",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "trace read on the map face"
+   }
+  },
+  {
+   "kind": "fault",
+   "name": {
+    "value": "fault",
+    "source_id": "ngmdb:95422",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1",
+    "quote": "——- Fault — Location inferred.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "certainty": {
+    "value": "location inferred",
+    "source_id": "ngmdb:95422",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1",
+    "quote": "——- Fault — Location inferred.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  },
+  {
+   "kind": "fold",
+   "name": {
+    "value": "antiform",
+    "source_id": "ngmdb:95422",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1",
+    "quote": "i Antiform — Location inferred.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   },
+   "certainty": {
+    "value": "location inferred",
+    "source_id": "ngmdb:95422",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.65,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1",
+    "quote": "i Antiform — Location inferred.",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null
+   }
+  }
+ ],
+ "groundwater": [],
+ "references": [],
+ "surfaces": [],
+ "contours": [],
+ "sections": [
+  {
+   "name": {
+    "value": "Section A-A'",
+    "source_id": "ngmdb:95422",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.612,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1",
+    "quote": "A!",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "note": "A' end label read on the image"
+   },
+   "vertical_exaggeration": {
+    "value": "none",
+    "source_id": "ngmdb:95422",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1",
+    "quote": "No vertical exaggeration",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "datum": {
+    "value": "sea level",
+    "source_id": "ngmdb:95422",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1",
+    "quote": "SEA LEVEL",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree",
+    "normalized": "MSL"
+   },
+   "elevation_units": {
+    "value": "feet and meters",
+    "source_id": "ngmdb:95422",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1",
+    "quote": "METERS",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   },
+   "end": {
+    "label": {
+     "value": "A'",
+     "source_id": "ngmdb:95422",
+     "page": 1,
+     "extraction_method": "llm-image",
+     "confidence": 0.48,
+     "inferred": true,
+     "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1#page=1&viewrect=2336.8,2076.8,16,14.4",
+     "quote": "A!",
+     "quote_match": "image",
+     "text_method": "image",
+     "verification": "agree",
+     "image": {
+      "tile": "p1-90dpi-crop60_2010_2460_2290-r1c2",
+      "box": [
+       1406,
+       84,
+       1426,
+       102
+      ],
+      "dpi": 90,
+      "page_px_box": [
+       2921,
+       2596,
+       2941,
+       2614
+      ],
+      "pt_box": [
+       2336.8,
+       2076.8,
+       2352.8,
+       2091.2
+      ],
+      "pdf_sha256": "891e65debc3172a508f47921f1070aa0072b533f2515c17d81bac973cd49ae87"
+     },
+     "text_match": true,
+     "note": "OCR 'A!'"
+    }
+   },
+   "units_along": [
+    {
+     "unit": {
+      "value": "Dsm",
+      "source_id": "ngmdb:95422",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1#page=1&viewrect=455.2,2209.6,27.2,9.6",
+      "quote": "Dsm",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-90dpi-crop60_2010_2460_2290-r1c1",
+       "box": [
+        494,
+        250,
+        528,
+        262
+       ],
+       "dpi": 90,
+       "page_px_box": [
+        569,
+        2762,
+        603,
+        2774
+       ],
+       "pt_box": [
+        455.2,
+        2209.6,
+        482.4,
+        2219.2
+       ],
+       "pdf_sha256": "891e65debc3172a508f47921f1070aa0072b533f2515c17d81bac973cd49ae87"
+      },
+      "note": "unit labelled on the section"
+     }
+    },
+    {
+     "unit": {
+      "value": "CZms",
+      "source_id": "ngmdb:95422",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1#page=1&viewrect=608.8,2160,24,9.6",
+      "quote": "CZms",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-90dpi-crop60_2010_2460_2290-r1c1",
+       "box": [
+        686,
+        188,
+        716,
+        200
+       ],
+       "dpi": 90,
+       "page_px_box": [
+        761,
+        2700,
+        791,
+        2712
+       ],
+       "pt_box": [
+        608.8,
+        2160.0,
+        632.8,
+        2169.6
+       ],
+       "pdf_sha256": "891e65debc3172a508f47921f1070aa0072b533f2515c17d81bac973cd49ae87"
+      },
+      "note": "unit labelled on the section"
+     }
+    },
+    {
+     "unit": {
+      "value": "Qal",
+      "source_id": "ngmdb:95422",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1#page=1&viewrect=232.8,2164.8,19.2,9.6",
+      "quote": "Qal",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-90dpi-crop60_2010_2460_2290-r1c1",
+       "box": [
+        216,
+        194,
+        240,
+        206
+       ],
+       "dpi": 90,
+       "page_px_box": [
+        291,
+        2706,
+        315,
+        2718
+       ],
+       "pt_box": [
+        232.8,
+        2164.8,
+        252.0,
+        2174.4
+       ],
+       "pdf_sha256": "891e65debc3172a508f47921f1070aa0072b533f2515c17d81bac973cd49ae87"
+      },
+      "text_match": true,
+      "note": "unit labelled on the section"
+     }
+    },
+    {
+     "unit": {
+      "value": "CZb",
+      "source_id": "ngmdb:95422",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1#page=1&viewrect=1266.4,2174.4,20.8,9.6",
+      "quote": "CZb",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-90dpi-crop60_2010_2460_2290-r1c1",
+       "box": [
+        1508,
+        206,
+        1534,
+        218
+       ],
+       "dpi": 90,
+       "page_px_box": [
+        1583,
+        2718,
+        1609,
+        2730
+       ],
+       "pt_box": [
+        1266.4,
+        2174.4,
+        1287.2,
+        2184.0
+       ],
+       "pdf_sha256": "891e65debc3172a508f47921f1070aa0072b533f2515c17d81bac973cd49ae87"
+      },
+      "note": "unit labelled on the section"
+     }
+    },
+    {
+     "unit": {
+      "value": "CZb",
+      "source_id": "ngmdb:95422",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1#page=1&viewrect=2138.4,2219.2,24,9.6",
+      "quote": "CZb",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-90dpi-crop60_2010_2460_2290-r1c2",
+       "box": [
+        1158,
+        262,
+        1188,
+        274
+       ],
+       "dpi": 90,
+       "page_px_box": [
+        2673,
+        2774,
+        2703,
+        2786
+       ],
+       "pt_box": [
+        2138.4,
+        2219.2,
+        2162.4,
+        2228.8
+       ],
+       "pdf_sha256": "891e65debc3172a508f47921f1070aa0072b533f2515c17d81bac973cd49ae87"
+      },
+      "note": "unit labelled on the section"
+     }
+    },
+    {
+     "unit": {
+      "value": "CZms",
+      "source_id": "ngmdb:95422",
+      "page": 1,
+      "extraction_method": "llm-image",
+      "confidence": 0.48,
+      "inferred": true,
+      "locator": "https://ngmdb.usgs.gov/img2/95000_95999/95422_1#page=1&viewrect=2100,2174.4,28.8,9.6",
+      "quote": "CZms",
+      "quote_match": "image",
+      "text_method": "image",
+      "verification": "agree",
+      "image": {
+       "tile": "p1-90dpi-crop60_2010_2460_2290-r1c2",
+       "box": [
+        1110,
+        206,
+        1146,
+        218
+       ],
+       "dpi": 90,
+       "page_px_box": [
+        2625,
+        2718,
+        2661,
+        2730
+       ],
+       "pt_box": [
+        2100.0,
+        2174.4,
+        2128.8,
+        2184.0
+       ],
+       "pdf_sha256": "891e65debc3172a508f47921f1070aa0072b533f2515c17d81bac973cd49ae87"
+      },
+      "note": "unit labelled on the section"
+     }
+    }
+   ]
+  }
+ ],
+ "water_tests": [],
+ "rock_tests": []
+}
