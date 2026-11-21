@@ -80,7 +80,7 @@ try {
     status: document.querySelector('.status-bar')?.textContent ?? '',
   }));
   check(layout.title === 'South Carolina Geology Viewer', `header shows the app name (${layout.title})`);
-  check(layout.sections.join() === 'Layers,Map units', `left panel has Layers and Map units (${layout.sections})`);
+  check(layout.sections.join() === 'Layers,Map units,Section lines', `left panel has Layers, Map units and Section lines (${layout.sections})`);
   await page.mouse.move(700, 400);
   const status = await page.locator('.status-bar').textContent();
   check(/N [\d,]+ ft · E [\d,]+ ft/.test(status) && /° N, .*° W/.test(status) && /1:[\d,]+/.test(status),

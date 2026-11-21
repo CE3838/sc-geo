@@ -305,3 +305,14 @@ body { display: flex; flex-direction: column; overflow: hidden; color: var(--tex
   .hydro-table-wrap { max-height: 40vh; }
 }
 .hydro-nowrap { white-space: nowrap; }
+
+/* Section lines (section-ui.js) */
+.section-actions { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+.section-name { width: 100%; box-sizing: border-box; margin-top: 2px; }
+.section-length { font-size: 13px; font-weight: 600; margin: 6px 0 4px; }
+.section-vertices { font-size: 12px; }
+.section-sub { font-size: 12px; margin: 10px 0 4px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.section-saved { list-style: none; margin: 0; padding: 0; }
+.section-saved li { padding: 6px 0; border-top: 1px solid var(--line); font-size: 13px; }
+.section-saved input { width: 70%; }
+.section-hint:empty, .section-message:empty { display: none; }
