@@ -13,6 +13,7 @@ import { setupRoads } from './roads-ui.js';
 import { setupParcels } from './parcels-ui.js';
 import { createSidebar } from './sidebar.js';
 import { setupCard } from './card-ui.js';
+import { setupSection } from './section-ui.js';
 import { confidenceLevel } from './card.js';
 import { formatStatePlane } from './stateplane.js';
 import { EPQS_CITATION, EPQS_SOURCE, elevationAt, formatElevation } from './elevation.js';
@@ -180,6 +181,8 @@ const parcels = setupParcels(map, sidebar);
 const hydro = sidebar.addFolder(HYDRO_FOLDER);
 const wells = setupHydro(map, hydro, { phone });
 const water = setupWater(map, hydro, { phone });
+// Section lines (drawn, named and saved in this browser; no requests).
+const section = setupSection(map, panels);
 
 // Catalog records with footprints (merge/references.py), loaded on first use.
 let references = null;
@@ -251,6 +254,8 @@ function geologySummary(feature, lng, lat) {
 }
 
 map.on('click', (e) => {
+  // While a section line is being drawn, clicks edit the line (section-ui.js).
+  if (section.isEditing) return;
   const { lng, lat } = e.lngLat;
   if (phone.matches) setDrawer(false);
 
