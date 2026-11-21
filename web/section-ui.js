@@ -5,12 +5,14 @@
 // While editing: a click adds a point, dragging a point moves it, a click on a
 // point deletes it, and a double-click or Enter finishes (two or more points).
 // Escape stops editing; a line with fewer than two points is dropped.
-import { el } from './dom.js';
+import { el, svg } from './dom.js';
 import { onStyleReady } from './geo.js';
 import {
   addVertex, canFinish, createStore, deleteVertex, formatLength, fromGeoJSON, hitVertex, lengthFeet, moveVertex,
   newLine, toGeoJSON, vertexRows,
 } from './section.js';
+import { DATUM, createElevationCache, fetchProfile, profileChart, samplePoints } from './profile.js';
+import { EPQS_SOURCE } from './elevation.js';
 
 const SRC = 'section-line';
 const HIT_PX = 8;
@@ -46,10 +48,20 @@ export function setupSection(map, root) {
   const table = el('table', { class: 'card-props section-vertices' });
   const message = el('p', { class: 'card-muted section-message', role: 'status' });
   const savedList = el('ul', { class: 'section-saved' });
+  // Ground profile (USGS 3DEP), fetched only when the user asks.
+  const cache = createElevationCache(storageOrNull());
+  let profileRun = null;   // { ctrl, key } while fetching
+  let profileKey = null;   // coordinates the shown profile belongs to
+  const profileBtn = el('button', { type: 'button', class: 'btn', onclick: () => runProfile() }, 'Profile');
+  const stopBtn = el('button', { type: 'button', class: 'btn', hidden: true, onclick: () => stopProfile() }, 'Stop');
+  const profileStatus = el('p', { class: 'card-muted section-profile-status', role: 'status' });
+  const profileChartBox = el('div', { class: 'section-profile' });
+  const profileBox = el('div', {},
+    el('div', { class: 'section-actions' }, profileBtn, stopBtn), profileStatus, profileChartBox);
   const current = el('div', { class: 'section-current' },
     el('label', {}, 'Name ', nameInput),
     el('div', { class: 'section-actions' }, saveBtn, exportBtn, clearBtn),
-    lengthOut, table);
+    lengthOut, table, profileBox);
   root.append(el('section', { class: 'side-section', 'aria-labelledby': 'section-h' },
     el('h2', { id: 'section-h' }, 'Section lines'),
     el('div', { class: 'section-actions' }, drawBtn, importBtn, fileInput),
@@ -76,6 +88,73 @@ export function setupSection(map, root) {
       el('td', {}, r.stateplane, el('div', { class: 'card-muted' }, `${r.latlon} · ${r.along} along`))))));
     renderSaved();
     draw();
+    // A profile belongs to the coordinates it was made for: drop it when the line changes.
+    const key = line ? JSON.stringify(line.coords) : null;
+    if (profileRun && profileRun.key !== key) stopProfile();
+    if (profileKey && profileKey !== key) { profileKey = null; profileChartBox.replaceChildren(); profileStatus.textContent = ''; }
+    profileBtn.disabled = editing || !canFinish(line) || Boolean(profileRun);
+  }
+
+  function stopProfile() {
+    profileRun?.ctrl.abort();
+  }
+
+  function runProfile() {
+    if (!canFinish(line) || editing || profileRun) return;
+    const key = JSON.stringify(line.coords);
+    const ctrl = new AbortController();
+    profileRun = { ctrl, key };
+    profileKey = key;
+    stopBtn.hidden = false;
+    profileBtn.disabled = true;
+    profileChartBox.replaceChildren();
+    const samples = samplePoints(line.coords);
+    fetchProfile(samples, { cache, signal: ctrl.signal,
+      onProgress: ({ done, total }) => { profileStatus.textContent = `Ground elevations ${done} of ${total}…`; } })
+      .then((result) => {
+        if (profileKey !== key) return;
+        const gaps = result.points.filter((p) => p.feet === null).length;
+        profileStatus.textContent = `${result.points.length} points${gaps ? `, ${gaps} without an elevation (gaps)` : ''}`
+          + `${result.failed ? `; ${result.failed} failed and will be asked again next time` : ''}.`;
+        profileChartBox.replaceChildren(chartNode(result));
+      })
+      .catch((err) => {
+        if (profileKey !== key) return;
+        profileStatus.textContent = err.name === 'AbortError' ? 'Profile stopped.' : `Profile failed: ${err.message}`;
+      })
+      .finally(() => {
+        if (profileRun?.ctrl === ctrl) profileRun = null;
+        stopBtn.hidden = true;
+        profileBtn.disabled = editing || !canFinish(line);
+      });
+  }
+
+  function chartNode(result) {
+    const c = profileChart(result.points, { width: 262, height: 170 });
+    const credit = el('p', { class: 'geo-cite' }, `Ground: ${result.source}, ${DATUM.vertical}, feet (${EPQS_SOURCE}). `
+      + 'Provided as is, without warranty.');
+    if (!c) return el('div', {}, el('p', { class: 'card-muted' }, 'No elevations returned for this line.'), credit);
+    const { plot } = c;
+    const text = (x, y, s, anchor = 'middle', extra = {}) => svg('text', { x, y, 'text-anchor': anchor, class: 'pf-label', ...extra },
+      document.createTextNode(s));
+    return el('figure', { class: 'section-figure' },
+      svg('svg', { width: c.width, height: c.height, viewBox: `0 0 ${c.width} ${c.height}`, role: 'img',
+        'aria-label': `Ground profile, ${c.yLabel}, against ${c.xLabel}` },
+      svg('rect', { x: plot.x, y: plot.y, width: plot.w, height: plot.h, class: 'pf-plot' }),
+      ...c.yTicks.map((t) => svg('g', {},
+        svg('line', { x1: plot.x, x2: plot.x + plot.w, y1: t.pos, y2: t.pos, class: 'pf-grid' }),
+        text(plot.x - 4, t.pos + 3.5, t.label, 'end'))),
+      ...c.xTicks.map((t) => svg('g', {},
+        svg('line', { x1: t.pos, x2: t.pos, y1: plot.y, y2: plot.y + plot.h, class: 'pf-grid' }),
+        text(t.pos, plot.y + plot.h + 12, t.label))),
+      ...c.gaps.map((g) => svg('line', { x1: g.pos, x2: g.pos, y1: plot.y, y2: plot.y + plot.h, class: 'pf-gap' })),
+      svg('path', { d: c.path, class: 'pf-line' }),
+      ...c.segments.filter((s) => s.length === 1).map(([[x, y]]) => svg('circle', { cx: x, cy: y, r: 2, class: 'pf-dot' })),
+      text(plot.x + plot.w / 2, c.height - 3, c.xLabel),
+      text(10, plot.y + plot.h / 2, 'ft (NAVD88)', 'middle', { transform: `rotate(-90 10 ${plot.y + plot.h / 2})` })),
+      el('figcaption', { class: 'card-muted' }, `${c.yLabel} against distance along the line (ft). ${c.exaggerationText}.`
+        + `${c.gaps.length ? ' Dashed lines: points without an elevation.' : ''}`),
+      credit);
   }
 
   function renderSaved() {
