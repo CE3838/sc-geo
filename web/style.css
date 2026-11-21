@@ -316,3 +316,14 @@ body { display: flex; flex-direction: column; overflow: hidden; color: var(--tex
 .section-saved li { padding: 6px 0; border-top: 1px solid var(--line); font-size: 13px; }
 .section-saved input { width: 70%; }
 .section-hint:empty, .section-message:empty { display: none; }
+
+/* Section ground profile (profile.js) */
+.section-figure { margin: 6px 0 0; }
+.section-figure svg { display: block; max-width: 100%; height: auto; }
+.pf-plot { fill: #fafbfc; stroke: var(--line); }
+.pf-grid { stroke: #e6e9ec; }
+.pf-gap { stroke: #b3261e; stroke-dasharray: 2 2; opacity: .6; }
+.pf-line { fill: none; stroke: #6b4f2a; stroke-width: 1.6; }
+.pf-dot { fill: #6b4f2a; }
+.pf-label { font-size: 9.5px; fill: var(--muted); }
+.section-profile-status:empty { display: none; }
