@@ -149,16 +149,27 @@ export async function fetchProfile(samples, {
   };
 }
 
+export const CHART_MARGIN = Object.freeze({ l: 44, r: 18, t: 8, b: 30 });
+
+// The horizontal (distance) axis shared by the profile and the geology
+// strips (section-geology.js), so they line up: plot left and width, ticks,
+// and px(d) for a distance in feet.
+export function distanceAxis(maxD, width = 280, margin = CHART_MARGIN) {
+  const plot = { x: margin.l, w: width - margin.l - margin.r };
+  const x = niceTicks(0, maxD || 1, 4);
+  const px = (d) => plot.x + ((d - x.lo) / (x.hi - x.lo)) * plot.w;
+  return { plot, x, px, ticks: x.ticks.map((v) => ({ v, pos: px(v), label: v.toLocaleString('en-US') })) };
+}
+
 // Chart geometry (pixels) for an SVG: axes, ticks, the profile path with
 // gaps, and the vertical exaggeration. null when no point has an elevation.
-export function profileChart(points, { width = 280, height = 160, margin = { l: 44, r: 18, t: 8, b: 30 } } = {}) {
+export function profileChart(points, { width = 280, height = 160, margin = CHART_MARGIN } = {}) {
   const valid = points.filter((p) => Number.isFinite(p.feet));
   if (!valid.length) return null;
   const plot = { x: margin.l, y: margin.t, w: width - margin.l - margin.r, h: height - margin.t - margin.b };
   const maxD = Math.max(...points.map((p) => p.d));
-  const x = niceTicks(0, maxD || 1, 4);
+  const { x, px } = distanceAxis(maxD, width, margin);
   const y = niceTicks(Math.min(...valid.map((p) => p.feet)), Math.max(...valid.map((p) => p.feet)), 4);
-  const px = (d) => plot.x + ((d - x.lo) / (x.hi - x.lo)) * plot.w;
   const py = (f) => plot.y + plot.h - ((f - y.lo) / (y.hi - y.lo)) * plot.h;
   const segments = [];
   let cur = [];
