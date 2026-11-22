@@ -182,7 +182,7 @@ const hydro = sidebar.addFolder(HYDRO_FOLDER);
 const wells = setupHydro(map, hydro, { phone });
 const water = setupWater(map, hydro, { phone });
 // Section lines (drawn, named and saved in this browser; no requests).
-const section = setupSection(map, panels);
+const section = setupSection(map, panels, { geology: () => geology });
 
 // Catalog records with footprints (merge/references.py), loaded on first use.
 let references = null;

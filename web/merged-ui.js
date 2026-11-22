@@ -8,9 +8,10 @@ import {
   scaleText, sourceLink,
 } from './merged.js';
 import { safeHttpsUrl, shortCitation } from './geology.js';
-import { mergedCard } from './card.js';
+import { mergedCard, shortRef } from './card.js';
 import { el } from './dom.js';
 import { onStyleReady } from './geo.js';
+import { colorForProps } from './section-geology.js';
 
 const BASE = 'data/geology/';
 const LAYERS = GEOLOGY_LAYERS;
@@ -115,6 +116,20 @@ export async function setupMergedGeology(map, ui) {
     unitAt(point) {
       const layers = LAYERS.filter((l) => state.visible[l.id]).map((l) => `merged-${l.id}-fill`);
       return layers.length ? map.queryRenderedFeatures(point, { layers })[0] ?? null : null;
+    },
+    // Loaded polygons for the section tool's geology strips (section-geology.js):
+    // unit, short citation (never a record id) and the color now shown on the map.
+    sectionLayers() {
+      return {
+        features,
+        describe: (p) => {
+          const u = units[p.unit] ?? {};
+          const src = sources[p.source] ?? {};
+          return { key: p.unit, symbol: u.map_unit ?? p.map_unit, name: u.unit_name || u.name || null,
+            citation: shortRef(src) || 'source map' };
+        },
+        color: (p) => colorForProps(p, state.mode, legend),
+      };
     },
     // Property card model for a clicked feature (card.js).
     card(feature, lng, lat, records = []) {

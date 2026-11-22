@@ -13,6 +13,7 @@ import {
 } from './section.js';
 import { DATUM, createElevationCache, fetchProfile, profileChart, samplePoints } from './profile.js';
 import { EPQS_SOURCE } from './elevation.js';
+import { intervalsAlong, stripLayout } from './section-geology.js';
 
 const SRC = 'section-line';
 const HIT_PX = 8;
@@ -25,7 +26,7 @@ function storageOrNull() {
 }
 
 // `root` is the sidebar element (#panels). Returns { isEditing, ... }.
-export function setupSection(map, root) {
+export function setupSection(map, root, { geology = () => null } = {}) {
   const store = createStore(storageOrNull());
   let line = null;      // the line on the map (saved or not)
   let editing = false;
@@ -56,7 +57,10 @@ export function setupSection(map, root) {
   const stopBtn = el('button', { type: 'button', class: 'btn', hidden: true, onclick: () => stopProfile() }, 'Stop');
   const profileStatus = el('p', { class: 'card-muted section-profile-status', role: 'status' });
   const profileChartBox = el('div', { class: 'section-profile' });
-  const profileBox = el('div', {},
+  // Surface geology strips from the merged layers already loaded (no requests).
+  const geologyBox = el('div', { class: 'section-geology' });
+  let geologyKey = null;
+  const profileBox = el('div', {}, geologyBox,
     el('div', { class: 'section-actions' }, profileBtn, stopBtn), profileStatus, profileChartBox);
   const current = el('div', { class: 'section-current' },
     el('label', {}, 'Name ', nameInput),
@@ -93,6 +97,53 @@ export function setupSection(map, root) {
     if (profileRun && profileRun.key !== key) stopProfile();
     if (profileKey && profileKey !== key) { profileKey = null; profileChartBox.replaceChildren(); profileStatus.textContent = ''; }
     profileBtn.disabled = editing || !canFinish(line) || Boolean(profileRun);
+    renderGeology(key);
+  }
+
+  const STRIP_W = 262;
+  function renderGeology(key) {
+    if (editing || !canFinish(line)) { geologyKey = null; geologyBox.replaceChildren(); return; }
+    if (key === geologyKey) return;
+    const g = geology()?.sectionLayers?.();
+    if (!g) {
+      geologyKey = null;
+      geologyBox.replaceChildren(el('p', { class: 'card-muted' }, 'Geology strips need the merged map, which is not loaded.'));
+      return;
+    }
+    geologyKey = key;
+    const length = lengthFeet(line.coords);
+    const rows = [['surficial', 'Surficial'], ['bedrock', 'Bedrock']].map(([id, label]) => ({
+      label, strip: stripLayout(intervalsAlong(line.coords, g.features[id] ?? [], g), length, { width: STRIP_W }) }));
+    const info = el('p', { class: 'card-muted section-strip-info', role: 'status' },
+      'Point at or tap a strip for its unit.');
+    const describe = (label, r) => (r.mapped
+      ? `${label}: ${r.label}${r.conf !== null ? ` · confidence ${r.conf.toFixed(2)}` : ''}${r.citation ? ` · ${r.citation}` : ''}`
+      : `${label}: ${r.label}`);
+    const ROW_H = 12;
+    const ROW_GAP = 16;
+    const height = rows.length * (ROW_H + ROW_GAP) + 4;
+    const show = (text) => { info.textContent = text; };
+    const node = svg('svg', { width: STRIP_W, height, viewBox: `0 0 ${STRIP_W} ${height}`, role: 'img',
+      'aria-label': 'Surface geology along the line: surficial and bedrock' },
+    ...rows.flatMap((row, i) => {
+      const y = i * (ROW_H + ROW_GAP) + ROW_GAP - 4;
+      return [
+        svg('text', { x: 2, y: y - 3, class: 'pf-label' }, document.createTextNode(row.label)),
+        ...row.strip.rects.map((r) => {
+          const text = describe(row.label, r);
+          const rect = svg('rect', { x: r.x, y, width: Math.max(r.w, 0.5), height: ROW_H, tabindex: '0',
+            class: r.mapped ? 'gs-unit' : 'gs-gap', fill: r.mapped ? r.color : 'none' }, svg('title', {}, document.createTextNode(text)));
+          for (const ev of ['mouseenter', 'click', 'focus']) rect.addEventListener(ev, () => show(text));
+          return rect;
+        }),
+        ...row.strip.rects.filter((r) => !r.mapped && r.w > 70).map((r) => svg('text',
+          { x: r.x + r.w / 2, y: y + ROW_H - 3, 'text-anchor': 'middle', class: 'pf-label gs-gap-label' },
+          document.createTextNode(r.label))),
+      ];
+    }));
+    geologyBox.replaceChildren(el('figure', { class: 'section-figure' }, node, info,
+      el('p', { class: 'geo-cite' }, 'Merged geologic map along the line, on the profile’s distance axis; '
+        + 'blank stretches have no mapped unit. Colors as on the map when drawn. Provided as is, without warranty.')));
   }
 
   function stopProfile() {
@@ -130,7 +181,7 @@ export function setupSection(map, root) {
   }
 
   function chartNode(result) {
-    const c = profileChart(result.points, { width: 262, height: 170 });
+    const c = profileChart(result.points, { width: STRIP_W, height: 170 });
     const credit = el('p', { class: 'geo-cite' }, `Ground: ${result.source}, ${DATUM.vertical}, feet (${EPQS_SOURCE}). `
       + 'Provided as is, without warranty.');
     if (!c) return el('div', {}, el('p', { class: 'card-muted' }, 'No elevations returned for this line.'), credit);

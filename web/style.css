@@ -327,3 +327,9 @@ body { display: flex; flex-direction: column; overflow: hidden; color: var(--tex
 .pf-dot { fill: #6b4f2a; }
 .pf-label { font-size: 9.5px; fill: var(--muted); }
 .section-profile-status:empty { display: none; }
+
+/* Section geology strips (section-geology.js) */
+.gs-unit { stroke: #333; stroke-width: .4; cursor: pointer; }
+.gs-gap { stroke: #888; stroke-width: .6; stroke-dasharray: 2 2; cursor: pointer; pointer-events: all; }
+.gs-gap-label { font-style: italic; }
+.section-strip-info { margin: 2px 0 4px; }
