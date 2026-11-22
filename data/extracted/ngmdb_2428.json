@@ -8,12 +8,13 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-11-22T00:01:49+00:00",
- "updated_at": "2026-11-22T00:01:53+00:00",
+ "updated_at": "2026-11-22T00:01:55+00:00",
  "reader": "Claude, Claude Code session 2026-11-22",
  "packets": [
   "packet-01",
   "packet-02",
-  "packet-03"
+  "packet-03",
+  "packet-04"
  ],
  "blocks_done": [
   "1",
@@ -43,11 +44,17 @@
   "25",
   "26",
   "27",
-  "28"
+  "28",
+  "29",
+  "30",
+  "31",
+  "32",
+  "33",
+  "34"
  ],
  "blocks_total": 47,
  "complete": false,
- "notes": "Gaffney-Kings Mountain folio (Keith and Sterrett, 1931), packet 1 (pages 1-7). Pages 1-26 are a scanned copy of the folio text (2428_t.pdf) whose descriptive part repeats the cleaner text.pdf copy on pages 27-39 word for word; pages 1-3 are the standard Geologic Atlas explanation. To avoid double-counting, values are recorded once, from pages 27-42. Nothing recorded from this packet. SUBSURFACE: none.\nGaffney-Kings Mountain folio, packet 2 (pages 8-13). Pages 1-26 are a scanned copy of the folio text (2428_t.pdf) whose descriptive part repeats the cleaner text.pdf copy on pages 27-39 word for word; pages 1-3 are the standard Geologic Atlas explanation. To avoid double-counting, values are recorded once, from pages 27-42. Nothing recorded from this packet. SUBSURFACE: none.\nGaffney-Kings Mountain folio, packet 3 (pages 14-28). Pages 14-26: Pages 1-26 are a scanned copy of the folio text (2428_t.pdf) whose descriptive part repeats the cleaner text.pdf copy on pages 27-39 word for word; pages 1-3 are the standard Geologic Atlas explanation. To avoid double-counting, values are recorded once, from pages 27-42. Pages 27-28 (text.pdf) give location, geography, relief and drainage (altitudes 430 to 1,705 ft), none of which fits the schema. Nothing recorded from this packet. SUBSURFACE: none.",
+ "notes": "Gaffney-Kings Mountain folio (Keith and Sterrett, 1931), packet 1 (pages 1-7). Pages 1-26 are a scanned copy of the folio text (2428_t.pdf) whose descriptive part repeats the cleaner text.pdf copy on pages 27-39 word for word; pages 1-3 are the standard Geologic Atlas explanation. To avoid double-counting, values are recorded once, from pages 27-42. Nothing recorded from this packet. SUBSURFACE: none.\nGaffney-Kings Mountain folio, packet 2 (pages 8-13). Pages 1-26 are a scanned copy of the folio text (2428_t.pdf) whose descriptive part repeats the cleaner text.pdf copy on pages 27-39 word for word; pages 1-3 are the standard Geologic Atlas explanation. To avoid double-counting, values are recorded once, from pages 27-42. Nothing recorded from this packet. SUBSURFACE: none.\nGaffney-Kings Mountain folio, packet 3 (pages 14-28). Pages 14-26: Pages 1-26 are a scanned copy of the folio text (2428_t.pdf) whose descriptive part repeats the cleaner text.pdf copy on pages 27-39 word for word; pages 1-3 are the standard Geologic Atlas explanation. To avoid double-counting, values are recorded once, from pages 27-42. Pages 27-28 (text.pdf) give location, geography, relief and drainage (altitudes 430 to 1,705 ft), none of which fits the schema. Nothing recorded from this packet. SUBSURFACE: none.\nGaffney-Kings Mountain folio, packet 4 (pages 29-34): formations from the generalized columnar sections (figs. 2 and 3) and the order-of-formations table on page 29, and thrust faulting (page 33). About two-thirds of the district is in South Carolina (Cherokee and York Counties); the formations cross the state line and are recorded for the district. Archean symbols printed as A with a superscript are OCR'd as 'XR' and flagged inferred. Detailed formation descriptions (pages 30-32), local structure (page 33) and mineral resources (page 34) not itemized beyond this. SUBSURFACE: none.",
  "files": [
   {
    "url": "https://ngmdb.usgs.gov/docs/pamphlets/2428_t.pdf",
@@ -121,10 +128,14 @@
   }
  ],
  "summary": {
-  "stored": 0,
-  "quote_match": {},
-  "verification": {},
-  "inferred": 0
+  "stored": 60,
+  "quote_match": {
+   "exact": 60
+  },
+  "verification": {
+   "agree": 6
+  },
+  "inferred": 4
  },
  "ingests": [
   {
@@ -186,11 +197,993 @@
    "image": 0,
    "image_not_verified": 0,
    "review_items": 0
+  },
+  {
+   "at": "2026-11-22T00:01:55+00:00",
+   "packets": [
+    "packet-04"
+   ],
+   "reader": "Claude, Claude Code session 2026-11-22",
+   "values": 60,
+   "stored": 60,
+   "exact": 60,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 6,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 0,
+   "image_not_verified": 0,
+   "review_items": 0
   }
  ],
- "units": [],
+ "units": [
+  {
+   "map_symbol": {
+    "value": "g",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gaffney marble.   g   80-300   Fine-grained to medium-grained bluish-gray to white marble.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "Gaffney marble",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gaffney marble.   g   80-300   Fine-grained to medium-grained bluish-gray to white marble.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Cambrian",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cambrian:   minerals' of the schist and accordingly produce a porphyritic   of Blacksburg, may have been derived from volcanic rocks of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "order-of-formations table",
+    "normalized": {
+     "younger_ma": 485.4,
+     "older_ma": 538.8,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "fine-grained to medium-grained bluish-gray to white marble (metamorphosed limestone)",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gaffney marble.   g   80-300   Fine-grained to medium-grained bluish-gray to white marble.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "80-300",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Gaffney marble, 80-300 feet thick. Sedimentary limestone now meta-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "units": "ft",
+    "normalized": {
+     "min_ft": 80.0,
+     "max_ft": 300.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "b",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Blacksburg schist.   b   800-1,000   Rocks ranging from fine graywacke to sericite schist or phyllite.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "Blacksburg schist",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Blacksburg schist.   b   800-1,000   Rocks ranging from fine graywacke to sericite schist or phyllite.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Blacksburg",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Cambrian",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cambrian:   minerals' of the schist and accordingly produce a porphyritic   of Blacksburg, may have been derived from volcanic rocks of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "order-of-formations table",
+    "normalized": {
+     "younger_ma": 485.4,
+     "older_ma": 538.8,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "fine graywacke to sericite schist or phyllite",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Blacksburg schist.   b   800-1,000   Rocks ranging from fine graywacke to sericite schist or phyllite.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "800-1,000",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Blacksburg schist, 800-1,000 feet thick. Sedimentary clay and sandy",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "units": "ft",
+    "normalized": {
+     "min_ft": 800.0,
+     "max_ft": 1000.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "k",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Kings Mountain quartzite with Draytonville conglomerate k //",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "Kings Mountain quartzite",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Kings Mountain quartzite with Draytonville conglomerate k //",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Kings Mountain",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Cambrian",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Cambrian:   minerals' of the schist and accordingly produce a porphyritic   of Blacksburg, may have been derived from volcanic rocks of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "order-of-formations table",
+    "normalized": {
+     "younger_ma": 485.4,
+     "older_ma": 538.8,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "white quartzite, chloritic sericitic quartzite, kyanitic quartzite, and thick-bedded quartz conglomerate (Draytonville conglomerate member at base)",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "White quartzite, chloritic sericitic quartzite, kyanitic quartzite, and a thick-bedded",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "thickness": {
+    "value": "5-500",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Kings Mountain quartzite, 5-500 feet thick. Mainly sedimentary sands,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "units": "ft",
+    "normalized": {
+     "min_ft": 5.0,
+     "max_ft": 500.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Abg",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Algon. Battleground schist.   Abg J   K 1,0004- Chiefly varicolored sericitic schist with manganese schist member and conglomerate.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "Battleground schist",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Algon. Battleground schist.   Abg J   K 1,0004- Chiefly varicolored sericitic schist with manganese schist member and conglomerate.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Battleground",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Algonkian",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Algonkian:   Where garnet and kyanite are abundant and in large crystals   Origin. The origin of some of the hornblendic rocks of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "lithology": {
+    "value": "chiefly varicolored sericitic schist with manganese schist member and conglomerate",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Algon. Battleground schist.   Abg J   K 1,0004- Chiefly varicolored sericitic schist with manganese schist member and conglomerate.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "thickness": {
+    "value": "1,000",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Battleground schist, 1,000 feet thick. Mainly sedimentary clays, now",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "units": "ft",
+    "normalized": {
+     "min_ft": 1000.0,
+     "max_ft": 1000.0,
+     "unit": "ft",
+     "approximate": false
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Carolina gneiss",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Carolina gneiss. Mainly sedimentary sands and clays, many thousand",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Archean",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Archean:",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "order-of-formations table",
+    "normalized": {
+     "younger_ma": 2500.0,
+     "older_ma": 4031.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "interbedded gneisses and schists: mica, garnet and kyanite gneiss and schist, granitoid layers, less abundant graphite and staurolite gneiss, beds of marble",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "which are mica gneiss and schist, garnet gneiss and schist,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "thickness": {
+    "value": "many thousands of feet",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Carolina gneiss. Mainly sedimentary sands and clays, many thousand",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "not measurable owing to metamorphism and deformation"
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Arr",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.68,
+    "inferred": true,
+    "locator": null,
+    "quote": "Roan gneiss.   pill   XRr",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "OCR 'XRr' (Archean symbol)"
+   },
+   "name": {
+    "value": "Roan gneiss",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Roan gneiss. Igneous masses and dikes intruded into Carolina gneiss",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Roan",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Archean",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Archean:",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "order-of-formations table",
+    "normalized": {
+     "younger_ma": 2500.0,
+     "older_ma": 4031.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "chiefly hornblende schist, hornblende gneiss, schistose diorite and diorite",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "blende schist, hornblende gneiss, schistose diorite, and diorite.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "contacts": {
+    "value": "igneous masses and dikes intruded into Carolina gneiss",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Roan gneiss. Igneous masses and dikes intruded into Carolina gneiss",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Ars",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "s !s ts(»!so   XRs   with lloan gneiss.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "OCR 'XRs'"
+   },
+   "name": {
+    "value": "Soapstone, pyroxenite, and allied basic rocks",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Soapstone, pyroxenite, and   Basic dikes associated chiefly",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Archean",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Archean:",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "order-of-formations table",
+    "normalized": {
+     "younger_ma": 2500.0,
+     "older_ma": 4031.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "soapstone, pyroxenite, gabbro and similar basic igneous rocks, chiefly in or associated with Roan gneiss",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "chiefly in or associated with Roan gneiss.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Arb",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Bessemer granite.   XRb   metamorphosed ;   porphy-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "OCR 'XRb'"
+   },
+   "name": {
+    "value": "Bessemer granite",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Bessemer granite. Intruded into Roan gneiss and pyroxenite and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Battleground",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Archean",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Archean:",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "order-of-formations table",
+    "normalized": {
+     "younger_ma": 2500.0,
+     "older_ma": 4031.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "medium to fine grained muscovite-biotite granite, much metamorphosed, locally porphyritic",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Bessemer granite.   XRb   metamorphosed ;   porphy-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "contacts": {
+    "value": "intruded into Roan gneiss and pyroxenite",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Bessemer granite. Intruded into Roan gneiss and pyroxenite and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "name": {
+    "value": "Pegmatite (Archean)",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Pegmatite. Injected into Carolina and Roan gneisses in dikes and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Archean",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Archean:",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "order-of-formations table",
+    "normalized": {
+     "younger_ma": 2500.0,
+     "older_ma": 4031.0,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "injected into Carolina and Roan gneisses in dikes and lenses",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Pegmatite. Injected into Carolina and Roan gneisses in dikes and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "wgr",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Whiteside granite.   wgr   granite, slightly metamor-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "name": {
+    "value": "Whiteside granite",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Whiteside granite. Intruded into Carolina and Roan gneisses.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Whiteside",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Late Carboniferous (?)",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Late Carboniferous (?):",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "order-of-formations table",
+    "normalized": {
+     "younger_ma": 298.9,
+     "older_ma": 318.9,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "light-gray muscovite-biotite granite, slightly metamorphosed",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Whiteside granite.   wgr   granite, slightly metamor-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "contacts": {
+    "value": "intruded into Carolina and Roan gneisses",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Whiteside granite. Intruded into Carolina and Roan gneisses.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Pegmatite (Late Carboniferous?)",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Pegmatite. Injected into Carolina and Roan gneisses.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Late Carboniferous (?)",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Late Carboniferous (?):",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "order-of-formations table",
+    "normalized": {
+     "younger_ma": 298.9,
+     "older_ma": 318.9,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "yg",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "to   Yorkville granite.   yg   grained biotite granite with",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "name": {
+    "value": "Yorkville granite",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Yorkville granite. Intruded into Roan gneiss.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Churchland",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "age": {
+    "value": "Late Carboniferous (?)",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Late Carboniferous (?):",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "order-of-formations table",
+    "normalized": {
+     "younger_ma": 298.9,
+     "older_ma": 318.9,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "gray to dark-gray coarse-grained biotite granite with porphyritic facies",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "to   Yorkville granite.   yg   grained biotite granite with",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "contacts": {
+    "value": "intruded into Roan gneiss",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Yorkville granite. Intruded into Roan gneiss.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "map_symbol": {
+    "value": "Trd",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Triassic. Diabase.   T5d   Dense dark diabase.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "OCR 'T5d'"
+   },
+   "name": {
+    "value": "Diabase",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Triassic. Diabase.   T5d   Dense dark diabase.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Triassic",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Triassic. Diabase.   T5d   Dense dark diabase.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 201.4,
+     "older_ma": 251.902,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "lithology": {
+    "value": "dense dark diabase, in narrow dikes",
+    "source_id": "ngmdb:2428",
+    "page": 29,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Triassic. Diabase.   T5d   Dense dark diabase.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ],
  "observations": [],
- "structures": [],
+ "structures": [
+  {
+   "kind": "fault",
+   "name": {
+    "value": "Thrust faults",
+    "source_id": "ngmdb:2428",
+    "page": 33,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Faulting. Thrust faulting has produced a lack of symmetry",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "fault_type": {
+    "value": "thrust",
+    "source_id": "ngmdb:2428",
+    "page": 33,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Faulting. Thrust faulting has produced a lack of symmetry",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "fault planes dip variably, some very steep, others as low as 30 degrees, to the northwest or southeast; associated with greatly compressed overturned folds; most faults along the Cambrian belt dip northwest in the Kings Mountain quadrangle and southeast in the Gaffney quadrangle",
+    "source_id": "ngmdb:2428",
+    "page": 33,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "and others as low as 30°, with inclinations to the northwest or",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  }
+ ],
  "groundwater": [],
  "references": [],
  "surfaces": [],
