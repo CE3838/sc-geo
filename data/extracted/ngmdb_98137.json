@@ -8,10 +8,11 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-11-25T00:00:14+00:00",
- "updated_at": "2026-11-25T00:00:14+00:00",
+ "updated_at": "2026-11-25T00:00:16+00:00",
  "reader": "Claude, Claude Code session 2026-11-24",
  "packets": [
-  "packet-01"
+  "packet-01",
+  "packet-02"
  ],
  "blocks_done": [
   "1",
@@ -40,11 +41,22 @@
   "26",
   "27",
   "28",
-  "29"
+  "29",
+  "30",
+  "31",
+  "32",
+  "33",
+  "34",
+  "35",
+  "36",
+  "37",
+  "38",
+  "39",
+  "40"
  ],
  "blocks_total": 38,
- "complete": false,
- "notes": "USGS PP 248-E (Griffitts and Olson, 1952), packet 1 (plates 25-26 and pages 3-29): Part 7, Hartwell district (Hart and Elbert Counties, Ga.; Anderson and Abbeville Counties, S.C.). Rock units and pegmatites recorded for the district as a whole, since the text does not separate the states. Individual mica mines and prospects (location list, mine maps and workings, production) are not recorded, as mines and their workings do not fit the schema; plate map faces not itemized. SUBSURFACE: none.",
+ "complete": true,
+ "notes": "USGS PP 248-E (Griffitts and Olson, 1952), packet 1 (plates 25-26 and pages 3-29): Part 7, Hartwell district (Hart and Elbert Counties, Ga.; Anderson and Abbeville Counties, S.C.). Rock units and pegmatites recorded for the district as a whole, since the text does not separate the states. Individual mica mines and prospects (location list, mine maps and workings, production) are not recorded, as mines and their workings do not fit the schema; plate map faces not itemized. SUBSURFACE: none.\nPP 248-E packet 2 (pages 30-40): end of Part 7 and Part 8, outlying mica deposits in South Carolina (Cherokee, Spartanburg, Greenville, Pickens, Oconee and Anderson Counties). Country rocks, granitic sills and pegmatites recorded; individual mines and prospects (e.g. Troy Blanton, Willimon, Cliff Webb) and the vermiculite occurrences are not recorded. SUBSURFACE: none.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/pp/0248e/plate-25.pdf",
@@ -69,12 +81,12 @@
   }
  ],
  "summary": {
-  "stored": 13,
+  "stored": 23,
   "quote_match": {
-   "exact": 13
+   "exact": 23
   },
   "verification": {
-   "agree": 2
+   "agree": 3
   },
   "inferred": 0
  },
@@ -93,6 +105,26 @@
    "quote_not_found": 0,
    "wrong_page": 0,
    "agree": 2,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 0,
+   "image_not_verified": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-11-25T00:00:16+00:00",
+   "packets": [
+    "packet-02"
+   ],
+   "reader": "Claude, Claude Code session 2026-11-24",
+   "values": 10,
+   "stored": 10,
+   "exact": 10,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 1,
    "disagree": 0,
    "unclear": 0,
    "image": 0,
@@ -269,6 +301,121 @@
     "text_method": "pdf_text",
     "verification": null
    }
+  },
+  {
+   "name": {
+    "value": "Quartz-muscovite schist and muscovite-biotite gneiss",
+    "source_id": "ngmdb:98137",
+    "page": 32,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "quartz-muscovite schist and muscovite-biotite gneiss.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "schist and muscovite biotite",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "lithology": {
+    "value": "quartz-muscovite schist and muscovite-biotite gneiss; sillimanite locally abundant",
+    "source_id": "ngmdb:98137",
+    "page": 32,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "quartz-muscovite schist and muscovite-biotite gneiss.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Granitic sills",
+    "source_id": "ngmdb:98137",
+    "page": 32,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "rock forms sills in northeastern Cherokee County,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "lithology": {
+    "value": "light-gray medium-grained granitic rock of quartz, microcline, orthoclase, oligoclase, biotite and muscovite with accessory apatite, zircon, magnetite and monazite",
+    "source_id": "ngmdb:98137",
+    "page": 32,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "rock forms sills in northeastern Cherokee County,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "in northeastern Cherokee, northern Spartanburg and central Greenville Counties; resembles the western-type granite of the Shelby district, N.C.",
+    "source_id": "ngmdb:98137",
+    "page": 32,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "rock forms sills in northeastern Cherokee County,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   }
+  },
+  {
+   "name": {
+    "value": "Pegmatite (outlying deposits)",
+    "source_id": "ngmdb:98137",
+    "page": 32,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The pegmatites consist chiefly of plagioclase, quartz,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "lithology": {
+    "value": "plagioclase, quartz, perthite, muscovite and biotite, garnet the principal accessory; massive quartz cores, plagioclase wall zones",
+    "source_id": "ngmdb:98137",
+    "page": 32,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The pegmatites consist chiefly of plagioclase, quartz,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "mostly cut across foliation; strike N. 10-30 E. in western Oconee and north-central Greenville Counties, N. 30 W. to N. 35 E. in Pickens County",
+    "source_id": "ngmdb:98137",
+    "page": 32,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "of the metamorphic country rock. Those in northern",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
   }
  ],
  "observations": [],
@@ -297,6 +444,35 @@
     "inferred": false,
     "locator": null,
     "quote": "rocks, is northeast, and the regional dip is southeast.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "kind": "foliation",
+   "name": {
+    "value": "Foliation near Enoree River",
+    "source_id": "ngmdb:98137",
+    "page": 33,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The foliation and",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "strike_dip": {
+    "value": "trend east-northeast, dip south-southeast at gentle to moderate angles",
+    "source_id": "ngmdb:98137",
+    "page": 33,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "gneissic layering trend east-northeast and dip south-",
     "quote_match": "exact",
     "text_method": "pdf_text",
     "verification": null
