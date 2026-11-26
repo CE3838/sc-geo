@@ -8,10 +8,11 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-11-26T11:59:16+00:00",
- "updated_at": "2026-11-26T11:59:16+00:00",
+ "updated_at": "2026-11-26T11:59:19+00:00",
  "reader": "Claude, Claude Code session 2026-11-26",
  "packets": [
-  "packet-01"
+  "packet-01",
+  "packet-02"
  ],
  "blocks_done": [
   "1",
@@ -58,11 +59,49 @@
   "47",
   "48",
   "49",
-  "50"
+  "50",
+  "51",
+  "52",
+  "53",
+  "54",
+  "55",
+  "56",
+  "57",
+  "58",
+  "59",
+  "60",
+  "61",
+  "62",
+  "63",
+  "64",
+  "65",
+  "66",
+  "67",
+  "68",
+  "69",
+  "70",
+  "71",
+  "72",
+  "73",
+  "74",
+  "75",
+  "76",
+  "77",
+  "78",
+  "79",
+  "80",
+  "81",
+  "82",
+  "83",
+  "84",
+  "85",
+  "86",
+  "87",
+  "88"
  ],
  "blocks_total": 215,
  "complete": false,
- "notes": "USGS Bulletin 867 (Cooke, 1936), Geology of the Coastal Plain of South Carolina, packet 1 (plates 1-2 and pages 3-50): the formation list with series ages (pages 30-31) and the Tuscaloosa and Black Creek formation descriptions. Plates (Pleistocene and pre-Pleistocene maps) are OCR noise and not itemized. County-by-county outcrop descriptions, fossil lists, measured localities and thicknesses are not itemized; the bulletin is the 1936 statewide description and its names and ages are historical. SUBSURFACE: none.",
+ "notes": "USGS Bulletin 867 (Cooke, 1936), Geology of the Coastal Plain of South Carolina, packet 1 (plates 1-2 and pages 3-50): the formation list with series ages (pages 30-31) and the Tuscaloosa and Black Creek formation descriptions. Plates (Pleistocene and pre-Pleistocene maps) are OCR noise and not itemized. County-by-county outcrop descriptions, fossil lists, measured localities and thicknesses are not itemized; the bulletin is the 1936 statewide description and its names and ages are historical. SUBSURFACE: none.\nBulletin 867 packet 02: formation descriptions whose headings fall in this packet (first line of each description). County-by-county outcrop descriptions, fossil lists, measured localities and thicknesses are not itemized; the bulletin is the 1936 statewide description and its names and ages are historical. Peedee and Black Mingo formation headings are missing from the text layer (descriptions begin on pages 52 and 61) and are not repeated here. SUBSURFACE: none.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/bul/0867/plate-1.pdf",
@@ -87,12 +126,12 @@
   }
  ],
  "summary": {
-  "stored": 46,
+  "stored": 48,
   "quote_match": {
-   "exact": 46
+   "exact": 48
   },
   "verification": {
-   "agree": 5
+   "agree": 6
   },
   "inferred": 5
  },
@@ -111,6 +150,26 @@
    "quote_not_found": 0,
    "wrong_page": 0,
    "agree": 5,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 0,
+   "image_not_verified": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-11-26T11:59:19+00:00",
+   "packets": [
+    "packet-02"
+   ],
+   "reader": "Claude, Claude Code session 2026-11-26",
+   "values": 2,
+   "stored": 2,
+   "exact": 2,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 1,
    "disagree": 0,
    "unclear": 0,
    "image": 0,
@@ -1003,6 +1062,40 @@
     "quote_match": "exact",
     "text_method": "pdf_text",
     "verification": null,
+    "note": "first line of the formation description"
+   }
+  },
+  {
+   "name": {
+    "value": "McBean formation",
+    "source_id": "ngmdb:21040",
+    "page": 75,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "MCBEAN FORMATION",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "McBean",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "description": {
+    "value": "The McBean formation was so named by Veatch and Stephenson 74",
+    "source_id": "ngmdb:21040",
+    "page": 75,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "The McBean formation was so named by Veatch and Stephenson 74",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
     "note": "first line of the formation description"
    }
   }
