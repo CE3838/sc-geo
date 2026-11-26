@@ -8,13 +8,14 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-11-26T11:59:16+00:00",
- "updated_at": "2026-11-26T11:59:24+00:00",
+ "updated_at": "2026-11-26T11:59:26+00:00",
  "reader": "Claude, Claude Code session 2026-11-26",
  "packets": [
   "packet-01",
   "packet-02",
   "packet-03",
-  "packet-04"
+  "packet-04",
+  "packet-05"
  ],
  "blocks_done": [
   "1",
@@ -174,11 +175,50 @@
   "160",
   "161",
   "162",
-  "163"
+  "163",
+  "164",
+  "165",
+  "166",
+  "167",
+  "168",
+  "169",
+  "170",
+  "171",
+  "172",
+  "173",
+  "174",
+  "175",
+  "176",
+  "177",
+  "178",
+  "179",
+  "180",
+  "181",
+  "182",
+  "183",
+  "184",
+  "185",
+  "186",
+  "187",
+  "188",
+  "189",
+  "190",
+  "191",
+  "192",
+  "193",
+  "194",
+  "195",
+  "196",
+  "197",
+  "198",
+  "199",
+  "200",
+  "201",
+  "202"
  ],
  "blocks_total": 215,
  "complete": false,
- "notes": "USGS Bulletin 867 (Cooke, 1936), Geology of the Coastal Plain of South Carolina, packet 1 (plates 1-2 and pages 3-50): the formation list with series ages (pages 30-31) and the Tuscaloosa and Black Creek formation descriptions. Plates (Pleistocene and pre-Pleistocene maps) are OCR noise and not itemized. County-by-county outcrop descriptions, fossil lists, measured localities and thicknesses are not itemized; the bulletin is the 1936 statewide description and its names and ages are historical. SUBSURFACE: none.\nBulletin 867 packet 02: formation descriptions whose headings fall in this packet (first line of each description). County-by-county outcrop descriptions, fossil lists, measured localities and thicknesses are not itemized; the bulletin is the 1936 statewide description and its names and ages are historical. Peedee and Black Mingo formation headings are missing from the text layer (descriptions begin on pages 52 and 61) and are not repeated here. SUBSURFACE: none.\nBulletin 867 packet 03: formation descriptions whose headings fall in this packet (first line of each description). County-by-county outcrop descriptions, fossil lists, measured localities and thicknesses are not itemized; the bulletin is the 1936 statewide description and its names and ages are historical. Cooper marl heading is missing from the text layer (description begins on page 102). SUBSURFACE: none.\nBulletin 867 packet 04: formation descriptions whose headings fall in this packet (first line of each description). County-by-county outcrop descriptions, fossil lists, measured localities and thicknesses are not itemized; the bulletin is the 1936 statewide description and its names and ages are historical. SUBSURFACE: none.",
+ "notes": "USGS Bulletin 867 (Cooke, 1936), Geology of the Coastal Plain of South Carolina, packet 1 (plates 1-2 and pages 3-50): the formation list with series ages (pages 30-31) and the Tuscaloosa and Black Creek formation descriptions. Plates (Pleistocene and pre-Pleistocene maps) are OCR noise and not itemized. County-by-county outcrop descriptions, fossil lists, measured localities and thicknesses are not itemized; the bulletin is the 1936 statewide description and its names and ages are historical. SUBSURFACE: none.\nBulletin 867 packet 02: formation descriptions whose headings fall in this packet (first line of each description). County-by-county outcrop descriptions, fossil lists, measured localities and thicknesses are not itemized; the bulletin is the 1936 statewide description and its names and ages are historical. Peedee and Black Mingo formation headings are missing from the text layer (descriptions begin on pages 52 and 61) and are not repeated here. SUBSURFACE: none.\nBulletin 867 packet 03: formation descriptions whose headings fall in this packet (first line of each description). County-by-county outcrop descriptions, fossil lists, measured localities and thicknesses are not itemized; the bulletin is the 1936 statewide description and its names and ages are historical. Cooper marl heading is missing from the text layer (description begins on page 102). SUBSURFACE: none.\nBulletin 867 packet 04: formation descriptions whose headings fall in this packet (first line of each description). County-by-county outcrop descriptions, fossil lists, measured localities and thicknesses are not itemized; the bulletin is the 1936 statewide description and its names and ages are historical. SUBSURFACE: none.\nBulletin 867 packet 05: formation descriptions whose headings fall in this packet (first line of each description). County-by-county outcrop descriptions, fossil lists, measured localities and thicknesses are not itemized; the bulletin is the 1936 statewide description and its names and ages are historical. Pages 176-202 cover geologic history, structure, mineral resources, ground water and county descriptions, not itemized. SUBSURFACE: none.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/bul/0867/plate-1.pdf",
@@ -203,14 +243,14 @@
   }
  ],
  "summary": {
-  "stored": 68,
+  "stored": 76,
   "quote_match": {
-   "exact": 68
+   "exact": 76
   },
   "verification": {
-   "agree": 9
+   "agree": 10
   },
-  "inferred": 7
+  "inferred": 8
  },
  "ingests": [
   {
@@ -287,6 +327,26 @@
    "quote_not_found": 0,
    "wrong_page": 0,
    "agree": 2,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 0,
+   "image_not_verified": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-11-26T11:59:26+00:00",
+   "packets": [
+    "packet-05"
+   ],
+   "reader": "Claude, Claude Code session 2026-11-26",
+   "values": 8,
+   "stored": 8,
+   "exact": 8,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 1,
    "disagree": 0,
    "unclear": 0,
    "image": 0,
@@ -1552,6 +1612,143 @@
     "inferred": false,
     "locator": null,
     "quote": "The name \"Sunderland\", from a village in Maryland, was first",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the formation description"
+   }
+  },
+  {
+   "name": {
+    "value": "Wicomico formation",
+    "source_id": "ngmdb:21040",
+    "page": 165,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "WICOMICO FORMATION",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Wicomico",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "description": {
+    "value": "The Wicomico formation, named from a river in southern Maryland,",
+    "source_id": "ngmdb:21040",
+    "page": 165,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Wicomico formation, named from a river in southern Maryland,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the formation description"
+   }
+  },
+  {
+   "name": {
+    "value": "Penholoway formation",
+    "source_id": "ngmdb:21040",
+    "page": 169,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "PENHOIOWAY FORMATION",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "OCR 'PENHOIOWAY FORMATION'",
+    "normalized": {
+     "canonical": "Penholoway",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "description": {
+    "value": "The Penholoway formation may be defined as the deposits laid",
+    "source_id": "ngmdb:21040",
+    "page": 169,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Penholoway formation may be defined as the deposits laid",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the formation description"
+   }
+  },
+  {
+   "name": {
+    "value": "Talbot formation",
+    "source_id": "ngmdb:21040",
+    "page": 170,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "TALBOT FORMATION",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Talbot",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "description": {
+    "value": "The Talbot formation, named in 1901 by Shattuck 47 from Talbot",
+    "source_id": "ngmdb:21040",
+    "page": 170,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Talbot formation, named in 1901 by Shattuck 47 from Talbot",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the formation description"
+   }
+  },
+  {
+   "name": {
+    "value": "Pamlico formation",
+    "source_id": "ngmdb:21040",
+    "page": 171,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "PAMLICO FORMATION",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "Pamlico",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "description": {
+    "value": "The Pamlico formation includes the deposits that accumulated",
+    "source_id": "ngmdb:21040",
+    "page": 171,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Pamlico formation includes the deposits that accumulated",
     "quote_match": "exact",
     "text_method": "pdf_text",
     "verification": null,
