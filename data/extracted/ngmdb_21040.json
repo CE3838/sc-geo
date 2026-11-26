@@ -8,11 +8,12 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-11-26T11:59:16+00:00",
- "updated_at": "2026-11-26T11:59:19+00:00",
+ "updated_at": "2026-11-26T11:59:21+00:00",
  "reader": "Claude, Claude Code session 2026-11-26",
  "packets": [
   "packet-01",
-  "packet-02"
+  "packet-02",
+  "packet-03"
  ],
  "blocks_done": [
   "1",
@@ -97,11 +98,50 @@
   "85",
   "86",
   "87",
-  "88"
+  "88",
+  "89",
+  "90",
+  "91",
+  "92",
+  "93",
+  "94",
+  "95",
+  "96",
+  "97",
+  "98",
+  "99",
+  "100",
+  "101",
+  "102",
+  "103",
+  "104",
+  "105",
+  "106",
+  "107",
+  "108",
+  "109",
+  "110",
+  "111",
+  "112",
+  "113",
+  "114",
+  "115",
+  "116",
+  "117",
+  "118",
+  "119",
+  "120",
+  "121",
+  "122",
+  "123",
+  "124",
+  "125",
+  "126",
+  "127"
  ],
  "blocks_total": 215,
  "complete": false,
- "notes": "USGS Bulletin 867 (Cooke, 1936), Geology of the Coastal Plain of South Carolina, packet 1 (plates 1-2 and pages 3-50): the formation list with series ages (pages 30-31) and the Tuscaloosa and Black Creek formation descriptions. Plates (Pleistocene and pre-Pleistocene maps) are OCR noise and not itemized. County-by-county outcrop descriptions, fossil lists, measured localities and thicknesses are not itemized; the bulletin is the 1936 statewide description and its names and ages are historical. SUBSURFACE: none.\nBulletin 867 packet 02: formation descriptions whose headings fall in this packet (first line of each description). County-by-county outcrop descriptions, fossil lists, measured localities and thicknesses are not itemized; the bulletin is the 1936 statewide description and its names and ages are historical. Peedee and Black Mingo formation headings are missing from the text layer (descriptions begin on pages 52 and 61) and are not repeated here. SUBSURFACE: none.",
+ "notes": "USGS Bulletin 867 (Cooke, 1936), Geology of the Coastal Plain of South Carolina, packet 1 (plates 1-2 and pages 3-50): the formation list with series ages (pages 30-31) and the Tuscaloosa and Black Creek formation descriptions. Plates (Pleistocene and pre-Pleistocene maps) are OCR noise and not itemized. County-by-county outcrop descriptions, fossil lists, measured localities and thicknesses are not itemized; the bulletin is the 1936 statewide description and its names and ages are historical. SUBSURFACE: none.\nBulletin 867 packet 02: formation descriptions whose headings fall in this packet (first line of each description). County-by-county outcrop descriptions, fossil lists, measured localities and thicknesses are not itemized; the bulletin is the 1936 statewide description and its names and ages are historical. Peedee and Black Mingo formation headings are missing from the text layer (descriptions begin on pages 52 and 61) and are not repeated here. SUBSURFACE: none.\nBulletin 867 packet 03: formation descriptions whose headings fall in this packet (first line of each description). County-by-county outcrop descriptions, fossil lists, measured localities and thicknesses are not itemized; the bulletin is the 1936 statewide description and its names and ages are historical. Cooper marl heading is missing from the text layer (description begins on page 102). SUBSURFACE: none.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/bul/0867/plate-1.pdf",
@@ -126,14 +166,14 @@
   }
  ],
  "summary": {
-  "stored": 48,
+  "stored": 56,
   "quote_match": {
-   "exact": 48
+   "exact": 56
   },
   "verification": {
-   "agree": 6
+   "agree": 7
   },
-  "inferred": 5
+  "inferred": 6
  },
  "ingests": [
   {
@@ -165,6 +205,26 @@
    "values": 2,
    "stored": 2,
    "exact": 2,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 1,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 0,
+   "image_not_verified": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-11-26T11:59:21+00:00",
+   "packets": [
+    "packet-03"
+   ],
+   "reader": "Claude, Claude Code session 2026-11-26",
+   "values": 8,
+   "stored": 8,
+   "exact": 8,
    "ocr": 0,
    "fuzzy": 0,
    "quote_not_found": 0,
@@ -1096,6 +1156,143 @@
     "quote_match": "exact",
     "text_method": "pdf_text",
     "verification": "agree",
+    "note": "first line of the formation description"
+   }
+  },
+  {
+   "name": {
+    "value": "Santee limestone",
+    "source_id": "ngmdb:21040",
+    "page": 95,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "SANTEE LIMESTONE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Santee",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "description": {
+    "value": "The name \"Santee limestone\" is particularly appropriate because",
+    "source_id": "ngmdb:21040",
+    "page": 95,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The name \"Santee limestone\" is particularly appropriate because",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the formation description"
+   }
+  },
+  {
+   "name": {
+    "value": "Barnwell sand",
+    "source_id": "ngmdb:21040",
+    "page": 109,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "BARNWELI SAND",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "OCR 'BARNWELI SAND'",
+    "normalized": {
+     "canonical": "Barnwell",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "description": {
+    "value": "Sloan recognized two divisions in the so-called t\"Buhrstone\" of",
+    "source_id": "ngmdb:21040",
+    "page": 109,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Sloan recognized two divisions in the so-called t\"Buhrstone\" of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the formation description"
+   }
+  },
+  {
+   "name": {
+    "value": "Flint River formation",
+    "source_id": "ngmdb:21040",
+    "page": 120,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "FLINT RIVER FORMATION",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Flint River",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "description": {
+    "value": "The only representative of the Oligocene series in South Carolina",
+    "source_id": "ngmdb:21040",
+    "page": 120,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The only representative of the Oligocene series in South Carolina",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the formation description"
+   }
+  },
+  {
+   "name": {
+    "value": "Hawthorn formation",
+    "source_id": "ngmdb:21040",
+    "page": 123,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "HAWTHORN FORMATION",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "canonical": "Hawthorn",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "description": {
+    "value": "The Hawthorn formation was named in 1892 by Dall 63 from the",
+    "source_id": "ngmdb:21040",
+    "page": 123,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Hawthorn formation was named in 1892 by Dall 63 from the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
     "note": "first line of the formation description"
    }
   }
