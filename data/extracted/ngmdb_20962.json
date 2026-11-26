@@ -8,10 +8,11 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-11-26T11:58:02+00:00",
- "updated_at": "2026-11-26T11:58:02+00:00",
+ "updated_at": "2026-11-26T11:58:07+00:00",
  "reader": "Claude, Claude Code session 2026-11-26",
  "packets": [
-  "packet-01"
+  "packet-01",
+  "packet-02"
  ],
  "blocks_done": [
   "1",
@@ -50,11 +51,45 @@
   "39",
   "40",
   "41",
-  "42"
+  "42",
+  "43",
+  "44",
+  "45",
+  "46",
+  "47",
+  "48",
+  "49",
+  "50",
+  "51",
+  "52",
+  "53",
+  "54",
+  "55",
+  "56",
+  "57",
+  "58",
+  "59",
+  "60",
+  "61",
+  "62",
+  "63",
+  "64",
+  "65",
+  "66",
+  "67",
+  "68",
+  "69",
+  "70",
+  "71",
+  "72",
+  "73",
+  "74",
+  "75",
+  "76"
  ],
  "blocks_total": 133,
  "complete": false,
- "notes": "USGS Bulletin 1183 (Overstreet and Bell, 1965), crystalline rocks of South Carolina, packet 1 (plates and pages 7-42): Carolina slate belt units. Plates (geologic belts, geologic map, metamorphic facies) are OCR noise and not itemized. Units are recorded from the 'Description of rock units' headings with their geologic belt and the first line of each description; details (mineralogy, localities, thickness where given) are not itemized. Belts and units are statewide; this bulletin covers South Carolina's crystalline rocks. SUBSURFACE: none.",
+ "notes": "USGS Bulletin 1183 (Overstreet and Bell, 1965), crystalline rocks of South Carolina, packet 1 (plates and pages 7-42): Carolina slate belt units. Plates (geologic belts, geologic map, metamorphic facies) are OCR noise and not itemized. Units are recorded from the 'Description of rock units' headings with their geologic belt and the first line of each description; details (mineralogy, localities, thickness where given) are not itemized. Belts and units are statewide; this bulletin covers South Carolina's crystalline rocks. SUBSURFACE: none.\nBulletin 1183 packet 2 (pages 43-76): Charlotte belt (heading missing from the text layer; group flagged inferred), Kings Mountain belt and Inner Piedmont belt units. Units are recorded from the 'Description of rock units' headings with their geologic belt and the first line of each description; details (mineralogy, localities, thickness where given) are not itemized. Belts and units are statewide; this bulletin covers South Carolina's crystalline rocks. SUBSURFACE: none.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/bul/1183/plate-4.pdf",
@@ -93,14 +128,14 @@
   }
  ],
  "summary": {
-  "stored": 18,
+  "stored": 78,
   "quote_match": {
-   "exact": 18
+   "exact": 78
   },
   "verification": {
-   "agree": 2
+   "agree": 8
   },
-  "inferred": 1
+  "inferred": 7
  },
  "ingests": [
   {
@@ -117,6 +152,26 @@
    "quote_not_found": 0,
    "wrong_page": 0,
    "agree": 2,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 0,
+   "image_not_verified": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-11-26T11:58:07+00:00",
+   "packets": [
+    "packet-02"
+   ],
+   "reader": "Claude, Claude Code session 2026-11-26",
+   "values": 60,
+   "stored": 60,
+   "exact": 60,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 6,
    "disagree": 0,
    "unclear": 0,
    "image": 0,
@@ -372,6 +427,877 @@
     "inferred": false,
     "locator": null,
     "quote": "The largest masses of intrusive rock in the Carolina slate belt are",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Granitoid gneiss",
+    "source_id": "ngmdb:20962",
+    "page": 43,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "GRANITOID GNEISS",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "granitoid",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "group": {
+    "value": "Charlotte belt",
+    "source_id": "ngmdb:20962",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Charlotte belt have in only small areas been brought to higher meta-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "belt heading not in the text layer; units follow the slate belt section and precede the Kings Mountain belt"
+   },
+   "description": {
+    "value": "Granitoid gneiss is the principal rna p unit in the Charlotte belt.",
+    "source_id": "ngmdb:20962",
+    "page": 43,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Granitoid gneiss is the principal rna p unit in the Charlotte belt.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Mica gneiss",
+    "source_id": "ngmdb:20962",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "MICA GNEISS",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "group": {
+    "value": "Charlotte belt",
+    "source_id": "ngmdb:20962",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Charlotte belt have in only small areas been brought to higher meta-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "belt heading not in the text layer; units follow the slate belt section and precede the Kings Mountain belt"
+   },
+   "description": {
+    "value": "The mica gneiss unit of the Charlotte belt consists of fine- to medium-",
+    "source_id": "ngmdb:20962",
+    "page": 46,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The mica gneiss unit of the Charlotte belt consists of fine- to medium-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Granite",
+    "source_id": "ngmdb:20962",
+    "page": 47,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "GRANITE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Charlotte belt",
+    "source_id": "ngmdb:20962",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Charlotte belt have in only small areas been brought to higher meta-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "belt heading not in the text layer; units follow the slate belt section and precede the Kings Mountain belt"
+   },
+   "description": {
+    "value": "The major bodies of granite in the State are in the Oharlotte belt.",
+    "source_id": "ngmdb:20962",
+    "page": 47,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The major bodies of granite in the State are in the Oharlotte belt.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Gabbro, pyroxenite, and norite",
+    "source_id": "ngmdb:20962",
+    "page": 49,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "GABBRO, PYROXENITE, AND NORITE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Charlotte belt",
+    "source_id": "ngmdb:20962",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Charlotte belt have in only small areas been brought to higher meta-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "belt heading not in the text layer; units follow the slate belt section and precede the Kings Mountain belt"
+   },
+   "description": {
+    "value": "Distinctive masses of g81bbro intrude the granite and granitoid gneiss",
+    "source_id": "ngmdb:20962",
+    "page": 49,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Distinctive masses of g81bbro intrude the granite and granitoid gneiss",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Syenite",
+    "source_id": "ngmdb:20962",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "SYENITE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Charlotte belt",
+    "source_id": "ngmdb:20962",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Charlotte belt have in only small areas been brought to higher meta-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "belt heading not in the text layer; units follow the slate belt section and precede the Kings Mountain belt"
+   },
+   "description": {
+    "value": "Syenite is associated with, and presumably is a differentiate from,",
+    "source_id": "ngmdb:20962",
+    "page": 52,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "Syenite is associated with, and presumably is a differentiate from,",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Mafic dike swarms",
+    "source_id": "ngmdb:20962",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "MAFIC DIKE SWARMS",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Charlotte belt",
+    "source_id": "ngmdb:20962",
+    "page": 45,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "Charlotte belt have in only small areas been brought to higher meta-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "belt heading not in the text layer; units follow the slate belt section and precede the Kings Mountain belt"
+   },
+   "description": {
+    "value": "The great number and variety of mafic dikes, locally aggregating",
+    "source_id": "ngmdb:20962",
+    "page": 53,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The great number and variety of mafic dikes, locally aggregating",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Hornblende schist",
+    "source_id": "ngmdb:20962",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "HORNBLENDE SCHIST",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Kings Mountain belt",
+    "source_id": "ngmdb:20962",
+    "page": 54,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "KINGS MOUNTAIN BELT",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "The hornblende schist unit of the Kings Mountain belt consists of",
+    "source_id": "ngmdb:20962",
+    "page": 55,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The hornblende schist unit of the Kings Mountain belt consists of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Sericite schist",
+    "source_id": "ngmdb:20962",
+    "page": 56,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "SERICITE SCHIST",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "sericite",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "group": {
+    "value": "Kings Mountain belt",
+    "source_id": "ngmdb:20962",
+    "page": 54,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "KINGS MOUNTAIN BELT",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "description": {
+    "value": "The sericite schist unit of the Kings Mountain belt consists prin-",
+    "source_id": "ngmdb:20962",
+    "page": 56,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The sericite schist unit of the Kings Mountain belt consists prin-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Marble and quartzite",
+    "source_id": "ngmdb:20962",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "MARBLE AND QUARTZITE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "marble and",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "group": {
+    "value": "Kings Mountain belt",
+    "source_id": "ngmdb:20962",
+    "page": 54,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "KINGS MOUNTAIN BELT",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "Thin discontinuous beds of marble and quartzite are found in the",
+    "source_id": "ngmdb:20962",
+    "page": 59,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Thin discontinuous beds of marble and quartzite are found in the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Oligoclase tonalite",
+    "source_id": "ngmdb:20962",
+    "page": 63,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "OLIGOCLASE TONALITE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "oligoclase",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "group": {
+    "value": "Kings Mountain belt",
+    "source_id": "ngmdb:20962",
+    "page": 54,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "KINGS MOUNTAIN BELT",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "Two small bodies of oligoclase tonalite are exposed in the sericite",
+    "source_id": "ngmdb:20962",
+    "page": 63,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Two small bodies of oligoclase tonalite are exposed in the sericite",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Yorkville quartz monzonite",
+    "source_id": "ngmdb:20962",
+    "page": 63,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "YORKVILLE QUARTZ MONZONITE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Kings Mountain belt",
+    "source_id": "ngmdb:20962",
+    "page": 54,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "KINGS MOUNTAIN BELT",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "The name Yorkville Quartz Monzonite is a revisiOn by Espen-",
+    "source_id": "ngmdb:20962",
+    "page": 63,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The name Yorkville Quartz Monzonite is a revisiOn by Espen-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Unnamed granites",
+    "source_id": "ngmdb:20962",
+    "page": 65,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "UNNAMED GRANITES",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Kings Mountain belt",
+    "source_id": "ngmdb:20962",
+    "page": 54,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "KINGS MOUNTAIN BELT",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "Granites for which names have not been proposed in the literature",
+    "source_id": "ngmdb:20962",
+    "page": 65,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Granites for which names have not been proposed in the literature",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Mafic dikes",
+    "source_id": "ngmdb:20962",
+    "page": 65,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "MAFIC DIKES",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Kings Mountain belt",
+    "source_id": "ngmdb:20962",
+    "page": 54,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "KINGS MOUNTAIN BELT",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "Mafic dikes of various ages and relations have been observed in the",
+    "source_id": "ngmdb:20962",
+    "page": 65,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Mafic dikes of various ages and relations have been observed in the",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Biotite schist",
+    "source_id": "ngmdb:20962",
+    "page": 68,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "BIOTITE SCHIST",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Inner Piedmont belt",
+    "source_id": "ngmdb:20962",
+    "page": 65,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "INNER PIEDMONT BELT",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "The biotite schist unit includes many varieties of fine- to coarse-",
+    "source_id": "ngmdb:20962",
+    "page": 68,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The biotite schist unit includes many varieties of fine- to coarse-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Quartzite",
+    "source_id": "ngmdb:20962",
+    "page": 69,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "QUARTZITE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Inner Piedmont belt",
+    "source_id": "ngmdb:20962",
+    "page": 65,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "INNER PIEDMONT BELT",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "The quartzite in the Inner Piedmont belt is gray, dark gray, or",
+    "source_id": "ngmdb:20962",
+    "page": 69,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The quartzite in the Inner Piedmont belt is gray, dark gray, or",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Hornblende gneiss",
+    "source_id": "ngmdb:20962",
+    "page": 69,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "HORNBLENDE GNEISS",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Inner Piedmont belt",
+    "source_id": "ngmdb:20962",
+    "page": 65,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "INNER PIEDMONT BELT",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "The hornblende gneiss unit in the Inner Piedmont belt consists",
+    "source_id": "ngmdb:20962",
+    "page": 69,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The hornblende gneiss unit in the Inner Piedmont belt consists",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Marble",
+    "source_id": "ngmdb:20962",
+    "page": 70,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "MARBLE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "group": {
+    "value": "Inner Piedmont belt",
+    "source_id": "ngmdb:20962",
+    "page": 65,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "INNER PIEDMONT BELT",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "Thin discontinuous layers of marble occur along the southeastern",
+    "source_id": "ngmdb:20962",
+    "page": 70,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Thin discontinuous layers of marble occur along the southeastern",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Biotite gneiss and migmatite",
+    "source_id": "ngmdb:20962",
+    "page": 73,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "BIOTITE GNEISS AND MIGMATITE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Inner Piedmont belt",
+    "source_id": "ngmdb:20962",
+    "page": 65,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "INNER PIEDMONT BELT",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "The biotite gneiss and migmatite unit of the Inner Piedmont belt",
+    "source_id": "ngmdb:20962",
+    "page": 73,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The biotite gneiss and migmatite unit of the Inner Piedmont belt",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Henderson gneiss",
+    "source_id": "ngmdb:20962",
+    "page": 74,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "HENDERSON GNEISS",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Henderson",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "group": {
+    "value": "Inner Piedmont belt",
+    "source_id": "ngmdb:20962",
+    "page": 65,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "INNER PIEDMONT BELT",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "The Henderson Granite was named by Keith (1905, p. 4) from",
+    "source_id": "ngmdb:20962",
+    "page": 74,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Henderson Granite was named by Keith (1905, p. 4) from",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Biotite granite gneiss",
+    "source_id": "ngmdb:20962",
+    "page": 75,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BIOTITE GRANITE GNEISS",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "group": {
+    "value": "Inner Piedmont belt",
+    "source_id": "ngmdb:20962",
+    "page": 65,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "INNER PIEDMONT BELT",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "The term \"biotite granite gneiss\" is used by us for granitic rock",
+    "source_id": "ngmdb:20962",
+    "page": 75,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The term \"biotite granite gneiss\" is used by us for granitic rock",
     "quote_match": "exact",
     "text_method": "pdf_text",
     "verification": null,
