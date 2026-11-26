@@ -8,12 +8,13 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-11-26T11:58:02+00:00",
- "updated_at": "2026-11-26T11:58:09+00:00",
+ "updated_at": "2026-11-26T11:58:11+00:00",
  "reader": "Claude, Claude Code session 2026-11-26",
  "packets": [
   "packet-01",
   "packet-02",
-  "packet-03"
+  "packet-03",
+  "packet-04"
  ],
  "blocks_done": [
   "1",
@@ -119,11 +120,40 @@
   "106",
   "107",
   "108",
-  "109"
+  "109",
+  "110",
+  "111",
+  "112",
+  "113",
+  "114",
+  "115",
+  "116",
+  "117",
+  "118",
+  "119",
+  "120",
+  "121",
+  "122",
+  "123",
+  "124",
+  "125",
+  "126",
+  "127",
+  "128",
+  "129",
+  "130",
+  "131",
+  "132",
+  "133",
+  "134",
+  "135",
+  "136",
+  "137",
+  "138"
  ],
  "blocks_total": 133,
- "complete": false,
- "notes": "USGS Bulletin 1183 (Overstreet and Bell, 1965), crystalline rocks of South Carolina, packet 1 (plates and pages 7-42): Carolina slate belt units. Plates (geologic belts, geologic map, metamorphic facies) are OCR noise and not itemized. Units are recorded from the 'Description of rock units' headings with their geologic belt and the first line of each description; details (mineralogy, localities, thickness where given) are not itemized. Belts and units are statewide; this bulletin covers South Carolina's crystalline rocks. SUBSURFACE: none.\nBulletin 1183 packet 2 (pages 43-76): Charlotte belt (heading missing from the text layer; group flagged inferred), Kings Mountain belt and Inner Piedmont belt units. Units are recorded from the 'Description of rock units' headings with their geologic belt and the first line of each description; details (mineralogy, localities, thickness where given) are not itemized. Belts and units are statewide; this bulletin covers South Carolina's crystalline rocks. SUBSURFACE: none.\nBulletin 1183 packet 3 (pages 77-109): Inner Piedmont (intrusive rocks), Brevard and Blue Ridge belt units, and Mesozoic and younger rocks; Brevard group taken from the belt description, Inner Piedmont groups from the belt heading in packet 2 (flagged inferred). Radiometric age tables and discussion (pages 94-109) not itemized here. Units are recorded from the 'Description of rock units' headings with their geologic belt and the first line of each description; details (mineralogy, localities, thickness where given) are not itemized. Belts and units are statewide; this bulletin covers South Carolina's crystalline rocks. SUBSURFACE: none.",
+ "complete": true,
+ "notes": "USGS Bulletin 1183 (Overstreet and Bell, 1965), crystalline rocks of South Carolina, packet 1 (plates and pages 7-42): Carolina slate belt units. Plates (geologic belts, geologic map, metamorphic facies) are OCR noise and not itemized. Units are recorded from the 'Description of rock units' headings with their geologic belt and the first line of each description; details (mineralogy, localities, thickness where given) are not itemized. Belts and units are statewide; this bulletin covers South Carolina's crystalline rocks. SUBSURFACE: none.\nBulletin 1183 packet 2 (pages 43-76): Charlotte belt (heading missing from the text layer; group flagged inferred), Kings Mountain belt and Inner Piedmont belt units. Units are recorded from the 'Description of rock units' headings with their geologic belt and the first line of each description; details (mineralogy, localities, thickness where given) are not itemized. Belts and units are statewide; this bulletin covers South Carolina's crystalline rocks. SUBSURFACE: none.\nBulletin 1183 packet 3 (pages 77-109): Inner Piedmont (intrusive rocks), Brevard and Blue Ridge belt units, and Mesozoic and younger rocks; Brevard group taken from the belt description, Inner Piedmont groups from the belt heading in packet 2 (flagged inferred). Radiometric age tables and discussion (pages 94-109) not itemized here. Units are recorded from the 'Description of rock units' headings with their geologic belt and the first line of each description; details (mineralogy, localities, thickness where given) are not itemized. Belts and units are statewide; this bulletin covers South Carolina's crystalline rocks. SUBSURFACE: none.\nBulletin 1183 packet 4 (pages 110-138): ages of specific rock units; recorded where the authors adopt an age for a named South Carolina unit or pluton. North Carolina dated samples, metamorphic facies plate (page 138, OCR) and references not itemized. SUBSURFACE: none.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/bul/1183/plate-4.pdf",
@@ -162,12 +192,12 @@
   }
  ],
  "summary": {
-  "stored": 120,
+  "stored": 133,
   "quote_match": {
-   "exact": 120
+   "exact": 133
   },
   "verification": {
-   "agree": 13
+   "agree": 15
   },
   "inferred": 14
  },
@@ -226,6 +256,26 @@
    "quote_not_found": 0,
    "wrong_page": 0,
    "agree": 5,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 0,
+   "image_not_verified": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-11-26T11:58:11+00:00",
+   "packets": [
+    "packet-04"
+   ],
+   "reader": "Claude, Claude Code session 2026-11-26",
+   "values": 13,
+   "stored": 13,
+   "exact": 13,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 2,
    "disagree": 0,
    "unclear": 0,
    "image": 0,
@@ -1973,6 +2023,217 @@
     "text_method": "pdf_text",
     "verification": null,
     "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Toluca Quartz Monzonite",
+    "source_id": "ngmdb:20962",
+    "page": 113,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "able age of the Toluca Quartz Monzonite may be about 450 my, but at",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "age": {
+    "value": "about 450 m.y.; metamorphosed at about 250 m.y.",
+    "source_id": "ngmdb:20962",
+    "page": 113,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "able age of the Toluca Quartz Monzonite may be about 450 my, but at",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Yorkville Quartz Monzonite",
+    "source_id": "ngmdb:20962",
+    "page": 122,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "zircon indicates that the Yorkville Quartz Monzonite is Permian.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Permian",
+    "source_id": "ngmdb:20962",
+    "page": 122,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "We adopt Permian as the age of the Yorkville Quartz Monzonite at",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "normalized": {
+     "younger_ma": 251.902,
+     "older_ma": 298.9,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   },
+   "description": {
+    "value": "type locality at York (formerly Yorkville), York County, S.C.",
+    "source_id": "ngmdb:20962",
+    "page": 122,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "its type loca.lity of York (formerly Yorkville), York County, S.C.",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   }
+  },
+  {
+   "name": {
+    "value": "Granite pluton near Chester",
+    "source_id": "ngmdb:20962",
+    "page": 122,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "pluton near Chester, S.C. (loc. 5, pl. 4). The age of this zircon",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Permian (zircon lead-alpha age 255 m.y.)",
+    "source_id": "ngmdb:20962",
+    "page": 122,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "and that this granite is Permian in age (table 6) .",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 251.902,
+     "older_ma": 298.9,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Granite pluton near Winnsboro",
+    "source_id": "ngmdb:20962",
+    "page": 122,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "are from the circular pluton near Winnsboro, S.C. ( locs. 7 and 8, pl. 4).",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Permian (zircon lead-alpha ages 270 and 260 m.y.)",
+    "source_id": "ngmdb:20962",
+    "page": 122,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "granite and that the granite near Winnsboro is Permian in age",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 251.902,
+     "older_ma": 298.9,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Granite near Liberty Hill",
+    "source_id": "ngmdb:20962",
+    "page": 122,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "ity of Liberty Hill, which is Permian (table 6).",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Permian (zircon lead-alpha age 245 m.y.)",
+    "source_id": "ngmdb:20962",
+    "page": 122,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "ity of Liberty Hill, which is Permian (table 6).",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 251.902,
+     "older_ma": 298.9,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
+   }
+  },
+  {
+   "name": {
+    "value": "Quartzite unit (including Draytonville Conglomerate Member)",
+    "source_id": "ngmdb:20962",
+    "page": 120,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "part of a quartzite unit to which we ·assign an age of Ordovician to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "age": {
+    "value": "Ordovician to Mississippian",
+    "source_id": "ngmdb:20962",
+    "page": 120,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "part of a quartzite unit to which we ·assign an age of Ordovician to",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "younger_ma": 323.2,
+     "older_ma": 485.4,
+     "inferred": true,
+     "source": "International Chronostratigraphic Chart v2023/09"
+    }
    }
   }
  ],
