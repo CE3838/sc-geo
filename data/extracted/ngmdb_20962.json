@@ -8,11 +8,12 @@
  "kind": "map",
  "schema_version": 1,
  "extracted_at": "2026-11-26T11:58:02+00:00",
- "updated_at": "2026-11-26T11:58:07+00:00",
+ "updated_at": "2026-11-26T11:58:09+00:00",
  "reader": "Claude, Claude Code session 2026-11-26",
  "packets": [
   "packet-01",
-  "packet-02"
+  "packet-02",
+  "packet-03"
  ],
  "blocks_done": [
   "1",
@@ -85,11 +86,44 @@
   "73",
   "74",
   "75",
-  "76"
+  "76",
+  "77",
+  "78",
+  "79",
+  "80",
+  "81",
+  "82",
+  "83",
+  "84",
+  "85",
+  "86",
+  "87",
+  "88",
+  "89",
+  "90",
+  "91",
+  "92",
+  "93",
+  "94",
+  "95",
+  "96",
+  "97",
+  "98",
+  "99",
+  "100",
+  "101",
+  "102",
+  "103",
+  "104",
+  "105",
+  "106",
+  "107",
+  "108",
+  "109"
  ],
  "blocks_total": 133,
  "complete": false,
- "notes": "USGS Bulletin 1183 (Overstreet and Bell, 1965), crystalline rocks of South Carolina, packet 1 (plates and pages 7-42): Carolina slate belt units. Plates (geologic belts, geologic map, metamorphic facies) are OCR noise and not itemized. Units are recorded from the 'Description of rock units' headings with their geologic belt and the first line of each description; details (mineralogy, localities, thickness where given) are not itemized. Belts and units are statewide; this bulletin covers South Carolina's crystalline rocks. SUBSURFACE: none.\nBulletin 1183 packet 2 (pages 43-76): Charlotte belt (heading missing from the text layer; group flagged inferred), Kings Mountain belt and Inner Piedmont belt units. Units are recorded from the 'Description of rock units' headings with their geologic belt and the first line of each description; details (mineralogy, localities, thickness where given) are not itemized. Belts and units are statewide; this bulletin covers South Carolina's crystalline rocks. SUBSURFACE: none.",
+ "notes": "USGS Bulletin 1183 (Overstreet and Bell, 1965), crystalline rocks of South Carolina, packet 1 (plates and pages 7-42): Carolina slate belt units. Plates (geologic belts, geologic map, metamorphic facies) are OCR noise and not itemized. Units are recorded from the 'Description of rock units' headings with their geologic belt and the first line of each description; details (mineralogy, localities, thickness where given) are not itemized. Belts and units are statewide; this bulletin covers South Carolina's crystalline rocks. SUBSURFACE: none.\nBulletin 1183 packet 2 (pages 43-76): Charlotte belt (heading missing from the text layer; group flagged inferred), Kings Mountain belt and Inner Piedmont belt units. Units are recorded from the 'Description of rock units' headings with their geologic belt and the first line of each description; details (mineralogy, localities, thickness where given) are not itemized. Belts and units are statewide; this bulletin covers South Carolina's crystalline rocks. SUBSURFACE: none.\nBulletin 1183 packet 3 (pages 77-109): Inner Piedmont (intrusive rocks), Brevard and Blue Ridge belt units, and Mesozoic and younger rocks; Brevard group taken from the belt description, Inner Piedmont groups from the belt heading in packet 2 (flagged inferred). Radiometric age tables and discussion (pages 94-109) not itemized here. Units are recorded from the 'Description of rock units' headings with their geologic belt and the first line of each description; details (mineralogy, localities, thickness where given) are not itemized. Belts and units are statewide; this bulletin covers South Carolina's crystalline rocks. SUBSURFACE: none.",
  "files": [
   {
    "url": "https://pubs.usgs.gov/bul/1183/plate-4.pdf",
@@ -128,14 +162,14 @@
   }
  ],
  "summary": {
-  "stored": 78,
+  "stored": 120,
   "quote_match": {
-   "exact": 78
+   "exact": 120
   },
   "verification": {
-   "agree": 8
+   "agree": 13
   },
-  "inferred": 7
+  "inferred": 14
  },
  "ingests": [
   {
@@ -172,6 +206,26 @@
    "quote_not_found": 0,
    "wrong_page": 0,
    "agree": 6,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 0,
+   "image_not_verified": 0,
+   "review_items": 0
+  },
+  {
+   "at": "2026-11-26T11:58:09+00:00",
+   "packets": [
+    "packet-03"
+   ],
+   "reader": "Claude, Claude Code session 2026-11-26",
+   "values": 42,
+   "stored": 42,
+   "exact": 42,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 5,
    "disagree": 0,
    "unclear": 0,
    "image": 0,
@@ -1298,6 +1352,623 @@
     "inferred": false,
     "locator": null,
     "quote": "The term \"biotite granite gneiss\" is used by us for granitic rock",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Gabbro and soapstone",
+    "source_id": "ngmdb:20962",
+    "page": 77,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "GABBRO AND SOAPSTONE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Inner Piedmont belt",
+    "source_id": "ngmdb:20962",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "gneisses of the Inner Piedmont and Blue Ridge belts where these belts",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "continuation of the Inner Piedmont belt section begun on page 65 (packet 2)"
+   },
+   "description": {
+    "value": "U nmetamorphosed and metamorphosed mafic and ultra.m·afic rocks",
+    "source_id": "ngmdb:20962",
+    "page": 77,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "U nmetamorphosed and metamorphosed mafic and ultra.m·afic rocks",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Cherryville quartz monzonite",
+    "source_id": "ngmdb:20962",
+    "page": 79,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "CHERRYVILLE QUARTZ MONZONITE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "group": {
+    "value": "Inner Piedmont belt",
+    "source_id": "ngmdb:20962",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "gneisses of the Inner Piedmont and Blue Ridge belts where these belts",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "continuation of the Inner Piedmont belt section begun on page 65 (packet 2)"
+   },
+   "description": {
+    "value": "The Cherryville Quartz Monzonite is composed of massive to faintly",
+    "source_id": "ngmdb:20962",
+    "page": 79,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Cherryville Quartz Monzonite is composed of massive to faintly",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Muscovite pegmatite",
+    "source_id": "ngmdb:20962",
+    "page": 79,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "MUSCOVITE PEGMATITE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Inner Piedmont belt",
+    "source_id": "ngmdb:20962",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "gneisses of the Inner Piedmont and Blue Ridge belts where these belts",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "continuation of the Inner Piedmont belt section begun on page 65 (packet 2)"
+   },
+   "description": {
+    "value": "White coarse-grained zoned muscovite-plagioclase-quartz-per-",
+    "source_id": "ngmdb:20962",
+    "page": 79,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "White coarse-grained zoned muscovite-plagioclase-quartz-per-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Unnamed granites",
+    "source_id": "ngmdb:20962",
+    "page": 81,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "UNNAMED GRANITES",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Inner Piedmont belt",
+    "source_id": "ngmdb:20962",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "gneisses of the Inner Piedmont and Blue Ridge belts where these belts",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "continuation of the Inner Piedmont belt section begun on page 65 (packet 2)"
+   },
+   "description": {
+    "value": "The unnamed granites in the Inner Piedmont belt have been classed",
+    "source_id": "ngmdb:20962",
+    "page": 81,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The unnamed granites in the Inner Piedmont belt have been classed",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Phyllonite, blastomylonite, quartzite, and dolomite",
+    "source_id": "ngmdb:20962",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "PHYLLONITE, BLASTOMYLONITE, QUARTZITE, AND DOLOMITE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Brevard belt",
+    "source_id": "ngmdb:20962",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The rocks in the Brevard belt were collectively named the Brevard",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "The rocks in the Brevard belt were collectively named the Brevard",
+    "source_id": "ngmdb:20962",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "The rocks in the Brevard belt were collectively named the Brevard",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Henderson gneiss",
+    "source_id": "ngmdb:20962",
+    "page": 85,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "HENDERSON GNEISS",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Henderson",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "group": {
+    "value": "Brevard belt",
+    "source_id": "ngmdb:20962",
+    "page": 82,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "The rocks in the Brevard belt were collectively named the Brevard",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "The masses of Henderson Gneiss shown in the Brevard belt (Over-",
+    "source_id": "ngmdb:20962",
+    "page": 85,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The masses of Henderson Gneiss shown in the Brevard belt (Over-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Biotite schist and biotite gneiss",
+    "source_id": "ngmdb:20962",
+    "page": 86,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "BIOTITE SCHIST AND BIOTITE GNEISS",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "schist and biotite",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "group": {
+    "value": "Blue Ridge belt",
+    "source_id": "ngmdb:20962",
+    "page": 85,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "BLUE RIDGE BELT",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "The schists of the biotite schist and biotite gneiss unit of the Blue",
+    "source_id": "ngmdb:20962",
+    "page": 86,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "The schists of the biotite schist and biotite gneiss unit of the Blue",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree",
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Hornblende schist and hornblende gneiss",
+    "source_id": "ngmdb:20962",
+    "page": 86,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "HORNBLENDE SCHIST AND HORNBLENDE GNEISS",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "schist and hornblende",
+     "in_geolex": false,
+     "inferred": true
+    }
+   },
+   "group": {
+    "value": "Blue Ridge belt",
+    "source_id": "ngmdb:20962",
+    "page": 85,
+    "extraction_method": "llm",
+    "confidence": 0.85,
+    "inferred": false,
+    "locator": null,
+    "quote": "BLUE RIDGE BELT",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": "agree"
+   },
+   "description": {
+    "value": "ThB unit called hornblende schist ,and hornblende gneiss in the Blue",
+    "source_id": "ngmdb:20962",
+    "page": 86,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "ThB unit called hornblende schist ,and hornblende gneiss in the Blue",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Dolomite",
+    "source_id": "ngmdb:20962",
+    "page": 88,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "DOLOMITE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Blue Ridge belt",
+    "source_id": "ngmdb:20962",
+    "page": 85,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "BLUE RIDGE BELT",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "Dolomite associated with phyllonite occurs a short distance north-",
+    "source_id": "ngmdb:20962",
+    "page": 88,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Dolomite associated with phyllonite occurs a short distance north-",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Mafic dikes",
+    "source_id": "ngmdb:20962",
+    "page": 88,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "MAFIO DIKES",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "OCR 'MAFIO DIKES'"
+   },
+   "group": {
+    "value": "Blue Ridge belt",
+    "source_id": "ngmdb:20962",
+    "page": 85,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "BLUE RIDGE BELT",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "Metamorphosed mafic dikes have not been described from the small",
+    "source_id": "ngmdb:20962",
+    "page": 88,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Metamorphosed mafic dikes have not been described from the small",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Whiteside granite",
+    "source_id": "ngmdb:20962",
+    "page": 88,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "WHITESIDE GRANITE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "normalized": {
+     "canonical": "Whiteside",
+     "in_geolex": true,
+     "inferred": true
+    }
+   },
+   "group": {
+    "value": "Blue Ridge belt",
+    "source_id": "ngmdb:20962",
+    "page": 85,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "BLUE RIDGE BELT",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "The Whiteside Granite is a biotite-muscovite granite consisting of",
+    "source_id": "ngmdb:20962",
+    "page": 88,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "The Whiteside Granite is a biotite-muscovite granite consisting of",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Muscovite-perthite pegmatite",
+    "source_id": "ngmdb:20962",
+    "page": 89,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "MUSCOVITE-PERTHITE PEGMATITE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "group": {
+    "value": "Blue Ridge belt",
+    "source_id": "ngmdb:20962",
+    "page": 85,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "BLUE RIDGE BELT",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "Four dikes of pegmatite, which we have called muscovite-perthite",
+    "source_id": "ngmdb:20962",
+    "page": 89,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Four dikes of pegmatite, which we have called muscovite-perthite",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Undifferentiated sedimentary rocks of Triassic age",
+    "source_id": "ngmdb:20962",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.578,
+    "inferred": true,
+    "locator": null,
+    "quote": "UNDIFFERENTIATED SEDIMENTARY ROCKS OF TRXASSIC AGE",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "OCR 'UNDIFFERENTIATED SEDIMENTARY ROCKS OF TRXASSIC AGE'"
+   },
+   "description": {
+    "value": "Three small areas underlain by conglomerate, sandstone, and shale",
+    "source_id": "ngmdb:20962",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Three small areas underlain by conglomerate, sandstone, and shale",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Diabase dikes",
+    "source_id": "ngmdb:20962",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "DIABASE DIKES",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "Dikes of unaltered to slightly altered fine-grained diabase intrude",
+    "source_id": "ngmdb:20962",
+    "page": 90,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Dikes of unaltered to slightly altered fine-grained diabase intrude",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null,
+    "note": "first line of the unit description"
+   }
+  },
+  {
+   "name": {
+    "value": "Alluvium",
+    "source_id": "ngmdb:20962",
+    "page": 92,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "ALLUVIUM",
+    "quote_match": "exact",
+    "text_method": "pdf_text",
+    "verification": null
+   },
+   "description": {
+    "value": "Included under alluvium are flood-plain deposits, terrace deposits,",
+    "source_id": "ngmdb:20962",
+    "page": 92,
+    "extraction_method": "llm",
+    "confidence": 0.722,
+    "inferred": false,
+    "locator": null,
+    "quote": "Included under alluvium are flood-plain deposits, terrace deposits,",
     "quote_match": "exact",
     "text_method": "pdf_text",
     "verification": null,
