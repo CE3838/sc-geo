@@ -1,0 +1,129 @@
+{
+ "source_id": "ngmdb:43022",
+ "title": "Geologic maps of the Pacolet and Pacolet Mills 7.5-minute quadrangles",
+ "citation": "Mittwede, S.K., 1989, Geologic maps of the Pacolet and Pacolet Mills 7.5-minute quadrangles: South Carolina Geological Survey Open-File Report OFR-64, map scale 1:24,000.",
+ "year": 1989,
+ "scale": 24000,
+ "publisher": "South Carolina Geological Survey",
+ "kind": "map",
+ "schema_version": 1,
+ "extracted_at": "2026-11-15T12:05:32+00:00",
+ "updated_at": "2026-11-15T12:05:32+00:00",
+ "reader": "Claude, Claude Code session 2026-11-15",
+ "packets": [
+  "packet-01"
+ ],
+ "blocks_done": [
+  "1",
+  "2"
+ ],
+ "blocks_total": 2,
+ "complete": true,
+ "notes": "OFR-64 (Mittwede 1989): plates for the Pacolet and Pacolet Mills quadrangles without an explanation of map units in this packet. Map-face symbols (pgn-ogn, qms, am, hgs, hgg, hgp, hgr, Dpmgd, Dpmmg, Dpmf, Dpmmc, bjb, bvs, gr, qs) are not recorded as units because their names are not given. Reconnaissance only in Inner Piedmont part (Pacolet) and southeastern part (Pacolet Mills). Elevations in meters on plate 1. No drill holes or sections. SUBSURFACE: none.",
+ "files": [
+  {
+   "url": "https://ngmdb.usgs.gov/img1/43000_43999/43022_1",
+   "via": "ngmdb_image",
+   "sha256": "e789f930e8ca1a96a9612d7d2c2a369ef0488fa379168e6cf3f895c70efd8b45",
+   "pages": 1,
+   "first_page": 1
+  },
+  {
+   "url": "https://ngmdb.usgs.gov/img1/43000_43999/43022_2",
+   "via": "ngmdb_image",
+   "sha256": "1f928f7440c4134a1799d54ee0094cecb83384e6a30c914899889d408edd7888",
+   "pages": 1,
+   "first_page": 2
+  }
+ ],
+ "summary": {
+  "stored": 3,
+  "quote_match": {
+   "exact": 3
+  },
+  "verification": {
+   "agree": 1
+  },
+  "inferred": 2
+ },
+ "ingests": [
+  {
+   "at": "2026-11-15T12:05:32+00:00",
+   "packets": [
+    "packet-01"
+   ],
+   "reader": "Claude, Claude Code session 2026-11-15",
+   "values": 3,
+   "stored": 3,
+   "exact": 3,
+   "ocr": 0,
+   "fuzzy": 0,
+   "quote_not_found": 0,
+   "wrong_page": 0,
+   "agree": 1,
+   "disagree": 0,
+   "unclear": 0,
+   "image": 0,
+   "image_not_verified": 0,
+   "review_items": 0
+  }
+ ],
+ "units": [],
+ "observations": [],
+ "structures": [
+  {
+   "kind": "fault",
+   "name": {
+    "value": "Kings Mountain shear zone",
+    "source_id": "ngmdb:43022",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.52,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43022_1",
+    "quote": "shear zone SCALE 1:24000",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "label 'Kings Mountain / shear zone' on plate 1, south edge"
+   },
+   "location": {
+    "value": "crosses the south edge of the Pacolet quadrangle, west of Pacolet",
+    "source_id": "ngmdb:43022",
+    "page": 1,
+    "extraction_method": "llm",
+    "confidence": 0.52,
+    "inferred": true,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43022_1",
+    "quote": "Kings Mountain =F",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": null,
+    "note": "read on the plate"
+   }
+  },
+  {
+   "kind": "fault",
+   "name": {
+    "value": "Jones Creek shear zone",
+    "source_id": "ngmdb:43022",
+    "page": 2,
+    "extraction_method": "llm",
+    "confidence": 0.765,
+    "inferred": false,
+    "locator": "https://ngmdb.usgs.gov/img1/43000_43999/43022_2",
+    "quote": "/ Jones Creek shear zone",
+    "quote_match": "exact",
+    "text_method": "ocr",
+    "verification": "agree"
+   }
+  }
+ ],
+ "groundwater": [],
+ "references": [],
+ "surfaces": [],
+ "contours": [],
+ "sections": [],
+ "water_tests": [],
+ "rock_tests": []
+}
